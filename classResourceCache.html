@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -323,7 +323,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classResourceCache.html#a8185c39e8c6e535ed59adfe457d95184">dict</a>.TryGetValue(key, out value))</div>
 <div class="line"><span class="lineno">   56</span>        {</div>
 <div class="line"><span class="lineno">   57</span>            T2 val = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   58</span>            val = ((loadType != 0) ? <a class="code hl_enumvalue" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5ae8cbe8f681e78018c49cfb82158030d8">AssetBundle</a>.LoadFromFile(Application.streamingAssetsPath + <span class="stringliteral">&quot;/Bundle/&quot;</span> + <span class="keywordtype">id</span>).LoadAsset&lt;GameObject&gt;(<span class="keyword">new</span> FileInfo(<span class="keywordtype">id</span>).Name).GetComponent&lt;T2&gt;() : Resources.Load&lt;T2&gt;(<a class="code hl_variable" href="classResourceCache.html#a949e4f2361ae63bb647454fe7033c0ef">path</a> + id));</div>
+<div class="line"><span class="lineno">   58</span>            val = ((loadType != <a class="code hl_enumeration" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5">ResourceLoadType</a>.Resource) ? <a class="code hl_enumvalue" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5ae8cbe8f681e78018c49cfb82158030d8">AssetBundle</a>.LoadFromFile(Application.streamingAssetsPath + <span class="stringliteral">&quot;/Bundle/&quot;</span> + <span class="keywordtype">id</span>).LoadAsset&lt;GameObject&gt;(<span class="keyword">new</span> FileInfo(<span class="keywordtype">id</span>).Name).GetComponent&lt;T2&gt;() : Resources.Load&lt;T2&gt;(<a class="code hl_variable" href="classResourceCache.html#a949e4f2361ae63bb647454fe7033c0ef">path</a> + id));</div>
 <div class="line"><span class="lineno">   59</span>            <a class="code hl_variable" href="classResourceCache.html#a8185c39e8c6e535ed59adfe457d95184">dict</a>.Add(key, val as T);</div>
 <div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> val;</div>
 <div class="line"><span class="lineno">   61</span>        }</div>

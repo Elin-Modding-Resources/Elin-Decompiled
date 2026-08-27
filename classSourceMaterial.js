@@ -11,8 +11,11 @@ var classSourceMaterial =
     [ "OnImportRow", "classSourceMaterial.html#ae70ebf019fff3727c0368d16b565fd95", null ],
     [ "OnInit", "classSourceMaterial.html#a8110271821ddca34a3be42658c91f1d7", null ],
     [ "SetRow", "classSourceMaterial.html#a372457961cc1027b91d44313505323bd", null ],
+    [ "_lookup", "classSourceMaterial.html#a42cc17a0f3276e552055dbca8a7f4ad9", null ],
     [ "RowMapping", "classSourceMaterial.html#a32821e83342dfc04152d4f6ac9278be5", null ],
     [ "tierMap", "classSourceMaterial.html#a21fb453cba0f7257e83c7872aa06fe1b", null ],
     [ "TypeMapping", "classSourceMaterial.html#a8d5cdb8b088e45b4c8c8dbbfd8dc50d0", null ],
-    [ "ImportFields", "classSourceMaterial.html#abcfa77375573e0c1961131e5461bf642", null ]
+    [ "ImportFields", "classSourceMaterial.html#abcfa77375573e0c1961131e5461bf642", null ],
+    [ "Lookup", "classSourceMaterial.html#abbe981af1c3e1442a21aa3d65e13a5e1", null ],
+    [ "this[int id]", "classSourceMaterial.html#ae5c0214af6b85d9065f96621804e9c88", null ]
 ];

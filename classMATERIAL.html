@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -368,7 +368,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00306">SourceMaterial.Tier.list</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00308">SourceMaterial.Tier.Select()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00400">SourceMaterial.tierMap</a>, and <a class="el" href="SourceMaterial_8cs_source.html#l00290">SourceMaterial.TierList.tiers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitGodStatue_8cs_source.html#l00030">TraitGodStatue._OnUse()</a>, <a class="el" href="Card_8cs_source.html#l02906">Card.Create()</a>, <a class="el" href="TraitShrine_8cs_source.html#l00109">TraitShrine.GetMaterial()</a>, <a class="el" href="Trait_8cs_source.html#l01698">Trait.OnBarter()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00349">CoreDebug.QuickStart()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00130">FortuneRollData.RefreshPrize()</a>, <a class="el" href="TraitSwitch_8cs_source.html#l00055">TraitSwitch.TryDisarmTrap()</a>, and <a class="el" href="Zone_8cs_source.html#l02723">Zone.TryGenerateOre()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitGodStatue_8cs_source.html#l00030">TraitGodStatue._OnUse()</a>, <a class="el" href="Card_8cs_source.html#l02906">Card.Create()</a>, <a class="el" href="TraitShrine_8cs_source.html#l00109">TraitShrine.GetMaterial()</a>, <a class="el" href="Trait_8cs_source.html#l01698">Trait.OnBarter()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00349">CoreDebug.QuickStart()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00130">FortuneRollData.RefreshPrize()</a>, <a class="el" href="TraitSwitch_8cs_source.html#l00055">TraitSwitch.TryDisarmTrap()</a>, and <a class="el" href="Zone_8cs_source.html#l02727">Zone.TryGenerateOre()</a>.</p>
 
 </div>
 </div>
@@ -420,7 +420,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="MATERIAL_8cs_source.html#l00093">GetRandomMaterialFromCategory()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MATERIAL_8cs_source.html#l00093">GetRandomMaterialFromCategory()</a>, <a class="el" href="Trait_8cs_source.html#l01698">Trait.OnBarter()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00012">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="Map_8cs_source.html#l01586">Map.SetObj()</a>, and <a class="el" href="Card_8cs_source.html#l05746">Card.TryMakeRandomItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MATERIAL_8cs_source.html#l00093">GetRandomMaterialFromCategory()</a>, <a class="el" href="Trait_8cs_source.html#l01698">Trait.OnBarter()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00012">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="Map_8cs_source.html#l01584">Map.SetObj()</a>, and <a class="el" href="Card_8cs_source.html#l05751">Card.TryMakeRandomItem()</a>.</p>
 
 </div>
 </div>
@@ -467,12 +467,12 @@ Properties</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00098">98</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
 <div class="line"><span class="lineno">  100</span>        <span class="keywordtype">int</span> min = ((lv &gt;= 60) ? 2 : ((lv &gt;= 25) ? 1 : 0));</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">int</span> a2 = lv / 5 + 2;</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">int</span> idTier = Mathf.Clamp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(a2) + 1) + 1), min, 4);</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">int</span> a = lv / 5 + 2;</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">int</span> idTier = Mathf.Clamp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(a) + 1) + 1), min, 4);</div>
 <div class="line"><span class="lineno">  103</span>        List&lt;<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a>&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.Where((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> m) =&gt; cat.Contains(m.category) &amp;&amp; m.tier &lt;= idTier).ToList();</div>
 <div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (list.Count &gt; 0)</div>
 <div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> list.RandomItemWeighted((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> a) =&gt; a.chance * ((a.tier != idTier) ? 1 : 5));</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> list.RandomItemWeighted((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> row) =&gt; row.chance * ((row.tier != idTier) ? 1 : 5));</div>
 <div class="line"><span class="lineno">  107</span>        }</div>
 <div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> fallback;</div>
 <div class="line"><span class="lineno">  109</span>    }</div>

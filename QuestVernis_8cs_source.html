@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -150,9 +150,9 @@ $(document).ready(function(){initNavTree('QuestVernis_8cs_source.html',''); init
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">case</span> 3:</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordtype">bool</span> valid = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">ForeachCell</a>(delegate(<a class="code hl_class" href="classCell.html">Cell</a> c)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">ForeachCell</a>(delegate(<a class="code hl_class" href="classCell.html">Cell</a> cell)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id == 100)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id == 100)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    valid = false;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                }</div>
@@ -189,15 +189,15 @@ $(document).ready(function(){initNavTree('QuestVernis_8cs_source.html',''); init
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classQuest.html#a7c3d9b46c57169e31f72a42ff9dd0574">phase</a> == 3 &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classZone__Vernis.html">Zone_Vernis</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> == 0)</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordtype">int</span> n = 0;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_variable" href="classMap.html#aff2f4e11291592dddbe18306e5edaf86">bounds</a>.<a class="code hl_function" href="classMapBounds.html#a4be40482392f6c473453345fdfa4ce8a">ForeachCell</a>(delegate(<a class="code hl_class" href="classCell.html">Cell</a> c)</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id == 100)</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    i++;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    n++;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                }</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            });</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressVernis&quot;</span>.lang(i.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;progressVernis&quot;</span>.lang(n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> base.GetTextProgress();</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
@@ -207,7 +207,7 @@ $(document).ready(function(){initNavTree('QuestVernis_8cs_source.html',''); init
 <div class="ttc" id="aclassCard_html_a402be4846ad9a9f8ac1ee7e5b62787a3"><div class="ttname"><a href="classCard.html#a402be4846ad9a9f8ac1ee7e5b62787a3">Card.SetInt</a></div><div class="ttdeci">void SetInt(string id, int value=0)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02586">Card.cs:2586</a></div></div>
 <div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03673">Card.cs:3673</a></div></div>
 <div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
-<div class="ttc" id="aclassCell_html_aacc3d9e8c8c2f80f53de63b8ef1c6d03"><div class="ttname"><a href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">Cell.sourceObj</a></div><div class="ttdeci">SourceObj.Row sourceObj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01084">Cell.cs:1084</a></div></div>
+<div class="ttc" id="aclassCell_html_aacc3d9e8c8c2f80f53de63b8ef1c6d03"><div class="ttname"><a href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">Cell.sourceObj</a></div><div class="ttdeci">SourceObj.Row sourceObj</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01096">Cell.cs:1096</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_ad854e26c82bd918ee7c07c4d987b4124"><div class="ttname"><a href="classChara.html#ad854e26c82bd918ee7c07c4d987b4124">Chara.MoveHome</a></div><div class="ttdeci">void MoveHome(string id, int x=-1, int z=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03691">Chara.cs:3691</a></div></div>
 <div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00328">Date.cs:328</a></div></div>

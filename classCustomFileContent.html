@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -245,17 +245,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00014">14</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_property" href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">File</a>.Refresh();</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> File.LastWriteTimeUtc != <a class="code hl_property" href="classCustomFileContent.html#a957bd948aff08d5745259cd354b530c7">LastModified</a>;</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclassCustomFileContent_html_a5514f9c8eaeac4a291da81ea4a8cbc46"><div class="ttname"><a href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">CustomFileContent.File</a></div><div class="ttdeci">FileInfo File</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00012">CustomFileContent.cs:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00013">13</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_property" href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">File</a>.Refresh();</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> File.LastWriteTimeUtc != <a class="code hl_property" href="classCustomFileContent.html#a957bd948aff08d5745259cd354b530c7">LastModified</a>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassCustomFileContent_html_a5514f9c8eaeac4a291da81ea4a8cbc46"><div class="ttname"><a href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">CustomFileContent.File</a></div><div class="ttdeci">FileInfo File</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00011">CustomFileContent.cs:11</a></div></div>
 <div class="ttc" id="aclassCustomFileContent_html_a957bd948aff08d5745259cd354b530c7"><div class="ttname"><a href="classCustomFileContent.html#a957bd948aff08d5745259cd354b530c7">CustomFileContent.LastModified</a></div><div class="ttdeci">DateTime LastModified</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00008">CustomFileContent.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CustomFileContent_8cs_source.html#l00012">File</a>, and <a class="el" href="CustomFileContent_8cs_source.html#l00008">LastModified</a>.</p>
+<p class="reference">References <a class="el" href="CustomFileContent_8cs_source.html#l00011">File</a>, and <a class="el" href="CustomFileContent_8cs_source.html#l00008">LastModified</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CustomFileContent_8cs_source.html#l00024">Load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CustomFileContent_8cs_source.html#l00023">Load()</a>.</p>
 
 </div>
 </div>
@@ -282,33 +282,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00024">24</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classCustomFileContent.html#a9340ce946f1740c2756bf1632e24376e">HasFileChanged</a>())</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_function" href="classCustomFileContent.html#aa245998d9bcf5b21e0648929b88c1aa2">LoadContent</a>();</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">catch</span> (Exception exception)</div>
-<div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            ModUtil.LogModError(<span class="stringliteral">&quot;exception while loading file &#39;&quot;</span> + base.ContentId + <span class="stringliteral">&quot;&#39;&quot;</span>, base.Owner);</div>
-<div class="line"><span class="lineno">   37</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogException(exception);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">finally</span></div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_property" href="classCustomFileContent.html#a957bd948aff08d5745259cd354b530c7">LastModified</a> = <a class="code hl_property" href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">File</a>.LastWriteTimeUtc;</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00023">23</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classCustomFileContent.html#a9340ce946f1740c2756bf1632e24376e">HasFileChanged</a>())</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_function" href="classCustomFileContent.html#aa245998d9bcf5b21e0648929b88c1aa2">LoadContent</a>();</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">catch</span> (Exception exception)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            ModUtil.LogModError(<span class="stringliteral">&quot;exception while loading file &#39;&quot;</span> + base.ContentId + <span class="stringliteral">&quot;&#39;&quot;</span>, base.Owner);</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogException(exception);</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">finally</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <a class="code hl_property" href="classCustomFileContent.html#a957bd948aff08d5745259cd354b530c7">LastModified</a> = <a class="code hl_property" href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">File</a>.LastWriteTimeUtc;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
-<div class="ttc" id="aclassCustomFileContent_html_a9340ce946f1740c2756bf1632e24376e"><div class="ttname"><a href="classCustomFileContent.html#a9340ce946f1740c2756bf1632e24376e">CustomFileContent.HasFileChanged</a></div><div class="ttdeci">bool HasFileChanged()</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00014">CustomFileContent.cs:14</a></div></div>
+<div class="ttc" id="aclassCustomFileContent_html_a9340ce946f1740c2756bf1632e24376e"><div class="ttname"><a href="classCustomFileContent.html#a9340ce946f1740c2756bf1632e24376e">CustomFileContent.HasFileChanged</a></div><div class="ttdeci">bool HasFileChanged()</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00013">CustomFileContent.cs:13</a></div></div>
 <div class="ttc" id="aclassCustomFileContent_html_aa245998d9bcf5b21e0648929b88c1aa2"><div class="ttname"><a href="classCustomFileContent.html#aa245998d9bcf5b21e0648929b88c1aa2">CustomFileContent.LoadContent</a></div><div class="ttdeci">abstract void LoadContent()</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00012">File</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00014">HasFileChanged()</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00008">LastModified</a>, and <a class="el" href="classCustomFileContent.html#aa245998d9bcf5b21e0648929b88c1aa2">LoadContent()</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00011">File</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00013">HasFileChanged()</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00008">LastModified</a>, and <a class="el" href="classCustomFileContent.html#aa245998d9bcf5b21e0648929b88c1aa2">LoadContent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CustomMerchantStock_8cs_source.html#l00012">CustomMerchantStock.Generate()</a>, and <a class="el" href="CustomBiographyContent_8cs_source.html#l00070">CustomBiographyContent.RefreshCharaBio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CustomMerchantStock_8cs_source.html#l00012">CustomMerchantStock.Generate()</a>, and <a class="el" href="CustomBiographyContent_8cs_source.html#l00072">CustomBiographyContent.RefreshCharaBio()</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classCustomBiographyContent.html#a6210dbe15154037c97896a93d03d8481">CustomBiographyContent</a>, <a class="el" href="classCustomGunEffectSetting.html#a51db4dff488352a081e89c6ef76cd79c">CustomGunEffectSetting</a>, and <a class="el" href="classCustomMerchantStock.html#a6d04759d5913a7c721d7b62a03159b31">CustomMerchantStock</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CustomFileContent_8cs_source.html#l00024">Load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CustomFileContent_8cs_source.html#l00023">Load()</a>.</p>
 
 </div>
 </div>
@@ -367,9 +367,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCustomBiographyContent.html#ab6961a0e2e2f50ba84e2ba143d8100a8">CustomBiographyContent</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00020">20</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00019">19</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -394,10 +394,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00012">12</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00011">11</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CustomGunEffectSetting_8cs_source.html#l00008">CustomGunEffectSetting.CreateFromFile()</a>, <a class="el" href="CustomBiographyContent_8cs_source.html#l00041">CustomBiographyContent.CreateFromId()</a>, <a class="el" href="CustomMerchantStock_8cs_source.html#l00033">CustomMerchantStock.CreateFromId()</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00014">HasFileChanged()</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00024">Load()</a>, and <a class="el" href="CustomBiographyContent_8cs_source.html#l00060">CustomBiographyContent.OnSetLang()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CustomGunEffectSetting_8cs_source.html#l00008">CustomGunEffectSetting.CreateFromFile()</a>, <a class="el" href="CustomBiographyContent_8cs_source.html#l00042">CustomBiographyContent.CreateFromId()</a>, <a class="el" href="CustomMerchantStock_8cs_source.html#l00038">CustomMerchantStock.CreateFromId()</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00013">HasFileChanged()</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00023">Load()</a>, and <a class="el" href="CustomBiographyContent_8cs_source.html#l00062">CustomBiographyContent.OnSetLang()</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="CustomFileContent_8cs_source.html#l00008">8</a> of file <a class="el" href="CustomFileContent_8cs_source.html">CustomFileContent.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = DateTime.MinValue;</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CustomFileContent_8cs_source.html#l00014">HasFileChanged()</a>, and <a class="el" href="CustomFileContent_8cs_source.html#l00024">Load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CustomFileContent_8cs_source.html#l00013">HasFileChanged()</a>, and <a class="el" href="CustomFileContent_8cs_source.html#l00023">Load()</a>.</p>
 
 </div>
 </div>

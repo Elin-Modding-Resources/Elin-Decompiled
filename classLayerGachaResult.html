@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -568,7 +568,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
 <div class="line"><span class="lineno">   32</span>        <a class="code hl_variable" href="classLayerGachaResult.html#a3658641fb0bddc73722be4cb297962c0">layout</a>.DestroyChildren();</div>
 <div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.Clear();</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++)</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
 <div class="line"><span class="lineno">   35</span>        {</div>
 <div class="line"><span class="lineno">   36</span>            <a class="code hl_class" href="classChara.html">Chara</a> c = <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a2d03c2d5a7ec65ef4619e0582c272ec2">Draw</a>(<span class="keywordtype">id</span>.Split(<span class="charliteral">&#39;_&#39;</span>).LastItem());</div>
 <div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="classItemGachaResult.html">ItemGachaResult</a> itemGachaResult = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerGachaResult.html#ac94d090d691dae30c0b997ed3c3e4ef1">moldItem</a>, <a class="code hl_variable" href="classLayerGachaResult.html#a3658641fb0bddc73722be4cb297962c0">layout</a>);</div>
@@ -580,17 +580,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classLayerGachaResult.html#a6432d2229a388e344222bbb0915b57fc">buttonGetAll</a>.onClick.AddListener(delegate</div>
 <div class="line"><span class="lineno">   44</span>        {</div>
 <div class="line"><span class="lineno">   45</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;good&quot;</span>);</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.ForeachReverse(delegate(<a class="code hl_class" href="classItemGachaResult.html">ItemGachaResult</a> i)</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.ForeachReverse(delegate(<a class="code hl_class" href="classItemGachaResult.html">ItemGachaResult</a> itemGachaResult2)</div>
 <div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                i.<a class="code hl_function" href="classItemGachaResult.html#a5949828317e8ac4078e2c9b5aa6d5750">Confirm</a>(add: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>                itemGachaResult2.<a class="code hl_function" href="classItemGachaResult.html#a5949828317e8ac4078e2c9b5aa6d5750">Confirm</a>(add: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   49</span>            });</div>
 <div class="line"><span class="lineno">   50</span>        });</div>
 <div class="line"><span class="lineno">   51</span>        <a class="code hl_variable" href="classLayerGachaResult.html#a5f68659cdb4ff9413cd5b77531f542d2">buttonDumpAll</a>.onClick.AddListener(delegate</div>
 <div class="line"><span class="lineno">   52</span>        {</div>
 <div class="line"><span class="lineno">   53</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.Play(<span class="stringliteral">&quot;pay&quot;</span>);</div>
-<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.ForeachReverse(delegate(<a class="code hl_class" href="classItemGachaResult.html">ItemGachaResult</a> i)</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="classLayerGachaResult.html#a65bcbb6e846dea42cc4874558cc46c6e">items</a>.ForeachReverse(delegate(<a class="code hl_class" href="classItemGachaResult.html">ItemGachaResult</a> itemGachaResult2)</div>
 <div class="line"><span class="lineno">   55</span>            {</div>
-<div class="line"><span class="lineno">   56</span>                i.<a class="code hl_function" href="classItemGachaResult.html#a5949828317e8ac4078e2c9b5aa6d5750">Confirm</a>(add: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   56</span>                itemGachaResult2.<a class="code hl_function" href="classItemGachaResult.html#a5949828317e8ac4078e2c9b5aa6d5750">Confirm</a>(add: <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">   57</span>            });</div>
 <div class="line"><span class="lineno">   58</span>        });</div>
 <div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="classLayerGachaResult.html#af10c25f09e008330f9c1e95cf43471d8">Refresh</a>();</div>

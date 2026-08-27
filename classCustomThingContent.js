@@ -28,6 +28,7 @@ var classCustomThingContent =
     [ "OnThingCreated", "classCustomThingContent.html#aa463f74c1dd8c9eacc5119d8b5cf4dcd", null ],
     [ "ToString", "classCustomThingContent.html#a4141b9d82a8b62c24567932dfc74071a", null ],
     [ "blessedState", "classCustomThingContent.html#a401c686e08c04fc1645833254777201b", null ],
+    [ "forceRarity", "classCustomThingContent.html#a62c7aa399324c1069519b8f785acc216", null ],
     [ "id", "classCustomThingContent.html#a31657946d535fc775f5a170303d9bd2f", null ],
     [ "identifyLevel", "classCustomThingContent.html#aa35e2fae441c386a4d0a515b0e00fc67", null ],
     [ "lv", "classCustomThingContent.html#a1c78c546e027bf9fbd36991b0ccb7def", null ],

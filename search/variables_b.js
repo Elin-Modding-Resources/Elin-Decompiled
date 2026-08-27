@@ -6,12 +6,13 @@ var searchData=
   ['jobs_3',['jobs',['../classSourceManager.html#ae2456daa44300db5851bb38719d9da90',1,'SourceManager.jobs()'],['../classUICharaMaker.html#af2b1a89aa7142e583c19fad0ed178170',1,'UICharaMaker.jobs()']]],
   ['joined_4',['Joined',['../classQuestGuild.html#a64b315436d9c5b0bcbb97ab0aad3870e',1,'QuestGuild']]],
   ['journal_5',['journal',['../classEInput_1_1KeyMapManager.html#a1a36438ca4d51993cd6808624ce0542b',1,'EInput::KeyMapManager']]],
-  ['jsreadgame_6',['jsReadGame',['../classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8',1,'GameIO']]],
-  ['jsreadgeneral_7',['jsReadGeneral',['../classIO.html#adce48bef3c393d1e4d2d857f978e381b',1,'IO']]],
-  ['jswriteconfig_8',['jsWriteConfig',['../classIO.html#a0d821add90b339d1d62178d893da5bac',1,'IO']]],
-  ['jswritegame_9',['jsWriteGame',['../classGameIO.html#a472e51294a31ce7706182f850aabaa5e',1,'GameIO']]],
-  ['jswritegeneral_10',['jsWriteGeneral',['../classIO.html#aa8b7161471b77e3c9491ed831113bb31',1,'IO']]],
-  ['jukebox_11',['jukebox',['../classLayerEditPlaylist.html#a9dfc06e1bb9ec91b4209730b6f3b6b57',1,'LayerEditPlaylist']]],
-  ['jumpfunc_12',['jumpFunc',['../classDramaEventMethod.html#af287f94da37e842dd5b9ad1ed8e1f5c7',1,'DramaEventMethod']]],
-  ['justcooked_13',['justcooked',['../classFOOD.html#a0b872f75c037ca3a3046aebc793ae490',1,'FOOD']]]
+  ['jsonsettings_6',['JsonSettings',['../classCustomGunEffectData.html#a5d32eea61d198c847ab4cfe636af43e8',1,'CustomGunEffectData']]],
+  ['jsreadgame_7',['jsReadGame',['../classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8',1,'GameIO']]],
+  ['jsreadgeneral_8',['jsReadGeneral',['../classIO.html#adce48bef3c393d1e4d2d857f978e381b',1,'IO']]],
+  ['jswriteconfig_9',['jsWriteConfig',['../classIO.html#a0d821add90b339d1d62178d893da5bac',1,'IO']]],
+  ['jswritegame_10',['jsWriteGame',['../classGameIO.html#a472e51294a31ce7706182f850aabaa5e',1,'GameIO']]],
+  ['jswritegeneral_11',['jsWriteGeneral',['../classIO.html#aa8b7161471b77e3c9491ed831113bb31',1,'IO']]],
+  ['jukebox_12',['jukebox',['../classLayerEditPlaylist.html#a9dfc06e1bb9ec91b4209730b6f3b6b57',1,'LayerEditPlaylist']]],
+  ['jumpfunc_13',['jumpFunc',['../classDramaEventMethod.html#af287f94da37e842dd5b9ad1ed8e1f5c7',1,'DramaEventMethod']]],
+  ['justcooked_14',['justcooked',['../classFOOD.html#a0b872f75c037ca3a3046aebc793ae490',1,'FOOD']]]
 ];

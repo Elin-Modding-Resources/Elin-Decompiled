@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -295,8 +295,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUIRecipeInfo.html#a72385d0d64adcb99514d1c50bca4b6eb">textName</a>.text != <span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><span class="lineno">  164</span>        {</div>
 <div class="line"><span class="lineno">  165</span>            <a class="code hl_class" href="classUIText.html">UIText</a> uIText = <a class="code hl_variable" href="classUIRecipeInfo.html#a72385d0d64adcb99514d1c50bca4b6eb">textName</a>;</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordtype">string</span> text2 = (textDetail.text = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  167</span>            uIText.text = text2;</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordtype">string</span> text = (textDetail.text = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  167</span>            uIText.text = text;</div>
 <div class="line"><span class="lineno">  168</span>            <a class="code hl_function" href="classUIRecipeInfo.html#a12ac1fd63bcf24b605fbeb724da07495">RefreshList</a>();</div>
 <div class="line"><span class="lineno">  169</span>            <a class="code hl_function" href="classUIRecipeInfo.html#a38e921e32080632e36597f26563d9061">RefreshBalance</a>();</div>
 <div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUIRecipeInfo.html#ae3e5ca4a5a7c6714bed8d363c81b6a39">imageArea</a>)</div>
@@ -540,12 +540,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  348</span>                            b.<a class="code hl_function" href="classButtonGrid.html#aebbf5a83d59d26603a5c5288eb71d3e7">SetRecipeVariation</a>(a);</div>
 <div class="line"><span class="lineno">  349</span>                        }</div>
 <div class="line"><span class="lineno">  350</span>                    };</div>
-<div class="line"><span class="lineno">  351</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; array.Length; j++)</div>
+<div class="line"><span class="lineno">  351</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num2 = 0; num2 &lt; array.Length; num2++)</div>
 <div class="line"><span class="lineno">  352</span>                    {</div>
 <div class="line"><span class="lineno">  353</span>                        uIList.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<span class="keyword">new</span> RecipeVariation</div>
 <div class="line"><span class="lineno">  354</span>                        {</div>
 <div class="line"><span class="lineno">  355</span>                            <a class="code hl_variable" href="classUIRecipeInfo.html#adfb3de2c7d6f8b2182fcb1043e7eb96e">recipe</a> = r,</div>
-<div class="line"><span class="lineno">  356</span>                            dir = j</div>
+<div class="line"><span class="lineno">  356</span>                            dir = num2</div>
 <div class="line"><span class="lineno">  357</span>                        });</div>
 <div class="line"><span class="lineno">  358</span>                    }</div>
 <div class="line"><span class="lineno">  359</span>                    uIList.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
@@ -772,7 +772,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassRenderRow_html_ab2dc97be906ded91ad9527ef6203e29a"><div class="ttname"><a href="classRenderRow.html#ab2dc97be906ded91ad9527ef6203e29a">RenderRow.SetImage</a></div><div class="ttdeci">void SetImage(Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00359">RenderRow.cs:359</a></div></div>
 <div class="ttc" id="aclassUIRecipeInfo_html_a7e411494f1926d7aa3596fdc957abe92"><div class="ttname"><a href="classUIRecipeInfo.html#a7e411494f1926d7aa3596fdc957abe92">UIRecipeInfo.imageIcon</a></div><div class="ttdeci">Image imageIcon</div><div class="ttdef"><b>Definition:</b> <a href="UIRecipeInfo_8cs_source.html#l00042">UIRecipeInfo.cs:42</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00192">Recipe._dir</a>, <a class="el" href="RenderRow_8cs_source.html#l00437">RenderRow.GetColorInt()</a>, <a class="el" href="Recipe_8cs_source.html#l00506">Recipe.GetColorMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00198">Recipe.idSkin</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00042">imageIcon</a>, <a class="el" href="Recipe_8cs_source.html#l00181">Recipe.ingredients</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00038">listVariations</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00032">recipe</a>, <a class="el" href="UIList_8cs_source.html#l00792">UIList.Redraw()</a>, <a class="el" href="Recipe_8cs_source.html#l00210">Recipe.renderRow</a>, <a class="el" href="RenderRow_8cs_source.html#l00359">RenderRow.SetImage()</a>, <a class="el" href="Recipe_8cs_source.html#l00184">Recipe.UseStock</a>, and <a class="el" href="Recipe_8cs_source.html#l00190">Recipe.VirtualBlock</a>.</p>
+<p class="reference">References <a class="el" href="Recipe_8cs_source.html#l00192">Recipe._dir</a>, <a class="el" href="RenderRow_8cs_source.html#l00437">RenderRow.GetColorInt()</a>, <a class="el" href="Recipe_8cs_source.html#l00506">Recipe.GetColorMaterial()</a>, <a class="el" href="Recipe_8cs_source.html#l00198">Recipe.idSkin</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00042">imageIcon</a>, <a class="el" href="Recipe_8cs_source.html#l00181">Recipe.ingredients</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00038">listVariations</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00032">recipe</a>, <a class="el" href="UIList_8cs_source.html#l00793">UIList.Redraw()</a>, <a class="el" href="Recipe_8cs_source.html#l00210">Recipe.renderRow</a>, <a class="el" href="RenderRow_8cs_source.html#l00359">RenderRow.SetImage()</a>, <a class="el" href="Recipe_8cs_source.html#l00184">Recipe.UseStock</a>, and <a class="el" href="Recipe_8cs_source.html#l00190">Recipe.VirtualBlock</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00381">OnRotate()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">Refresh()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00352">DropdownGrid.TrySelect()</a>.</p>
 

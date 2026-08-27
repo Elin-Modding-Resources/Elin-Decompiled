@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -520,15 +520,15 @@ $(document).ready(function(){initNavTree('FEAT_8cs_source.html',''); initResizab
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        {</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>            <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Clear();</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        }</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <a class="code hl_class" href="classEVENT_1_1ElinFeatApplyEventArgs.html">EVENT.ElinFeatApplyEventArgs</a> elinFeatApplyEventArgs = <span class="keyword">new</span> <a class="code hl_class" href="classEVENT_1_1ElinFeatApplyEventArgs.html">EVENT.ElinFeatApplyEventArgs</a></div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <a class="code hl_class" href="classEVENT_1_1ElinFeatApplyEventArgs.html">EVENT.ElinFeatApplyEventArgs</a> e = <span class="keyword">new</span> <a class="code hl_class" href="classEVENT_1_1ElinFeatApplyEventArgs.html">EVENT.ElinFeatApplyEventArgs</a></div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        {</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            feat = <span class="keyword">this</span>,</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a> = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>,</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> = <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a></div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        };</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        elinFeatApplyEventArgs.<a class="code hl_function" href="classEVENT_1_1ElinEventArgs.html#a9b9f60acae5be659eb2fec5641f5fb1e">SetData</a>(a);</div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a>(<span class="stringliteral">&quot;elin.feat.apply&quot;</span>, elinFeatApplyEventArgs);</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>        a = elinFeatApplyEventArgs.<a class="code hl_property" href="classEVENT_1_1ElinEventArgs.html#a99cce9210a8b4fa974833220500f7623">data</a>;</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        e.<a class="code hl_function" href="classEVENT_1_1ElinEventArgs.html#a9b9f60acae5be659eb2fec5641f5fb1e">SetData</a>(a);</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a>(<span class="stringliteral">&quot;elin.feat.apply&quot;</span>, e);</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>        a = e.<a class="code hl_property" href="classEVENT_1_1ElinEventArgs.html#a99cce9210a8b4fa974833220500f7623">data</a>;</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        <span class="keywordtype">int</span> value = base.Value;</div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        <span class="keywordtype">int</span> A = Mathf.Abs(a);</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>        <span class="keywordtype">int</span> invert = ((a &gt;= 0) ? 1 : (-1));</div>
@@ -1001,7 +1001,7 @@ $(document).ready(function(){initNavTree('FEAT_8cs_source.html',''); initResizab
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>                <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(s);</div>
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>            }</div>
 <div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>        }</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>        <span class="keywordtype">void</span> NoteElement(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>        <span class="keywordtype">void</span> NoteElement(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> num4)</div>
 <div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>        {</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele];</div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>            <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;ability&quot;</span>)</div>
@@ -1014,11 +1014,11 @@ $(document).ready(function(){initNavTree('FEAT_8cs_source.html',''); initResizab
 <div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>            }</div>
 <div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>            {</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>                <span class="keywordtype">string</span> @ref = ((a &lt; 0) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;+&quot;</span>) + a;</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>                <span class="keywordtype">string</span> @ref = ((num4 &lt; 0) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;+&quot;</span>) + num4;</div>
 <div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>                <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;resist&quot;</span>)</div>
 <div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>                {</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>                    <span class="keywordtype">int</span> num4 = 0;</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>                    @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num4, 1, 5));</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>                    <span class="keywordtype">int</span> num5 = 0;</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>                    @ref = ((num4 &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(num4) / 5 + num5, 1, 5));</div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>                    Note(<span class="stringliteral">&quot;modValueRes&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
 <div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>                }</div>
 <div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>                <span class="keywordflow">else</span></div>
@@ -1063,7 +1063,7 @@ $(document).ready(function(){initNavTree('FEAT_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassElement_html_a4ae86959ad9952c795fc71fe4dd46e0a"><div class="ttname"><a href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00275">ELEMENT.cs:275</a></div></div>
 <div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00301">ELEMENT.cs:301</a></div></div>
 <div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00313">ELEMENT.cs:313</a></div></div>
-<div class="ttc" id="aclassElement_html_a7f33c59a74a6c34a37f8eee0e0cecd1e"><div class="ttname"><a href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Element.Create</a></div><div class="ttdeci">static Element Create(int id, int v=0)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l01130">ELEMENT.cs:1130</a></div></div>
+<div class="ttc" id="aclassElement_html_a7f33c59a74a6c34a37f8eee0e0cecd1e"><div class="ttname"><a href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Element.Create</a></div><div class="ttdeci">static Element Create(int id, int v=0)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l01131">ELEMENT.cs:1131</a></div></div>
 <div class="ttc" id="aclassFEAT_html"><div class="ttname"><a href="classFEAT.html">FEAT</a></div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00004">FEAT.cs:5</a></div></div>
 <div class="ttc" id="aclassFEAT_html_a019a500874be34ae6104c21ebc329449"><div class="ttname"><a href="classFEAT.html#a019a500874be34ae6104c21ebc329449">FEAT.featManaCost</a></div><div class="ttdeci">const int featManaCost</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00086">FEAT.cs:86</a></div></div>
 <div class="ttc" id="aclassFEAT_html_a03073fda2acf6024dea4aa600929a439"><div class="ttname"><a href="classFEAT.html#a03073fda2acf6024dea4aa600929a439">FEAT.featElite</a></div><div class="ttdeci">const int featElite</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00048">FEAT.cs:48</a></div></div>

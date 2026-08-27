@@ -8,7 +8,10 @@ var classSourceCellEffect =
     [ "OnAfterImportData", "classSourceCellEffect.html#a41a21422eca3e3338a18e979cd771e54", null ],
     [ "OnInit", "classSourceCellEffect.html#ac34ffaa9921c50b4c37bcd24590186e2", null ],
     [ "SetRow", "classSourceCellEffect.html#afda900f095190202abbed29bbb32aaea", null ],
+    [ "_lookup", "classSourceCellEffect.html#ab8faa315beb41867dd2e36600fb37878", null ],
     [ "FallbackRenderData", "classSourceCellEffect.html#a9d7b321eadc146336cb30d79c1689995", null ],
     [ "RowMapping", "classSourceCellEffect.html#a59ba85adb8744478110ba2f55a5c88da", null ],
-    [ "TypeMapping", "classSourceCellEffect.html#a764424be370590468a2a47ec946911ca", null ]
+    [ "TypeMapping", "classSourceCellEffect.html#a764424be370590468a2a47ec946911ca", null ],
+    [ "Lookup", "classSourceCellEffect.html#ab4a4a66b1696b37dfa4621e4a0cd5ea7", null ],
+    [ "this[int id]", "classSourceCellEffect.html#a4793cb26e3597af17483a188d169134b", null ]
 ];

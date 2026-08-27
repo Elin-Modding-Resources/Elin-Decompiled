@@ -6,5 +6,6 @@ var classAI__Slaughter =
     [ "OnCancelOrSuccess", "classAI__Slaughter.html#a16689423e5131b45820a096462bb7e45", null ],
     [ "Perform", "classAI__Slaughter.html#a811598231eef6bbc68ae32c9fd4a9ae7", null ],
     [ "Run", "classAI__Slaughter.html#a4d40b53bba1b6593b86f6bc8c1cb9f67", null ],
+    [ "slaughterer", "classAI__Slaughter.html#a6597f833369186f55a023aeace6c98c2", null ],
     [ "slaughtering", "classAI__Slaughter.html#af220d0cd9f8585de3dc5f5d02a0a2773", null ]
 ];

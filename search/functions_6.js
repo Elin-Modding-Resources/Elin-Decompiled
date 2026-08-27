@@ -80,5 +80,6 @@ var searchData=
   ['exportsourcelocalizations_77',['ExportSourceLocalizations',['../classModPackage.html#aa318383083f2a9bd9fdc06b802744d96',1,'ModPackage']]],
   ['exportsourcetexts_78',['ExportSourceTexts',['../classSourceManager.html#adc4074582e665456917187a477d18831',1,'SourceManager']]],
   ['exporttexts_79',['ExportTexts',['../classSourceData.html#a234a9b78fef2d11bc60bd93276dba176',1,'SourceData.ExportTexts()'],['../classSourceData_1_1BaseRow.html#a93b7a0cd0fbec8b2b6b4573faf2b698a',1,'SourceData.BaseRow.ExportTexts()'],['../classSourceData.html#a91071fe7311740c5e52305f1199ab79c',1,'SourceData.ExportTexts()']]],
-  ['extensionfilter_80',['ExtensionFilter',['../structSFB_1_1ExtensionFilter.html#a18e815fda33824095d74b0952548c7e6',1,'SFB::ExtensionFilter']]]
+  ['extensionfilter_80',['ExtensionFilter',['../structSFB_1_1ExtensionFilter.html#a18e815fda33824095d74b0952548c7e6',1,'SFB::ExtensionFilter']]],
+  ['extractsoundtag_81',['ExtractSoundTag',['../classTCText.html#af9ffb0f1cd0553b79f7883fd22939623',1,'TCText']]]
 ];

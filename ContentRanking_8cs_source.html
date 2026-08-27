@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -138,14 +138,14 @@ $(document).ready(function(){initNavTree('ContentRanking_8cs_source.html',''); i
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="classContentRanking.html#af0062cdfc4b9195b869071f26b736590">list</a>.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classContentRanking.html#af0062cdfc4b9195b869071f26b736590">list</a>.<a class="code hl_variable" href="classUIList.html#a17c2fb9c305c1f257b0c14fd654b70fe">buttons</a>.Count; i++)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = 0; num &lt; <a class="code hl_variable" href="classContentRanking.html#af0062cdfc4b9195b869071f26b736590">list</a>.<a class="code hl_variable" href="classUIList.html#a17c2fb9c305c1f257b0c14fd654b70fe">buttons</a>.Count; num++)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_class" href="classButtonChara.html">ButtonChara</a> buttonChara = <a class="code hl_variable" href="classContentRanking.html#af0062cdfc4b9195b869071f26b736590">list</a>.<a class="code hl_variable" href="classUIList.html#a17c2fb9c305c1f257b0c14fd654b70fe">buttons</a>[i].component as <a class="code hl_class" href="classButtonChara.html">ButtonChara</a>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            buttonChara.item.text3.text = <span class="stringliteral">&quot;rank&quot;</span>.lang((i + 1).ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            buttonChara.<a class="code hl_variable" href="classButtonChara.html#a640570b1bbb06ce8c1e4b24aa0bb9998">item</a>.<a class="code hl_variable" href="classUIItem.html#a47c9ddc84b89cf6817ffd0a7ccfedd2d">image1</a>.SetActive(i &lt; 3);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span> (i &lt; 3)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_class" href="classButtonChara.html">ButtonChara</a> buttonChara = <a class="code hl_variable" href="classContentRanking.html#af0062cdfc4b9195b869071f26b736590">list</a>.<a class="code hl_variable" href="classUIList.html#a17c2fb9c305c1f257b0c14fd654b70fe">buttons</a>[num].component as <a class="code hl_class" href="classButtonChara.html">ButtonChara</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            buttonChara.item.text3.text = <span class="stringliteral">&quot;rank&quot;</span>.lang((num + 1).ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            buttonChara.<a class="code hl_variable" href="classButtonChara.html#a640570b1bbb06ce8c1e4b24aa0bb9998">item</a>.<a class="code hl_variable" href="classUIItem.html#a47c9ddc84b89cf6817ffd0a7ccfedd2d">image1</a>.SetActive(num &lt; 3);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span> (num &lt; 3)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                buttonChara.item.image1.sprite = <a class="code hl_variable" href="classContentRanking.html#a099ff61c4fd179d47c521c7f01ef8b7e">spriteTrophies</a>[i];</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                buttonChara.item.image1.sprite = <a class="code hl_variable" href="classContentRanking.html#a099ff61c4fd179d47c521c7f01ef8b7e">spriteTrophies</a>[num];</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_variable" href="classContentRanking.html#a34c9b8d1504755b78be731e157d354f2">comingSoon</a>.SetActive(<span class="keywordtype">id</span> != <span class="stringliteral">&quot;contribution&quot;</span>);</div>

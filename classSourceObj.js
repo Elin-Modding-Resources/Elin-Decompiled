@@ -13,8 +13,11 @@ var classSourceObj =
     [ "RestorePref", "classSourceObj.html#aae36dd4b33549c8f7cc277508be472c0", null ],
     [ "SetRow", "classSourceObj.html#ab90658f6244c6ab8abf19c74152d3510", null ],
     [ "ValidatePref", "classSourceObj.html#ae5e311075cb9810094c2ad191e909126", null ],
+    [ "_lookup", "classSourceObj.html#a28a1a4757116a6156444f5f24ff14136", null ],
     [ "_rows", "classSourceObj.html#aff636667321e955f080c0c5a72b4c369", null ],
     [ "FallbackRenderData", "classSourceObj.html#aba418b23ae72d273c01bcfad5c314f5b", null ],
     [ "RowMapping", "classSourceObj.html#a9395ea2d1e66beb691748f232ea0b8c9", null ],
-    [ "TypeMapping", "classSourceObj.html#a900626370b09c9f12c559938e6d158d5", null ]
+    [ "TypeMapping", "classSourceObj.html#a900626370b09c9f12c559938e6d158d5", null ],
+    [ "Lookup", "classSourceObj.html#a14d1bec10cfe96b8d835e4890eb88139", null ],
+    [ "this[int id]", "classSourceObj.html#afccc8c630149b662cb8dd7d22a2cfe91", null ]
 ];

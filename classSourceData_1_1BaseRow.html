@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -200,7 +200,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  745</span>                <span class="keywordflow">return</span> sortedDictionary;</div>
 <div class="line"><span class="lineno">  746</span>            }</div>
 <div class="line"><span class="lineno">  747</span>            <span class="keywordtype">string</span> name = GetType().DeclaringType.Name;</div>
-<div class="line"><span class="lineno">  748</span>            <span class="keywordflow">foreach</span> (var (text2, jp2) in rowFields)</div>
+<div class="line"><span class="lineno">  748</span>            <span class="keywordflow">foreach</span> (var (text2, jp) in rowFields)</div>
 <div class="line"><span class="lineno">  749</span>            {</div>
 <div class="line"><span class="lineno">  750</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_JP&quot;</span>))</div>
 <div class="line"><span class="lineno">  751</span>                {</div>
@@ -209,7 +209,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  754</span>                <span class="keywordtype">string</span> text3 = text2[..^3];</div>
 <div class="line"><span class="lineno">  755</span>                <span class="keywordflow">if</span> (rowFields.TryGetValue(text3, out var value) &amp;&amp; rowFields.TryGetValue(text3 + <span class="stringliteral">&quot;_L&quot;</span>, out var value2))</div>
 <div class="line"><span class="lineno">  756</span>                {</div>
-<div class="line"><span class="lineno">  757</span>                    <span class="keywordtype">string</span> text4 = GetFieldText(jp2, value, value2);</div>
+<div class="line"><span class="lineno">  757</span>                    <span class="keywordtype">string</span> text4 = GetFieldText(jp, value, value2);</div>
 <div class="line"><span class="lineno">  758</span>                    <span class="keywordflow">if</span> (!text4.IsEmpty())</div>
 <div class="line"><span class="lineno">  759</span>                    {</div>
 <div class="line"><span class="lineno">  760</span>                        sortedDictionary[<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>] = text4;</div>
@@ -217,9 +217,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  762</span>                }</div>
 <div class="line"><span class="lineno">  763</span>            }</div>
 <div class="line"><span class="lineno">  764</span>            <span class="keywordflow">return</span> sortedDictionary;</div>
-<div class="line"><span class="lineno">  765</span>            <span class="keywordtype">string</span> GetFieldText(FieldInfo jp, FieldInfo en, FieldInfo l)</div>
+<div class="line"><span class="lineno">  765</span>            <span class="keywordtype">string</span> GetFieldText(FieldInfo fieldInfo2, FieldInfo en, FieldInfo l)</div>
 <div class="line"><span class="lineno">  766</span>            {</div>
-<div class="line"><span class="lineno">  767</span>                <span class="keywordtype">object</span> value3 = jp.GetValue(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  767</span>                <span class="keywordtype">object</span> value3 = fieldInfo2.GetValue(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  768</span>                <span class="keywordtype">object</span> value4 = en.GetValue(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  769</span>                <span class="keywordtype">object</span> value5 = l.GetValue(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  770</span>                <span class="keywordtype">string</span> langCode = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>;</div>
@@ -555,33 +555,33 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  799</span>                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  800</span>                }</div>
 <div class="line"><span class="lineno">  801</span>                <span class="keywordtype">string</span> text3 = text2[..^2];</div>
-<div class="line"><span class="lineno">  802</span>                <span class="keywordflow">if</span> (!texts.TryGetValue(<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>, out var value2) || value2.IsEmpty() || !rowFields.TryGetValue(text3, out var value3) || !rowFields.TryGetValue(text3 + <span class="stringliteral">&quot;_JP&quot;</span>, out var value4))</div>
+<div class="line"><span class="lineno">  802</span>                <span class="keywordflow">if</span> (!texts.TryGetValue(<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>, out var value) || value.IsEmpty() || !rowFields.TryGetValue(text3, out var value2) || !rowFields.TryGetValue(text3 + <span class="stringliteral">&quot;_JP&quot;</span>, out var value3))</div>
 <div class="line"><span class="lineno">  803</span>                {</div>
 <div class="line"><span class="lineno">  804</span>                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  805</span>                }</div>
 <div class="line"><span class="lineno">  806</span>                fieldInfo2.SetValue(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  807</span>                SetFieldText(fieldInfo2, value2);</div>
+<div class="line"><span class="lineno">  807</span>                SetFieldText(fieldInfo2, value);</div>
 <div class="line"><span class="lineno">  808</span>                <span class="keywordflow">if</span> (!(langCode == <span class="stringliteral">&quot;EN&quot;</span>))</div>
 <div class="line"><span class="lineno">  809</span>                {</div>
 <div class="line"><span class="lineno">  810</span>                    <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span>)</div>
 <div class="line"><span class="lineno">  811</span>                    {</div>
-<div class="line"><span class="lineno">  812</span>                        SetFieldText(value4, value2);</div>
+<div class="line"><span class="lineno">  812</span>                        SetFieldText(value3, value);</div>
 <div class="line"><span class="lineno">  813</span>                    }</div>
 <div class="line"><span class="lineno">  814</span>                }</div>
 <div class="line"><span class="lineno">  815</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  816</span>                {</div>
-<div class="line"><span class="lineno">  817</span>                    SetFieldText(value3, value2);</div>
+<div class="line"><span class="lineno">  817</span>                    SetFieldText(value2, value);</div>
 <div class="line"><span class="lineno">  818</span>                }</div>
 <div class="line"><span class="lineno">  819</span>            }</div>
-<div class="line"><span class="lineno">  820</span>            <span class="keywordtype">void</span> SetFieldText(FieldInfo l, <span class="keywordtype">string</span> value)</div>
+<div class="line"><span class="lineno">  820</span>            <span class="keywordtype">void</span> SetFieldText(FieldInfo l, <span class="keywordtype">string</span> text4)</div>
 <div class="line"><span class="lineno">  821</span>            {</div>
 <div class="line"><span class="lineno">  822</span>                <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>))</div>
 <div class="line"><span class="lineno">  823</span>                {</div>
-<div class="line"><span class="lineno">  824</span>                    l.SetValue(<span class="keyword">this</span>, value);</div>
+<div class="line"><span class="lineno">  824</span>                    l.SetValue(<span class="keyword">this</span>, text4);</div>
 <div class="line"><span class="lineno">  825</span>                }</div>
 <div class="line"><span class="lineno">  826</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>[]))</div>
 <div class="line"><span class="lineno">  827</span>                {</div>
-<div class="line"><span class="lineno">  828</span>                    l.SetValue(<span class="keyword">this</span>, value.IsEmpty() ? Array.Empty&lt;<span class="keywordtype">string</span>&gt;() : value.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
+<div class="line"><span class="lineno">  828</span>                    l.SetValue(<span class="keyword">this</span>, text4.IsEmpty() ? Array.Empty&lt;<span class="keywordtype">string</span>&gt;() : text4.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
 <div class="line"><span class="lineno">  829</span>                }</div>
 <div class="line"><span class="lineno">  830</span>            }</div>
 <div class="line"><span class="lineno">  831</span>        }</div>

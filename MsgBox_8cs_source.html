@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -209,14 +209,14 @@ $(document).ready(function(){initNavTree('MsgBox_8cs_source.html',''); initResiz
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        {</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <a class="code hl_variable" href="classMsgBox.html#abe1fb99308938bbbd1cdec53871f6dd0">currentBlock</a>.transform.SetParent(<a class="code hl_variable" href="classMsgBox.html#a5c6fdbf781484e671294228cc66b92a9">layoutLog</a>.transform, worldPositionStays: <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            Image image = <a class="code hl_variable" href="classMsgBox.html#abe1fb99308938bbbd1cdec53871f6dd0">currentBlock</a>.<a class="code hl_variable" href="classMsgBlock.html#a20979ff1ed42ed49640367ad1d624d5e">bg</a>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordtype">bool</span> flag2 = (currentBlock.cg.enabled = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            image.enabled = flag2;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordtype">bool</span> flag = (currentBlock.cg.enabled = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            image.enabled = flag;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        {</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            Image image2 = <a class="code hl_variable" href="classMsgBox.html#abe1fb99308938bbbd1cdec53871f6dd0">currentBlock</a>.<a class="code hl_variable" href="classMsgBlock.html#a20979ff1ed42ed49640367ad1d624d5e">bg</a>;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordtype">bool</span> flag2 = (currentBlock.cg.enabled = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            image2.enabled = flag2;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordtype">bool</span> flag = (currentBlock.cg.enabled = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            image2.enabled = flag;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <a class="code hl_function" href="classMsgBox.html#aed5e73609bda8ad23106b7b8fff53ff0">RefreshAlpha</a>();</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
@@ -320,8 +320,8 @@ $(document).ready(function(){initNavTree('MsgBox_8cs_source.html',''); initResiz
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classMsgBlock.html">MsgBlock</a> msgBlock <span class="keywordflow">in</span> componentsInChildren)</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            {</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                CanvasGroup cg = msgBlock.<a class="code hl_variable" href="classMsgBlock.html#ad805a84190089960c082536a88e21cf6">cg</a>;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordtype">bool</span> flag2 = (msgBlock.bg.enabled = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                cg.enabled = flag2;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordtype">bool</span> flag = (msgBlock.bg.enabled = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                cg.enabled = flag;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
@@ -329,8 +329,8 @@ $(document).ready(function(){initNavTree('MsgBox_8cs_source.html',''); initResiz
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        {</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            block2.transform.SetParent(<a class="code hl_variable" href="classMsgBox.html#aaff0080dcbc2c1a7babe2c0a722ff28a">layout</a>.transform, worldPositionStays: <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            CanvasGroup cg2 = block2.<a class="code hl_variable" href="classMsgBlock.html#ad805a84190089960c082536a88e21cf6">cg</a>;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordtype">bool</span> flag2 = (block2.bg.enabled = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            cg2.enabled = flag2;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordtype">bool</span> flag = (block2.bg.enabled = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            cg2.enabled = flag;</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        }</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_function" href="classMsgBox.html#aed5e73609bda8ad23106b7b8fff53ff0">RefreshAlpha</a>();</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <a class="code hl_variable" href="classMsgBox.html#aaff0080dcbc2c1a7babe2c0a722ff28a">layout</a>.RebuildLayout();</div>

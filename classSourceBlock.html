@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -94,6 +94,8 @@ $(document).ready(function(){initNavTree('classSourceBlock.html',''); initResiza
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSourceBlock-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SourceBlock Class Reference</div></div>
 </div><!--header-->
@@ -152,6 +154,18 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:af4ed121170dcc5dcd6a4edff6e07f3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9de65c59e76be1e9c4624c260495c1e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRenderData.html">RenderData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5">FallbackRenderData</a></td></tr>
 <tr class="separator:a9de65c59e76be1e9c4624c260495c1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a932a12e850fcc5832ffce5751108f72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTileLookup.html">TileLookup</a>&lt; <a class="el" href="classSourceBlock_1_1Row.html">Row</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceBlock.html#a932a12e850fcc5832ffce5751108f72b">Lookup</a><code> [get]</code></td></tr>
+<tr class="separator:a932a12e850fcc5832ffce5751108f72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5e6345d9654ebdaf271551efb0a9e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceBlock_1_1Row.html">Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceBlock.html#aca5e6345d9654ebdaf271551efb0a9e7">this[int id]</a><code> [get]</code></td></tr>
+<tr class="separator:aca5e6345d9654ebdaf271551efb0a9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa0c96d639f97fa1deb1d422762800ec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTileLookup.html">TileLookup</a>&lt; <a class="el" href="classSourceBlock_1_1Row.html">Row</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceBlock.html#aa0c96d639f97fa1deb1d422762800ec3">_lookup</a></td></tr>
+<tr class="separator:aa0c96d639f97fa1deb1d422762800ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -180,14 +194,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00236">236</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>    {</div>
-<div class="line"><span class="lineno">  238</span>        <a class="code hl_variable" href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">_rows</a>.Clear();</div>
-<div class="line"><span class="lineno">  239</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">  240</span>        {</div>
-<div class="line"><span class="lineno">  241</span>            <a class="code hl_variable" href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">_rows</a>[row.id] = row;</div>
-<div class="line"><span class="lineno">  242</span>        }</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00243">243</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>        <a class="code hl_variable" href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">_rows</a>.Clear();</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  247</span>        {</div>
+<div class="line"><span class="lineno">  248</span>            <a class="code hl_variable" href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">_rows</a>[row.id] = row;</div>
+<div class="line"><span class="lineno">  249</span>        }</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
 <div class="ttc" id="aclassSourceBlock_html_ac3f183b23c3446359304eefcaf41ddb2"><div class="ttname"><a href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">SourceBlock._rows</a></div><div class="ttdeci">Dictionary&lt; int, Row &gt; _rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00141">SourceBlock.cs:141</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceBlock_8cs_source.html#l00141">_rows</a>, and <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>.</p>
@@ -217,43 +231,43 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00145">145</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>    {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">  148</span>        {</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(0),</div>
-<div class="line"><span class="lineno">  150</span>            alias = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
-<div class="line"><span class="lineno">  151</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
-<div class="line"><span class="lineno">  152</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3),</div>
-<div class="line"><span class="lineno">  153</span>            sort = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(4),</div>
-<div class="line"><span class="lineno">  154</span>            reqHarvest = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(5),</div>
-<div class="line"><span class="lineno">  155</span>            hp = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(6),</div>
-<div class="line"><span class="lineno">  156</span>            idThing = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(7),</div>
-<div class="line"><span class="lineno">  157</span>            _tileType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(8),</div>
-<div class="line"><span class="lineno">  158</span>            _idRenderData = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(9),</div>
-<div class="line"><span class="lineno">  159</span>            tiles = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(10),</div>
-<div class="line"><span class="lineno">  160</span>            anime = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(11),</div>
-<div class="line"><span class="lineno">  161</span>            snowTile = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(12),</div>
-<div class="line"><span class="lineno">  162</span>            colorMod = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(13),</div>
-<div class="line"><span class="lineno">  163</span>            colorType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(14),</div>
-<div class="line"><span class="lineno">  164</span>            value = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(15),</div>
-<div class="line"><span class="lineno">  165</span>            LV = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(16),</div>
-<div class="line"><span class="lineno">  166</span>            recipeKey = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(17),</div>
-<div class="line"><span class="lineno">  167</span>            factory = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(18),</div>
-<div class="line"><span class="lineno">  168</span>            components = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(19),</div>
-<div class="line"><span class="lineno">  169</span>            defMat = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(20),</div>
-<div class="line"><span class="lineno">  170</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(21),</div>
-<div class="line"><span class="lineno">  171</span>            roof = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(22),</div>
-<div class="line"><span class="lineno">  172</span>            autoFloor = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(23),</div>
-<div class="line"><span class="lineno">  173</span>            concrete = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(24),</div>
-<div class="line"><span class="lineno">  174</span>            transparent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(25),</div>
-<div class="line"><span class="lineno">  175</span>            transition = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(26),</div>
-<div class="line"><span class="lineno">  176</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(27),</div>
-<div class="line"><span class="lineno">  177</span>            soundFoot = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(28),</div>
-<div class="line"><span class="lineno">  178</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(29),</div>
-<div class="line"><span class="lineno">  179</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(30)</div>
-<div class="line"><span class="lineno">  180</span>        };</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00152">152</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(0),</div>
+<div class="line"><span class="lineno">  157</span>            alias = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
+<div class="line"><span class="lineno">  158</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
+<div class="line"><span class="lineno">  159</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3),</div>
+<div class="line"><span class="lineno">  160</span>            sort = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(4),</div>
+<div class="line"><span class="lineno">  161</span>            reqHarvest = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(5),</div>
+<div class="line"><span class="lineno">  162</span>            hp = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(6),</div>
+<div class="line"><span class="lineno">  163</span>            idThing = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(7),</div>
+<div class="line"><span class="lineno">  164</span>            _tileType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(8),</div>
+<div class="line"><span class="lineno">  165</span>            _idRenderData = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(9),</div>
+<div class="line"><span class="lineno">  166</span>            tiles = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(10),</div>
+<div class="line"><span class="lineno">  167</span>            anime = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(11),</div>
+<div class="line"><span class="lineno">  168</span>            snowTile = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(12),</div>
+<div class="line"><span class="lineno">  169</span>            colorMod = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(13),</div>
+<div class="line"><span class="lineno">  170</span>            colorType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(14),</div>
+<div class="line"><span class="lineno">  171</span>            value = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(15),</div>
+<div class="line"><span class="lineno">  172</span>            LV = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(16),</div>
+<div class="line"><span class="lineno">  173</span>            recipeKey = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(17),</div>
+<div class="line"><span class="lineno">  174</span>            factory = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(18),</div>
+<div class="line"><span class="lineno">  175</span>            components = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(19),</div>
+<div class="line"><span class="lineno">  176</span>            defMat = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(20),</div>
+<div class="line"><span class="lineno">  177</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(21),</div>
+<div class="line"><span class="lineno">  178</span>            roof = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(22),</div>
+<div class="line"><span class="lineno">  179</span>            autoFloor = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(23),</div>
+<div class="line"><span class="lineno">  180</span>            concrete = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(24),</div>
+<div class="line"><span class="lineno">  181</span>            transparent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(25),</div>
+<div class="line"><span class="lineno">  182</span>            transition = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(26),</div>
+<div class="line"><span class="lineno">  183</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(27),</div>
+<div class="line"><span class="lineno">  184</span>            soundFoot = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(28),</div>
+<div class="line"><span class="lineno">  185</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(29),</div>
+<div class="line"><span class="lineno">  186</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(30)</div>
+<div class="line"><span class="lineno">  187</span>        };</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00011">SourceData.cs:12</a></div></div>
 <div class="ttc" id="aclassSourceData_html_a067341fc167e6502e6905105a7b84343"><div class="ttname"><a href="classSourceData.html#a067341fc167e6502e6905105a7b84343">SourceData.GetStringArray</a></div><div class="ttdeci">static string[] GetStringArray(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l01011">SourceData.cs:1011</a></div></div>
 <div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l01016">SourceData.cs:1016</a></div></div>
@@ -289,43 +303,43 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00183">183</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>    {</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">  186</span>        {</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
-<div class="line"><span class="lineno">  188</span>            alias = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;alias&quot;</span>]),</div>
-<div class="line"><span class="lineno">  189</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  190</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name&quot;</span>]),</div>
-<div class="line"><span class="lineno">  191</span>            sort = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;sort&quot;</span>]),</div>
-<div class="line"><span class="lineno">  192</span>            reqHarvest = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;reqHarvest&quot;</span>]),</div>
-<div class="line"><span class="lineno">  193</span>            hp = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;hp&quot;</span>]),</div>
-<div class="line"><span class="lineno">  194</span>            idThing = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;idThing&quot;</span>]),</div>
-<div class="line"><span class="lineno">  195</span>            _tileType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;_tileType&quot;</span>]),</div>
-<div class="line"><span class="lineno">  196</span>            _idRenderData = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;_idRenderData&quot;</span>]),</div>
-<div class="line"><span class="lineno">  197</span>            tiles = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(mapping[<span class="stringliteral">&quot;tiles&quot;</span>]),</div>
-<div class="line"><span class="lineno">  198</span>            anime = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(mapping[<span class="stringliteral">&quot;anime&quot;</span>]),</div>
-<div class="line"><span class="lineno">  199</span>            snowTile = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;snowTile&quot;</span>]),</div>
-<div class="line"><span class="lineno">  200</span>            colorMod = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;colorMod&quot;</span>]),</div>
-<div class="line"><span class="lineno">  201</span>            colorType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;colorType&quot;</span>]),</div>
-<div class="line"><span class="lineno">  202</span>            value = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;value&quot;</span>]),</div>
-<div class="line"><span class="lineno">  203</span>            LV = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;LV&quot;</span>]),</div>
-<div class="line"><span class="lineno">  204</span>            recipeKey = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;recipeKey&quot;</span>]),</div>
-<div class="line"><span class="lineno">  205</span>            factory = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;factory&quot;</span>]),</div>
-<div class="line"><span class="lineno">  206</span>            components = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;components&quot;</span>]),</div>
-<div class="line"><span class="lineno">  207</span>            defMat = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;defMat&quot;</span>]),</div>
-<div class="line"><span class="lineno">  208</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;category&quot;</span>]),</div>
-<div class="line"><span class="lineno">  209</span>            roof = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;roof&quot;</span>]),</div>
-<div class="line"><span class="lineno">  210</span>            autoFloor = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;autoFloor&quot;</span>]),</div>
-<div class="line"><span class="lineno">  211</span>            concrete = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(mapping[<span class="stringliteral">&quot;concrete&quot;</span>]),</div>
-<div class="line"><span class="lineno">  212</span>            transparent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(mapping[<span class="stringliteral">&quot;transparent&quot;</span>]),</div>
-<div class="line"><span class="lineno">  213</span>            transition = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(mapping[<span class="stringliteral">&quot;transition&quot;</span>]),</div>
-<div class="line"><span class="lineno">  214</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;tag&quot;</span>]),</div>
-<div class="line"><span class="lineno">  215</span>            soundFoot = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;soundFoot&quot;</span>]),</div>
-<div class="line"><span class="lineno">  216</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  217</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail&quot;</span>])</div>
-<div class="line"><span class="lineno">  218</span>        };</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00190">190</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>    {</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">  193</span>        {</div>
+<div class="line"><span class="lineno">  194</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
+<div class="line"><span class="lineno">  195</span>            alias = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;alias&quot;</span>]),</div>
+<div class="line"><span class="lineno">  196</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  197</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name&quot;</span>]),</div>
+<div class="line"><span class="lineno">  198</span>            sort = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;sort&quot;</span>]),</div>
+<div class="line"><span class="lineno">  199</span>            reqHarvest = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;reqHarvest&quot;</span>]),</div>
+<div class="line"><span class="lineno">  200</span>            hp = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;hp&quot;</span>]),</div>
+<div class="line"><span class="lineno">  201</span>            idThing = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;idThing&quot;</span>]),</div>
+<div class="line"><span class="lineno">  202</span>            _tileType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;_tileType&quot;</span>]),</div>
+<div class="line"><span class="lineno">  203</span>            _idRenderData = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;_idRenderData&quot;</span>]),</div>
+<div class="line"><span class="lineno">  204</span>            tiles = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(mapping[<span class="stringliteral">&quot;tiles&quot;</span>]),</div>
+<div class="line"><span class="lineno">  205</span>            anime = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(mapping[<span class="stringliteral">&quot;anime&quot;</span>]),</div>
+<div class="line"><span class="lineno">  206</span>            snowTile = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;snowTile&quot;</span>]),</div>
+<div class="line"><span class="lineno">  207</span>            colorMod = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;colorMod&quot;</span>]),</div>
+<div class="line"><span class="lineno">  208</span>            colorType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;colorType&quot;</span>]),</div>
+<div class="line"><span class="lineno">  209</span>            value = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;value&quot;</span>]),</div>
+<div class="line"><span class="lineno">  210</span>            LV = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;LV&quot;</span>]),</div>
+<div class="line"><span class="lineno">  211</span>            recipeKey = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;recipeKey&quot;</span>]),</div>
+<div class="line"><span class="lineno">  212</span>            factory = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;factory&quot;</span>]),</div>
+<div class="line"><span class="lineno">  213</span>            components = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;components&quot;</span>]),</div>
+<div class="line"><span class="lineno">  214</span>            defMat = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;defMat&quot;</span>]),</div>
+<div class="line"><span class="lineno">  215</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;category&quot;</span>]),</div>
+<div class="line"><span class="lineno">  216</span>            roof = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;roof&quot;</span>]),</div>
+<div class="line"><span class="lineno">  217</span>            autoFloor = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;autoFloor&quot;</span>]),</div>
+<div class="line"><span class="lineno">  218</span>            concrete = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(mapping[<span class="stringliteral">&quot;concrete&quot;</span>]),</div>
+<div class="line"><span class="lineno">  219</span>            transparent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4">GetBool</a>(mapping[<span class="stringliteral">&quot;transparent&quot;</span>]),</div>
+<div class="line"><span class="lineno">  220</span>            transition = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a886982dd0a3433bc5f796b31ea45b3ad">GetIntArray</a>(mapping[<span class="stringliteral">&quot;transition&quot;</span>]),</div>
+<div class="line"><span class="lineno">  221</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;tag&quot;</span>]),</div>
+<div class="line"><span class="lineno">  222</span>            soundFoot = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;soundFoot&quot;</span>]),</div>
+<div class="line"><span class="lineno">  223</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  224</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail&quot;</span>])</div>
+<div class="line"><span class="lineno">  225</span>        };</div>
+<div class="line"><span class="lineno">  226</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00986">SourceData&lt; T, T2 &gt;.GetBool()</a>, <a class="el" href="SourceData_8cs_source.html#l00981">SourceData&lt; T, T2 &gt;.GetInt()</a>, <a class="el" href="SourceData_8cs_source.html#l01006">SourceData&lt; T, T2 &gt;.GetIntArray()</a>, <a class="el" href="SourceData_8cs_source.html#l01016">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="SourceData_8cs_source.html#l01011">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
 
@@ -354,10 +368,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00226">226</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  227</span>    {</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceBlock.html#adb2e8b5338ee3204cfc173bfe9b08e7f">RowMapping</a>;</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00233">233</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>    {</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceBlock.html#adb2e8b5338ee3204cfc173bfe9b08e7f">RowMapping</a>;</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
 <div class="ttc" id="aclassSourceBlock_html_adb2e8b5338ee3204cfc173bfe9b08e7f"><div class="ttname"><a href="classSourceBlock.html#adb2e8b5338ee3204cfc173bfe9b08e7f">SourceBlock.RowMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, int &gt; RowMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00071">SourceBlock.cs:71</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceBlock_8cs_source.html#l00071">RowMapping</a>.</p>
@@ -387,10 +401,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00231">231</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>    {</div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceBlock.html#af4ed121170dcc5dcd6a4edff6e07f3c9">TypeMapping</a>;</div>
-<div class="line"><span class="lineno">  234</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00238">238</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>    {</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceBlock.html#af4ed121170dcc5dcd6a4edff6e07f3c9">TypeMapping</a>;</div>
+<div class="line"><span class="lineno">  241</span>    }</div>
 <div class="ttc" id="aclassSourceBlock_html_af4ed121170dcc5dcd6a4edff6e07f3c9"><div class="ttname"><a href="classSourceBlock.html#af4ed121170dcc5dcd6a4edff6e07f3c9">SourceBlock.TypeMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, string &gt; TypeMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00106">SourceBlock.cs:106</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceBlock_8cs_source.html#l00106">TypeMapping</a>.</p>
@@ -420,20 +434,20 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00261">261</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  262</span>    {</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">  265</span>        {</div>
-<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">if</span> (row.sort != 0)</div>
-<div class="line"><span class="lineno">  267</span>            {</div>
-<div class="line"><span class="lineno">  268</span>                num = row.sort;</div>
-<div class="line"><span class="lineno">  269</span>            }</div>
-<div class="line"><span class="lineno">  270</span>            row.sort = num;</div>
-<div class="line"><span class="lineno">  271</span>            num++;</div>
-<div class="line"><span class="lineno">  272</span>        }</div>
-<div class="line"><span class="lineno">  273</span>        rows.Sort((Row a, Row b) =&gt; a.id - b.id);</div>
-<div class="line"><span class="lineno">  274</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00268">268</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>    {</div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  272</span>        {</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">if</span> (row.sort != 0)</div>
+<div class="line"><span class="lineno">  274</span>            {</div>
+<div class="line"><span class="lineno">  275</span>                num = row.sort;</div>
+<div class="line"><span class="lineno">  276</span>            }</div>
+<div class="line"><span class="lineno">  277</span>            row.sort = num;</div>
+<div class="line"><span class="lineno">  278</span>            num++;</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        rows.Sort((Row a, Row b) =&gt; a.id - b.id);</div>
+<div class="line"><span class="lineno">  281</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>, and <a class="el" href="RenderRow_8cs_source.html#l00018">RenderRow.sort</a>.</p>
 
@@ -462,27 +476,30 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00276">276</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  277</span>    {</div>
-<div class="line"><span class="lineno">  278</span>        <a class="code hl_variable" href="classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5">FallbackRenderData</a> = <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;<a class="code hl_class" href="classRenderData.html">RenderData</a>&gt;(<span class="stringliteral">&quot;Scene/Render/Data/block&quot;</span>);</div>
-<div class="line"><span class="lineno">  279</span>        Cell.blockList = rows;</div>
-<div class="line"><span class="lineno">  280</span>        <a class="code hl_class" href="classSourceFloor.html">SourceFloor</a> floors = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>;</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">  282</span>        {</div>
-<div class="line"><span class="lineno">  283</span>            row.Init();</div>
-<div class="line"><span class="lineno">  284</span>            row.sourceAutoFloor = (row.autoFloor.IsEmpty() ? floors.rows[40] : floors.alias[row.autoFloor]);</div>
-<div class="line"><span class="lineno">  285</span>        }</div>
-<div class="line"><span class="lineno">  286</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00283">283</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>    {</div>
+<div class="line"><span class="lineno">  285</span>        <a class="code hl_property" href="classSourceBlock.html#a932a12e850fcc5832ffce5751108f72b">Lookup</a>.Build();</div>
+<div class="line"><span class="lineno">  286</span>        <a class="code hl_variable" href="classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5">FallbackRenderData</a> = <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;<a class="code hl_class" href="classRenderData.html">RenderData</a>&gt;(<span class="stringliteral">&quot;Scene/Render/Data/block&quot;</span>);</div>
+<div class="line"><span class="lineno">  287</span>        Cell.blockSource = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  288</span>        Cell.blockList = rows;</div>
+<div class="line"><span class="lineno">  289</span>        <a class="code hl_class" href="classSourceFloor.html">SourceFloor</a> floors = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_variable" href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">floors</a>;</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  291</span>        {</div>
+<div class="line"><span class="lineno">  292</span>            row.Init();</div>
+<div class="line"><span class="lineno">  293</span>            row.sourceAutoFloor = (row.autoFloor.IsEmpty() ? floors[40] : floors.alias[row.autoFloor]);</div>
+<div class="line"><span class="lineno">  294</span>        }</div>
+<div class="line"><span class="lineno">  295</span>    }</div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
 <div class="ttc" id="aclassCore_html_a5806f4914088ef2f871c09cdf90046dd"><div class="ttname"><a href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">Core.sources</a></div><div class="ttdeci">SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00033">Core.cs:33</a></div></div>
 <div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00015">Core.cs:15</a></div></div>
 <div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
 <div class="ttc" id="aclassResourceCache_html"><div class="ttname"><a href="classResourceCache.html">ResourceCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceCache_8cs_source.html#l00019">ResourceCache.cs:20</a></div></div>
+<div class="ttc" id="aclassSourceBlock_html_a932a12e850fcc5832ffce5751108f72b"><div class="ttname"><a href="classSourceBlock.html#a932a12e850fcc5832ffce5751108f72b">SourceBlock.Lookup</a></div><div class="ttdeci">TileLookup&lt; Row &gt; Lookup</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00148">SourceBlock.cs:148</a></div></div>
 <div class="ttc" id="aclassSourceBlock_html_a9de65c59e76be1e9c4624c260495c1e5"><div class="ttname"><a href="classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5">SourceBlock.FallbackRenderData</a></div><div class="ttdeci">static RenderData FallbackRenderData</div><div class="ttdef"><b>Definition:</b> <a href="SourceBlock_8cs_source.html#l00143">SourceBlock.cs:143</a></div></div>
 <div class="ttc" id="aclassSourceFloor_html"><div class="ttname"><a href="classSourceFloor.html">SourceFloor</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceFloor_8cs_source.html#l00004">SourceFloor.cs:5</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_af0401efa5aae8bd83979a2a12bad1893"><div class="ttname"><a href="classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893">SourceManager.floors</a></div><div class="ttdeci">SourceFloor floors</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00046">SourceManager.cs:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceBlock_8cs_source.html#l00017">SourceBlock.Row.autoFloor</a>, <a class="el" href="SourceBlock_8cs_source.html#l00143">FallbackRenderData</a>, <a class="el" href="SourceManager_8cs_source.html#l00046">SourceManager.floors</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, and <a class="el" href="Core_8cs_source.html#l00033">Core.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceBlock_8cs_source.html#l00017">SourceBlock.Row.autoFloor</a>, <a class="el" href="SourceBlock_8cs_source.html#l00143">FallbackRenderData</a>, <a class="el" href="SourceManager_8cs_source.html#l00046">SourceManager.floors</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, <a class="el" href="SourceBlock_8cs_source.html#l00148">Lookup</a>, and <a class="el" href="Core_8cs_source.html#l00033">Core.sources</a>.</p>
 
 </div>
 </div>
@@ -509,13 +526,13 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00245">245</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>            row.pref = <a class="code hl_variable" href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">_rows</a>.TryGetValue(row.id)?.pref ?? <span class="keyword">new</span> <a class="code hl_class" href="classSourcePref.html">SourcePref</a>();</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00252">252</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>    {</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            row.pref = <a class="code hl_variable" href="classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2">_rows</a>.TryGetValue(row.id)?.pref ?? <span class="keyword">new</span> <a class="code hl_class" href="classSourcePref.html">SourcePref</a>();</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+<div class="line"><span class="lineno">  258</span>    }</div>
 <div class="ttc" id="aclassSourcePref_html"><div class="ttname"><a href="classSourcePref.html">SourcePref</a></div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00010">SourcePref.cs:11</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceBlock_8cs_source.html#l00141">_rows</a>, and <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>.</p>
@@ -546,10 +563,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00221">221</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
-<div class="line"><span class="lineno">  223</span>        map[r.id] = r;</div>
-<div class="line"><span class="lineno">  224</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00228">228</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>    {</div>
+<div class="line"><span class="lineno">  230</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>.</p>
 
@@ -578,19 +595,43 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00253">253</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>    {</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">  256</span>        {</div>
-<div class="line"><span class="lineno">  257</span>            row.pref.Validate();</div>
-<div class="line"><span class="lineno">  258</span>        }</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00260">260</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>    {</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">  263</span>        {</div>
+<div class="line"><span class="lineno">  264</span>            row.pref.Validate();</div>
+<div class="line"><span class="lineno">  265</span>        }</div>
+<div class="line"><span class="lineno">  266</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00068">RenderRow.pref</a>, and <a class="el" href="SourcePref_8cs_source.html#l00363">SourcePref.Validate()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa0c96d639f97fa1deb1d422762800ec3" name="aa0c96d639f97fa1deb1d422762800ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c96d639f97fa1deb1d422762800ec3">&#9670;&#160;</a></span>_lookup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTileLookup.html">TileLookup</a>&lt;<a class="el" href="classSourceBlock_1_1Row.html">Row</a>&gt; SourceBlock._lookup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00146">146</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+
+</div>
+</div>
 <a id="ac3f183b23c3446359304eefcaf41ddb2" name="ac3f183b23c3446359304eefcaf41ddb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3f183b23c3446359304eefcaf41ddb2">&#9670;&#160;</a></span>_rows</h2>
 
@@ -605,7 +646,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00141">141</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00236">BackupPref()</a>, and <a class="el" href="SourceBlock_8cs_source.html#l00245">RestorePref()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00243">BackupPref()</a>, and <a class="el" href="SourceBlock_8cs_source.html#l00252">RestorePref()</a>.</p>
 
 </div>
 </div>
@@ -631,7 +672,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00143">143</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00276">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00283">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -657,7 +698,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00071">71</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00226">GetRowMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00233">GetRowMapping()</a>.</p>
 
 </div>
 </div>
@@ -683,7 +724,58 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00106">106</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00231">GetTypeMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00238">GetTypeMapping()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a932a12e850fcc5832ffce5751108f72b" name="a932a12e850fcc5832ffce5751108f72b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932a12e850fcc5832ffce5751108f72b">&#9670;&#160;</a></span>Lookup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTileLookup.html">TileLookup</a>&lt;<a class="el" href="classSourceBlock_1_1Row.html">Row</a>&gt; SourceBlock.Lookup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00148">148</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00283">OnInit()</a>.</p>
+
+</div>
+</div>
+<a id="aca5e6345d9654ebdaf271551efb0a9e7" name="aca5e6345d9654ebdaf271551efb0a9e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5e6345d9654ebdaf271551efb0a9e7">&#9670;&#160;</a></span>this[int id]</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSourceBlock_1_1Row.html">Row</a> SourceBlock.this[int id]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceBlock_8cs_source.html#l00150">150</a> of file <a class="el" href="SourceBlock_8cs_source.html">SourceBlock.cs</a>.</p>
 
 </div>
 </div>

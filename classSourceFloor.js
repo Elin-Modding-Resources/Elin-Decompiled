@@ -12,8 +12,11 @@ var classSourceFloor =
     [ "RestorePref", "classSourceFloor.html#a2ed843dc998dc838cad5574ce566ad4f", null ],
     [ "SetRow", "classSourceFloor.html#ae02cce0cdbf0b902ce3875e454a1d1e7", null ],
     [ "ValidatePref", "classSourceFloor.html#a3bee5d812022857c105fcf07d66a222e", null ],
+    [ "_lookup", "classSourceFloor.html#a4fdc156a393cb7ec7e29280e0f820e0e", null ],
     [ "_rows", "classSourceFloor.html#a44332669ec2dfc23e215e3f8eb5b696e", null ],
     [ "FallbackRenderData", "classSourceFloor.html#ace984d8795b4d5a20bfec883210e8339", null ],
     [ "RowMapping", "classSourceFloor.html#af9b7714521c79d99bfd74b48efd0fd2b", null ],
-    [ "TypeMapping", "classSourceFloor.html#a098b3830a10d70a67eea5a83a40d3f85", null ]
+    [ "TypeMapping", "classSourceFloor.html#a098b3830a10d70a67eea5a83a40d3f85", null ],
+    [ "Lookup", "classSourceFloor.html#aade01d1db729dcd8f979416d7b4b109c", null ],
+    [ "this[int id]", "classSourceFloor.html#a416fc95d360a62693babd25cd9c8e51f", null ]
 ];

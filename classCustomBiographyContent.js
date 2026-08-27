@@ -1,10 +1,9 @@
 var classCustomBiographyContent =
 [
-    [ "CreateFromId", "classCustomBiographyContent.html#a4e400daf127bcda120b286f25bd6af5b", null ],
+    [ "CreateFromId", "classCustomBiographyContent.html#a1f6148faca7aaa65d98a450bffe20b76", null ],
     [ "LoadContent", "classCustomBiographyContent.html#a6210dbe15154037c97896a93d03d8481", null ],
     [ "OnSetLang", "classCustomBiographyContent.html#ab6961a0e2e2f50ba84e2ba143d8100a8", null ],
     [ "RefreshCharaBio", "classCustomBiographyContent.html#a023b3d3d275cc0dc7c6ebaf4e4ca6457", null ],
-    [ "_initialized", "classCustomBiographyContent.html#a8fe4c63eb3a0b8b41b10ac18069bda13", null ],
     [ "_lastWordKey", "classCustomBiographyContent.html#ae6b4ec7b8705eaec8dc821bad8f2fd98", null ],
     [ "_tempLangKey", "classCustomBiographyContent.html#ad1fda2cd924075c4114dd4164ea969b9", null ],
     [ "background", "classCustomBiographyContent.html#accd5eaf3cc27461ab19ae769bfb5ebe9", null ],
@@ -19,5 +18,6 @@ var classCustomBiographyContent =
     [ "favFood", "classCustomBiographyContent.html#ac55b04a0ba20b46b598204e8792f2c9e", null ],
     [ "likeHobby", "classCustomBiographyContent.html#adf7677135ce0e2ae8b89c691a9ee4e1e", null ],
     [ "likeThing", "classCustomBiographyContent.html#a4bbf201e5e96130fb8b70315c0a15b3b", null ],
-    [ "mom", "classCustomBiographyContent.html#a9e3484e2ab0fff53b99ba10943431d95", null ]
+    [ "mom", "classCustomBiographyContent.html#a9e3484e2ab0fff53b99ba10943431d95", null ],
+    [ "BioId", "classCustomBiographyContent.html#a16a8ec5d7e28e2672e004dab26f4a1ba", null ]
 ];

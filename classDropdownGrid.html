@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -427,11 +427,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   66</span>                a.<a class="code hl_function" href="classGridItem.html#a33f9c4f7efefaccdd70f52a45027f63a">SetButton</a>(b);</div>
 <div class="line"><span class="lineno">   67</span>            }</div>
 <div class="line"><span class="lineno">   68</span>        };</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classDropdownGrid.html#af56c3178a710acc7a14c4f86ddb74405">slots</a>; j++)</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = 0; num &lt; <a class="code hl_variable" href="classDropdownGrid.html#af56c3178a710acc7a14c4f86ddb74405">slots</a>; num++)</div>
 <div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (j &lt; items.Count)</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (num &lt; items.Count)</div>
 <div class="line"><span class="lineno">   72</span>            {</div>
-<div class="line"><span class="lineno">   73</span>                <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(items[j]);</div>
+<div class="line"><span class="lineno">   73</span>                <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(items[num]);</div>
 <div class="line"><span class="lineno">   74</span>            }</div>
 <div class="line"><span class="lineno">   75</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   76</span>            {</div>
@@ -522,10 +522,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  109</span>                {</div>
 <div class="line"><span class="lineno">  110</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  111</span>                    List&lt;int&gt; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a> = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_variable" href="classRecipeManager.html#a037a25d5cfdb8fb716e03c46c49b9be1">lastIngredients</a>.TryGetValue(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a>);</div>
-<div class="line"><span class="lineno">  112</span>                    <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.IndexOf(ingredient);</div>
-<div class="line"><span class="lineno">  113</span>                    <span class="keywordflow">if</span> (num != -1 &amp;&amp; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.Count &gt; num)</div>
+<div class="line"><span class="lineno">  112</span>                    <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.IndexOf(ingredient);</div>
+<div class="line"><span class="lineno">  113</span>                    <span class="keywordflow">if</span> (num2 != -1 &amp;&amp; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.Count &gt; num2)</div>
 <div class="line"><span class="lineno">  114</span>                    {</div>
-<div class="line"><span class="lineno">  115</span>                        <span class="keywordtype">int</span> uid = <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>[num];</div>
+<div class="line"><span class="lineno">  115</span>                        <span class="keywordtype">int</span> uid = <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>[num2];</div>
 <div class="line"><span class="lineno">  116</span>                        <span class="keywordflow">if</span> (uid != 0)</div>
 <div class="line"><span class="lineno">  117</span>                        {</div>
 <div class="line"><span class="lineno">  118</span>                            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>((<a class="code hl_class" href="classThing.html">Thing</a> t) =&gt; t.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a> == uid) ?? <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_property" href="classMap.html#adcedfe3c98f07260b41fc4b0254e3b6a">Stocked</a>.<a class="code hl_function" href="classProps.html#a6140ef7305b2c520f689be3a1467b18c">Find</a>(uid);</div>
@@ -557,12 +557,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  144</span>                        {</div>
 <div class="line"><span class="lineno">  145</span>                            <span class="keywordflow">if</span> (ingredient.thing == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  146</span>                            {</div>
-<div class="line"><span class="lineno">  147</span>                                <span class="keywordtype">int</span> num2 = <a class="code hl_variable" href="classDropdownGrid.html#a5d37922df02d96e813db102b15760856">lastMats</a>.TryGetValue(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a>, -1);</div>
-<div class="line"><span class="lineno">  148</span>                                <span class="keywordflow">if</span> (num2 != -1)</div>
+<div class="line"><span class="lineno">  147</span>                                <span class="keywordtype">int</span> num3 = <a class="code hl_variable" href="classDropdownGrid.html#a5d37922df02d96e813db102b15760856">lastMats</a>.TryGetValue(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a040c3f5e15fef1caad347e061707d507">id</a>, -1);</div>
+<div class="line"><span class="lineno">  148</span>                                <span class="keywordflow">if</span> (num3 != -1)</div>
 <div class="line"><span class="lineno">  149</span>                                {</div>
 <div class="line"><span class="lineno">  150</span>                                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> things)</div>
 <div class="line"><span class="lineno">  151</span>                                    {</div>
-<div class="line"><span class="lineno">  152</span>                                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.material.id == num2 &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Num &gt;= ingredient.req)</div>
+<div class="line"><span class="lineno">  152</span>                                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.material.id == num3 &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Num &gt;= ingredient.req)</div>
 <div class="line"><span class="lineno">  153</span>                                        {</div>
 <div class="line"><span class="lineno">  154</span>                                            ingredient.SetThing(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
 <div class="line"><span class="lineno">  155</span>                                            <span class="keywordflow">break</span>;</div>
@@ -570,7 +570,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  157</span>                                    }</div>
 <div class="line"><span class="lineno">  158</span>                                    <span class="keywordflow">if</span> (ingredient.thing == <span class="keyword">null</span> &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a>.<a class="code hl_property" href="classCoreDebug.html#aa3a934419cfa84c02f58a6f9b4fd8cad">godBuild</a>)</div>
 <div class="line"><span class="lineno">  159</span>                                    {</div>
-<div class="line"><span class="lineno">  160</span>                                        <a class="code hl_class" href="classThing.html">Thing</a> thing3 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(ingredient.id, num2).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(999);</div>
+<div class="line"><span class="lineno">  160</span>                                        <a class="code hl_class" href="classThing.html">Thing</a> thing3 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(ingredient.id, num3).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(999);</div>
 <div class="line"><span class="lineno">  161</span>                                        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a55d885cb83d08143f87b0406cbfef035">AddThing</a>(thing3);</div>
 <div class="line"><span class="lineno">  162</span>                                        ingredient.SetThing(thing3);</div>
 <div class="line"><span class="lineno">  163</span>                                    }</div>
@@ -637,13 +637,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  224</span>                    {</div>
 <div class="line"><span class="lineno">  225</span>                        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  226</span>                    }</div>
-<div class="line"><span class="lineno">  227</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  227</span>                    <span class="keywordtype">int</span> num4 = 0;</div>
 <div class="line"><span class="lineno">  228</span>                    <a class="code hl_class" href="classThing.html">Thing</a> result = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  229</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item4 <span class="keywordflow">in</span> things)</div>
 <div class="line"><span class="lineno">  230</span>                    {</div>
-<div class="line"><span class="lineno">  231</span>                        <span class="keywordflow">if</span> (item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; num3)</div>
+<div class="line"><span class="lineno">  231</span>                        <span class="keywordflow">if</span> (item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; num4)</div>
 <div class="line"><span class="lineno">  232</span>                        {</div>
-<div class="line"><span class="lineno">  233</span>                            num3 = item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">  233</span>                            num4 = item4.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
 <div class="line"><span class="lineno">  234</span>                            result = item4;</div>
 <div class="line"><span class="lineno">  235</span>                        }</div>
 <div class="line"><span class="lineno">  236</span>                    }</div>
@@ -655,11 +655,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  242</span>                b.<a class="code hl_function" href="classButtonGrid.html#ae504f466293eefcfa21ffadafef0d15e">SetIngredient</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>, a);</div>
 <div class="line"><span class="lineno">  243</span>            }</div>
 <div class="line"><span class="lineno">  244</span>        };</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classDropdownGrid.html#af56c3178a710acc7a14c4f86ddb74405">slots</a>; j++)</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = 0; num &lt; <a class="code hl_variable" href="classDropdownGrid.html#af56c3178a710acc7a14c4f86ddb74405">slots</a>; num++)</div>
 <div class="line"><span class="lineno">  246</span>        {</div>
-<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">if</span> (j &lt; <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.Count)</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">if</span> (num &lt; <a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>.Count)</div>
 <div class="line"><span class="lineno">  248</span>            {</div>
-<div class="line"><span class="lineno">  249</span>                <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>[j]);</div>
+<div class="line"><span class="lineno">  249</span>                <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<a class="code hl_variable" href="classDropdownGrid.html#a2f3d27bf2941335485c83beb0bbe1709">recipe</a>.<a class="code hl_variable" href="classRecipe.html#a6a5225be981549a270d4384c7ca4b5eb">ingredients</a>[num]);</div>
 <div class="line"><span class="lineno">  250</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  251</span>            }</div>
 <div class="line"><span class="lineno">  252</span>            <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">Add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classRecipe.html">Recipe</a>.<a class="code hl_class" href="classRecipe_1_1Ingredient.html">Ingredient</a></div>
@@ -878,9 +878,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassRecipe_html_ae065d37514f42d028eedfcba6c0de001"><div class="ttname"><a href="classRecipe.html#ae065d37514f42d028eedfcba6c0de001">Recipe.GetColorMaterial</a></div><div class="ttdeci">virtual SourceMaterial.Row GetColorMaterial()</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00506">Recipe.cs:506</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a1e21e8fd472ec7cb4b810bbb94532071"><div class="ttname"><a href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">RenderRow.GetColorInt</a></div><div class="ttdeci">int GetColorInt(SourceMaterial.Row mat)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00437">RenderRow.cs:437</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_ab2dc97be906ded91ad9527ef6203e29a"><div class="ttname"><a href="classRenderRow.html#ab2dc97be906ded91ad9527ef6203e29a">RenderRow.SetImage</a></div><div class="ttdeci">void SetImage(Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00359">RenderRow.cs:359</a></div></div>
-<div class="ttc" id="aclassUIList_html_aea0f0d3a7214049d00a0d809587e9737"><div class="ttname"><a href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">UIList.Redraw</a></div><div class="ttdeci">override void Redraw()</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00792">UIList.cs:792</a></div></div>
+<div class="ttc" id="aclassUIList_html_aea0f0d3a7214049d00a0d809587e9737"><div class="ttname"><a href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">UIList.Redraw</a></div><div class="ttdeci">override void Redraw()</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00793">UIList.cs:793</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00437">RenderRow.GetColorInt()</a>, <a class="el" href="Recipe_8cs_source.html#l00506">Recipe.GetColorMaterial()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00024">icon</a>, <a class="el" href="Recipe_8cs_source.html#l00198">Recipe.idSkin</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="Recipe_8cs_source.html#l00562">Recipe.OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00792">UIList.Redraw()</a>, <a class="el" href="Recipe_8cs_source.html#l00210">Recipe.renderRow</a>, and <a class="el" href="RenderRow_8cs_source.html#l00359">RenderRow.SetImage()</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00437">RenderRow.GetColorInt()</a>, <a class="el" href="Recipe_8cs_source.html#l00506">Recipe.GetColorMaterial()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00024">icon</a>, <a class="el" href="Recipe_8cs_source.html#l00198">Recipe.idSkin</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, <a class="el" href="Recipe_8cs_source.html#l00562">Recipe.OnChangeIngredient()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00022">recipe</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00016">rectDrop</a>, <a class="el" href="UIList_8cs_source.html#l00793">UIList.Redraw()</a>, <a class="el" href="Recipe_8cs_source.html#l00210">Recipe.renderRow</a>, and <a class="el" href="RenderRow_8cs_source.html#l00359">RenderRow.SetImage()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DropdownGrid_8cs_source.html#l00265">Activate()</a>, and <a class="el" href="DropdownGrid_8cs_source.html#l00352">TrySelect()</a>.</p>
 
@@ -981,7 +981,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  262</span>        <a class="code hl_variable" href="classDropdownGrid.html#afc91c07b64dfe732fcf3095b040c47e8">list</a>.<a class="code hl_function" href="classUIList.html#aea0f0d3a7214049d00a0d809587e9737">Redraw</a>();</div>
 <div class="line"><span class="lineno">  263</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, and <a class="el" href="UIList_8cs_source.html#l00792">UIList.Redraw()</a>.</p>
+<p class="reference">References <a class="el" href="DropdownGrid_8cs_source.html#l00012">list</a>, and <a class="el" href="UIList_8cs_source.html#l00793">UIList.Redraw()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00180">UIRecipeInfo.RefreshBalance()</a>.</p>
 

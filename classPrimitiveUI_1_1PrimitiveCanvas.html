@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -1444,9 +1444,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  668</span>            LinkedListNode&lt;Vector2&gt; linkedListNode4 = linkedListNode2.Next ?? linkedListNode2.List.First;</div>
 <div class="line"><span class="lineno">  669</span>            Func&lt;Vector2, Vector2, Vector2, bool&gt; func = ((!(linkedListNode4.Value.y &gt; linkedListNode3.Value.y)) ? ((Func&lt;Vector2, Vector2, Vector2, bool&gt;)delegate(Vector2 prev, Vector2 cur, Vector2 next)</div>
 <div class="line"><span class="lineno">  670</span>            {</div>
-<div class="line"><span class="lineno">  671</span>                Vector2 vector2 = cur - prev;</div>
-<div class="line"><span class="lineno">  672</span>                Vector2 rhs2 = next - cur;</div>
-<div class="line"><span class="lineno">  673</span>                <span class="keywordflow">return</span> Vector2.Dot(<span class="keyword">new</span> Vector2(0f - vector2.y, vector2.x), rhs2) &gt; 0f;</div>
+<div class="line"><span class="lineno">  671</span>                Vector2 vector = cur - prev;</div>
+<div class="line"><span class="lineno">  672</span>                Vector2 rhs = next - cur;</div>
+<div class="line"><span class="lineno">  673</span>                <span class="keywordflow">return</span> Vector2.Dot(<span class="keyword">new</span> Vector2(0f - vector.y, vector.x), rhs) &gt; 0f;</div>
 <div class="line"><span class="lineno">  674</span>            }) : ((Func&lt;Vector2, Vector2, Vector2, bool&gt;)delegate(Vector2 prev, Vector2 cur, Vector2 next)</div>
 <div class="line"><span class="lineno">  675</span>            {</div>
 <div class="line"><span class="lineno">  676</span>                Vector2 vector = cur - prev;</div>
@@ -1454,7 +1454,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  678</span>                <span class="keywordflow">return</span> Vector2.Dot(<span class="keyword">new</span> Vector2(0f - vector.y, vector.x), rhs) &lt; 0f;</div>
 <div class="line"><span class="lineno">  679</span>            }));</div>
 <div class="line"><span class="lineno">  680</span>            linkedListNode = linkedList.First;</div>
-<div class="line"><span class="lineno">  681</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; linkedList.Count; i++)</div>
+<div class="line"><span class="lineno">  681</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num2 = 0; num2 &lt; linkedList.Count; num2++)</div>
 <div class="line"><span class="lineno">  682</span>            {</div>
 <div class="line"><span class="lineno">  683</span>                linkedListNode3 = linkedListNode.Previous ?? linkedListNode.List.Last;</div>
 <div class="line"><span class="lineno">  684</span>                linkedListNode4 = linkedListNode.Next ?? linkedListNode.List.First;</div>

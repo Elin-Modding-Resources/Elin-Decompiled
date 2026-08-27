@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -256,9 +256,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   10</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a>)</div>
 <div class="line"><span class="lineno">   11</span>        {</div>
 <div class="line"><span class="lineno">   12</span>            <a class="code hl_variable" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a> = <a class="code hl_enumvalue" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5ae8cbe8f681e78018c49cfb82158030d8">AssetBundle</a>.LoadFromFile(<a class="code hl_variable" href="classMiniGame.html#a131b3e551cd419f283fd224cdd266401">path</a> + <span class="stringliteral">&quot;/Asset_&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;/asset&quot;</span>);</div>
-<div class="line"><span class="lineno">   13</span>            Object @<span class="keywordtype">object</span> = <a class="code hl_variable" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a>.LoadAsset(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   14</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(@<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   15</span>            <a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a> = Object.Instantiate(@<span class="keywordtype">object</span>) as GameObject;</div>
+<div class="line"><span class="lineno">   13</span>            Object obj = <a class="code hl_variable" href="classMiniGame.html#a5984df8380fd9f404bdd311f798aefda">asset</a>.LoadAsset(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   14</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(obj);</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a> = Object.Instantiate(obj) as GameObject;</div>
 <div class="line"><span class="lineno">   16</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a>);</div>
 <div class="line"><span class="lineno">   17</span>            <a class="code hl_variable" href="classModMinigame.html#a0c2512181f347ccc48e966d285225aac">game</a> = <a class="code hl_variable" href="classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00">go</a>.GetComponentInChildren&lt;T&gt;();</div>
 <div class="line"><span class="lineno">   18</span>        }</div>

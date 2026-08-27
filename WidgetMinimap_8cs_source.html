@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -360,15 +360,16 @@ $(document).ready(function(){initNavTree('WidgetMinimap_8cs_source.html',''); in
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordtype">float</span> x = (float)num / (<span class="keywordtype">float</span>)<a class="code hl_property" href="classWidgetMinimap.html#aa420d33d5c4e825f14cd9242a1660b61">Size</a> - 0.5f;</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordtype">float</span> y = (float)num2 / (<span class="keywordtype">float</span>)<a class="code hl_property" href="classWidgetMinimap.html#aa420d33d5c4e825f14cd9242a1660b61">Size</a> - 0.5f;</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <a class="code hl_variable" href="classWidgetMinimap.html#a1933928dae5819b2ceaaa0e0ac392308">count</a>++;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        ParticleSystem.EmitParams emitParams = <span class="keywordflow">default</span>(ParticleSystem.EmitParams);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        emitParams.position = <span class="keyword">new</span> Vector3(x, y, z);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        emitParams.startSize = <a class="code hl_variable" href="classWidgetMinimap.html#a1ba79aa8d36a2b5aa7e307a162745470">psSize</a>;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        emitParams.startLifetime = <a class="code hl_variable" href="classWidgetMinimap.html#aef49ccf5c52b9018aba5bdfdf6f79fb2">intervalPS</a>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        emitParams.startColor = col;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        ParticleSystem.EmitParams emitParams2 = emitParams;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <a class="code hl_variable" href="classWidgetMinimap.html#ac536de2a795f3840c7cd1be2e5e91581">psAlly</a>.Emit(emitParams2, 1);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>}</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        ParticleSystem.EmitParams emitParams = <span class="keyword">new</span> ParticleSystem.EmitParams</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            position = <span class="keyword">new</span> Vector3(x, y, z),</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            startSize = <a class="code hl_variable" href="classWidgetMinimap.html#a1ba79aa8d36a2b5aa7e307a162745470">psSize</a>,</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            startLifetime = <a class="code hl_variable" href="classWidgetMinimap.html#aef49ccf5c52b9018aba5bdfdf6f79fb2">intervalPS</a>,</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            startColor = col</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        };</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <a class="code hl_variable" href="classWidgetMinimap.html#ac536de2a795f3840c7cd1be2e5e91581">psAlly</a>.Emit(emitParams, 1);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>}</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aclassAI__Goto_html"><div class="ttname"><a href="classAI__Goto.html">AI_Goto</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Goto_8cs_source.html#l00004">AI_Goto.cs:5</a></div></div>
 <div class="ttc" id="aclassBaseGameScreen_html_a8e2ef0156c8b4dcf4fb51ba944ab528b"><div class="ttname"><a href="classBaseGameScreen.html#a8e2ef0156c8b4dcf4fb51ba944ab528b">BaseGameScreen.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00104">BaseGameScreen.cs:104</a></div></div>
@@ -376,8 +377,8 @@ $(document).ready(function(){initNavTree('WidgetMinimap_8cs_source.html',''); in
 <div class="ttc" id="aclassBaseGameScreen_html_aab057afe327f6d7543e25c85435828c2"><div class="ttname"><a href="classBaseGameScreen.html#aab057afe327f6d7543e25c85435828c2">BaseGameScreen.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00106">BaseGameScreen.cs:106</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00060">Card.cs:60</a></div></div>
-<div class="ttc" id="aclassCell_html_aa55b3cf7326278e948d64157821f54bf"><div class="ttname"><a href="classCell.html#aa55b3cf7326278e948d64157821f54bf">Cell.isSeen</a></div><div class="ttdeci">bool isSeen</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00289">Cell.cs:290</a></div></div>
-<div class="ttc" id="aclassCell_html_ac627e18c885b5b224b205bfd945dea09"><div class="ttname"><a href="classCell.html#ac627e18c885b5b224b205bfd945dea09">Cell.outOfBounds</a></div><div class="ttdeci">bool outOfBounds</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00421">Cell.cs:422</a></div></div>
+<div class="ttc" id="aclassCell_html_aa55b3cf7326278e948d64157821f54bf"><div class="ttname"><a href="classCell.html#aa55b3cf7326278e948d64157821f54bf">Cell.isSeen</a></div><div class="ttdeci">bool isSeen</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00301">Cell.cs:302</a></div></div>
+<div class="ttc" id="aclassCell_html_ac627e18c885b5b224b205bfd945dea09"><div class="ttname"><a href="classCell.html#ac627e18c885b5b224b205bfd945dea09">Cell.outOfBounds</a></div><div class="ttdeci">bool outOfBounds</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00433">Cell.cs:434</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_a8803bac7bbbae3b623894ad4433a430a"><div class="ttname"><a href="classChara.html#a8803bac7bbbae3b623894ad4433a430a">Chara.SetAIImmediate</a></div><div class="ttdeci">void SetAIImmediate(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09465">Chara.cs:9465</a></div></div>
 <div class="ttc" id="aclassChara_html_ac3a94b99896802674865cfd6e4109e80"><div class="ttname"><a href="classChara.html#ac3a94b99896802674865cfd6e4109e80">Chara.HasNoGoal</a></div><div class="ttdeci">bool HasNoGoal</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01047">Chara.cs:1047</a></div></div>

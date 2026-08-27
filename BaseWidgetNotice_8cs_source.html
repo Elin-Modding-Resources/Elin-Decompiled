@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -147,14 +147,14 @@ $(document).ready(function(){initNavTree('BaseWidgetNotice_8cs_source.html','');
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        layout.childAlignment = <a class="code hl_function" href="classWidget.html#a70b8486d40c9f6af54f917430798ea5e">RectPositionToTextAnchor</a>(base.config.pivot);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab">OnRefresh</a>();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> i <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> n <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            i.<a class="code hl_function" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            i.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.SetActive(i.<a class="code hl_property" href="classBaseNotification.html#ad4ced56eb92c1bfe96d7cb99c6f12d84">Visible</a>, delegate(<span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            n.<a class="code hl_function" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            n.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.SetActive(n.<a class="code hl_property" href="classBaseNotification.html#ad4ced56eb92c1bfe96d7cb99c6f12d84">Visible</a>, delegate(<span class="keywordtype">bool</span> enabled)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">if</span> (enabled)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    i.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    n.<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_variable" href="classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b">dirty</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            });</div>
@@ -175,9 +175,9 @@ $(document).ready(function(){initNavTree('BaseWidgetNotice_8cs_source.html','');
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        IList&lt;BaseNotification&gt; <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a> = this.list.Copy();</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Sort((<a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> a, <a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> b) =&gt; b.<a class="code hl_function" href="classBaseNotification.html#a744ee75f4ec415dcb31185420ff072e4">GetSortVal</a>() - a.<a class="code hl_function" href="classBaseNotification.html#a744ee75f4ec415dcb31185420ff072e4">GetSortVal</a>());</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Count; i++)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = 0; num &lt; <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.Count; num++)</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>[i].item.transform.SetSiblingIndex(4 + i);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>[num].item.transform.SetSiblingIndex(4 + num);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>

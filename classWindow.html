@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -759,8 +759,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1136</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindow.html#a7aac963f7513befc6809d1e12ded77e0">deco1</a>)</div>
 <div class="line"><span class="lineno"> 1137</span>        {</div>
 <div class="line"><span class="lineno"> 1138</span>            Image image = <a class="code hl_variable" href="classWindow.html#a7aac963f7513befc6809d1e12ded77e0">deco1</a>;</div>
-<div class="line"><span class="lineno"> 1139</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color2 = (deco2.color = skin.<a class="code hl_variable" href="classSkinRootStatic.html#a006421f9cfa6f1a15f4636d55ee78be0">colorsEx</a>.<a class="code hl_variable" href="classSkinColorProfileEx.html#ac6b55c8bec7ef5c7ce2d1f987ccbef28">deco1</a>);</div>
-<div class="line"><span class="lineno"> 1140</span>            image.color = color2;</div>
+<div class="line"><span class="lineno"> 1139</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = (deco2.color = skin.<a class="code hl_variable" href="classSkinRootStatic.html#a006421f9cfa6f1a15f4636d55ee78be0">colorsEx</a>.<a class="code hl_variable" href="classSkinColorProfileEx.html#ac6b55c8bec7ef5c7ce2d1f987ccbef28">deco1</a>);</div>
+<div class="line"><span class="lineno"> 1140</span>            image.color = color;</div>
 <div class="line"><span class="lineno"> 1141</span>        }</div>
 <div class="line"><span class="lineno"> 1142</span>        layoutWindow.padding = skin.<a class="code hl_variable" href="classSkinRootStatic.html#a4c2659ed8e5717b55420b21e3b95a1a6">positions</a>.<a class="code hl_variable" href="classSkinRootStatic_1_1Positions.html#a2635c8ddf9056ff5e0a7e3e9b705feb4">paddingWindow</a>;</div>
 <div class="line"><span class="lineno"> 1143</span>        rectBottom.anchoredPosition = <a class="code hl_variable" href="classWindow.html#a6154992527b3b2561deeab0a16931654">posBottom</a> + skin.<a class="code hl_variable" href="classSkinRootStatic.html#a4c2659ed8e5717b55420b21e3b95a1a6">positions</a>.<a class="code hl_variable" href="classSkinRootStatic_1_1Positions.html#abcab4624dae41ba4dcd84a11abf5b83a">bottom</a>;</div>
@@ -775,7 +775,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1152</span>        }</div>
 <div class="line"><span class="lineno"> 1153</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)image2 &amp;&amp; skin.<a class="code hl_variable" href="classSkinRootStatic.html#a5f4fd74af0c91ba64ec777c17d5824c8">useFrame</a>)</div>
 <div class="line"><span class="lineno"> 1154</span>        {</div>
-<div class="line"><span class="lineno"> 1155</span>            image2.GetComponent&lt;Shadow&gt;().enabled = <a class="code hl_variable" href="classWindow.html#ac1e97932f9b7838c59dc238cf28c3e99">shadowEnabled</a>.GetValueOrDefault();</div>
+<div class="line"><span class="lineno"> 1155</span>            image2.GetComponent&lt;Shadow&gt;().enabled = <a class="code hl_variable" href="classWindow.html#ac1e97932f9b7838c59dc238cf28c3e99">shadowEnabled</a> == <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno"> 1156</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindow.html#af80d7efd912dcc567d1041bd58a39a96">bgShadow</a>)</div>
 <div class="line"><span class="lineno"> 1157</span>            {</div>
 <div class="line"><span class="lineno"> 1158</span>                bgShadow.enabled = <span class="keyword">false</span>;</div>
@@ -783,7 +783,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1160</span>        }</div>
 <div class="line"><span class="lineno"> 1161</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindow.html#af80d7efd912dcc567d1041bd58a39a96">bgShadow</a>)</div>
 <div class="line"><span class="lineno"> 1162</span>        {</div>
-<div class="line"><span class="lineno"> 1163</span>            bgShadow.enabled = <a class="code hl_variable" href="classWindow.html#ac1e97932f9b7838c59dc238cf28c3e99">shadowEnabled</a>.GetValueOrDefault();</div>
+<div class="line"><span class="lineno"> 1163</span>            bgShadow.enabled = <a class="code hl_variable" href="classWindow.html#ac1e97932f9b7838c59dc238cf28c3e99">shadowEnabled</a> == <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno"> 1164</span>        }</div>
 <div class="line"><span class="lineno"> 1165</span>        <a class="code hl_enumvalue" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01aa606b51cc1c9d0b4af394419a22f2ff1f">Outline</a> component = <a class="code hl_variable" href="classWindow.html#a57799e116e36cf81cfb8272558fcbf4a">textCaption</a>.GetComponent&lt;<a class="code hl_enumvalue" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01aa606b51cc1c9d0b4af394419a22f2ff1f">Outline</a>&gt;();</div>
 <div class="line"><span class="lineno"> 1166</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)component)</div>
@@ -1655,7 +1655,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  982</span>        }</div>
 <div class="line"><span class="lineno">  983</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f">saveData</a> != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  984</span>        {</div>
-<div class="line"><span class="lineno">  985</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f">saveData</a>.<a class="code hl_property" href="classWindow_1_1SaveData.html#a10cd59dba7705ac8ae579bad3f2493b0">customAnchor</a> != 0)</div>
+<div class="line"><span class="lineno">  985</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f">saveData</a>.<a class="code hl_property" href="classWindow_1_1SaveData.html#a10cd59dba7705ac8ae579bad3f2493b0">customAnchor</a> != <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto)</div>
 <div class="line"><span class="lineno">  986</span>            {</div>
 <div class="line"><span class="lineno">  987</span>                saveData.anchor = <a class="code hl_variable" href="classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f">saveData</a>.<a class="code hl_property" href="classWindow_1_1SaveData.html#a10cd59dba7705ac8ae579bad3f2493b0">customAnchor</a>;</div>
 <div class="line"><span class="lineno">  988</span>            }</div>
@@ -1741,6 +1741,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1068</span>        });</div>
 <div class="line"><span class="lineno"> 1069</span>    }</div>
 <div class="ttc" id="aCustomDramaExpansion_8cs_html_a6c81777e5c27748217b5f383b27c394f"><div class="ttname"><a href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a></div><div class="ttdeci">if(!match.Success)</div><div class="ttdef"><b>Definition:</b> <a href="CustomDramaExpansion_8cs_source.html#l00449">CustomDramaExpansion.cs:449</a></div></div>
+<div class="ttc" id="aRectPosition_8cs_html_a3710d51f7d4efe0dcd0dc570ee11f623"><div class="ttname"><a href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a></div><div class="ttdeci">RectPosition</div><div class="ttdef"><b>Definition:</b> <a href="RectPosition_8cs_source.html#l00001">RectPosition.cs:2</a></div></div>
 <div class="ttc" id="aclassAnime_html"><div class="ttname"><a href="classAnime.html">Anime</a></div><div class="ttdef"><b>Definition:</b> <a href="Anime_8cs_source.html#l00005">Anime.cs:6</a></div></div>
 <div class="ttc" id="aclassBaseCore_html"><div class="ttname"><a href="classBaseCore.html">BaseCore</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00007">BaseCore.cs:8</a></div></div>
 <div class="ttc" id="aclassBaseCore_html_ac587cbd6b7c83c57d7098889ab7ba95f"><div class="ttname"><a href="classBaseCore.html#ac587cbd6b7c83c57d7098889ab7ba95f">BaseCore.uiScale</a></div><div class="ttdeci">virtual float uiScale</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00046">BaseCore.cs:46</a></div></div>
@@ -2647,7 +2648,6 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno"> 1595</span>    {</div>
 <div class="line"><span class="lineno"> 1596</span>        <a class="code hl_variable" href="classWindow.html#aa44e9ba046ba4bf002a34361dc926f5f">_rect</a>.SetAnchor((<a class="code hl_variable" href="classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f">saveData</a> != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f">saveData</a>.<a class="code hl_property" href="classWindow_1_1SaveData.html#a10cd59dba7705ac8ae579bad3f2493b0">customAnchor</a> : <a class="code hl_enumeration" href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a>.Auto);</div>
 <div class="line"><span class="lineno"> 1597</span>    }</div>
-<div class="ttc" id="aRectPosition_8cs_html_a3710d51f7d4efe0dcd0dc570ee11f623"><div class="ttname"><a href="RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623">RectPosition</a></div><div class="ttdeci">RectPosition</div><div class="ttdef"><b>Definition:</b> <a href="RectPosition_8cs_source.html#l00001">RectPosition.cs:2</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00674">_rect</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00291">Window.SaveData.customAnchor</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00724">saveData</a>.</p>
 

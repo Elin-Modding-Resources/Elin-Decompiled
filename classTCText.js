@@ -1,5 +1,6 @@
 var classTCText =
 [
+    [ "ExtractSoundTag", "classTCText.html#af9ffb0f1cd0553b79f7883fd22939623", null ],
     [ "OnDraw", "classTCText.html#a2b09382c9b128aeabad5b03842704f2c", null ],
     [ "OnKill", "classTCText.html#af9b7d546956cb237fdec2a7590bd1b57", null ],
     [ "Say", "classTCText.html#a199a8c0ded87c7829836d203dd736b34", null ],

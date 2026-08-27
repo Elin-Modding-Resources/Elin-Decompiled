@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -161,24 +161,24 @@ $(document).ready(function(){initNavTree('UIDragGridInfo_8cs_source.html',''); i
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        <a class="code hl_enumvalue" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.Instantiate(<a class="code hl_variable" href="classUIDragGridInfo.html#a10580b60ee85306338c077227600e6c9">moldPlus</a>, b);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    <span class="keywordtype">string</span>[] array2 = i <span class="keywordflow">switch</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    <span class="keywordtype">string</span>[] array = i <span class="keywordflow">switch</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        1 =&gt; a.ing2, </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        0 =&gt; a.ing1, </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        _ =&gt; a.ing3, </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <span class="keywordflow">if</span> (array2.IsEmpty())</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <span class="keywordflow">if</span> (array.IsEmpty())</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <span class="keywordtype">string</span>[] array3 = array2;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text2 <span class="keywordflow">in</span> array3)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <span class="keywordtype">string</span>[] array2 = array;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> array2)</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        <span class="keywordflow">if</span> (text2 != array2[0])</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        <span class="keywordflow">if</span> (text != array[0])</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                        {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                            <a class="code hl_enumvalue" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.Instantiate(<a class="code hl_variable" href="classUIDragGridInfo.html#ac05ccf90352c9131a2df3d06199e8fb2">moldOr</a>, b);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                        }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                        AddThing(text2, <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                        AddThing(text, <span class="keyword">null</span>);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                }</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <a class="code hl_enumvalue" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.Instantiate(<a class="code hl_variable" href="classUIDragGridInfo.html#ae9c22fb8c47c2e92308bf96d7755a528">moldEqual</a>, b);</div>
@@ -380,12 +380,12 @@ $(document).ready(function(){initNavTree('UIDragGridInfo_8cs_source.html',''); i
 <div class="ttc" id="aclassUIList_1_1Callback_html"><div class="ttname"><a href="classUIList_1_1Callback.html">UIList.Callback</a></div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00053">UIList.cs:54</a></div></div>
 <div class="ttc" id="aclassUIList_html"><div class="ttname"><a href="classUIList.html">UIList</a></div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00008">UIList.cs:9</a></div></div>
 <div class="ttc" id="aclassUIList_html_ac59eb9491315a616940c5ba77f95f538"><div class="ttname"><a href="classUIList.html#ac59eb9491315a616940c5ba77f95f538">UIList.Add</a></div><div class="ttdeci">override void Add(object item)</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00354">UIList.cs:354</a></div></div>
-<div class="ttc" id="aclassUIList_html_af98b337c74c8977ec262db16f160612c"><div class="ttname"><a href="classUIList.html#af98b337c74c8977ec262db16f160612c">UIList.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00769">UIList.cs:769</a></div></div>
+<div class="ttc" id="aclassUIList_html_af98b337c74c8977ec262db16f160612c"><div class="ttname"><a href="classUIList.html#af98b337c74c8977ec262db16f160612c">UIList.List</a></div><div class="ttdeci">override void List()</div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00770">UIList.cs:770</a></div></div>
 <div class="ttc" id="aclassUINote_html"><div class="ttname"><a href="classUINote.html">UINote</a></div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00005">UINote.cs:6</a></div></div>
 <div class="ttc" id="aclassUIText_html"><div class="ttname"><a href="classUIText.html">UIText</a></div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00005">UIText.cs:6</a></div></div>
 <div class="ttc" id="aclassUIText_html_a27925d9d037d3be267ef11b25eb6c481"><div class="ttname"><a href="classUIText.html#a27925d9d037d3be267ef11b25eb6c481">UIText.lang</a></div><div class="ttdeci">string lang</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00009">UIText.cs:9</a></div></div>
 <div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00012">Window.cs:13</a></div></div>
-<div class="ttc" id="aclassZone_html_a27a05884b6115a562a7dc1c9e6044e38"><div class="ttname"><a href="classZone.html#a27a05884b6115a562a7dc1c9e6044e38">Zone.GetOrCreateFortuneRollData</a></div><div class="ttdeci">FortuneRollData GetOrCreateFortuneRollData(bool refresh=true)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l04065">Zone.cs:4065</a></div></div>
+<div class="ttc" id="aclassZone_html_a27a05884b6115a562a7dc1c9e6044e38"><div class="ttname"><a href="classZone.html#a27a05884b6115a562a7dc1c9e6044e38">Zone.GetOrCreateFortuneRollData</a></div><div class="ttdeci">FortuneRollData GetOrCreateFortuneRollData(bool refresh=true)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l04069">Zone.cs:4069</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

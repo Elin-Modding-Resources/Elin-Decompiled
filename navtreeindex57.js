@@ -1,5 +1,15 @@
 var NAVTREEINDEX57 =
 {
+"classCoreRef.html#ace6a1894aab8e5cf3953e4a679a57861":[1,0,435,40],
+"classCoreRef.html#ad0c87ab0349b7076acd0b83d9e9306be":[1,0,435,20],
+"classCoreRef.html#ad77c56cdf5f75460f449a9fe82d92c60":[1,0,435,47],
+"classCoreRef.html#add7912c89258c6e2378b53330f8c3fd4":[1,0,435,43],
+"classCoreRef.html#ae2b12d5f2345e7e9f52c017d4b467512":[1,0,435,61],
+"classCoreRef.html#ae5efd0b0bf8d7427c01bfd6622c3c716":[1,0,435,31],
+"classCoreRef.html#af3caee96c1fc3153ff87b8febf353ac6":[1,0,435,51],
+"classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236":[1,0,435,45],
+"classCoreRef.html#afb1f3cdc02fb15cc2138061d141211db":[1,0,435,64],
+"classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,435,41],
 "classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,435,42],
 "classCoreRef_1_1Biomes.html":[1,0,435,0],
 "classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a":[1,0,435,0,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX57 =
 "classCritterFish.html#a8faaec7e3b8633d0ebeb1c096814dc8b":[1,0,441,1],
 "classCritterFish.html#ac1f24dfd07e1f5b133e7b215e5fc3a21":[1,0,441,0],
 "classCritterFish.html#ad29b0d43c2ca5ecbf4cf000f74a92f29":[1,0,441,3],
-"classCritterFrog.html":[1,0,442],
-"classCritterFrog.html#a0bc41fa4599947851fd30ae7ad0790e5":[1,0,442,1],
-"classCritterFrog.html#a50586930075e4df4995267137f326571":[1,0,442,2],
-"classCritterFrog.html#ac9320c4a2ea0209b47b4d45014ba5929":[1,0,442,0],
-"classCritterFrog.html#af6235308ae03af59fdc894e3922fa638":[1,0,442,3],
-"classCritterFrogSmall.html":[1,0,443],
-"classCritterFrogSmall.html#a087677a264963d6bc408e3b74092ef22":[1,0,443,2],
-"classCritterFrogSmall.html#a2adac7072f6bec33bdd2289e0ea7adbc":[1,0,443,1],
-"classCritterFrogSmall.html#a2b3842a005b2c5def9723f6c2c2ca8e2":[1,0,443,3],
-"classCritterFrogSmall.html#ab55139a8b81ac4494730166ced7d7460":[1,0,443,0],
-"classCritterRandom.html":[1,0,444]
+"classCritterFrog.html":[1,0,442]
 };

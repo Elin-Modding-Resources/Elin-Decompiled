@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -544,11 +544,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>            }</div>
 <div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="classSkinDecoActor.html">SkinDecoActor</a> selected = <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classSkinDecoActor.html">SkinDecoActor</a>&gt;();</div>
 <div class="line"><span class="lineno">   40</span>            Vector3 clickPos = Input.mousePosition;</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> i = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenu();</div>
+<div class="line"><span class="lineno">   41</span>            <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> m = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.CreateContextMenu();</div>
 <div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)selected)</div>
 <div class="line"><span class="lineno">   43</span>            {</div>
 <div class="line"><span class="lineno">   44</span>                <a class="code hl_class" href="classSkinDeco.html">SkinDeco</a> deco = selected.<a class="code hl_variable" href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">owner</a>;</div>
-<div class="line"><span class="lineno">   45</span>                i.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;editColor&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   45</span>                m.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;editColor&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">   46</span>                {</div>
 <div class="line"><span class="lineno">   47</span>                    <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a99d0945154169617341cedf8f1f07677">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(deco.<a class="code hl_property" href="classSkinDeco.html#a60918eaee8ac86783c29c014d82b7971">color</a>, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
 <div class="line"><span class="lineno">   48</span>                    {</div>
@@ -556,46 +556,46 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   50</span>                        selected.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">   51</span>                    });</div>
 <div class="line"><span class="lineno">   52</span>                });</div>
-<div class="line"><span class="lineno">   53</span>                i.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;bringToTop&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   53</span>                m.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;bringToTop&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">   54</span>                {</div>
 <div class="line"><span class="lineno">   55</span>                    <a class="code hl_property" href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">decos</a>.Remove(deco);</div>
 <div class="line"><span class="lineno">   56</span>                    <a class="code hl_property" href="classLayerSkinDeco.html#ab0da6c64afe040f78bcf1711a095a101">decos</a>.Add(deco);</div>
 <div class="line"><span class="lineno">   57</span>                    selected.transform.SetAsLastSibling();</div>
 <div class="line"><span class="lineno">   58</span>                });</div>
-<div class="line"><span class="lineno">   59</span>                i.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;rotation&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; (n * 45f).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#a5087c86a1e8b82ec5cccdbdb16ec2ad4">rz</a>, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   59</span>                m.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;rotation&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; (n * 45f).ToString() ?? <span class="stringliteral">&quot;&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#a5087c86a1e8b82ec5cccdbdb16ec2ad4">rz</a>, delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">   60</span>                {</div>
 <div class="line"><span class="lineno">   61</span>                    deco.rz = (int)a;</div>
 <div class="line"><span class="lineno">   62</span>                    selected.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">   63</span>                }, 0f, 7f, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   64</span>                i.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;size&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, Mathf.Abs(deco.<a class="code hl_property" href="classSkinDeco.html#aa3d6568d9ef4d44c5f9d03b736995fe9">sx</a>), delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   64</span>                m.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;size&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, Mathf.Abs(deco.<a class="code hl_property" href="classSkinDeco.html#aa3d6568d9ef4d44c5f9d03b736995fe9">sx</a>), delegate(<span class="keywordtype">float</span> a)</div>
 <div class="line"><span class="lineno">   65</span>                {</div>
 <div class="line"><span class="lineno">   66</span>                    deco.sx = (int)a * ((deco.<a class="code hl_property" href="classSkinDeco.html#aa3d6568d9ef4d44c5f9d03b736995fe9">sx</a> &gt; 0) ? 1 : (-1));</div>
 <div class="line"><span class="lineno">   67</span>                    deco.sy = (int)a * ((deco.<a class="code hl_property" href="classSkinDeco.html#a1e4c00947b848bf1ceff8876643f1b98">sy</a> &gt; 0) ? 1 : (-1));</div>
 <div class="line"><span class="lineno">   68</span>                    selected.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">   69</span>                }, 10f, 400f, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   70</span>                i.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;shadow&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14">shadow</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   70</span>                m.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;shadow&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14">shadow</a>, delegate(<span class="keywordtype">bool</span> a)</div>
 <div class="line"><span class="lineno">   71</span>                {</div>
 <div class="line"><span class="lineno">   72</span>                    deco.shadow = a;</div>
 <div class="line"><span class="lineno">   73</span>                    selected.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">   74</span>                });</div>
-<div class="line"><span class="lineno">   75</span>                i.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;reverse&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#a9638b712f910c7db4b4301f04ac37dbb">reverse</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   75</span>                m.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;reverse&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#a9638b712f910c7db4b4301f04ac37dbb">reverse</a>, delegate(<span class="keywordtype">bool</span> a)</div>
 <div class="line"><span class="lineno">   76</span>                {</div>
 <div class="line"><span class="lineno">   77</span>                    deco.reverse = a;</div>
 <div class="line"><span class="lineno">   78</span>                    selected.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">   79</span>                });</div>
-<div class="line"><span class="lineno">   80</span>                i.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;placeBeforeWidget&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#a9612fcf2a1f262d8ad99a740ef344a06">bottom</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">   80</span>                m.<a class="code hl_function" href="classUIContextMenu.html#a4822a3bf50f2729f3c6cb666a85cc88a">AddToggle</a>(<span class="stringliteral">&quot;placeBeforeWidget&quot;</span>, deco.<a class="code hl_property" href="classSkinDeco.html#a9612fcf2a1f262d8ad99a740ef344a06">bottom</a>, delegate(<span class="keywordtype">bool</span> a)</div>
 <div class="line"><span class="lineno">   81</span>                {</div>
 <div class="line"><span class="lineno">   82</span>                    deco.bottom = a;</div>
 <div class="line"><span class="lineno">   83</span>                    selected.<a class="code hl_function" href="classSkinDecoActor.html#a44e92b17ef80a85b173769d610007920">Refresh</a>();</div>
 <div class="line"><span class="lineno">   84</span>                });</div>
-<div class="line"><span class="lineno">   85</span>                i.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;removeDeco&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   85</span>                m.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;removeDeco&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">   86</span>                {</div>
 <div class="line"><span class="lineno">   87</span>                    <a class="code hl_variable" href="classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d">widget</a>.<a class="code hl_function" href="classWidget.html#a0469638a88c98fa33fbc8e9d2713d404">RemoveDeco</a>(selected.<a class="code hl_variable" href="classSkinDecoActor.html#a174b2974c010ce2963cc79a78a5f066f">owner</a>);</div>
 <div class="line"><span class="lineno">   88</span>                });</div>
 <div class="line"><span class="lineno">   89</span>            }</div>
 <div class="line"><span class="lineno">   90</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu = i.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;addDeco&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>                <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;addDeco&quot;</span>);</div>
 <div class="line"><span class="lineno">   93</span>                <a class="code hl_class" href="classUIList.html">UIList</a> uIList = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classUIList.html">UIList</a>&gt;(<span class="stringliteral">&quot;UI/Element/List/ListImageGrid&quot;</span>, uIContextMenu);</div>
 <div class="line"><span class="lineno">   94</span>                uIList.callbacks = <span class="keyword">new</span> <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_class" href="classUIList_1_1Callback.html">Callback</a>&lt;Sprite, <a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;</div>
 <div class="line"><span class="lineno">   95</span>                {</div>
@@ -617,7 +617,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  111</span>                        <a class="code hl_function" href="classLayerSkinDeco.html#a27801be629c0c92ae369790cf75d6c8f">Activate</a>(actor);</div>
 <div class="line"><span class="lineno">  112</span>                        actor.transform.position = clickPos;</div>
 <div class="line"><span class="lineno">  113</span>                        <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_function" href="classEInput.html#a37ae393407e04100c89ce0578ee5f726">Consume</a>();</div>
-<div class="line"><span class="lineno">  114</span>                        i.<a class="code hl_function" href="classUIContextMenu.html#ab93ef9591bfe1425601a9aaab7c94132">Hide</a>();</div>
+<div class="line"><span class="lineno">  114</span>                        m.<a class="code hl_function" href="classUIContextMenu.html#ab93ef9591bfe1425601a9aaab7c94132">Hide</a>();</div>
 <div class="line"><span class="lineno">  115</span>                    }</div>
 <div class="line"><span class="lineno">  116</span>                };</div>
 <div class="line"><span class="lineno">  117</span>                Sprite[] array = Resources.LoadAll&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Deco/&quot;</span>);</div>
@@ -627,7 +627,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  121</span>                }</div>
 <div class="line"><span class="lineno">  122</span>                uIList.<a class="code hl_function" href="classUIList.html#ae79cc2a215910962b9bfd17681dc7664">Refresh</a>();</div>
 <div class="line"><span class="lineno">  123</span>            }</div>
-<div class="line"><span class="lineno">  124</span>            i.<a class="code hl_function" href="classUIContextMenu.html#a5afad4580b1ab1aecc9f0f607170ec37">Show</a>();</div>
+<div class="line"><span class="lineno">  124</span>            m.<a class="code hl_function" href="classUIContextMenu.html#a5afad4580b1ab1aecc9f0f607170ec37">Show</a>();</div>
 <div class="line"><span class="lineno">  125</span>        }</div>
 <div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#aa93b8d7a75279ebdae61a04df4991c80">rightMouse</a>.<a class="code hl_variable" href="classButtonState.html#aac251aea46bc70da7cfc0045584eacbf">down</a>)</div>
 <div class="line"><span class="lineno">  127</span>        {</div>

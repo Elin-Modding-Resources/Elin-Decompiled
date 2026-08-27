@@ -11,7 +11,10 @@ var classSourceDeco =
     [ "RestorePref", "classSourceDeco.html#a37a2cf38116eb21ff70da7f28472af5e", null ],
     [ "SetRow", "classSourceDeco.html#a5c998dac1031882a17d346edf341c572", null ],
     [ "ValidatePref", "classSourceDeco.html#a66cd303c4d2f3e44c5763ebe669c85ea", null ],
+    [ "_lookup", "classSourceDeco.html#a8188162863d717ebd74cb0288b31466b", null ],
     [ "_rows", "classSourceDeco.html#af5d47e605466dc62bf3589766dc45dff", null ],
     [ "RowMapping", "classSourceDeco.html#a17ddb3a087e6e0a822ff82c6bb7ce45f", null ],
-    [ "TypeMapping", "classSourceDeco.html#a91b77c875e90c4af5d75861c944c0f35", null ]
+    [ "TypeMapping", "classSourceDeco.html#a91b77c875e90c4af5d75861c944c0f35", null ],
+    [ "Lookup", "classSourceDeco.html#a8d2634a6bf09bede5a6750a9be6b5c26", null ],
+    [ "this[int id]", "classSourceDeco.html#a1981446e3ae048aaaba5d58989aaf15c", null ]
 ];

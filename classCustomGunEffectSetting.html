@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.338.2 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -161,7 +161,7 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a683c15c37c0a80008a88babef44d6d54"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classCustomGunEffectData.html">CustomGunEffectData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomGunEffectSetting.html#a683c15c37c0a80008a88babef44d6d54">items</a></td></tr>
+<tr class="memitem:a683c15c37c0a80008a88babef44d6d54"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classCustomGunEffectData.html">CustomGunEffectData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomGunEffectSetting.html#a683c15c37c0a80008a88babef44d6d54">items</a> = new Dictionary&lt;string, <a class="el" href="classCustomGunEffectData.html">CustomGunEffectData</a>&gt;()</td></tr>
 <tr class="separator:a683c15c37c0a80008a88babef44d6d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -283,10 +283,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   20</span>    }</div>
 <div class="ttc" id="aclassCustomContent_html_ab0ed54f6b58b4b6acb8c45302df30d4c"><div class="ttname"><a href="classCustomContent.html#ab0ed54f6b58b4b6acb8c45302df30d4c">CustomContent.Owner</a></div><div class="ttdeci">EMod Owner</div><div class="ttdef"><b>Definition:</b> <a href="CustomContent_8cs_source.html#l00009">CustomContent.cs:9</a></div></div>
 <div class="ttc" id="aclassCustomContent_html_ab75eb2d8f7abc17150ba2dc6bbd89b62"><div class="ttname"><a href="classCustomContent.html#ab75eb2d8f7abc17150ba2dc6bbd89b62">CustomContent.ContentId</a></div><div class="ttdeci">string ContentId</div><div class="ttdef"><b>Definition:</b> <a href="CustomContent_8cs_source.html#l00006">CustomContent.cs:6</a></div></div>
-<div class="ttc" id="aclassCustomFileContent_html_a5514f9c8eaeac4a291da81ea4a8cbc46"><div class="ttname"><a href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">CustomFileContent.File</a></div><div class="ttdeci">FileInfo File</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00012">CustomFileContent.cs:12</a></div></div>
+<div class="ttc" id="aclassCustomFileContent_html_a5514f9c8eaeac4a291da81ea4a8cbc46"><div class="ttname"><a href="classCustomFileContent.html#a5514f9c8eaeac4a291da81ea4a8cbc46">CustomFileContent.File</a></div><div class="ttdeci">FileInfo File</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00011">CustomFileContent.cs:11</a></div></div>
 <div class="ttc" id="aclassCustomGunEffectSetting_html"><div class="ttname"><a href="classCustomGunEffectSetting.html">CustomGunEffectSetting</a></div><div class="ttdef"><b>Definition:</b> <a href="CustomGunEffectSetting_8cs_source.html#l00004">CustomGunEffectSetting.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CustomContent_8cs_source.html#l00006">CustomContent.ContentId</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00012">CustomFileContent.File</a>, and <a class="el" href="CustomContent_8cs_source.html#l00009">CustomContent.Owner</a>.</p>
+<p class="reference">References <a class="el" href="CustomContent_8cs_source.html#l00006">CustomContent.ContentId</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00011">CustomFileContent.File</a>, and <a class="el" href="CustomContent_8cs_source.html#l00009">CustomContent.Owner</a>.</p>
 
 </div>
 </div>
@@ -317,13 +317,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CustomGunEffectSetting_8cs_source.html#l00022">22</a> of file <a class="el" href="CustomGunEffectSetting_8cs_source.html">CustomGunEffectSetting.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        Dictionary&lt;string, CustomGunEffectData&gt; dictionary = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;Dictionary&lt;string, CustomGunEffectData&gt;&gt;(base.File.FullName, compress: <span class="keyword">false</span>, GameIOContext.Settings);</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="classCustomGunEffectSetting.html#a683c15c37c0a80008a88babef44d6d54">items</a> = dictionary;</div>
+<div class="line"><span class="lineno">   24</span>        Dictionary&lt;string, CustomGunEffectData&gt; dictionary = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;Dictionary&lt;string, CustomGunEffectData&gt;&gt;(base.File.FullName, compress: <span class="keyword">false</span>, <a class="code hl_class" href="classCustomGunEffectData.html">CustomGunEffectData</a>.<a class="code hl_variable" href="classCustomGunEffectData.html#a5d32eea61d198c847ab4cfe636af43e8">JsonSettings</a>);</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="classCustomGunEffectSetting.html#a683c15c37c0a80008a88babef44d6d54">items</a> = dictionary ?? <span class="keyword">new</span> Dictionary&lt;string, CustomGunEffectData&gt;();</div>
 <div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="aclassCustomGunEffectData_html"><div class="ttname"><a href="classCustomGunEffectData.html">CustomGunEffectData</a></div><div class="ttdef"><b>Definition:</b> <a href="CustomGunEffectData_8cs_source.html#l00004">CustomGunEffectData.cs:5</a></div></div>
+<div class="ttc" id="aclassCustomGunEffectData_html_a5d32eea61d198c847ab4cfe636af43e8"><div class="ttname"><a href="classCustomGunEffectData.html#a5d32eea61d198c847ab4cfe636af43e8">CustomGunEffectData.JsonSettings</a></div><div class="ttdeci">static readonly JsonSerializerSettings JsonSettings</div><div class="ttdef"><b>Definition:</b> <a href="CustomGunEffectData_8cs_source.html#l00006">CustomGunEffectData.cs:6</a></div></div>
 <div class="ttc" id="aclassCustomGunEffectSetting_html_a683c15c37c0a80008a88babef44d6d54"><div class="ttname"><a href="classCustomGunEffectSetting.html#a683c15c37c0a80008a88babef44d6d54">CustomGunEffectSetting.items</a></div><div class="ttdeci">Dictionary&lt; string, CustomGunEffectData &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="CustomGunEffectSetting_8cs_source.html#l00006">CustomGunEffectSetting.cs:6</a></div></div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00009">IO.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CustomGunEffectSetting_8cs_source.html#l00006">items</a>.</p>
+<p class="reference">References <a class="el" href="CustomGunEffectSetting_8cs_source.html#l00006">items</a>, and <a class="el" href="CustomGunEffectData_8cs_source.html#l00006">CustomGunEffectData.JsonSettings</a>.</p>
 
 </div>
 </div>
@@ -368,7 +370,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Dictionary&lt;string, <a class="el" href="classCustomGunEffectData.html">CustomGunEffectData</a>&gt; CustomGunEffectSetting.items</td>
+          <td class="memname">Dictionary&lt;string, <a class="el" href="classCustomGunEffectData.html">CustomGunEffectData</a>&gt; CustomGunEffectSetting.items = new Dictionary&lt;string, <a class="el" href="classCustomGunEffectData.html">CustomGunEffectData</a>&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
