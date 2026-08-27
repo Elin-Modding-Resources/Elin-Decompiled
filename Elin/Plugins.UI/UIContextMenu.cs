@@ -368,13 +368,13 @@ public class UIContextMenu : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 		{
 			input.SetActive(useInput);
 			input.text = s.value.ToString() ?? "";
-			input.onValueChanged.AddListener(delegate(string text)
+			input.onValueChanged.AddListener(delegate(string str)
 			{
-				if (!text.IsEmpty())
+				if (!str.IsEmpty())
 				{
-					float num2 = Mathf.Clamp(text.ToInt(), min, max);
-					s.SetValueWithoutNotify(num2);
-					action(num2);
+					float num = Mathf.Clamp(str.ToInt(), min, max);
+					s.SetValueWithoutNotify(num);
+					action(num);
 				}
 			});
 			input.onUpdate = delegate
@@ -420,10 +420,10 @@ public class UIContextMenu : MonoBehaviour, IPointerEnterHandler, IEventSystemHa
 			{
 				blocker = Util.Instantiate<RectTransform>("Items/sliderBlocker", this);
 				blocker.SetAsFirstSibling();
-				UIContextMenu[] componentsInParent2 = GetComponentsInParent<UIContextMenu>();
-				for (int j = 0; j < componentsInParent2.Length; j++)
+				UIContextMenu[] componentsInParent = GetComponentsInParent<UIContextMenu>();
+				for (int i = 0; i < componentsInParent.Length; i++)
 				{
-					componentsInParent2[j].cg.DOFade(0.01f, 1f);
+					componentsInParent[i].cg.DOFade(0.01f, 1f);
 				}
 				if ((bool)s && s.gameObject != null)
 				{

@@ -982,7 +982,7 @@ public class Window : MonoBehaviour, IChangeResolution, IUISkin
 		}
 		if (saveData != null)
 		{
-			if (saveData.customAnchor != 0)
+			if (saveData.customAnchor != RectPosition.Auto)
 			{
 				saveData.anchor = saveData.customAnchor;
 			}
@@ -1136,8 +1136,8 @@ public class Window : MonoBehaviour, IChangeResolution, IUISkin
 		if ((bool)deco1)
 		{
 			Image image = deco1;
-			Color color2 = (deco2.color = skin.colorsEx.deco1);
-			image.color = color2;
+			Color color = (deco2.color = skin.colorsEx.deco1);
+			image.color = color;
 		}
 		layoutWindow.padding = skin.positions.paddingWindow;
 		rectBottom.anchoredPosition = posBottom + skin.positions.bottom;
@@ -1152,7 +1152,7 @@ public class Window : MonoBehaviour, IChangeResolution, IUISkin
 		}
 		if ((bool)image2 && skin.useFrame)
 		{
-			image2.GetComponent<Shadow>().enabled = shadowEnabled.GetValueOrDefault();
+			image2.GetComponent<Shadow>().enabled = shadowEnabled == true;
 			if ((bool)bgShadow)
 			{
 				bgShadow.enabled = false;
@@ -1160,7 +1160,7 @@ public class Window : MonoBehaviour, IChangeResolution, IUISkin
 		}
 		else if ((bool)bgShadow)
 		{
-			bgShadow.enabled = shadowEnabled.GetValueOrDefault();
+			bgShadow.enabled = shadowEnabled == true;
 		}
 		Outline component = textCaption.GetComponent<Outline>();
 		if ((bool)component)

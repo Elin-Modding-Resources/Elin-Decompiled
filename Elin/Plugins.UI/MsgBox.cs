@@ -115,14 +115,14 @@ public class MsgBox : MonoBehaviour
 		{
 			currentBlock.transform.SetParent(layoutLog.transform, worldPositionStays: false);
 			Image image = currentBlock.bg;
-			bool flag2 = (currentBlock.cg.enabled = false);
-			image.enabled = flag2;
+			bool flag = (currentBlock.cg.enabled = false);
+			image.enabled = flag;
 		}
 		else
 		{
 			Image image2 = currentBlock.bg;
-			bool flag2 = (currentBlock.cg.enabled = true);
-			image2.enabled = flag2;
+			bool flag = (currentBlock.cg.enabled = true);
+			image2.enabled = flag;
 			RefreshAlpha();
 		}
 	}
@@ -226,8 +226,8 @@ public class MsgBox : MonoBehaviour
 			foreach (MsgBlock msgBlock in componentsInChildren)
 			{
 				CanvasGroup cg = msgBlock.cg;
-				bool flag2 = (msgBlock.bg.enabled = false);
-				cg.enabled = flag2;
+				bool flag = (msgBlock.bg.enabled = false);
+				cg.enabled = flag;
 			}
 			return;
 		}
@@ -235,8 +235,8 @@ public class MsgBox : MonoBehaviour
 		{
 			block2.transform.SetParent(layout.transform, worldPositionStays: false);
 			CanvasGroup cg2 = block2.cg;
-			bool flag2 = (block2.bg.enabled = true);
-			cg2.enabled = flag2;
+			bool flag = (block2.bg.enabled = true);
+			cg2.enabled = flag;
 		}
 		RefreshAlpha();
 		layout.RebuildLayout();

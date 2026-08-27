@@ -61,7 +61,7 @@ public class UIBook : MonoBehaviour
 					}
 				}
 			}
-			void ParseLines(List<string> lines, string idTopic)
+			void ParseLines(List<string> lines, string text3)
 			{
 				char c = 'a';
 				bool flag = false;
@@ -70,7 +70,7 @@ public class UIBook : MonoBehaviour
 					string text2 = Lang.Parse(line, "test1", "test2");
 					if (text2.Length == 0)
 					{
-						if (!skip && (idTopic.IsEmpty() || flag))
+						if (!skip && (text3.IsEmpty() || flag))
 						{
 							text += Environment.NewLine;
 						}
@@ -78,7 +78,7 @@ public class UIBook : MonoBehaviour
 					else
 					{
 						c = text2[0];
-						if (!idTopic.IsEmpty())
+						if (!text3.IsEmpty())
 						{
 							if (c == '$')
 							{
@@ -86,7 +86,7 @@ public class UIBook : MonoBehaviour
 								{
 									break;
 								}
-								if (text2.Split('$')[1] == idTopic)
+								if (text2.Split('$')[1] == text3)
 								{
 									flag = true;
 									continue;
@@ -130,10 +130,10 @@ public class UIBook : MonoBehaviour
 								{
 								case "if":
 								{
-									string text5 = array2[1];
-									if (!(text5 == "cn"))
+									string text6 = array2[1];
+									if (!(text6 == "cn"))
 									{
-										if (text5 == "!cn" && Lang.langCode == "CN")
+										if (text6 == "!cn" && Lang.langCode == "CN")
 										{
 											skip = true;
 										}
@@ -150,31 +150,31 @@ public class UIBook : MonoBehaviour
 								case "include":
 								case "load":
 								{
-									string text3 = "";
 									string text4 = "";
+									string text5 = "";
 									if (array2[0] == "include")
 									{
-										text3 = array2[1];
-										text4 = "include";
+										text4 = array2[1];
+										text5 = "include";
 									}
 									else
 									{
-										text4 = array2[1];
-										text3 = array2[2];
+										text5 = array2[1];
+										text4 = array2[2];
 									}
-									text4 += ".txt";
-									string[] array3 = IO.LoadTextArray(CorePath.CorePackage.Help + text4);
+									text5 += ".txt";
+									string[] array3 = IO.LoadTextArray(CorePath.CorePackage.Help + text5);
 									if (array3.IsEmpty())
 									{
-										array3 = IO.LoadTextArray(CorePath.CorePackage.Text + text4);
+										array3 = IO.LoadTextArray(CorePath.CorePackage.Text + text5);
 									}
 									if (array3.IsEmpty())
 									{
-										array3 = IO.LoadTextArray(CorePath.CorePackage.TextCommon + text4);
+										array3 = IO.LoadTextArray(CorePath.CorePackage.TextCommon + text5);
 									}
 									if (!array3.IsEmpty())
 									{
-										ParseLines(array3.ToList(), text3);
+										ParseLines(array3.ToList(), text4);
 									}
 									break;
 								}
@@ -234,10 +234,10 @@ public class UIBook : MonoBehaviour
 				if (!text.IsEmpty())
 				{
 					text = text.Replace("#pc", str_pc);
-					UIItem uIItem2 = current.AddText("NoteText_help", STR(text));
+					UIItem uIItem = current.AddText("NoteText_help", STR(text));
 					if (center)
 					{
-						uIItem2.text1.alignment = TextAnchor.UpperCenter;
+						uIItem.text1.alignment = TextAnchor.UpperCenter;
 					}
 				}
 			}

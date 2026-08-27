@@ -23,7 +23,7 @@ public class UIAnimeSequence : UIAnime
 
 	public override bool Has(AnimePhase phase)
 	{
-		if (phase != 0 || sequenceIntro == null)
+		if (phase != AnimePhase.Intro || sequenceIntro == null)
 		{
 			if (phase == AnimePhase.Outro)
 			{

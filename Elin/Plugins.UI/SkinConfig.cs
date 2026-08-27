@@ -133,9 +133,9 @@ public class SkinConfig
 	public void SetID(int _id)
 	{
 		id = _id;
-		int num2 = (button = 0);
-		int num4 = (grid = num2);
-		bg = num4;
+		int num = (button = 0);
+		int num3 = (grid = num);
+		bg = num3;
 		_Skin = null;
 		bgColor = BG.color;
 		gridColor = Grid.color;

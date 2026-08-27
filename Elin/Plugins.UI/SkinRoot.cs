@@ -27,7 +27,7 @@ public class SkinRoot : BaseSkinRoot
 		if (t.imageType == ImageType.BG_Window)
 		{
 			SkinAsset_BG bG = config.BG;
-			if (SkinManager.Instance.skinSets[0].bgs[config.bg].redirect != 0)
+			if (SkinManager.Instance.skinSets[0].bgs[config.bg].redirect != SkinAssetRedirect.None)
 			{
 				config.bgColor = bG.color;
 			}

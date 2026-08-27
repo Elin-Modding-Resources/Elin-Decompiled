@@ -668,9 +668,9 @@ public class PrimitiveCanvas : MaskableGraphic
 			LinkedListNode<Vector2> linkedListNode4 = linkedListNode2.Next ?? linkedListNode2.List.First;
 			Func<Vector2, Vector2, Vector2, bool> func = ((!(linkedListNode4.Value.y > linkedListNode3.Value.y)) ? ((Func<Vector2, Vector2, Vector2, bool>)delegate(Vector2 prev, Vector2 cur, Vector2 next)
 			{
-				Vector2 vector2 = cur - prev;
-				Vector2 rhs2 = next - cur;
-				return Vector2.Dot(new Vector2(0f - vector2.y, vector2.x), rhs2) > 0f;
+				Vector2 vector = cur - prev;
+				Vector2 rhs = next - cur;
+				return Vector2.Dot(new Vector2(0f - vector.y, vector.x), rhs) > 0f;
 			}) : ((Func<Vector2, Vector2, Vector2, bool>)delegate(Vector2 prev, Vector2 cur, Vector2 next)
 			{
 				Vector2 vector = cur - prev;
@@ -678,7 +678,7 @@ public class PrimitiveCanvas : MaskableGraphic
 				return Vector2.Dot(new Vector2(0f - vector.y, vector.x), rhs) < 0f;
 			}));
 			linkedListNode = linkedList.First;
-			for (int i = 0; i < linkedList.Count; i++)
+			for (int num2 = 0; num2 < linkedList.Count; num2++)
 			{
 				linkedListNode3 = linkedListNode.Previous ?? linkedListNode.List.Last;
 				linkedListNode4 = linkedListNode.Next ?? linkedListNode.List.First;

@@ -18,8 +18,8 @@ public class RenderCamUpscaler : MonoBehaviour, IChangeResolution
 
 	public void SetEnable(bool enable)
 	{
-		bool flag2 = (image.enabled = enable);
-		active = flag2;
+		bool flag = (image.enabled = enable);
+		active = flag;
 		if (active)
 		{
 			OnChangeResolution();

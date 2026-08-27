@@ -480,7 +480,7 @@ public class UIList : BaseList
 			return;
 		}
 		SkinRootStatic tempSkin = SkinManager.tempSkin;
-		if (skinType != 0)
+		if (skinType != SkinType.Default)
 		{
 			SkinManager.tempSkin = SkinManager.CurrentSkin.GetSkin(skinType);
 		}
@@ -522,7 +522,7 @@ public class UIList : BaseList
 		}
 		if (!initialized || reset)
 		{
-			if (sortMode != 0)
+			if (sortMode != SortMode.ByNone)
 			{
 				Sort();
 			}
@@ -593,10 +593,11 @@ public class UIList : BaseList
 			object item = items[num];
 			Component comp = callbacks.Instantiate(item, layoutItems.transform);
 			callbacks.OnRedraw(item, comp, j);
-			ButtonPair buttonPair = default(ButtonPair);
-			buttonPair.obj = item;
-			buttonPair.component = comp;
-			ButtonPair item2 = buttonPair;
+			ButtonPair item2 = new ButtonPair
+			{
+				obj = item,
+				component = comp
+			};
 			UIButton uIButton = comp as UIButton;
 			if (!uIButton)
 			{
@@ -814,8 +815,8 @@ public class UIList : BaseList
 		{
 			RectTransform rectTransform = layoutItems.Rect();
 			RectTransform rectTransform2 = layoutItems.Rect();
-			Vector2 vector2 = (layoutItems.Rect().anchorMax = new Vector2(0f, 1f));
-			Vector2 pivot = (rectTransform2.anchorMin = vector2);
+			Vector2 vector = (layoutItems.Rect().anchorMax = new Vector2(0f, 1f));
+			Vector2 pivot = (rectTransform2.anchorMin = vector);
 			rectTransform.pivot = pivot;
 			rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, (float)rows * gridLayoutGroup.cellSize.y);
 		}

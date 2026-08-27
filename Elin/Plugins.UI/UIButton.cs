@@ -405,7 +405,7 @@ public class UIButton : Button, IUISkin, IPointerDownHandler, IEventSystemHandle
 			{
 				return;
 			}
-			if (eventData.button != 0)
+			if (eventData.button != PointerEventData.InputButton.Left)
 			{
 				if (eventData.button == PointerEventData.InputButton.Right && onRightClick != null && !EInput.rightMouse.wasConsumed)
 				{
@@ -460,7 +460,7 @@ public class UIButton : Button, IUISkin, IPointerDownHandler, IEventSystemHandle
 			});
 			if (EInput.skipFrame <= 0)
 			{
-				if (eventData.button != 0)
+				if (eventData.button != PointerEventData.InputButton.Left)
 				{
 					if (eventData.button == PointerEventData.InputButton.Right && onRightClick != null && !EInput.rightMouse.wasConsumed)
 					{

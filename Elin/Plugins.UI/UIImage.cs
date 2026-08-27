@@ -33,7 +33,7 @@ public class UIImage : Image, IUISkin
 		{
 			color = baseSkinRoot.Colors.colorLine;
 		}
-		if (frameType != 0)
+		if (frameType != FrameType.None)
 		{
 			if (!frame)
 			{

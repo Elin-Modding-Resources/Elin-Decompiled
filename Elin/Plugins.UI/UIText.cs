@@ -97,7 +97,7 @@ public class UIText : Text, IUISkin
 		if ((bool)button && (bool)button.skinRoot)
 		{
 			SkinAsset_Button skinAsset_Button = button.skinRoot.GetButton();
-			if (fontColor != 0)
+			if (fontColor != FontColor.DontChange)
 			{
 				this.color = skinAsset_Button.textColor;
 			}

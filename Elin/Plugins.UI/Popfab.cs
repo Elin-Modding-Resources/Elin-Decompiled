@@ -47,7 +47,7 @@ public class Popfab : MonoBehaviour
 		{
 			item.isUseDuration = false;
 		}
-		if (pushEase != 0 && list.Count > 0)
+		if (pushEase != Ease.Unset && list.Count > 0)
 		{
 			PushItems(new Vector3(0f, item.rect.sizeDelta.y + spacing, 0f));
 		}

@@ -230,10 +230,10 @@ public class UIDynamicList : BaseList
 		}
 		if (dsvRow.items.Count > columns)
 		{
-			for (int j = columns; j < dsvRow.items.Count; j++)
+			for (int num = columns; num < dsvRow.items.Count; num++)
 			{
-				dsvRow.items[j].comp.SetActive(enable: false);
-				dsvRow.items[j].obj = null;
+				dsvRow.items[num].comp.SetActive(enable: false);
+				dsvRow.items[num].obj = null;
 			}
 		}
 		if ((bool)dsvRow.itemHeader)

@@ -48,9 +48,9 @@ public class PopperManager : MonoBehaviour
 			});
 		}
 		DOTweenAnimation[] componentsInChildren = p.GetComponentsInChildren<DOTweenAnimation>();
-		for (int i = 0; i < componentsInChildren.Length; i++)
+		for (int num = 0; num < componentsInChildren.Length; num++)
 		{
-			componentsInChildren[i].DORestart(fromHere: true);
+			componentsInChildren[num].DORestart(fromHere: true);
 		}
 		list.Add(p);
 		return p;

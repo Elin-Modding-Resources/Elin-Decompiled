@@ -319,8 +319,8 @@ public class Layer : MonoBehaviour, IUISkin
 		}
 		layer = UnityEngine.Object.Instantiate(layer);
 		Layer layer2 = layer;
-		string text4 = (layer.name = text);
-		layer2.idLayer = text4;
+		string text3 = (layer.name = text);
+		layer2.idLayer = text3;
 		layer.OnCreate();
 		return layer;
 	}

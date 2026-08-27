@@ -40,7 +40,7 @@ public class UINote : MonoBehaviour
 		}
 		layout.DestroyChildren(destroyInactive: true);
 		oldTempSkin = SkinManager.tempSkin;
-		if (skinType != 0)
+		if (skinType != SkinType.Default)
 		{
 			SkinManager.tempSkin = SkinManager.CurrentSkin.GetSkin(skinType);
 		}
@@ -118,7 +118,7 @@ public class UINote : MonoBehaviour
 	public UIItem AddText(string id, string text, FontColor color = FontColor.DontChange)
 	{
 		UIItem uIItem = Load("UI/Element/Text/" + id.IsEmpty(idDefaultText.IsEmpty("NoteText")));
-		if (color != 0)
+		if (color != FontColor.DontChange)
 		{
 			uIItem.text1.SetText(text.lang(), color);
 		}
@@ -170,10 +170,10 @@ public class UINote : MonoBehaviour
 	public void AddImage(string idFile)
 	{
 		Image image = Load("UI/Element/Deco/ImageNote").image1;
-		Sprite sprite2 = (image.sprite = Resources.Load<Sprite>("Media/Graphics/Image/" + idFile));
+		Sprite sprite = (image.sprite = Resources.Load<Sprite>("Media/Graphics/Image/" + idFile));
 		image.SetNativeSize();
 		image.transform.parent.Rect().sizeDelta = image.Rect().sizeDelta;
-		if (sprite2 == null)
+		if (sprite == null)
 		{
 			image.transform.parent.SetActive(enable: false);
 		}
