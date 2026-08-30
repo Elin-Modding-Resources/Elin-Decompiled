@@ -2011,6 +2011,17 @@ public static class ClassExtension
 		}
 	}
 
+	public static bool RemoveFromEnd<T>(this List<T> items, T item)
+	{
+		int num = items.LastIndexOf(item);
+		if (num < 0)
+		{
+			return false;
+		}
+		items.RemoveAt(num);
+		return true;
+	}
+
 	public static float ClampAngle(this float angle)
 	{
 		if (angle < 0f)
