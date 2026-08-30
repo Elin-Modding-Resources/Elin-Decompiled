@@ -122,25 +122,32 @@ public class CharaBody : EClass
 		case 31:
 			if (owner.HasElement(1555))
 			{
-				return CannotEquip();
+				return CannotEquip("cannnotEquip");
 			}
 			break;
 		case 33:
 			if (owner.HasElement(1554))
 			{
-				return CannotEquip();
+				return CannotEquip("cannnotEquip");
 			}
 			break;
 		case 39:
 			if (owner.HasElement(1552))
 			{
-				return CannotEquip();
+				return CannotEquip("cannnotEquip");
 			}
 			break;
 		}
-		if (slot.thing != null && slot.thing.blessedState <= BlessedState.Cursed)
+		if (slot.thing != null)
 		{
-			return CannotEquip();
+			if (slot.thing.blessedState <= BlessedState.Cursed)
+			{
+				return CannotEquip("cannnotEquip");
+			}
+			if (slot.thing.c_DNA != null && slot.thing.GetBool(135))
+			{
+				return CannotEquip("isSleepLock");
+			}
 		}
 		if (thing.c_uidAttune != 0 && thing.c_uidAttune != owner.uid)
 		{
@@ -167,11 +174,11 @@ public class CharaBody : EClass
 			return false;
 		}
 		return true;
-		bool CannotEquip()
+		bool CannotEquip(string idLang)
 		{
 			if (text)
 			{
-				Msg.Say("cannnotEquip", slot.element.GetName().ToLower());
+				Msg.Say(idLang, slot.element.GetName().ToLower());
 			}
 			return false;
 		}
@@ -258,7 +265,7 @@ public class CharaBody : EClass
 			thing.c_DNA.Apply(owner, reverse: false);
 			Msg.Say("equip_relic");
 			owner.feat -= thing.c_DNA.cost;
-			owner.stamina.Mod(-1 - EClass.rnd(5));
+			thing.SetBool(135, enable: true);
 		}
 		if (owner.IsPC)
 		{

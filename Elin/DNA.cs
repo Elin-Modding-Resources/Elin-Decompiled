@@ -401,7 +401,7 @@ public class DNA : EClass
 				for (int j = 0; j < 100; j++)
 				{
 					BodySlot bodySlot2 = model.body.slots.RandomItem();
-					if (bodySlot2 != null && bodySlot2.elementId != 40 && bodySlot2.elementId != 44)
+					if (bodySlot2 != null && bodySlot2.elementId != 40 && bodySlot2.elementId != 44 && bodySlot2.elementId != 46)
 					{
 						bodySlot = bodySlot2;
 						break;
@@ -781,6 +781,7 @@ public class DNA : EClass
 			if (element.source.category == "slot" || element.HasTag("noRelic") || element.HasTag("permaGene"))
 			{
 				vals.RemoveRange(i, 2);
+				i -= 2;
 			}
 		}
 		cost /= 5;

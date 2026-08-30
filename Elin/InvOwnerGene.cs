@@ -15,9 +15,9 @@ public class InvOwnerGene : InvOwnerDraglet
 
 	public override bool ShouldShowGuide(Thing t)
 	{
-		if (t.c_DNA != null)
+		if (t.c_DNA != null && tg.feat >= t.c_DNA.cost)
 		{
-			return tg.feat >= t.c_DNA.cost;
+			return !t.IsEquipment;
 		}
 		return false;
 	}

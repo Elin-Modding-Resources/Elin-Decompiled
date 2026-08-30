@@ -185,4 +185,6 @@ public class CINT
 	public const int uidAttune = 133;
 
 	public const int peakyAdded = 134;
+
+	public const int isSleepLock = 135;
 }

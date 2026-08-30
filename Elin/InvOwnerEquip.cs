@@ -40,11 +40,20 @@ public class InvOwnerEquip : InvOwner
 
 	public override bool IsFailByCurse(Thing t)
 	{
-		if (t != null && t.blessedState <= BlessedState.Cursed)
+		if (t != null)
 		{
-			Msg.Say("unequipCursed", t);
-			SE.Play("curse3");
-			return true;
+			if (t.blessedState <= BlessedState.Cursed)
+			{
+				Msg.Say("unequipCursed", t);
+				SE.Play("curse3");
+				return true;
+			}
+			if (t.c_DNA != null && t.GetBool(135))
+			{
+				Msg.Say("isSleepLock", t);
+				SE.Play("curse3");
+				return true;
+			}
 		}
 		return false;
 	}

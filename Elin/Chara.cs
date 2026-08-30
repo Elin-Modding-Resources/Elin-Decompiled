@@ -10342,6 +10342,16 @@ public class Chara : Card, IPathfindWalker
 		{
 			stamina.Set(1);
 		}
+		if (IsPC)
+		{
+			foreach (BodySlot slot in body.slots)
+			{
+				if (slot.thing != null)
+				{
+					slot.thing.SetBool(135, enable: false);
+				}
+			}
+		}
 		if (isWeakToSunlight && isSunLit)
 		{
 			base.hp = 0;

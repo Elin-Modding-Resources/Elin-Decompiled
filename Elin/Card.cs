@@ -4467,7 +4467,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (HasElement(1218) && attackSource != AttackSource.ManaBackfire && (hp > 0 || Evalue(1421) <= 0))
 			{
-				dmg = dmg * (1000 - Mathf.Min(Evalue(1218), 1000) / ((!flag) ? 1 : 2)) / 1000;
+				dmg = dmg * (1000 - Mathf.Min(Evalue(1218), 999) / ((!flag) ? 1 : 2)) / 1000;
 				if (dmg <= 0 && EClass.rnd(4) == 0)
 				{
 					dmg++;

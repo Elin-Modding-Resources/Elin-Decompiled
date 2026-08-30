@@ -1219,10 +1219,18 @@ public class InvOwner : EClass
 				InvOwnerEquip invOwnerEquip = to.invOwner as InvOwnerEquip;
 				Chara chara = invOwnerEquip.owner.Chara;
 				BodySlot slot = invOwnerEquip.slot;
-				if (execute && to.thing != null && to.thing.blessedState <= BlessedState.Cursed)
+				if (execute && to.thing != null)
 				{
-					Msg.Say("unequipCursed", to.thing);
-					return false;
+					if (to.thing.blessedState <= BlessedState.Cursed)
+					{
+						Msg.Say("unequipCursed", to.thing);
+						return false;
+					}
+					if (to.thing.c_DNA != null && to.thing.GetBool(135))
+					{
+						Msg.Say("isSleepLock", to.thing);
+						return false;
+					}
 				}
 				if (from.thing.category.slot == slot.elementId)
 				{
@@ -1507,33 +1515,40 @@ public class InvOwner : EClass
 			{
 				list.Add("invEquip", 90, delegate
 				{
-					if (slot.thing != null && slot.thing.blessedState <= BlessedState.Cursed)
+					if (slot.thing != null)
 					{
-						Msg.Say("unequipCursed", slot.thing);
-						SE.Play("curse3");
-					}
-					else
-					{
-						if (EClass.pc.held == t)
+						if (slot.thing.blessedState <= BlessedState.Cursed)
 						{
-							EClass.pc.PickHeld();
+							Msg.Say("unequipCursed", slot.thing);
+							SE.Play("curse3");
+							return;
 						}
-						Thing thing = slot.thing;
-						body.Equip(t, slot);
-						EClass.Sound.Play("equip");
-						if (thing != null)
+						if (slot.thing.c_DNA != null && slot.thing.GetBool(135))
 						{
-							if (tParent != null)
-							{
-								tParent.AddThing(thing);
-								thing.invX = tInvX;
-								thing.invY = tInvY;
-							}
-							else if (thing.parent is Card && (thing.parent as Card).things.IsOverflowing())
-							{
-								thing.parent.RemoveCard(thing);
-								EClass.pc.Pick(thing);
-							}
+							Msg.Say("isSleepLock", slot.thing);
+							SE.Play("curse3");
+							return;
+						}
+					}
+					if (EClass.pc.held == t)
+					{
+						EClass.pc.PickHeld();
+					}
+					Thing thing = slot.thing;
+					body.Equip(t, slot);
+					EClass.Sound.Play("equip");
+					if (thing != null)
+					{
+						if (tParent != null)
+						{
+							tParent.AddThing(thing);
+							thing.invX = tInvX;
+							thing.invY = tInvY;
+						}
+						else if (thing.parent is Card && (thing.parent as Card).things.IsOverflowing())
+						{
+							thing.parent.RemoveCard(thing);
+							EClass.pc.Pick(thing);
 						}
 					}
 				});

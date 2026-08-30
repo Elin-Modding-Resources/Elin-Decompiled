@@ -251,7 +251,7 @@ public class RecipeCard : Recipe
 				}
 			}
 		}
-		thing.Identify(show: false);
+		thing.Identify(show: false, IDTSource.SuperiorIdentify);
 		thing.isCrafted = true;
 		if (!flag3)
 		{
