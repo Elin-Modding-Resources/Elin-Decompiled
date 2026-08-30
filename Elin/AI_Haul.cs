@@ -33,14 +33,7 @@ public class AI_Haul : AIAct
 
 	public static Thing GetThingToClean(Chara c = null)
 	{
-		_list.Clear();
-		foreach (Thing thing in EClass._map.things)
-		{
-			if (thing.placeState == PlaceState.roaming && !thing.isMasked && (thing.id == "731" || thing.id == "_egg" || thing.id == "egg_fertilized" || thing.id == "_milk") && thing.Dist(EClass.pc) > 1)
-			{
-				_list.Add(thing);
-			}
-		}
+		ListThingsToClean(_list);
 		if (_list.Count == 0)
 		{
 			return null;
@@ -71,6 +64,31 @@ public class AI_Haul : AIAct
 			}
 		}
 		return null;
+	}
+
+	public static List<Thing> ListThingsToClean(List<Thing> result)
+	{
+		result.Clear();
+		foreach (Thing thing in EClass._map.things)
+		{
+			if (thing.placeState != PlaceState.roaming || thing.isMasked)
+			{
+				continue;
+			}
+			switch (thing.id)
+			{
+			case "731":
+			case "_egg":
+			case "egg_fertilized":
+			case "_milk":
+				if (thing.Dist(EClass.pc) > 1)
+				{
+					result.Add(thing);
+				}
+				break;
+			}
+		}
+		return result;
 	}
 
 	public static AI_Haul TryGetAI(Chara c)

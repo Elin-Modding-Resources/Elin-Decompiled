@@ -182,9 +182,12 @@ public class SpawnList : EClass
 			if (rows.Count == 0)
 			{
 				Debug.Log("no item:" + id);
-				foreach (CardFilter.FilterItem tag in filter.tags)
+				if (filter != null)
 				{
-					Debug.Log(tag.name + "/" + tag.exclude);
+					foreach (CardFilter.FilterItem tag in filter.tags)
+					{
+						Debug.Log(tag.name + "/" + tag.exclude);
+					}
 				}
 				return null;
 			}

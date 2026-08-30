@@ -46,7 +46,7 @@ public class CellDetail
 	{
 		if (things.Count != 1)
 		{
-			things.Remove(t);
+			things.RemoveFromEnd(t);
 			things.Insert(0, t);
 			for (int i = 0; i < things.Count && things[i].IsInstalled; i++)
 			{

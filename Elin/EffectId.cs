@@ -143,5 +143,6 @@ public enum EffectId
 	MassFear = 319,
 	Fuse = 320,
 	BlueDrag = 321,
-	Comet = 322
+	Comet = 322,
+	Missile = 323
 }

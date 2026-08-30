@@ -19,7 +19,7 @@ public class POLICY
 
 	public const int legendary_heirloom = 2821;
 
-	public const int prohibition = 2503;
+	public const int self_sufficient = 2511;
 
 	public const int license_furniture = 2819;
 
@@ -37,7 +37,7 @@ public class POLICY
 
 	public const int resident_tax = 2512;
 
-	public const int self_sufficient = 2511;
+	public const int license_general = 2820;
 
 	public const int trash_no = 2702;
 
@@ -51,13 +51,13 @@ public class POLICY
 
 	public const int impressment = 2504;
 
+	public const int prohibition = 2503;
+
 	public const int food_for_people = 2502;
 
 	public const int faith_tax = 2501;
 
 	public const int wealth_tax = 2500;
-
-	public const int license_general = 2820;
 
 	public const int vaccination = 2509;
 
@@ -73,7 +73,7 @@ public class POLICY
 
 	public const int store_premium = 2817;
 
-	public const int store_ripoff = 2816;
+	public const int platinum_ticket = 2815;
 
 	public const int mass_exhibition = 2814;
 
@@ -85,7 +85,7 @@ public class POLICY
 
 	public const int open_business = 2810;
 
-	public const int platinum_ticket = 2815;
+	public const int store_ripoff = 2816;
 
 	public const int livestock_priv = 2715;
 
@@ -107,11 +107,11 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2824, 2823, 2825, 2822, 2827, 2828, 2826, 2821, 2503, 2819,
-		2701, 2700, 2516, 2515, 2514, 2513, 2512, 2511, 2702, 2510,
-		2508, 2507, 2506, 2504, 2502, 2501, 2500, 2820, 2509, 2703,
-		2505, 2705, 2704, 2818, 2817, 2816, 2814, 2813, 2812, 2811,
-		2810, 2815, 2715, 2712, 2711, 2710, 2709, 2708, 2707, 2800,
+		2824, 2823, 2825, 2822, 2827, 2828, 2826, 2821, 2511, 2819,
+		2701, 2700, 2516, 2515, 2514, 2513, 2512, 2820, 2702, 2510,
+		2508, 2507, 2506, 2504, 2503, 2502, 2501, 2500, 2509, 2703,
+		2505, 2705, 2704, 2818, 2817, 2815, 2814, 2813, 2812, 2811,
+		2810, 2816, 2715, 2712, 2711, 2710, 2709, 2708, 2707, 2800,
 		2706
 	};
 }

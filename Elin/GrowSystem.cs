@@ -605,6 +605,14 @@ public class GrowSystem : EClass
 	{
 		if (source.HasTag(CTAG.seed))
 		{
+			if (EClass._zone.IsUserZone && EClass.game.principal.disableUsermapBenefit)
+			{
+				return null;
+			}
+			if (EClass.player.isAutoFarming)
+			{
+				return TraitSeed.MakeSeed(cell);
+			}
 			int num = (cell.IsFarmField ? 400 : 1000);
 			int soilCost = EClass._zone.GetSoilCost();
 			int maxSoil = EClass._zone.MaxSoil;
@@ -616,17 +624,9 @@ public class GrowSystem : EClass
 			{
 				num /= 5;
 			}
-			if (EClass._zone.IsUserZone && EClass.game.principal.disableUsermapBenefit)
-			{
-				return null;
-			}
-			if (EClass.player.isAutoFarming || EClass.rnd(num) < EClass.rnd(source.chance))
+			if (EClass.rnd(num) < EClass.rnd(source.chance))
 			{
 				Thing thing = TraitSeed.MakeSeed(cell);
-				if (EClass.player.isAutoFarming)
-				{
-					return thing;
-				}
 				TryPick(cell, thing, c);
 				return thing;
 			}

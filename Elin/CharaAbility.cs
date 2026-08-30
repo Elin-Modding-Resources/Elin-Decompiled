@@ -168,7 +168,7 @@ public class CharaAbility : EClass
 			owner._listAbility = new List<int>();
 		}
 		owner._listAbility.Add(id * ((!pt) ? 1 : (-1)));
-		if (owner.IsPC && owner.HasElement(1274))
+		if (owner.IsPC)
 		{
 			Element element = owner.elements.GetElement(id);
 			if (element == null)
@@ -200,7 +200,7 @@ public class CharaAbility : EClass
 	public void Remove(int id)
 	{
 		owner._listAbility.Remove(id);
-		if (owner.IsPC && owner.HasElement(1274) && owner.HasElement(id) && owner._listAbility.IndexOf(id) == -1)
+		if (owner.IsPC && owner.HasElement(id) && owner._listAbility.IndexOf(id) == -1)
 		{
 			Element element = EClass.pc.elements.GetElement(id);
 			if (!(element is Spell))

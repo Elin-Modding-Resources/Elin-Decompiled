@@ -840,11 +840,11 @@ public class Map : MapBounds, IPathfindGrid
 		t.parent = null;
 		if (t.isChara)
 		{
-			charas.Remove(t.Chara);
+			charas.RemoveFromEnd(t.Chara);
 		}
 		else
 		{
-			things.Remove(t.Thing);
+			things.RemoveFromEnd(t.Thing);
 		}
 	}
 
@@ -2704,6 +2704,10 @@ public class Map : MapBounds, IPathfindGrid
 
 	public Thing FindThing(Type type, Chara c = null)
 	{
+		if (type == null)
+		{
+			return null;
+		}
 		_things.Clear();
 		foreach (Thing thing in EClass._map.props.installed.things)
 		{
@@ -2721,7 +2725,7 @@ public class Map : MapBounds, IPathfindGrid
 
 	public Thing FindThing(Type type, BaseArea area1, BaseArea area2 = null)
 	{
-		if (area1 == null && area2 == null)
+		if (type == null || (area1 == null && area2 == null))
 		{
 			return null;
 		}

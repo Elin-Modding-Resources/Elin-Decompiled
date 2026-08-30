@@ -85,7 +85,7 @@ public class InvOwnerGene : InvOwnerDraglet
 	{
 		if (ShouldShowGuide(t))
 		{
-			t.c_DNA.WriteNoteExtra(n, tg);
+			t.c_DNA.WriteNoteExtra(n, t, tg);
 		}
 	}
 }

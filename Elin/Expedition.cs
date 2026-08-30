@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class Expedition : EClass
 {
@@ -76,12 +77,18 @@ public class Expedition : EClass
 	public void End()
 	{
 		branch.expeditions.dict.Remove(uidChara);
-		chara.MoveZone(chara.homeZone);
-		WidgetPopText.Say("expeditionEnd".lang(chara.Name, strType));
-		branch.Log("bExpeditionEnd", chara, strType);
-		if (chara.IsInActiveZone)
+		Chara chara = this.chara;
+		if (chara?.homeZone == null)
 		{
-			Msg.Say("bExpeditionEnd", chara, strType);
+			Debug.Log("Expedition.End: chara " + uidChara + " no longer exists, dropping");
+			return;
+		}
+		chara.MoveZone(chara.homeZone);
+		WidgetPopText.Say("expeditionEnd".lang(this.chara.Name, strType));
+		branch.Log("bExpeditionEnd", this.chara, strType);
+		if (this.chara.IsInActiveZone)
+		{
+			Msg.Say("bExpeditionEnd", this.chara, strType);
 		}
 		switch (type)
 		{
@@ -95,7 +102,7 @@ public class Expedition : EClass
 					WidgetPopText.Say("discoverZone".lang(item.Name), FontColor.Great);
 				}
 			}
-			Zone zone = EClass.world.region.CreateRandomSite(chara.homeZone);
+			Zone zone = EClass.world.region.CreateRandomSite(this.chara.homeZone);
 			if (zone != null)
 			{
 				zone.isKnown = true;
@@ -104,7 +111,7 @@ public class Expedition : EClass
 			break;
 		}
 		case ExpeditionType.Explore:
-			chara.GetWorkSummary().progress = 100;
+			this.chara.GetWorkSummary().progress = 100;
 			break;
 		}
 	}

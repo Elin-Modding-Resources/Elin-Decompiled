@@ -176,6 +176,10 @@ public class SurvivalManager : EClass
 
 	public void MeteorThing(Point pos, string id, bool install = false)
 	{
+		if (pos == null)
+		{
+			pos = EClass.pc.pos.Copy();
+		}
 		Meteor(pos, delegate
 		{
 			Card card = EClass._zone.AddCard(ThingGen.Create(id), pos);
@@ -192,6 +196,10 @@ public class SurvivalManager : EClass
 
 	public void MeteorThing(Point pos, Thing t, bool install = false)
 	{
+		if (pos == null)
+		{
+			pos = EClass.pc.pos.Copy();
+		}
 		Meteor(pos, delegate
 		{
 			Card card = EClass._zone.AddCard(t, pos);

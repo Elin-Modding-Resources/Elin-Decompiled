@@ -494,6 +494,16 @@ public class CraftUtil : EClass
 		{
 			product.elements.ModBase(10, 6);
 		}
+		if (product.category.id == "relic")
+		{
+			foreach (Thing ing3 in ings)
+			{
+				if (ing3 != product && ing3 != null && ing3.c_DNA != null)
+				{
+					product.c_DNA = IO.DeepCopy(ing3.c_DNA).Relicize();
+				}
+			}
+		}
 		if (product.HasElement(762))
 		{
 			product.elements.ModBase(10, product.Evalue(762) / 5);

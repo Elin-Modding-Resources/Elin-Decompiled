@@ -1319,16 +1319,16 @@ public class Thing : Card
 				}
 				if (!e.IsGlobalElement)
 				{
-					bool flag3 = base.IsWeapon || base.IsRangedWeapon || base.IsAmmo || base.IsThrownWeapon || trait is TraitToolMusic;
+					bool flag4 = base.IsWeapon || base.IsRangedWeapon || base.IsAmmo || base.IsThrownWeapon || trait is TraitToolMusic;
 					if (base.IsEquipment && base.category.slot != 35 && source.elementMap.ContainsKey(e.id))
 					{
-						flag3 = true;
+						flag4 = true;
 					}
-					if (e.source.tag.Contains("weaponEnc") && !flag3)
+					if (e.source.tag.Contains("weaponEnc") && !flag4)
 					{
 						return false;
 					}
-					if (e.source.IsWeaponEnc && !(base.category.IsChildOf("shield") || flag3))
+					if (e.source.IsWeaponEnc && !(base.category.IsChildOf("shield") || flag4))
 					{
 						return false;
 					}
@@ -1362,6 +1362,23 @@ public class Thing : Card
 			}
 		}
 		trait.WriteNote(n, flag2);
+		if (base.c_DNA != null)
+		{
+			bool flag3 = EClass.pc.HasElement(1274) && !LayerDragGrid.Instance;
+			if (base.c_DNA.cost > 0)
+			{
+				n.AddText("NoteText_enc", "isCostFeatPoint".lang((flag3 ? (base.c_DNA.cost * EClass.pc.GeneCostMTP / 100 + " (" + base.c_DNA.cost + ")") : ((object)base.c_DNA.cost))?.ToString() ?? ""));
+			}
+			if (EClass.debug.showExtra)
+			{
+				n.AddText("NoteText_enc", "duration:" + base.c_DNA.GetDurationHour());
+			}
+			base.c_DNA.WriteNote(n, this, flag3 ? EClass.pc : null);
+			if (flag3)
+			{
+				base.c_DNA.WriteNoteExtra(n, this, EClass.pc);
+			}
+		}
 		if (flag2)
 		{
 			if (showTraits)

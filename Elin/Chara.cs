@@ -8495,9 +8495,9 @@ public class Chara : Card, IPathfindWalker
 			}
 		}
 		string str = GetStr(72);
-		if (!str.IsEmpty() && EClass.sources.things.map[str] != null)
+		if (!str.IsEmpty() && EClass.sources.things.map.TryGetValue(str, out var value2))
 		{
-			return EClass.sources.things.map[str];
+			return value2;
 		}
 		if (_listFavFood.Count == 0)
 		{

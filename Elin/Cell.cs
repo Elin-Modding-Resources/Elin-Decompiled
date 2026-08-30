@@ -1617,14 +1617,14 @@ public class Cell : WeightCell, IFloodCell
 		{
 			if (detail != null)
 			{
-				detail.charas.Remove(c.Chara);
+				detail.charas.RemoveFromEnd(c.Chara);
 			}
 		}
 		else
 		{
 			if (detail != null)
 			{
-				detail.things.Remove(c.Thing);
+				detail.things.RemoveFromEnd(c.Thing);
 			}
 			if (c.trait.ShouldRefreshTile || c.sourceCard.multisize)
 			{

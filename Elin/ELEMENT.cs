@@ -37,7 +37,7 @@ public class ELEMENT
 
 	public const int _void = 0;
 
-	public const int nutrition = 10;
+	public const int socket = 5;
 
 	public const int lv = 1;
 
@@ -45,7 +45,7 @@ public class ELEMENT
 
 	public const int d = 3;
 
-	public const int socket = 5;
+	public const int nutrition = 10;
 
 	public const int weight = 11;
 
@@ -65,28 +65,28 @@ public class ELEMENT
 
 	public const int fire = 21;
 
-	public const int poison = 20;
-
-	public const int race = 29;
-
-	public const int cure = 26;
-
-	public const int old_antidote = 25;
-
-	public const int piety = 85;
+	public const int cut = 22;
 
 	public const int old_detox = 23;
 
-	public const int cut = 22;
-
 	public const int old_heal = 24;
+
+	public const int old_antidote = 25;
+
+	public const int cure = 26;
+
+	public const int race = 29;
+
+	public const int piety = 85;
+
+	public const int poison = 20;
 
 	public static readonly int[] IDS = new int[38]
 	{
 		750, 751, 752, 753, 755, 756, 759, 760, 761, 762,
-		763, 765, 766, 754, 770, 0, 10, 1, 2, 3,
-		5, 11, 12, 13, 14, 15, 17, 18, 16, 21,
-		20, 29, 26, 25, 85, 23, 22, 24
+		763, 765, 766, 754, 770, 0, 5, 1, 2, 3,
+		10, 11, 12, 13, 14, 15, 17, 18, 16, 21,
+		22, 23, 24, 25, 26, 29, 85, 20
 	};
 }
 public class Element : EClass

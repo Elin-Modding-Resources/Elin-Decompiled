@@ -117,7 +117,7 @@ public class PolicyManager : EClass
 		{
 			if (item.id == id && item.active)
 			{
-				return item.Ele.Value;
+				return item.Ele?.Value ?? 0;
 			}
 		}
 		return 0;

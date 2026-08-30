@@ -80,6 +80,26 @@ public class CharaBody : EClass
 		thing.trait.OnUnequip(owner);
 		thing.c_equippedSlot = 0;
 		slot.thing = null;
+		if (thing.c_DNA != null)
+		{
+			thing.c_DNA.Apply(owner, reverse: true);
+			owner.feat += thing.c_DNA.cost;
+		}
+		if (EClass.core.IsGameStarted)
+		{
+			if (slot.elementId == 45 || thing.HasElement(490))
+			{
+				owner.RecalculateFOV();
+			}
+			if (refresh && owner.isCreated)
+			{
+				owner.Refresh();
+				if (slot.elementId == 37 && owner.HasElement(1209) && !thing.HasElement(419))
+				{
+					owner.Say("tail_free", owner);
+				}
+			}
+		}
 		if (owner.IsPC)
 		{
 			if (refresh)
@@ -89,22 +109,6 @@ public class CharaBody : EClass
 			WidgetEquip.SetDirty();
 		}
 		LayerInventory.SetDirty(thing);
-		if (!EClass.core.IsGameStarted)
-		{
-			return;
-		}
-		if (slot.elementId == 45 || thing.HasElement(490))
-		{
-			owner.RecalculateFOV();
-		}
-		if (refresh && owner.isCreated)
-		{
-			owner.Refresh();
-			if (slot.elementId == 37 && owner.HasElement(1209) && !thing.HasElement(419))
-			{
-				owner.Say("tail_free", owner);
-			}
-		}
 	}
 
 	public bool IsEquippable(Thing thing, BodySlot slot, bool text = true)
@@ -143,6 +147,14 @@ public class CharaBody : EClass
 			if (text)
 			{
 				Msg.Say("unequipCursed", thing);
+			}
+			return false;
+		}
+		if (thing.c_DNA != null && thing.c_DNA.cost > EClass.pc.feat)
+		{
+			if (text)
+			{
+				Msg.Say("notEnoughFeatPoint");
 			}
 			return false;
 		}
@@ -241,6 +253,13 @@ public class CharaBody : EClass
 			EClass.pc.faction.charaElements.OnEquip(owner, thing);
 		}
 		owner.SetTempHand();
+		if (thing.c_DNA != null)
+		{
+			thing.c_DNA.Apply(owner, reverse: false);
+			Msg.Say("equip_relic");
+			owner.feat -= thing.c_DNA.cost;
+			owner.stamina.Mod(-1 - EClass.rnd(5));
+		}
 		if (owner.IsPC)
 		{
 			if (msg)

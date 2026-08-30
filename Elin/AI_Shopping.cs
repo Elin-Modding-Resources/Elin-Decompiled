@@ -7,6 +7,12 @@ public class AI_Shopping : AIAct
 
 	public Card dest;
 
+	private static Dictionary<Card, List<Card>> _saleLists = new Dictionary<Card, List<Card>>();
+
+	private static Dictionary<Card, int> _salePrices = new Dictionary<Card, int>();
+
+	private static int _saleHour = -1;
+
 	public static bool TryShop(Chara c, bool realtime)
 	{
 		if (c.memberType != FactionMemberType.Guest || !EClass._zone.IsPCFaction || EClass._map.props.sales.Count == 0)
@@ -20,42 +26,71 @@ public class AI_Shopping : AIAct
 			return false;
 		}
 		bool flag = card.IsContainer && card.things.Count > 0;
-		List<Card> list = new List<Card>();
-		if (flag)
+		bool flag2 = !realtime && VirtualDate.IsActive;
+		if (flag2)
 		{
-			foreach (Thing thing in card.things)
+			int raw = VirtualDate.current.GetRaw();
+			if (raw != _saleHour)
 			{
-				if (TraitSalesTag.CanTagSale(thing, insideContainer: true))
+				_saleHour = raw;
+				_saleLists.Clear();
+				_salePrices.Clear();
+			}
+		}
+		if (!flag2 || !_saleLists.TryGetValue(card, out var value))
+		{
+			value = new List<Card>();
+			if (flag)
+			{
+				foreach (Thing thing in card.things)
 				{
-					list.Add(thing);
+					if (TraitSalesTag.CanTagSale(thing, insideContainer: true))
+					{
+						value.Add(thing);
+					}
 				}
 			}
-		}
-		else
-		{
-			list.Add(card);
-		}
-		foreach (Card item in list)
-		{
-			int num = 25;
-			int price = item.GetPrice(CurrencyType.Money, sell: true, PriceType.PlayerShop);
-			if (price >= c_allowance)
+			else
 			{
-				num = num * 10 * price / c_allowance;
+				value.Add(card);
 			}
-			if (price >= 10000)
+			if (flag2)
+			{
+				_saleLists[card] = value;
+			}
+		}
+		foreach (Card item in value)
+		{
+			if (item.isDestroyed)
+			{
+				continue;
+			}
+			int num = 25;
+			if (!flag2 || !_salePrices.TryGetValue(item, out var value2))
+			{
+				value2 = item.GetPrice(CurrencyType.Money, sell: true, PriceType.PlayerShop);
+				if (flag2)
+				{
+					_salePrices[item] = value2;
+				}
+			}
+			if (value2 >= c_allowance)
+			{
+				num = num * 10 * value2 / c_allowance;
+			}
+			if (value2 >= 10000)
 			{
 				num *= 15;
 			}
-			else if (price >= 5000)
+			else if (value2 >= 5000)
 			{
 				num *= 10;
 			}
-			else if (price >= 1000)
+			else if (value2 >= 1000)
 			{
 				num *= 6;
 			}
-			else if (price >= 200)
+			else if (value2 >= 200)
 			{
 				num *= 3;
 			}

@@ -1,26 +1,28 @@
 public class ENC
 {
-	public const int absorbHP = 660;
+	public const int onlyPet = 655;
+
+	public const int noDamage = 654;
+
+	public const int living = 653;
 
 	public const int eco = 652;
 
 	public const int r_PV = 651;
 
-	public const int r_DV = 650;
-
 	public const int r_mana = 641;
 
-	public const int living = 653;
-
-	public const int noDamage = 654;
-
-	public const int onlyPet = 655;
+	public const int r_DV = 650;
 
 	public const int permaCurse = 656;
 
-	public const int absorbMP = 661;
+	public const int r_life = 640;
+
+	public const int absorbHP = 660;
 
 	public const int convertCold = 851;
+
+	public const int absorbSP = 662;
 
 	public const int eheluck = 663;
 
@@ -34,19 +36,21 @@ public class ENC
 
 	public const int convertFire = 850;
 
-	public const int r_life = 640;
-
-	public const int convertHoly = 864;
-
-	public const int convertLightning = 852;
-
-	public const int absorbSP = 662;
-
 	public const int mod_frustration = 624;
 
 	public const int convertImpact = 865;
 
-	public const int mod_cleave = 622;
+	public const int convertLightning = 852;
+
+	public const int absorbMP = 661;
+
+	public const int mod_feint = 623;
+
+	public const int convertHoly = 864;
+
+	public const int mod_flurry = 621;
+
+	public const int negateFear = 423;
 
 	public const int negateSleep = 424;
 
@@ -66,11 +70,11 @@ public class ENC
 
 	public const int sanctified = 432;
 
+	public const int negateParalysis = 422;
+
 	public const int defense_range = 435;
 
-	public const int negateFear = 423;
-
-	public const int guts = 436;
+	public const int parry = 437;
 
 	public const int knightly = 438;
 
@@ -90,21 +94,19 @@ public class ENC
 
 	public const int sustain_MAG = 446;
 
+	public const int guts = 436;
+
 	public const int sustain_CHA = 447;
-
-	public const int parry = 437;
-
-	public const int negateParalysis = 422;
 
 	public const int negateBlind = 421;
 
-	public const int negatePoison = 420;
+	public const int encTail = 419;
 
-	public const int mod_feint = 623;
+	public const int mod_cleave = 622;
 
 	public const int counter = 380;
 
-	public const int basher = 381;
+	public const int rusher = 382;
 
 	public const int redirect_blaser = 383;
 
@@ -120,9 +122,9 @@ public class ENC
 
 	public const int slowDecay = 405;
 
-	public const int resMutation = 406;
+	public const int negatePoison = 420;
 
-	public const int travelSpeed = 407;
+	public const int resMutation = 406;
 
 	public const int resWeather = 408;
 
@@ -144,19 +146,15 @@ public class ENC
 
 	public const int innocence = 418;
 
-	public const int encTail = 419;
+	public const int travelSpeed = 407;
 
 	public const int sustain_figure = 450;
 
-	public const int bane_dragon = 460;
+	public const int basher = 381;
 
-	public const int rusher = 382;
+	public const int bane_undead = 461;
 
-	public const int bane_fairy = 462;
-
-	public const int mod_ammo_recover = 604;
-
-	public const int mod_chaser = 620;
+	public const int mod_ammo_knockback = 603;
 
 	public const int mod_talisman = 609;
 
@@ -164,13 +162,17 @@ public class ENC
 
 	public const int mod_scatter = 607;
 
-	public const int bane_undead = 461;
+	public const int bane_dragon = 460;
 
 	public const int mod_drill = 606;
 
+	public const int mod_precision = 605;
+
+	public const int music_drunk = 489;
+
 	public const int farsee = 490;
 
-	public const int negateGravity = 491;
+	public const int shiawaseStep = 492;
 
 	public const int freemove = 493;
 
@@ -184,15 +186,15 @@ public class ENC
 
 	public const int mod_rapid = 602;
 
-	public const int mod_ammo_knockback = 603;
+	public const int negateGravity = 491;
 
-	public const int shiawaseStep = 492;
+	public const int deathagony = 488;
 
-	public const int music_drunk = 489;
+	public const int mod_ammo_recover = 604;
 
-	public const int mod_precision = 605;
+	public const int safetyMeasure = 486;
 
-	public const int creativeChef = 487;
+	public const int bane_fairy = 462;
 
 	public const int bane_animal = 463;
 
@@ -202,9 +204,9 @@ public class ENC
 
 	public const int bane_god = 466;
 
-	public const int bane_fish = 467;
+	public const int mod_chaser = 620;
 
-	public const int mod_flurry = 621;
+	public const int bane_fish = 467;
 
 	public const int bane_all = 468;
 
@@ -212,9 +214,9 @@ public class ENC
 
 	public const int revealFaith = 481;
 
-	public const int force_weapon = 482;
+	public const int creativeChef = 487;
 
-	public const int deathagony = 488;
+	public const int force_weapon = 482;
 
 	public const int optimizeMana = 483;
 
@@ -222,21 +224,19 @@ public class ENC
 
 	public const int nonLethal = 485;
 
-	public const int safetyMeasure = 486;
-
 	public static readonly int[] IDS = new int[112]
 	{
-		660, 652, 651, 650, 641, 653, 654, 655, 656, 661,
-		851, 663, 664, 665, 666, 667, 850, 640, 864, 852,
-		662, 624, 865, 622, 424, 425, 426, 427, 428, 429,
-		430, 431, 432, 435, 423, 436, 438, 439, 440, 441,
-		442, 443, 444, 445, 446, 447, 437, 422, 421, 420,
-		623, 380, 381, 383, 400, 401, 402, 403, 404, 405,
-		406, 407, 408, 409, 410, 411, 412, 414, 415, 416,
-		417, 418, 419, 450, 460, 382, 462, 604, 620, 609,
-		608, 607, 461, 606, 490, 491, 493, 494, 495, 600,
-		601, 602, 603, 492, 489, 605, 487, 463, 464, 465,
-		466, 467, 621, 468, 480, 481, 482, 488, 483, 484,
-		485, 486
+		655, 654, 653, 652, 651, 641, 650, 656, 640, 660,
+		851, 662, 663, 664, 665, 666, 667, 850, 624, 865,
+		852, 661, 623, 864, 621, 423, 424, 425, 426, 427,
+		428, 429, 430, 431, 432, 422, 435, 437, 438, 439,
+		440, 441, 442, 443, 444, 445, 446, 436, 447, 421,
+		419, 622, 380, 382, 383, 400, 401, 402, 403, 404,
+		405, 420, 406, 408, 409, 410, 411, 412, 414, 415,
+		416, 417, 418, 407, 450, 381, 461, 603, 609, 608,
+		607, 460, 606, 605, 489, 490, 492, 493, 494, 495,
+		600, 601, 602, 491, 488, 604, 486, 462, 463, 464,
+		465, 466, 620, 467, 468, 480, 481, 487, 482, 483,
+		484, 485
 	};
 }

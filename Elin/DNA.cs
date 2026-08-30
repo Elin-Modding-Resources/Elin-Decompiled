@@ -595,9 +595,9 @@ public class DNA : EClass
 		return "gene".lang(text.ToTitleCase(), (cost == 0) ? "" : (cost.ToString() ?? ""));
 	}
 
-	public void WriteNote(UINote n, Chara tg = null)
+	public void WriteNote(UINote n, Thing owner = null, Chara tg = null)
 	{
-		if (slot >= 1)
+		if (slot >= 1 && (owner == null || !(owner.category.id == "relic")))
 		{
 			n.AddText("NoteText_enc", "isGeneReqSlots".lang(slot.ToString() ?? ""), FontColor.Warning);
 		}
@@ -660,11 +660,15 @@ public class DNA : EClass
 			{
 				text2 = text2 + " (" + element.Value + ")";
 			}
+			if ((bool)LayerCraft.Instance && (element.source.category == "slot" || element.HasTag("noRelic") || element.HasTag("permaGene")))
+			{
+				color2 = FontColor.Bad;
+			}
 			n.AddText("NoteText_enc", "gene_info".lang(element.Name.ToTitleCase(wholeText: true), text2), color2);
 		}
 	}
 
-	public void WriteNoteExtra(UINote n, Chara tg)
+	public void WriteNoteExtra(UINote n, Thing owner, Chara tg)
 	{
 		n.AddHeader("HeaderAdditionalTrait", "gene_hint");
 		_ = tg.c_genes;
@@ -676,7 +680,10 @@ public class DNA : EClass
 		int num2 = tg.MaxGeneSlot - tg.CurrentGeneSlot;
 		int num3 = num2 - num;
 		int maxGeneSlot = tg.MaxGeneSlot;
-		n.AddText("gene_hint_slot".lang(num2.ToString() ?? "", num3.ToString() ?? "", maxGeneSlot.ToString() ?? ""), (num3 >= 0) ? FontColor.Good : FontColor.Bad);
+		if (owner == null || !(owner.category.id == "relic"))
+		{
+			n.AddText("gene_hint_slot".lang(num2.ToString() ?? "", num3.ToString() ?? "", maxGeneSlot.ToString() ?? ""), (num3 >= 0) ? FontColor.Good : FontColor.Bad);
+		}
 		int num4 = cost * tg.GeneCostMTP / 100;
 		int num5 = tg.feat - num4;
 		n.AddText("gene_hint_cost".lang(tg.feat.ToString() ?? "", num4 + ((num4 == cost) ? "" : ("(" + cost + ")")), num5.ToString() ?? ""), (num5 >= 0) ? FontColor.Good : FontColor.Bad);
@@ -764,5 +771,19 @@ public class DNA : EClass
 			}
 		}
 		cost = 0;
+	}
+
+	public DNA Relicize()
+	{
+		for (int i = 0; i < vals.Count; i += 2)
+		{
+			Element element = Element.Create(vals[i], vals[i + 1]);
+			if (element.source.category == "slot" || element.HasTag("noRelic") || element.HasTag("permaGene"))
+			{
+				vals.RemoveRange(i, 2);
+			}
+		}
+		cost /= 5;
+		return this;
 	}
 }

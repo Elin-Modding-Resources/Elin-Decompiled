@@ -80,16 +80,21 @@ public class AIWork : AIAct
 		}
 		if (!sourceWork.destTrait.IsEmpty())
 		{
-			if (Application.isEditor && Type.GetType("Trait" + sourceWork.destTrait + ", Elin") == null)
+			Type type = Type.GetType("Trait" + sourceWork.destTrait + ", Elin");
+			if (type == null)
 			{
-				Debug.Log(sourceWork.destTrait + "/" + sourceWork.alias);
+				if (Application.isEditor)
+				{
+					Debug.Log(sourceWork.destTrait + "/" + sourceWork.alias);
+				}
+				return false;
 			}
 			if (destArea != null)
 			{
-				destThing = EClass._map.FindThing(Type.GetType("Trait" + sourceWork.destTrait + ", Elin"), destArea);
+				destThing = EClass._map.FindThing(type, destArea);
 				return destThing != null;
 			}
-			destThing = EClass._map.FindThing(Type.GetType("Trait" + sourceWork.destTrait + ", Elin"), owner);
+			destThing = EClass._map.FindThing(type, owner);
 			return destThing != null;
 		}
 		SetDestPos();

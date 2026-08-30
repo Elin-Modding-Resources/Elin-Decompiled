@@ -191,7 +191,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			if (idMold != 0)
 			{
 				int i = 0;
-				if (idMold == 7011 || idMold == 7010)
+				if (idMold == 7011 || idMold == 7010 || idMold == 7012)
 				{
 					i = 3;
 				}
@@ -600,6 +600,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			AddRow(ele, num + num2 + 1100, "bit_");
 			AddRow(ele, num + num2 + 1200, "flare_");
 			AddRow(ele, num + num2 + 1300, "comet_");
+			AddRow(ele, num + num2 + 1400, "missile_");
 			num2++;
 		}
 		initialized = false;

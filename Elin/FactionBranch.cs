@@ -371,6 +371,10 @@ public class FactionBranch : EClass
 			for (int num8 = 0; num8 < num7; num8++)
 			{
 				Chara chara = EClass._zone.SpawnMob(null, SpawnSetting.HomeEnemy(DangerLV));
+				if (chara == null)
+				{
+					break;
+				}
 				if (chara.IsAnimal && policies.IsActive(2709))
 				{
 					chara.Destroy();
@@ -499,6 +503,24 @@ public class FactionBranch : EClass
 
 	public void AutoClean()
 	{
+		List<Thing> list = AI_Haul.ListThingsToClean(new List<Thing>());
+		if (list.Count == 0)
+		{
+			return;
+		}
+		Dictionary<string, Thing> dictionary = new Dictionary<string, Thing>();
+		HashSet<string> hashSet = new HashSet<string>();
+		List<Thing> list2 = new List<Thing>(1);
+		bool flag = false;
+		foreach (Thing container in EClass._map.props.installed.containers)
+		{
+			Window.SaveData windowSaveData = container.GetWindowSaveData();
+			if (windowSaveData != null && windowSaveData.userFilter)
+			{
+				flag = true;
+				break;
+			}
+		}
 		foreach (Chara member in members)
 		{
 			if (member.IsPCParty || !member.ExistsOnMap || member.memberType != FactionMemberType.Default)
@@ -511,14 +533,64 @@ public class FactionBranch : EClass
 				continue;
 			}
 			int num = (5 + EClass.rnd(5)) * hobby.GetEfficiency(member) / 100;
-			for (int i = 0; i < num; i++)
+			if (num <= 0)
 			{
-				Thing thingToClean = AI_Haul.GetThingToClean(member);
-				if (thingToClean == null)
+				continue;
+			}
+			Point origin = member.pos;
+			list.Sort((Thing a, Thing b) => origin.Distance(a.pos) - origin.Distance(b.pos));
+			int num2 = 0;
+			int num3 = 0;
+			int num4 = num * 10;
+			for (; num3 < list.Count; num3++)
+			{
+				if (num2 >= num)
 				{
 					break;
 				}
-				EClass._zone.TryAddThingInSharedContainer(thingToClean);
+				if (num3 >= num4)
+				{
+					break;
+				}
+				Thing thing = list[num3];
+				if (thing.isDestroyed || thing.placeState != PlaceState.roaming)
+				{
+					continue;
+				}
+				string text = (flag ? (thing.id + "|" + thing.IsDecayed + "|" + thing.GetName(NameStyle.Full, 1)) : (thing.id + "|" + thing.IsDecayed));
+				if (hashSet.Contains(text))
+				{
+					continue;
+				}
+				Thing thing2 = null;
+				if (dictionary.TryGetValue(text, out var value) && !value.isDestroyed)
+				{
+					list2.Clear();
+					list2.Add(value);
+					thing2 = EClass._zone.FindSharedContainer(thing, list2);
+				}
+				if (thing2 == null)
+				{
+					thing2 = EClass._zone.FindSharedContainer(thing);
+					if (thing2 != null)
+					{
+						dictionary[text] = thing2;
+					}
+					else
+					{
+						hashSet.Add(text);
+					}
+				}
+				if (thing2 != null)
+				{
+					thing2.AddThing(thing);
+					num2++;
+				}
+			}
+			list.RemoveRange(0, num3);
+			if (list.Count == 0)
+			{
+				break;
 			}
 		}
 	}
@@ -812,11 +884,11 @@ public class FactionBranch : EClass
 				}
 				continue;
 			}
-			foreach (Hobby item in m.ListHobbies())
+			foreach (Hobby item in m.ListHobbies().ToList())
 			{
 				GetOutcome(item);
 			}
-			foreach (Hobby item2 in m.ListWorks())
+			foreach (Hobby item2 in m.ListWorks().ToList())
 			{
 				GetOutcome(item2);
 			}

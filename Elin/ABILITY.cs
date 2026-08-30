@@ -90,6 +90,8 @@ public class ABILITY
 
 	public const int AI_Fish = 5039;
 
+	public const int TaskTalk = 5017;
+
 	public const int TaskPick = 5018;
 
 	public const int TaskReadBoard = 5019;
@@ -122,15 +124,13 @@ public class ABILITY
 
 	public const int ActCancelTask = 5033;
 
-	public const int GoalIdle = 5034;
-
-	public const int TaskTalk = 5017;
-
 	public const int TaskTame = 5016;
 
 	public const int TaskAttack = 5015;
 
 	public const int TaskPlow = 5014;
+
+	public const int ActAttack = 5013;
 
 	public const int ActThrow = 5038;
 
@@ -140,17 +140,19 @@ public class ABILITY
 
 	public const int TaskBuild = 5035;
 
+	public const int GoalIdle = 5034;
+
 	public const int ActWait = 5000;
 
 	public const int ActMelee = 5001;
 
 	public const int Melee = 5002;
 
-	public const int Ranged = 5003;
-
 	public const int ActRanged = 5040;
 
-	public const int Sleep = 5004;
+	public const int Ranged = 5003;
+
+	public const int Wait = 5005;
 
 	public const int Shoot = 5006;
 
@@ -166,9 +168,7 @@ public class ABILITY
 
 	public const int AI_Goto = 5012;
 
-	public const int ActAttack = 5013;
-
-	public const int Wait = 5005;
+	public const int Sleep = 5004;
 
 	public const int ActTouchSleep = 6612;
 
@@ -306,11 +306,11 @@ public class ABILITY
 		5050, 5049, 5048, 5047, 5046, 5045, 5044, 5043, 6011, 6012,
 		6013, 6015, 6610, 6607, 6606, 6605, 6604, 6603, 6602, 6601,
 		5042, 6600, 6450, 6420, 6410, 6400, 6050, 6020, 6019, 6018,
-		6500, 6611, 5041, 5039, 5018, 5019, 5020, 5021, 5022, 5023,
-		5024, 5025, 5026, 5027, 5028, 5029, 5030, 5031, 5032, 5033,
-		5034, 5017, 5016, 5015, 5014, 5038, 5037, 5036, 5035, 5000,
-		5001, 5002, 5003, 5040, 5004, 5006, 5007, 5008, 5009, 5010,
-		5011, 5012, 5013, 5005, 6612, 6608, 6620, 6752, 6753, 6754,
+		6500, 6611, 5041, 5039, 5017, 5018, 5019, 5020, 5021, 5022,
+		5023, 5024, 5025, 5026, 5027, 5028, 5029, 5030, 5031, 5032,
+		5033, 5016, 5015, 5014, 5013, 5038, 5037, 5036, 5035, 5034,
+		5000, 5001, 5002, 5040, 5003, 5005, 5006, 5007, 5008, 5009,
+		5010, 5011, 5012, 5004, 6612, 6608, 6620, 6752, 6753, 6754,
 		6900, 6901, 6902, 6903, 6904, 7000, 8793, 8794, 6613, 8796,
 		50200, 6751, 50201, 50203, 50204, 50205, 50206, 50207, 50208, 50209,
 		50210, 50211, 50212, 50213, 50214, 50215, 50216, 50202, 6750, 8795,

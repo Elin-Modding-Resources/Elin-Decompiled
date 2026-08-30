@@ -70,7 +70,8 @@ public class CoreDebug : EScriptable
 		finger = 36,
 		leg = 38,
 		foot = 39,
-		lightsource = 45
+		lightsource = 45,
+		relic = 46
 	}
 
 	[Serializable]
@@ -411,7 +412,7 @@ public class CoreDebug : EScriptable
 		EClass.pc.elements.ModBase(61, lv / 2);
 		EClass.pc.elements.ModBase(79, lv / 5);
 		EClass.player.totalFeat = lv;
-		EClass.pc.feat = 1000;
+		EClass.pc.feat = 50;
 		EClass.pc.SetLv(lv - 1);
 		EClass.player.fame = EClass.pc.LV * 100;
 		int idx = 0;
@@ -443,6 +444,9 @@ public class CoreDebug : EScriptable
 				AddHotbar("pickaxe").ChangeMaterial(0);
 				break;
 			}
+			EClass.pc.body.AddBodyPart(46);
+			EClass.pc.body.AddBodyPart(46);
+			EClass.pc.body.AddBodyPart(46);
 			EClass.player.ModKeyItem("license_adv");
 			Thing thing = ThingGen.Create("backpack");
 			thing.AddCard(ThingGen.Create("rp_food", -1, 10).SetNum(30));
@@ -977,17 +981,12 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass.pc.body.AddBodyPart(35);
 			EClass._zone.development += 10;
 			EClass._zone.development *= EClass._zone.development;
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
-				EClass.pc.Pick(targetChara.MakeMilk());
-				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
-				EClass.pc.Pick(targetChara.MakeGene());
-				TraitFoodEggFertilized.Incubate(targetChara.MakeEgg(effect: false, 1, addToZone: false, 100), targetChara.pos.GetNearestPoint(allowBlock: false, allowChara: false));
-				targetChara.ScaleByPrincipal();
+				EClass.pc.Pick(targetChara.MakeGene(DNA.Type.Superior));
 			}
 			if (EClass.game.quests.Get<QuestDebt>() == null)
 			{
@@ -1104,11 +1103,17 @@ public class CoreDebug : EScriptable
 		}
 		else
 		{
-			Input.GetKeyDown(KeyCode.F9);
+			if (Input.GetKeyDown(KeyCode.F9))
+			{
+				for (int num = 0; num < 8; num++)
+				{
+					EClass.world.date.AdvanceHour();
+				}
+			}
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int num = 0; num < advanceMin; num++)
+				for (int num2 = 0; num2 < advanceMin; num2++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}
@@ -1208,9 +1213,9 @@ public class CoreDebug : EScriptable
 				}
 				else if (hitPoint.detail != null)
 				{
-					for (int num2 = hitPoint.detail.charas.Count - 1; num2 >= 0; num2--)
+					for (int num3 = hitPoint.detail.charas.Count - 1; num3 >= 0; num3--)
 					{
-						hitPoint.detail.charas[num2].DamageHP(999999999L, AttackSource.Finish, EClass.pc);
+						hitPoint.detail.charas[num3].DamageHP(999999999L, AttackSource.Finish, EClass.pc);
 					}
 				}
 				EInput.Consume();
@@ -1231,24 +1236,24 @@ public class CoreDebug : EScriptable
 			}
 			else if (hitPoint.detail != null)
 			{
-				for (int num3 = hitPoint.detail.things.Count - 1; num3 >= 0; num3--)
+				for (int num4 = hitPoint.detail.things.Count - 1; num4 >= 0; num4--)
 				{
-					hitPoint.detail.things[num3].Destroy();
+					hitPoint.detail.things[num4].Destroy();
 				}
 				if (hitPoint.detail != null)
 				{
-					for (int num4 = hitPoint.detail.charas.Count - 1; num4 >= 0; num4--)
+					for (int num5 = hitPoint.detail.charas.Count - 1; num5 >= 0; num5--)
 					{
-						hitPoint.detail.charas[num4].Destroy();
+						hitPoint.detail.charas[num5].Destroy();
 					}
 				}
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.End) && hitPoint.detail != null)
 		{
-			for (int num5 = hitPoint.detail.things.Count - 1; num5 >= 0; num5--)
+			for (int num6 = hitPoint.detail.things.Count - 1; num6 >= 0; num6--)
 			{
-				Thing thing2 = hitPoint.detail.things[num5];
+				Thing thing2 = hitPoint.detail.things[num6];
 				Debug.Log(thing2.id + "/" + thing2.Pref.height + "/" + thing2.trait?.ToString() + "/" + thing2.source.tileType.CanStack + "/" + thing2.source.tileType?.ToString() + "/" + thing2.isSynced + "/" + RenderObject.syncList.Contains(thing2.renderer));
 			}
 		}
@@ -1260,56 +1265,56 @@ public class CoreDebug : EScriptable
 		{
 		case DebugHotkey.Anime:
 		{
-			int num6 = -1;
+			int num7 = -1;
 			if (Input.GetKeyDown(KeyCode.Alpha0))
 			{
-				num6 = 0;
+				num7 = 0;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				num6 = 1;
+				num7 = 1;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				num6 = 2;
+				num7 = 2;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				num6 = 3;
+				num7 = 3;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				num6 = 4;
+				num7 = 4;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha5))
 			{
-				num6 = 5;
+				num7 = 5;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha6))
 			{
-				num6 = 6;
+				num7 = 6;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha7))
 			{
-				num6 = 7;
+				num7 = 7;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha8))
 			{
-				num6 = 8;
+				num7 = 8;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha9))
 			{
-				num6 = 9;
+				num7 = 9;
 			}
-			if (num6 == -1)
+			if (num7 == -1)
 			{
 				break;
 			}
 			foreach (Card item4 in hitPoint.ListCards())
 			{
-				item4.renderer.PlayAnime(num6.ToEnum<AnimeID>());
+				item4.renderer.PlayAnime(num7.ToEnum<AnimeID>());
 			}
-			Debug.Log(num6.ToEnum<AnimeID>());
+			Debug.Log(num7.ToEnum<AnimeID>());
 			break;
 		}
 		case DebugHotkey.Block:

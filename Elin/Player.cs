@@ -1896,14 +1896,20 @@ public class Player : EClass
 		simulatingZone = true;
 		Zone currentZone = EClass.pc.currentZone;
 		Point point = EClass.pc.pos.Copy();
+		List<Zone> list = new List<Zone>();
 		foreach (FactionBranch child in EClass.pc.faction.GetChildren())
 		{
-			if (child.owner != currentZone)
+			if (child.owner != null && child.owner != currentZone && Backlog(child.owner) > 1)
 			{
-				EClass.pc.MoveZone(child.owner);
-				zone = child.owner;
-				EClass.scene.Init(Scene.Mode.Zone);
+				list.Add(child.owner);
 			}
+		}
+		list.Sort((Zone a, Zone b) => Backlog(b).CompareTo(Backlog(a)));
+		foreach (Zone item in list.Take(EClass.core.config.test.maxSimBases))
+		{
+			EClass.pc.MoveZone(item);
+			zone = item;
+			EClass.scene.Init(Scene.Mode.Zone);
 		}
 		EClass.pc.MoveZone(currentZone, new ZoneTransition
 		{
@@ -1914,6 +1920,10 @@ public class Player : EClass
 		zone = currentZone;
 		EClass.scene.Init(Scene.Mode.Zone);
 		simulatingZone = false;
+		static int Backlog(Zone z)
+		{
+			return z.HourSinceLastActive + z.pendingSimHours;
+		}
 	}
 
 	public void ExitBorder(ActPlan p = null)

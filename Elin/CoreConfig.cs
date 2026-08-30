@@ -537,7 +537,11 @@ public class CoreConfig : EClass
 
 		public int screenExtraHeight;
 
-		public int maxSimHour;
+		public int maxSimHours;
+
+		public int maxSleepSimHours = 168;
+
+		public int maxSimBases = 3;
 
 		public bool showNumbers;
 

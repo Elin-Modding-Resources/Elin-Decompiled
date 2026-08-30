@@ -135,7 +135,7 @@ public class Props : EClass
 		}
 		weight -= t.Num;
 		all.Remove(t);
-		things.Remove(t.Thing);
+		things.RemoveFromEnd(t.Thing);
 		cardMap.TryGetValue(t.id)?.Remove(t);
 		if (t.sourceCard.origin != null)
 		{
@@ -148,7 +148,7 @@ public class Props : EClass
 		}
 		if (t.IsContainer)
 		{
-			containers.Remove(t.Thing);
+			containers.RemoveFromEnd(t.Thing);
 		}
 		traits.OnRemoveCard(t);
 		if (t.isDeconstructing)

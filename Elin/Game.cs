@@ -499,6 +499,17 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.nightly)
+		{
+			if (EClass.game.quests.IsCompleted<QuestIntoDarkness>() && !EClass.pc.body.HasElement(46))
+			{
+				CoreDebug.AddBodyPart(CoreDebug.BodyCode.relic);
+			}
+		}
+		else if (EClass.pc.body.HasElement(46))
+		{
+			CoreDebug.RemoveBodyPart(CoreDebug.BodyCode.relic);
+		}
 		if (version.IsBelow(0, 23, 336))
 		{
 			AddAdventurer("adv_schwert");

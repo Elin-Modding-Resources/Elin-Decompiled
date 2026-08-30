@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfGum = 3803;
-
-	public const int actBuildAnywhere = 4003;
-
-	public const int bfIce = 3804;
+	public const int bfSilica = 3802;
 
 	public const int actBuildTerrain = 4002;
+
+	public const int bfGum = 3803;
 
 	public const int actBuildMine = 4001;
 
@@ -18,15 +16,17 @@ public class FACTION
 
 	public const int bfStart = 3900;
 
-	public const int bfSilica = 3802;
-
 	public const int bfChitin = 3805;
+
+	public const int bfMushroom = 3801;
+
+	public const int bfIce = 3804;
 
 	public const int fFood = 2204;
 
-	public const int fSafety = 2205;
+	public const int fAttraction = 2206;
 
-	public const int bfMushroom = 3801;
+	public const int bfCoal = 3800;
 
 	public const int fMoral = 2203;
 
@@ -52,13 +52,13 @@ public class FACTION
 
 	public const int fRation = 2207;
 
-	public const int bfCoal = 3800;
+	public const int bfLandmark5 = 3784;
 
-	public const int fAttraction = 2206;
+	public const int fSafety = 2205;
+
+	public const int bfLandmark3 = 3782;
 
 	public const int bfLandmark4 = 3783;
-
-	public const int bfLandmark5 = 3784;
 
 	public const int bfFish = 3706;
 
@@ -92,11 +92,11 @@ public class FACTION
 
 	public const int actBuildInspect = 4006;
 
-	public const int bfLandmark3 = 3782;
-
 	public const int actBuildRecipe = 4005;
 
 	public const int actBuildCollect = 4004;
+
+	public const int actBuildAnywhere = 4003;
 
 	public const int bfFreshAir = 3708;
 
@@ -104,20 +104,20 @@ public class FACTION
 
 	public const int bfBreed = 3710;
 
-	public const int bfLandmark1 = 3780;
-
 	public const int bfForest = 3601;
 
 	public const int bfLandmark2 = 3781;
 
+	public const int bfLandmark1 = 3780;
+
 	public static readonly int[] IDS = new int[53]
 	{
-		3803, 4003, 3804, 4002, 4001, 4000, 3900, 3802, 3805, 2204,
-		2205, 3801, 2203, 2202, 2201, 2200, 2120, 2119, 2118, 2117,
-		2116, 2115, 2003, 2207, 3800, 2206, 3783, 3784, 3706, 3705,
+		3802, 4002, 3803, 4001, 4000, 3900, 3805, 3801, 3804, 2204,
+		2206, 3800, 2203, 2202, 2201, 2200, 2120, 2119, 2118, 2117,
+		2116, 2115, 2003, 2207, 3784, 2205, 3782, 3783, 3706, 3705,
 		3704, 3707, 3703, 3702, 3701, 3606, 3605, 3604, 3603, 3602,
-		3700, 3600, 3500, 4006, 3782, 4005, 4004, 3708, 3709, 3710,
-		3780, 3601, 3781
+		3700, 3600, 3500, 4006, 4005, 4004, 4003, 3708, 3709, 3710,
+		3601, 3781, 3780
 	};
 }
 public class Faction : EClass

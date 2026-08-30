@@ -34,6 +34,9 @@ public class Zone : Spatial, ICardParent, IInspect
 	public FactionBranch branch;
 
 	[JsonProperty]
+	public int pendingSimHours;
+
+	[JsonProperty]
 	public HashSet<int> completedQuests = new HashSet<int>();
 
 	[JsonProperty]
@@ -1166,13 +1169,20 @@ public class Zone : Spatial, ICardParent, IInspect
 		UpdateQuests();
 		OnBeforeSimulate();
 		isSimulating = true;
-		Simulate();
-		isSimulating = false;
-		OnAfterSimulate();
-		if (EClass.Branch != null)
+		try
 		{
-			EClass.Branch.OnAfterSimulate();
+			Simulate();
 		}
+		catch (Exception exception)
+		{
+			Debug.LogException(exception);
+		}
+		finally
+		{
+			isSimulating = false;
+		}
+		OnAfterSimulate();
+		EClass.Branch?.OnAfterSimulate();
 		base.lastActive = EClass.world.date.GetRaw();
 		if (!EClass.game.isLoading)
 		{
@@ -1326,123 +1336,153 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 		}
 		Debug.Log("Last Active:" + base.lastActive);
-		if (base.lastActive == 0 || HourSinceLastActive <= 1 || IsRegion)
+		if (base.lastActive == 0 || IsRegion)
 		{
 			return;
 		}
-		Debug.Log(Name + " Simulate:" + HourSinceLastActive + " hours");
-		VirtualDate virtualDate = new VirtualDate(HourSinceLastActive);
-		List<Chara> list = EClass._map.charas.ToList();
-		int num2 = HourSinceLastActive / 24;
-		if (num2 > 0)
+		if (pendingSimHours < 0)
 		{
-			foreach (Chara item in list)
-			{
-				if (!item.IsPCParty)
-				{
-					item.OnSleep(200, num2);
-					if (item.conSleep != null)
-					{
-						item.conSleep.Kill();
-					}
-					if (EClass.rnd(EClass.world.date.IsNight ? 20 : 200) == 0 && !item.IsPCFaction)
-					{
-						item.AddCondition<ConSleep>(1000 + EClass.rnd(1000), force: true);
-					}
-					if (item.things.Count > 20)
-					{
-						item.ClearInventory(ClearInventoryType.Purge);
-					}
-				}
-			}
+			pendingSimHours = 0;
 		}
-		VirtualDate.current = virtualDate;
-		int num3 = EClass.core.config.test.maxSimHour;
-		if (num3 <= 0)
+		int num2 = GetInt(3);
+		if (num2 == 0)
 		{
-			num3 = 8640;
+			num2 = EClass.core.config.test.maxSimHours;
 		}
-		int num4 = HourSinceLastActive - num3;
-		for (int i = 0; i < HourSinceLastActive; i++)
-		{
-			if (i >= num4)
-			{
-				virtualDate.SimulateHour();
-			}
-		}
-		EClass._map.things.ForeachReverse(delegate(Thing t)
-		{
-			t.DecayNatural(HourSinceLastActive);
-		});
-		VirtualDate.current = null;
-		if (!IsPCFaction)
+		int maxSleepSimHours = EClass.core.config.test.maxSleepSimHours;
+		int hourSinceLastActive = HourSinceLastActive;
+		if (hourSinceLastActive <= 1 && pendingSimHours == 0)
 		{
 			return;
 		}
-		int num5 = 0;
-		foreach (Chara item2 in list)
+		int num3 = hourSinceLastActive + pendingSimHours;
+		int num4 = ((num2 > 0 && num3 > num2) ? (num3 - num2) : 0);
+		num3 -= num4;
+		int num5 = ((EClass.player.simulatingZone && num3 > maxSleepSimHours) ? maxSleepSimHours : num3);
+		pendingSimHours = num3 - num5;
+		Debug.Log($"{Name} Simulate/{num5}/{pendingSimHours}/skipped {num4}");
+		try
 		{
-			if (item2.IsPCParty)
+			VirtualDate virtualDate = new VirtualDate(num3);
+			List<Chara> list = EClass._map.charas.ToList();
+			int passed = num5 + num4;
+			int num6 = passed / 24;
+			if (num6 > 0)
 			{
-				continue;
+				foreach (Chara item in list)
+				{
+					if (!item.IsPCParty)
+					{
+						item.OnSleep(200, num6);
+						if (item.conSleep != null)
+						{
+							item.conSleep.Kill();
+						}
+						if (EClass.rnd(EClass.world.date.IsNight ? 20 : 200) == 0 && !item.IsPCFaction)
+						{
+							item.AddCondition<ConSleep>(1000 + EClass.rnd(1000), force: true);
+						}
+						if (item.things.Count > 20)
+						{
+							item.ClearInventory(ClearInventoryType.Purge);
+						}
+					}
+				}
 			}
-			if (!item2.IsHomeMember())
+			VirtualDate.current = virtualDate;
+			int num7 = 0;
+			for (int i = 0; i < num5; i++)
 			{
-				if (item2.id == "bee")
+				try
 				{
-					num5++;
+					virtualDate.SimulateHour();
 				}
-				if (num2 > 0 && item2.IsGuest())
+				catch (Exception exception)
 				{
-					item2.ChooseNewGoal();
-					item2.ai.SimulateZone(num2);
+					if (num7++ == 0)
+					{
+						Debug.LogException(exception);
+					}
 				}
-				continue;
 			}
-			if (num2 > 0)
+			EClass._map.things.ForeachReverse(delegate(Thing t)
 			{
-				Goal goalWork = item2.GetGoalWork();
-				item2.SetAI(goalWork);
-				if (goalWork is GoalWork)
-				{
-					(goalWork as GoalWork).FindWork(item2);
-				}
-				item2.ai.SimulateZone(num2);
-				goalWork = item2.GetGoalHobby();
-				item2.SetAI(goalWork);
-				if (goalWork is GoalWork)
-				{
-					(goalWork as GoalWork).FindWork(item2);
-				}
-				item2.ai.SimulateZone(num2);
+				t.DecayNatural(passed);
+			});
+			VirtualDate.current = null;
+			if (!IsPCFaction)
+			{
+				return;
 			}
-			item2.ChooseNewGoal();
-			if (item2.conSuspend == null)
+			int num8 = 0;
+			foreach (Chara item2 in list)
 			{
-				item2.ai.OnSimulatePosition();
+				if (item2.IsPCParty)
+				{
+					continue;
+				}
+				if (!item2.IsHomeMember())
+				{
+					if (item2.id == "bee")
+					{
+						num8++;
+					}
+					if (num6 > 0 && item2.IsGuest())
+					{
+						item2.ChooseNewGoal();
+						item2.ai.SimulateZone(num6);
+					}
+					continue;
+				}
+				if (num6 > 0)
+				{
+					Goal goalWork = item2.GetGoalWork();
+					item2.SetAI(goalWork);
+					if (goalWork is GoalWork)
+					{
+						(goalWork as GoalWork).FindWork(item2);
+					}
+					item2.ai.SimulateZone(num6);
+					goalWork = item2.GetGoalHobby();
+					item2.SetAI(goalWork);
+					if (goalWork is GoalWork)
+					{
+						(goalWork as GoalWork).FindWork(item2);
+					}
+					item2.ai.SimulateZone(num6);
+				}
+				item2.ChooseNewGoal();
+				if (item2.conSuspend == null)
+				{
+					item2.ai.OnSimulatePosition();
+				}
+			}
+			List<Thing> list2 = new List<Thing>();
+			foreach (Thing thing in map.things)
+			{
+				if (thing.IsInstalled && thing.trait is TraitBeekeep)
+				{
+					list2.Add(thing);
+				}
+			}
+			if (num8 >= list2.Count)
+			{
+				return;
+			}
+			for (int num9 = num8; num9 < list2.Count; num9++)
+			{
+				if (EClass.rnd(200) <= passed)
+				{
+					Chara chara = CharaGen.Create("bee");
+					AddCard(chara, list2.RandomItem().pos);
+					Hostility c_originalHostility = (chara.hostility = Hostility.Neutral);
+					chara.c_originalHostility = c_originalHostility;
+				}
 			}
 		}
-		List<Thing> list2 = new List<Thing>();
-		foreach (Thing thing in map.things)
+		finally
 		{
-			if (thing.IsInstalled && thing.trait is TraitBeekeep)
-			{
-				list2.Add(thing);
-			}
-		}
-		if (num5 >= list2.Count)
-		{
-			return;
-		}
-		for (int num6 = num5; num6 < list2.Count; num6++)
-		{
-			if (EClass.rnd(200) <= HourSinceLastActive)
-			{
-				Chara chara = CharaGen.Create("bee");
-				AddCard(chara, list2.RandomItem().pos);
-				Hostility c_originalHostility = (chara.hostility = Hostility.Neutral);
-				chara.c_originalHostility = c_originalHostility;
-			}
+			VirtualDate.current = null;
 		}
 	}
 
@@ -2170,7 +2210,14 @@ public class Zone : Spatial, ICardParent, IInspect
 		Thing randomThing = EClass._map.props.installed.traits.GetRandomThing<T>();
 		if (randomThing == null)
 		{
-			AddCard(t, EClass._map.bounds.GetRandomSurface());
+			if (VirtualDate.IsActive)
+			{
+				TryAddThing(t, EClass._map.bounds.GetRandomSurface());
+			}
+			else
+			{
+				AddCard(t, EClass._map.bounds.GetRandomSurface());
+			}
 			return false;
 		}
 		if (useContainer && (!t.IsContainer || t.things.Count == 0))
@@ -2191,7 +2238,14 @@ public class Zone : Spatial, ICardParent, IInspect
 				return true;
 			}
 		}
-		AddCard(t, randomThing.trait.GetRandomPoint());
+		if (VirtualDate.IsActive)
+		{
+			TryAddThing(t, randomThing.trait.GetRandomPoint());
+		}
+		else
+		{
+			AddCard(t, randomThing.trait.GetRandomPoint());
+		}
 		return true;
 	}
 
@@ -2244,6 +2298,24 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public bool TryAddThingInSharedContainer(Thing t, List<Thing> containers = null, bool add = true, bool msg = false, Chara chara = null, bool sharedOnly = true)
 	{
+		Thing thing = FindSharedContainer(t, containers, sharedOnly);
+		if (thing == null)
+		{
+			return false;
+		}
+		if (add)
+		{
+			if (msg)
+			{
+				chara?.Say("putSharedItem", chara, t, thing.GetName(NameStyle.Full));
+			}
+			thing.AddThing(t);
+		}
+		return true;
+	}
+
+	public Thing FindSharedContainer(Thing t, List<Thing> containers = null, bool sharedOnly = true)
+	{
 		Thing dest = null;
 		int priority = -1;
 		ContainerFlag flag = t.category.GetRoot().id.ToEnum<ContainerFlag>();
@@ -2255,23 +2327,8 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			containers = EClass._map.props.installed.containers;
 		}
-		if (SearchDest() != null)
-		{
-			return true;
-		}
-		if (dest == null)
-		{
-			return false;
-		}
-		if (add)
-		{
-			if (msg)
-			{
-				chara.Say("putSharedItem", chara, t, dest.GetName(NameStyle.Full));
-			}
-			dest.AddThing(t);
-		}
-		return true;
+		SearchDest();
+		return dest;
 		Thing SearchDest()
 		{
 			foreach (Thing container in containers)
@@ -3005,6 +3062,11 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			cardRow = EClass.sources.cards.map["santa"];
 			EClass.player.flags.santa++;
+		}
+		if (cardRow == null)
+		{
+			Debug.LogError("SpawnMob: no spawn row list/" + spawnList?.id + "/biome/" + biome.name + "/zone/" + Name);
+			return null;
 		}
 		long num3 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
 		bool flag = setting.fixedLv != -1 || DangerLvBoost > 0;

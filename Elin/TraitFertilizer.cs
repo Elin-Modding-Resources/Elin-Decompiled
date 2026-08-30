@@ -27,7 +27,7 @@ public class TraitFertilizer : Trait
 				if (item.trait is TraitSeed && !item.isSale)
 				{
 					flag = true;
-					(item.trait as TraitSeed).TrySprout(force: true, sucker: true);
+					(item.trait as TraitSeed).TrySprout(force: true, sucker: true, date);
 					break;
 				}
 			}

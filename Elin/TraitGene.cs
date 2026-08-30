@@ -17,27 +17,6 @@ public class TraitGene : Trait
 		return ("dna_" + owner.c_DNA.type).lang() + Lang.space + owner.sourceCard.GetText();
 	}
 
-	public override void WriteNote(UINote n, bool identified)
-	{
-		if (owner.c_DNA != null)
-		{
-			bool flag = EClass.pc.HasElement(1274) && !LayerDragGrid.Instance;
-			if (owner.c_DNA.cost > 0)
-			{
-				n.AddText("NoteText_enc", "isCostFeatPoint".lang((flag ? (owner.c_DNA.cost * EClass.pc.GeneCostMTP / 100 + " (" + owner.c_DNA.cost + ")") : ((object)owner.c_DNA.cost))?.ToString() ?? ""));
-			}
-			if (EClass.debug.showExtra)
-			{
-				n.AddText("NoteText_enc", "duration:" + owner.c_DNA.GetDurationHour());
-			}
-			owner.c_DNA.WriteNote(n, flag ? EClass.pc : null);
-			if (flag)
-			{
-				owner.c_DNA.WriteNoteExtra(n, EClass.pc);
-			}
-		}
-	}
-
 	public override void TrySetHeldAct(ActPlan p)
 	{
 		if (owner.c_DNA == null || !p.pos.Equals(EClass.pc.pos) || !EClass.pc.HasElement(1274))
