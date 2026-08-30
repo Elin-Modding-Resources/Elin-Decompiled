@@ -14,7 +14,8 @@ var classCoreDebug =
       [ "finger", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103ae7efda40b1c94805070cd9bf9638ae27", null ],
       [ "leg", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a4e1df3d256693afb3630685668820df4", null ],
       [ "foot", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103ad8735f7489c94f42f508d7eb1c249584", null ],
-      [ "lightsource", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103aedefcf0fac9cfe9d7b79cf35391a1079", null ]
+      [ "lightsource", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103aedefcf0fac9cfe9d7b79cf35391a1079", null ],
+      [ "relic", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103ab3b02c99774cde75dbb9cbb60e9adc42", null ]
     ] ],
     [ "DebugHotkey", "classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6", [
       [ "None", "classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6a6adf97f83acf6453d4a6a4b1070f3754", null ],

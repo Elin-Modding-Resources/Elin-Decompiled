@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.339.0 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.340.0 Nightly</span>
    </div>
   </td>
  </tr>
@@ -285,7 +285,7 @@ $(document).ready(function(){initNavTree('SourceElement_8cs_source.html',''); in
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> != 0)</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> == 7011 || <a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> == 7010)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> == 7011 || <a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> == 7010 || <a class="code hl_variable" href="classSourceElement_1_1Row.html#af4bcfe28856d43f17e6b9c5c795cb68a">idMold</a> == 7012)</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                {</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    i = 3;</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                }</div>
@@ -694,35 +694,36 @@ $(document).ready(function(){initNavTree('SourceElement_8cs_source.html',''); in
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            <a class="code hl_function" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">AddRow</a>(ele, num + num2 + 1100, <span class="stringliteral">&quot;bit_&quot;</span>);</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            <a class="code hl_function" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">AddRow</a>(ele, num + num2 + 1200, <span class="stringliteral">&quot;flare_&quot;</span>);</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <a class="code hl_function" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">AddRow</a>(ele, num + num2 + 1300, <span class="stringliteral">&quot;comet_&quot;</span>);</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            num2++;</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>        }</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        initialized = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>    }</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno"><a class="line" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">  608</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">AddRow</a>(<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> ele, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> idOrg)</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    {</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        <span class="keywordflow">if</span> (map.ContainsKey(<span class="keywordtype">id</span>))</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>        {</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>        }</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>        <a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[idOrg];</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>        Dictionary&lt;string, System.Reflection.FieldInfo&gt; rowFields = row.GetRowFields();</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>        <a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> row2 = <span class="keyword">new</span> <a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a>();</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        <span class="keywordflow">foreach</span> (System.Reflection.FieldInfo value in rowFields.Values)</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        {</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>            value.SetValue(row2, value.GetValue(row));</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        }</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        row2.id = id;</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        row2.idMold = row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a>;</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        row2.alias = row.alias + ele.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>.Remove(0, 3);</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        row2.aliasRef = ele.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>;</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>        row2.aliasParent = ele.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a33b038acfeb5ff5aaae8623e712df1aa">aliasParent</a>;</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        row2.chance = row.chance * ele.chance / 100;</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        row2.LV = row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aaeb46d124c0eba76e7f3d6396aedcfc3">LV</a>;</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        row2.OnImportData(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>);</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>        rows.Add(row2);</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>    }</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>}</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            <a class="code hl_function" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">AddRow</a>(ele, num + num2 + 1400, <span class="stringliteral">&quot;missile_&quot;</span>);</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            num2++;</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        }</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        initialized = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>    }</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno"><a class="line" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">  609</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">AddRow</a>(<a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> ele, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> idOrg)</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    {</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>        <span class="keywordflow">if</span> (map.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        {</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>        }</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>        <a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[idOrg];</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>        Dictionary&lt;string, System.Reflection.FieldInfo&gt; rowFields = row.GetRowFields();</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        <a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a> row2 = <span class="keyword">new</span> <a class="code hl_class" href="classSourceElement_1_1Row.html">Row</a>();</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        <span class="keywordflow">foreach</span> (System.Reflection.FieldInfo value in rowFields.Values)</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>        {</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>            value.SetValue(row2, value.GetValue(row));</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        }</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        row2.id = id;</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        row2.idMold = row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a99432e5acb5134731ae3aca223e261ef">id</a>;</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        row2.alias = row.alias + ele.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>.Remove(0, 3);</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>        row2.aliasRef = ele.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aa9b6be183183173bc2d17d5a18bce762">alias</a>;</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        row2.aliasParent = ele.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a33b038acfeb5ff5aaae8623e712df1aa">aliasParent</a>;</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        row2.chance = row.chance * ele.chance / 100;</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        row2.LV = row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#aaeb46d124c0eba76e7f3d6396aedcfc3">LV</a>;</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>        row2.OnImportData(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>);</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>        rows.Add(row2);</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    }</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>}</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aclassCard_html_a34ecdc7480019d1766f14f97942b4cf7"><div class="ttname"><a href="classCard.html#a34ecdc7480019d1766f14f97942b4cf7">Card.IsThrownWeapon</a></div><div class="ttdeci">bool IsThrownWeapon</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02299">Card.cs:2299</a></div></div>
 <div class="ttc" id="aclassCard_html_a4cd822f787ae387c8a37301b56645c1a"><div class="ttname"><a href="classCard.html#a4cd822f787ae387c8a37301b56645c1a">Card.IsEquipmentOrRangedOrAmmo</a></div><div class="ttdeci">bool IsEquipmentOrRangedOrAmmo</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02283">Card.cs:2284</a></div></div>
@@ -839,7 +840,7 @@ $(document).ready(function(){initNavTree('SourceElement_8cs_source.html',''); in
 <div class="ttc" id="aclassSourceElement_html_a69e14b48e11c908a9cb3ce87acacf801"><div class="ttname"><a href="classSourceElement.html#a69e14b48e11c908a9cb3ce87acacf801">SourceElement.GetRowMapping</a></div><div class="ttdeci">override IReadOnlyDictionary&lt; string, int &gt; GetRowMapping()</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00543">SourceElement.cs:543</a></div></div>
 <div class="ttc" id="aclassSourceElement_html_a7223a6f630da49cb430a36b8a3be9cc2"><div class="ttname"><a href="classSourceElement.html#a7223a6f630da49cb430a36b8a3be9cc2">SourceElement.TypeMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, string &gt; TypeMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00344">SourceElement.cs:344</a></div></div>
 <div class="ttc" id="aclassSourceElement_html_a800c302c356b347547e624195c1d7ca4"><div class="ttname"><a href="classSourceElement.html#a800c302c356b347547e624195c1d7ca4">SourceElement.CreateRow</a></div><div class="ttdeci">override Row CreateRow()</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00412">SourceElement.cs:412</a></div></div>
-<div class="ttc" id="aclassSourceElement_html_a906e2ec0c5ca55cec17bd8409a32563b"><div class="ttname"><a href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">SourceElement.AddRow</a></div><div class="ttdeci">void AddRow(Row ele, int id, string idOrg)</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00608">SourceElement.cs:608</a></div></div>
+<div class="ttc" id="aclassSourceElement_html_a906e2ec0c5ca55cec17bd8409a32563b"><div class="ttname"><a href="classSourceElement.html#a906e2ec0c5ca55cec17bd8409a32563b">SourceElement.AddRow</a></div><div class="ttdeci">void AddRow(Row ele, int id, string idOrg)</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00609">SourceElement.cs:609</a></div></div>
 <div class="ttc" id="aclassSourceElement_html_a939344c62a802feb453549d9ff095d69"><div class="ttname"><a href="classSourceElement.html#a939344c62a802feb453549d9ff095d69">SourceElement.SetRow</a></div><div class="ttdeci">override void SetRow(Row r)</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00538">SourceElement.cs:538</a></div></div>
 <div class="ttc" id="aclassSourceElement_html_a93b29a450ca34d29f857b51ccfc5240f"><div class="ttname"><a href="classSourceElement.html#a93b29a450ca34d29f857b51ccfc5240f">SourceElement.fuzzyAlias</a></div><div class="ttdeci">Dictionary&lt; string, string &gt; fuzzyAlias</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00408">SourceElement.cs:408</a></div></div>
 <div class="ttc" id="aclassSourceElement_html_ade62d418543a2abef98fa72d7b802b85"><div class="ttname"><a href="classSourceElement.html#ade62d418543a2abef98fa72d7b802b85">SourceElement.ImportFields</a></div><div class="ttdeci">override string[] ImportFields</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00410">SourceElement.cs:410</a></div></div>

@@ -122,6 +122,7 @@ var classClassExtension =
     [ "Rect", "classClassExtension.html#ad68e706d8b3bfa2dd091249fc285e19c", null ],
     [ "Remainder< TValue >", "classClassExtension.html#af80251e7fe2750831b1361a4d8c5e90c", null ],
     [ "RemoveAllTags", "classClassExtension.html#a17b4fbe7750770c6f6bf22c057b8d300", null ],
+    [ "RemoveFromEnd< T >", "classClassExtension.html#a91020f68def8320bef0a804d10dbc80f", null ],
     [ "RemoveNewline", "classClassExtension.html#a8d4ac483f5967be031a78fb1b7167b54", null ],
     [ "RemoveTag", "classClassExtension.html#a4723ddc4a246cf039ccf54824e7cf9a1", null ],
     [ "Repeat", "classClassExtension.html#ac3ac91287d29c44d61c3662fbeb0bc16", null ],

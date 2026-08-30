@@ -803,7 +803,9 @@ var hierarchy =
             [ "ActWhirlwind", "classActWhirlwind.html", null ],
             [ "Song", "classSong.html", null ],
             [ "Spell", "classSpell.html", [
-              [ "ActArrow", "classActArrow.html", null ],
+              [ "ActArrow", "classActArrow.html", [
+                [ "ActMissile", "classActMissile.html", null ]
+              ] ],
               [ "ActBall", "classActBall.html", null ],
               [ "ActBit", "classActBit.html", null ],
               [ "ActBolt", "classActBolt.html", null ],
@@ -3001,6 +3003,7 @@ var hierarchy =
       [ "LightControl", "classLightControl.html", null ],
       [ "LightControl2", "classLightControl2.html", null ],
       [ "LoadingScreen", "classLoadingScreen.html", null ],
+      [ "MissileHomingEffect", "classMissileHomingEffect.html", null ],
       [ "MsgBlock", "classMsgBlock.html", null ],
       [ "MsgBox", "classMsgBox.html", null ],
       [ "MsgLine", "classMsgLine.html", null ],

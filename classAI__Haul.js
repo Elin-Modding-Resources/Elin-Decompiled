@@ -1,6 +1,7 @@
 var classAI__Haul =
 [
     [ "GetThingToClean", "classAI__Haul.html#a8b5b7b1168804da86a30de17695d5ab3", null ],
+    [ "ListThingsToClean", "classAI__Haul.html#a5d3911ea29db366059c038f351f8258b", null ],
     [ "Run", "classAI__Haul.html#a725a287c5fa0be962b6253714f08627e", null ],
     [ "TryGetAI", "classAI__Haul.html#a0b7bd40eb94e405aad8c2bcb86adab71", null ],
     [ "_list", "classAI__Haul.html#a4d132958a29eca32c0ee77cfff37a8d8", null ],

@@ -5,6 +5,9 @@ var classAI__Shopping =
     [ "SellChara", "classAI__Shopping.html#a76defeb518ece87524e36dd12a179517", null ],
     [ "TryRestock", "classAI__Shopping.html#a158c36d90bb5aac91c70370ce801c86f", null ],
     [ "TryShop", "classAI__Shopping.html#a42cded5e30559548bc10fb69eb204036", null ],
+    [ "_saleHour", "classAI__Shopping.html#a491e7ed7340edcb8bcf1dd9c3b33edae", null ],
+    [ "_saleLists", "classAI__Shopping.html#a351f7ad9d84bc8df8f52573684bbd170", null ],
+    [ "_salePrices", "classAI__Shopping.html#a7a119d03a7521f6c65b91666c1e08249", null ],
     [ "container", "classAI__Shopping.html#afda40fea3bff1ec4fb73a5cf55160a7b", null ],
     [ "dest", "classAI__Shopping.html#a2c01f15e38fb0fdd2af72f1fe6b33063", null ]
 ];

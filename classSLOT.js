@@ -12,6 +12,7 @@ var classSLOT =
     [ "lightsource", "classSLOT.html#ab981ac229d0e0d7dea40475aee85b6cb", null ],
     [ "neck", "classSLOT.html#a1078078e60dfc14c4c2f0c14041e094e", null ],
     [ "range", "classSLOT.html#adb53ec45b1a7a7114d3c2096dad2ab30", null ],
+    [ "relic", "classSLOT.html#a9fecd0bbffdccf14911289de438aca8b", null ],
     [ "token", "classSLOT.html#a3ce8e742071f0c403cc201a57643b4eb", null ],
     [ "tool", "classSLOT.html#af049a5b1c9e26a190a34ca314506ad29", null ],
     [ "toolbelt", "classSLOT.html#a0f7dd77e6ada5fd05641a0ccc5d600a4", null ],
