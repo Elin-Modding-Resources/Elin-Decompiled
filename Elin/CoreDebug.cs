@@ -2278,9 +2278,7 @@ public class CoreDebug : EScriptable
 		{
 			return EnableCheat;
 		}
-		EClass.pc.body.AddBodyPart((int)bodyCode);
-		EClass.pc.body.RefreshBodyParts();
-		WidgetEquip.OnChangeBodyPart();
+		_AddBodyPart(bodyCode);
 		return "Done.";
 	}
 
@@ -2291,10 +2289,22 @@ public class CoreDebug : EScriptable
 		{
 			return EnableCheat;
 		}
+		_RemoveBodyPart(bodyCode);
+		return "Done.";
+	}
+
+	public static void _AddBodyPart(BodyCode bodyCode)
+	{
+		EClass.pc.body.AddBodyPart((int)bodyCode);
+		EClass.pc.body.RefreshBodyParts();
+		WidgetEquip.OnChangeBodyPart();
+	}
+
+	public static void _RemoveBodyPart(BodyCode bodyCode)
+	{
 		EClass.pc.body.RemoveBodyPart((int)bodyCode);
 		EClass.pc.body.RefreshBodyParts();
 		WidgetEquip.OnChangeBodyPart();
-		return "Done.";
 	}
 
 	[ConsoleCommand("")]

@@ -466,6 +466,7 @@ public class Game : EClass
 
 	public void ApplyFix()
 	{
+		Debug.Log("ApplyFix");
 		EClass.pc.elements.CheckSkillActions();
 		if (cards.listAdv.Count == 0)
 		{
@@ -501,14 +502,14 @@ public class Game : EClass
 		});
 		if (version.nightly)
 		{
-			if (EClass.game.quests.IsCompleted<QuestIntoDarkness>() && !EClass.pc.body.HasElement(46))
+			if (EClass.game.quests.IsCompleted("into_darkness") && EClass.pc.body.GetSlot(46, onlyEmpty: false) == null)
 			{
-				CoreDebug.AddBodyPart(CoreDebug.BodyCode.relic);
+				CoreDebug._AddBodyPart(CoreDebug.BodyCode.relic);
 			}
 		}
-		else if (EClass.pc.body.HasElement(46))
+		else if (EClass.pc.body.GetSlot(46, onlyEmpty: false) != null)
 		{
-			CoreDebug.RemoveBodyPart(CoreDebug.BodyCode.relic);
+			CoreDebug._RemoveBodyPart(CoreDebug.BodyCode.relic);
 		}
 		if (version.IsBelow(0, 23, 336))
 		{
