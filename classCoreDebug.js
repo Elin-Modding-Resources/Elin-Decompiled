@@ -49,6 +49,8 @@ var classCoreDebug =
       [ "Melilith", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91acd2881bbcb2a1b4594de0c5bc6501410", null ],
       [ "Tefra", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91a645b6a7d7fa38912972453898809a642", null ]
     ] ],
+    [ "_AddBodyPart", "classCoreDebug.html#aa081f7380e37e532b0f57f8e1c944a55", null ],
+    [ "_RemoveBodyPart", "classCoreDebug.html#acdae46bb90c881d97f25fa38704dde71", null ],
     [ "AddAllRecipes", "classCoreDebug.html#aa2acba4dba4dbe0a488b1dfc23df2e38", null ],
     [ "AddBodyPart", "classCoreDebug.html#ad439cb3ccd36f52541093c7eb99e2197", null ],
     [ "AllRecipe", "classCoreDebug.html#aa96ee1163f82e8ec74f0da7cd5f7f4ad", null ],

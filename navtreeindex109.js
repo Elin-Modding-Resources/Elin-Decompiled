@@ -1,5 +1,7 @@
 var NAVTREEINDEX109 =
 {
+"classSoftShadow.html#aecc791a03232b59a7af166fb102fc839":[1,0,1268,1],
+"classSoftShadow.html#aee531d66c51c221f90edb1848a1d9747":[1,0,1268,2],
 "classSoftShadow.html#af303b28bed5ca317577fc409f780760d":[1,0,1268,0],
 "classSong.html":[1,0,1269],
 "classSourceArea.html":[1,0,1270],
@@ -247,7 +249,5 @@ var NAVTREEINDEX109 =
 "classSourceCharaText_1_1Row.html#aa7ab36a1bbce19b768946bcfef3a70c0":[1,0,1279,0,1],
 "classSourceCharaText_1_1Row.html#aa7da79fe185774749c45fb34016ec3d5":[1,0,1279,0,12],
 "classSourceCharaText_1_1Row.html#adeaa89f9ababa207f62eb09e450481f4":[1,0,1279,0,14],
-"classSourceCharaText_1_1Row.html#af08f45910bf498ba3788b0087fc13ed9":[1,0,1279,0,7],
-"classSourceCharaText_1_1Row.html#afdf42a1a59b1a47da9cbc7e78fc88c1c":[1,0,1279,0,11],
-"classSourceChara_1_1Row.html":[1,0,1278,0]
+"classSourceCharaText_1_1Row.html#af08f45910bf498ba3788b0087fc13ed9":[1,0,1279,0,7]
 };

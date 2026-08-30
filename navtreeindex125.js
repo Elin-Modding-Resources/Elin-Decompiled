@@ -1,5 +1,7 @@
 var NAVTREEINDEX125 =
 {
+"classTraitChara.html#ad48e72e12c1f6f8d871a505cda74abcd":[1,0,1584,26],
+"classTraitChara.html#ad5c4df45be3036b5b5b6279fdf9edc64":[1,0,1584,5],
 "classTraitChara.html#adcaa7c08fbc98fec1738215d19da08ea":[1,0,1584,15],
 "classTraitChara.html#adea1e51b32083ed2907dfc4ecc0b7c17":[1,0,1584,39],
 "classTraitChara.html#ae84e295693c53aa97004b25b9a872d69":[1,0,1584,22],
@@ -247,7 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitDiary.html#a4f501798bbec5f93bea8bf0f723cee3c":[1,0,1636,0],
 "classTraitDice.html":[1,0,1637],
 "classTraitDice.html#a90bd5360b3029ba977183b2d4e370ccf":[1,0,1637,0],
-"classTraitDice.html#a98c70dcf1588c822dbdce6d57b667925":[1,0,1637,1],
-"classTraitDollHouse.html":[1,0,1638],
-"classTraitDoor.html":[1,0,1639]
+"classTraitDice.html#a98c70dcf1588c822dbdce6d57b667925":[1,0,1637,1]
 };

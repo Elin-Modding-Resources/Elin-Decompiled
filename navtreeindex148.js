@@ -1,5 +1,7 @@
 var NAVTREEINDEX148 =
 {
+"classZoneEventQuest.html#ab2f8ead75bd396739b2fd7c43b796232":[1,0,2345,5],
+"classZoneEventQuest.html#aefad7c0301c3ee3b988375117ca9507b":[1,0,2345,4],
 "classZoneEventRaid.html":[1,0,2346],
 "classZoneEventRaid.html#a1aacdee748467040dbb6828d6f1ea49e":[1,0,2346,0],
 "classZoneEventRaid.html#a5b663efa2a5ae55f6f05d61a4e015bbc":[1,0,2346,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX148 =
 "classZone__CurryRuin.html":[1,0,2261],
 "classZone__CurryRuin.html#a22bb2999143dfdccc71bdf70a19dfa61":[1,0,2261,0],
 "classZone__CurryRuinDungeon.html":[1,0,2262],
-"classZone__CurryRuinDungeon.html#a1eec69ec63820f03e47334e8911299ca":[1,0,2262,1],
-"classZone__CurryRuinDungeon.html#a61b76cff49c8fd4286aaafdf7f771770":[1,0,2262,0],
-"classZone__CurryRuinDungeon.html#a6ac05ad59a87aa78c6ecb17174266577":[1,0,2262,4]
+"classZone__CurryRuinDungeon.html#a1eec69ec63820f03e47334e8911299ca":[1,0,2262,1]
 };

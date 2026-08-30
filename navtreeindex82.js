@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"classLayerDragGrid.html#a9ec30decf79a071bee26e9a26c2780f4":[1,0,861,25],
+"classLayerDragGrid.html#a9eeff8e599c0049ee0a60bc501d917d7":[1,0,861,53],
 "classLayerDragGrid.html#aa4d351d9c214a76ade75e5748fa81dc1":[1,0,861,20],
 "classLayerDragGrid.html#aa61a7f1e17b533cf4881cce2d64d7e17":[1,0,861,33],
 "classLayerDragGrid.html#aac10c24147e69c2bdb259b4835aa8b07":[1,0,861,52],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "classLayerFaith.html#a68d7c16c8e945a890febcf1f491fe133":[1,0,872,5],
 "classLayerFaith.html#a6ccdf6dac76441636404341fbdd06bdf":[1,0,872,8],
 "classLayerFaith.html#a810ba332f1b10956f3ffdf7f248111b4":[1,0,872,16],
-"classLayerFaith.html#a84d52b781ef2338765fdbb639252470e":[1,0,872,15],
-"classLayerFaith.html#a90fbbf1a606dd5132e78bb7fa76fa15c":[1,0,872,3],
-"classLayerFaith.html#a9b5837f92cc4bf44c94c821312932305":[1,0,872,2]
+"classLayerFaith.html#a84d52b781ef2338765fdbb639252470e":[1,0,872,15]
 };

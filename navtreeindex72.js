@@ -1,5 +1,7 @@
 var NAVTREEINDEX72 =
 {
+"classGameUpdater_1_1AreaUpdater.html":[1,0,613,0],
+"classGameUpdater_1_1AreaUpdater.html#ac65df547dd0ab377dc852aba38f87c2d":[1,0,613,0,0],
 "classGameUpdater_1_1CharaUpdater.html":[1,0,613,1],
 "classGameUpdater_1_1CharaUpdater.html#a0f8572e10590fe7b4efa595304f18517":[1,0,613,1,0],
 "classGameUpdater_1_1ConditionUpdater.html":[1,0,613,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX72 =
 "classGoalManualMove.html#ac96280847587eaa533efb17903317ba7":[1,0,635,10],
 "classGoalNeeds.html":[1,0,636],
 "classGoalNeeds.html#a29b9a480db89cd1e3909ee2724882c81":[1,0,636,0],
-"classGoalSearch.html":[1,0,637],
-"classGoalSearch.html#a074f142940ca9d2acaaba53ea31f3e3e":[1,0,637,0],
-"classGoalSearch.html#a885afe6c04988f4f300229da758ee4b4":[1,0,637,2]
+"classGoalSearch.html":[1,0,637]
 };

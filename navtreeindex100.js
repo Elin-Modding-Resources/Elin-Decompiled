@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"classQuestTask.html#ac273032ffb9a68478913857cbd545c7a":[1,0,1132,8],
+"classQuestTask.html#ad03f302ddf56f5f5240ff0a254c4d19b":[1,0,1132,0],
 "classQuestTask.html#ae57409e9ab51714bc02638de64143dee":[1,0,1132,6],
 "classQuestTask.html#afac014ea90ab317ddeb694bb178b9091":[1,0,1132,7],
 "classQuestTaskFlyer.html":[1,0,1133],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "classRecipe.html#afa36842bb7e835141fe10e6acd39cb1b":[1,0,1150,50],
 "classRecipe.html#aff5c8bf9684dbe3c7e2e20f9486af013":[1,0,1150,11],
 "classRecipeBridgePillar.html":[1,0,1151],
-"classRecipeBridgePillar.html#a54349092e030146f3c446dae6cd0b330":[1,0,1151,3],
-"classRecipeBridgePillar.html#aad9ba97b32ee14ea044639b1f48c6376":[1,0,1151,2],
-"classRecipeBridgePillar.html#ab3fc510e9fc4884d591d86d78f630be1":[1,0,1151,1]
+"classRecipeBridgePillar.html#a54349092e030146f3c446dae6cd0b330":[1,0,1151,3]
 };

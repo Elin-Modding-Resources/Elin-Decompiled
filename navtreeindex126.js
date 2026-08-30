@@ -1,5 +1,7 @@
 var NAVTREEINDEX126 =
 {
+"classTraitDollHouse.html":[1,0,1638],
+"classTraitDoor.html":[1,0,1639],
 "classTraitDoor.html#a01266a1c7b65a7c0d9e6b1d8711e1e57":[1,0,1639,14],
 "classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a":[1,0,1639,10],
 "classTraitDoor.html#a14d76135089ef809b5ad45d8dbd6a1c8":[1,0,1639,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitFigure.html#a725f17b8712fe0c9b06656a5e7109b41":[1,0,1691,3],
 "classTraitFigure.html#a8444d988cf072d1da015423790978202":[1,0,1691,6],
 "classTraitFigure.html#a96d673649e59ad682e39429f8678c0df":[1,0,1691,5],
-"classTraitFigure.html#ab82e086783ec1852f9a84e30f1318e1f":[1,0,1691,0],
-"classTraitFigure.html#acb69872b10382097eb6fed68bf77af8c":[1,0,1691,4],
-"classTraitFigure.html#aee15d2a35dbde8a92a90011db74f4e25":[1,0,1691,1]
+"classTraitFigure.html#ab82e086783ec1852f9a84e30f1318e1f":[1,0,1691,0]
 };
