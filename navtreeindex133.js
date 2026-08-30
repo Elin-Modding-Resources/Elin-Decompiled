@@ -1,5 +1,6 @@
 var NAVTREEINDEX133 =
 {
+"classTraitTrapSister.html":[1,0,2060],
 "classTraitTrapSister.html#aa82091c2f2f2a60a26d247a84492ccb0":[1,0,2060,1],
 "classTraitTrapSister.html#ad20ee8d751a2f9b44fed1062b5c65ff1":[1,0,2060,0],
 "classTraitTravel.html":[1,0,2061],
@@ -248,6 +249,5 @@ var NAVTREEINDEX133 =
 "classTypewriter.html#a353e062f4849d727f5b55b387b4b2496":[1,0,2096,3],
 "classTypewriter.html#a5acb0a230b3064327eaf2bf6bb750a2e":[1,0,2096,0],
 "classTypewriter.html#a6a758a279ad78409a7e076d4b08b0db1":[1,0,2096,9],
-"classTypewriter.html#a708664125b0be047eb168400b4c0e255":[1,0,2096,4],
-"classTypewriter.html#a76992c1aaa1ffd9de48b46b29a071923":[1,0,2096,2]
+"classTypewriter.html#a708664125b0be047eb168400b4c0e255":[1,0,2096,4]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX130 =
 {
+"classTraitPhoto.html#ad4c423b12256d4e26950e812ec93579e":[1,0,1876,0],
 "classTraitPillow.html":[1,0,1877],
 "classTraitPillowEhekatl.html":[1,0,1878],
 "classTraitPillowEhekatl.html#a78bb4dcb6ef29eee389886b1651b5021":[1,0,1878,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitScrollMap.html":[1,0,1936],
 "classTraitScrollMap.html#a0904a0579abb4d0c7bd18be934cd277b":[1,0,1936,7],
 "classTraitScrollMap.html#a15d370c2fb3c3e6c7c90ed717086eb68":[1,0,1936,4],
-"classTraitScrollMap.html#a1bb1825d5b45d557376237e9c242742b":[1,0,1936,3],
-"classTraitScrollMap.html#a57fbef95039c8457ddfea625a6a28f6b":[1,0,1936,1]
+"classTraitScrollMap.html#a1bb1825d5b45d557376237e9c242742b":[1,0,1936,3]
 };
