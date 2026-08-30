@@ -40,3 +40,4 @@ msbuild.wrn
 # Visual Studio 2015
 .vs/
 .last_version_int
+Elin/Properties/AssemblyInfo.cs
