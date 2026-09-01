@@ -13,7 +13,11 @@ public class InvOwnerEnchant : InvOwnerEffect
 
 	public override bool ShouldShowGuide(Thing t)
 	{
-		return t.category.IsChildOf(armor ? "armor" : "weapon");
+		if (t.category.IsChildOf(armor ? "armor" : "weapon"))
+		{
+			return t.category.id != "relic";
+		}
+		return false;
 	}
 
 	public override void _OnProcess(Thing t)

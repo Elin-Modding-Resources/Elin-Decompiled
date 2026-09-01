@@ -51,7 +51,10 @@ public class TraitMannequin : TraitItem
 		{
 			foreach (Thing item in list)
 			{
-				owner.AddCard(item);
+				if (!(item.category.id == "relic"))
+				{
+					owner.AddCard(item);
+				}
 			}
 		}
 		else
@@ -63,7 +66,10 @@ public class TraitMannequin : TraitItem
 			}
 			foreach (Thing item2 in list)
 			{
-				owner.AddCard(item2);
+				if (!(item2.category.id == "relic"))
+				{
+					owner.AddCard(item2);
+				}
 			}
 			foreach (Thing item3 in list2)
 			{

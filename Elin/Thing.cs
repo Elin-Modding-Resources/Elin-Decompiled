@@ -148,7 +148,7 @@ public class Thing : Card
 		{
 			Act act = (trait as TraitAbility).act;
 			Element element = c.elements.GetElement(act.id);
-			if (act is Spell && (element == null || element.vPotential == 0))
+			if (act is Spell && (element == null || (element.vPotential == 0 && !EClass.pc.ability.Has(element.id))))
 			{
 				return false;
 			}
@@ -1364,7 +1364,7 @@ public class Thing : Card
 		trait.WriteNote(n, flag2);
 		if (base.c_DNA != null)
 		{
-			bool flag3 = EClass.pc.HasElement(1274) && !LayerDragGrid.Instance;
+			bool flag3 = EClass.pc.HasElement(1274) && !LayerDragGrid.Instance && base.category.id != "relic";
 			if (base.c_DNA.cost > 0)
 			{
 				n.AddText("NoteText_enc", "isCostFeatPoint".lang((flag3 ? (base.c_DNA.cost * EClass.pc.GeneCostMTP / 100 + " (" + base.c_DNA.cost + ")") : ((object)base.c_DNA.cost))?.ToString() ?? ""));

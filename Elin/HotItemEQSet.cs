@@ -40,7 +40,7 @@ public class HotItemEQSet : HotAction
 		ids.Clear();
 		foreach (BodySlot slot in EClass.pc.body.slots)
 		{
-			if (slot.elementId != 44 && slot.thing != null)
+			if (slot.elementId != 44 && slot.thing != null && slot.elementId != 46)
 			{
 				ids.Add(slot.thing.uid);
 			}
@@ -56,7 +56,7 @@ public class HotItemEQSet : HotAction
 			Dictionary<int, Thing> dictionary = new Dictionary<int, Thing>();
 			foreach (BodySlot slot2 in EClass.pc.body.slots)
 			{
-				if (slot2.elementId != 44 && slot2.thing != null && slot2.thing.blessedState >= BlessedState.Normal)
+				if (slot2.elementId != 44 && slot2.thing != null && slot2.thing.blessedState >= BlessedState.Normal && slot2.thing.category.id != "relic")
 				{
 					dictionary.Add(slot2.thing.c_equippedSlot - 1, slot2.thing);
 					EClass.pc.body.Unequip(slot2.thing, refresh: false);

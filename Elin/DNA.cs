@@ -680,10 +680,7 @@ public class DNA : EClass
 		int num2 = tg.MaxGeneSlot - tg.CurrentGeneSlot;
 		int num3 = num2 - num;
 		int maxGeneSlot = tg.MaxGeneSlot;
-		if (owner == null || !(owner.category.id == "relic"))
-		{
-			n.AddText("gene_hint_slot".lang(num2.ToString() ?? "", num3.ToString() ?? "", maxGeneSlot.ToString() ?? ""), (num3 >= 0) ? FontColor.Good : FontColor.Bad);
-		}
+		n.AddText("gene_hint_slot".lang(num2.ToString() ?? "", num3.ToString() ?? "", maxGeneSlot.ToString() ?? ""), (num3 >= 0) ? FontColor.Good : FontColor.Bad);
 		int num4 = cost * tg.GeneCostMTP / 100;
 		int num5 = tg.feat - num4;
 		n.AddText("gene_hint_cost".lang(tg.feat.ToString() ?? "", num4 + ((num4 == cost) ? "" : ("(" + cost + ")")), num5.ToString() ?? ""), (num5 >= 0) ? FontColor.Good : FontColor.Bad);
@@ -784,7 +781,7 @@ public class DNA : EClass
 				i -= 2;
 			}
 		}
-		cost /= 5;
+		cost = cost * Mathf.Clamp(slot, 1, 10) / 10;
 		return this;
 	}
 }

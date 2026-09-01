@@ -6278,7 +6278,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			if (IsPC && HasElement(1274) && a.vPotential < 0 && !flag2 && !a.HasTag("dontForget"))
+			if (IsPC && a.vPotential < 0 && !flag2 && !a.HasTag("dontForget"))
 			{
 				Msg.Say("noSpellStock");
 				EInput.Consume();

@@ -662,7 +662,7 @@ public class ActEffect : EClass
 			{
 				CC.PlaySound("spell_missile");
 			});
-			for (int num9 = 0; num9 < 8 + EClass.rnd(5); num9++)
+			for (int num9 = 0; num9 < 6 + EClass.rnd(7); num9++)
 			{
 				list7.Clear();
 				list7.Add(list8.RandomItem());

@@ -287,10 +287,17 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 			}
 			if (c.IsIdentified)
 			{
-				BlessedState blessedState2 = c.blessedState;
-				if (blessedState2 != BlessedState.Normal)
+				if (c.GetBool(135))
 				{
-					Attach("status_" + blessedState2);
+					Attach("status_SleepLock");
+				}
+				else
+				{
+					BlessedState blessedState2 = c.blessedState;
+					if (blessedState2 != BlessedState.Normal)
+					{
+						Attach("status_" + blessedState2);
+					}
 				}
 			}
 			else

@@ -642,9 +642,16 @@ public class InvOwner : EClass
 		{
 			return false;
 		}
-		if (t.isEquipped && t.IsCursed)
+		if (t.isEquipped)
 		{
-			return false;
+			if (t.IsCursed)
+			{
+				return false;
+			}
+			if (t.GetBool(135))
+			{
+				return false;
+			}
 		}
 		if (Container.isChara && !Container.IsPC)
 		{
@@ -762,7 +769,11 @@ public class InvOwner : EClass
 			return;
 		}
 		bool flag = false;
-		if (card.Thing.isEquipped && card.Thing.IsEquipmentOrRanged && card.Thing.IsCursed)
+		if (card.Thing.isEquipped && card.GetBool(135))
+		{
+			SE.Play("curse3");
+		}
+		else if (card.Thing.isEquipped && card.Thing.IsEquipmentOrRanged && card.Thing.IsCursed)
 		{
 			SE.Play("curse3");
 		}

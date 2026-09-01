@@ -15,9 +15,9 @@ public class InvOwnerChangeRarity : InvOwnerEffect
 
 	public override bool ShouldShowGuide(Thing t)
 	{
-		if (t.IsEquipment && t.rarity <= Rarity.Legendary && !t.HasTag(CTAG.godArtifact))
+		if (t.IsEquipment && t.rarity <= Rarity.Legendary && !t.HasTag(CTAG.godArtifact) && !t.IsLightsource)
 		{
-			return !t.IsLightsource;
+			return t.category.id != "relic";
 		}
 		return false;
 	}
