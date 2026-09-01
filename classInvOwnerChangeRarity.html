@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.340.3 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.341 Nightly</span>
    </div>
   </td>
  </tr>
@@ -559,9 +559,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="InvOwnerChangeRarity_8cs_source.html#l00016">16</a> of file <a class="el" href="InvOwnerChangeRarity_8cs_source.html">InvOwnerChangeRarity.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a9d9706366dbcdb8827734c18001f8f35">IsEquipment</a> &amp;&amp; t.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &lt;= <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Legendary &amp;&amp; !t.<a class="code hl_function" href="classCard.html#a810e687225ccdc1dc342506473c87334">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.godArtifact))</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#a9d9706366dbcdb8827734c18001f8f35">IsEquipment</a> &amp;&amp; t.<a class="code hl_property" href="classCard.html#a5977c43f14d376055d2ab4e8009c31d4">rarity</a> &lt;= <a class="code hl_enumeration" href="Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600">Rarity</a>.Legendary &amp;&amp; !t.<a class="code hl_function" href="classCard.html#a810e687225ccdc1dc342506473c87334">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.godArtifact) &amp;&amp; !t.<a class="code hl_property" href="classCard.html#ac80d1450f39b28fd323f0406c6e2c579">IsLightsource</a>)</div>
 <div class="line"><span class="lineno">   19</span>        {</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> !t.<a class="code hl_property" href="classCard.html#ac80d1450f39b28fd323f0406c6e2c579">IsLightsource</a>;</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> t.category.id != <span class="stringliteral">&quot;relic&quot;</span>;</div>
 <div class="line"><span class="lineno">   21</span>        }</div>
 <div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   23</span>    }</div>
