@@ -1,7 +1,5 @@
 var NAVTREEINDEX70 =
 {
-"classFontSource.html#ade0ecf392e53cdfb12eb5d0736691d7a":[1,0,590,0],
-"classFontSource.html#ade9d74b132cc3b7dc64a4da2109c14d6":[1,0,590,2],
 "classFontSource.html#ae1185416a8d5703566834260555c11c6":[1,0,590,5],
 "classFontSource.html#afa5282da8ea2e7a01335cdb53604062a":[1,0,590,4],
 "classFoodEffect.html":[1,0,592],
@@ -249,5 +247,7 @@ var NAVTREEINDEX70 =
 "classGamePrincipal.html":[1,0,607],
 "classGamePrincipal.html#a018779ceddaf2f8332ff5215b07bd9c8":[1,0,607,10],
 "classGamePrincipal.html#a079f6ce555bf5e5b2a3d3467e7939ad4":[1,0,607,17],
-"classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef":[1,0,607,12]
+"classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef":[1,0,607,12],
+"classGamePrincipal.html#a0ad5d93312657968a904932dbdae1e5c":[1,0,607,23],
+"classGamePrincipal.html#a2be217677d0059e921b6ae7a07a697a5":[1,0,607,20]
 };

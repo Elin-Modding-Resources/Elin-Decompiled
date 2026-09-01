@@ -1,7 +1,5 @@
 var NAVTREEINDEX79 =
 {
-"classInvOwnerShop.html#ae7dc64e89add642d82d3e514e561599d":[1,0,794,0],
-"classInvOwnerToolbelt.html":[1,0,795],
 "classInvOwnerToolbelt.html#a311ebe3661659cc2b901bb79c720f483":[1,0,795,0],
 "classInvOwnerToolbelt.html#a95528fdbb20e3c67053c6387f677b548":[1,0,795,2],
 "classInvOwnerToolbelt.html#ac41f6b54399465cbbd450e639dceac52":[1,0,795,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX79 =
 "classLang.html#ad7ad8362b2039eafb6faf37108395afeaaa85f1840e282d8a8304dbc2c0d7c9b2":[1,0,833,1,2],
 "classLang.html#ada42353e8636a1085ec2f851e7b3c403":[1,0,833,27],
 "classLang.html#ae13a80dd1ff1b89239a18781b2e0d2ca":[1,0,833,14],
-"classLang.html#ae68ced98bb5ad8d8f206f4905b790653":[1,0,833,29]
+"classLang.html#ae68ced98bb5ad8d8f206f4905b790653":[1,0,833,29],
+"classLang.html#aefb684acd0fc091fe29e1eb43367c4c3":[1,0,833,20],
+"classLang.html#af887d535fa835b69d8cc340132257e74":[1,0,833,18]
 };

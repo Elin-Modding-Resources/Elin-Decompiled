@@ -1,7 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"classAI__Clean.html#a5bdd466feb6935ff1ec5a3d7ea30f88e":[1,0,85,0],
-"classAI__Clean.html#a61a4ae94beefce4ee0e7baaa190ae975":[1,0,85,2],
 "classAI__Clean.html#affb42d886f7af35173bb3b4155f25af3":[1,0,85,1],
 "classAI__Cook.html":[1,0,86],
 "classAI__Cook.html#a130aa69c9878a924698186f5aa74d60a":[1,0,86,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX27 =
 "classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,113,5],
 "classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,113,1],
 "classAI__Practice.html#ad938aabe2a061a66a436cbe954380af4":[1,0,113,0],
-"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,113,2]
+"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,113,2],
+"classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116":[1,0,113,4],
+"classAI__Practice.html#af511fc3b8567e3df24946eabaead7861":[1,0,113,6]
 };
