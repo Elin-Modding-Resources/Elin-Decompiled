@@ -1652,12 +1652,12 @@ public class ActEffect : EClass
 			}
 			EClass.ui.AddLayer<LayerList>().SetStringList(delegate
 			{
-				List<string> list12 = new List<string>();
+				List<string> list13 = new List<string>();
 				for (int j = 0; j < 10; j++)
 				{
-					list12.Add(AliasGen.GetRandomAlias());
+					list13.Add(AliasGen.GetRandomAlias());
 				}
-				return list12;
+				return list13;
 			}, delegate(int a, string b)
 			{
 				c._alias = b;
@@ -1814,15 +1814,15 @@ public class ActEffect : EClass
 			break;
 		case EffectId.StripBlessing:
 		{
-			List<Condition> list5 = new List<Condition>();
+			List<Condition> list6 = new List<Condition>();
 			foreach (Condition condition4 in TC.conditions)
 			{
 				if (GetBlessingDifficulty(condition4) > 0 && EClass.rnd(GetBlessingDifficulty(condition4)) == 0)
 				{
-					list5.Add(condition4);
+					list6.Add(condition4);
 				}
 			}
-			if (list5.Count == 0)
+			if (list6.Count == 0)
 			{
 				CC.SayNothingHappans();
 				break;
@@ -1830,9 +1830,9 @@ public class ActEffect : EClass
 			TC.pos.PlayEffect("holyveil");
 			TC.pos.PlaySound("holyveil");
 			TC.Say("unpolluted", TC);
-			list5.Shuffle();
+			list6.Shuffle();
 			{
-				foreach (Condition item5 in list5)
+				foreach (Condition item5 in list6)
 				{
 					item5.Kill();
 					if (CC.IsHostile(TC))
@@ -1849,15 +1849,15 @@ public class ActEffect : EClass
 			{
 				break;
 			}
-			int num18 = 0;
+			int num21 = 0;
 			foreach (Condition condition5 in TC.conditions)
 			{
 				if (condition5.Type == ConditionType.Debuff)
 				{
-					num18++;
+					num21++;
 				}
 			}
-			if (num18 == 0)
+			if (num21 == 0)
 			{
 				CC.SayNothingHappans();
 				break;
@@ -1874,14 +1874,14 @@ public class ActEffect : EClass
 			});
 			TC.Say("abShutterHex", TC);
 			Point center = CC.pos.Copy();
-			List<Chara> list8 = TC.pos.ListCharasInRadius(TC, 4, (Chara chara3) => chara3 == TC || chara3.IsHostile(CC));
-			for (int num19 = 0; num19 < num18; num19++)
+			List<Chara> list10 = TC.pos.ListCharasInRadius(TC, 4, (Chara chara3) => chara3 == TC || chara3.IsHostile(CC));
+			for (int num22 = 0; num22 < num21; num22++)
 			{
-				TweenUtil.Delay((float)num19 * 0.1f, delegate
+				TweenUtil.Delay((float)num22 * 0.1f, delegate
 				{
 					center.PlaySound("shutterhex");
 				});
-				foreach (Chara item6 in list8)
+				foreach (Chara item6 in list10)
 				{
 					if (item6.ExistsOnMap)
 					{
@@ -1890,7 +1890,7 @@ public class ActEffect : EClass
 						Color startColor = (componentInChildren.endColor = EClass.Colors.elementColors["eleHoly"]);
 						componentInChildren.startColor = startColor;
 						Point pos = item6.pos.Copy();
-						TweenUtil.Delay((float)num19 * 0.1f, delegate
+						TweenUtil.Delay((float)num22 * 0.1f, delegate
 						{
 							effect.Play(center, 0f, pos);
 						});
@@ -1950,7 +1950,7 @@ public class ActEffect : EClass
 				TC.Say((actRef.n1 == "money") ? "abStealNegateMoney" : "abStealNegate", TC);
 				break;
 			}
-			Thing thing5 = null;
+			Thing thing7 = null;
 			bool flag11 = actRef.n1 == "food";
 			if (actRef.n1 == "money")
 			{
@@ -1958,7 +1958,7 @@ public class ActEffect : EClass
 				if (currency > 0)
 				{
 					currency = Mathf.Clamp(EClass.rnd(currency / 10), 1, 100 + EClass.rndHalf(Mathf.Min(CC.LV, 1000000) * 200));
-					thing5 = ThingGen.Create("money").SetNum(currency);
+					thing7 = ThingGen.Create("money").SetNum(currency);
 					TC.ModCurrency(-currency);
 				}
 			}
@@ -1969,7 +1969,7 @@ public class ActEffect : EClass
 				{
 					func = (Thing thing8) => thing8.IsFood;
 				}
-				List<Thing> list6 = TC.things.List(delegate(Thing thing8)
+				List<Thing> list12 = TC.things.List(delegate(Thing thing8)
 				{
 					if (thing8.parentCard?.trait is TraitChestMerchant || thing8.trait is TraitTool || thing8.IsThrownWeapon)
 					{
@@ -1977,30 +1977,30 @@ public class ActEffect : EClass
 					}
 					return thing8.trait.CanBeDestroyed && thing8.things.Count == 0 && thing8.invY != 1 && thing8.trait.CanBeStolen && !thing8.trait.CanOnlyCarry && !thing8.IsUnique && !thing8.isEquipped && thing8.blessedState == BlessedState.Normal && func(thing8);
 				}, onlyAccessible: true);
-				if (list6.Count > 0)
+				if (list12.Count > 0)
 				{
-					thing5 = list6.RandomItem();
-					if (thing5.Num > 1)
+					thing7 = list12.RandomItem();
+					if (thing7.Num > 1)
 					{
-						thing5 = thing5.Split(1);
+						thing7 = thing7.Split(1);
 					}
 				}
 				CC.AddCooldown(6640, 200);
 			}
-			if (thing5 == null)
+			if (thing7 == null)
 			{
 				CC.Say("abStealNothing", CC, TC);
 				break;
 			}
-			thing5.SetInt(116, 1);
-			TC.PlaySound(thing5.material.GetSoundDrop(thing5.sourceCard));
-			CC.Pick(thing5, msg: false);
-			CC.Say("abSteal", CC, TC, thing5.Name);
+			thing7.SetInt(116, 1);
+			TC.PlaySound(thing7.material.GetSoundDrop(thing7.sourceCard));
+			CC.Pick(thing7, msg: false);
+			CC.Say("abSteal", CC, TC, thing7.Name);
 			if (actRef.n1 == "food")
 			{
 				if (CC.hunger.value != 0)
 				{
-					CC.InstantEat(thing5);
+					CC.InstantEat(thing7);
 				}
 			}
 			else
@@ -2025,7 +2025,7 @@ public class ActEffect : EClass
 			{
 				break;
 			}
-			List<Thing> list10 = TC.things.List(delegate(Thing thing8)
+			List<Thing> list4 = TC.things.List(delegate(Thing thing8)
 			{
 				if (!thing8.isEquipped || thing8.blessedState == BlessedState.Doomed || thing8.IsToolbelt)
 				{
@@ -2033,15 +2033,15 @@ public class ActEffect : EClass
 				}
 				return (thing8.blessedState < BlessedState.Blessed || EClass.rnd(10) == 0) ? true : false;
 			});
-			if (list10.Count == 0)
+			if (list4.Count == 0)
 			{
 				CC.SayNothingHappans();
 				break;
 			}
-			Thing thing7 = list10.RandomItem();
-			TC.Say("curse_hit", TC, thing7);
-			thing7.SetBlessedState((thing7.blessedState == BlessedState.Cursed) ? BlessedState.Doomed : BlessedState.Cursed);
-			LayerInventory.SetDirty(thing7);
+			Thing thing5 = list4.RandomItem();
+			TC.Say("curse_hit", TC, thing5);
+			thing5.SetBlessedState((thing5.blessedState == BlessedState.Cursed) ? BlessedState.Doomed : BlessedState.Cursed);
+			LayerInventory.SetDirty(thing5);
 			break;
 		}
 		case EffectId.UncurseEQ:
@@ -2057,29 +2057,29 @@ public class ActEffect : EClass
 			}
 			int success = 0;
 			int fail = 0;
-			List<Thing> list11 = new List<Thing>();
+			List<Thing> list9 = new List<Thing>();
 			TC.things.Foreach(delegate(Thing thing8)
 			{
-				int num23 = 0;
+				int num25 = 0;
 				if ((thing8.isEquipped || thing8.IsRangedWeapon || blessed) && thing8.blessedState < BlessedState.Normal)
 				{
 					if (thing8.blessedState == BlessedState.Cursed)
 					{
-						num23 = EClass.rnd(200);
+						num25 = EClass.rnd(200);
 					}
 					if (thing8.blessedState == BlessedState.Doomed)
 					{
-						num23 = EClass.rnd(1000);
+						num25 = EClass.rnd(1000);
 					}
 					if (blessed)
 					{
-						num23 /= 2;
+						num25 /= 2;
 					}
 					if (id == EffectId.UncurseEQGreater)
 					{
-						num23 /= 10;
+						num25 /= 10;
 					}
-					if (power >= num23)
+					if (power >= num25)
 					{
 						TC.Say("uncurseEQ_success", thing8);
 						thing8.SetBlessedState(BlessedState.Normal);
@@ -2089,7 +2089,7 @@ public class ActEffect : EClass
 						}
 						LayerInventory.SetDirty(thing8);
 						success++;
-						list11.Add(thing8);
+						list9.Add(thing8);
 					}
 					else
 					{
@@ -2097,7 +2097,7 @@ public class ActEffect : EClass
 					}
 				}
 			});
-			foreach (Thing item7 in list11)
+			foreach (Thing item7 in list9)
 			{
 				item7.GetRootCard()?.TryStack(item7);
 			}
@@ -2123,18 +2123,18 @@ public class ActEffect : EClass
 					text2 = text3;
 				}
 			}
-			Condition condition2 = Condition.Create(text2, power, delegate(Condition con)
+			Condition condition = Condition.Create(text2, power, delegate(Condition con)
 			{
 				if (!actRef.aliasEle.IsEmpty())
 				{
 					con.SetElement(EClass.sources.elements.alias[actRef.aliasEle].id);
 				}
 			});
-			condition2.isPerfume = TC.IsPC && actRef.isPerfume;
-			Condition condition3 = TC.AddCondition(condition2);
-			if (condition3 != null && condition3.isPerfume)
+			condition.isPerfume = TC.IsPC && actRef.isPerfume;
+			Condition condition2 = TC.AddCondition(condition);
+			if (condition2 != null && condition2.isPerfume)
 			{
-				condition3.value = 3;
+				condition2.value = 3;
 				Msg.Say("perfume", TC);
 			}
 			if (!text3.IsEmpty())
@@ -2149,7 +2149,7 @@ public class ActEffect : EClass
 			bool hex = CC.IsHostile(TC);
 			List<SourceStat.Row> list7 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex ? "Debuff" : "Buff")).ToList();
 			int power2 = power;
-			for (int num17 = 0; num17 < 4 + EClass.rnd(2); num17++)
+			for (int num20 = 0; num20 < 4 + EClass.rnd(2); num20++)
 			{
 				SourceStat.Row row2 = list7.RandomItem();
 				list7.Remove(row2);
@@ -2174,34 +2174,34 @@ public class ActEffect : EClass
 			{
 				power = power * 2 / 3;
 			}
-			int num14 = TC.WIL * (isPowerful ? 20 : 5);
-			ConHolyVeil condition = TC.GetCondition<ConHolyVeil>();
-			if (condition != null)
+			int num13 = TC.WIL * (isPowerful ? 20 : 5);
+			ConHolyVeil condition3 = TC.GetCondition<ConHolyVeil>();
+			if (condition3 != null)
 			{
-				num14 += condition.power * 5;
+				num13 += condition3.power * 5;
 			}
-			num14 /= EClass.sources.stats.alias[n].hexPower;
-			if (id != EffectId.DebuffKizuami && EClass.rnd(power) < num14)
+			num13 /= EClass.sources.stats.alias[n].hexPower;
+			if (id != EffectId.DebuffKizuami && EClass.rnd(power) < num13)
 			{
-				int num15 = 10;
-				int num16 = (TC.IsPowerful ? 40 : 90);
+				int num14 = 10;
+				int num15 = (TC.IsPowerful ? 40 : 90);
 				if (CC.IsPCFaction)
 				{
-					num15 += EClass.curve(CC.LER, 100, 50) / 10;
+					num14 += EClass.curve(CC.LER, 100, 50) / 10;
 				}
 				if (TC.IsPowerful)
 				{
-					num15 /= 2;
+					num14 /= 2;
 				}
-				if (condition != null)
+				if (condition3 != null)
 				{
-					num15 /= 5;
+					num14 /= 5;
 				}
-				if (num15 >= num16)
+				if (num14 >= num15)
 				{
-					num15 = num16;
+					num14 = num15;
 				}
-				if (EClass.rnd(100) > num15)
+				if (EClass.rnd(100) > num14)
 				{
 					TC.Say("debuff_resist", TC);
 					CC.DoHostileAction(TC);
@@ -2242,14 +2242,14 @@ public class ActEffect : EClass
 		case EffectId.Ally:
 		{
 			Msg.Say("gainAlly");
-			Chara chara = CharaGen.CreateFromFilter("chara", cc.LV);
-			EClass._zone.AddCard(chara, cc.pos.GetNearestPoint(allowBlock: false, allowChara: false));
+			Chara chara2 = CharaGen.CreateFromFilter("chara", cc.LV);
+			EClass._zone.AddCard(chara2, cc.pos.GetNearestPoint(allowBlock: false, allowChara: false));
 			if (cc.IsPCFactionOrMinion)
 			{
-				chara.MakeAlly(msg: false);
+				chara2.MakeAlly(msg: false);
 			}
-			chara.PlaySound("identify");
-			chara.PlayEffect("teleport");
+			chara2.PlaySound("identify");
+			chara2.PlayEffect("teleport");
 			break;
 		}
 		case EffectId.Wish:
@@ -2310,16 +2310,16 @@ public class ActEffect : EClass
 			tc.bio.SetGender(gender2);
 			tc.Say("transGender", tc, Gender.Name(tc.bio.gender));
 			tc.Talk("tail");
-			int age3 = tc.bio.GetAge(tc.Chara);
-			if (blessed && age3 > 1)
+			int age2 = tc.bio.GetAge(tc.Chara);
+			if (blessed && age2 > 1)
 			{
 				tc.Say("ageDown", tc);
-				tc.bio.SetAge(tc.Chara, age3 - 1);
+				tc.bio.SetAge(tc.Chara, age2 - 1);
 			}
 			else if (flag)
 			{
 				tc.Say("ageUp", tc);
-				tc.bio.SetAge(tc.Chara, age3 + 1);
+				tc.bio.SetAge(tc.Chara, age2 + 1);
 			}
 			break;
 		}
@@ -2327,20 +2327,68 @@ public class ActEffect : EClass
 		{
 			tc.PlaySound("mutation");
 			tc.PlayEffect("mutation");
-			int num13 = ((actRef.refThing != null) ? actRef.refThing.GetInt(118) : actRef.refVal);
-			if (num13 == 0)
+			int num17 = ((actRef.refThing != null) ? actRef.refThing.GetInt(118) : actRef.refVal);
+			if (num17 == 0)
 			{
-				num13 = tc.GetInt(118);
-				if (num13 == 0)
+				num17 = tc.GetInt(118);
+				if (num17 == 0)
 				{
-					num13 = EClass.game.seed + tc.uid;
+					num17 = EClass.game.seed + tc.uid;
 				}
-				num13++;
+				num17++;
 			}
 			tc.Say("transBlood", tc);
 			tc.Talk("tail");
 			tc.c_bloodData = null;
-			tc.SetInt(118, num13);
+			tc.SetInt(118, num17);
+			break;
+		}
+		case EffectId.ResetFeat:
+		{
+			if (!tc.IsPC)
+			{
+				tc.SayNothingHappans();
+				break;
+			}
+			tc.PlaySound("mutation");
+			tc.PlayEffect("mutation");
+			List<Element> list3 = new List<Element>();
+			foreach (Element value in EClass.pc.elements.dict.Values)
+			{
+				if (value.source.category != "feat" || value.id == 1644)
+				{
+					continue;
+				}
+				switch (value.source.categorySub)
+				{
+				case "general":
+				case "attribute":
+				case "skill":
+				case "special":
+					if (value.vBase > 0)
+					{
+						list3.Add(value);
+					}
+					break;
+				}
+			}
+			int num10 = 0;
+			foreach (Element item8 in list3)
+			{
+				for (int num11 = 0; num11 < item8.vBase; num11++)
+				{
+					num10 += item8.source.cost.TryGet(num11);
+				}
+				item8.vBase = 0;
+				EClass.pc.SetFeat(item8.Value, 0);
+			}
+			EClass.pc.feat += num10;
+			EClass.pc.Refresh();
+			EClass.pc.RefreshFaithElement();
+			LayerAbility.Redraw();
+			LayerInventory.SetDirtyAll();
+			LayerEquip.SetDirty();
+			tc.Say("resetFeat");
 			break;
 		}
 		case EffectId.Youth:
@@ -2367,7 +2415,7 @@ public class ActEffect : EClass
 				tc.SayNothingHappans();
 				break;
 			}
-			int age2 = tc.bio.GetAge(tc.Chara);
+			int age3 = tc.bio.GetAge(tc.Chara);
 			if (flag)
 			{
 				if (tc.c_lockedAge != 0)
@@ -2375,7 +2423,7 @@ public class ActEffect : EClass
 					tc.Say("eternalYouth2", tc);
 					tc.c_lockedAge = 0;
 					tc.elements.Remove(1243);
-					tc.bio.SetAge(tc.Chara, age2);
+					tc.bio.SetAge(tc.Chara, age3);
 				}
 				Redirect(EffectId.Youth, BlessedState.Cursed, default(ActRef));
 			}
@@ -2387,7 +2435,7 @@ public class ActEffect : EClass
 			{
 				tc.PlaySound("dropRewardXmas");
 				tc.Say("eternalYouth1", tc);
-				tc.c_lockedAge = age2 + 1;
+				tc.c_lockedAge = age3 + 1;
 				tc.elements.SetBase(1243, 1);
 				if (blessed)
 				{
@@ -2431,16 +2479,16 @@ public class ActEffect : EClass
 			break;
 		case EffectId.Revive:
 		{
-			List<KeyValuePair<int, Chara>> list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList();
+			List<KeyValuePair<int, Chara>> list11 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList();
 			if (TC.IsPCFaction || TC.IsPCFactionMinion)
 			{
-				if (TC.IsPC && list3.Count == 0)
+				if (TC.IsPC && list11.Count == 0)
 				{
-					list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
+					list11 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
 				}
-				if (list3.Count > 0)
+				if (list11.Count > 0)
 				{
-					list3.RandomItem().Value.Chara.GetRevived();
+					list11.RandomItem().Value.Chara.GetRevived();
 					break;
 				}
 			}
@@ -2453,24 +2501,24 @@ public class ActEffect : EClass
 		case EffectId.DamageMindGreat:
 		case EffectId.Weaken:
 		{
-			bool flag10 = id == EffectId.DamageBody || id == EffectId.DamageBodyGreat;
+			bool flag9 = id == EffectId.DamageBody || id == EffectId.DamageBodyGreat;
 			bool mind = id == EffectId.DamageMind || id == EffectId.DamageMindGreat;
-			int num10 = ((id == EffectId.DamageBody || id == EffectId.DamageMind) ? 1 : (4 + EClass.rnd(4)));
+			int num18 = ((id == EffectId.DamageBody || id == EffectId.DamageMind) ? 1 : (4 + EClass.rnd(4)));
 			if (id == EffectId.Weaken)
 			{
-				flag10 = EClass.rnd(2) == 0;
-				mind = !flag10;
-				num10 = 1;
+				flag9 = EClass.rnd(2) == 0;
+				mind = !flag9;
+				num18 = 1;
 			}
 			else
 			{
 				TC.PlayEffect("debuff");
 				TC.PlaySound("debuff");
 			}
-			TC.Say(flag10 ? "damageBody" : "damageMind", TC);
-			for (int num11 = 0; num11 < num10; num11++)
+			TC.Say(flag9 ? "damageBody" : "damageMind", TC);
+			for (int num19 = 0; num19 < num18; num19++)
 			{
-				TC.DamageTempElements(power, flag10, mind, id != EffectId.Weaken);
+				TC.DamageTempElements(power, flag9, mind, id != EffectId.Weaken);
 			}
 			if (TC.IsPC)
 			{
@@ -2483,34 +2531,34 @@ public class ActEffect : EClass
 		case EffectId.EnhanceBodyGreat:
 		case EffectId.EnhanceMindGreat:
 		{
-			bool flag12 = id == EffectId.EnhanceBody || id == EffectId.EnhanceBodyGreat;
+			bool flag10 = id == EffectId.EnhanceBody || id == EffectId.EnhanceBodyGreat;
 			bool mind2 = id == EffectId.EnhanceMind || id == EffectId.EnhanceMindGreat;
 			if (id != EffectId.EnhanceBody && id != EffectId.EnhanceMind)
 			{
 				EClass.rnd(4);
 			}
-			TC.Say(flag12 ? "enhanceBody" : "enhanceMind", TC);
+			TC.Say(flag10 ? "enhanceBody" : "enhanceMind", TC);
 			TC.PlayEffect("buff");
 			TC.PlaySound("buff");
-			TC.EnhanceTempElements(power, flag12, mind2, onlyRenew: true);
+			TC.EnhanceTempElements(power, flag10, mind2, onlyRenew: true);
 			break;
 		}
 		case EffectId.RestoreBody:
 		case EffectId.RestoreMind:
 		{
-			bool flag9 = id == EffectId.RestoreBody;
+			bool flag12 = id == EffectId.RestoreBody;
 			if (flag)
 			{
-				Redirect(flag9 ? EffectId.DamageBodyGreat : EffectId.DamageMindGreat, BlessedState.Normal, default(ActRef));
+				Redirect(flag12 ? EffectId.DamageBodyGreat : EffectId.DamageMindGreat, BlessedState.Normal, default(ActRef));
 				break;
 			}
-			TC.Say(flag9 ? "restoreBody" : "restoreMind", TC);
+			TC.Say(flag12 ? "restoreBody" : "restoreMind", TC);
 			TC.PlaySound("heal");
 			TC.PlayEffect("heal");
-			TC.CureHost(flag9 ? CureType.CureBody : CureType.CureMind, power, state);
+			TC.CureHost(flag12 ? CureType.CureBody : CureType.CureMind, power, state);
 			if (blessed)
 			{
-				Redirect(flag9 ? EffectId.EnhanceBodyGreat : EffectId.EnhanceMindGreat, BlessedState.Normal, default(ActRef));
+				Redirect(flag12 ? EffectId.EnhanceBodyGreat : EffectId.EnhanceMindGreat, BlessedState.Normal, default(ActRef));
 			}
 			break;
 		}
@@ -2565,28 +2613,28 @@ public class ActEffect : EClass
 				Redirect(EffectId.CurseEQ, BlessedState.Normal, default(ActRef));
 				break;
 			}
-			IList<Condition> list4 = TC.conditions.Copy();
-			list4.Shuffle();
+			IList<Condition> list5 = TC.conditions.Copy();
+			list5.Shuffle();
 			CC.PlaySound("remove_hex");
 			CC.PlayEffect("remove_hex");
-			foreach (Condition item8 in list4)
+			foreach (Condition item9 in list5)
 			{
-				if (item8.Type != ConditionType.Debuff || item8.IsKilled)
+				if (item9.Type != ConditionType.Debuff || item9.IsKilled)
 				{
 					continue;
 				}
-				if (EClass.rnd(power * (CC.IsPowerful ? 5 : 2)) > EClass.rnd(item8.power) || (id == EffectId.RemoveHex && EClass.rnd(2) == 0))
+				if (EClass.rnd(power * (CC.IsPowerful ? 5 : 2)) > EClass.rnd(item9.power) || (id == EffectId.RemoveHex && EClass.rnd(2) == 0))
 				{
-					CC.Say("removeHex", TC, item8.Name.ToLower());
-					item8.Kill();
+					CC.Say("removeHex", TC, item9.Name.ToLower());
+					item9.Kill();
 				}
 				else
 				{
 					if (id == EffectId.RemoveHexAll)
 					{
-						item8.power /= 2;
+						item9.power /= 2;
 					}
-					CC.Say("removeHex_fail", TC, item8.Name.ToLower());
+					CC.Say("removeHex_fail", TC, item9.Name.ToLower());
 				}
 				if (id == EffectId.RemoveHex)
 				{
@@ -2621,11 +2669,11 @@ public class ActEffect : EClass
 				CC.SayNothingHappans();
 				break;
 			}
-			Chara chara2 = CharaGen.Create("baby");
-			chara2.c_altName = TC.c_altName ?? TC.source.GetName(TC);
+			Chara chara = CharaGen.Create("baby");
+			chara.c_altName = TC.c_altName ?? TC.source.GetName(TC);
 			TC.AddCondition(Condition.Create(power, delegate(ConTransmuteHuman con)
 			{
-				con.chara = chara2;
+				con.chara = chara;
 			}));
 			break;
 		}
@@ -2684,8 +2732,8 @@ public class ActEffect : EClass
 			if (TC.HasElement(1211))
 			{
 				TC.Say("drinkSaltWater_snail", TC);
-				int num22 = ((TC.hp > 10) ? (TC.hp - EClass.rnd(10)) : 10000);
-				TC.DamageHP(num22, AttackSource.None, CC);
+				int num16 = ((TC.hp > 10) ? (TC.hp - EClass.rnd(10)) : 10000);
+				TC.DamageHP(num16, AttackSource.None, CC);
 			}
 			else if (TC.IsPC)
 			{
@@ -2812,26 +2860,26 @@ public class ActEffect : EClass
 			{
 				TC.PlayEffect("buff");
 				TC.PlaySound("offering");
-				int num20 = TC.Evalue(1423);
-				if (num20 > 0)
+				int num23 = TC.Evalue(1423);
+				if (num23 > 0)
 				{
-					int num21 = 0;
-					if (flag && num20 > 1)
+					int num24 = 0;
+					if (flag && num23 > 1)
 					{
-						num21 = -1;
+						num24 = -1;
 					}
-					else if (num20 < 15)
+					else if (num23 < 15)
 					{
-						num21 = ((!blessed) ? 1 : 2);
-						if (num21 + num20 > 15)
+						num24 = ((!blessed) ? 1 : 2);
+						if (num24 + num23 > 15)
 						{
-							num21 = 1;
+							num24 = 1;
 						}
 					}
-					if (num21 != 0)
+					if (num24 != 0)
 					{
-						TC.SetFeat(1423, num20 + num21, msg: true);
-						TC.SetInt(134, TC.GetInt(134) + num21);
+						TC.SetFeat(1423, num23 + num24, msg: true);
+						TC.SetInt(134, TC.GetInt(134) + num24);
 					}
 				}
 			}
@@ -2879,10 +2927,10 @@ public class ActEffect : EClass
 			{
 				power /= 4;
 			}
-			List<Thing> list9 = TC.things.List((Thing thing8) => (thing8.Num <= 1 && thing8.IsEquipmentOrRanged && !thing8.IsToolbelt && !thing8.IsLightsource && thing8.isEquipped) ? true : false);
-			if (list9.Count != 0)
+			List<Thing> list8 = TC.things.List((Thing thing8) => (thing8.Num <= 1 && thing8.IsEquipmentOrRanged && !thing8.IsToolbelt && !thing8.IsLightsource && thing8.isEquipped) ? true : false);
+			if (list8.Count != 0)
 			{
-				Thing thing6 = list9.RandomItem();
+				Thing thing6 = list8.RandomItem();
 				TC.Say("acid_hit", TC);
 				if (thing6.isAcidproof)
 				{

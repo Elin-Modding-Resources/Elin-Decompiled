@@ -10502,7 +10502,7 @@ public class Chara : Card, IPathfindWalker
 			feat.Apply(-feat.Value, elements);
 		}
 		feat = elements.SetBase(id, value - (feat?.vSource ?? 0)) as Feat;
-		if (feat.Value != 0)
+		if (feat != null && feat.Value != 0)
 		{
 			feat.Apply(feat.Value, elements);
 		}
@@ -10515,39 +10515,42 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
-		if (feat.source.textInc.IsEmpty())
+		if (feat != null)
 		{
-			PlaySound("ding_skill");
-			Msg.SetColor(Msg.colors.Ding);
-			Say("gainFeat", this, feat.FullName);
-		}
-		else
-		{
-			bool flag = value < num;
-			if (feat.source.tag.Contains("neg"))
+			if (feat.source.textInc.IsEmpty())
 			{
-				flag = !flag;
+				PlaySound("ding_skill");
+				Msg.SetColor(Msg.colors.Ding);
+				Say("gainFeat", this, feat.FullName);
 			}
-			switch (id)
+			else
 			{
-			case 1270:
-				if (!flag)
+				bool flag = value < num;
+				if (feat.source.tag.Contains("neg"))
 				{
-					PlaySound("chime_angel");
+					flag = !flag;
 				}
-				break;
-			case 1271:
-				if (!flag)
+				switch (id)
 				{
-					PlaySound("chime_devil");
+				case 1270:
+					if (!flag)
+					{
+						PlaySound("chime_angel");
+					}
+					break;
+				case 1271:
+					if (!flag)
+					{
+						PlaySound("chime_devil");
+					}
+					break;
+				default:
+					PlaySound("mutation");
+					break;
 				}
-				break;
-			default:
-				PlaySound("mutation");
-				break;
+				Msg.SetColor(flag ? Msg.colors.Negative : Msg.colors.Ding);
+				Say((value > num) ? feat.source.GetText("textInc") : feat.source.GetText("textDec"), this, feat.FullName);
 			}
-			Msg.SetColor(flag ? Msg.colors.Negative : Msg.colors.Ding);
-			Say((value > num) ? feat.source.GetText("textInc") : feat.source.GetText("textDec"), this, feat.FullName);
 		}
 		elements.CheckSkillActions();
 	}

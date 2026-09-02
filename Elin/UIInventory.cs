@@ -745,7 +745,7 @@ public class UIInventory : EMono
 					{
 						data.columns = (int)num;
 						RefreshGrid();
-					}, 0f, 20f, isInt: true, hideOther: false);
+					}, 0f, EMono.core.config.ui.maxInvColumn, isInt: true, hideOther: false);
 				}
 				uIContextMenu6.AddButton("colorGrid", delegate
 				{

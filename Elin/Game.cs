@@ -502,9 +502,16 @@ public class Game : EClass
 		});
 		if (version.nightly)
 		{
-			if (EClass.game.quests.IsCompleted("into_darkness") && EClass.pc.body.GetSlot(46, onlyEmpty: false) == null)
+			if (EClass.game.quests.IsCompleted("into_darkness"))
 			{
-				CoreDebug._AddBodyPart(CoreDebug.BodyCode.relic);
+				if (EClass.pc.body.GetSlot(46, onlyEmpty: false) == null)
+				{
+					CoreDebug._AddBodyPart(CoreDebug.BodyCode.relic);
+				}
+				if (!player.recipes.IsKnown("relic_lesser") || EClass.debug.enable)
+				{
+					player.recipes.Add("relic_lesser");
+				}
 			}
 		}
 		else if (EClass.pc.body.GetSlot(46, onlyEmpty: false) != null)

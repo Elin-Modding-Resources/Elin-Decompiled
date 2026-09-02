@@ -144,5 +144,6 @@ public enum EffectId
 	Fuse = 320,
 	BlueDrag = 321,
 	Comet = 322,
-	Missile = 323
+	Missile = 323,
+	ResetFeat = 324
 }

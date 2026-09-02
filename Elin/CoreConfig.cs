@@ -391,6 +391,8 @@ public class CoreConfig : EClass
 
 		public int outlineAlpha;
 
+		public int maxInvColumn = 40;
+
 		public float ScrollSensitivity => baseScrollSens * scrollSens * scrollSens;
 	}
 
