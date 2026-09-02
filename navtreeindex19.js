@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitFertilizer_8cs.html":[2,0,0,1580],
 "TraitFertilizer_8cs_source.html":[2,0,0,1580],
 "TraitFiama_8cs.html":[2,0,0,1581],
 "TraitFiama_8cs_source.html":[2,0,0,1581],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitMerchantDye_8cs.html":[2,0,0,1704],
 "TraitMerchantDye_8cs_source.html":[2,0,0,1704],
 "TraitMerchantEcopo_8cs.html":[2,0,0,1705],
-"TraitMerchantEcopo_8cs_source.html":[2,0,0,1705],
-"TraitMerchantExotic_8cs.html":[2,0,0,1706]
+"TraitMerchantEcopo_8cs_source.html":[2,0,0,1705]
 };

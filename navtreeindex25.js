@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"Zone__Arena2_8cs.html":[2,0,0,2087],
 "Zone__Arena2_8cs_source.html":[2,0,0,2087],
 "Zone__Arena_8cs.html":[2,0,0,2086],
 "Zone__Arena_8cs_source.html":[2,0,0,2086],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classABILITY.html#a8aa04d3a9cc1f091358722d97a68e788":[1,0,11,77],
 "classABILITY.html#a8b063775d3de2c44ea41df8342a19f6e":[1,0,11,88],
 "classABILITY.html#a8b106c53b5a535ab0d3e2e6f3f5cb9f2":[1,0,11,121],
-"classABILITY.html#a8ce6024b8807f0cdb90e472f6a60d80d":[1,0,11,78],
-"classABILITY.html#a8d8b17d09a341f1bce1bf7f1f22fbe9e":[1,0,11,20]
+"classABILITY.html#a8ce6024b8807f0cdb90e472f6a60d80d":[1,0,11,78]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TileTypeBoat_8cs.html":[2,0,0,1339],
 "TileTypeBoat_8cs_source.html":[2,0,0,1339],
 "TileTypeBridgeDeco_8cs.html":[2,0,0,1341],
 "TileTypeBridgeDeco_8cs_source.html":[2,0,0,1341],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitBookResident_8cs.html":[2,0,0,1454],
 "TraitBookResident_8cs_source.html":[2,0,0,1454],
 "TraitBookRoster_8cs.html":[2,0,0,1455],
-"TraitBookRoster_8cs_source.html":[2,0,0,1455],
-"TraitBookSecret_8cs.html":[2,0,0,1456]
+"TraitBookRoster_8cs_source.html":[2,0,0,1455]
 };

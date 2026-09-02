@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"UISlider_8cs_source.html":[2,0,0,3,150],
 "UISong_8cs.html":[2,0,0,2020],
 "UISong_8cs_source.html":[2,0,0,2020],
 "UIText_8cs.html":[2,0,0,3,151],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dad104b77eb1b8269d6ad67c55fea641f2":[2,0,0,2,0,0,10,0,44],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dad2222ddc18747e01a7f1049a389ef4ee":[2,0,0,2,0,0,10,0,225],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dad23c607e300445f857d4da1ef37fc81e":[2,0,0,2,0,0,10,0,45],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dad27a84713a758d1ac105af3d7cdb849c":[2,0,0,2,0,0,10,0,98],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dad315ed182aec1fbaebb66fb43463cbc9":[2,0,0,2,0,0,10,0,66]
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dad27a84713a758d1ac105af3d7cdb849c":[2,0,0,2,0,0,10,0,98]
 };

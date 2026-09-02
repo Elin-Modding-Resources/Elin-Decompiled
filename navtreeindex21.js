@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"TraitScrollMap_8cs_source.html":[2,0,0,1828],
 "TraitScrollRandom_8cs.html":[2,0,0,1830],
 "TraitScrollRandom_8cs_source.html":[2,0,0,1830],
 "TraitScrollStatic_8cs.html":[2,0,0,1831],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "TraitTrapMine_8cs_source.html":[2,0,0,1951],
 "TraitTrapSister_8cs.html":[2,0,0,1952],
 "TraitTrapSister_8cs_source.html":[2,0,0,1952],
-"TraitTrap_8cs.html":[2,0,0,1950],
-"TraitTrap_8cs_source.html":[2,0,0,1950]
+"TraitTrap_8cs.html":[2,0,0,1950]
 };

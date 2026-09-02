@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"SpriteVertexPositionChanger_8cs.html":[2,0,0,3,0,6],
 "SpriteVertexPositionChanger_8cs_source.html":[2,0,0,3,0,6],
 "StanceFury_8cs.html":[2,0,0,1236],
 "StanceFury_8cs_source.html":[2,0,0,1236],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TileTypeBlockShip_8cs.html":[2,0,0,1338],
 "TileTypeBlockShip_8cs_source.html":[2,0,0,1338],
 "TileTypeBlock_8cs.html":[2,0,0,1335],
-"TileTypeBlock_8cs_source.html":[2,0,0,1335],
-"TileTypeBoat_8cs.html":[2,0,0,1339]
+"TileTypeBlock_8cs_source.html":[2,0,0,1335]
 };

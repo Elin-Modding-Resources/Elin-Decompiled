@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa434f90146c7c910f3fb5035bb615f42":[2,0,0,1163,0,54],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbab7beed125a75ff65d74424407f05e8b1":[2,0,0,1163,0,45],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabb3a8b2e390142074e49741a0121d623":[2,0,0,1163,0,13],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabc41f23d09a7ce1b7b00ea49558889b6":[2,0,0,1163,0,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "SpriteReplacer_8cs.html#ae5a705b165a78f6de5e375f0fd1b9442":[2,0,0,1234,1],
 "SpriteReplacer_8cs_source.html":[2,0,0,1234],
 "SpriteSheet_8cs.html":[2,0,0,2,82],
-"SpriteSheet_8cs_source.html":[2,0,0,2,82],
-"SpriteVertexPositionChanger_8cs.html":[2,0,0,3,0,6]
+"SpriteSheet_8cs_source.html":[2,0,0,2,82]
 };

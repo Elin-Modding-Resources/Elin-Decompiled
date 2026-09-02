@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitMerchantExotic_8cs.html":[2,0,0,1706],
 "TraitMerchantExotic_8cs_source.html":[2,0,0,1706],
 "TraitMerchantFestival_8cs.html":[2,0,0,1707],
 "TraitMerchantFestival_8cs_source.html":[2,0,0,1707],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "TraitScratchMachine_8cs_source.html":[2,0,0,1826],
 "TraitScrollMapTreasure_8cs.html":[2,0,0,1829],
 "TraitScrollMapTreasure_8cs_source.html":[2,0,0,1829],
-"TraitScrollMap_8cs.html":[2,0,0,1828],
-"TraitScrollMap_8cs_source.html":[2,0,0,1828]
+"TraitScrollMap_8cs.html":[2,0,0,1828]
 };

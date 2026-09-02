@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"RefZone_8cs_source.html":[2,0,0,1088],
 "RefractionProfile_8cs.html":[2,0,0,1086],
 "RefractionProfile_8cs_source.html":[2,0,0,1086],
 "RegionPoint_8cs.html":[2,0,0,1090],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9aa969112e78614681f82bfa2c717532":[2,0,0,1163,0,47],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9b2cfa29e7882e3649d5f3b9921afdb0":[2,0,0,1163,0,3],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9d9ef66602c769c6b3ac7cacf678642b":[2,0,0,1163,0,8],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa0fb939f13240e5798b102af79c67f12":[2,0,0,1163,0,51],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa434f90146c7c910f3fb5035bb615f42":[2,0,0,1163,0,54]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa0fb939f13240e5798b102af79c67f12":[2,0,0,1163,0,51]
 };

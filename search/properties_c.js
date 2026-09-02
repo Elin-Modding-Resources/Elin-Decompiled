@@ -19,8 +19,8 @@ var searchData=
   ['lasttravelzone_16',['LastTravelZone',['../classPlayer.html#a7b68c557039eb790b1a9de7221774b80',1,'Player']]],
   ['lastwavebonus_17',['LastWaveBonus',['../classQuestDefenseGame.html#a250135b3fe3610c4b4fd552a9cd85bec',1,'QuestDefenseGame']]],
   ['lastyear_18',['lastYear',['../classNumLog.html#afa9497e66d47c7553bd0043bc8784ab5',1,'NumLog']]],
-  ['lastzone_19',['LastZone',['../classPlayer.html#a1a5a0a648b9048ecbb8b30019e1f27a4',1,'Player']]],
-  ['lastzone_20',['lastZone',['../classZoneTransition.html#a51da688f2a1cddd01e4a719c1f6e4e68',1,'ZoneTransition']]],
+  ['lastzone_19',['lastZone',['../classZoneTransition.html#a51da688f2a1cddd01e4a719c1f6e4e68',1,'ZoneTransition']]],
+  ['lastzone_20',['LastZone',['../classPlayer.html#a1a5a0a648b9048ecbb8b30019e1f27a4',1,'Player']]],
   ['law_21',['law',['../classBiography.html#a3bb56e1ad21273b11818c7b5c5025780',1,'Biography']]],
   ['layer_22',['layer',['../classBaseListPeople.html#a4a4323f882aec694e714f8635c4dcd24',1,'BaseListPeople.layer()'],['../classDramaEvent.html#a37eb2afbe33234c9c0e40d18f20bdfa2',1,'DramaEvent.layer()'],['../classLayerEditPlaylist_1_1ListBGM.html#a48366d4c793cdf440f0bebe8ee666fbc',1,'LayerEditPlaylist.ListBGM.layer()']]],
   ['layoutitems_23',['layoutItems',['../classUIList.html#a12340bf0c11a2627c87297b76de3d80d',1,'UIList']]],
@@ -63,9 +63,10 @@ var searchData=
   ['loytelmartlv_60',['loytelMartLv',['../classPlayer_1_1Flags.html#ae90e608b09597b709bc72706172c887c',1,'Player::Flags']]],
   ['luc_61',['LUC',['../classCard.html#a88b1b202f7cad1aa238a208e2856f526',1,'Card']]],
   ['lutz_62',['lutz',['../classPlayer_1_1Flags.html#a0b567467c683121a6480a84bd95ad1df',1,'Player::Flags']]],
-  ['lv_63',['lv',['../classDNA.html#adfb34f03aed4136bc55310323f67d792',1,'DNA.lv()'],['../classSpatial.html#a12267d80d357d59863cbbcf3da43a458',1,'Spatial.lv()'],['../classSerializedCards_1_1Data.html#a6e94e8e92c5bc226ec3c55bd6b90555c',1,'SerializedCards.Data.lv()']]],
+  ['lv_63',['lv',['../classSpatial.html#a12267d80d357d59863cbbcf3da43a458',1,'Spatial']]],
   ['lv_64',['LV',['../classTraitLoytelMart.html#a8b9bf8210dd4b20439d69ec381794ef7',1,'TraitLoytelMart.LV()'],['../classCard.html#af7ba822509d0724e71b6b84bce16642e',1,'Card.LV()']]],
-  ['lvboss_65',['LvBoss',['../classZone__CaveMonster.html#a942a8ea3e1cd4862d7b8e576702c4df3',1,'Zone_CaveMonster.LvBoss()'],['../classZone__DungeonFairy.html#a7ee1adb0ead69afc560ecb4aabf4088c',1,'Zone_DungeonFairy.LvBoss()'],['../classZone__Gathering.html#ad63be820bfa64bc81df786314c3989de',1,'Zone_Gathering.LvBoss()'],['../classZone__Nymelle.html#ad589cd82fce3ebb1f6276d613f2a0b4d',1,'Zone_Nymelle.LvBoss()'],['../classZone__RandomDungeon.html#a0a7be9d55d0f9cce17fe0b3723827761',1,'Zone_RandomDungeon.LvBoss()']]],
-  ['lvcrystal_66',['LvCrystal',['../classZone__Nymelle.html#a20bbcf057452bbe0f29e01dcffda1db6',1,'Zone_Nymelle']]],
-  ['lvpoppy_67',['LvPoppy',['../classZone__DungeonPuppy.html#a8a27d73305e75d974abe5fd0570c7800',1,'Zone_DungeonPuppy']]]
+  ['lv_65',['lv',['../classSerializedCards_1_1Data.html#a6e94e8e92c5bc226ec3c55bd6b90555c',1,'SerializedCards.Data.lv()'],['../classDNA.html#adfb34f03aed4136bc55310323f67d792',1,'DNA.lv()']]],
+  ['lvboss_66',['LvBoss',['../classZone__CaveMonster.html#a942a8ea3e1cd4862d7b8e576702c4df3',1,'Zone_CaveMonster.LvBoss()'],['../classZone__DungeonFairy.html#a7ee1adb0ead69afc560ecb4aabf4088c',1,'Zone_DungeonFairy.LvBoss()'],['../classZone__Gathering.html#ad63be820bfa64bc81df786314c3989de',1,'Zone_Gathering.LvBoss()'],['../classZone__Nymelle.html#ad589cd82fce3ebb1f6276d613f2a0b4d',1,'Zone_Nymelle.LvBoss()'],['../classZone__RandomDungeon.html#a0a7be9d55d0f9cce17fe0b3723827761',1,'Zone_RandomDungeon.LvBoss()']]],
+  ['lvcrystal_67',['LvCrystal',['../classZone__Nymelle.html#a20bbcf057452bbe0f29e01dcffda1db6',1,'Zone_Nymelle']]],
+  ['lvpoppy_68',['LvPoppy',['../classZone__DungeonPuppy.html#a8a27d73305e75d974abe5fd0570c7800',1,'Zone_DungeonPuppy']]]
 ];

@@ -145,6 +145,7 @@ var EffectId_8cs =
       [ "Fuse", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa7513661ae079a868d2986c7aed2d913", null ],
       [ "BlueDrag", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a64e50e029b869a0068df3db2578d36e2", null ],
       [ "Comet", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ab9a8503552f9f7e1e1bc4a0ba9902594", null ],
-      [ "Missile", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae6eb77b6edb5a7aa5ddff07dd6d4f7b1", null ]
+      [ "Missile", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae6eb77b6edb5a7aa5ddff07dd6d4f7b1", null ],
+      [ "ResetFeat", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ad112d6508d65c5c7e38db966571115c1", null ]
     ] ]
 ];

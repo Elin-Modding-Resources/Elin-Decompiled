@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"PropSetCategory_8cs_source.html":[2,0,0,983],
 "PropSet_8cs.html":[2,0,0,982],
 "PropSet_8cs_source.html":[2,0,0,982],
 "PropsInstalled_8cs.html":[2,0,0,984],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "RefFaction_8cs_source.html":[2,0,0,1085],
 "RefReligion_8cs.html":[2,0,0,1087],
 "RefReligion_8cs_source.html":[2,0,0,1087],
-"RefZone_8cs.html":[2,0,0,1088],
-"RefZone_8cs_source.html":[2,0,0,1088]
+"RefZone_8cs.html":[2,0,0,1088]
 };

@@ -14,6 +14,7 @@ var classCoreConfig_1_1UISetting =
     [ "defaultTheme", "classCoreConfig_1_1UISetting.html#a1910f238c7a657d899096e24eb178338", null ],
     [ "dynamicBrightness", "classCoreConfig_1_1UISetting.html#ad8932634a630c94c46f526d206303b49", null ],
     [ "dynamicBrightnessMod", "classCoreConfig_1_1UISetting.html#a1a496712bbae62495e0eda86669b05e4", null ],
+    [ "maxInvColumn", "classCoreConfig_1_1UISetting.html#acaa18e09054e21b3c62e29adf632560e", null ],
     [ "mouseDragMargin", "classCoreConfig_1_1UISetting.html#a2374b60e26ce8dd95be2768eb31e553e", null ],
     [ "openLastTab", "classCoreConfig_1_1UISetting.html#abb81ec9073fd7e06a58445df95402e82", null ],
     [ "outlineAlpha", "classCoreConfig_1_1UISetting.html#aa8ca49b829e5b0244c73606cd12421cc", null ],
