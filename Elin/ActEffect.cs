@@ -2375,12 +2375,15 @@ public class ActEffect : EClass
 			int num10 = 0;
 			foreach (Element item8 in list3)
 			{
-				for (int num11 = 0; num11 < item8.vBase; num11++)
+				int dNABonus = item8.GetDNABonus(EClass.pc);
+				if (dNABonus < item8.vBase)
 				{
-					num10 += item8.source.cost.TryGet(num11);
+					for (int num11 = 0; num11 < item8.vBase - dNABonus; num11++)
+					{
+						num10 += item8.source.cost.TryGet(num11);
+					}
+					EClass.pc.SetFeat(item8.id, dNABonus);
 				}
-				item8.vBase = 0;
-				EClass.pc.SetFeat(item8.Value, 0);
 			}
 			EClass.pc.feat += num10;
 			EClass.pc.Refresh();

@@ -65,6 +65,7 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 	public static void MakeBaby(Chara c, int baby)
 	{
 		c.SetFeat(1232, baby, msg: true);
+		c.isScaled = true;
 		switch (c.id)
 		{
 		case "putty_snow":

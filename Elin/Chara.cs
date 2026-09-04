@@ -5444,7 +5444,7 @@ public class Chara : Card, IPathfindWalker
 				MoveZone(homeZone);
 			}
 		}
-		else if (!EClass._zone.IsPCFaction || homeBranch != EClass.Branch || base.c_wasInPcParty)
+		else if ((!EClass._zone.IsPCFaction || homeBranch != EClass.Branch || base.c_wasInPcParty) && EClass._zone.events.GetEvent<ZoneEventWedding>() == null)
 		{
 			EClass.pc.party.AddMemeber(this, showMsg: true);
 		}
@@ -10473,13 +10473,17 @@ public class Chara : Card, IPathfindWalker
 		corruption = num4 * 100 + corruption % 100;
 	}
 
-	public List<Element> ListAvailabeFeats(bool pet = false, bool showAll = false)
+	public List<Element> ListAvailabeFeats(bool pet = false, bool showAll = false, bool purchaseFeat = false)
 	{
 		List<Element> list = new List<Element>();
 		foreach (SourceElement.Row item in EClass.sources.elements.rows.Where((SourceElement.Row a) => a.group == "FEAT" && a.cost[0] != -1 && !a.categorySub.IsEmpty()))
 		{
 			Feat feat = elements.GetOrCreateElement(item.id) as Feat;
 			int num = ((feat.ValueWithoutLink <= 0) ? 1 : (feat.ValueWithoutLink + 1));
+			if (purchaseFeat)
+			{
+				num -= feat.GetDNABonus(this);
+			}
 			if (num <= feat.source.max && !feat.HasTag("class") && !feat.HasTag("hidden") && !feat.HasTag("innate") && (!pet || !feat.HasTag("noPet")) && (showAll || feat.IsPurchaseFeatReqMet(elements)))
 			{
 				list.Add(Element.Create(feat.id, num) as Feat);
@@ -10492,6 +10496,14 @@ public class Chara : Card, IPathfindWalker
 	{
 		Feat feat = elements.GetElement(id) as Feat;
 		int num = 0;
+		if (feat == null)
+		{
+			Debug.Log("1: null/" + EClass.sources.elements.map[id].id);
+		}
+		else
+		{
+			Debug.Log("1:" + feat.Name + "/" + feat.Value);
+		}
 		if (feat != null && feat.Value > 0)
 		{
 			if (value == feat.Value)
@@ -10502,6 +10514,14 @@ public class Chara : Card, IPathfindWalker
 			feat.Apply(-feat.Value, elements);
 		}
 		feat = elements.SetBase(id, value - (feat?.vSource ?? 0)) as Feat;
+		if (feat == null)
+		{
+			Debug.Log("1: null" + EClass.sources.elements.map[id].id);
+		}
+		else
+		{
+			Debug.Log("1:" + feat.Name + "/" + feat.Value);
+		}
 		if (feat != null && feat.Value != 0)
 		{
 			feat.Apply(feat.Value, elements);

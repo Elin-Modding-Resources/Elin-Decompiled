@@ -265,7 +265,10 @@ public class CharaBody : EClass
 			thing.c_DNA.Apply(owner, reverse: false);
 			Msg.Say("equip_relic");
 			owner.feat -= thing.c_DNA.cost;
-			thing.SetBool(135, enable: true);
+			if (!EClass.debug.enable)
+			{
+				thing.SetBool(135, enable: true);
+			}
 		}
 		if (owner.IsPC)
 		{

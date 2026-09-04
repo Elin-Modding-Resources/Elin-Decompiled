@@ -120,23 +120,26 @@ public class AI_Shear : AI_TargetCard
 		int furLv = GetFurLv(c);
 		string text = "fiber";
 		string idMat = "wool";
-		string text2 = c.id;
-		if (!(text2 == "putty_snow"))
+		switch (c.id)
 		{
-			if (text2 == "putty_snow_gold")
-			{
-				idMat = "gold";
-			}
-			else if (!c.Chara.race.fur.IsEmpty())
+		case "putty_snow":
+			idMat = "cashmere";
+			break;
+		case "putty_snow_gold":
+			idMat = "gold";
+			break;
+		case "putty_forest":
+			text = "leaf_palulu";
+			idMat = "grass";
+			break;
+		default:
+			if (!c.Chara.race.fur.IsEmpty())
 			{
 				string[] array = c.Chara.race.fur.Split('/');
 				text = array[0];
 				idMat = array[1];
 			}
-		}
-		else
-		{
-			idMat = "cashmere";
+			break;
 		}
 		Thing thing = ThingGen.Create(text, idMat);
 		int num = mod * furLv + furLv * furLv * 10;

@@ -528,6 +528,34 @@ public class Element : EClass
 		return false;
 	}
 
+	public int GetDNABonus(Chara c)
+	{
+		int num = 0;
+		foreach (BodySlot slot in c.body.slots)
+		{
+			if (slot.thing != null && slot.thing.c_DNA != null)
+			{
+				Element element = slot.thing.c_DNA.GetElement(id);
+				if (element != null)
+				{
+					num += element.Value;
+				}
+			}
+		}
+		if (c.c_genes != null)
+		{
+			foreach (DNA item in c.c_genes.items)
+			{
+				Element element2 = item.GetElement(id);
+				if (element2 != null)
+				{
+					num += element2.Value;
+				}
+			}
+		}
+		return num;
+	}
+
 	public Element GetParent(Card c)
 	{
 		if (!source.aliasParent.IsEmpty())

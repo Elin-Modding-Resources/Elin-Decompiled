@@ -745,6 +745,18 @@ public class DNA : EClass
 		return -1;
 	}
 
+	public Element GetElement(int id)
+	{
+		for (int i = 0; i < vals.Count; i += 2)
+		{
+			if (vals[i] == id)
+			{
+				return Element.Create(vals[i], vals[i + 1]);
+			}
+		}
+		return null;
+	}
+
 	public void ReplaceBodySlot(int slot)
 	{
 		for (int i = 0; i < vals.Count; i += 2)

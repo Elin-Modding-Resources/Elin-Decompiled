@@ -3075,7 +3075,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return this;
 		}
-		isScaled = true;
+		if (!isScaled && flag && LV >= 50)
+		{
+			isScaled = true;
+		}
 		Rand.SetSeed(uid);
 		ElementContainer elementContainer = new ElementContainer();
 		elementContainer.ApplyElementMap(uid, SourceValueType.Chara, Chara.job.elementMap, LV);
@@ -8410,12 +8413,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return false;
 		}
-		string text = id;
-		if (text == "putty_snow" || text == "putty_snow_gold")
+		switch (id)
 		{
+		case "putty_snow":
+		case "putty_snow_gold":
+		case "putty_forest":
 			return true;
+		default:
+			return !Chara.race.fur.IsEmpty();
 		}
-		return !Chara.race.fur.IsEmpty();
 	}
 
 	public bool CanBeSheared()

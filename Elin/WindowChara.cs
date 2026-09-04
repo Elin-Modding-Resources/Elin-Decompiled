@@ -844,7 +844,7 @@ public class WindowChara : WindowController
 						Dialog.YesNo("dialogBuyFeat".lang(a.CostLearn.ToString() ?? "", a.FullName), delegate
 						{
 							EClass.pc.feat -= a.CostLearn;
-							EClass.pc.SetFeat(a.id, a.Value, msg: true);
+							EClass.pc.SetFeat(a.id, a.Value + a.GetDNABonus(EClass.pc), msg: true);
 							RefreshSkill(idTab);
 							RefreshFeatMode();
 							RefreshStatic();
@@ -858,7 +858,7 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item10 in chara.ListAvailabeFeats(pet: false, EClass.game.config.showAllFeat))
+					foreach (Element item10 in chara.ListAvailabeFeats(pet: false, EClass.game.config.showAllFeat, purchaseFeat: true))
 					{
 						if (item10.source.categorySub == idSubCat)
 						{
