@@ -1,5 +1,7 @@
 var NAVTREEINDEX149 =
 {
+"classZone__CurryRuin.html#a22bb2999143dfdccc71bdf70a19dfa61":[1,0,2261,0],
+"classZone__CurryRuinDungeon.html":[1,0,2262],
 "classZone__CurryRuinDungeon.html#a1eec69ec63820f03e47334e8911299ca":[1,0,2262,1],
 "classZone__CurryRuinDungeon.html#a61b76cff49c8fd4286aaafdf7f771770":[1,0,2262,0],
 "classZone__CurryRuinDungeon.html#a6ac05ad59a87aa78c6ecb17174266577":[1,0,2262,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX149 =
 "classZone__Tent.html#a48b4536cd96758c79b05d6e0722dd326":[1,0,2321,8],
 "classZone__Tent.html#a6484546f24573da063c04e6c8f95563b":[1,0,2321,5],
 "classZone__Tent.html#a67166219131214f0bc53d365bec1a119":[1,0,2321,1],
-"classZone__Tent.html#a7e20c2d2cfbf3afc409c476da9b1bfa1":[1,0,2321,4],
-"classZone__Tent.html#a948c963b9ff815c5e7d193db78af0ed6":[1,0,2321,0],
-"classZone__Tent.html#aa6c1a362309031bcadf96500d8a27cb4":[1,0,2321,7]
+"classZone__Tent.html#a7e20c2d2cfbf3afc409c476da9b1bfa1":[1,0,2321,4]
 };

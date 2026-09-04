@@ -12,6 +12,7 @@ var classElement =
     [ "Get", "classElement.html#a45f91ccb1f460e77365964d80c24f3ba", null ],
     [ "GetCost", "classElement.html#a8ef0315fd456856fc442d460c5f7e310", null ],
     [ "GetDetail", "classElement.html#ac5cae304f4459e17b25fc9e87ebd958b", null ],
+    [ "GetDNABonus", "classElement.html#a0635968f674d1e81701cb92aa8667402", null ],
     [ "GetElementMap", "classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0", null ],
     [ "GetElementMap", "classElement.html#a604b0774000784f322c54d8f64964af6", null ],
     [ "GetIcon", "classElement.html#a4c736532f2dbff4037fee4dfba0be948", null ],

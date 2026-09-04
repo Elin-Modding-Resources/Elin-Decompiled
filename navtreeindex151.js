@@ -1,5 +1,7 @@
 var NAVTREEINDEX151 =
 {
+"interfaceICardParent.html#adb41e4e345432f3b206bb36d2e0b130d":[1,0,743,2],
+"interfaceICardParent.html#aeb6336ce4e60d5dd104dfa2a18c316be":[1,0,743,1],
 "interfaceICardParent.html#af2c73f4a0e87b8f4eb68d3113c486b1b":[1,0,743,0],
 "interfaceIChangeLanguage.html":[1,0,744],
 "interfaceIChangeLanguage.html#a99c5e19f621da36834aa3ec4e7b0636c":[1,0,744,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX151 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8bc2da5a051e6f39345468fbc380d5ef":[0,4,3,0,8,38],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8c7e7b83aaddcdfd7dd6b1a7699ece17":[0,4,3,0,8,160],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8d5268aacb23ad721e80e09955fd79a4":[0,4,3,0,8,222],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8f47b12600764747dc431fe3faa40c3b":[0,4,3,0,8,99],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8faf0cb9e4aad2db65d94b52a124ddc5":[0,4,3,0,8,190],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9108551babda1ec212411e16c669e031":[0,4,3,0,8,151]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8f47b12600764747dc431fe3faa40c3b":[0,4,3,0,8,99]
 };

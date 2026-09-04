@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"classInvOwnerShop.html#a835844e1ce779851f40e7a16ee08bb8f":[1,0,794,2],
+"classInvOwnerShop.html#acf5739c2a9e8be6555afadda1240bb72":[1,0,794,3],
 "classInvOwnerShop.html#ae7dc64e89add642d82d3e514e561599d":[1,0,794,0],
 "classInvOwnerToolbelt.html":[1,0,795],
 "classInvOwnerToolbelt.html#a311ebe3661659cc2b901bb79c720f483":[1,0,795,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "classLang.html#ad7ad8362b2039eafb6faf37108395afea24d22e03afb23edb45c6c8cfa16a280e":[1,0,833,1,1],
 "classLang.html#ad7ad8362b2039eafb6faf37108395afea6adf97f83acf6453d4a6a4b1070f3754":[1,0,833,1,0],
 "classLang.html#ad7ad8362b2039eafb6faf37108395afeaaa85f1840e282d8a8304dbc2c0d7c9b2":[1,0,833,1,2],
-"classLang.html#ada42353e8636a1085ec2f851e7b3c403":[1,0,833,27],
-"classLang.html#ae13a80dd1ff1b89239a18781b2e0d2ca":[1,0,833,14],
-"classLang.html#ae68ced98bb5ad8d8f206f4905b790653":[1,0,833,29]
+"classLang.html#ada42353e8636a1085ec2f851e7b3c403":[1,0,833,27]
 };

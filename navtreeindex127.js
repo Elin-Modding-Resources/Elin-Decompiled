@@ -1,5 +1,7 @@
 var NAVTREEINDEX127 =
 {
+"classTraitFigure.html#a8444d988cf072d1da015423790978202":[1,0,1691,6],
+"classTraitFigure.html#a96d673649e59ad682e39429f8678c0df":[1,0,1691,5],
 "classTraitFigure.html#ab82e086783ec1852f9a84e30f1318e1f":[1,0,1691,0],
 "classTraitFigure.html#acb69872b10382097eb6fed68bf77af8c":[1,0,1691,4],
 "classTraitFigure.html#aee15d2a35dbde8a92a90011db74f4e25":[1,0,1691,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada":[1,0,1761,1],
 "classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64":[1,0,1761,7],
 "classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945":[1,0,1761,9],
-"classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1761,3],
-"classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1761,6],
-"classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1761,4]
+"classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1761,3]
 };

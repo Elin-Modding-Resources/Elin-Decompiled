@@ -22,6 +22,7 @@ var classDNA =
     [ "GenerateWithGene", "classDNA.html#a486b70a2fb81c649e8dd25e7056ca90c", null ],
     [ "GetBodySlot", "classDNA.html#ae3e34017a91effe5106c7bbee6413d37", null ],
     [ "GetDurationHour", "classDNA.html#acbd34a14220b8e2825d5b640678faa93", null ],
+    [ "GetElement", "classDNA.html#ad80e173cd4894c6369e8203a3292f670", null ],
     [ "GetInvalidAction", "classDNA.html#aec17830c7c1556f9ad585e898cf91a1f", null ],
     [ "GetInvalidFeat", "classDNA.html#a5353f789b3e4eed6950de51a24d52ffc", null ],
     [ "GetMaterialId", "classDNA.html#ab8d17312383a69af22ff757f76bf5900", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX134 =
 {
+"classTypewriter.html#a6a758a279ad78409a7e076d4b08b0db1":[1,0,2096,9],
+"classTypewriter.html#a708664125b0be047eb168400b4c0e255":[1,0,2096,4],
 "classTypewriter.html#a76992c1aaa1ffd9de48b46b29a071923":[1,0,2096,2],
 "classTypewriter.html#a7e1f0510246f9d1ec9cac4dbe2a1eebd":[1,0,2096,7],
 "classTypewriter.html#aa827be6c2a945626cc1ed21f4e7cb4b0":[1,0,2096,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX134 =
 "classUIBook_1_1Item.html#afa31d2e9ce3c2ce094c79ff86b027b46":[1,0,2116,0,1],
 "classUIBook_1_1Item.html#afd69db20c34266b995c3a860a61b32e9":[1,0,2116,0,0],
 "classUIBook_1_1Page.html":[1,0,2116,1],
-"classUIBook_1_1Page.html#a09836dc13dd565ef4a369bc91f86f246":[1,0,2116,1,1],
-"classUIBook_1_1Page.html#a19b7415dc3cbcd9b792b86774b74f9e1":[1,0,2116,1,2],
-"classUIBook_1_1Page.html#aa993751efd5c66814ae73372bf004ae0":[1,0,2116,1,3]
+"classUIBook_1_1Page.html#a09836dc13dd565ef4a369bc91f86f246":[1,0,2116,1,1]
 };

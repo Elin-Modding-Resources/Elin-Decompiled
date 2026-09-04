@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"classQuest.html#a192e8346076b6d531aa1cdfb0b6f98ca":[1,0,1062,66],
+"classQuest.html#a1943af00af484e18698696bc9e3afc61":[1,0,1062,87],
 "classQuest.html#a1b9fd7957fc34d96096ecb429b1a4ba6":[1,0,1062,63],
 "classQuest.html#a1faedf8ae29a705f8899640fdae49360":[1,0,1062,33],
 "classQuest.html#a217a870eaef419b26ab35fc5b0805910":[1,0,1062,69],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "classQuestFarrisSister.html":[1,0,1079],
 "classQuestFarrisSister.html#a889fd39e8b2c3fa57595f9288b77130f":[1,0,1079,0],
 "classQuestFiamaLock.html":[1,0,1080],
-"classQuestFiamaLock.html#a34943052fe9042089c74d24672f860e4":[1,0,1080,1],
-"classQuestFiamaLock.html#a4478d856bb84ffb2bbe72bf4dd0e792b":[1,0,1080,0],
-"classQuestGuild.html":[1,0,1081]
+"classQuestFiamaLock.html#a34943052fe9042089c74d24672f860e4":[1,0,1080,1]
 };

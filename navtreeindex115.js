@@ -1,5 +1,7 @@
 var NAVTREEINDEX115 =
 {
+"classSourceZoneAffix_1_1Row.html#ad1eed670b5e72139e7862378c7a475a1":[1,0,1319,0,2],
+"classSourceZoneAffix_1_1Row.html#adf69a48a1f0347e168d900328e956c99":[1,0,1319,0,0],
 "classSourceZoneAffix_1_1Row.html#ae406adebbb2446e844e32ef0e7809e36":[1,0,1319,0,6],
 "classSourceZone_1_1Row.html":[1,0,1318,0],
 "classSourceZone_1_1Row.html#a096055e24044c004e8b6e30047aec4e5":[1,0,1318,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX115 =
 "classSpriteBasedLaser.html#a3c56bad363db327232bf2f58fcc0f81f":[1,0,1333,14],
 "classSpriteBasedLaser.html#a3d39daca9e998038a45f766d5f84a913":[1,0,1333,38],
 "classSpriteBasedLaser.html#a40f2834c526bb4f0ac65e149ed65726f":[1,0,1333,32],
-"classSpriteBasedLaser.html#a41998771267522776d775b91175c1c31":[1,0,1333,42],
-"classSpriteBasedLaser.html#a42c13b56cb163b1d73a912c09871ad89":[1,0,1333,1],
-"classSpriteBasedLaser.html#a43fe3534b2e581601993e09a1d80df68":[1,0,1333,18]
+"classSpriteBasedLaser.html#a41998771267522776d775b91175c1c31":[1,0,1333,42]
 };

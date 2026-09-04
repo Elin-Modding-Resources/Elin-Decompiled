@@ -23,7 +23,7 @@ var searchData=
   ['list_3c_20tvalue_20_3e_20',['List&lt; TValue &gt;',['../classDialog.html#a2f377332fb98f9e875ab996ba015aae0',1,'Dialog']]],
   ['listage_21',['ListAge',['../classUICharaMaker.html#ac34af949b3e9345fa7296329bfbe79bb',1,'UICharaMaker']]],
   ['listalias_22',['ListAlias',['../classUICharaMaker.html#abdfa82550ce94940dfed0af709be376b',1,'UICharaMaker']]],
-  ['listavailabefeats_23',['ListAvailabeFeats',['../classChara.html#a7d40369ecde8a844548d10e8432a7dd0',1,'Chara']]],
+  ['listavailabefeats_23',['ListAvailabeFeats',['../classChara.html#a1bd22cd88e2b89f89c07dfb59d151230',1,'Chara']]],
   ['listbestattributes_24',['ListBestAttributes',['../classElementContainer.html#ac62364ea18c1b7d47a5a843035470bec',1,'ElementContainer']]],
   ['listbestskills_25',['ListBestSkills',['../classElementContainer.html#aae6af3f16e4db24da44b8d8184ada319',1,'ElementContainer']]],
   ['listcards_26',['ListCards',['../classPoint.html#a256787e4a6e7438db25289f56e618463',1,'Point']]],

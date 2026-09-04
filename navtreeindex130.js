@@ -1,5 +1,7 @@
 var NAVTREEINDEX130 =
 {
+"classTraitPhone.html#ade162582ff883a09c05beea2e5a45557":[1,0,1875,3],
+"classTraitPhoto.html":[1,0,1876],
 "classTraitPhoto.html#ad4c423b12256d4e26950e812ec93579e":[1,0,1876,0],
 "classTraitPillow.html":[1,0,1877],
 "classTraitPillowEhekatl.html":[1,0,1878],
@@ -247,7 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitScroll.html#af9a2497cf6c86cfd800d295aae53061d":[1,0,1935,3],
 "classTraitScroll.html#afd7a0040e801c53bac9e70d29fd078e2":[1,0,1935,5],
 "classTraitScrollMap.html":[1,0,1936],
-"classTraitScrollMap.html#a0904a0579abb4d0c7bd18be934cd277b":[1,0,1936,7],
-"classTraitScrollMap.html#a15d370c2fb3c3e6c7c90ed717086eb68":[1,0,1936,4],
-"classTraitScrollMap.html#a1bb1825d5b45d557376237e9c242742b":[1,0,1936,3]
+"classTraitScrollMap.html#a0904a0579abb4d0c7bd18be934cd277b":[1,0,1936,7]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX73 =
 {
+"classGoalNeeds.html":[1,0,636],
+"classGoalNeeds.html#a29b9a480db89cd1e3909ee2724882c81":[1,0,636,0],
 "classGoalSearch.html":[1,0,637],
 "classGoalSearch.html#a074f142940ca9d2acaaba53ea31f3e3e":[1,0,637,0],
 "classGoalSearch.html#a885afe6c04988f4f300229da758ee4b4":[1,0,637,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX73 =
 "classGrowSystemRose.html":[1,0,667],
 "classGrowSystemRose.html#a0d4aaf525dfaffbe1cda43b3c55bd77a":[1,0,667,0],
 "classGrowSystemSeaweed.html":[1,0,668],
-"classGrowSystemSeaweed.html#a358baa8648cbac870a12028446c9345e":[1,0,668,0],
-"classGrowSystemSeaweed.html#a43843be2f71f25daf20371c9946cb33e":[1,0,668,4],
-"classGrowSystemSeaweed.html#ac0fccf10d2e68635543f0232b0340792":[1,0,668,2]
+"classGrowSystemSeaweed.html#a358baa8648cbac870a12028446c9345e":[1,0,668,0]
 };

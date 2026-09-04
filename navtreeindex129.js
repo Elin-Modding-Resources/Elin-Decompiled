@@ -1,5 +1,7 @@
 var NAVTREEINDEX129 =
 {
+"classTraitMerchantExotic.html#ac58139989bb307f7f8ec6c7a243b7e41":[1,0,1815,1],
+"classTraitMerchantFestival.html":[1,0,1816],
 "classTraitMerchantFestival.html#a7210e546e1a6bed156031704e8a2a17d":[1,0,1816,0],
 "classTraitMerchantFestival.html#abd43f9437bc6f61d53b9de5619219f84":[1,0,1816,1],
 "classTraitMerchantFestival.html#afeae3be395de985707af611b1b94d310":[1,0,1816,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX129 =
 "classTraitPhone.html":[1,0,1875],
 "classTraitPhone.html#a03ee09278876eda6ca5cff99e3655166":[1,0,1875,1],
 "classTraitPhone.html#a53928cb9b367df41094aba39e66ae737":[1,0,1875,0],
-"classTraitPhone.html#a9c08ee840f6c744b1add6f609f688547":[1,0,1875,2],
-"classTraitPhone.html#ade162582ff883a09c05beea2e5a45557":[1,0,1875,3],
-"classTraitPhoto.html":[1,0,1876]
+"classTraitPhone.html#a9c08ee840f6c744b1add6f609f688547":[1,0,1875,2]
 };
