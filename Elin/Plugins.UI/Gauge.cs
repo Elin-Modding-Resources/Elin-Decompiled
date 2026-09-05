@@ -13,6 +13,8 @@ public class Gauge : MonoBehaviour
 
 	public RawImage bar;
 
+	public RawImage barRecover;
+
 	public SpriteRenderer srBar;
 
 	public float duration;
@@ -30,6 +32,9 @@ public class Gauge : MonoBehaviour
 
 	[NonSerialized]
 	public float lastValue = -1f;
+
+	[NonSerialized]
+	public float lastRecovery = -1f;
 
 	[NonSerialized]
 	public bool first = true;
@@ -70,7 +75,7 @@ public class Gauge : MonoBehaviour
 		UpdateValue((int)(now * 100f), (int)(_max * 100f));
 	}
 
-	public void UpdateValue(int now, int _max)
+	public void UpdateValue(int now, int _max, int recovery = 0)
 	{
 		max = _max;
 		if (!base.gameObject.activeSelf)
@@ -86,7 +91,7 @@ public class Gauge : MonoBehaviour
 			bgBar.SetActive(!hideBar);
 		}
 		value = (float)now / (float)max;
-		if (value == lastValue)
+		if (value == lastValue && (float)recovery == lastRecovery)
 		{
 			return;
 		}
@@ -116,34 +121,46 @@ public class Gauge : MonoBehaviour
 		TweenUtil.KillTween(ref tween);
 		if ((bool)bar)
 		{
-			RectTransform rectTransform = bar.Rect();
-			Vector2 vector = new Vector2(originalWidth * value, rectTransform.sizeDelta.y);
-			if (first)
+			SetRect(bar, value);
+			if ((bool)barRecover)
 			{
-				rectTransform.sizeDelta = vector;
-				first = false;
-				return;
+				SetRect(barRecover, (float)(now + recovery) / (float)max);
 			}
-			tween = rectTransform.DOSizeDelta(vector, duration);
 		}
 		else if ((bool)srBar)
 		{
-			Vector2 vector2 = new Vector2(value * 100f, srBar.size.y);
+			Vector2 vector = new Vector2(value * 100f, srBar.size.y);
 			if (first)
 			{
-				srBar.size = vector2;
+				srBar.size = vector;
 				first = false;
 				return;
 			}
 			tween = DOTween.To(() => srBar.size, delegate(Vector2 x)
 			{
 				srBar.size = x;
-			}, vector2, duration);
+			}, vector, duration);
 		}
 		else
 		{
 			barCircle.fillAmount = value;
 		}
 		lastValue = value;
+		lastRecovery = recovery;
+		void SetRect(RawImage bar, float value)
+		{
+			value = Mathf.Clamp(value, 0f, 1f);
+			RectTransform rectTransform = bar.Rect();
+			Vector2 vector2 = new Vector2(originalWidth * value, rectTransform.sizeDelta.y);
+			if (first)
+			{
+				rectTransform.sizeDelta = vector2;
+				first = false;
+			}
+			else
+			{
+				tween = rectTransform.DOSizeDelta(vector2, duration);
+			}
+		}
 	}
 }
