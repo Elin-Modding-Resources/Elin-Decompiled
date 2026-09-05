@@ -55,10 +55,11 @@ var searchData=
   ['hotitemtogglewidget_52',['HotItemToggleWidget',['../classHotItemToggleWidget.html',1,'']]],
   ['hotitemwidget_53',['HotItemWidget',['../classHotItemWidget.html',1,'']]],
   ['hotitemwidgetset_54',['HotItemWidgetSet',['../classHotItemWidgetSet.html',1,'']]],
-  ['hs_5fparticleendsound_55',['HS_ParticleEndSound',['../classHS__ParticleEndSound.html',1,'']]],
-  ['hslcolor_56',['HSLColor',['../structHSLColor.html',1,'']]],
-  ['hsvcolor_57',['HSVColor',['../structHSVColor.html',1,'']]],
-  ['hud_58',['HUD',['../classHUD.html',1,'']]],
-  ['hueslider_59',['HueSlider',['../classEmpyrean_1_1ColorPicker_1_1HueSlider.html',1,'Empyrean::ColorPicker']]],
-  ['hyphenationjpn_60',['HyphenationJpn',['../classHyphenationJpn.html',1,'']]]
+  ['hoverrelay_55',['HoverRelay',['../classLayerMod_1_1HoverRelay.html',1,'LayerMod']]],
+  ['hs_5fparticleendsound_56',['HS_ParticleEndSound',['../classHS__ParticleEndSound.html',1,'']]],
+  ['hslcolor_57',['HSLColor',['../structHSLColor.html',1,'']]],
+  ['hsvcolor_58',['HSVColor',['../structHSVColor.html',1,'']]],
+  ['hud_59',['HUD',['../classHUD.html',1,'']]],
+  ['hueslider_60',['HueSlider',['../classEmpyrean_1_1ColorPicker_1_1HueSlider.html',1,'Empyrean::ColorPicker']]],
+  ['hyphenationjpn_61',['HyphenationJpn',['../classHyphenationJpn.html',1,'']]]
 ];

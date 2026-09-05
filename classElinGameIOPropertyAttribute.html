@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.342.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.343 Nightly</span>
    </div>
   </td>
  </tr>
@@ -128,6 +128,8 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a11e5f6188a5ca35f1baaec1fd77e9564"><td class="memItemLeft" align="right" valign="top">static Func&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElinGameIOPropertyAttribute.html#a11e5f6188a5ca35f1baaec1fd77e9564">CreateGetterDelegate</a> (MethodInfo method)</td></tr>
+<tr class="separator:a11e5f6188a5ca35f1baaec1fd77e9564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaddfe08d6f92a2f6c465796870104aee"><td class="memItemLeft" align="right" valign="top">static Action&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElinGameIOPropertyAttribute.html#aaddfe08d6f92a2f6c465796870104aee">CreateSetterDelegate</a> (MethodInfo method)</td></tr>
 <tr class="separator:aaddfe08d6f92a2f6c465796870104aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6ff5850ff33b308ab00dbecfabd8ff8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElinGameIOPropertyAttribute.html#ad6ff5850ff33b308ab00dbecfabd8ff8">LoadGameIOProperty</a> (GameIOContext context)</td></tr>
@@ -181,6 +183,39 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a11e5f6188a5ca35f1baaec1fd77e9564" name="a11e5f6188a5ca35f1baaec1fd77e9564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e5f6188a5ca35f1baaec1fd77e9564">&#9670;&#160;</a></span>CreateGetterDelegate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Func&lt; object &gt; ElinGameIOPropertyAttribute.CreateGetterDelegate </td>
+          <td>(</td>
+          <td class="paramtype">MethodInfo&#160;</td>
+          <td class="paramname"><em>method</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00042">42</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> Expression.Lambda&lt;Func&lt;object&gt;&gt;(Expression.Convert(Expression.Call(method), typeof(<span class="keywordtype">object</span>)), Array.Empty&lt;ParameterExpression&gt;()).Compile();</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00023">Register()</a>.</p>
+
+</div>
+</div>
 <a id="aaddfe08d6f92a2f6c465796870104aee" name="aaddfe08d6f92a2f6c465796870104aee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaddfe08d6f92a2f6c465796870104aee">&#9670;&#160;</a></span>CreateSetterDelegate()</h2>
 
@@ -205,13 +240,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00042">42</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        Type parameterType = method.GetParameters()[0].ParameterType;</div>
-<div class="line"><span class="lineno">   45</span>        ParameterExpression parameterExpression = Expression.Parameter(typeof(<span class="keywordtype">object</span>), <span class="stringliteral">&quot;obj&quot;</span>);</div>
-<div class="line"><span class="lineno">   46</span>        UnaryExpression arg = Expression.Convert(parameterExpression, parameterType);</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> Expression.Lambda&lt;Action&lt;object&gt;&gt;(Expression.Call(method, arg), <span class="keyword">new</span> ParameterExpression[1] { parameterExpression }).Compile();</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00047">47</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        Type parameterType = method.GetParameters()[0].ParameterType;</div>
+<div class="line"><span class="lineno">   50</span>        ParameterExpression parameterExpression = Expression.Parameter(typeof(<span class="keywordtype">object</span>), <span class="stringliteral">&quot;obj&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>        UnaryExpression arg = Expression.Convert(parameterExpression, parameterType);</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> Expression.Lambda&lt;Action&lt;object&gt;&gt;(Expression.Call(method, arg), <span class="keyword">new</span> ParameterExpression[1] { parameterExpression }).Compile();</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00023">Register()</a>.</p>
 
@@ -241,51 +276,44 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00050">50</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!context.Load&lt;Dictionary&lt;string, object&gt;&gt;(<span class="stringliteral">&quot;context_vars&quot;</span>, out var data))</div>
-<div class="line"><span class="lineno">   53</span>        {</div>
-<div class="line"><span class="lineno">   54</span>            data = <span class="keyword">new</span> Dictionary&lt;string, object&gt;();</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>        KeyValuePair&lt;string, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt;[] array = <a class="code hl_variable" href="classElinGameIOPropertyAttribute.html#a835eaf2b83d0d013c0bb42f936c7aa24">_contextVars</a>.ToArray();</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;<span class="keywordtype">string</span>, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt; keyValuePair in array)</div>
+<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00055">55</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (!context.Load&lt;Dictionary&lt;string, object&gt;&gt;(<span class="stringliteral">&quot;context_vars&quot;</span>, out var data))</div>
 <div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            keyValuePair.Deconstruct(out var key, out var value);</div>
-<div class="line"><span class="lineno">   60</span>            (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;) tuple = value;</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordtype">string</span> text = key;</div>
-<div class="line"><span class="lineno">   62</span>            var (propertyInfo, _, action) = tuple;</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordtype">string</span> key2 = propertyInfo.DeclaringType.FullName + <span class="stringliteral">&quot;:&quot;</span> + text;</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordtype">object</span> valueOrDefault = data.GetValueOrDefault(key2);</div>
-<div class="line"><span class="lineno">   67</span>                action(CoerceValue(valueOrDefault, propertyInfo.PropertyType));</div>
-<div class="line"><span class="lineno">   68</span>            }</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">catch</span> (Exception arg)</div>
-<div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#io failed to populate context var {text}\n{arg}&quot;</span>);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keyword">static</span> <span class="keywordtype">object</span> CoerceValue(<span class="keywordtype">object</span> obj, Type type)</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   77</span>            {</div>
-<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">return</span> type.IsValueType ? Activator.CreateInstance(type) : <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (obj is JToken jToken)</div>
-<div class="line"><span class="lineno">   81</span>            {</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">return</span> jToken.ToObject(type);</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (type.IsInstanceOfType(obj))</div>
-<div class="line"><span class="lineno">   85</span>            {</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">return</span> obj;</div>
-<div class="line"><span class="lineno">   87</span>            }</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (obj is IConvertible)</div>
-<div class="line"><span class="lineno">   89</span>            {</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">return</span> Convert.ChangeType(obj, type);</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> obj;</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   59</span>            data = <span class="keyword">new</span> Dictionary&lt;string, object&gt;();</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        KeyValuePair&lt;string, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt;[] array = <a class="code hl_variable" href="classElinGameIOPropertyAttribute.html#a835eaf2b83d0d013c0bb42f936c7aa24">_contextVars</a>.ToArray();</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;<span class="keywordtype">string</span>, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt; keyValuePair in array)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            keyValuePair.Deconstruct(out var key, out var value);</div>
+<div class="line"><span class="lineno">   65</span>            (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;) tuple = value;</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordtype">string</span> text = key;</div>
+<div class="line"><span class="lineno">   67</span>            var (propertyInfo, _, action) = tuple;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordtype">string</span> key2 = propertyInfo.DeclaringType.FullName + <span class="stringliteral">&quot;:&quot;</span> + text;</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordtype">object</span> valueOrDefault = data.GetValueOrDefault(key2);</div>
+<div class="line"><span class="lineno">   72</span>                action(CoerceValue(valueOrDefault, propertyInfo.PropertyType));</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">catch</span> (Exception arg)</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#io failed to populate context var {text}\n{arg}&quot;</span>);</div>
+<div class="line"><span class="lineno">   77</span>            }</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keyword">static</span> <span class="keywordtype">object</span> CoerceValue(<span class="keywordtype">object</span> obj, Type type)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (obj is JToken jToken)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">return</span> jToken.ToObject(type);</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span> type.IsValueType ? Activator.CreateInstance(type) : <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordtype">object</span> result;</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> DynamicReflection.TryCoerce(obj, type, out result) ? result : obj;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 <div class="ttc" id="aCustomDramaExpansion_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="CustomDramaExpansion_8cs_source.html#l00016">CustomDramaExpansion.cs:16</a></div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassElinGameIOPropertyAttribute_html_a835eaf2b83d0d013c0bb42f936c7aa24"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#a835eaf2b83d0d013c0bb42f936c7aa24">ElinGameIOPropertyAttribute._contextVars</a></div><div class="ttdeci">static readonly Dictionary&lt; string,(PropertyInfo property, Func&lt; object &gt; getter, Action&lt; object &gt; setter)&gt; _contextVars</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00014">ElinGameIOPropertyAttribute.cs:14</a></div></div>
@@ -332,9 +360,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   30</span>        }</div>
 <div class="line"><span class="lineno">   31</span>        MethodInfo getMethod = <span class="keyword">property</span>.GetMethod;</div>
 <div class="line"><span class="lineno">   32</span>        MethodInfo setMethod = <span class="keyword">property</span>.SetMethod;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (!(getMethod == <span class="keyword">null</span>) &amp;&amp; !(setMethod == <span class="keyword">null</span>) &amp;&amp; setMethod.IsStatic)</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (!(getMethod == <span class="keyword">null</span>) &amp;&amp; !(setMethod == <span class="keyword">null</span>) &amp;&amp; getMethod.IsStatic &amp;&amp; setMethod.IsStatic)</div>
 <div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            Func&lt;object&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = getMethod.CreateDelegate&lt;Func&lt;object&gt;&gt;();</div>
+<div class="line"><span class="lineno">   35</span>            Func&lt;object&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_function" href="classElinGameIOPropertyAttribute.html#a11e5f6188a5ca35f1baaec1fd77e9564">CreateGetterDelegate</a>(getMethod);</div>
 <div class="line"><span class="lineno">   36</span>            Action&lt;object&gt; item2 = <a class="code hl_function" href="classElinGameIOPropertyAttribute.html#aaddfe08d6f92a2f6c465796870104aee">CreateSetterDelegate</a>(setMethod);</div>
 <div class="line"><span class="lineno">   37</span>            Type declaringType = <span class="keyword">property</span>.DeclaringType;</div>
 <div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="classElinGameIOPropertyAttribute.html#a835eaf2b83d0d013c0bb42f936c7aa24">_contextVars</a>[declaringType.FullName + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_property" href="classElinGameIOPropertyAttribute.html#a7bccdc1fd8a3e8570e47bbc1696ff4b2">ChunkName</a>] = (property, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, item2);</div>
@@ -342,13 +370,14 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   40</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassBaseModManager_html"><div class="ttname"><a href="classBaseModManager.html">BaseModManager</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00007">BaseModManager.cs:8</a></div></div>
-<div class="ttc" id="aclassBaseModManager_html_acae7f54f391c14cd9bf1542e26774c71"><div class="ttname"><a href="classBaseModManager.html#acae7f54f391c14cd9bf1542e26774c71">BaseModManager.SubscribeEvent</a></div><div class="ttdeci">static void SubscribeEvent(string eventId, Action&lt; object &gt; handler)</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00101">BaseModManager.cs:101</a></div></div>
-<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_aaa24098ac5719385288ee15f1670c238"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#aaa24098ac5719385288ee15f1670c238">ElinGameIOPropertyAttribute.SaveGameIOProperty</a></div><div class="ttdeci">static void SaveGameIOProperty(GameIOContext context)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00096">ElinGameIOPropertyAttribute.cs:96</a></div></div>
+<div class="ttc" id="aclassBaseModManager_html_acae7f54f391c14cd9bf1542e26774c71"><div class="ttname"><a href="classBaseModManager.html#acae7f54f391c14cd9bf1542e26774c71">BaseModManager.SubscribeEvent</a></div><div class="ttdeci">static void SubscribeEvent(string eventId, Action&lt; object &gt; handler)</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00099">BaseModManager.cs:99</a></div></div>
+<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_a11e5f6188a5ca35f1baaec1fd77e9564"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#a11e5f6188a5ca35f1baaec1fd77e9564">ElinGameIOPropertyAttribute.CreateGetterDelegate</a></div><div class="ttdeci">static Func&lt; object &gt; CreateGetterDelegate(MethodInfo method)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00042">ElinGameIOPropertyAttribute.cs:42</a></div></div>
+<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_aaa24098ac5719385288ee15f1670c238"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#aaa24098ac5719385288ee15f1670c238">ElinGameIOPropertyAttribute.SaveGameIOProperty</a></div><div class="ttdeci">static void SaveGameIOProperty(GameIOContext context)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00094">ElinGameIOPropertyAttribute.cs:94</a></div></div>
 <div class="ttc" id="aclassElinGameIOPropertyAttribute_html_aac36ed14055e42ecda6f531f82e206cb"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#aac36ed14055e42ecda6f531f82e206cb">ElinGameIOPropertyAttribute._registered</a></div><div class="ttdeci">static bool _registered</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00012">ElinGameIOPropertyAttribute.cs:12</a></div></div>
-<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_aaddfe08d6f92a2f6c465796870104aee"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#aaddfe08d6f92a2f6c465796870104aee">ElinGameIOPropertyAttribute.CreateSetterDelegate</a></div><div class="ttdeci">static Action&lt; object &gt; CreateSetterDelegate(MethodInfo method)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00042">ElinGameIOPropertyAttribute.cs:42</a></div></div>
-<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_ad6ff5850ff33b308ab00dbecfabd8ff8"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#ad6ff5850ff33b308ab00dbecfabd8ff8">ElinGameIOPropertyAttribute.LoadGameIOProperty</a></div><div class="ttdeci">static void LoadGameIOProperty(GameIOContext context)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00050">ElinGameIOPropertyAttribute.cs:50</a></div></div>
+<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_aaddfe08d6f92a2f6c465796870104aee"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#aaddfe08d6f92a2f6c465796870104aee">ElinGameIOPropertyAttribute.CreateSetterDelegate</a></div><div class="ttdeci">static Action&lt; object &gt; CreateSetterDelegate(MethodInfo method)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00047">ElinGameIOPropertyAttribute.cs:47</a></div></div>
+<div class="ttc" id="aclassElinGameIOPropertyAttribute_html_ad6ff5850ff33b308ab00dbecfabd8ff8"><div class="ttname"><a href="classElinGameIOPropertyAttribute.html#ad6ff5850ff33b308ab00dbecfabd8ff8">ElinGameIOPropertyAttribute.LoadGameIOProperty</a></div><div class="ttdeci">static void LoadGameIOProperty(GameIOContext context)</div><div class="ttdef"><b>Definition:</b> <a href="ElinGameIOPropertyAttribute_8cs_source.html#l00055">ElinGameIOPropertyAttribute.cs:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00014">_contextVars</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00012">_registered</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00016">ChunkName</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00042">CreateSetterDelegate()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00050">LoadGameIOProperty()</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00096">SaveGameIOProperty()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00101">BaseModManager.SubscribeEvent()</a>.</p>
+<p class="reference">References <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00014">_contextVars</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00012">_registered</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00016">ChunkName</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00042">CreateGetterDelegate()</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00047">CreateSetterDelegate()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00055">LoadGameIOProperty()</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00094">SaveGameIOProperty()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00099">BaseModManager.SubscribeEvent()</a>.</p>
 
 </div>
 </div>
@@ -376,29 +405,29 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00096">96</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
-<div class="line"><span class="lineno">   98</span>        Dictionary&lt;string, object&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;string, object&gt;(StringComparer.Ordinal);</div>
-<div class="line"><span class="lineno">   99</span>        KeyValuePair&lt;string, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt;[] array = <a class="code hl_variable" href="classElinGameIOPropertyAttribute.html#a835eaf2b83d0d013c0bb42f936c7aa24">_contextVars</a>.ToArray();</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;<span class="keywordtype">string</span>, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt; keyValuePair in array)</div>
-<div class="line"><span class="lineno">  101</span>        {</div>
-<div class="line"><span class="lineno">  102</span>            keyValuePair.Deconstruct(out var key, out var value);</div>
-<div class="line"><span class="lineno">  103</span>            (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;) tuple = value;</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordtype">string</span> text = key;</div>
-<div class="line"><span class="lineno">  105</span>            var (propertyInfo, func, _) = tuple;</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  107</span>            {</div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordtype">object</span> value2 = func();</div>
-<div class="line"><span class="lineno">  109</span>                <span class="keywordtype">string</span> key2 = propertyInfo.DeclaringType.FullName + <span class="stringliteral">&quot;:&quot;</span> + text;</div>
-<div class="line"><span class="lineno">  110</span>                dictionary[key2] = value2;</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">catch</span> (Exception arg)</div>
-<div class="line"><span class="lineno">  113</span>            {</div>
-<div class="line"><span class="lineno">  114</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#io failed to save context var {text}\n{arg}&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span>            }</div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span>        context.Save(<span class="stringliteral">&quot;context_vars&quot;</span>, dictionary);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00094">94</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        Dictionary&lt;string, object&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;string, object&gt;(StringComparer.Ordinal);</div>
+<div class="line"><span class="lineno">   97</span>        KeyValuePair&lt;string, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt;[] array = <a class="code hl_variable" href="classElinGameIOPropertyAttribute.html#a835eaf2b83d0d013c0bb42f936c7aa24">_contextVars</a>.ToArray();</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;<span class="keywordtype">string</span>, (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;)&gt; keyValuePair in array)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            keyValuePair.Deconstruct(out var key, out var value);</div>
+<div class="line"><span class="lineno">  101</span>            (PropertyInfo, Func&lt;object&gt;, Action&lt;object&gt;) tuple = value;</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordtype">string</span> text = key;</div>
+<div class="line"><span class="lineno">  103</span>            var (propertyInfo, func, _) = tuple;</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  105</span>            {</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordtype">object</span> value2 = func();</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordtype">string</span> key2 = propertyInfo.DeclaringType.FullName + <span class="stringliteral">&quot;:&quot;</span> + text;</div>
+<div class="line"><span class="lineno">  108</span>                dictionary[key2] = value2;</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">catch</span> (Exception arg)</div>
+<div class="line"><span class="lineno">  111</span>            {</div>
+<div class="line"><span class="lineno">  112</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#io failed to save context var {text}\n{arg}&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>        context.Save(<span class="stringliteral">&quot;context_vars&quot;</span>, dictionary);</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CustomDramaExpansion_8cs_source.html#l00016">$</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00014">_contextVars</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
@@ -429,7 +458,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00014">14</a> of file <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html">ElinGameIOPropertyAttribute.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00050">LoadGameIOProperty()</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00023">Register()</a>, and <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00096">SaveGameIOProperty()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00055">LoadGameIOProperty()</a>, <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00023">Register()</a>, and <a class="el" href="ElinGameIOPropertyAttribute_8cs_source.html#l00094">SaveGameIOProperty()</a>.</p>
 
 </div>
 </div>

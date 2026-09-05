@@ -1,5 +1,11 @@
 var NAVTREEINDEX20 =
 {
+"TraitMerchantDrug_8cs.html":[2,0,0,1703],
+"TraitMerchantDrug_8cs_source.html":[2,0,0,1703],
+"TraitMerchantDye_8cs.html":[2,0,0,1704],
+"TraitMerchantDye_8cs_source.html":[2,0,0,1704],
+"TraitMerchantEcopo_8cs.html":[2,0,0,1705],
+"TraitMerchantEcopo_8cs_source.html":[2,0,0,1705],
 "TraitMerchantExotic_8cs.html":[2,0,0,1706],
 "TraitMerchantExotic_8cs_source.html":[2,0,0,1706],
 "TraitMerchantFestival_8cs.html":[2,0,0,1707],
@@ -243,11 +249,5 @@ var NAVTREEINDEX20 =
 "TraitSalaryChest_8cs_source.html":[2,0,0,1823],
 "TraitSalesTag_8cs.html":[2,0,0,1824],
 "TraitSalesTag_8cs_source.html":[2,0,0,1824],
-"TraitSawMill_8cs.html":[2,0,0,1825],
-"TraitSawMill_8cs_source.html":[2,0,0,1825],
-"TraitScratchMachine_8cs.html":[2,0,0,1826],
-"TraitScratchMachine_8cs_source.html":[2,0,0,1826],
-"TraitScrollMapTreasure_8cs.html":[2,0,0,1829],
-"TraitScrollMapTreasure_8cs_source.html":[2,0,0,1829],
-"TraitScrollMap_8cs.html":[2,0,0,1828]
+"TraitSawMill_8cs.html":[2,0,0,1825]
 };

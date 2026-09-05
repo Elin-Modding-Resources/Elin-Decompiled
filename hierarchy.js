@@ -2448,6 +2448,7 @@ var hierarchy =
       [ "ButtonGridDrag", "classButtonGridDrag.html", null ],
       [ "ButtonRoster", "classButtonRoster.html", null ],
       [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
+      [ "LayerMod.HoverRelay", "classLayerMod_1_1HoverRelay.html", null ],
       [ "UIButton", "classUIButton.html", null ],
       [ "UIContextMenu", "classUIContextMenu.html", null ],
       [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
@@ -2530,6 +2531,7 @@ var hierarchy =
     ] ],
     [ "IPointerEnterHandler", null, [
       [ "ButtonRoster", "classButtonRoster.html", null ],
+      [ "LayerMod.HoverRelay", "classLayerMod_1_1HoverRelay.html", null ],
       [ "UIContextMenu", "classUIContextMenu.html", null ],
       [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
       [ "UIEventUtil", "classUIEventUtil.html", null ],
@@ -2826,6 +2828,7 @@ var hierarchy =
     [ "ModMinigame< Shooter >", "classModMinigame.html", [
       [ "MiniGame_Basket", "classMiniGame__Basket.html", null ]
     ] ],
+    [ "ModXml", "classModXml.html", null ],
     [ "MonoBehaviour", null, [
       [ "ObjectPool< List< T > >", "classObjectPool.html", null ],
       [ "Anime", "classAnime.html", [
@@ -3000,6 +3003,7 @@ var hierarchy =
       [ "ImageExample", "classImageExample.html", null ],
       [ "ItemKeymap", "classItemKeymap.html", null ],
       [ "Layer", "classLayer.html", null ],
+      [ "LayerMod.HoverRelay", "classLayerMod_1_1HoverRelay.html", null ],
       [ "LightControl", "classLightControl.html", null ],
       [ "LightControl2", "classLightControl2.html", null ],
       [ "LoadingScreen", "classLoadingScreen.html", null ],
@@ -3162,6 +3166,7 @@ var hierarchy =
     [ "SourceAsset.PrefData", "classSourceAsset_1_1PrefData.html", null ],
     [ "SourceAsset.Prefs", "classSourceAsset_1_1Prefs.html", null ],
     [ "AM_Adv.PressedAction", "classAM__Adv_1_1PressedAction.html", null ],
+    [ "LayerMod.PreviewEntry", "classLayerMod_1_1PreviewEntry.html", null ],
     [ "Algorithms.PriorityQueueB< int >", "classAlgorithms_1_1PriorityQueueB.html", null ],
     [ "Prologue", "classPrologue.html", null ],
     [ "PropertyAttribute", null, [
@@ -3550,6 +3555,7 @@ var hierarchy =
     [ "ActEffect.WishItem", "classActEffect_1_1WishItem.html", null ],
     [ "WidgetSearch.Word", "classWidgetSearch_1_1Word.html", null ],
     [ "Lang.Words", "classLang_1_1Words.html", null ],
+    [ "ModManager.WorkshopDownload", "classModManager_1_1WorkshopDownload.html", null ],
     [ "XY", "structXY.html", null ],
     [ "Xyz", "classXyz.html", null ],
     [ "ZINT", "classZINT.html", null ],

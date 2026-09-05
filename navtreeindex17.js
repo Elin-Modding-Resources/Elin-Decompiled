@@ -1,5 +1,11 @@
 var NAVTREEINDEX17 =
 {
+"TileTypeBlockOpen_8cs.html":[2,0,0,1337],
+"TileTypeBlockOpen_8cs_source.html":[2,0,0,1337],
+"TileTypeBlockShip_8cs.html":[2,0,0,1338],
+"TileTypeBlockShip_8cs_source.html":[2,0,0,1338],
+"TileTypeBlock_8cs.html":[2,0,0,1335],
+"TileTypeBlock_8cs_source.html":[2,0,0,1335],
 "TileTypeBoat_8cs.html":[2,0,0,1339],
 "TileTypeBoat_8cs_source.html":[2,0,0,1339],
 "TileTypeBridgeDeco_8cs.html":[2,0,0,1341],
@@ -126,8 +132,8 @@ var NAVTREEINDEX17 =
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8ae045615354060a83511b41ee31db4ae9":[2,0,0,1394,0,5],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8aee3c6e8ed9c27c45f161ea416c997df8":[2,0,0,1394,0,4],
 "ToggleType_8cs_source.html":[2,0,0,1394],
-"ToneDataList_8cs.html":[2,0,0,2,88],
-"ToneDataList_8cs_source.html":[2,0,0,2,88],
+"ToneDataList_8cs.html":[2,0,0,2,89],
+"ToneDataList_8cs_source.html":[2,0,0,2,89],
 "TooltipData_8cs.html":[2,0,0,3,106],
 "TooltipData_8cs_source.html":[2,0,0,3,106],
 "TooltipManager_8cs.html":[2,0,0,3,107],
@@ -243,11 +249,5 @@ var NAVTREEINDEX17 =
 "TraitBoat_8cs.html":[2,0,0,1450],
 "TraitBoat_8cs_source.html":[2,0,0,1450],
 "TraitBookExp_8cs.html":[2,0,0,1452],
-"TraitBookExp_8cs_source.html":[2,0,0,1452],
-"TraitBookPlan_8cs.html":[2,0,0,1453],
-"TraitBookPlan_8cs_source.html":[2,0,0,1453],
-"TraitBookResident_8cs.html":[2,0,0,1454],
-"TraitBookResident_8cs_source.html":[2,0,0,1454],
-"TraitBookRoster_8cs.html":[2,0,0,1455],
-"TraitBookRoster_8cs_source.html":[2,0,0,1455]
+"TraitBookExp_8cs_source.html":[2,0,0,1452]
 };

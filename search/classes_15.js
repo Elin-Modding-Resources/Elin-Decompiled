@@ -61,7 +61,8 @@ var searchData=
   ['wordsearchrecipe_58',['WordSearchRecipe',['../classWordSearchRecipe.html',1,'']]],
   ['workoutcome_59',['WorkOutcome',['../classWorkOutcome.html',1,'']]],
   ['worksession_60',['WorkSession',['../classWorkSession.html',1,'']]],
-  ['worksummary_61',['WorkSummary',['../classWorkSummary.html',1,'']]],
-  ['world_62',['World',['../classWorld.html',1,'']]],
-  ['worldinspector_63',['WorldInspector',['../classWorldInspector.html',1,'']]]
+  ['workshopdownload_61',['WorkshopDownload',['../classModManager_1_1WorkshopDownload.html',1,'ModManager']]],
+  ['worksummary_62',['WorkSummary',['../classWorkSummary.html',1,'']]],
+  ['world_63',['World',['../classWorld.html',1,'']]],
+  ['worldinspector_64',['WorldInspector',['../classWorldInspector.html',1,'']]]
 ];

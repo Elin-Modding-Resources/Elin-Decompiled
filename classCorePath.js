@@ -54,6 +54,8 @@ var classCorePath =
     [ "PathBackupCloud", "classCorePath.html#acfb2421158015d8415024f55e9fdf2e0", null ],
     [ "PathBackupOld", "classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b", null ],
     [ "PathIni", "classCorePath.html#a04e3995d5c70ce695d1f01f93d14c4dd", null ],
+    [ "PathLoadOrder", "classCorePath.html#ab8e73eb0a716cd619204fb5757bc41f4", null ],
+    [ "PathLoadOrderPreset", "classCorePath.html#a1f745b21d3da1566127122a218be10f8", null ],
     [ "RootData", "classCorePath.html#a433ebb5d0a3d88629f959a50e036db16", null ],
     [ "RootSave", "classCorePath.html#a65ef1a6b58a53140342d1505b198e472", null ],
     [ "RootSaveCloud", "classCorePath.html#a9a276737e4db9a35c0e1f5a07b2b60cc", null ],

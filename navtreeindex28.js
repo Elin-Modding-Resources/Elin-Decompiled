@@ -1,5 +1,11 @@
 var NAVTREEINDEX28 =
 {
+"classAI__Practice.html":[1,0,113],
+"classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,113,5],
+"classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,113,1],
+"classAI__Practice.html#ad938aabe2a061a66a436cbe954380af4":[1,0,113,0],
+"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,113,2],
+"classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116":[1,0,113,4],
 "classAI__Practice.html#af511fc3b8567e3df24946eabaead7861":[1,0,113,6],
 "classAI__Practice.html#aff05913285defc4484ac929900b59f93":[1,0,113,3],
 "classAI__PracticeDummy.html":[1,0,114],
@@ -243,11 +249,5 @@ var NAVTREEINDEX28 =
 "classAM__BaseTerrain.html#a053aac41776b71fd9fe24a48f041b061":[1,0,148,9],
 "classAM__BaseTerrain.html#a09797a1d5486cd5939d31d3650db4861":[1,0,148,0],
 "classAM__BaseTerrain.html#a0e496646005f9a11fc3670af92e64b8f":[1,0,148,11],
-"classAM__BaseTerrain.html#a1ed983f4e9a9cb9288f045d1702d6503":[1,0,148,12],
-"classAM__BaseTerrain.html#a35be37dfa1981d7a89fe553d26a79b9e":[1,0,148,14],
-"classAM__BaseTerrain.html#a4c46ba2ad534697e3368c27aba7a0be5":[1,0,148,5],
-"classAM__BaseTerrain.html#a5a1fb7819dc89a6da14d98ec25dae4ba":[1,0,148,13],
-"classAM__BaseTerrain.html#a911bdb622c0751d9596c7e593d8dbcd6":[1,0,148,10],
-"classAM__BaseTerrain.html#a91417c38e96cc85869ef694fe883d68c":[1,0,148,3],
-"classAM__BaseTerrain.html#aa325566e94c7f01f00917047c3ad0de4":[1,0,148,15]
+"classAM__BaseTerrain.html#a1ed983f4e9a9cb9288f045d1702d6503":[1,0,148,12]
 };

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yesno_0',['YesNo',['../classDialog.html#a43dffec293c2834cd969332a080c1133',1,'Dialog']]]
+  ['xy_0',['XY',['../structXY.html#a86ef9f95d24632f70207d603689a4b70',1,'XY']]],
+  ['xyztolab_1',['XyzToLab',['../classColorConverter.html#a0657f3f6fb58b74f5784bee2ffba3214',1,'ColorConverter']]]
 ];

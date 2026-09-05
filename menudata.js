@@ -175,6 +175,7 @@ var menudata={children:[
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
 {text:"$",url:"globals.html#index__24"},
+{text:".",url:"globals.html#index_."},
 {text:"[",url:"globals.html#index__5B"},
 {text:"_",url:"globals.html#index__5F"},
 {text:"a",url:"globals.html#index_a"},
@@ -195,10 +196,12 @@ var menudata={children:[
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
+{text:"u",url:"globals.html#index_u"},
 {text:"v",url:"globals.html#index_v"},
 {text:"w",url:"globals.html#index_w"},
 {text:"z",url:"globals.html#index_z"}]},
 {text:"Functions",url:"globals_func.html",children:[
+{text:".",url:"globals_func.html#index_."},
 {text:"[",url:"globals_func.html#index__5B"},
 {text:"a",url:"globals_func.html#index_a"},
 {text:"c",url:"globals_func.html#index_c"},

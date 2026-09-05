@@ -20,7 +20,6 @@ var classBaseModManager =
     [ "isInitialized", "classBaseModManager.html#a5cf34211285c2b20eb3ac55b32c199e3", null ],
     [ "listChainLoad", "classBaseModManager.html#abb5746b81e7ddb52e6dd72a3ed79008b", null ],
     [ "packages", "classBaseModManager.html#a03b72ff29a606112d5c3dad3f02537a3", null ],
-    [ "priorityIndex", "classBaseModManager.html#a276696d36f52145d9b2d1333dbe3a21d", null ],
     [ "rootDefaultPacakge", "classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2", null ],
     [ "rootMod", "classBaseModManager.html#a7b47062ac69716f5b954279a805220dc", null ]
 ];

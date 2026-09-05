@@ -1,5 +1,11 @@
 var NAVTREEINDEX21 =
 {
+"TraitSawMill_8cs_source.html":[2,0,0,1825],
+"TraitScratchMachine_8cs.html":[2,0,0,1826],
+"TraitScratchMachine_8cs_source.html":[2,0,0,1826],
+"TraitScrollMapTreasure_8cs.html":[2,0,0,1829],
+"TraitScrollMapTreasure_8cs_source.html":[2,0,0,1829],
+"TraitScrollMap_8cs.html":[2,0,0,1828],
 "TraitScrollMap_8cs_source.html":[2,0,0,1828],
 "TraitScrollRandom_8cs.html":[2,0,0,1830],
 "TraitScrollRandom_8cs_source.html":[2,0,0,1830],
@@ -243,11 +249,5 @@ var NAVTREEINDEX21 =
 "TraitTrainer_8cs_source.html":[2,0,0,1947],
 "TraitTrainingDummyArmor_8cs.html":[2,0,0,1949],
 "TraitTrainingDummyArmor_8cs_source.html":[2,0,0,1949],
-"TraitTrainingDummy_8cs.html":[2,0,0,1948],
-"TraitTrainingDummy_8cs_source.html":[2,0,0,1948],
-"TraitTrapMine_8cs.html":[2,0,0,1951],
-"TraitTrapMine_8cs_source.html":[2,0,0,1951],
-"TraitTrapSister_8cs.html":[2,0,0,1952],
-"TraitTrapSister_8cs_source.html":[2,0,0,1952],
-"TraitTrap_8cs.html":[2,0,0,1950]
+"TraitTrainingDummy_8cs.html":[2,0,0,1948]
 };

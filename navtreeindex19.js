@@ -1,5 +1,11 @@
 var NAVTREEINDEX19 =
 {
+"TraitFarmChest_8cs.html":[2,0,0,1577],
+"TraitFarmChest_8cs_source.html":[2,0,0,1577],
+"TraitFarris_8cs.html":[2,0,0,1578],
+"TraitFarris_8cs_source.html":[2,0,0,1578],
+"TraitFelmera_8cs.html":[2,0,0,1579],
+"TraitFelmera_8cs_source.html":[2,0,0,1579],
 "TraitFertilizer_8cs.html":[2,0,0,1580],
 "TraitFertilizer_8cs_source.html":[2,0,0,1580],
 "TraitFiama_8cs.html":[2,0,0,1581],
@@ -243,11 +249,5 @@ var NAVTREEINDEX19 =
 "TraitMerchantBread_8cs.html":[2,0,0,1701],
 "TraitMerchantBread_8cs_source.html":[2,0,0,1701],
 "TraitMerchantDeed_8cs.html":[2,0,0,1702],
-"TraitMerchantDeed_8cs_source.html":[2,0,0,1702],
-"TraitMerchantDrug_8cs.html":[2,0,0,1703],
-"TraitMerchantDrug_8cs_source.html":[2,0,0,1703],
-"TraitMerchantDye_8cs.html":[2,0,0,1704],
-"TraitMerchantDye_8cs_source.html":[2,0,0,1704],
-"TraitMerchantEcopo_8cs.html":[2,0,0,1705],
-"TraitMerchantEcopo_8cs_source.html":[2,0,0,1705]
+"TraitMerchantDeed_8cs_source.html":[2,0,0,1702]
 };

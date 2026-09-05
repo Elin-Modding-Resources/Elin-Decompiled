@@ -1,5 +1,11 @@
 var NAVTREEINDEX18 =
 {
+"TraitBookPlan_8cs.html":[2,0,0,1453],
+"TraitBookPlan_8cs_source.html":[2,0,0,1453],
+"TraitBookResident_8cs.html":[2,0,0,1454],
+"TraitBookResident_8cs_source.html":[2,0,0,1454],
+"TraitBookRoster_8cs.html":[2,0,0,1455],
+"TraitBookRoster_8cs_source.html":[2,0,0,1455],
 "TraitBookSecret_8cs.html":[2,0,0,1456],
 "TraitBookSecret_8cs_source.html":[2,0,0,1456],
 "TraitBookShelf_8cs.html":[2,0,0,1457],
@@ -243,11 +249,5 @@ var NAVTREEINDEX18 =
 "TraitFakeObj_8cs.html":[2,0,0,1575],
 "TraitFakeObj_8cs_source.html":[2,0,0,1575],
 "TraitFakeTile_8cs.html":[2,0,0,1576],
-"TraitFakeTile_8cs_source.html":[2,0,0,1576],
-"TraitFarmChest_8cs.html":[2,0,0,1577],
-"TraitFarmChest_8cs_source.html":[2,0,0,1577],
-"TraitFarris_8cs.html":[2,0,0,1578],
-"TraitFarris_8cs_source.html":[2,0,0,1578],
-"TraitFelmera_8cs.html":[2,0,0,1579],
-"TraitFelmera_8cs_source.html":[2,0,0,1579]
+"TraitFakeTile_8cs_source.html":[2,0,0,1576]
 };

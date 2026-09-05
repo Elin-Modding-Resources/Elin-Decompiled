@@ -1,6 +1,7 @@
 var classElinGameIOPropertyAttribute =
 [
     [ "ElinGameIOPropertyAttribute", "classElinGameIOPropertyAttribute.html#af206e434ad47525c57749a7c9cd91696", null ],
+    [ "CreateGetterDelegate", "classElinGameIOPropertyAttribute.html#a11e5f6188a5ca35f1baaec1fd77e9564", null ],
     [ "CreateSetterDelegate", "classElinGameIOPropertyAttribute.html#aaddfe08d6f92a2f6c465796870104aee", null ],
     [ "LoadGameIOProperty", "classElinGameIOPropertyAttribute.html#ad6ff5850ff33b308ab00dbecfabd8ff8", null ],
     [ "Register", "classElinGameIOPropertyAttribute.html#a565df2ec91b1cb7d3e28b380108d58c6", null ],
