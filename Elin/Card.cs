@@ -3075,7 +3075,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return this;
 		}
-		if (!isScaled && flag && LV >= 50)
+		if (LV >= Mathf.Max(50, sourceCard.LV))
 		{
 			isScaled = true;
 		}

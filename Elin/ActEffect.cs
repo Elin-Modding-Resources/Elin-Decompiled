@@ -2201,6 +2201,7 @@ public class ActEffect : EClass
 				{
 					num14 = num15;
 				}
+				Debug.Log(num14);
 				if (EClass.rnd(100) > num14)
 				{
 					TC.Say("debuff_resist", TC);

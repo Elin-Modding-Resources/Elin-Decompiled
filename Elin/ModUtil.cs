@@ -792,6 +792,126 @@ public class ModUtil : EClass
 		}
 	}
 
+	public static DynamicInvoker Call(object instance, params string[] names)
+	{
+		return new DynamicInvoker(instance?.GetType(), instance, names);
+	}
+
+	public static DynamicInvoker Call(Type type, params string[] names)
+	{
+		return new DynamicInvoker(type, null, names);
+	}
+
+	public static DynamicInvoker Call<T>(params string[] names)
+	{
+		return new DynamicInvoker(typeof(T), null, names);
+	}
+
+	public static DynamicInvoker CallType(string typeName, params string[] names)
+	{
+		return new DynamicInvoker(DynamicReflection.FindType(typeName), null, names);
+	}
+
+	public static DynamicInvoker Construct(Type type)
+	{
+		return DynamicInvoker.Constructor(type);
+	}
+
+	public static DynamicInvoker Construct<T>()
+	{
+		return DynamicInvoker.Constructor(typeof(T));
+	}
+
+	public static DynamicInvoker ConstructType(string typeName)
+	{
+		return DynamicInvoker.Constructor(DynamicReflection.FindType(typeName));
+	}
+
+	public static DynamicAccessor Access(object instance, params string[] names)
+	{
+		return new DynamicAccessor(instance?.GetType(), instance, names);
+	}
+
+	public static DynamicAccessor Access(Type type, params string[] names)
+	{
+		return new DynamicAccessor(type, null, names);
+	}
+
+	public static DynamicAccessor Access<T>(params string[] names)
+	{
+		return new DynamicAccessor(typeof(T), null, names);
+	}
+
+	public static DynamicAccessor AccessType(string typeName, params string[] names)
+	{
+		return new DynamicAccessor(DynamicReflection.FindType(typeName), null, names);
+	}
+
+	public static DynamicTarget Target(Type type, params string[] names)
+	{
+		return new DynamicTarget(type, names);
+	}
+
+	public static DynamicTarget Target<T>(params string[] names)
+	{
+		return new DynamicTarget(typeof(T), names);
+	}
+
+	public static DynamicTarget TargetType(string typeName, params string[] names)
+	{
+		return new DynamicTarget(DynamicReflection.FindType(typeName), names);
+	}
+
+	public static MethodInfo FindMethod(Type type, params string[] names)
+	{
+		return new DynamicTarget(type, names).Get();
+	}
+
+	public static MethodInfo FindMethod<T>(params string[] names)
+	{
+		return new DynamicTarget(typeof(T), names).Get();
+	}
+
+	public static MethodInfo FindGetter(Type type, params string[] names)
+	{
+		return DynamicTarget.Accessor(type, names, setter: false);
+	}
+
+	public static MethodInfo FindGetter<T>(params string[] names)
+	{
+		return DynamicTarget.Accessor(typeof(T), names, setter: false);
+	}
+
+	public static MethodInfo FindSetter(Type type, params string[] names)
+	{
+		return DynamicTarget.Accessor(type, names, setter: true);
+	}
+
+	public static MethodInfo FindSetter<T>(params string[] names)
+	{
+		return DynamicTarget.Accessor(typeof(T), names, setter: true);
+	}
+
+	public static ConstructorInfo FindConstructor(Type type, params Type[] paramTypes)
+	{
+		return DynamicTarget.Constructor(type, paramTypes);
+	}
+
+	public static ConstructorInfo FindConstructor<T>(params Type[] paramTypes)
+	{
+		return DynamicTarget.Constructor(typeof(T), paramTypes);
+	}
+
+	public static Type FindType(string typeName)
+	{
+		return DynamicReflection.FindType(typeName);
+	}
+
+	public static T Coerce<T>(object value)
+	{
+		return DynamicReflection.Coerce<T>(value);
+	}
+
 	public static SerializableSoundData GetSoundMeta(string soundPath)
 	{
 		string path = Path.ChangeExtension(soundPath, ".json");

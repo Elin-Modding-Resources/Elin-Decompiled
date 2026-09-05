@@ -30,13 +30,18 @@ public class ElinGameIOPropertyAttribute : ElinGameIOEventAttribute
 		}
 		MethodInfo getMethod = property.GetMethod;
 		MethodInfo setMethod = property.SetMethod;
-		if (!(getMethod == null) && !(setMethod == null) && setMethod.IsStatic)
+		if (!(getMethod == null) && !(setMethod == null) && getMethod.IsStatic && setMethod.IsStatic)
 		{
-			Func<object> item = getMethod.CreateDelegate<Func<object>>();
+			Func<object> item = CreateGetterDelegate(getMethod);
 			Action<object> item2 = CreateSetterDelegate(setMethod);
 			Type declaringType = property.DeclaringType;
 			_contextVars[declaringType.FullName + ":" + ChunkName] = (property, item, item2);
 		}
+	}
+
+	private static Func<object> CreateGetterDelegate(MethodInfo method)
+	{
+		return Expression.Lambda<Func<object>>(Expression.Convert(Expression.Call(method), typeof(object)), Array.Empty<ParameterExpression>()).Compile();
 	}
 
 	private static Action<object> CreateSetterDelegate(MethodInfo method)
@@ -73,23 +78,16 @@ public class ElinGameIOPropertyAttribute : ElinGameIOEventAttribute
 		}
 		static object CoerceValue(object obj, Type type)
 		{
-			if (obj == null)
-			{
-				return type.IsValueType ? Activator.CreateInstance(type) : null;
-			}
 			if (obj is JToken jToken)
 			{
 				return jToken.ToObject(type);
 			}
-			if (type.IsInstanceOfType(obj))
+			if (obj == null)
 			{
-				return obj;
+				return type.IsValueType ? Activator.CreateInstance(type) : null;
 			}
-			if (obj is IConvertible)
-			{
-				return Convert.ChangeType(obj, type);
-			}
-			return obj;
+			object result;
+			return DynamicReflection.TryCoerce(obj, type, out result) ? result : obj;
 		}
 	}
 

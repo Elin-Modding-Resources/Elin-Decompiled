@@ -1464,7 +1464,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			num2 = 1;
 		}
-		text = (Aka.IsEmpty() ? text.Bracket(num2) : (num2 switch
+		text = ((Aka.IsEmpty() || !(Aka != text)) ? text.Bracket(num2) : (num2 switch
 		{
 			-1 => "_aka", 
 			1 => "_aka3", 
@@ -4159,22 +4159,34 @@ public class Chara : Card, IPathfindWalker
 		{
 			preventRegen = true;
 		}
-		if (!preventRegen)
+		if (preventRegen)
 		{
-			if (EClass.rnd(25) == 0 && base.hp < MaxHP)
+			return;
+		}
+		if (EClass.rnd(25) == 0 && base.hp < MaxHP)
+		{
+			HealHP(EClass.rnd(Evalue(300) / 3 + 1) + 1);
+			elements.ModExp(300, 8f);
+		}
+		if (EClass.rnd(8) == 0 && mana.value < mana.max)
+		{
+			mana.Mod(EClass.rnd(Evalue(301) / 2 + 1) + 1);
+			elements.ModExp(301, 8f);
+		}
+		if (EClass.rnd(20) != 0)
+		{
+			return;
+		}
+		if (IsPC)
+		{
+			if (EClass.player.staminaRecovery > 0)
 			{
-				HealHP(EClass.rnd(Evalue(300) / 3 + 1) + 1);
-				elements.ModExp(300, 8f);
+				EClass.player.RecoverStamina(Evalue(62) / 100 + ((Evalue(62) % 100 > EClass.rnd(100)) ? 1 : 0));
 			}
-			if (EClass.rnd(8) == 0 && mana.value < mana.max)
-			{
-				mana.Mod(EClass.rnd(Evalue(301) / 2 + 1) + 1);
-				elements.ModExp(301, 8f);
-			}
-			if (EClass.rnd(20) == 0 && !IsPC && stamina.value < stamina.max)
-			{
-				stamina.Mod(EClass.rnd(5) + 1);
-			}
+		}
+		else if (stamina.value < stamina.max)
+		{
+			stamina.Mod(EClass.rnd(5) + 1);
 		}
 	}
 
@@ -5710,6 +5722,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC)
 		{
+			EClass.player.staminaRecovery = 0;
 			EClass._zone.isDeathLocation = true;
 			string s = ((origin == null) ? text : "dead_by");
 			Msg.thirdPerson1.Set(EClass.pc);
@@ -6323,9 +6336,16 @@ public class Chara : Card, IPathfindWalker
 			elements.ModExp(304, Mathf.Clamp(num6 * 2, 1, 200));
 			break;
 		case Act.CostType.SP:
+		{
+			int value = stamina.value;
 			stamina.Mod(-num6);
+			if (IsPC && a.HasTag("recovery"))
+			{
+				EClass.player.staminaRecovery += value - stamina.value;
+			}
 			ignoreSPAbsorb = true;
 			break;
+		}
 		}
 		if (a is Spell && GetCondition<ConSilence>() != null)
 		{
@@ -9869,7 +9889,7 @@ public class Chara : Card, IPathfindWalker
 			Element defenseAttribute = c.GetDefenseAttribute(this);
 			if (defenseAttribute != null)
 			{
-				c.power = 100 * c.power / Mathf.Max(100 + defenseAttribute.Value, 1);
+				c.power = MathEx.ClampToInt(100L * (long)c.power / Mathf.Max(100 + defenseAttribute.Value, 1));
 			}
 			if (c.source.resistance.Length != 0)
 			{
@@ -10344,10 +10364,12 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC)
 		{
+			EClass.player.RecoverStamina(EClass.player.staminaRecovery);
 			foreach (BodySlot slot in body.slots)
 			{
-				if (slot.thing != null)
+				if (slot.thing != null && slot.thing.GetBool(135))
 				{
+					LayerInventory.SetDirty(slot.thing);
 					slot.thing.SetBool(135, enable: false);
 				}
 			}

@@ -818,7 +818,12 @@ public class Recipe : EClass
 		{
 			text = "(" + source.row.GetField<string>("id") + ")";
 		}
-		return text.ToTitleCase();
+		text = text.ToTitleCase();
+		if (source.row is CardRow && (source.row as CardRow).quality == 4)
+		{
+			text = "★" + text;
+		}
+		return text;
 	}
 
 	public virtual string GetDetail()

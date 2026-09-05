@@ -1035,6 +1035,9 @@ public class Player : EClass
 	public int fishArtifact;
 
 	[JsonProperty]
+	public int staminaRecovery;
+
+	[JsonProperty]
 	public float angle;
 
 	[JsonProperty]
@@ -1588,6 +1591,19 @@ public class Player : EClass
 		if (LangGame.Has(text))
 		{
 			Msg.Say(text);
+		}
+	}
+
+	public void RecoverStamina(int a)
+	{
+		if (a >= staminaRecovery)
+		{
+			a = staminaRecovery;
+		}
+		if (a != 0)
+		{
+			staminaRecovery -= a;
+			EClass.pc.stamina.Mod(a);
 		}
 	}
 

@@ -113,7 +113,7 @@ public class TCText : TCUI
 	{
 		id = null;
 		chance = 1f;
-		int num = text.IndexOf("<sound", StringComparison.Ordinal);
+		int num = text.IndexOf("<sound=", StringComparison.Ordinal);
 		if (num == -1)
 		{
 			return false;
@@ -123,7 +123,7 @@ public class TCText : TCUI
 		{
 			return false;
 		}
-		int num3 = num + 6;
+		int num3 = num + 7;
 		string text2 = text.Substring(num3, num2 - num3);
 		int num4 = text2.IndexOf(',');
 		if (num4 == -1)

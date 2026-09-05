@@ -90,7 +90,7 @@ public class WidgetHP : Widget
 		gaugeStamina.textNow.SetSize(gaugeStamina.textNow.orgSize + extra.fontSize);
 		gaugeHP.UpdateValue(EMono.pc.hp, EMono.pc.MaxHP);
 		gaugeMP.UpdateValue(EMono.pc.mana.value, EMono.pc.mana.max);
-		gaugeStamina.UpdateValue(EMono.pc.stamina.value, EMono.pc.stamina.max);
+		gaugeStamina.UpdateValue(EMono.pc.stamina.value, EMono.pc.stamina.max, EMono.player.staminaRecovery);
 		Color c = EMono.Colors.Dark.gradientHP.Evaluate((float)EMono.pc.hp / (float)EMono.pc.MaxHP);
 		gaugeHP.textNow.text = "".TagColor(c, EMono.pc.hp.ToString() ?? "") + (extra.showMax ? (" / " + EMono.pc.MaxHP) : "");
 		c = EMono.Colors.Dark.gradientMP.Evaluate((float)EMono.pc.mana.value / (float)EMono.pc.mana.max);
