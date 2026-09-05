@@ -38,8 +38,6 @@ public class BaseModManager
 
 	public DirectoryInfo dirWorkshop;
 
-	public int priorityIndex;
-
 	[NonSerialized]
 	public List<BaseModPackage> packages = new List<BaseModPackage>();
 

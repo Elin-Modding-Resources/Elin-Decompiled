@@ -203,6 +203,10 @@ public class CorePath
 
 	public static string RootSaveCloud => Application.persistentDataPath + "/Cloud Save/";
 
+	public static string PathLoadOrder => rootExe + "loadorder.txt";
+
+	public static string PathLoadOrderPreset => user + "Load Order/";
+
 	public static string Temp => RootSave + "_Temp/";
 
 	public static string PathIni => RootSave + "elin.ini";
