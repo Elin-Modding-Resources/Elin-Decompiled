@@ -354,7 +354,48 @@ public class DNA : EClass
 			AddSpecial();
 			if (EClass.rnd(3) != 0)
 			{
-				IEnumerable<SourceElement.Row> enumerable = EClass.sources.elements.map.Values.Where((SourceElement.Row row) => row.tag.Contains("gene_mani") && lv + ((!EClass.debug.enable) ? 1 : 100) >= row.LV);
+				IEnumerable<SourceElement.Row> enumerable = EClass.sources.elements.map.Values.Where(delegate(SourceElement.Row row)
+				{
+					if (!row.tag.Contains("gene_mani"))
+					{
+						return false;
+					}
+					if (row.LV > lv + ((!EClass.debug.enable) ? 1 : 100))
+					{
+						return false;
+					}
+					if (row.aliasRef == "mold")
+					{
+						return false;
+					}
+					if (row.category == "ability" && row.aliasRef != "mold" && !row.aliasRef.IsEmpty() && row.id > 10000 && !EClass.sources.elements.alias[row.aliasRef].tag.Contains(row.alias.Split('_')[0]))
+					{
+						bool flag = false;
+						foreach (SourceChara.Row value in EClass.sources.charas.map.Values)
+						{
+							if (!value.actCombat.IsEmpty())
+							{
+								string[] actCombat = value.actCombat;
+								for (int i = 0; i < actCombat.Length; i++)
+								{
+									if (actCombat[i].Split('/')[0] == row.alias)
+									{
+										flag = true;
+									}
+								}
+								if (flag)
+								{
+									break;
+								}
+							}
+						}
+						if (!flag)
+						{
+							return false;
+						}
+					}
+					return true;
+				});
 				if (enumerable.Count() > 0)
 				{
 					SourceElement.Row e = enumerable.RandomItem();
