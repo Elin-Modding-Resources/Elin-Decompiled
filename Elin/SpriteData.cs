@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class SpriteData
 {
+	public const float DefaultPPU = 100f;
+
 	public string id;
 
 	public string path;
@@ -31,6 +33,16 @@ public class SpriteData
 
 	public bool tryFixPrefNotLoadedAtStart;
 
+	public static float BaseWidth(Sprite s)
+	{
+		return s.rect.width * 100f / s.pixelsPerUnit;
+	}
+
+	public static float BaseHeight(Sprite s)
+	{
+		return s.rect.height * 100f / s.pixelsPerUnit;
+	}
+
 	public void Init()
 	{
 		try
@@ -52,6 +64,16 @@ public class SpriteData
 		if (File.Exists(path + ".pref"))
 		{
 			pref = SourcePref.ReadFromIni(path + ".pref");
+		}
+	}
+
+	public void LoadPrefAndFixDensity()
+	{
+		float a = pref?.ScaleTex ?? 1f;
+		LoadPref();
+		if (sprites != null && !Mathf.Approximately(a, pref?.ScaleTex ?? 1f))
+		{
+			LoadSprites();
 		}
 	}
 
@@ -97,14 +119,15 @@ public class SpriteData
 		}
 		int num = tex.width / frame;
 		int height = tex.height;
-		if (sprites == null || sprites.Length != frame)
+		float num2 = 100f * (pref?.ScaleTex ?? 1f);
+		if (sprites == null || sprites.Length != frame || !sprites[0] || !Mathf.Approximately(sprites[0].rect.width, num) || !Mathf.Approximately(sprites[0].rect.height, height) || !Mathf.Approximately(sprites[0].pixelsPerUnit, num2))
 		{
 			sprites = new Sprite[frame];
-		}
-		Vector2 pivot = new Vector2(0.5f, 0.5f);
-		for (int i = 0; i < frame; i++)
-		{
-			sprites[i] = Sprite.Create(tex, new Rect(i * num, 0f, num, height), pivot, 100f, 0u, SpriteMeshType.FullRect);
+			Vector2 pivot = new Vector2(0.5f, 0.5f);
+			for (int i = 0; i < frame; i++)
+			{
+				sprites[i] = Sprite.Create(tex, new Rect(i * num, 0f, num, height), pivot, num2, 0u, SpriteMeshType.FullRect);
+			}
 		}
 	}
 

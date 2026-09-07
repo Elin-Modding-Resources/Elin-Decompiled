@@ -3069,7 +3069,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			return null;
 		}
 		long num3 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
-		bool flag = setting.fixedLv != -1 || DangerLvBoost > 0;
+		bool flag = setting.fixedLv != -1 || setting.addLv > 0 || DangerLvBoost > 0;
 		num3 += setting.addLv;
 		if (ScaleType == ZoneScaleType.Void)
 		{
@@ -3077,6 +3077,10 @@ public class Zone : Spatial, ICardParent, IInspect
 			flag = true;
 		}
 		num3 += DangerLvBoost;
+		if (flag && num3 <= Mathf.Max(50, cardRow.LV))
+		{
+			flag = false;
+		}
 		if (setting.rarity == Rarity.Random && cardRow.quality == 0)
 		{
 			if (EClass.rnd(EClass.pc.HasElement(1271) ? 80 : 100) == 0)

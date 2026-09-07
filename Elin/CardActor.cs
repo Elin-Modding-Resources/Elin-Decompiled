@@ -230,6 +230,12 @@ public class CardActor : Actor
 		}
 	}
 
+	public virtual void ReloadSprite()
+	{
+		sr.sprite = null;
+		RefreshSprite();
+	}
+
 	public virtual void RefreshSprite()
 	{
 		switch (type)

@@ -167,8 +167,9 @@ public class DNA : EClass
 		CardRow r = SpawnList.Get("chara").Select(100);
 		Rand.SetSeed(owner.c_seed);
 		Thing thing = GenerateGene(r, Type.Superior, owner.LV, owner.c_seed);
-		thing.c_DNA.cost = thing.c_DNA.cost / 2;
+		thing.c_DNA.cost = 0;
 		thing.c_DNA.isManiGene = true;
+		thing.ChangeMaterial(36);
 		thing.MakeRefFrom("mani");
 		Rand.SetSeed();
 		owner.c_seed++;

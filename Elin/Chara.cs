@@ -810,7 +810,7 @@ public class Chara : Card, IPathfindWalker
 				if (spriteReplacer.data.pref == null && !spriteReplacer.data.tryFixPrefNotLoadedAtStart)
 				{
 					spriteReplacer.data.tryFixPrefNotLoadedAtStart = true;
-					spriteReplacer.data.LoadPref();
+					spriteReplacer.data.LoadPrefAndFixDensity();
 				}
 				return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
 			}

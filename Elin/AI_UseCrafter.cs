@@ -273,7 +273,7 @@ public class AI_UseCrafter : AIAct
 						}
 					}
 					Rand.SetSeed();
-					if (crafter is TraitCookerMicrowave && recipe.id == "onsentamago" && EClass.rnd(3) != 0)
+					if (owner != null && crafter is TraitCookerMicrowave && recipe.id == "onsentamago" && EClass.rnd(3) != 0)
 					{
 						int power = EClass.curve((200 + ings[0].Quality * 5) * (100 + owner.Evalue(287) * 10) / 100, 400, 100);
 						ActEffect.ProcAt(EffectId.Explosive, power, BlessedState.Normal, crafter.owner.ExistsOnMap ? crafter.owner : owner, owner, owner.pos, isNeg: true, new ActRef

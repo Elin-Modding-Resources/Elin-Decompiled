@@ -58,7 +58,7 @@ public class AM_Paint : AM_BaseTileSelect
 		srRect.transform.position = Camera.main.ScreenToWorldPoint(mousePosition).SetZ(-100f);
 		float num = 0.02f / EClass.screen.Zoom;
 		Sprite sprite = canvas.owner.GetSprite();
-		srRect.transform.localScale = new Vector3((float)sprite.texture.width * num, (float)sprite.texture.height * num, 1f);
+		srRect.transform.localScale = new Vector3(SpriteData.BaseWidth(sprite) * num, SpriteData.BaseHeight(sprite) * num, 1f);
 		if (!EInput.leftMouse.clicked)
 		{
 			return;

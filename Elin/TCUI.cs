@@ -29,7 +29,7 @@ public class TCUI : TC
 				Vector3 vector = FixPos;
 				if (render != null && render.hasActor && !render.actor.isPCC && (bool)render.actor && (bool)render.actor.sr && (bool)render.actor.sr.sprite)
 				{
-					float num = 128f / render.actor.sr.sprite.rect.height;
+					float num = 128f / SpriteData.BaseHeight(render.actor.sr.sprite);
 					int pivotY = render.owner.Pref.pivotY;
 					vector = FixPos + new Vector3(0f, num * ((float)pivotY - 48f), 0f);
 				}

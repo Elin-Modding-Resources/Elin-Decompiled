@@ -9,8 +9,10 @@ using UnityEngine;
 [Serializable]
 public class SourcePref : EClass, ISerializationCallbackReceiver
 {
+	public const int TotalPrefInts = 26;
+
 	[JsonProperty]
-	public int[] ints = new int[25];
+	public int[] ints = new int[26];
 
 	public BitArray32 _bits1;
 
@@ -323,6 +325,31 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		}
 	}
 
+	public int scaleTex
+	{
+		get
+		{
+			return ints[25];
+		}
+		set
+		{
+			ints[25] = value;
+		}
+	}
+
+	public float ScaleTex
+	{
+		get
+		{
+			Validate();
+			if (ints[25] > 0)
+			{
+				return (float)ints[25] * 0.01f;
+			}
+			return 1f;
+		}
+	}
+
 	public bool bypassShadow
 	{
 		get
@@ -345,31 +372,27 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 
 	public void OnAfterDeserialize()
 	{
-		if (ints.Length >= 25)
-		{
-			_bits1.SetInt(ints[22]);
-		}
-		else
-		{
-			Validate();
-		}
+		Validate();
+		_bits1.SetInt(ints[22]);
 	}
 
 	public void OnBeforeSerialize()
 	{
+		Validate();
 		ints[22] = _bits1.ToInt();
 	}
 
 	public void Validate()
 	{
-		if (ints.Length < 25)
+		if (ints.Length < 26)
 		{
-			Array.Resize(ref ints, 25);
+			Array.Resize(ref ints, 26);
 		}
 	}
 
 	public void WriteIni(string path)
 	{
+		Validate();
 		FileIniDataParser fileIniDataParser = new FileIniDataParser();
 		if (File.Exists(path))
 		{
@@ -395,6 +418,7 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		iniData.Global["height"] = ints[3].ToString();
 		iniData.Global["heightFix"] = ints[24].ToString();
 		iniData.Global["scaleIcon"] = scaleIcon.ToString();
+		iniData.Global["scaleTex"] = scaleTex.ToString();
 		iniData.Global["liquidMod"] = liquidMod.ToString();
 		iniData.Global["liquidModMax"] = liquidModMax.ToString();
 		iniData.Global["hatY"] = ints[23].ToString();
@@ -425,6 +449,7 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		sourcePref.ints[3] = iniData.Global["height"].ToInt();
 		sourcePref.ints[24] = iniData.Global["heightFix"].ToInt();
 		sourcePref.scaleIcon = iniData.Global["scaleIcon"].ToInt();
+		sourcePref.scaleTex = iniData.Global["scaleTex"].ToInt();
 		sourcePref.liquidMod = iniData.Global["liquidMod"].ToInt();
 		sourcePref.liquidModMax = iniData.Global["liquidModMax"].ToInt();
 		sourcePref.ints[23] = iniData.Global["hatY"].ToInt();

@@ -22,6 +22,15 @@ public class CharaActor : CardActor
 		RefreshSprite();
 	}
 
+	public override void ReloadSprite()
+	{
+		if (owner != null)
+		{
+			sr.sprite = owner.GetSprite();
+			RefreshSprite();
+		}
+	}
+
 	public override void RefreshSprite()
 	{
 		Sprite sprite = sr.sprite;

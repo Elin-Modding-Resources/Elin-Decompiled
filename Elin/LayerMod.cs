@@ -29,8 +29,6 @@ public class LayerMod : ELayer
 		}
 	}
 
-	private const float previewBoxHeight = 240f;
-
 	private const string urlWorkshopItem = "https://steamcommunity.com/sharedfiles/filedetails/?id=";
 
 	public static LayerMod Instance;
@@ -54,6 +52,38 @@ public class LayerMod : ELayer
 	public UIHeader panelHeader;
 
 	public UINote panelNote;
+
+	public UIItem infoTitle;
+
+	public UIItem infoPreview;
+
+	public UIItem infoPreviewNote;
+
+	public UIItem infoAuthor;
+
+	public UIItem infoVersion;
+
+	public UIItem infoId;
+
+	public UIItem infoWorkshop;
+
+	public UIItem infoStatus;
+
+	public UIItem infoProblems;
+
+	public UIItem infoTags;
+
+	public UIItem infoRequires;
+
+	public UIItem infoIncompatible;
+
+	public UIItem infoLoadAfter;
+
+	public UIItem infoLoadBefore;
+
+	public UIItem infoDescription;
+
+	public GameObject infoSpace;
 
 	private UIButton buttonFilter;
 
@@ -148,8 +178,11 @@ public class LayerMod : ELayer
 		list.callbacks = CreateCallbacks(list, builtin: false);
 		list2.callbacks = CreateCallbacks(list2, builtin: true);
 		InitSearchUI();
-		CreatePresetUI();
-		panelHeader.SetText("info".lang());
+		windows[0].AddBottomButton("mod_preset", ShowPresetMenu);
+		infoPreview.button1.SetOnClick(delegate
+		{
+			ShowPreview(panelTarget);
+		});
 		RefreshLists();
 		ShowInfo(FirstInfoTarget());
 		list.dragEdgeSize = list.callbacks.GetMold()?.Rect().sizeDelta.y ?? 34f;
@@ -328,15 +361,9 @@ public class LayerMod : ELayer
 		if ((bool)buttonClearSearch)
 		{
 			buttonClearSearch.SetOnClick(ClearSearchText);
-			buttonClearSearch.SetActive(enable: false);
 		}
 		buttonFilter = windows[0].AddBottomButton("mod_filter", CycleFilter);
 		RefreshFilterButton();
-		if ((bool)textNoResult)
-		{
-			textNoResult.SetText("noResult".lang(), FontColor.Passive);
-			textNoResult.SetActive(enable: false);
-		}
 	}
 
 	public void Search(string s)
@@ -509,134 +536,89 @@ public class LayerMod : ELayer
 
 	private void ShowInfo(BaseModPackage p)
 	{
-		if (!panelNote || p == null || p == panelTarget)
+		if (p != null && p != panelTarget)
 		{
-			return;
+			panelTarget = p;
+			infoTitle.text1.SetText(p.title.IsEmpty(p.dirInfo.Name));
+			PreviewEntry thumb = GetThumb(p);
+			infoPreview.SetActive(thumb.sprite);
+			if ((bool)thumb.sprite)
+			{
+				infoPreview.image1.sprite = thumb.sprite;
+			}
+			SetInfo(value: (thumb.sprite ? ((thumb.kind == ModPreview.PreviewType.Gif) ? "mod_preview_gif" : null) : ((thumb.kind == ModPreview.PreviewType.None) ? "mod_preview_none" : "mod_preview_unsupported"))?.lang(), item: infoPreviewNote);
+			SetTopic(infoAuthor, p.author, null);
+			SetTopic(infoVersion, p.version, null);
+			SetTopic(infoId, p.id, null);
+			string text = ModLoadOrderPreset.WorkshopId(p);
+			SetTopic(infoWorkshop, text.IsEmpty() ? p.dirInfo.Name : text, text.IsEmpty() ? "mod_filter_local" : "mod_filter_workshop");
+			SetTopic(infoStatus, (!p.builtin && !p.willActivate) ? "mod_filter_disabled".lang() : null, null);
+			List<string> list = new List<string>();
+			if (p.blockedBy != null)
+			{
+				list.Add("mod_info_blocked".lang(p.blockedBy.title.IsEmpty(p.blockedBy.id)));
+			}
+			if (!p.langDepError.IsEmpty())
+			{
+				string[] array = p.langDepError.Split('\t');
+				list.Add(array[0].lang(string.Join("mod_info_or".lang(), array, 1, array.Length - 1)));
+			}
+			if (p.duplicateOf != null)
+			{
+				list.Add("mod_info_duplicate".lang(p.duplicateOf.title.IsEmpty(p.duplicateOf.dirInfo?.Name).IsEmpty(p.duplicateOf.id)));
+			}
+			if (!p.IsValidVersion())
+			{
+				list.Add("mod_info_old_version".lang(p.version, ELayer.core.versionMod.GetText()));
+			}
+			if (!p.parseError.IsEmpty())
+			{
+				list.Add("mod_info_parse_error".lang(p.parseError));
+			}
+			SetInfo(infoProblems, string.Join("\n", list));
+			UIItem item = infoTags;
+			string[] tags = p.tags;
+			SetTopic(item, (tags != null && tags.Length > 0) ? string.Join(", ", p.tags) : null, null);
+			SetTopic(infoRequires, IdList(p.dependency, alternatives: true), null);
+			SetTopic(infoIncompatible, IdList(p.incompatible, alternatives: false), null);
+			SetTopic(infoLoadAfter, IdList(p.loadAfter, alternatives: false), null);
+			SetTopic(infoLoadBefore, IdList(p.loadBefore, alternatives: false), null);
+			infoSpace.SetActive(!p.description.IsEmpty());
+			SetInfo(infoDescription, p.description);
+			panelNote.Build();
+			panelScroll.content.anchoredPosition = Vector2.zero;
 		}
-		panelTarget = p;
-		UINote n = panelNote;
-		n.Clear();
-		n.AddHeader(p.title.IsEmpty(p.dirInfo.Name));
-		PreviewEntry thumb = GetThumb(p);
-		if ((bool)thumb.sprite)
+		static string IdList(string[][] rows, bool alternatives)
 		{
-			AddPreviewBox(n, thumb.sprite, delegate
+			if (rows == null)
 			{
-				ShowPreview(p);
-			});
-			if (thumb.kind == ModPreview.PreviewType.Gif)
+				return null;
+			}
+			string sep = (alternatives ? "mod_info_or".lang() : "\n");
+			return string.Join("\n", from row in rows
+				where row != null && row.Length > 0
+				select string.Join(sep, row.Where((string id) => !id.IsEmpty())) into line
+				where !line.IsEmpty()
+				select line);
+		}
+		static void SetInfo(UIItem uIItem, string value)
+		{
+			uIItem.SetActive(!value.IsEmpty());
+			if (!value.IsEmpty())
 			{
-				n.AddText("mod_preview_gif".lang(), FontColor.Passive);
+				uIItem.text1.SetText(value);
 			}
 		}
-		else
+		static void SetTopic(UIItem uIItem, string value, string lang)
 		{
-			n.AddText(((thumb.kind == ModPreview.PreviewType.None) ? "mod_preview_none" : "mod_preview_unsupported").lang(), FontColor.Passive);
-		}
-		if (!p.author.IsEmpty())
-		{
-			AddTopic("author", p.author);
-		}
-		if (!p.version.IsEmpty())
-		{
-			AddTopic("version", p.version);
-		}
-		if (!p.id.IsEmpty())
-		{
-			FitValue(AddTopic("mod_info_id", p.id));
-		}
-		string text = ModLoadOrderPreset.WorkshopId(p);
-		FitValue(AddTopic(text.IsEmpty() ? "mod_filter_local" : "mod_filter_workshop", text.IsEmpty() ? p.dirInfo.Name : text));
-		if (!p.builtin && !p.willActivate)
-		{
-			AddTopic("status", "mod_filter_disabled".lang());
-		}
-		if (p.blockedBy != null)
-		{
-			n.AddText("mod_info_blocked".lang(p.blockedBy.title.IsEmpty(p.blockedBy.id)), FontColor.Bad);
-		}
-		if (!p.langDepError.IsEmpty())
-		{
-			n.AddText(p.langDepError, FontColor.Bad);
-		}
-		if (p.duplicateOf != null)
-		{
-			n.AddText("mod_info_duplicate".lang(p.duplicateOf.dirInfo?.Name ?? p.duplicateOf.id), FontColor.Bad);
-		}
-		if (!p.IsValidVersion())
-		{
-			n.AddText("mod_info_old_version".lang(p.version, ELayer.core.versionMod.GetText()), FontColor.Bad);
-		}
-		if (!p.parseError.IsEmpty())
-		{
-			n.AddText(p.parseError, FontColor.Bad);
-		}
-		string[] tags = p.tags;
-		if (tags != null && tags.Length > 0)
-		{
-			AddTopic("mod_info_tags", string.Join(", ", p.tags));
-		}
-		AddIdList(n, "mod_info_requires", p.dependency);
-		AddIdList(n, "incompatible", p.incompatible);
-		AddIdList(n, "mod_info_load_after", p.loadAfter);
-		AddIdList(n, "mod_info_load_before", p.loadBefore);
-		if (!p.description.IsEmpty())
-		{
-			n.Space(8);
-			n.AddText(p.description);
-		}
-		n.Build();
-		panelScroll.content.anchoredPosition = Vector2.zero;
-		UIItem AddTopic(string lang, string value)
-		{
-			UIItem uIItem = n.AddTopic(lang, value);
-			uIItem.text1.alignment = TextAnchor.LowerLeft;
-			return uIItem;
-		}
-	}
-
-	private static void AddPreviewBox(UINote n, Sprite sprite, Action onClick)
-	{
-		n.AddImage(sprite);
-		RectTransform rectTransform = n.transform.GetChild(n.transform.childCount - 1).Rect();
-		rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 240f);
-		Image componentInChildren = rectTransform.GetComponentInChildren<Image>();
-		RectTransform rectTransform2 = componentInChildren.rectTransform;
-		rectTransform2.anchorMin = Vector2.zero;
-		rectTransform2.anchorMax = Vector2.one;
-		rectTransform2.pivot = new Vector2(0.5f, 0.5f);
-		rectTransform2.anchoredPosition = Vector2.zero;
-		rectTransform2.sizeDelta = Vector2.zero;
-		componentInChildren.preserveAspect = true;
-		Button button = componentInChildren.gameObject.AddComponent<Button>();
-		button.transition = Selectable.Transition.None;
-		button.onClick.AddListener(delegate
-		{
-			onClick();
-		});
-	}
-
-	private static void FitValue(UIItem item)
-	{
-		if ((bool)item && (bool)item.text2)
-		{
-			item.text2.resizeTextForBestFit = true;
-			item.text2.horizontalOverflow = HorizontalWrapMode.Wrap;
-			item.text2.resizeTextMinSize = 9;
-			item.text2.resizeTextMaxSize = item.text2.fontSize;
-		}
-	}
-
-	private static void AddIdList(UINote n, string lang, string[][] rows)
-	{
-		if (rows != null && rows.Length != 0)
-		{
-			List<string> list = (from row in rows
-				where row != null && row.Length > 0 && !row[0].IsEmpty()
-				select row[0]).ToList();
-			if (list.Count > 0)
+			uIItem.SetActive(!value.IsEmpty());
+			if (!value.IsEmpty())
 			{
-				n.AddTopic(lang, string.Join(", ", list)).text1.alignment = TextAnchor.LowerLeft;
+				if (lang != null)
+				{
+					uIItem.text1.SetText(lang.lang());
+				}
+				uIItem.text2.SetText(value);
 			}
 		}
 	}
@@ -664,11 +646,6 @@ public class LayerMod : ELayer
 				UnityEngine.Object.Destroy(tex);
 			}
 		});
-	}
-
-	private void CreatePresetUI()
-	{
-		windows[0].AddBottomButton("mod_preset", ShowPresetMenu);
 	}
 
 	private void ShowPresetMenu()

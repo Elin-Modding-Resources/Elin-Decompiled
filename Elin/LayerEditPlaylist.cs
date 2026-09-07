@@ -17,6 +17,8 @@ public class LayerEditPlaylist : ELayer
 
 		public bool single;
 
+		public bool sort = true;
+
 		public new LayerEditPlaylist layer => base.layer as LayerEditPlaylist;
 
 		public override string IdTitle => idTitle;
@@ -77,7 +79,10 @@ public class LayerEditPlaylist : ELayer
 				},
 				onList = delegate
 				{
-					items.Sort((BGMData a, BGMData b) => a.id - b.id);
+					if (sort)
+					{
+						items.Sort((BGMData a, BGMData b) => a.id - b.id);
+					}
 					foreach (BGMData item in items)
 					{
 						list.Add(item);
@@ -210,7 +215,8 @@ public class LayerEditPlaylist : ELayer
 			multi.AddOwner(0, new ListBGM
 			{
 				items = list,
-				idTitle = "wPlaylist"
+				idTitle = "wPlaylist",
+				sort = false
 			});
 			multi.AddOwner(1, new ListBGM
 			{

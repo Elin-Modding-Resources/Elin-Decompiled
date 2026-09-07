@@ -450,7 +450,17 @@ public class Core : BaseCore
 						}
 						foreach (SpriteReplacer value in SpriteReplacer.dictSkins.Values)
 						{
-							value.data?.LoadPref();
+							value.data?.LoadPrefAndFixDensity();
+						}
+						if (RenderObject.syncList != null)
+						{
+							foreach (ISyncScreen sync in RenderObject.syncList)
+							{
+								if (sync is CardRenderer { hasActor: not false } cardRenderer && !cardRenderer.actor.isPCC)
+								{
+									cardRenderer.actor.ReloadSprite();
+								}
+							}
 						}
 						WidgetRoster.SetDirty();
 					}

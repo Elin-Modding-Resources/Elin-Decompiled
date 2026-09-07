@@ -3075,7 +3075,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return this;
 		}
-		if (LV >= Mathf.Max(50, sourceCard.LV))
+		if (LV > Mathf.Max(50, sourceCard.LV))
 		{
 			isScaled = true;
 		}
@@ -6598,7 +6598,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (spriteReplacer != null)
 			{
 				sprite = spriteReplacer.GetSprite();
-				RenderData renderData = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom_" + ((sprite.texture.height <= 128) ? "128" : "256"));
+				RenderData renderData = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom_" + ((SpriteData.BaseHeight(sprite) <= 128f) ? "128" : "256"));
 				sourceRenderCard.SetImage(image, sprite, colorInt, setNativeSize: true, 0, 0, renderData, spriteReplacer.data.pref ?? Pref);
 				return;
 			}
@@ -7556,8 +7556,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		Sprite sprite = GetSprite();
 		Texture2D texture2D = ScreenCapture.CaptureScreenshotAsTexture();
-		int num = sprite.texture.width * 2;
-		int num2 = sprite.texture.height * 2;
+		int num = (int)(SpriteData.BaseWidth(sprite) * 2f);
+		int num2 = (int)(SpriteData.BaseHeight(sprite) * 2f);
 		int x = (int)Mathf.Clamp(Input.mousePosition.x - (float)(num / 2), 1f, texture2D.width - num - 1);
 		int y = (int)Mathf.Clamp(Input.mousePosition.y - (float)(num2 / 2), 1f, texture2D.height - num2 - 1);
 		Color[] pixels = texture2D.GetPixels(x, y, num, num2);

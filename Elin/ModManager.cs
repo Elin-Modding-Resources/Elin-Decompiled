@@ -595,13 +595,13 @@ public class ModManager : ModManagerCore
 			{
 				if (baseModPackage != null)
 				{
-					return "requires " + baseModPackage.title.IsEmpty(baseModPackage.dirInfo?.Name) + ", which loads after this mod - move it above";
+					return "mod_info_dep_order\t" + baseModPackage.title.IsEmpty(baseModPackage.dirInfo?.Name);
 				}
 				if (baseModPackage2 != null)
 				{
-					return "requires " + baseModPackage2.title.IsEmpty(baseModPackage2.dirInfo?.Name) + ", which is installed but did not load";
+					return "mod_info_dep_failed\t" + baseModPackage2.title.IsEmpty(baseModPackage2.dirInfo?.Name);
 				}
-				return "requires " + string.Join(" or ", array) + ", which is not installed";
+				return "mod_info_dep_missing\t" + string.Join('\t', array);
 			}
 		}
 		return null;

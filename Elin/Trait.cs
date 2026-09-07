@@ -2337,6 +2337,11 @@ public class Trait : EClass
 					}
 					break;
 				}
+				ShopType shopType = ShopType;
+				if ((uint)(shopType - 24) <= 1u && EClass._zone is Zone_Yowyn)
+				{
+					Add("milk_kumiromi", EClass.rndHalf(6), 0);
+				}
 				switch (owner.id)
 				{
 				case "rodwyn":
