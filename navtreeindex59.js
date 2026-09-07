@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"classCustomGunEffectSetting.html#ae438feed32b72a7909af39edfdb249bc":[1,0,466,2],
+"classCustomMaterialContent.html":[1,0,467],
 "classCustomMaterialContent.html#a39c3cf2585386d1665530c0f53c7710c":[1,0,467,0],
 "classCustomMaterialContent.html#a69c821440ad65d4611049564244ab67e":[1,0,467,1],
 "classCustomMerchantStock.html":[1,0,468],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "classDesignationList.html#a15313adca75d83a5284d6e322dd685b1":[1,0,478,1],
 "classDesignationList.html#a5e197f3e260ea2cea7e03c18fa4c9099":[1,0,478,0],
 "classDesignationList.html#a749bf4c5cd27db3be45cfbf009f37c16":[1,0,478,3],
-"classDesignationList.html#ad088193eeba96130c0b9845a750ec48b":[1,0,478,4],
-"classDesignationList.html#ad20898b43f7c10ca95fbe5f44176031f":[1,0,478,2],
-"classDialog.html":[1,0,479]
+"classDesignationList.html#ad088193eeba96130c0b9845a750ec48b":[1,0,478,4]
 };

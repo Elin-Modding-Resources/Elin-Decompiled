@@ -15,6 +15,7 @@ var classCardActor =
     [ "OnRender", "classCardActor.html#a2568f648f9dc37fb4e89cb713fa17169", null ],
     [ "OnSetOwner", "classCardActor.html#add0abcf33bc25bb9578d75ed3310fe0b", null ],
     [ "RefreshSprite", "classCardActor.html#aa21a26b970022f688a9a32324f08e665", null ],
+    [ "ReloadSprite", "classCardActor.html#af47610a7d50b4a14f29df93c4448139d", null ],
     [ "SetOwner", "classCardActor.html#a7287512e2a97d744f0c3661f283bee75", null ],
     [ "destLiquid", "classCardActor.html#ab34130e2400e28c420b87cc3f43d3b6a", null ],
     [ "mpb", "classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d", null ],

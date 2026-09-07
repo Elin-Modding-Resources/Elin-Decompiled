@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"classLayerDragGrid.html#a17e738ba405de5e313b45e3d52dd3b1d":[1,0,861,8],
+"classLayerDragGrid.html#a1d25db5058c6f93b23211fb45eeb7c23":[1,0,861,31],
 "classLayerDragGrid.html#a24882f607033e8e59d05f46879cdee58":[1,0,861,2],
 "classLayerDragGrid.html#a2811078a7b3921d8dff6a374311e23f3":[1,0,861,32],
 "classLayerDragGrid.html#a2ba9615695df14c59e7982809ec63650":[1,0,861,14],
@@ -161,10 +163,11 @@ var NAVTREEINDEX82 =
 "classLayerEditPlaylist.html#ae3c806324d3d43e62e06b5ed5f32fd07":[1,0,866,2],
 "classLayerEditPlaylist_1_1ListBGM.html":[1,0,866,0],
 "classLayerEditPlaylist_1_1ListBGM.html#a236fed21079fe6fd5e904d2b8fe85d16":[1,0,866,0,2],
-"classLayerEditPlaylist_1_1ListBGM.html#a3757f76d875ce5de48f4a0ac5363ba6d":[1,0,866,0,4],
-"classLayerEditPlaylist_1_1ListBGM.html#a48366d4c793cdf440f0bebe8ee666fbc":[1,0,866,0,5],
+"classLayerEditPlaylist_1_1ListBGM.html#a3757f76d875ce5de48f4a0ac5363ba6d":[1,0,866,0,5],
+"classLayerEditPlaylist_1_1ListBGM.html#a48366d4c793cdf440f0bebe8ee666fbc":[1,0,866,0,6],
 "classLayerEditPlaylist_1_1ListBGM.html#a8c130b4afccff2563a41e2ffb692458f":[1,0,866,0,3],
 "classLayerEditPlaylist_1_1ListBGM.html#a9399d82352dae254c4b01d57c33c862d":[1,0,866,0,0],
+"classLayerEditPlaylist_1_1ListBGM.html#a9a65c9a9b99abdff7ccc8a341dc5ba60":[1,0,866,0,4],
 "classLayerEditPlaylist_1_1ListBGM.html#acf33d58cbc45476c84dc0f72b0678cbe":[1,0,866,0,1],
 "classLayerEditPortrait.html":[1,0,867],
 "classLayerEditPortrait.html#a2265315c67936261d8cdce6ec8f3ada9":[1,0,867,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX82 =
 "classLayerEmbark.html#adf04d0a517be6c5464abc4734442ef68":[1,0,869,46],
 "classLayerEmbark.html#ae261ba178ddb9b6ef3a1ae445fac5d6a":[1,0,869,34],
 "classLayerEmbark.html#ae8605e109e96fa99975aabcef6f40d02":[1,0,869,6],
-"classLayerEmbark.html#aec04d2d11665a73e3d399d5730d3ce3a":[1,0,869,48],
-"classLayerEmbark.html#aeca666b0da1a2f2f3030f2b56bc98e71":[1,0,869,26],
-"classLayerEmbark.html#af9605e587d0dc85538d071480dacd0a1":[1,0,869,15],
-"classLayerEmbark.html#aff1a960e3811556353eb4416c3631779":[1,0,869,27]
+"classLayerEmbark.html#aec04d2d11665a73e3d399d5730d3ce3a":[1,0,869,48]
 };
