@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"classActPray.html#afd81a647a671bba5ebfd4bf600301860":[1,0,61,2],
 "classActPray.html#aff54cfcf9f76a2c16db38007a3808d69":[1,0,61,0],
 "classActPuddle.html":[1,0,62],
 "classActQuickCraft.html":[1,0,63],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classActionMode.html#ad2b3e687cccc82616c68eda93d7dc1bb":[1,0,35,106],
 "classActionMode.html#ad4178e31023a566dd764109438913b7e":[1,0,35,154],
 "classActionMode.html#ad5d67f2ac96ce417bc61fb146df05039":[1,0,35,122],
-"classActionMode.html#ad5f989081c3c47e8d6d6e92dff5c498d":[1,0,35,46],
-"classActionMode.html#ad626553ade7d6631d5bb5bdd2c2ea0af":[1,0,35,29]
+"classActionMode.html#ad5f989081c3c47e8d6d6e92dff5c498d":[1,0,35,46]
 };

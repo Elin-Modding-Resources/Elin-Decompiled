@@ -1,5 +1,7 @@
 var NAVTREEINDEX128 =
 {
+"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da50a16f415160a7132a86a551fc34bdc9":[1,0,1719,0,0],
+"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623":[1,0,1719,0,2],
 "classTraitGachaBall.html":[1,0,1720],
 "classTraitGachaBall.html#a21aa13f411fdbdad79ced829f4352fd5":[1,0,1720,0],
 "classTraitGachaBall.html#a48ed88c0c4253754c083b5c5ee1f0c36":[1,0,1720,1],
@@ -98,10 +100,11 @@ var NAVTREEINDEX128 =
 "classTraitGiftPack.html#a943b6a12c7bce4185459b2645a1f1c34":[1,0,1740,0],
 "classTraitGodStatue.html":[1,0,1746],
 "classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e":[1,0,1746,0],
+"classTraitGodStatue.html#a3833a12d000906888b26e5ae1e8c0ac8":[1,0,1746,2],
 "classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33":[1,0,1746,1],
-"classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836":[1,0,1746,2],
-"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1746,3],
-"classTraitGodStatue.html#aaf58f029ebc4120d2b0714b73d373a74":[1,0,1746,4],
+"classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836":[1,0,1746,3],
+"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1746,4],
+"classTraitGodStatue.html#aaf58f029ebc4120d2b0714b73d373a74":[1,0,1746,5],
 "classTraitGoodsCoin.html":[1,0,1747],
 "classTraitGoodsCoin.html#a9751edccc0d9badf730cb5cca88fb87d":[1,0,1747,0],
 "classTraitGrave.html":[1,0,1748],
@@ -246,8 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitKettle.html#abad08e8eb2d56f33009395c62f660ca7":[1,0,1775,4],
 "classTraitKettle.html#acda06d5de4f53b9c9bba9b36b32091fd":[1,0,1775,3],
 "classTraitKettle.html#ad576994fdcc3f8ce00187d5e8428dab1":[1,0,1775,6],
-"classTraitKiln.html":[1,0,1776],
-"classTraitKiln.html#a3d83447c56897bfebe5d7f03d55ee5dd":[1,0,1776,0],
-"classTraitKiln.html#a53eb666e5e6feeb736c979d63bb53a76":[1,0,1776,3],
-"classTraitKiln.html#a622c82a96eada04d007ee404a2c29a98":[1,0,1776,1]
+"classTraitKiln.html":[1,0,1776]
 };

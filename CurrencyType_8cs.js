@@ -9,6 +9,7 @@ var CurrencyType_8cs =
       [ "Money2", "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea01a45f97a6830e3bb29a6f8ddfd259c8", null ],
       [ "BranchMoney", "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eab59ec46a8a89cbb0e57af9d11136299b", null ],
       [ "Influence", "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ead35a98028cca23c2a745a0bba43a90ff", null ],
-      [ "Casino_coin", "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eaeb3c5954ef4ce2e7da95907d1966be5c", null ]
+      [ "Casino_coin", "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eaeb3c5954ef4ce2e7da95907d1966be5c", null ],
+      [ "BlueCapsule", "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eaa48e5b1fbb4f27cf327ad64bef088b78", null ]
     ] ]
 ];

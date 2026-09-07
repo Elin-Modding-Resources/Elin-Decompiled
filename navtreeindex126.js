@@ -1,5 +1,7 @@
 var NAVTREEINDEX126 =
 {
+"classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd":[1,0,1614,1],
+"classTraitCookerMicrowave.html#a0ca3fbeffff6406e6f040cb1b8635364":[1,0,1614,0],
 "classTraitCookerMicrowave.html#a1da4d1f54e491074e8b347b15383c420":[1,0,1614,3],
 "classTraitCookerMicrowave.html#a35999b4086077023692f89dc99d72f8b":[1,0,1614,6],
 "classTraitCookerMicrowave.html#a939ab44480c2378293feeb7cf4ee7c58":[1,0,1614,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitDreamBug.html#ad56606394c6e097a292ec3e7377c1714":[1,0,1658,4],
 "classTraitDresser.html":[1,0,1659],
 "classTraitDrink.html":[1,0,1660],
-"classTraitDrink.html#a02255aa4d0c4ff1782d9f6af3cc9ddc9":[1,0,1660,1],
-"classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1660,9],
-"classTraitDrink.html#a455aa1d0f6ec5f3e7799065a8d68337c":[1,0,1660,18]
+"classTraitDrink.html#a02255aa4d0c4ff1782d9f6af3cc9ddc9":[1,0,1660,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"LayerDrama_8cs_source.html":[2,0,0,811],
 "LayerEditBio_8cs.html":[2,0,0,812],
 "LayerEditBio_8cs_source.html":[2,0,0,812],
 "LayerEditHouse_8cs.html":[2,0,0,813],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "MiniGame__Blackjack_8cs_source.html":[2,0,0,915],
 "MinionType_8cs.html":[2,0,0,916],
 "MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298":[2,0,0,916,0],
-"MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298a7a1920d61156abc05a60135aefe8bc67":[2,0,0,916,0,0],
-"MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298a930a91848917f92cf7e2f8d744fa4177":[2,0,0,916,0,1]
+"MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298a7a1920d61156abc05a60135aefe8bc67":[2,0,0,916,0,0]
 };

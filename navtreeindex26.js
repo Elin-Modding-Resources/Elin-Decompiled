@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classABILITY.html#a85f69d1622ff7ed6987fc1a2099c77fb":[1,0,11,51],
 "classABILITY.html#a8811e49251b7d4084394e7d5a38826b3":[1,0,11,134],
 "classABILITY.html#a88fbcb25c56366a20a3ecd09a7fa81eb":[1,0,11,52],
 "classABILITY.html#a89dc084b7ac59c79348dbc591fecb19d":[1,0,11,142],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classAI__AttackHome.html#ad7ea0f6f0aa849fd444905a5cd17e9f0":[1,0,82,0],
 "classAI__Bladder.html":[1,0,83],
 "classAI__Bladder.html#a34fc6731995a1775ed05759d28659635":[1,0,83,1],
-"classAI__Bladder.html#a4f8f070534728775fe2e534ee6dc70dc":[1,0,83,0],
-"classAI__Bladder.html#a6106eb8a006de9e6ed2fc4ad39826af2":[1,0,83,2]
+"classAI__Bladder.html#a4f8f070534728775fe2e534ee6dc70dc":[1,0,83,0]
 };

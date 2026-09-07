@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitMerchantBread_8cs_source.html":[2,0,0,1702],
 "TraitMerchantDeed_8cs.html":[2,0,0,1703],
 "TraitMerchantDeed_8cs_source.html":[2,0,0,1703],
 "TraitMerchantDrug_8cs.html":[2,0,0,1704],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "TraitSack_8cs.html":[2,0,0,1823],
 "TraitSack_8cs_source.html":[2,0,0,1823],
 "TraitSalaryChest_8cs.html":[2,0,0,1824],
-"TraitSalaryChest_8cs_source.html":[2,0,0,1824],
-"TraitSalesTag_8cs.html":[2,0,0,1825]
+"TraitSalaryChest_8cs_source.html":[2,0,0,1824]
 };

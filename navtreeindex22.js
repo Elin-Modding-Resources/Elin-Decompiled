@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"TraitTrainingDummyArmor_8cs.html":[2,0,0,1950],
 "TraitTrainingDummyArmor_8cs_source.html":[2,0,0,1950],
 "TraitTrainingDummy_8cs.html":[2,0,0,1949],
 "TraitTrainingDummy_8cs_source.html":[2,0,0,1949],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "UIResourceTrack_8cs.html":[2,0,0,2017],
 "UIResourceTrack_8cs_source.html":[2,0,0,2017],
 "UIScaleFix_8cs.html":[2,0,0,2018],
-"UIScaleFix_8cs_source.html":[2,0,0,2018],
-"UIScreenshot_8cs.html":[2,0,0,2019]
+"UIScaleFix_8cs_source.html":[2,0,0,2018]
 };

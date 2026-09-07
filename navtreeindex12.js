@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298a930a91848917f92cf7e2f8d744fa4177":[2,0,0,916,0,1],
 "MinionType_8cs_source.html":[2,0,0,916],
 "MissileHomingEffect_8cs.html":[2,0,0,917],
 "MissileHomingEffect_8cs_source.html":[2,0,0,917],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "PriceType_8cs.html#a482277e66af02c7d65679d7485095573aea9cf7e47ff33b2be14e6dd07cbcefc6":[2,0,0,978,0,1],
 "PriceType_8cs_source.html":[2,0,0,978],
 "PrimitiveCanvas_8cs.html":[2,0,0,3,4,1],
-"PrimitiveCanvas_8cs_source.html":[2,0,0,3,4,1],
-"PriorityQueueB_8cs.html":[2,0,0,0,5]
+"PrimitiveCanvas_8cs_source.html":[2,0,0,3,4,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TileTypeBaseBlock_8cs_source.html":[2,0,0,1335],
 "TileTypeBlockDeco_8cs.html":[2,0,0,1337],
 "TileTypeBlockDeco_8cs_source.html":[2,0,0,1337],
 "TileTypeBlockOpen_8cs.html":[2,0,0,1338],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitBlueprint_8cs_source.html":[2,0,0,1449],
 "TraitBoard_8cs.html":[2,0,0,1450],
 "TraitBoard_8cs_source.html":[2,0,0,1450],
-"TraitBoat_8cs.html":[2,0,0,1451],
-"TraitBoat_8cs_source.html":[2,0,0,1451]
+"TraitBoat_8cs.html":[2,0,0,1451]
 };

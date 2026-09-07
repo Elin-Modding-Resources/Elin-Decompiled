@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"FrameType_8cs_source.html":[2,0,0,3,36],
 "GStability_8cs.html":[2,0,0,644],
 "GStability_8cs_source.html":[2,0,0,644],
 "GWorth_8cs.html":[2,0,0,651],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "HintIcon_8cs_source.html":[2,0,0,3,43],
 "HireInfo_8cs.html":[2,0,0,656],
 "HireInfo_8cs_source.html":[2,0,0,656],
-"HitResult_8cs.html":[2,0,0,657],
-"HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a":[2,0,0,657,0]
+"HitResult_8cs.html":[2,0,0,657]
 };

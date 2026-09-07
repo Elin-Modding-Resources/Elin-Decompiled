@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"PriorityQueueB_8cs.html":[2,0,0,0,5],
 "PriorityQueueB_8cs_source.html":[2,0,0,0,5],
 "ProceduralMesh_8cs.html":[2,0,0,979],
 "ProceduralMesh_8cs_source.html":[2,0,0,979],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "RefArea_8cs_source.html":[2,0,0,1083],
 "RefCardName_8cs.html":[2,0,0,1084],
 "RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bf":[2,0,0,1084,0],
-"RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bfa6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1084,0,1],
-"RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bfa7a1920d61156abc05a60135aefe8bc67":[2,0,0,1084,0,0]
+"RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bfa6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1084,0,1]
 };

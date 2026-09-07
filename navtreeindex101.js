@@ -1,5 +1,6 @@
 var NAVTREEINDEX101 =
 {
+"classQueueManager.html#ace749391db1700d90f31fbddb7e14110":[1,0,1144,0],
 "classQueueManager.html#ae63e69a1bc6069cb6f4b2c9f95c29ae6":[1,0,1144,5],
 "classQueueManager.html#ae837d1941c217da6afcd69f34f323edc":[1,0,1144,6],
 "classQuickMenu.html":[1,0,1145],
@@ -248,6 +249,5 @@ var NAVTREEINDEX101 =
 "classRecipeSource.html#ad045f951fe9f92c5fdb3c3c44e8fed08":[1,0,1157,12],
 "classRecipeSource.html#ada67fceaabc441381e2c2040571a1eb4":[1,0,1157,13],
 "classRecipeSource.html#adabde503dc30ec15563ad3b1fca88e9f":[1,0,1157,5],
-"classRecipeSource.html#addd0a63fa0714fc7d37f758c9c8f02e2":[1,0,1157,1],
-"classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974":[1,0,1157,8]
+"classRecipeSource.html#addd0a63fa0714fc7d37f758c9c8f02e2":[1,0,1157,1]
 };

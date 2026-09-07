@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classLandFeat.html":[1,0,833],
 "classLandFeat.html#ab0460b6400be12c7d4de96b34ef7b276":[1,0,833,0],
 "classLang.html":[1,0,834],
 "classLang.html#a03a6e89e0e94af1a6ff61f448bf8c68c":[1,0,834,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "classLayer.html#ad7841de7af9acef53cf3fa503ba9eae2":[1,0,844,52],
 "classLayer.html#adcabbb5f9207fa402487950097b491cd":[1,0,844,77],
 "classLayer.html#ae3fef4099c96846533f426342585d51e":[1,0,844,26],
-"classLayer.html#ae48ab5d11ec32d6f2c39446da54afad5":[1,0,844,60],
-"classLayer.html#ae5ca8ebf19ac3003c95e3b494fd4c5b8":[1,0,844,80]
+"classLayer.html#ae48ab5d11ec32d6f2c39446da54afad5":[1,0,844,60]
 };

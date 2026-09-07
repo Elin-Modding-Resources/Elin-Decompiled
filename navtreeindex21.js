@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"TraitSalesTag_8cs.html":[2,0,0,1825],
 "TraitSalesTag_8cs_source.html":[2,0,0,1825],
 "TraitSawMill_8cs.html":[2,0,0,1826],
 "TraitSawMill_8cs_source.html":[2,0,0,1826],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "TraitTortureHorse_8cs.html":[2,0,0,1947],
 "TraitTortureHorse_8cs_source.html":[2,0,0,1947],
 "TraitTrainer_8cs.html":[2,0,0,1948],
-"TraitTrainer_8cs_source.html":[2,0,0,1948],
-"TraitTrainingDummyArmor_8cs.html":[2,0,0,1950]
+"TraitTrainer_8cs_source.html":[2,0,0,1948]
 };

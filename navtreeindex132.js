@@ -1,5 +1,9 @@
 var NAVTREEINDEX132 =
 {
+"classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1949,11],
+"classTraitShackle.html#a2302085849eb57620fb091e66dcd8a51":[1,0,1949,8],
+"classTraitShackle.html#a236f46437d85f1e740a110b66484bbba":[1,0,1949,6],
+"classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1949,0],
 "classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1949,3],
 "classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1949,2],
 "classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1949,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX132 =
 "classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,2017,1],
 "classTraitTicketArmPillow.html":[1,0,2018],
 "classTraitTicketChampagne.html":[1,0,2019],
-"classTraitTicketFurniture.html":[1,0,2020],
-"classTraitTicketFurniture.html#a96306db452cd06ecd5623c3d3e414244":[1,0,2020,2],
-"classTraitTicketFurniture.html#aa79abe574ba219d7ddf31ecaae48810b":[1,0,2020,1],
-"classTraitTicketFurniture.html#ada74a4ace463f5923278d818f7cfecbf":[1,0,2020,3],
-"classTraitTicketFurniture.html#adf26d3791bd374d651c28c4e43d0275c":[1,0,2020,0]
+"classTraitTicketFurniture.html":[1,0,2020]
 };

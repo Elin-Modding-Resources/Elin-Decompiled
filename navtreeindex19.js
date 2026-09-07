@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitFakeObj_8cs_source.html":[2,0,0,1576],
 "TraitFakeTile_8cs.html":[2,0,0,1577],
 "TraitFakeTile_8cs_source.html":[2,0,0,1577],
 "TraitFarmChest_8cs.html":[2,0,0,1578],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitMerchantBook_8cs_source.html":[2,0,0,1700],
 "TraitMerchantBooze_8cs.html":[2,0,0,1701],
 "TraitMerchantBooze_8cs_source.html":[2,0,0,1701],
-"TraitMerchantBread_8cs.html":[2,0,0,1702],
-"TraitMerchantBread_8cs_source.html":[2,0,0,1702]
+"TraitMerchantBread_8cs.html":[2,0,0,1702]
 };

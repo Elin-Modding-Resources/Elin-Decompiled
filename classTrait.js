@@ -157,6 +157,7 @@ var classTrait =
     [ "CopyShop", "classTrait.html#a1bc5c20004a292d57037a9556ad49d96", null ],
     [ "CostRerollShop", "classTrait.html#a889ced1a33f06a0932151ca4462c2015", null ],
     [ "CraftNum", "classTrait.html#a558c95dcaa4ee0563619757b3527a7a2", null ],
+    [ "CurrencyRerollShop", "classTrait.html#ae9239a8b0599405046d574cb657dc8c3", null ],
     [ "CurrencyType", "classTrait.html#aacfcf53c2e6cf84d8bdd01c7ae2e2fc4", null ],
     [ "Decay", "classTrait.html#aeae7706effc27faab891e9b6e10b5dd8", null ],
     [ "DecaySpeed", "classTrait.html#ad244050256aa49676de7a8270de802d2", null ],

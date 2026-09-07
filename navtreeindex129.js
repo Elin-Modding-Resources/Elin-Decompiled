@@ -1,5 +1,8 @@
 var NAVTREEINDEX129 =
 {
+"classTraitKiln.html#a3d83447c56897bfebe5d7f03d55ee5dd":[1,0,1776,0],
+"classTraitKiln.html#a53eb666e5e6feeb736c979d63bb53a76":[1,0,1776,3],
+"classTraitKiln.html#a622c82a96eada04d007ee404a2c29a98":[1,0,1776,1],
 "classTraitKiln.html#ac2743f12fb1e67b7731bee480e3e0ba4":[1,0,1776,4],
 "classTraitKiln.html#aecd3d2711e449d8e6af1fe2b39e3fbc4":[1,0,1776,2],
 "classTraitLandingPortal.html":[1,0,1777],
@@ -246,8 +249,5 @@ var NAVTREEINDEX129 =
 "classTraitMineEntrance.html#a27bc44d54a3a73cd844df94d22840e18":[1,0,1844,0],
 "classTraitMineEntrance.html#a31578a4695a39b06e6d55b2c32ad8d60":[1,0,1844,2],
 "classTraitMineEntrance.html#ad4edf6ccbf323b04d581042f0d5db63f":[1,0,1844,1],
-"classTraitMiniPool.html":[1,0,1845],
-"classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1845,0],
-"classTraitMiral.html":[1,0,1846],
-"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1846,5]
+"classTraitMiniPool.html":[1,0,1845]
 };

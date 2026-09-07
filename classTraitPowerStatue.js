@@ -12,6 +12,7 @@ var classTraitPowerStatue =
     [ "CanStack", "classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845", null ],
     [ "CanUseFromInventory", "classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2", null ],
     [ "CostRerollShop", "classTraitPowerStatue.html#a40d46b2fc824c7f9451db3850511a98f", null ],
+    [ "CurrencyRerollShop", "classTraitPowerStatue.html#a8ed6e84d3ee6332b51d17d3e979fb1f7", null ],
     [ "IDInvStyle", "classTraitPowerStatue.html#ac09ac4f3026d86f2b3723a29e560b040", null ],
     [ "Religion", "classTraitPowerStatue.html#ac9a88acdc591ae8170ae4e5fa140fce7", null ],
     [ "UseExtra", "classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2", null ]

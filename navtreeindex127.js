@@ -1,5 +1,7 @@
 var NAVTREEINDEX127 =
 {
+"classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1660,9],
+"classTraitDrink.html#a455aa1d0f6ec5f3e7799065a8d68337c":[1,0,1660,18],
 "classTraitDrink.html#a56ee9dafa7d55b6b8e22e307b637b416":[1,0,1660,5],
 "classTraitDrink.html#a6068c08dba4621b9c437ecf4dd8ca80e":[1,0,1660,10],
 "classTraitDrink.html#a6f961b99b7206af0591187f7ca7b00af":[1,0,1660,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitGacha.html#a5ce8ca8716b11e9534475f9d495d8ab1":[1,0,1719,2],
 "classTraitGacha.html#ac12e98eec74d5b2aa7e4c467d82d3c48":[1,0,1719,4],
 "classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d":[1,0,1719,0],
-"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da2751e0752cf12f17b5efd065c06daae5":[1,0,1719,0,1],
-"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da50a16f415160a7132a86a551fc34bdc9":[1,0,1719,0,0],
-"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623":[1,0,1719,0,2]
+"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da2751e0752cf12f17b5efd065c06daae5":[1,0,1719,0,1]
 };

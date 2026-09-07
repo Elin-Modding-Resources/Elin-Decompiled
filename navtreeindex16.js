@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"SpriteLoadOption_8cs.html":[2,0,0,2,82],
 "SpriteLoadOption_8cs_source.html":[2,0,0,2,82],
 "SpriteReplacerAnimation_8cs.html":[2,0,0,1236],
 "SpriteReplacerAnimation_8cs_source.html":[2,0,0,1236],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TileSelectorElona_8cs_source.html":[2,0,0,1333],
 "TileSelector_8cs.html":[2,0,0,1332],
 "TileSelector_8cs_source.html":[2,0,0,1332],
-"TileTypeBaseBlock_8cs.html":[2,0,0,1335],
-"TileTypeBaseBlock_8cs_source.html":[2,0,0,1335]
+"TileTypeBaseBlock_8cs.html":[2,0,0,1335]
 };

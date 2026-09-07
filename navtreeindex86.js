@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"classLayerSleep.html#af0008dcab9b1b602b3b7f4f5d4b22cf6":[1,0,910,9],
 "classLayerSleep.html#afe4cefcdbdcb5077878ddfdbb2cbe3e3":[1,0,910,2],
 "classLayerStockpile.html":[1,0,911],
 "classLayerTactics.html":[1,0,912],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "classLightControl2.html#ae76fc81957578ad72c6e92c9abd86212":[1,0,924,8],
 "classLightControl2.html#af6673ec3a5e58fe0671093291973e572":[1,0,924,0],
 "classLightData.html":[1,0,925],
-"classLightData.html#a3b56e0ee305e935748721bd615135849":[1,0,925,1],
-"classLightData.html#a72afa84bf18c420397a5e032f79ab195":[1,0,925,0]
+"classLightData.html#a3b56e0ee305e935748721bd615135849":[1,0,925,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba752049659fac08237d55a333277b9dd7":[2,0,0,1164,0,19],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba76f891a3a55f22ac4d9805ea078f9ddb":[2,0,0,1164,0,6],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba819c8a5aefef403c3a9690d35d578260":[2,0,0,1164,0,2],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba8d7e05a9b7e3b8e41350ea7674e8a273":[2,0,0,1164,0,40],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "SpriteBasedLaser_8cs.html":[2,0,0,1233],
 "SpriteBasedLaser_8cs_source.html":[2,0,0,1233],
 "SpriteData_8cs.html":[2,0,0,1234],
-"SpriteData_8cs_source.html":[2,0,0,1234],
-"SpriteLoadOption_8cs.html":[2,0,0,2,82]
+"SpriteData_8cs_source.html":[2,0,0,1234]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTileTypeFence.html#ae959004378b17480974ed4d38fd47cc6":[1,0,1452,2],
 "classTileTypeFenceClosed.html":[1,0,1453],
 "classTileTypeFenceClosed.html#ab1fa77eaa088f908a1976290e1d0b829":[1,0,1453,1],
 "classTileTypeFenceClosed.html#ade8fcabd8c974c3a87060f5b7e0e6c5c":[1,0,1453,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d":[1,0,1505,1],
 "classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb":[1,0,1505,8],
 "classTooltipManager.html#adca56be292c3fbc644ec72267f02a5fb":[1,0,1505,5],
-"classTrait.html":[1,0,1506],
-"classTrait.html#a0022e2d2cd75f779cd0205150933c4ac":[1,0,1506,203]
+"classTrait.html":[1,0,1506]
 };

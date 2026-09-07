@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689aaa0d528ba11ea1485d466dfe1ea40819":[1,0,438,3,0],
 "classCrawler.html#ae96bb2ae0a7dd1f2f6f7a2479b3ad689ae1e4c8c9ccd9fc39c391da4bcd093fb2":[1,0,438,3,1],
 "classCrawler_1_1Member.html":[1,0,438,0],
 "classCrawler_1_1Member.html#a17a3f0e9ef8bf47529a7ddb9160d401f":[1,0,438,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "classCustomGunEffectData.html#a0af0c1f1a2a74c4dfb6c6c06b5d7aa3f":[1,0,465,1],
 "classCustomGunEffectData.html#a5d32eea61d198c847ab4cfe636af43e8":[1,0,465,2],
 "classCustomGunEffectData.html#ad4abe52f31f131678b11b4d0fb4f2682":[1,0,465,0],
-"classCustomGunEffectSetting.html":[1,0,466],
-"classCustomGunEffectSetting.html#a51db4dff488352a081e89c6ef76cd79c":[1,0,466,1]
+"classCustomGunEffectSetting.html":[1,0,466]
 };

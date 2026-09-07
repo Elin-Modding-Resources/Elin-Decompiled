@@ -1,5 +1,8 @@
 var NAVTREEINDEX130 =
 {
+"classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1845,0],
+"classTraitMiral.html":[1,0,1846],
+"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1846,5],
 "classTraitMiral.html#a377aac926d21870adbfbe70fa41b77c8":[1,0,1846,4],
 "classTraitMiral.html#a63e4a4dd026d96c60e4584aee3a04b0c":[1,0,1846,2],
 "classTraitMiral.html#a79d7b7af125be1f284cdee11eee50f6b":[1,0,1846,1],
@@ -236,18 +239,15 @@ var NAVTREEINDEX130 =
 "classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18":[1,0,1901,2],
 "classTraitPowerStatue.html#a81a166b19fd010b11d7644172e5abf07":[1,0,1901,6],
 "classTraitPowerStatue.html#a8d8656e9c2e93d64771c56087f5fff38":[1,0,1901,5],
+"classTraitPowerStatue.html#a8ed6e84d3ee6332b51d17d3e979fb1f7":[1,0,1901,12],
 "classTraitPowerStatue.html#a9619a7baffa3cd4a949fb97c7975dd39":[1,0,1901,8],
-"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1901,14],
+"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1901,15],
 "classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1901,9],
 "classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1901,10],
-"classTraitPowerStatue.html#ac09ac4f3026d86f2b3723a29e560b040":[1,0,1901,12],
-"classTraitPowerStatue.html#ac9a88acdc591ae8170ae4e5fa140fce7":[1,0,1901,13],
+"classTraitPowerStatue.html#ac09ac4f3026d86f2b3723a29e560b040":[1,0,1901,13],
+"classTraitPowerStatue.html#ac9a88acdc591ae8170ae4e5fa140fce7":[1,0,1901,14],
 "classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1901,4],
 "classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1901,1],
 "classTraitPowerStatue.html#ad4219ceac075b2bef9fd98c90c22f651":[1,0,1901,7],
-"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1901,3],
-"classTraitPunishBall.html":[1,0,1902],
-"classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1902,1],
-"classTraitPunishBall.html#a8eed1e8041d764c11247005ecef42000":[1,0,1902,4],
-"classTraitPunishBall.html#a94ac158ebca677e1b6dd601c52a5232b":[1,0,1902,0]
+"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1901,3]
 };

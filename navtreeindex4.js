@@ -232,6 +232,7 @@ var NAVTREEINDEX4 =
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea12cf08020be04c9b1f8ad50a614cdd7f":[2,0,0,434,0,4],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea69d7f1d911f3e28651a2dee1a9c7fd34":[2,0,0,434,0,2],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,434,0,0],
+"CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eaa48e5b1fbb4f27cf327ad64bef088b78":[2,0,0,434,0,9],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eaa93312829ec4c71aac461cec296faa0e":[2,0,0,434,0,1],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eab59ec46a8a89cbb0e57af9d11136299b":[2,0,0,434,0,6],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eab7beed125a75ff65d74424407f05e8b1":[2,0,0,434,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "CurveEffect_8cs_source.html":[2,0,0,3,29],
 "CustomAssetManager_8cs.html":[2,0,0,2,20],
 "CustomAssetManager_8cs_source.html":[2,0,0,2,20],
-"CustomBiographyContent_8cs.html":[2,0,0,435],
-"CustomBiographyContent_8cs_source.html":[2,0,0,435]
+"CustomBiographyContent_8cs.html":[2,0,0,435]
 };
