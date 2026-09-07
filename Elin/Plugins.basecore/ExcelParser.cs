@@ -188,7 +188,10 @@ public class ExcelParser
 			}
 			return null;
 		}
-		cell.SetCellType(CellType.String);
+		if (cell.CellType != CellType.String)
+		{
+			cell.SetCellType(CellType.String);
+		}
 		if (cell.StringCellValue == "")
 		{
 			if (!useDefault)
