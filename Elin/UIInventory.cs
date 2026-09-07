@@ -335,7 +335,6 @@ public class UIInventory : EMono
 		{
 			tab.owner.BuildUICurrency(layer.uiCurrency, tab.owner.owner.trait.CostRerollShop != 0 || EMono.debug.enable);
 		}
-		layer.TryShowHint("h_inv" + tab.mode);
 		if ((bool)headerRow)
 		{
 			UIHeader[] componentsInChildren = headerRow.GetComponentsInChildren<UIHeader>(includeInactive: true);
@@ -909,24 +908,36 @@ public class UIInventory : EMono
 			{
 				break;
 			}
-			menuBottom.AddButton("rerollShop".lang(cost.ToString() ?? ""), delegate
+			menuBottom.AddButton("rerollShop".lang(cost.ToString() ?? "", (_owner.trait.CurrencyRerollShop == CurrencyType.BlueCapsule) ? EMono.sources.things.map["drug_blue"].GetName() : "influence".lang()), delegate
 			{
-				if (EMono._zone.influence < cost)
+				if (_owner.trait.CurrencyRerollShop == CurrencyType.BlueCapsule)
 				{
-					SE.Beep();
-					Msg.Say("notEnoughInfluence");
+					if (EMono.pc.GetCurrency("drug_blue") < cost)
+					{
+						SE.Beep();
+						Msg.Say("notEnoughSomething", EMono.sources.things.map["drug_blue"].GetName());
+						return;
+					}
+					EMono.pc.ModCurrency(-1, "drug_blue");
 				}
 				else
 				{
-					SE.Dice();
+					if (EMono._zone.influence < cost)
+					{
+						SE.Beep();
+						Msg.Say("notEnoughInfluence");
+						return;
+					}
 					EMono._zone.influence -= cost;
-					_owner.c_dateStockExpire = 0;
-					_owner.trait.OnBarter(reroll: true);
-					RefreshGrid();
-					Sort();
-					SE.Play("shop_open");
 				}
-			});
+				SE.Dice();
+				_owner.c_dateStockExpire = 0;
+				_owner.trait.OnBarter(reroll: true);
+				RefreshGrid();
+				Sort();
+				SE.Play("shop_open");
+				TooltipManager.Instance.HideTooltips(immediate: true);
+			}, null, "DefaultContentFit").RebuildLayout();
 			break;
 		}
 		}

@@ -568,6 +568,8 @@ public class Trait : EClass
 		}
 	}
 
+	public virtual CurrencyType CurrencyRerollShop => CurrencyType.Influence;
+
 	public virtual bool AllowCriminal => owner.isThing;
 
 	public virtual int RestockDay => 5;
@@ -2338,9 +2340,16 @@ public class Trait : EClass
 					break;
 				}
 				ShopType shopType = ShopType;
-				if ((uint)(shopType - 24) <= 1u && EClass._zone is Zone_Yowyn)
+				if ((uint)(shopType - 24) <= 1u)
 				{
-					Add("milk_kumiromi", EClass.rndHalf(6), 0);
+					if (EClass._zone is Zone_Yowyn)
+					{
+						Add("milk_kumiromi", EClass.rndHalf(6), 0);
+					}
+					if (EClass._zone is Zone_Nefu)
+					{
+						Add("milk_horome", EClass.rndHalf(6), 0);
+					}
 				}
 				switch (owner.id)
 				{

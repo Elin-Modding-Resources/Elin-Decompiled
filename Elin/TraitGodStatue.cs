@@ -13,6 +13,14 @@ public class TraitGodStatue : TraitPowerStatue
 		OnChangeMaterial();
 	}
 
+	public override void OnBarter(bool reroll = false)
+	{
+		if (Religion.id == "machine")
+		{
+			DNA.GenerateManiGene(owner);
+		}
+	}
+
 	public void OnChangeMaterial()
 	{
 		owner.isOn = owner.material.alias == "gold";

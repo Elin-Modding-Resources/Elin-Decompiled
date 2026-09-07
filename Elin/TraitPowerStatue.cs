@@ -24,7 +24,9 @@ public class TraitPowerStatue : TraitItem
 
 	public override string IDInvStyle => "jewelbox";
 
-	public override int CostRerollShop => 0;
+	public override int CostRerollShop => 1;
+
+	public override CurrencyType CurrencyRerollShop => CurrencyType.BlueCapsule;
 
 	public override bool CanStack => false;
 
@@ -60,7 +62,8 @@ public class TraitPowerStatue : TraitItem
 			{
 				DNA.GenerateManiGene(owner);
 			}
-			LayerInventory.CreateContainer<InvOwnerChoose>(owner, owner);
+			LayerInventory.CreateContainer<InvOwnerChoose>(owner, owner).TryShowHint("h_invManiGene");
+			SE.Play("pop_principal");
 			return false;
 		}
 		Msg.Say("shrine_power", owner);

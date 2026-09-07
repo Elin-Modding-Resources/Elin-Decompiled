@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class DNA : EClass
 		Inferior = 0,
 		Default = 3,
 		Superior = 5,
+		Superimani = 6,
 		Brain = 8
 	}
 
@@ -85,18 +87,6 @@ public class DNA : EClass
 		}
 	}
 
-	public bool isManiGene
-	{
-		get
-		{
-			return bits[0];
-		}
-		set
-		{
-			bits[0] = value;
-		}
-	}
-
 	[OnSerializing]
 	private void _OnSerializing(StreamingContext context)
 	{
@@ -168,10 +158,7 @@ public class DNA : EClass
 			Rand.SetSeed(owner.c_seed);
 			CardRow r = SpawnList.Get("chara").Select(100);
 			Rand.SetSeed(owner.c_seed);
-			Thing thing = GenerateGene(r, Type.Superior, owner.LV, owner.c_seed);
-			thing.c_DNA.cost = thing.c_DNA.cost / 2;
-			thing.c_DNA.isManiGene = true;
-			thing.ChangeMaterial(36);
+			Thing thing = GenerateGene(r, Type.Superimani, owner.LV, owner.c_seed);
 			thing.MakeRefFrom("mani");
 			Rand.SetSeed();
 			owner.c_seed++;
@@ -358,10 +345,28 @@ public class DNA : EClass
 			}
 			AddSpecial();
 			break;
+		case Type.Superimani:
+			AddRandom(EClass.rnd(EClass.rnd(4)) + 3);
+			if (EClass.rnd(3) == 0)
+			{
+				AddSpecial();
+			}
+			AddSpecial();
+			if (EClass.rnd(3) != 0)
+			{
+				IEnumerable<SourceElement.Row> enumerable = EClass.sources.elements.map.Values.Where((SourceElement.Row row) => row.tag.Contains("gene_mani") && lv + ((!EClass.debug.enable) ? 1 : 100) >= row.LV);
+				if (enumerable.Count() > 0)
+				{
+					SourceElement.Row e = enumerable.RandomItem();
+					AddVal(e.id, (!(e.category == "ability")) ? 1 : 100, allowStack: false, (int v) => e.cost[0], allowNegative: false);
+				}
+			}
+			cost = cost / 2 - 10;
+			break;
 		}
 		if (vals.Count == 0)
 		{
-			for (int i = 0; i < 10; i++)
+			for (int num = 0; num < 10; num++)
 			{
 				if (EClass.rnd(4) == 0)
 				{
@@ -402,7 +407,7 @@ public class DNA : EClass
 			if (body == 0)
 			{
 				BodySlot bodySlot = null;
-				for (int j = 0; j < 100; j++)
+				for (int i = 0; i < 100; i++)
 				{
 					BodySlot bodySlot2 = model.body.slots.RandomItem();
 					if (bodySlot2 != null && bodySlot2.elementId != 40 && bodySlot2.elementId != 44 && bodySlot2.elementId != 46)
@@ -423,20 +428,20 @@ public class DNA : EClass
 			if (listFeat.Count != 0)
 			{
 				feat++;
-				Element e = listFeat.RandomItem();
-				if (maxSlot <= 1 || e.source.geneSlot <= 1)
+				Element e2 = listFeat.RandomItem();
+				if (maxSlot <= 1 || e2.source.geneSlot <= 1)
 				{
-					if (e.source.geneSlot > maxSlot)
+					if (e2.source.geneSlot > maxSlot)
 					{
-						maxSlot = e.source.geneSlot;
+						maxSlot = e2.source.geneSlot;
 					}
-					AddVal(e.id, 1, allowStack: false, (int v) => e.source.cost[0] * 5, allowNegative: false);
+					AddVal(e2.id, 1, allowStack: false, (int v) => e2.source.cost[0] * 5, allowNegative: false);
 				}
 			}
 		}
 		void AddRandom(int n)
 		{
-			for (int j = 0; j < n; j++)
+			for (int i = 0; i < n; i++)
 			{
 				if (EClass.debug.enable && EClass.rnd(2) == 0)
 				{
@@ -485,22 +490,22 @@ public class DNA : EClass
 			if (v >= 0 || allowNegative)
 			{
 				bool flag = false;
-				int num = EClass.curve(v, 20, 10, 90);
+				int num2 = EClass.curve(v, 20, 10, 90);
 				if (v < -100)
 				{
-					num = EClass.curve(Mathf.Abs(v + 100), 20, 10, 90);
+					num2 = EClass.curve(Mathf.Abs(v + 100), 20, 10, 90);
 				}
 				v = EClass.curve(v, 20, 10, 80);
-				for (int j = 0; j < vals.Count; j += 2)
+				for (int i = 0; i < vals.Count; i += 2)
 				{
-					if (vals[j] == id)
+					if (vals[i] == id)
 					{
 						if (allowStack)
 						{
 							v /= 2;
-							num /= 2;
-							vals[j + 1] += v;
-							Debug.Log(vals[j + 1] + ": " + v + "/" + num);
+							num2 /= 2;
+							vals[i + 1] += v;
+							Debug.Log(vals[i + 1] + ": " + v + "/" + num2);
 							flag = true;
 							break;
 						}
@@ -514,7 +519,7 @@ public class DNA : EClass
 						vals.Add(id);
 						vals.Add(v);
 					}
-					cost += Mathf.Max(0, funcCost(num));
+					cost += Mathf.Max(0, funcCost(num2));
 				}
 			}
 		}
@@ -534,13 +539,16 @@ public class DNA : EClass
 		for (int i = 0; i < vals.Count; i += 2)
 		{
 			Element element = Element.Create(vals[i], vals[i + 1]);
-			if (element.source.geneSlot < 0)
+			if (type != Type.Superimani || !element.HasTag("gene_mani"))
 			{
-				slot = 99;
-			}
-			if (element.source.geneSlot > slot)
-			{
-				slot = element.source.geneSlot;
+				if (element.source.geneSlot < 0)
+				{
+					slot = 99;
+				}
+				if (element.source.geneSlot > slot)
+				{
+					slot = element.source.geneSlot;
+				}
 			}
 		}
 		if (slot < 0)
@@ -556,6 +564,7 @@ public class DNA : EClass
 			"jelly" => Type.Default, 
 			"gold" => Type.Superior, 
 			"amethyst" => Type.Brain, 
+			"lapis" => Type.Superimani, 
 			_ => Type.Inferior, 
 		};
 	}
@@ -566,6 +575,7 @@ public class DNA : EClass
 		{
 			Type.Default => "jelly", 
 			Type.Superior => "gold", 
+			Type.Superimani => "lapis", 
 			Type.Brain => "amethyst", 
 			_ => "process", 
 		};
