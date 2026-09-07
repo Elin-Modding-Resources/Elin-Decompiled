@@ -1,6 +1,6 @@
 public class TraitGodStatue : TraitPowerStatue
 {
-	public Religion Religion => EClass.game.religions.dictAll[GetParam(1)];
+	public override Religion Religion => EClass.game.religions.dictAll[GetParam(1)];
 
 	public override bool IsImplemented()
 	{
@@ -19,7 +19,7 @@ public class TraitGodStatue : TraitPowerStatue
 		owner.rarity = (owner.isOn ? Rarity.Artifact : Rarity.Normal);
 		if (Religion.id == "machine")
 		{
-			owner.AddCard(DNA.GenerateManiGene(owner));
+			DNA.GenerateManiGene(owner);
 		}
 		if (owner.placeState == PlaceState.installed)
 		{
@@ -32,16 +32,12 @@ public class TraitGodStatue : TraitPowerStatue
 		Religion.Talk("shrine");
 		switch (Religion.id)
 		{
+		case "machine":
+			break;
 		case "harvest":
 		{
 			Thing t = ThingGen.Create("book_kumiromi");
 			EClass.pc.Pick(t);
-			break;
-		}
-		case "machine":
-		{
-			Thing t2 = owner.things.Find("gene") ?? DNA.GenerateManiGene(owner);
-			EClass.pc.Pick(t2);
 			break;
 		}
 		case "healing":

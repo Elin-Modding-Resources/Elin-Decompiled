@@ -594,6 +594,7 @@ public class LayerInventory : ELayer
 
 	public static LayerInventory CreateContainer<T>(Card c, Card container, CurrencyType currency = CurrencyType.None) where T : InvOwner
 	{
+		TooltipManager.Instance.disableTimer = 0.1f;
 		LayerInventory layerInventory = _Create();
 		UIInventory uIInventory = layerInventory.SetInv();
 		T owner = Activator.CreateInstance(typeof(T), c, container, currency) as T;

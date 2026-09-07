@@ -159,21 +159,24 @@ public class DNA : EClass
 		return GenerateGene(r, Type.Superior, lv, seed);
 	}
 
-	public static Thing GenerateManiGene(Card owner)
+	public static void GenerateManiGene(Card owner)
 	{
 		owner.things.DestroyAll();
-		Debug.Log("Mani:" + owner.c_seed);
-		Rand.SetSeed(owner.c_seed);
-		CardRow r = SpawnList.Get("chara").Select(100);
-		Rand.SetSeed(owner.c_seed);
-		Thing thing = GenerateGene(r, Type.Superior, owner.LV, owner.c_seed);
-		thing.c_DNA.cost = 0;
-		thing.c_DNA.isManiGene = true;
-		thing.ChangeMaterial(36);
-		thing.MakeRefFrom("mani");
-		Rand.SetSeed();
-		owner.c_seed++;
-		return thing;
+		for (int i = 0; i < 3; i++)
+		{
+			Debug.Log("Mani:" + owner.c_seed);
+			Rand.SetSeed(owner.c_seed);
+			CardRow r = SpawnList.Get("chara").Select(100);
+			Rand.SetSeed(owner.c_seed);
+			Thing thing = GenerateGene(r, Type.Superior, owner.LV, owner.c_seed);
+			thing.c_DNA.cost = thing.c_DNA.cost / 2;
+			thing.c_DNA.isManiGene = true;
+			thing.ChangeMaterial(36);
+			thing.MakeRefFrom("mani");
+			Rand.SetSeed();
+			owner.c_seed++;
+			owner.AddCard(thing);
+		}
 	}
 
 	public void Apply(Chara c)

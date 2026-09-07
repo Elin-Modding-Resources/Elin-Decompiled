@@ -1,5 +1,7 @@
 public class TraitPowerStatue : TraitItem
 {
+	public virtual Religion Religion => null;
+
 	public override bool CanBeDestroyed
 	{
 		get
@@ -19,6 +21,10 @@ public class TraitPowerStatue : TraitItem
 	public override bool CanUseFromInventory => false;
 
 	public override bool UseExtra => owner.isOn;
+
+	public override string IDInvStyle => "jewelbox";
+
+	public override int CostRerollShop => 0;
 
 	public override bool CanStack => false;
 
@@ -46,6 +52,16 @@ public class TraitPowerStatue : TraitItem
 		{
 			Msg.SayNothingHappen();
 			return true;
+		}
+		if (Religion?.id == "machine" && owner.material.id == 12)
+		{
+			owner.things.SetSize(5, 2);
+			if (owner.things.Count < 3)
+			{
+				DNA.GenerateManiGene(owner);
+			}
+			LayerInventory.CreateContainer<InvOwnerChoose>(owner, owner);
+			return false;
 		}
 		Msg.Say("shrine_power", owner);
 		if (flag)
