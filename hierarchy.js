@@ -1001,6 +1001,7 @@ var hierarchy =
       [ "InvOwner", "classInvOwner.html", [
         [ "InvOwnerAlly", "classInvOwnerAlly.html", null ],
         [ "InvOwnerAutoCombatBar", "classInvOwnerAutoCombatBar.html", null ],
+        [ "InvOwnerChoose", "classInvOwnerChoose.html", null ],
         [ "InvOwnerCopyShop", "classInvOwnerCopyShop.html", null ],
         [ "InvOwnerDraglet", "classInvOwnerDraglet.html", [
           [ "InvOwnerBlend", "classInvOwnerBlend.html", null ],

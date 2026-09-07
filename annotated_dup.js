@@ -852,6 +852,7 @@ var annotated_dup =
     [ "InvOwnerChangeMaterial", "classInvOwnerChangeMaterial.html", "classInvOwnerChangeMaterial" ],
     [ "InvOwnerChangeRarity", "classInvOwnerChangeRarity.html", "classInvOwnerChangeRarity" ],
     [ "InvOwnerChaosOffering", "classInvOwnerChaosOffering.html", "classInvOwnerChaosOffering" ],
+    [ "InvOwnerChoose", "classInvOwnerChoose.html", "classInvOwnerChoose" ],
     [ "InvOwnerCopyShop", "classInvOwnerCopyShop.html", "classInvOwnerCopyShop" ],
     [ "InvOwnerCraft", "classInvOwnerCraft.html", "classInvOwnerCraft" ],
     [ "InvOwnerDeliver", "classInvOwnerDeliver.html", "classInvOwnerDeliver" ],

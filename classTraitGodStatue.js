@@ -4,5 +4,5 @@ var classTraitGodStatue =
     [ "IsImplemented", "classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33", null ],
     [ "OnChangeMaterial", "classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836", null ],
     [ "OnCreate", "classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7", null ],
-    [ "Religion", "classTraitGodStatue.html#abc0ce01bea37d901ff1893ea8576377d", null ]
+    [ "Religion", "classTraitGodStatue.html#aaf58f029ebc4120d2b0714b73d373a74", null ]
 ];

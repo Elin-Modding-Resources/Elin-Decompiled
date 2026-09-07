@@ -738,6 +738,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "InvOwnerChangeMaterial.cs", "InvOwnerChangeMaterial_8cs.html", "InvOwnerChangeMaterial_8cs" ],
     [ "InvOwnerChangeRarity.cs", "InvOwnerChangeRarity_8cs.html", "InvOwnerChangeRarity_8cs" ],
     [ "InvOwnerChaosOffering.cs", "InvOwnerChaosOffering_8cs.html", "InvOwnerChaosOffering_8cs" ],
+    [ "InvOwnerChoose.cs", "InvOwnerChoose_8cs.html", "InvOwnerChoose_8cs" ],
     [ "InvOwnerCopyShop.cs", "InvOwnerCopyShop_8cs.html", "InvOwnerCopyShop_8cs" ],
     [ "InvOwnerCraft.cs", "InvOwnerCraft_8cs.html", "InvOwnerCraft_8cs" ],
     [ "InvOwnerDeliver.cs", "InvOwnerDeliver_8cs.html", "InvOwnerDeliver_8cs" ],

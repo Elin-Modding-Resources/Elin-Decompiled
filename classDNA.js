@@ -17,7 +17,7 @@ var classDNA =
     [ "Generate", "classDNA.html#ac4ccc343e3934157071be3433a7fe135", null ],
     [ "GenerateGene", "classDNA.html#a62c5c4f4026e3b6526e957366668bc18", null ],
     [ "GenerateGene", "classDNA.html#ae75a8e273cf8a03dfa71e229761e6360", null ],
-    [ "GenerateManiGene", "classDNA.html#ab3cc3e3e9678f0d7f51b6693cfea8d60", null ],
+    [ "GenerateManiGene", "classDNA.html#aa08185eb842265cef63638b1497d6bb2", null ],
     [ "GenerateRandomGene", "classDNA.html#a80bd69ffa517ae2eb94941521443eee0", null ],
     [ "GenerateWithGene", "classDNA.html#a486b70a2fb81c649e8dd25e7056ca90c", null ],
     [ "GetBodySlot", "classDNA.html#ae3e34017a91effe5106c7bbee6413d37", null ],

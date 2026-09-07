@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"classCustomGunEffectSetting.html#a683c15c37c0a80008a88babef44d6d54":[1,0,466,3],
+"classCustomGunEffectSetting.html#a9e948215a43ec811c57c79cfd38d2f97":[1,0,466,0],
 "classCustomGunEffectSetting.html#ae438feed32b72a7909af39edfdb249bc":[1,0,466,2],
 "classCustomMaterialContent.html":[1,0,467],
 "classCustomMaterialContent.html#a39c3cf2585386d1665530c0f53c7710c":[1,0,467,0],
@@ -98,7 +100,7 @@ var NAVTREEINDEX59 =
 "classDNA.html#a8e2aa2e76b7a1c49808f1181677ce4b5":[1,0,482,31],
 "classDNA.html#a9db92de4de2d16a43398cc2aba03fe9c":[1,0,482,34],
 "classDNA.html#a9ddd01e83b7ca731a900ba3300a706be":[1,0,482,29],
-"classDNA.html#ab3cc3e3e9678f0d7f51b6693cfea8d60":[1,0,482,12],
+"classDNA.html#aa08185eb842265cef63638b1497d6bb2":[1,0,482,12],
 "classDNA.html#ab7fae840137a248774d4da8a3d4f9b0f":[1,0,482,6],
 "classDNA.html#ab8d17312383a69af22ff757f76bf5900":[1,0,482,20],
 "classDNA.html#ac4ccc343e3934157071be3433a7fe135":[1,0,482,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "classDepthEffect.html#afdf79abccfe3de57d8a207a64973c798":[1,0,477,0],
 "classDesignationList.html":[1,0,478],
 "classDesignationList.html#a15313adca75d83a5284d6e322dd685b1":[1,0,478,1],
-"classDesignationList.html#a5e197f3e260ea2cea7e03c18fa4c9099":[1,0,478,0],
-"classDesignationList.html#a749bf4c5cd27db3be45cfbf009f37c16":[1,0,478,3],
-"classDesignationList.html#ad088193eeba96130c0b9845a750ec48b":[1,0,478,4]
+"classDesignationList.html#a5e197f3e260ea2cea7e03c18fa4c9099":[1,0,478,0]
 };
