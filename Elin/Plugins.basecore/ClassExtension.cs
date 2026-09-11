@@ -268,6 +268,16 @@ public static class ClassExtension
 		}
 	}
 
+	public static void Sort<T>(this IList<T> list, Func<T, int> keySelector)
+	{
+		List<T> list2 = list.OrderBy(keySelector).ToList();
+		list.Clear();
+		foreach (T item in list2)
+		{
+			list.Add(item);
+		}
+	}
+
 	public static TValue TryGet<TValue>(this IList<TValue> array, int index, int defIndex = -1)
 	{
 		if (array.Count != 0)
