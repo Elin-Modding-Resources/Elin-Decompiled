@@ -704,17 +704,22 @@ public class Recipe : EClass
 			EClass._map.SetDeco(pos.x, pos.z, mat, (pos.cell._deco == 0) ? tileRow.id : 0);
 			break;
 		case "Bridge":
-		{
 			if (pos.sourceObj.tileType.RemoveOnFloorChange)
 			{
 				EClass._map.SetObj(pos.x, pos.z);
 			}
-			byte idPillar = (byte)((tileRow.id == 130) ? 255u : 0u);
-			EClass._map.SetBridge(pos.x, pos.z, Mathf.Clamp(bridgeHeight + altitude, 0, 255), mat, tileRow.id, dir, idPillar);
+			EClass._map.SetBridge(pos.x, pos.z, Mathf.Clamp(bridgeHeight + altitude, 0, 255), mat, tileRow.id, dir, 0, tileRow.id == 130);
 			break;
-		}
 		case "Obj":
-			EClass._map.SetObj(pos.x, pos.z, mat, tileRow.id, 1, dir, ignoreRandomMat: true);
+			if (tileRow.tag.Contains("dyeable") && EClass.debug.godBuild)
+			{
+				EClass._map.SetObj(pos.x, pos.z, tileRow.DefaultMaterial.id, tileRow.id, 1, dir, ignoreRandomMat: true);
+				pos.cell.DyeObj(EClass.sources.materials.map[mat].alias);
+			}
+			else
+			{
+				EClass._map.SetObj(pos.x, pos.z, mat, tileRow.id, 1, dir, ignoreRandomMat: true);
+			}
 			if (tileType.ChangeBlockDir || pos.growth is GrowSystemTreeSingle)
 			{
 				EClass._map.SetBlockDir(pos.x, pos.z, dir);

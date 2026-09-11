@@ -156,7 +156,7 @@ public class SourceCellEffect : SourceDataInt<SourceCellEffect.Row>
 			row.sort = num;
 			num++;
 		}
-		rows.Sort((Row a, Row b) => a.id - b.id);
+		rows.Sort((Row r) => r.id);
 	}
 
 	public override void OnInit()

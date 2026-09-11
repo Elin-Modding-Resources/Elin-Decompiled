@@ -79,7 +79,11 @@ public class RecipeSource : EClass
 			{
 				return EClass.sources.elements.map[6012].GetName();
 			}
-			return EClass.sources.cards.map[idFactory].GetName();
+			if (!EClass.sources.cards.map.TryGetValue(idFactory, out var value))
+			{
+				return idFactory;
+			}
+			return value.GetName();
 		}
 	}
 

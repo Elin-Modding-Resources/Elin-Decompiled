@@ -49,16 +49,16 @@ public class GenBounds : EClass
 	public void SetFloor(int x, int z, int idMat, int idFloor, int direction = 0)
 	{
 		Cell cell = map.cells[x, z];
-		cell._floorMat = (byte)idMat;
-		cell._floor = (byte)idFloor;
+		cell._floorMat = idMat;
+		cell._floor = idFloor;
 		cell.floorDir = direction;
 	}
 
 	public void SetBlock(int x, int z, int idMat, int idBlock, int direction = 0)
 	{
 		Cell cell = map.cells[x, z];
-		cell._blockMat = (byte)idMat;
-		cell._block = (byte)idBlock;
+		cell._blockMat = idMat;
+		cell._block = idBlock;
 		cell.blockDir = direction;
 		cell.effect = null;
 	}

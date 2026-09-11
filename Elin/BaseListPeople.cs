@@ -139,7 +139,13 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 		}
 		if (IsDisabled(a))
 		{
-			b.gameObject.AddComponent<CanvasGroup>().alpha = 0.6f;
+			b.GetOrCreate<CanvasGroup>().alpha = 0.6f;
+			return;
+		}
+		CanvasGroup component = b.GetComponent<CanvasGroup>();
+		if ((bool)component)
+		{
+			component.alpha = 1f;
 		}
 	}
 

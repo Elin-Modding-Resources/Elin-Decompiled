@@ -912,7 +912,7 @@ public class UIInventory : EMono
 			{
 				if (_owner.trait.CurrencyRerollShop == CurrencyType.BlueCapsule)
 				{
-					if (EMono.pc.GetCurrency("drug_blue") < cost)
+					if (!EMono.debug.enable && EMono.pc.GetCurrency("drug_blue") < cost)
 					{
 						SE.Beep();
 						Msg.Say("notEnoughSomething", EMono.sources.things.map["drug_blue"].GetName());

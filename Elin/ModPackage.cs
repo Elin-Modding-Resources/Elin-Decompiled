@@ -219,8 +219,43 @@ public class ModPackage : EMod
 								{
 									if (!(sourceRow is SourceThing.Row r6))
 									{
-										if (!(sourceRow is SourceFaction.Row) && sourceRow is SourceQuest.Row)
+										if (!(sourceRow is SourceBlock.Row r7))
 										{
+											if (!(sourceRow is SourceFloor.Row r8))
+											{
+												if (!(sourceRow is SourceObj.Row r9))
+												{
+													if (!(sourceRow is SourceDeco.Row r10))
+													{
+														if (!(sourceRow is SourceCellEffect.Row r11))
+														{
+															if (!(sourceRow is SourceFaction.Row) && sourceRow is SourceQuest.Row)
+															{
+															}
+														}
+														else
+														{
+															customContent.Add(CustomCellEffectContent.CreateFromRow(r11, this));
+														}
+													}
+													else
+													{
+														customContent.Add(CustomDecoContent.CreateFromRow(r10, this));
+													}
+												}
+												else
+												{
+													customContent.Add(CustomObjContent.CreateFromRow(r9, this));
+												}
+											}
+											else
+											{
+												customContent.Add(CustomFloorContent.CreateFromRow(r8, this));
+											}
+										}
+										else
+										{
+											customContent.Add(CustomBlockContent.CreateFromRow(r7, this));
 										}
 									}
 									else

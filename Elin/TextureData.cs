@@ -45,6 +45,9 @@ public class TextureData : EScriptable
 	public int tileH;
 
 	[NonSerialized]
+	public int extraRows;
+
+	[NonSerialized]
 	public string path;
 
 	[NonSerialized]
@@ -142,11 +145,17 @@ public class TextureData : EScriptable
 			{
 				Debug.Log(path);
 			}
-			if (tex.width != texture2D.width || tex.height != texture2D.height)
+			int num = extraRows * tileH;
+			if (tex.width != texture2D.width || tex.height != texture2D.height + num)
 			{
 				Debug.Log(id + "/" + texture2D.width + "/" + texture2D.height + "/" + path);
+				tex.Reinitialize(texture2D.width, texture2D.height + num, tex.format, tex.mipmapCount > 1);
 			}
-			tex.SetPixels32(texture2D.GetPixels32());
+			if (num > 0)
+			{
+				tex.SetPixels32(0, 0, tex.width, num, new Color32[tex.width * num]);
+			}
+			tex.SetPixels32(0, num, texture2D.width, texture2D.height, texture2D.GetPixels32());
 			tex.Apply();
 			UnityEngine.Object.Destroy(texture2D);
 			Debug.Log("Reloaded Texture:" + path);

@@ -116,7 +116,18 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 
 	public virtual string prefabName => "ThingActor";
 
-	public SourceCategory.Row Category => _category ?? (_category = sources.categories.map[category]);
+	public SourceCategory.Row Category
+	{
+		get
+		{
+			if (_category == null && !sources.categories.map.TryGetValue(category, out _category))
+			{
+				Debug.LogError("#source unknown category '" + category + "' for " + GetType().DeclaringType?.Name + " " + RecipeID + ", using 'obj'");
+				_category = sources.categories.map["obj"];
+			}
+			return _category;
+		}
+	}
 
 	public string RecipeCat => _recipeCat ?? (_recipeCat = Category.recipeCat);
 
@@ -246,7 +257,15 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 
 	public virtual void SetTiles()
 	{
-		if ((bool)renderData && (bool)renderData.pass && _tiles.Length != tiles.Length)
+		if (!renderData || !renderData.pass)
+		{
+			return;
+		}
+		if (tiles == null || tiles.Length == 0)
+		{
+			_tiles = new int[1];
+		}
+		else if (_tiles.Length != tiles.Length)
 		{
 			_tiles = new int[tiles.Length];
 			for (int i = 0; i < tiles.Length; i++)

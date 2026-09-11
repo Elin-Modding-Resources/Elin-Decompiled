@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class SourceObj : SourceDataInt<SourceObj.Row>
 {
@@ -50,17 +51,38 @@ public class SourceObj : SourceDataInt<SourceObj.Row>
 
 		public override void OnInit()
 		{
-			objValType = ((!valType.IsEmpty()) ? valType.ToEnum<ObjValType>() : ObjValType.None);
-			autoTile = tag.Contains("autotile");
-			if (!_growth.IsEmpty())
+			if (valType.IsEmpty())
 			{
-				growth = ClassCache.Create<GrowSystem>("GrowSystem" + _growth[0], "Elin");
+				objValType = ObjValType.None;
+			}
+			else if (!Enum.TryParse<ObjValType>(valType, ignoreCase: true, out objValType))
+			{
+				Debug.LogWarning($"#source obj {id}/{alias} has unknown val type '{valType}', using 'None'");
+				objValType = ObjValType.None;
+			}
+			autoTile = tag.Contains("autotile");
+			HasGrowth = false;
+			growth = null;
+			if (_growth.IsEmpty())
+			{
+				return;
+			}
+			string arg = "GrowSystem" + _growth[0];
+			growth = ClassCache.Create<GrowSystem>(arg, "Elin");
+			if (growth == null)
+			{
+				Debug.LogWarning($"#source obj {id}/{alias} has unknown growth class '{arg}', growing disabled");
+				return;
+			}
+			try
+			{
 				growth.Init(this);
 				HasGrowth = true;
 			}
-			else
+			catch (Exception ex)
 			{
-				HasGrowth = false;
+				Debug.LogWarning($"#source obj {id}/{alias} has invalid _growth '{string.Join(',', _growth)}', growing disabled\n{ex.Message}");
+				growth = null;
 			}
 		}
 	}
@@ -294,7 +316,7 @@ public class SourceObj : SourceDataInt<SourceObj.Row>
 			row.sort = num;
 			num++;
 		}
-		rows.Sort((Row a, Row b) => a.id - b.id);
+		rows.Sort((Row r) => r.id);
 	}
 
 	public override void OnInit()

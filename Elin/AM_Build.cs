@@ -102,13 +102,13 @@ public class AM_Build : AM_Designation<TaskBuild>
 	{
 		if (!recipe.IsThing)
 		{
-			return bridgeHeight + ((!recipe.tileType.AltitudeAsDir) ? altitude : 0);
+			return 1 + bridgeHeight + ((!recipe.tileType.AltitudeAsDir) ? altitude : 0);
 		}
 		if (altitude != 0)
 		{
 			return altitude;
 		}
-		return -1;
+		return 0;
 	}
 
 	public override HitResult HitResultOnDesignation(Point p)
@@ -240,7 +240,7 @@ public class AM_Build : AM_Designation<TaskBuild>
 		bridgeHeight = -1;
 		if (recipe.IsBridge)
 		{
-			bridgeHeight = (byte)((point.cell.bridgeHeight == 0) ? (point.cell.height + recipe.tileType.MinAltitude) : point.cell.bridgeHeight);
+			bridgeHeight = (byte)((point.cell.bridgeHeight == 0) ? (point.cell.height + recipe.tileType.MinBridgeAltitude) : point.cell.bridgeHeight);
 		}
 	}
 
@@ -371,7 +371,7 @@ public class AM_Build : AM_Designation<TaskBuild>
 	public void ModAltitude(int a)
 	{
 		altitude += a;
-		if (altitude < (recipe.IsBridge ? (-10) : 0))
+		if (altitude < (recipe.IsBridge ? (-10) : recipe.tileType.MinAltitude))
 		{
 			altitude = MaxAltitude;
 		}

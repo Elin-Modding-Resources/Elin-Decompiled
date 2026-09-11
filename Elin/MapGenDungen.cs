@@ -40,7 +40,7 @@ public class MapGenDungen : BaseMapGen
 			biome.exterior.block.id = (biome.interior.block.id = num);
 			if (num == 189)
 			{
-				biome.exterior.block.mat = (biome.interior.block.mat = (byte)EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tag.Contains("coral")).RandomItem().id);
+				biome.exterior.block.mat = (biome.interior.block.mat = EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tag.Contains("coral")).RandomItem().id);
 			}
 			else
 			{

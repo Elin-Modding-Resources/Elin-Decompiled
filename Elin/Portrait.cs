@@ -43,6 +43,20 @@ public class Portrait : UIButton
 
 	public float charaScale = 1f;
 
+	private bool defaultsCached;
+
+	private Material defaultMaterial;
+
+	private Color defaultColor;
+
+	private Vector2 defaultPivot;
+
+	private Vector2 defaultAnchoredPosition;
+
+	private Vector3 defaultScale;
+
+	private bool defaultPreserveAspect;
+
 	private FilterMode filter;
 
 	public static List<ModItem<Sprite>> ListPlayerPortraits(int gender, bool nullPortrait = false)
@@ -115,6 +129,35 @@ public class Portrait : UIButton
 	public static bool Exists(string id)
 	{
 		return modPortraits.dict.ContainsKey(id);
+	}
+
+	private void CacheDefaults()
+	{
+		if (!defaultsCached && (bool)portrait)
+		{
+			defaultsCached = true;
+			RectTransform rectTransform = portrait.rectTransform;
+			defaultMaterial = portrait.material;
+			defaultColor = portrait.color;
+			defaultPivot = rectTransform.pivot;
+			defaultAnchoredPosition = rectTransform.anchoredPosition;
+			defaultScale = portrait.transform.localScale;
+			defaultPreserveAspect = portrait.preserveAspect;
+		}
+	}
+
+	private void RestoreDefaults()
+	{
+		if (defaultsCached && (bool)portrait)
+		{
+			RectTransform rectTransform = portrait.rectTransform;
+			portrait.material = defaultMaterial;
+			portrait.color = defaultColor;
+			rectTransform.pivot = defaultPivot;
+			rectTransform.anchoredPosition = defaultAnchoredPosition;
+			portrait.transform.localScale = defaultScale;
+			portrait.preserveAspect = defaultPreserveAspect;
+		}
 	}
 
 	public void SetPerson(Person p)
@@ -241,6 +284,11 @@ public class Portrait : UIButton
 
 	public void SetPortrait(bool isPortrait, Sprite spritePortrait, Sprite spriteOverlay = null, Color colorOverlay = default(Color), Sprite spriteFull = null)
 	{
+		CacheDefaults();
+		if (isPortrait)
+		{
+			RestoreDefaults();
+		}
 		filter = ((isPortrait && Core.Instance.config.test.aaPortrait) ? FilterMode.Bilinear : FilterMode.Point);
 		portrait.rectTransform.anchorMin = overlay.rectTransform.anchorMin;
 		portrait.rectTransform.anchorMax = overlay.rectTransform.anchorMax;

@@ -198,8 +198,8 @@ public class LayerMod : ELayer
 			onInstantiate = delegate(ModPackage a, ItemMod b)
 			{
 				b.package = a;
-				string s = ELayer.core.mods.packages.IndexOf(a) + 1 + ". " + (a.isInPackages ? "[Local] " : "") + a.title.IsEmpty(a.dirInfo.Name);
-				b.buttonActivate.mainText.SetText(s, (!a.IsValidVersion() || a.blockedBy != null || !a.langDepError.IsEmpty()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));
+				string title = ELayer.core.mods.packages.IndexOf(a) + 1 + ". " + (a.isInPackages ? "[Local] " : "") + a.title.IsEmpty(a.dirInfo.Name);
+				b.buttonActivate.mainText.SetText(FitTitle(b.buttonActivate.mainText, title), (!a.IsValidVersion() || a.blockedBy != null || !a.langDepError.IsEmpty()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));
 				b.buttonActivate.subText.text = a.version;
 				b.buttonLock.mainText.text = a.author;
 				b.buttonUp.SetActive(!a.builtin);
@@ -213,7 +213,7 @@ public class LayerMod : ELayer
 				{
 					Move(a, 1);
 				});
-				(b.buttonActivate.GetComponent<HoverRelay>() ?? b.buttonActivate.gameObject.AddComponent<HoverRelay>()).onEnter = delegate
+				b.buttonActivate.GetOrCreate<HoverRelay>().onEnter = delegate
 				{
 					ShowInfo(a);
 				};
@@ -335,6 +335,23 @@ public class LayerMod : ELayer
 			},
 			canDragReorder = (ModPackage p) => !p.builtin
 		};
+	}
+
+	private static string FitTitle(UIText text, string title)
+	{
+		TextGenerationSettings generationSettings = text.GetGenerationSettings(Vector2.zero);
+		TextGenerator cachedTextGeneratorForLayout = text.cachedTextGeneratorForLayout;
+		float num = text.rectTransform.rect.width * text.pixelsPerUnit;
+		if (cachedTextGeneratorForLayout.GetPreferredWidth(title, generationSettings) <= num)
+		{
+			return title;
+		}
+		int num2 = title.Length;
+		while (num2 > 1 && cachedTextGeneratorForLayout.GetPreferredWidth(title[..num2].TrimEnd() + "..", generationSettings) > num)
+		{
+			num2--;
+		}
+		return title[..num2].TrimEnd() + "..";
 	}
 
 	private bool Match(BaseModPackage p)

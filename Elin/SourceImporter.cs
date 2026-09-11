@@ -57,8 +57,8 @@ public class SourceImporter : EClass
 				IList rows = EClass.sources.things.rows;
 				list = rows;
 			}
-			IList list2 = list;
-			int count = list2.Count;
+			IList source = list;
+			HashSet<SourceData.BaseRow> existing = new HashSet<SourceData.BaseRow>(source.OfType<SourceData.BaseRow>());
 			Debug.Log("#source loading sheet " + sheetName);
 			ExcelParser.path = file;
 			ERROR.lastImported = 0;
@@ -69,8 +69,9 @@ public class SourceImporter : EClass
 			}
 			if (ERROR.lastImported > 0)
 			{
-				SourceData.BaseRow[] item = list2.OfType<SourceData.BaseRow>().Skip(count).Take(ERROR.lastImported)
-					.ToArray();
+				SourceData.BaseRow[] item = (from r in source.OfType<SourceData.BaseRow>()
+					where !existing.Contains(r)
+					select r).Take(ERROR.lastImported).ToArray();
 				return (sourceData, item);
 			}
 		}
@@ -229,18 +230,61 @@ public class SourceImporter : EClass
 	public static void HotInit(IEnumerable<SourceData> sourceData)
 	{
 		Debug.Log("#source resetting data...");
-		foreach (SourceData sourceDatum in sourceData)
+		SourceData[] order = new SourceData[7]
+		{
+			EClass.sources.elements,
+			EClass.sources.materials,
+			EClass.sources.floors,
+			EClass.sources.decos,
+			EClass.sources.blocks,
+			EClass.sources.cellEffects,
+			EClass.sources.objs
+		};
+		List<SourceData> list = sourceData.Distinct().OrderBy(delegate(SourceData s)
+		{
+			int num = Array.IndexOf(order, s);
+			return (num >= 0) ? num : order.Length;
+		}).ToList();
+		if (list.Any((SourceData s) => Array.IndexOf(order, s) > 0))
+		{
+			if (!list.Contains(EClass.sources.elements))
+			{
+				EClass.sources.elements.Init();
+			}
+			if (!list.Contains(EClass.sources.materials))
+			{
+				EClass.sources.materials.Init();
+			}
+		}
+		if (list.Contains(EClass.sources.blocks) && !list.Contains(EClass.sources.floors))
+		{
+			EClass.sources.floors.Init();
+		}
+		foreach (SourceData item in list)
 		{
 			try
 			{
-				sourceDatum.Reset();
-				sourceDatum.Init();
+				item.Reset();
+				item.Init();
 			}
 			catch (Exception arg)
 			{
-				Debug.LogError($"#source failed to reset dirty data {sourceDatum.GetType().Name}\n{arg}");
+				Debug.LogError($"#source failed to reset dirty data {item.GetType().Name}\n{arg}");
 			}
 		}
+		if (EClass.sources.blocks.initialized && (list.Contains(EClass.sources.floors) || list.Contains(EClass.sources.blocks)))
+		{
+			EClass.sources.floors.OnAfterInit();
+		}
+		if (list.Contains(EClass.sources.things) || list.Contains(EClass.sources.charas))
+		{
+			EClass.sources.cards.Init();
+		}
+		if (list.Any((SourceData s) => s == EClass.sources.blocks || s == EClass.sources.floors || s == EClass.sources.objs || s == EClass.sources.decos || s == EClass.sources.cellEffects))
+		{
+			TileManager.ReapplyRows();
+		}
+		RecipeManager.rebuild = true;
 		Debug.Log("#source initialized data");
 	}
 

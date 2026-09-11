@@ -31,7 +31,8 @@ public class SourceCard : EClass
 
 	public TraitCrafter GetModelCrafter(string id)
 	{
-		return crafters.GetOrCreate(id, () => (map[id].model.trait as TraitCrafter) ?? Trait.SelfFactory);
+		CardRow value;
+		return crafters.GetOrCreate(id, () => (map.TryGetValue(id, out value) ? (value.model.trait as TraitCrafter) : null) ?? Trait.SelfFactory);
 	}
 
 	public void AddRow(CardRow row, bool isChara = false)
@@ -54,9 +55,10 @@ public class SourceCard : EClass
 			{
 				row2.tileType = TileType.Obj;
 			}
-			else
+			else if (!TileType.dict.TryGetValue(row2._tileType, out row2.tileType))
 			{
-				row2.tileType = TileType.dict[row2._tileType];
+				Debug.LogError("#source unknown tile type '" + row2._tileType + "' for thing row " + row2.id);
+				row2.tileType = TileType.Obj;
 			}
 		}
 		if (!row._origin.IsEmpty())

@@ -1268,6 +1268,10 @@ public class Trait : EClass
 	{
 	}
 
+	public virtual void OnDie()
+	{
+	}
+
 	public virtual void OnStepped(Chara c)
 	{
 	}
@@ -2340,17 +2344,8 @@ public class Trait : EClass
 					break;
 				}
 				ShopType shopType = ShopType;
-				if ((uint)(shopType - 24) <= 1u)
-				{
-					if (EClass._zone is Zone_Yowyn)
-					{
-						Add("milk_kumiromi", EClass.rndHalf(6), 0);
-					}
-					if (EClass._zone is Zone_Nefu)
-					{
-						Add("milk_horome", EClass.rndHalf(6), 0);
-					}
-				}
+				_ = shopType - 24;
+				_ = 1;
 				switch (owner.id)
 				{
 				case "rodwyn":

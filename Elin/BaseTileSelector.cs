@@ -441,9 +441,9 @@ public class BaseTileSelector : EMono
 			{
 				EMono.ui.mouseInfo.textCost.text = num.ToString() ?? "";
 			}
-			if (mode.TopHeight(hitPoint) != -1)
+			if (mode.TopHeight(hitPoint) != 0)
 			{
-				text += "hintAltitude".lang(mode.TopHeight(hitPoint).ToString() ?? "");
+				text += "hintAltitude".lang(((mode.TopHeight(hitPoint) >= 0) ? "+" : "") + mode.TopHeight(hitPoint));
 			}
 			if (EMono.scene.actionMode == ActionMode.Picker)
 			{

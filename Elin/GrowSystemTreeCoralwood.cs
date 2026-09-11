@@ -23,7 +23,7 @@ public class GrowSystemTreeCoralwood : GrowSystemTreeSingle
 	{
 		GrowSystem.cell.isObjDyed = true;
 		GrowSystem.cell.objDir = EClass.rnd(source.tiles.Length);
-		GrowSystem.cell.objMat = (byte)EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tag.Contains("coral")).RandomItem().id;
+		GrowSystem.cell.objMat = EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tag.Contains("coral")).RandomItem().id;
 	}
 
 	public override int GetStageTile()

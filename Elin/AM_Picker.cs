@@ -197,6 +197,7 @@ public class AM_Picker : AM_BaseTileSelect
 	public new bool Select(Result r)
 	{
 		ActionMode.ignoreSound = true;
+		EClass.player.recipes.lastIngredients[r.source.id] = null;
 		BM.Select(r);
 		return true;
 	}

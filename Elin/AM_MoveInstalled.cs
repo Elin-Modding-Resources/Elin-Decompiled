@@ -75,7 +75,7 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 		{
 			return moldCard.altitude;
 		}
-		return -1;
+		return 0;
 	}
 
 	public override MeshPass GetGuidePass(Point point)

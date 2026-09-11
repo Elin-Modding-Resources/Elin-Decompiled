@@ -46,6 +46,7 @@ public class RecipeManager : EClass
 		Debug.Log("Rebuilding recipe list");
 		list.Clear();
 		dict.Clear();
+		Recipe.recipeCache.Clear();
 		foreach (CardRow row in EClass.sources.cards.rows)
 		{
 			if (!row.isOrigin)
@@ -99,6 +100,15 @@ public class RecipeManager : EClass
 		recipeSource.type = type;
 		recipeSource.row = row;
 		recipeSource.isChara = row is SourceChara.Row;
+		if (!row.factory.IsEmpty() && !recipeSource.isBridge && !recipeSource.isBridgePillar)
+		{
+			string text = row.factory[0];
+			if (text != "x" && text != "none" && text != "None" && text != "self" && !EClass.sources.cards.map.ContainsKey(text))
+			{
+				Debug.LogWarning("Recipe '" + recipeSource.id + "' (" + row.GetAlias + ") has unknown factory '" + text + "'");
+				recipeSource.noListing = true;
+			}
+		}
 		if (!row.factory.IsEmpty() && row.factory[0] == "x")
 		{
 			recipeSource.noListing = true;
@@ -210,7 +220,7 @@ public class RecipeManager : EClass
 			if (!EClass.debug.godCraft && !EClass.player.recipes.knownRecipes.ContainsKey(item.id))
 			{
 				bool flag = false;
-				if (item.row.recipeKey != null && item.row.recipeKey.Length != 0 && item.row.recipeKey[0][0] == '*')
+				if (item.row.recipeKey != null && item.row.recipeKey.Length != 0 && item.row.recipeKey[0].Length > 0 && item.row.recipeKey[0][0] == '*')
 				{
 					flag = true;
 				}

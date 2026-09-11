@@ -26,7 +26,7 @@ public class TraitToolBrushStrip : TraitTool
 				SE.Play("build_area");
 				p.pos.PlayEffect("buff");
 				p.pos.cell.isObjDyed = false;
-				p.pos.cell.objMat = (byte)p.pos.sourceObj.DefaultMaterial.id;
+				p.pos.cell.objMat = p.pos.sourceObj.DefaultMaterial.id;
 				return false;
 			});
 		}

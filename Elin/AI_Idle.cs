@@ -990,7 +990,7 @@ public class AI_Idle : AIAct
 			switch (idAct)
 			{
 			case "torture_snail":
-				DoSomethingToNearChara((Chara chara6) => chara6.race.id == "snail", delegate(Chara chara6)
+				DoSomethingToNearChara((Chara chara6) => chara6.race.id == "snail" || chara6.HasElement(1211), delegate(Chara chara6)
 				{
 					owner.Say("use_whip3", owner, chara6);
 					owner.PlaySound("whip");

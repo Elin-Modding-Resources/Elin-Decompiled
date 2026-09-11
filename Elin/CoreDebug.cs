@@ -1679,7 +1679,7 @@ public class CoreDebug : EScriptable
 			{
 				if (c.HasObj)
 				{
-					c.objMat = (byte)c.sourceObj.DefaultMaterial.id;
+					c.objMat = c.sourceObj.DefaultMaterial.id;
 				}
 			});
 		});
@@ -1689,7 +1689,7 @@ public class CoreDebug : EScriptable
 			{
 				if (c.HasObj && c.obj == 79)
 				{
-					c.objMat = (byte)c.sourceObj.DefaultMaterial.id;
+					c.objMat = c.sourceObj.DefaultMaterial.id;
 				}
 			});
 		});

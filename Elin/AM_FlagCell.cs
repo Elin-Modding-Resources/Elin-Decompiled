@@ -5,8 +5,9 @@ public class AM_FlagCell : AM_BaseTileSelect
 		flagSnow,
 		flagFloat,
 		flagWallPillar,
-		flagClear,
 		flagShadow,
+		flagOcclusion,
+		flagClear,
 		flagWall
 	}
 
@@ -66,6 +67,12 @@ public class AM_FlagCell : AM_BaseTileSelect
 				return HitResult.Default;
 			}
 			break;
+		case Mode.flagOcclusion:
+			if (start != null && start.cell.toggleOcclusion != point.cell.toggleOcclusion)
+			{
+				return HitResult.Default;
+			}
+			break;
 		}
 		return HitResult.Valid;
 	}
@@ -82,6 +89,9 @@ public class AM_FlagCell : AM_BaseTileSelect
 			{
 				t.noShadow = !t.noShadow;
 			});
+			break;
+		case Mode.flagOcclusion:
+			point.cell.toggleOcclusion = !point.cell.toggleOcclusion;
 			break;
 		case Mode.flagFloat:
 			point.cell.isForceFloat = !point.cell.isForceFloat;
@@ -111,10 +121,10 @@ public class AM_FlagCell : AM_BaseTileSelect
 
 	public override string OnSetSubMenuButton(int a, UIButton b)
 	{
-		if (a < 5)
+		if (a < 6)
 		{
 			Mode mode = a.ToEnum<Mode>();
-			if (a >= 3 && mode != Mode.flagShadow)
+			if (mode == Mode.flagClear || mode == Mode.flagWall)
 			{
 				return null;
 			}

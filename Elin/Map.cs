@@ -25,6 +25,9 @@ public class Map : MapBounds, IPathfindGrid
 	public IO.Compression compression;
 
 	[JsonProperty]
+	public Dictionary<string, int> cellWidths = new Dictionary<string, int>();
+
+	[JsonProperty]
 	public Version version;
 
 	[JsonProperty]
@@ -99,6 +102,8 @@ public class Map : MapBounds, IPathfindGrid
 	public List<Footmark> footmarks = new List<Footmark>();
 
 	public FowProfile fowProfile;
+
+	private static readonly int[] CellIdWidths = new int[3] { 1, 2, 4 };
 
 	public bool revealed;
 
@@ -391,26 +396,26 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		int num5 = num3 * num4;
 		byte[] array = new byte[num5];
-		byte[] array2 = new byte[num5];
-		byte[] array3 = new byte[num5];
-		byte[] array4 = new byte[num5];
-		byte[] array5 = new byte[num5];
-		byte[] array6 = new byte[num5];
-		byte[] array7 = new byte[num5];
+		int[] array2 = new int[num5];
+		int[] array3 = new int[num5];
+		int[] array4 = new int[num5];
+		int[] array5 = new int[num5];
+		int[] array6 = new int[num5];
+		int[] array7 = new int[num5];
 		byte[] array8 = new byte[num5];
 		byte[] array9 = new byte[num5];
 		byte[] array10 = new byte[num5];
 		byte[] array11 = new byte[num5];
 		byte[] array12 = new byte[num5];
-		byte[] array13 = new byte[num5];
-		byte[] array14 = new byte[num5];
+		int[] array13 = new int[num5];
+		int[] array14 = new int[num5];
 		byte[] array15 = new byte[num5];
-		byte[] array16 = new byte[num5];
+		int[] array16 = new int[num5];
 		byte[] array17 = new byte[num5];
-		byte[] array18 = new byte[num5];
-		byte[] array19 = new byte[num5];
-		byte[] array20 = new byte[num5];
-		byte[] array21 = new byte[num5];
+		int[] array18 = new int[num5];
+		int[] array19 = new int[num5];
+		int[] array20 = new int[num5];
+		int[] array21 = new int[num5];
 		cellEffects.Clear();
 		int num6 = 0;
 		for (int i = num; i < num + num3; i++)
@@ -447,6 +452,8 @@ public class Map : MapBounds, IPathfindGrid
 				array11[num6] = array11[num6].SetBit(0, cell.isWatered);
 				array11[num6] = array11[num6].SetBit(1, cell.isObjDyed);
 				array11[num6] = array11[num6].SetBit(2, cell.crossWall);
+				array11[num6] = array11[num6].SetBit(3, cell.hidePillar);
+				array11[num6] = array11[num6].SetBit(4, cell.toggleOcclusion);
 				if (cell.effect != null)
 				{
 					cellEffects[j * num4 + i] = cell.effect;
@@ -455,27 +462,28 @@ public class Map : MapBounds, IPathfindGrid
 			}
 		}
 		compression = ((!EClass.core.config.test.compressSave) ? IO.Compression.None : IO.Compression.LZ4);
-		Write(path + "objVals", array);
-		Write(path + "blocks", array2);
-		Write(path + "blockMats", array3);
-		Write(path + "floors", array4);
-		Write(path + "floorMats", array5);
-		Write(path + "objs", array6);
-		Write(path + "objMats", array7);
-		Write(path + "decal", array8);
-		Write(path + "flags", array10);
-		Write(path + "flags2", array11);
-		Write(path + "dirs", array9);
-		Write(path + "heights", array12);
-		Write(path + "bridges", array13);
-		Write(path + "bridgeMats", array14);
-		Write(path + "bridgeHeights", array15);
-		Write(path + "bridgePillars", array16);
-		Write(path + "roofBlocks", array18);
-		Write(path + "roofBlockMats", array19);
-		Write(path + "roofBlockDirs", array17);
-		Write(path + "decos", array20);
-		Write(path + "decoMats", array21);
+		cellWidths.Clear();
+		Write("objVals", array);
+		WriteIds("blocks", array2);
+		WriteIds("blockMats", array3);
+		WriteIds("floors", array4);
+		WriteIds("floorMats", array5);
+		WriteIds("objs", array6);
+		WriteIds("objMats", array7);
+		Write("decal", array8);
+		Write("flags", array10);
+		Write("flags2", array11);
+		Write("dirs", array9);
+		Write("heights", array12);
+		WriteIds("bridges", array13);
+		WriteIds("bridgeMats", array14);
+		Write("bridgeHeights", array15);
+		WriteIds("bridgePillars", array16);
+		WriteIds("roofBlocks", array18);
+		WriteIds("roofBlockMats", array19);
+		Write("roofBlockDirs", array17);
+		WriteIds("decos", array20);
+		WriteIds("decoMats", array21);
 		things.Sort((Thing a, Thing b) => a.stackOrder - b.stackOrder);
 		if (export == null)
 		{
@@ -532,9 +540,17 @@ public class Map : MapBounds, IPathfindGrid
 			things = list;
 		}
 		serializedCharas.Clear();
-		void Write(string _path, byte[] bytes)
+		void Write(string name, byte[] bytes)
 		{
-			IO.WriteLZ4(_path, bytes, compression);
+			IO.WriteLZ4(path + name, bytes, compression);
+		}
+		void WriteIds(string name, int[] ids)
+		{
+			int num7 = WriteCellIds(path + name, ids, compression);
+			if (num7 > 1)
+			{
+				cellWidths[name] = num7;
+			}
 		}
 	}
 
@@ -547,6 +563,72 @@ public class Map : MapBounds, IPathfindGrid
 			return new byte[size];
 		}
 		return array;
+	}
+
+	private static string CellIdPath(string path, int width)
+	{
+		if (width != 1)
+		{
+			return path + ".w" + width;
+		}
+		return path;
+	}
+
+	private static int WriteCellIds(string path, int[] ids, IO.Compression compression)
+	{
+		int num = 0;
+		int[] array = ids;
+		foreach (int b in array)
+		{
+			num = Mathf.Max(num, b);
+		}
+		int num2 = ((num <= 255) ? 1 : ((num <= 65535) ? 2 : 4));
+		byte[] array2 = new byte[ids.Length * num2];
+		for (int j = 0; j < ids.Length; j++)
+		{
+			for (int k = 0; k < num2; k++)
+			{
+				array2[j * num2 + k] = (byte)(ids[j] >> 8 * k);
+			}
+		}
+		IO.WriteLZ4(CellIdPath(path, num2), array2, compression);
+		array = CellIdWidths;
+		foreach (int num3 in array)
+		{
+			if (num3 != num2)
+			{
+				string text = CellIdPath(path, num3);
+				IO.DeleteFile(text);
+				for (int l = 1; l < 5; l++)
+				{
+					IO.DeleteFile(text + ".b" + l);
+				}
+			}
+		}
+		return num2;
+	}
+
+	private int[] ReadCellIds(string file, string s, int size, int width)
+	{
+		byte[] array = IO.ReadLZ4(file, size * width, compression);
+		if (array == null)
+		{
+			return null;
+		}
+		if ((width != 1 && width != 2 && width != 4) || array.Length != (long)size * (long)width)
+		{
+			Debug.Log("Couldn't load:" + s);
+			return null;
+		}
+		int[] array2 = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			for (int j = 0; j < width; j++)
+			{
+				array2[i] |= array[i * width + j] << 8 * j;
+			}
+		}
+		return array2;
 	}
 
 	public void Load(string path, bool import = false, PartialMap partial = null)
@@ -570,60 +652,60 @@ public class Map : MapBounds, IPathfindGrid
 			bounds.SetBounds(0, 0, num - 1, num2 - 1);
 		}
 		SetBounds(0, 0, num - 1, num2 - 1);
-		byte[] bytes = TryLoad("objVals");
-		byte[] bytes2 = TryLoad("blockMats");
-		byte[] bytes3 = TryLoad("blocks");
-		byte[] bytes4 = TryLoad("floorMats");
-		byte[] bytes5 = TryLoad("floors");
-		byte[] bytes6 = TryLoad("objs");
-		byte[] bytes7 = TryLoad("objMats");
-		byte[] bytes8 = TryLoad("decal");
-		byte[] bytes9 = TryLoad("decos");
-		byte[] bytes10 = TryLoad("decoMats");
-		byte[] bytes11 = TryLoad("dirs");
-		byte[] bytes12 = TryLoad("flags");
-		byte[] bytes13 = TryLoad("flags2");
-		byte[] bytes14 = TryLoad("heights");
-		byte[] bytes15 = TryLoad("bridges");
-		byte[] bytes16 = TryLoad("bridgeMats");
-		byte[] bytes17 = TryLoad("bridgeHeights");
-		byte[] bytes18 = TryLoad("bridgePillars");
-		byte[] bytes19 = TryLoad("roofBlocks");
-		byte[] bytes20 = TryLoad("roofBlockMats");
-		byte[] bytes21 = TryLoad("roofBlockDirs");
-		if (bytes18.Length < size)
+		byte[] data = TryLoad("objVals");
+		int[] data2 = TryLoadIds("blockMats");
+		int[] data3 = TryLoadIds("blocks");
+		int[] data4 = TryLoadIds("floorMats");
+		int[] data5 = TryLoadIds("floors");
+		int[] data6 = TryLoadIds("objs");
+		int[] data7 = TryLoadIds("objMats");
+		byte[] data8 = TryLoad("decal");
+		int[] data9 = TryLoadIds("decos");
+		int[] data10 = TryLoadIds("decoMats");
+		byte[] data11 = TryLoad("dirs");
+		byte[] data12 = TryLoad("flags");
+		byte[] data13 = TryLoad("flags2");
+		byte[] data14 = TryLoad("heights");
+		int[] data15 = TryLoadIds("bridges");
+		int[] data16 = TryLoadIds("bridgeMats");
+		byte[] data17 = TryLoad("bridgeHeights");
+		int[] data18 = TryLoadIds("bridgePillars");
+		int[] data19 = TryLoadIds("roofBlocks");
+		int[] data20 = TryLoadIds("roofBlockMats");
+		byte[] data21 = TryLoad("roofBlockDirs");
+		if (data18.Length < size)
 		{
-			bytes18 = new byte[size];
+			data18 = new int[size];
 		}
-		if (bytes.Length < size)
+		if (data.Length < size)
 		{
-			bytes = new byte[size];
+			data = new byte[size];
 		}
-		if (bytes13.Length < size)
+		if (data13.Length < size)
 		{
-			bytes13 = new byte[size];
+			data13 = new byte[size];
 		}
-		Validate(ref bytes, "objVals");
-		Validate(ref bytes2, "blockMats");
-		Validate(ref bytes3, "blocks");
-		Validate(ref bytes4, "floorMats");
-		Validate(ref bytes5, "floors");
-		Validate(ref bytes6, "objs");
-		Validate(ref bytes7, "objMats");
-		Validate(ref bytes8, "decal");
-		Validate(ref bytes9, "decos");
-		Validate(ref bytes10, "decoMats");
-		Validate(ref bytes11, "dirs");
-		Validate(ref bytes12, "flags");
-		Validate(ref bytes13, "flags2");
-		Validate(ref bytes14, "heights");
-		Validate(ref bytes15, "bridges");
-		Validate(ref bytes16, "bridgeMats");
-		Validate(ref bytes17, "bridgeHeights");
-		Validate(ref bytes18, "bridgePillars");
-		Validate(ref bytes19, "roofBlocks");
-		Validate(ref bytes20, "roofBlockMats");
-		Validate(ref bytes21, "roofBlockDirs");
+		Validate<byte>(ref data, "objVals");
+		Validate<int>(ref data2, "blockMats");
+		Validate<int>(ref data3, "blocks");
+		Validate<int>(ref data4, "floorMats");
+		Validate<int>(ref data5, "floors");
+		Validate<int>(ref data6, "objs");
+		Validate<int>(ref data7, "objMats");
+		Validate<byte>(ref data8, "decal");
+		Validate<int>(ref data9, "decos");
+		Validate<int>(ref data10, "decoMats");
+		Validate<byte>(ref data11, "dirs");
+		Validate<byte>(ref data12, "flags");
+		Validate<byte>(ref data13, "flags2");
+		Validate<byte>(ref data14, "heights");
+		Validate<int>(ref data15, "bridges");
+		Validate<int>(ref data16, "bridgeMats");
+		Validate<byte>(ref data17, "bridgeHeights");
+		Validate<int>(ref data18, "bridgePillars");
+		Validate<int>(ref data19, "roofBlocks");
+		Validate<int>(ref data20, "roofBlockMats");
+		Validate<byte>(ref data21, "roofBlockDirs");
 		int num3 = 0;
 		for (int i = 0; i < num; i++)
 		{
@@ -633,36 +715,43 @@ public class Map : MapBounds, IPathfindGrid
 				{
 					x = (byte)i,
 					z = (byte)j,
-					objVal = bytes[num3],
-					_blockMat = bytes2[num3],
-					_block = bytes3[num3],
-					_floorMat = bytes4[num3],
-					_floor = bytes5[num3],
-					obj = bytes6[num3],
-					objMat = bytes7[num3],
-					decal = bytes8[num3],
-					_deco = bytes9[num3],
-					_decoMat = bytes10[num3],
-					_dirs = bytes11[num3],
-					height = bytes14[num3],
-					_bridge = bytes15[num3],
-					_bridgeMat = bytes16[num3],
-					bridgeHeight = bytes17[num3],
-					bridgePillar = bytes18[num3],
-					_roofBlock = bytes19[num3],
-					_roofBlockMat = bytes20[num3],
-					_roofBlockDir = bytes21[num3],
-					isSeen = bytes12[num3].GetBit(1),
-					isHarvested = bytes12[num3].GetBit(2),
-					impassable = bytes12[num3].GetBit(3),
-					isModified = bytes12[num3].GetBit(4),
-					isClearSnow = bytes12[num3].GetBit(5),
-					isForceFloat = bytes12[num3].GetBit(6),
-					isToggleWallPillar = bytes12[num3].GetBit(7),
-					isWatered = bytes13[num3].GetBit(0),
-					isObjDyed = bytes13[num3].GetBit(1),
-					crossWall = bytes13[num3].GetBit(2)
+					objVal = data[num3],
+					_blockMat = data2[num3],
+					_block = data3[num3],
+					_floorMat = data4[num3],
+					_floor = data5[num3],
+					obj = data6[num3],
+					objMat = data7[num3],
+					decal = data8[num3],
+					_deco = data9[num3],
+					_decoMat = data10[num3],
+					_dirs = data11[num3],
+					height = data14[num3],
+					_bridge = data15[num3],
+					_bridgeMat = data16[num3],
+					bridgeHeight = data17[num3],
+					bridgePillar = data18[num3],
+					_roofBlock = data19[num3],
+					_roofBlockMat = data20[num3],
+					_roofBlockDir = data21[num3],
+					isSeen = data12[num3].GetBit(1),
+					isHarvested = data12[num3].GetBit(2),
+					impassable = data12[num3].GetBit(3),
+					isModified = data12[num3].GetBit(4),
+					isClearSnow = data12[num3].GetBit(5),
+					isForceFloat = data12[num3].GetBit(6),
+					isToggleWallPillar = data12[num3].GetBit(7),
+					isWatered = data13[num3].GetBit(0),
+					isObjDyed = data13[num3].GetBit(1),
+					crossWall = data13[num3].GetBit(2),
+					hidePillar = data13[num3].GetBit(3),
+					toggleOcclusion = data13[num3].GetBit(4)
 				});
+				if (version.IsBelow(0, 23, 344) && cell.bridgePillar == 255)
+				{
+					cell.bridgePillar = 0;
+					cell.hidePillar = true;
+				}
 				if (!EClass.sources.floors.map.ContainsKey(cell._bridge))
 				{
 					cell._bridge = 0;
@@ -700,12 +789,18 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			return TryLoadFile(path, s, size);
 		}
-		void Validate(ref byte[] reference, string id)
+		int[] TryLoadIds(string s)
+		{
+			int value;
+			int width = ((cellWidths == null || !cellWidths.TryGetValue(s, out value)) ? 1 : value);
+			return ReadCellIds(CellIdPath(path + s, width), s, size, width) ?? new int[size];
+		}
+		void Validate<T>(ref T[] reference, string id)
 		{
 			if (reference.Length < size)
 			{
-				Debug.LogError("expection: size invalid:" + id + " " + reference.Length + "/" + size);
-				reference = new byte[size];
+				Debug.LogError("exception: size invalid:" + id + " " + reference.Length + "/" + size);
+				reference = new T[size];
 			}
 		}
 	}
@@ -973,8 +1068,8 @@ public class Map : MapBounds, IPathfindGrid
 	public void SetFloor(int x, int z, int idMat, int idFloor, int dir)
 	{
 		Cell cell = cells[x, z];
-		cell._floorMat = (byte)idMat;
-		cell._floor = (byte)idFloor;
+		cell._floorMat = idMat;
+		cell._floor = idFloor;
 		cell.floorDir = dir;
 		cell.isWatered = false;
 		Critter.RebuildCritter(cell);
@@ -984,18 +1079,19 @@ public class Map : MapBounds, IPathfindGrid
 	public void SetDeco(int x, int z, int idMat, int idDeco)
 	{
 		Cell cell = cells[x, z];
-		cell._decoMat = (byte)idMat;
-		cell._deco = (byte)idDeco;
+		cell._decoMat = idMat;
+		cell._deco = idDeco;
 		RefreshNeighborTiles(x, z);
 	}
 
-	public void SetBridge(int x, int z, int height = 0, int idMat = 0, int idBridge = 0, int dir = 0, byte idPillar = 0)
+	public void SetBridge(int x, int z, int height = 0, int idMat = 0, int idBridge = 0, int dir = 0, int idPillar = 0, bool hidePillar = false)
 	{
 		Cell cell = cells[x, z];
 		cell.bridgeHeight = (byte)height;
-		cell._bridgeMat = (byte)idMat;
-		cell._bridge = (byte)idBridge;
+		cell._bridgeMat = idMat;
+		cell._bridge = idBridge;
 		cell.bridgePillar = idPillar;
+		cell.hidePillar = hidePillar;
 		cell.floorDir = dir;
 		if (cell.room != null)
 		{
@@ -1007,8 +1103,8 @@ public class Map : MapBounds, IPathfindGrid
 	public void SetRoofBlock(int x, int z, int idMat, int idBlock, int dir, int height)
 	{
 		Cell cell = cells[x, z];
-		cell._roofBlockMat = (byte)idMat;
-		cell._roofBlock = (byte)idBlock;
+		cell._roofBlockMat = idMat;
+		cell._roofBlock = idBlock;
 		cell._roofBlockDir = (byte)(dir + height * 4);
 		RefreshSingleTile(x, z);
 	}
@@ -1022,8 +1118,8 @@ public class Map : MapBounds, IPathfindGrid
 	{
 		Cell cell = cells[x, z];
 		bool hasFloodBlock = cell.HasFloodBlock;
-		cell._blockMat = (byte)idMat;
-		cell._block = (byte)idBlock;
+		cell._blockMat = idMat;
+		cell._block = idBlock;
 		cell.blockDir = dir;
 		if (cell.effect == null || !cell.effect.IsFire)
 		{
@@ -1185,7 +1281,7 @@ public class Map : MapBounds, IPathfindGrid
 	public void SetBlockDir(int x, int z, int dir)
 	{
 		Cell cell = cells[x, z];
-		cell._block = (byte)cell.sourceBlock.id;
+		cell._block = cell.sourceBlock.id;
 		cell.blockDir = dir;
 	}
 
@@ -1578,7 +1674,7 @@ public class Map : MapBounds, IPathfindGrid
 
 	public void SetObj(int x, int z, int id = 0, int value = 1, int dir = 0)
 	{
-		SetObj(x, z, (byte)EClass.sources.objs[id].DefaultMaterial.id, id, value, dir);
+		SetObj(x, z, EClass.sources.objs[id].DefaultMaterial.id, id, value, dir);
 	}
 
 	public void SetObj(int x, int z, int idMat, int idObj, int value, int dir, bool ignoreRandomMat = false)
@@ -1588,9 +1684,9 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			EClass._zone.dirtyElectricity = true;
 		}
-		cell.obj = (byte)idObj;
+		cell.obj = idObj;
 		cell.objVal = (byte)value;
-		cell.objMat = (byte)idMat;
+		cell.objMat = idMat;
 		cell.objDir = dir;
 		cell.isHarvested = false;
 		cell.isObjDyed = false;
@@ -1602,7 +1698,7 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				num += EClass.pc.Evalue(1656) * 5;
 			}
-			cell.objMat = (byte)MATERIAL.GetRandomMaterialFromCategory(num, sourceObj.matCategory.Split(','), cell.matObj).id;
+			cell.objMat = MATERIAL.GetRandomMaterialFromCategory(num, sourceObj.matCategory.Split(','), cell.matObj).id;
 		}
 		if (backerObjs.ContainsKey(cell.index))
 		{
@@ -1717,8 +1813,8 @@ public class Map : MapBounds, IPathfindGrid
 			return;
 		}
 		SourceMaterial.Row row = (flag ? point.matRoofBlock : point.matBlock);
-		byte b = (flag ? point.cell._roofBlock : point.cell._block);
-		SourceBlock.Row row2 = EClass.sources.blocks[b];
+		int num = (flag ? point.cell._roofBlock : point.cell._block);
+		SourceBlock.Row row2 = EClass.sources.blocks[num];
 		Effect.Get("smoke").Play(point);
 		Effect.Get("mine").Play(point).SetParticleColor(row.GetColor())
 			.Emit(10 + EClass.rnd(10));
@@ -1756,7 +1852,7 @@ public class Map : MapBounds, IPathfindGrid
 		RefreshFOV(point.x, point.z);
 		if (flag2 && !point.cell.isModified && !flag)
 		{
-			if (b == 17 || EClass.rnd(100) == 0)
+			if (num == 17 || EClass.rnd(100) == 0)
 			{
 				zone.AddCard(ThingGen.Create("money2"), point);
 			}
@@ -1781,7 +1877,7 @@ public class Map : MapBounds, IPathfindGrid
 		if (point.IsValid && point.cell.HasFullBlock)
 		{
 			SourceMaterial.Row matBlock = point.matBlock;
-			byte block = point.cell._block;
+			int block = point.cell._block;
 			Effect.Get("smoke").Play(point);
 			Effect.Get("mine").Play(point).SetParticleColor(point.matBlock.GetColor())
 				.Emit(10 + EClass.rnd(10));
@@ -1808,7 +1904,7 @@ public class Map : MapBounds, IPathfindGrid
 		if (point.cell.HasBridge && removePlatform)
 		{
 			DropBlockComponent(EClass.pc.pos, point.sourceBridge, point.matBridge, recoverBlock, isPlatform: true, c);
-			EClass._map.SetBridge(point.x, point.z, 0, 0, 0, 0, 0);
+			EClass._map.SetBridge(point.x, point.z);
 			if (point.IsSky)
 			{
 				EClass.pc.Kick(point, ignoreSelf: true);

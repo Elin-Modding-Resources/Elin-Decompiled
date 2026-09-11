@@ -81,7 +81,7 @@ public class TraitSeed : Trait
 			if (owner.isDyed && pos.sourceObj.ContainsTag("dyeable"))
 			{
 				pos.cell.isObjDyed = true;
-				pos.cell.objMat = (byte)owner.DyeMat.id;
+				pos.cell.objMat = owner.DyeMat.id;
 			}
 			if (sucker)
 			{

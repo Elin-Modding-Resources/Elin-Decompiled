@@ -239,13 +239,13 @@ public class PartialMap : EClass
 						{
 							if (cell._block == 149 && !editMode)
 							{
-								c1._block = (byte)interior.block.id;
-								c1._blockMat = (byte)interior.block.mat;
+								c1._block = interior.block.id;
+								c1._blockMat = interior.block.mat;
 							}
 							else if (cell._block == 150 && !editMode)
 							{
-								c1._block = (byte)exterior.block.id;
-								c1._blockMat = (byte)exterior.block.mat;
+								c1._block = exterior.block.id;
+								c1._blockMat = exterior.block.mat;
 							}
 							else
 							{
@@ -254,13 +254,13 @@ public class PartialMap : EClass
 							}
 							if (cell._floor == 2 && !editMode)
 							{
-								c1._floor = (byte)interior.floor.id;
-								c1._floorMat = (byte)interior.floor.mat;
+								c1._floor = interior.floor.id;
+								c1._floorMat = interior.floor.mat;
 							}
 							else if (cell._floor == 3 && !editMode)
 							{
-								c1._floor = (byte)exterior.floor.id;
-								c1._floorMat = (byte)exterior.floor.mat;
+								c1._floor = exterior.floor.id;
+								c1._floorMat = exterior.floor.mat;
 							}
 							else
 							{
@@ -277,6 +277,8 @@ public class PartialMap : EClass
 							c1._bridge = cell._bridge;
 							c1._bridgeMat = cell._bridgeMat;
 							c1.bridgePillar = cell.bridgePillar;
+							c1.hidePillar = cell.hidePillar;
+							c1.toggleOcclusion = cell.toggleOcclusion;
 							c1.isModified = true;
 							if (c1.HasWall)
 							{

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class TileRow : RenderRow
 {
@@ -15,7 +16,11 @@ public class TileRow : RenderRow
 
 	public void Init()
 	{
-		tileType = TileType.dict[_tileType];
+		if (!TileType.dict.TryGetValue(_tileType, out tileType))
+		{
+			Debug.LogError($"#source unknown tile type '{_tileType}' for tile row {id}/{alias}");
+			tileType = TileType.None;
+		}
 		SetRenderData();
 		OnInit();
 	}

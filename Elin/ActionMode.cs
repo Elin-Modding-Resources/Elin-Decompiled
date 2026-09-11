@@ -286,7 +286,7 @@ public class ActionMode : EClass
 
 	public virtual int TopHeight(Point p)
 	{
-		return -1;
+		return 0;
 	}
 
 	public virtual void SEExecuteSummary()
@@ -870,7 +870,7 @@ public class ActionMode : EClass
 				{
 					row2 = lastEditorMat;
 				}
-				hitPoint.cell.objMat = (byte)row2.id;
+				hitPoint.cell.objMat = row2.id;
 				lastEditorMat = row2;
 				Msg.Say(row2.GetName());
 			}
@@ -883,7 +883,7 @@ public class ActionMode : EClass
 				{
 					row3 = lastEditorMat;
 				}
-				hitPoint.cell._blockMat = (byte)row3.id;
+				hitPoint.cell._blockMat = row3.id;
 				lastEditorMat = row3;
 				Msg.Say(row3.GetName());
 			}
@@ -896,7 +896,7 @@ public class ActionMode : EClass
 				{
 					row4 = lastEditorMat;
 				}
-				hitPoint.cell._floorMat = (byte)row4.id;
+				hitPoint.cell._floorMat = row4.id;
 				lastEditorMat = row4;
 				Msg.Say(row4.GetName());
 			}
@@ -1460,7 +1460,7 @@ public class ActionMode : EClass
 			return;
 		}
 		hitPoint.cell.RotateAll();
-		if (EClass.debug.enable)
+		if (EClass.debug.enable && !Input.GetKey(KeyCode.LeftShift))
 		{
 			hitPoint.growth?.Grow(100);
 			if (hitPoint.Installed?.trait is TraitSeed)

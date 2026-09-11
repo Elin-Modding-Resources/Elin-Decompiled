@@ -2,9 +2,9 @@ public struct Wall
 {
 	public static Map map;
 
-	public byte id;
+	public int id;
 
-	public byte idMat;
+	public int idMat;
 
 	public SourceBlock.Row source => Cell.blockSource[id];
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class SourceFloor : SourceDataInt<SourceFloor.Row>
 {
@@ -278,7 +279,7 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 			row.sort = num;
 			num++;
 		}
-		rows.Sort((Row a, Row b) => a.id - b.id);
+		rows.Sort((Row r) => r.id);
 	}
 
 	public override void OnInit()
@@ -299,11 +300,22 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 	public void OnAfterInit()
 	{
-		foreach (Row row in rows)
+		SourceBlock blocks = EClass.sources.blocks;
+		foreach (Row row2 in rows)
 		{
-			row._defBlock = EClass.sources.blocks.alias[row.defBlock];
-			row._bridgeBlock = EClass.sources.blocks.alias[row.bridgeBlock];
-			row.nonGradient = row.ContainsTag("nonGradient");
+			row2._defBlock = Resolve(row2, row2.defBlock);
+			row2._bridgeBlock = Resolve(row2, row2.bridgeBlock);
+			row2.nonGradient = row2.ContainsTag("nonGradient");
+		}
+		SourceBlock.Row Resolve(Row r, string aliasName)
+		{
+			SourceBlock.Row row = blocks.alias.TryGetValue(aliasName);
+			if (row == null)
+			{
+				Debug.LogWarning($"#source floor {r.id}/{r.alias} has invalid block alias '{aliasName}'");
+				row = blocks[0];
+			}
+			return row;
 		}
 	}
 }

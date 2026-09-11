@@ -585,7 +585,7 @@ public class BiomeProfile : EScriptable
 			int idMaterial = item.GetIdMaterial();
 			if (idMaterial != -1)
 			{
-				cell.objMat = (byte)idMaterial;
+				cell.objMat = idMaterial;
 			}
 			cell.objDir = EScriptable.rnd(8);
 			if (cell.sourceObj.HasGrowth && !EClass._zone.IsPCFactionOrTent && cell.sourceObj.id != 103)

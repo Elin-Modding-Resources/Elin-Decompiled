@@ -5,7 +5,7 @@ public class Lot : EClass
 {
 	public static Lot Void = new Lot();
 
-	public static Dictionary<int, int> roofCount = new Dictionary<int, int>();
+	public static Dictionary<long, int> roofCount = new Dictionary<long, int>();
 
 	public int id;
 
@@ -111,7 +111,7 @@ public class Lot : EClass
 			{
 				fullblock = true;
 			}
-			foreach (KeyValuePair<int, int> item2 in item.roofCount)
+			foreach (KeyValuePair<long, int> item2 in item.roofCount)
 			{
 				if (!roofCount.ContainsKey(item2.Key))
 				{
@@ -121,8 +121,8 @@ public class Lot : EClass
 			}
 		}
 		int num = 0;
-		int num2 = 0;
-		foreach (KeyValuePair<int, int> item3 in roofCount)
+		long num2 = 0L;
+		foreach (KeyValuePair<long, int> item3 in roofCount)
 		{
 			if (item3.Value > num)
 			{
@@ -135,21 +135,21 @@ public class Lot : EClass
 			if (board.data == null)
 			{
 				TraitHouseBoard.Data data = (board.data = new TraitHouseBoard.Data());
-				CoreRef.DefaultRoof defaultRoof = EClass.core.refs.defaultRoofs[EClass.sources.blocks[num2 / 1000].roof];
+				CoreRef.DefaultRoof defaultRoof = EClass.core.refs.defaultRoofs[EClass.sources.blocks[(int)(num2 >> 32)].roof];
 				data.height = (fullblock ? 1 : 2);
 				data.heightFix = (fullblock ? 40 : 0);
 				data.reverse = EClass.rnd(2) == 0;
 				data.idRoofStyle = ((!EClass._map.IsIndoor && flag) ? 2 : 0);
 				data.idBlock = defaultRoof.idBlock;
 				data.idRamp = defaultRoof.idRamp;
-				SourceMaterial.Row row = EClass.sources.materials[num2 % 1000];
+				SourceMaterial.Row row = EClass.sources.materials[(int)(num2 & 0xFFFFFFFFu)];
 				data.colRoof = IntColor.ToInt(row.matColor);
 			}
 			RefreshData(board.data);
 		}
 		else
 		{
-			CoreRef.DefaultRoof defaultRoof2 = EClass.core.refs.defaultRoofs[EClass.sources.blocks[num2 / 1000].roof];
+			CoreRef.DefaultRoof defaultRoof2 = EClass.core.refs.defaultRoofs[EClass.sources.blocks[(int)(num2 >> 32)].roof];
 			height = (fullblock ? 1 : 2);
 			heightFix = (fullblock ? 40 : 0);
 			idRoofStyle = ((!EClass._map.IsIndoor && flag) ? 2 : 0);
@@ -158,7 +158,7 @@ public class Lot : EClass
 			realHeight = (float)height * EClass.setting.render.roomHeightMod + 0.01f * (float)heightFix;
 			Color matColor = EClass.sources.materials.alias["oak"].matColor.SetAlpha(1f);
 			colRoof = (colBlock = (colDeco = BaseTileMap.GetColorInt(ref matColor, 100)));
-			SourceMaterial.Row row2 = EClass.sources.materials[num2 % 1000];
+			SourceMaterial.Row row2 = EClass.sources.materials[(int)(num2 & 0xFFFFFFFFu)];
 			colRoof = BaseTileMap.GetColorInt(ref row2.matColor, 100);
 		}
 		int num3 = (mx - x + pointMinX.z - z) / 2;

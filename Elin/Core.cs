@@ -564,6 +564,7 @@ public class Core : BaseCore
 		scene.InitPass();
 		textures.Init();
 		textures.RefreshTextures();
+		TileManager.Apply();
 		SoundManager.current.Reset();
 		if (debug.validatePref)
 		{

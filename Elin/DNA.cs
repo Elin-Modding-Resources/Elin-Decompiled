@@ -352,7 +352,7 @@ public class DNA : EClass
 				AddSpecial();
 			}
 			AddSpecial();
-			if (EClass.rnd(3) != 0)
+			if (EClass.rnd(3) != 0 && lv > 10)
 			{
 				IEnumerable<SourceElement.Row> enumerable = EClass.sources.elements.map.Values.Where(delegate(SourceElement.Row row)
 				{
@@ -401,6 +401,10 @@ public class DNA : EClass
 					SourceElement.Row e = enumerable.RandomItem();
 					AddVal(e.id, (!(e.category == "ability")) ? 1 : 100, allowStack: false, (int v) => e.cost[0], allowNegative: false);
 				}
+			}
+			else
+			{
+				AddSpecial();
 			}
 			cost = cost / 2 - 10;
 			break;
@@ -592,9 +596,16 @@ public class DNA : EClass
 				}
 			}
 		}
-		if (slot < 0)
+		if (type == Type.Brain || type == Type.Inferior)
 		{
-			slot = 0;
+			if (slot < 0)
+			{
+				slot = 0;
+			}
+		}
+		else if (slot < 1)
+		{
+			slot = 1;
 		}
 	}
 
@@ -661,6 +672,15 @@ public class DNA : EClass
 			n.AddText("NoteText_enc", "isPermaGene".lang(), FontColor.Warning);
 		}
 		n.Space(4);
+		IList<int> vals = this.vals.Copy();
+		vals = (from i in Enumerable.Range(0, vals.Count / 2)
+			select new
+			{
+				id = vals[i * 2],
+				value = vals[i * 2 + 1]
+			} into x
+			orderby x.id
+			select x).SelectMany(x => new int[2] { x.id, x.value }).ToList();
 		if (type == Type.Brain)
 		{
 			SourceChara.Row row = EClass.sources.charas.map.TryGetValue(id);
@@ -669,47 +689,52 @@ public class DNA : EClass
 				string key = row.tactics.IsEmpty(EClass.sources.tactics.map.TryGetValue(row.id)?.id ?? EClass.sources.tactics.map.TryGetValue(row.job)?.id ?? "predator");
 				n.AddText("NoteText_enc", "gene_info".lang(EClass.sources.tactics.map[key].GetName().ToTitleCase(), ""), FontColor.ButtonGeneral);
 			}
-			for (int i = 0; i < vals.Count; i += 2)
+			for (int num = 0; num < vals.Count; num += 2)
 			{
-				int num = vals[i];
-				int num2 = vals[i + 1];
-				FontColor color = ((num2 >= 0) ? FontColor.Good : FontColor.Bad);
-				string @ref = (num + 1).ToString() ?? "";
+				int num2 = vals[num];
+				int num3 = vals[num + 1];
+				FontColor color = ((num3 >= 0) ? FontColor.Good : FontColor.Bad);
+				string @ref = (num2 + 1).ToString() ?? "";
 				string text = "";
-				num2 = Mathf.Abs(num2 / 20) + 1;
-				text = text + "[" + "*".Repeat(Mathf.Clamp(num2, 1, 5)) + ((num2 > 5) ? "+" : "") + "]";
+				num3 = Mathf.Abs(num3 / 20) + 1;
+				text = text + "[" + "*".Repeat(Mathf.Clamp(num3, 1, 5)) + ((num3 > 5) ? "+" : "") + "]";
 				n.AddText("NoteText_enc", "gene_info_brain".lang(@ref, text), color);
 			}
 			return;
 		}
-		for (int j = 0; j < vals.Count; j += 2)
+		for (int num4 = 0; num4 < vals.Count; num4 += 2)
 		{
-			Element element = Element.Create(vals[j], vals[j + 1]);
+			Element element = Element.Create(vals[num4], vals[num4 + 1]);
 			string text2 = "";
-			int num3 = element.Value / 10;
+			int num5 = element.Value / 10;
 			FontColor color2 = FontColor.Good;
 			bool flag = false;
+			string text3 = "";
 			switch (element.source.category)
 			{
 			case "slot":
 				color2 = FontColor.Myth;
-				num3 = -1;
+				num5 = -1;
 				break;
 			case "feat":
 				color2 = FontColor.FoodMisc;
-				num3 = -1;
+				num5 = -1;
 				break;
 			case "ability":
 				color2 = FontColor.Topic2;
-				num3 = -1;
+				num5 = -1;
+				if (element.Value < 0)
+				{
+					text3 = " (" + "party".lang() + ") ";
+				}
 				break;
 			default:
 				flag = true;
 				break;
 			}
-			if (num3 >= 0)
+			if (num5 >= 0)
 			{
-				text2 = text2 + "[" + "*".Repeat(Mathf.Clamp(num3, 1, 5)) + ((num3 > 5) ? "+" : "") + "]";
+				text2 = text2 + "[" + "*".Repeat(Mathf.Clamp(num5, 1, 5)) + ((num5 > 5) ? "+" : "") + "]";
 			}
 			if (flag)
 			{
@@ -719,7 +744,7 @@ public class DNA : EClass
 			{
 				color2 = FontColor.Bad;
 			}
-			n.AddText("NoteText_enc", "gene_info".lang(element.Name.ToTitleCase(wholeText: true), text2), color2);
+			n.AddText("NoteText_enc", "gene_info".lang(element.Name.ToTitleCase(wholeText: true) + text3, text2), color2);
 		}
 	}
 

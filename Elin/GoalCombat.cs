@@ -1082,11 +1082,11 @@ public class GoalCombat : Goal
 		{
 			if (tc.pos.HasBridge)
 			{
-				EClass._map.SetBridge(tc.pos.x, tc.pos.z, 0, 0, 0, 0, 0);
+				EClass._map.SetBridge(tc.pos.x, tc.pos.z);
 			}
 			else
 			{
-				EClass._map.SetBridge(owner.pos.x, owner.pos.z, 0, 0, 0, 0, 0);
+				EClass._map.SetBridge(owner.pos.x, owner.pos.z);
 			}
 		}
 		if (EClass.debug.logCombat)

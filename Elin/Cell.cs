@@ -39,37 +39,39 @@ public class Cell : WeightCell, IFloodCell
 
 	public const int DivAutotile = 12;
 
+	public int _block;
+
+	public int _blockMat;
+
+	public int _floor;
+
+	public int _floorMat;
+
+	public int obj;
+
+	public int objMat;
+
+	public int _bridge;
+
+	public int _bridgeMat;
+
+	public int _roofBlock;
+
+	public int _roofBlockMat;
+
+	public int _deco;
+
+	public int _decoMat;
+
 	public byte _dirs;
-
-	public byte _block;
-
-	public byte _blockMat;
-
-	public byte _floor;
-
-	public byte _floorMat;
-
-	public byte obj;
 
 	public byte objVal;
 
-	public byte objMat;
-
 	public byte decal;
-
-	public byte _bridge;
-
-	public byte _bridgeMat;
-
-	public byte _roofBlock;
-
-	public byte _roofBlockMat;
 
 	public byte _roofBlockDir;
 
-	public byte _deco;
-
-	public byte _decoMat;
+	public int bridgePillar;
 
 	public byte x;
 
@@ -98,8 +100,6 @@ public class Cell : WeightCell, IFloodCell
 	public byte topHeight;
 
 	public byte minHeight;
-
-	public byte bridgePillar;
 
 	public byte highlight;
 
@@ -655,6 +655,30 @@ public class Cell : WeightCell, IFloodCell
 		set
 		{
 			bits2[5] = value;
+		}
+	}
+
+	public bool hidePillar
+	{
+		get
+		{
+			return bits2[6];
+		}
+		set
+		{
+			bits2[6] = value;
+		}
+	}
+
+	public bool toggleOcclusion
+	{
+		get
+		{
+			return bits2[7];
+		}
+		set
+		{
+			bits2[7] = value;
 		}
 	}
 
@@ -1573,7 +1597,8 @@ public class Cell : WeightCell, IFloodCell
 
 	public void Reset()
 	{
-		_block = (_blockMat = (_floor = (_floorMat = (obj = (decal = (objVal = (objMat = 0)))))));
+		_block = (_blockMat = (_floor = (_floorMat = (obj = (objMat = 0)))));
+		decal = (objVal = 0);
 		bits.Bits = 0u;
 		bits2.Bits = 0u;
 	}
@@ -1736,7 +1761,7 @@ public class Cell : WeightCell, IFloodCell
 	public void DyeObj(string id)
 	{
 		isObjDyed = true;
-		objMat = (byte)EClass.sources.materials.alias[id].id;
+		objMat = EClass.sources.materials.alias[id].id;
 	}
 
 	public float GetSurfaceHeight()

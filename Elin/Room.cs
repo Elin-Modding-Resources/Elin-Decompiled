@@ -24,7 +24,7 @@ public class Room : BaseArea
 
 	public Point pointMaxX;
 
-	public Dictionary<int, int> roofCount = new Dictionary<int, int>();
+	public Dictionary<long, int> roofCount = new Dictionary<long, int>();
 
 	public bool HasRoof => lot.idRoofStyle != 0;
 
@@ -127,11 +127,8 @@ public class Room : BaseArea
 				{
 					num++;
 				}
-				int key = point.sourceBlock.id * 1000 + point.matBlock.id;
-				if (!roofCount.ContainsKey(key))
-				{
-					roofCount[key] = 0;
-				}
+				long key = ((long)point.sourceBlock.id << 32) | (uint)point.matBlock.id;
+				roofCount.TryAdd(key, 0);
 				roofCount[key]++;
 			}
 			if (plate == null)

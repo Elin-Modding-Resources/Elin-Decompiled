@@ -105,13 +105,13 @@ public class TaskPourWater : TaskDesignation
 				SourceFloor.Row row = EClass.sources.floors.alias[id];
 				if (point.HasBridge)
 				{
-					point.cell._bridge = (byte)row.id;
-					point.cell._bridgeMat = (byte)pot.owner.DyeMat.id;
+					point.cell._bridge = row.id;
+					point.cell._bridgeMat = pot.owner.DyeMat.id;
 				}
 				else
 				{
-					point.cell._floor = (byte)row.id;
-					point.cell._floorMat = (byte)pot.owner.DyeMat.id;
+					point.cell._floor = row.id;
+					point.cell._floorMat = pot.owner.DyeMat.id;
 				}
 				EClass._map.SetLiquid(point.x, point.z);
 				point.RefreshNeighborTiles();

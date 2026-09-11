@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class BaseTaskHarvest : TaskDesignation
@@ -182,11 +181,24 @@ public class BaseTaskHarvest : TaskDesignation
 				row = pos.matBlock;
 				break;
 			}
-			array = new string[pos.sourceFloor.reqHarvest.Length];
-			Array.Copy(pos.sourceFloor.reqHarvest, array, pos.sourceFloor.reqHarvest.Length);
-			array[0] = "mining";
+			array = pos.sourceFloor.reqHarvest?.Clone() as string[];
+			if (array != null && array.Length != 0)
+			{
+				array[0] = "mining";
+			}
 			row = pos.matFloor;
 			break;
+		}
+		if (array == null || array.Length < 2 || !EClass.sources.elements.alias.ContainsKey(array[0]))
+		{
+			Debug.LogWarning(string.Format("#source {0} at {1} has no valid reqHarvest 'skill,level' ({2}), using default", this.harvestType, pos, (array == null) ? "null" : string.Join(',', array)));
+			string text = this.harvestType switch
+			{
+				HarvestType.Obj => "gathering", 
+				HarvestType.Floor => "digging", 
+				_ => "mining", 
+			};
+			array = new string[2] { text, "1" };
 		}
 		matHardness = row.hardness;
 		if (this.harvestType == HarvestType.Obj)

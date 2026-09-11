@@ -509,9 +509,16 @@ public class CardRenderer : RenderObject
 	public override void OnLeaveScreen()
 	{
 		isSynced = false;
-		if (hasActor && (!owner.ExistsOnMap || !data.persistActor || owner.isMasked))
+		if (hasActor)
 		{
-			KillActor();
+			if (!owner.ExistsOnMap || !data.persistActor || owner.isMasked)
+			{
+				KillActor();
+			}
+			else if (data.persistActor)
+			{
+				actor.SetVisible(enable: false);
+			}
 		}
 		for (int num = listTC.Count - 1; num >= 0; num--)
 		{

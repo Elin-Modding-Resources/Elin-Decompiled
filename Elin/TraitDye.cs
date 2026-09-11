@@ -21,7 +21,7 @@ public class TraitDye : Trait
 	{
 		if (p.HasObj)
 		{
-			p.cell.objMat = (byte)owner.material.id;
+			p.cell.objMat = owner.material.id;
 			p.cell.isObjDyed = true;
 			owner.Die();
 		}

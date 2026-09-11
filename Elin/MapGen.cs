@@ -267,11 +267,11 @@ public class MapGen : BaseMapGen
 				}
 				else if (biomeProfile2.floor_height != 0 && (int)heights2[num11, num12] + zp.bushMod >= 4)
 				{
-					SetFloor(num11, num12, (byte)row3.id, biomeProfile2.floor_height, dir);
+					SetFloor(num11, num12, row3.id, biomeProfile2.floor_height, dir);
 				}
 				else
 				{
-					SetFloor(num11, num12, (byte)row3.id, (biomeProfile2.exterior.floor.id != 0) ? biomeProfile2.exterior.floor.id : row3.defFloor, dir);
+					SetFloor(num11, num12, row3.id, (biomeProfile2.exterior.floor.id != 0) ? biomeProfile2.exterior.floor.id : row3.defFloor, dir);
 				}
 			}
 		}

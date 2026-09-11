@@ -5292,6 +5292,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Explode(pos, origin);
 		}
+		trait.OnDie();
 	}
 
 	public void Explode(Point p, Card origin)
@@ -6751,9 +6752,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public void ChangeAltitude(int a)
 	{
 		altitude += a;
-		if (altitude < 0)
+		if (altitude < TileType.MinAltitude)
 		{
-			altitude = 0;
+			altitude = TileType.MinAltitude;
 		}
 		if (altitude > TileType.MaxAltitude)
 		{

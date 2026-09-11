@@ -30,6 +30,8 @@ public class CardActor : Actor
 
 	private int spriteIndex;
 
+	private bool visible = true;
+
 	private Vector3 originalScale;
 
 	protected static Vector3 tempV;
@@ -103,6 +105,10 @@ public class CardActor : Actor
 	public virtual void OnRender(RenderParam p)
 	{
 		this.SetActive(enable: true);
+		if (!visible)
+		{
+			SetVisible(enable: true);
+		}
 		SubPassData current = SubPassData.Current;
 		RenderData data = owner.renderer.data;
 		if (data.useOffsetBack && owner != EMono.pc.held)
@@ -112,7 +118,7 @@ public class CardActor : Actor
 			{
 				if (p.dir == 1)
 				{
-					goto IL_006a;
+					goto IL_0079;
 				}
 				num = p.dir == 2;
 			}
@@ -122,19 +128,14 @@ public class CardActor : Actor
 			}
 			if (num)
 			{
-				goto IL_006a;
+				goto IL_0079;
 			}
 		}
 		tempV.x = p.x + data.offset.x + current.offset.x;
 		tempV.y = p.y + data.offset.y + current.offset.y;
 		tempV.z = p.z + data.offset.z + current.offset.z;
-		goto IL_015c;
-		IL_006a:
-		tempV.x = p.x + data.offsetBack.x + current.offset.x;
-		tempV.y = p.y + data.offsetBack.y + current.offset.y;
-		tempV.z = p.z + data.offsetBack.z + current.offset.z;
-		goto IL_015c;
-		IL_015c:
+		goto IL_016b;
+		IL_016b:
 		if (isPCC)
 		{
 			RenderDataPcc renderDataPcc = data as RenderDataPcc;
@@ -228,6 +229,12 @@ public class CardActor : Actor
 				mpb.SetTexture("_MainTex", sr.sprite.texture);
 			}
 		}
+		return;
+		IL_0079:
+		tempV.x = p.x + data.offsetBack.x + current.offset.x;
+		tempV.y = p.y + data.offsetBack.y + current.offset.y;
+		tempV.z = p.z + data.offsetBack.z + current.offset.z;
+		goto IL_016b;
 	}
 
 	public virtual void ReloadSprite()
@@ -304,5 +311,21 @@ public class CardActor : Actor
 	{
 		sr.sprite = null;
 		PoolManager.Despawn(base.transform);
+	}
+
+	public void SetVisible(bool enable)
+	{
+		if (visible != enable)
+		{
+			visible = enable;
+			if ((bool)sr)
+			{
+				sr.enabled = visible;
+			}
+			if ((bool)sr2)
+			{
+				sr2.enabled = visible;
+			}
+		}
 	}
 }

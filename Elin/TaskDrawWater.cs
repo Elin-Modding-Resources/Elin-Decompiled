@@ -111,7 +111,7 @@ public class TaskDrawWater : TaskDesignation
 				SourceFloor.Row row = EClass.sources.floors.alias[id];
 				if (point.HasBridge)
 				{
-					point.cell._bridge = (byte)row.id;
+					point.cell._bridge = row.id;
 					if (id == "floor_raw3")
 					{
 						point.cell._bridgeMat = 45;
@@ -119,7 +119,7 @@ public class TaskDrawWater : TaskDesignation
 				}
 				else
 				{
-					point.cell._floor = (byte)row.id;
+					point.cell._floor = row.id;
 					if (id == "floor_raw3")
 					{
 						point.cell._floorMat = 45;

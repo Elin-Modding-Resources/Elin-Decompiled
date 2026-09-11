@@ -5957,6 +5957,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		EClass._zone.RefreshDeathSentense();
 		EClass._zone.events.OnCharaDie(this);
+		trait.OnDie();
 	}
 
 	public void TryDropBossLoot()

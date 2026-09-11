@@ -90,6 +90,7 @@ public class Region : Zone
 		TryAddZone("temple_undersea");
 		TryAddZone("curryruin");
 		TryAddZone("cave_dead");
+		TryAddZone("oldkeep");
 		elomap.objmap.UpdateMeshImmediate();
 		void TryAddZone(string id)
 		{

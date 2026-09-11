@@ -416,9 +416,9 @@ public class AM_Adv : AM_BaseGameMode
 		if (EClass.scene.mouseTarget.pos.Distance(EClass.pc.pos) <= 1 && HotItemHeld.CanChangeHeightByWheel())
 		{
 			textWheel = "textWheel_changeHeight".lang();
-			if (HotItemHeld.taskBuild != null && HotItemHeld.taskBuild.altitude > 0)
+			if (HotItemHeld.taskBuild != null && HotItemHeld.taskBuild.altitude != 0)
 			{
-				textWheel = textWheel + " (+" + HotItemHeld.taskBuild.altitude + ")";
+				textWheel = textWheel + " (" + ((HotItemHeld.taskBuild.altitude >= 0) ? "+" : "") + HotItemHeld.taskBuild.altitude + ")";
 			}
 		}
 		else if (HotItemHeld.CanRotate())

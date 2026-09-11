@@ -1981,6 +1981,12 @@ public class Zone : Spatial, ICardParent, IInspect
 				flag = true;
 			}
 			break;
+		case "oldkeep":
+			if (!(this is Zone_OldKeep))
+			{
+				flag = true;
+			}
+			break;
 		}
 		Zone topZone = GetTopZone();
 		if (!flag)
@@ -2789,11 +2795,11 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		Crawler.Create("ore").CrawlUntil(tries: EClass.rnd((int)((float)(map.bounds.Width * map.bounds.Height / 200 + 1) * OreChance + 2f)), map: EClass._map, onStart: () => EClass._map.bounds.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 		{
-			byte b = 18;
+			int num = 18;
 			string text = "ore";
 			if (EClass.rnd(5) == 0)
 			{
-				b++;
+				num++;
 				text = "gem";
 			}
 			SourceMaterial.Row randomMaterial = MATERIAL.GetRandomMaterial(DangerLv, text);
@@ -2801,7 +2807,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				if (point.sourceBlock.ContainsTag("ore"))
 				{
-					map.SetObj(point.x, point.z, randomMaterial.id, b, 1, 0);
+					map.SetObj(point.x, point.z, randomMaterial.id, num, 1, 0);
 				}
 			}
 			return false;

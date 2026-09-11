@@ -517,6 +517,12 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		{
 			row.Init();
 			row.elementMap = Element.GetElementMap(row.elements);
+			int tier = row.tier;
+			if (tier < 0 || tier > 7)
+			{
+				Debug.LogWarning($"#source material {row.id}/{row.alias} tier {row.tier} is not within 0~{7}");
+				row.tier = Mathf.Clamp(row.tier, 0, 7);
+			}
 			if (!row.groups.IsEmpty())
 			{
 				string[] groups = row.groups;
@@ -554,7 +560,7 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 
 	public override void OnAfterImportData()
 	{
-		rows.Sort((Row a, Row b) => a.id - b.id);
+		rows.Sort((Row r) => r.id);
 	}
 
 	public void OnImportRow(Row r)

@@ -106,6 +106,8 @@ public class TileType : EClass
 
 	public static TileTypeVine Vine = new TileTypeVine();
 
+	public static TileTypeWallArch WallArch = new TileTypeWallArch();
+
 	public static TileTypeWallMount WallMount = new TileTypeWallMount();
 
 	public static TileTypePaint Paint = new TileTypePaint();
@@ -208,7 +210,19 @@ public class TileType : EClass
 
 	public virtual bool CanInstaComplete => false;
 
-	public virtual int MinAltitude => 1;
+	public virtual int MinBridgeAltitude => 1;
+
+	public virtual int MinAltitude
+	{
+		get
+		{
+			if (!EInput.isShiftDown)
+			{
+				return 0;
+			}
+			return -20;
+		}
+	}
 
 	public virtual int MaxAltitude
 	{

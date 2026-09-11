@@ -13,7 +13,7 @@ public class TraitFakeObj : TraitFakeTile
 			GrowSystem.cell = cell;
 			cell.objVal = (byte)(owner.dir % obj.growth.StageLength * 30);
 			cell.objDir = owner.dir;
-			cell.obj = (byte)owner.refVal;
+			cell.obj = owner.refVal;
 			return obj.growth;
 		}
 	}
