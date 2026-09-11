@@ -172,6 +172,7 @@ var classClassExtension =
     [ "SetZ", "classClassExtension.html#a816f8e37195b41486f2409b502cf3384", null ],
     [ "Shuffle< TValue >", "classClassExtension.html#a1f658b3cb8177593755cd873fc1cfdbb", null ],
     [ "Sort< T >", "classClassExtension.html#a7b68da4bff230f2500a9122b2d324c7b", null ],
+    [ "Sort< T >", "classClassExtension.html#a7fdb1beb9ee9715507b674d8c99e4c8b", null ],
     [ "SplitByNewline", "classClassExtension.html#a50afd6ed9d0af3532c90ca950e011529", null ],
     [ "SplitNewline", "classClassExtension.html#ae467f0dad0da76d2645d472c7d93a282", null ],
     [ "SplitToInts", "classClassExtension.html#a065209c32eaa3f3ba248d186a3069fc0", null ],

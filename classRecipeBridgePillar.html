@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.343.5 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.344 Nightly</span>
    </div>
   </td>
  </tr>
@@ -437,21 +437,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RecipeBridgePillar_8cs_source.html#l00009">9</a> of file <a class="el" href="RecipeBridgePillar_8cs_source.html">RecipeBridgePillar.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#afcd03d3f5664eb645c9b55e474a5aadb">bridgePillar</a> == <a class="code hl_property" href="classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349">tileRow</a>.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>)</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (!pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#aaacd54ddd8541612cf8a2f62d9eb798d">hidePillar</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a6b2dd91b3fd56d23bc7e7c11bae0d9a1">bridgePillar</a> == <a class="code hl_property" href="classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349">tileRow</a>.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>)</div>
 <div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            pos.cell.bridgePillar = <span class="keywordtype">byte</span>.MaxValue;</div>
-<div class="line"><span class="lineno">   14</span>        }</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            pos.cell.bridgePillar = (byte)<a class="code hl_property" href="classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349">tileRow</a>.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="ttc" id="aclassCell_html_afcd03d3f5664eb645c9b55e474a5aadb"><div class="ttname"><a href="classCell.html#afcd03d3f5664eb645c9b55e474a5aadb">Cell.bridgePillar</a></div><div class="ttdeci">byte bridgePillar</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00102">Cell.cs:102</a></div></div>
+<div class="line"><span class="lineno">   13</span>            pos.cell.bridgePillar = 0;</div>
+<div class="line"><span class="lineno">   14</span>            pos.cell.hidePillar = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            pos.cell.bridgePillar = <a class="code hl_property" href="classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349">tileRow</a>.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>;</div>
+<div class="line"><span class="lineno">   19</span>            pos.cell.hidePillar = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclassCell_html_a6b2dd91b3fd56d23bc7e7c11bae0d9a1"><div class="ttname"><a href="classCell.html#a6b2dd91b3fd56d23bc7e7c11bae0d9a1">Cell.bridgePillar</a></div><div class="ttdeci">int bridgePillar</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00074">Cell.cs:74</a></div></div>
+<div class="ttc" id="aclassCell_html_aaacd54ddd8541612cf8a2f62d9eb798d"><div class="ttname"><a href="classCell.html#aaacd54ddd8541612cf8a2f62d9eb798d">Cell.hidePillar</a></div><div class="ttdeci">bool hidePillar</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00661">Cell.cs:662</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 <div class="ttc" id="aclassRecipe_html_a385282f558d5ab34d1a9c1fc9c80c349"><div class="ttname"><a href="classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349">Recipe.tileRow</a></div><div class="ttdeci">virtual TileRow tileRow</div><div class="ttdef"><b>Definition:</b> <a href="Recipe_8cs_source.html#l00208">Recipe.cs:208</a></div></div>
-<div class="ttc" id="aclassTileRow_html_acb04f9c5a77567a445c994b5e8a82e30"><div class="ttname"><a href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">TileRow.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00008">TileRow.cs:8</a></div></div>
+<div class="ttc" id="aclassTileRow_html_acb04f9c5a77567a445c994b5e8a82e30"><div class="ttname"><a href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">TileRow.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00009">TileRow.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00102">Cell.bridgePillar</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>, and <a class="el" href="Recipe_8cs_source.html#l00208">Recipe.tileRow</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00074">Cell.bridgePillar</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Cell_8cs_source.html#l00662">Cell.hidePillar</a>, <a class="el" href="TileRow_8cs_source.html#l00009">TileRow.id</a>, and <a class="el" href="Recipe_8cs_source.html#l00208">Recipe.tileRow</a>.</p>
 
 </div>
 </div>
@@ -480,10 +483,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRecipe.html#aff5c8bf9684dbe3c7e2e20f9486af013">Recipe</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RecipeBridgePillar_8cs_source.html#l00021">21</a> of file <a class="el" href="RecipeBridgePillar_8cs_source.html">RecipeBridgePillar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RecipeBridgePillar_8cs_source.html#l00023">23</a> of file <a class="el" href="RecipeBridgePillar_8cs_source.html">RecipeBridgePillar.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00009">IO.cs:10</a></div></div>
 </div><!-- fragment -->
 </div>

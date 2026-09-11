@@ -69,6 +69,7 @@ var classTrait =
     [ "OnChildDecay", "classTrait.html#a5a26a2b47cf0cd07ec1e9094131fc29e", null ],
     [ "OnCrafted", "classTrait.html#adc7c088d718de5c6d150975a3f8606a8", null ],
     [ "OnCreate", "classTrait.html#aa93666c96d1a63bd8f3848561a11873d", null ],
+    [ "OnDie", "classTrait.html#aea6338560878fa24cb0fed86414a0b45", null ],
     [ "OnDrink", "classTrait.html#acebd3a3c43b4806bd7cab6c97dab25ad", null ],
     [ "OnEat", "classTrait.html#ae345e0e8d44aeac0f2cf22ed173825b5", null ],
     [ "OnEnterScreen", "classTrait.html#aeb890fe5326f5f413cf37c724575ab78", null ],

@@ -4,8 +4,9 @@ var classAM__FlagCell =
       [ "flagSnow", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dbab94196511ff90672f8552393cef3c98a", null ],
       [ "flagFloat", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba70f369f3aac74e990489ea32d9459a91", null ],
       [ "flagWallPillar", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba662313e4f587f24f73ee4cdb1d3bd411", null ],
-      [ "flagClear", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba4ebb923554d6457c05bec6639ff0a345", null ],
       [ "flagShadow", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dbad027924953850a7733953678c5746a2c", null ],
+      [ "flagOcclusion", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dbabc00196b3269c580cbb071bd9f2fad92", null ],
+      [ "flagClear", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba4ebb923554d6457c05bec6639ff0a345", null ],
       [ "flagWall", "classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba1141fef99668556db182f75155817018", null ]
     ] ],
     [ "HitTest", "classAM__FlagCell.html#a0028e34e6ce61dc1e3aada5b1d43af34", null ],

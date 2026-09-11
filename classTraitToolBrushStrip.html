@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.343.5 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.344 Nightly</span>
    </div>
   </td>
  </tr>
@@ -268,6 +268,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a47b9ffd55d19fac5985c99d803d7d416 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a230baa05c8fbca42690cde706f5b6f20 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a230baa05c8fbca42690cde706f5b6f20">OnSetCardGrid</a> (<a class="el" href="classButtonGrid.html">ButtonGrid</a> b)</td></tr>
 <tr class="separator:a230baa05c8fbca42690cde706f5b6f20 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6338560878fa24cb0fed86414a0b45 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aea6338560878fa24cb0fed86414a0b45">OnDie</a> ()</td></tr>
+<tr class="separator:aea6338560878fa24cb0fed86414a0b45 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da0751e99e26b4aeafb94c206e21e9e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a9da0751e99e26b4aeafb94c206e21e9e">OnStepped</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
 <tr class="separator:a9da0751e99e26b4aeafb94c206e21e9e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3286bc7f5350d3e65ab339708a6eacbe inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a3286bc7f5350d3e65ab339708a6eacbe">OnSteppedOut</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
@@ -771,7 +773,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   26</span>                SE.Play(<span class="stringliteral">&quot;build_area&quot;</span>);</div>
 <div class="line"><span class="lineno">   27</span>                p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#abd1a4e4f694fdc06fef3c423c9b2c8bc">PlayEffect</a>(<span class="stringliteral">&quot;buff&quot;</span>);</div>
 <div class="line"><span class="lineno">   28</span>                p.pos.cell.isObjDyed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   29</span>                p.pos.cell.objMat = (byte)p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a8cbb6d89c35970efddbbf75c3e976dde">sourceObj</a>.DefaultMaterial.id;</div>
+<div class="line"><span class="lineno">   29</span>                p.pos.cell.objMat = p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a8cbb6d89c35970efddbbf75c3e976dde">sourceObj</a>.DefaultMaterial.id;</div>
 <div class="line"><span class="lineno">   30</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   31</span>            });</div>
 <div class="line"><span class="lineno">   32</span>        }</div>
@@ -783,7 +785,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCard_html_a1ff2a15475867ee2ff0386cf72f5afbe"><div class="ttname"><a href="classCard.html#a1ff2a15475867ee2ff0386cf72f5afbe">Card.isMasked</a></div><div class="ttdeci">bool isMasked</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00592">Card.cs:593</a></div></div>
 <div class="ttc" id="aclassCard_html_aa8a80600682a9d93b22dff4cb22edf76"><div class="ttname"><a href="classCard.html#aa8a80600682a9d93b22dff4cb22edf76">Card.isDyed</a></div><div class="ttdeci">bool isDyed</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00460">Card.cs:461</a></div></div>
 <div class="ttc" id="aclassCard_html_ac1c9cc77266e08fe518fc6dc4ac0ea95"><div class="ttname"><a href="classCard.html#ac1c9cc77266e08fe518fc6dc4ac0ea95">Card.isHidden</a></div><div class="ttdeci">bool isHidden</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00532">Card.cs:533</a></div></div>
-<div class="ttc" id="aclassCell_html_abb76e91523046fa0ceaffc31e35b4cda"><div class="ttname"><a href="classCell.html#abb76e91523046fa0ceaffc31e35b4cda">Cell.GetObjName</a></div><div class="ttdeci">string GetObjName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01652">Cell.cs:1652</a></div></div>
+<div class="ttc" id="aclassCell_html_abb76e91523046fa0ceaffc31e35b4cda"><div class="ttname"><a href="classCell.html#abb76e91523046fa0ceaffc31e35b4cda">Cell.GetObjName</a></div><div class="ttdeci">string GetObjName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01677">Cell.cs:1677</a></div></div>
 <div class="ttc" id="aclassCell_html_ad4e5e1f0d4366ba3b10ec9a0e468bc52"><div class="ttname"><a href="classCell.html#ad4e5e1f0d4366ba3b10ec9a0e468bc52">Cell.isObjDyed</a></div><div class="ttdeci">bool isObjDyed</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00637">Cell.cs:638</a></div></div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>

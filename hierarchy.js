@@ -618,9 +618,14 @@ var hierarchy =
           [ "CustomMerchantStock", "classCustomMerchantStock.html", null ]
         ] ],
         [ "CustomSourceContent", "classCustomSourceContent.html", [
+          [ "CustomBlockContent", "classCustomBlockContent.html", null ],
+          [ "CustomCellEffectContent", "classCustomCellEffectContent.html", null ],
           [ "CustomCharaContent", "classCustomCharaContent.html", null ],
+          [ "CustomDecoContent", "classCustomDecoContent.html", null ],
           [ "CustomElementContent", "classCustomElementContent.html", null ],
+          [ "CustomFloorContent", "classCustomFloorContent.html", null ],
           [ "CustomMaterialContent", "classCustomMaterialContent.html", null ],
+          [ "CustomObjContent", "classCustomObjContent.html", null ],
           [ "CustomStatContent", "classCustomStatContent.html", null ],
           [ "CustomThingContent", "classCustomThingContent.html", null ],
           [ "CustomZoneContent", "classCustomZoneContent.html", null ]
@@ -1278,6 +1283,7 @@ var hierarchy =
             [ "Zone_Music", "classZone__Music.html", null ],
             [ "Zone_OldChurch", "classZone__OldChurch.html", null ],
             [ "Zone_OldGuild", "classZone__OldGuild.html", null ],
+            [ "Zone_OldKeep", "classZone__OldKeep.html", null ],
             [ "Zone_Seeker", "classZone__Seeker.html", null ],
             [ "Zone_SisterHouse", "classZone__SisterHouse.html", null ],
             [ "Zone_StartVillage", "classZone__StartVillage.html", null ],
@@ -1318,6 +1324,7 @@ var hierarchy =
               [ "Zone_Lesimas", "classZone__Lesimas.html", null ],
               [ "Zone_Lysanas", "classZone__Lysanas.html", null ],
               [ "Zone_Nymelle", "classZone__Nymelle.html", null ],
+              [ "Zone_OldKeepDungeon", "classZone__OldKeepDungeon.html", null ],
               [ "Zone_UnderseaTemple", "classZone__UnderseaTemple.html", null ],
               [ "Zone_VernisMine", "classZone__VernisMine.html", null ]
             ] ],
@@ -1388,6 +1395,7 @@ var hierarchy =
       [ "TeleportManager.Item", "classTeleportManager_1_1Item.html", null ],
       [ "ThingStack", "classThingStack.html", null ],
       [ "ThirstPersonInfo", "classThirstPersonInfo.html", null ],
+      [ "TileManager", "classTileManager.html", null ],
       [ "TileType", "classTileType.html", [
         [ "TileTypeBaseBlock", "classTileTypeBaseBlock.html", [
           [ "TileTypeBlock", "classTileTypeBlock.html", [
@@ -1454,7 +1462,9 @@ var hierarchy =
           ] ],
           [ "TileTypeRoof", "classTileTypeRoof.html", null ],
           [ "TileTypeSeed", "classTileTypeSeed.html", null ],
-          [ "TileTypeVine", "classTileTypeVine.html", null ],
+          [ "TileTypeVine", "classTileTypeVine.html", [
+            [ "TileTypeWallArch", "classTileTypeWallArch.html", null ]
+          ] ],
           [ "TileTypeWallHang", "classTileTypeWallHang.html", [
             [ "TileTypePaint", "classTileTypePaint.html", null ],
             [ "TileTypeWindow", "classTileTypeWindow.html", null ]
@@ -1989,7 +1999,9 @@ var hierarchy =
         ] ],
         [ "TraitRoadSign", "classTraitRoadSign.html", null ],
         [ "TraitSack", "classTraitSack.html", [
-          [ "TraitVase", "classTraitVase.html", null ]
+          [ "TraitVase", "classTraitVase.html", [
+            [ "TraitStrangeStatue", "classTraitStrangeStatue.html", null ]
+          ] ]
         ] ],
         [ "TraitSalesTag", "classTraitSalesTag.html", null ],
         [ "TraitScroll", "classTraitScroll.html", [
@@ -2255,6 +2267,7 @@ var hierarchy =
     ] ],
     [ "CoreRef.Icons.Enc", "classCoreRef_1_1Icons_1_1Enc.html", null ],
     [ "ENC", "classENC.html", null ],
+    [ "TileManager.Entry", "classTileManager_1_1Entry.html", null ],
     [ "ERROR", "classERROR.html", null ],
     [ "InvOwner.ErrorMessage", "classInvOwner_1_1ErrorMessage.html", null ],
     [ "EScriptState", null, [
@@ -2328,6 +2341,7 @@ var hierarchy =
       [ "UICollider", "classUICollider.html", null ]
     ] ],
     [ "CoreConfig.GraphicSetting", "classCoreConfig_1_1GraphicSetting.html", null ],
+    [ "TileManager.Grid", "classTileManager_1_1Grid.html", null ],
     [ "SkinColorProfileEx.GroupColors", "classSkinColorProfileEx_1_1GroupColors.html", null ],
     [ "HashSet", null, [
       [ "KnowledgeList< T >", "classKnowledgeList.html", null ],
@@ -3453,6 +3467,7 @@ var hierarchy =
     [ "THING", "classTHING.html", null ],
     [ "SourceMaterial.Tier", "classSourceMaterial_1_1Tier.html", null ],
     [ "SourceMaterial.TierList", "classSourceMaterial_1_1TierList.html", null ],
+    [ "TileManager.TileBounds", "structTileManager_1_1TileBounds.html", null ],
     [ "BiomeProfile.TileGroup", "classBiomeProfile_1_1TileGroup.html", null ],
     [ "EloMap.TileInfo", "classEloMap_1_1TileInfo.html", null ],
     [ "TileLookup< T >", "classTileLookup.html", null ],

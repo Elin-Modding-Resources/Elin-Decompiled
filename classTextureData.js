@@ -17,6 +17,7 @@ var classTextureData =
     [ "TryRefresh", "classTextureData.html#a6ed69e629f50b4e6c4410ad3ead3a652", null ],
     [ "date", "classTextureData.html#ae511b937674c62341c30ae9bba7f9b45", null ],
     [ "dictReplace", "classTextureData.html#a382068a67bab438e50859afddf1b9ef2", null ],
+    [ "extraRows", "classTextureData.html#ae8d1383d44d92842d2f693d21544aeef", null ],
     [ "forceRefresh", "classTextureData.html#a367330cc973a0d930ed564f6450a2bb1", null ],
     [ "id", "classTextureData.html#ad7c5c1b70872141d95ead516d0549c69", null ],
     [ "listPass", "classTextureData.html#ac81cba4b71e2de6d028417b4e8973ab6", null ],

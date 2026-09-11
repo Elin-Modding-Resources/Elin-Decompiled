@@ -16,7 +16,7 @@ var classRoom =
     [ "pointMaxX", "classRoom.html#a2304eeb6838237587640276d5c1bcd98", null ],
     [ "pointMinX", "classRoom.html#acf287d2fae4f83b30beeb4dc1e9cff26", null ],
     [ "roof", "classRoom.html#a5e2a70d8cde0902f314f1abfedde6427", null ],
-    [ "roofCount", "classRoom.html#ae12255396231c71ab17ebd67fadac5b1", null ],
+    [ "roofCount", "classRoom.html#a165f5da0bbc7b439873bd50ec8cd1f10", null ],
     [ "x", "classRoom.html#a2ded50938b7ffd5cee8db48550838a60", null ],
     [ "z", "classRoom.html#a35ec98a06c828163ca60ebb7532fae9a", null ],
     [ "HasRoof", "classRoom.html#a402be8b9cac5f17e3bd12ca9400c045d", null ]

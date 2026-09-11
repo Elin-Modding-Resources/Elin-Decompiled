@@ -17,6 +17,7 @@ var classCardActor =
     [ "RefreshSprite", "classCardActor.html#aa21a26b970022f688a9a32324f08e665", null ],
     [ "ReloadSprite", "classCardActor.html#af47610a7d50b4a14f29df93c4448139d", null ],
     [ "SetOwner", "classCardActor.html#a7287512e2a97d744f0c3661f283bee75", null ],
+    [ "SetVisible", "classCardActor.html#a0f1af6b6ac5f43f65fff15caacd14884", null ],
     [ "destLiquid", "classCardActor.html#ab34130e2400e28c420b87cc3f43d3b6a", null ],
     [ "mpb", "classCardActor.html#acb22fa7b16efbb2ed2ce087f480eaa4d", null ],
     [ "mpb2", "classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090", null ],
@@ -30,6 +31,7 @@ var classCardActor =
     [ "tempV", "classCardActor.html#a87ffecdbeaa1f18a11f221ef4f891f09", null ],
     [ "tempV2", "classCardActor.html#a02f722a87ded43c97c1d6f526a3970a2", null ],
     [ "type", "classCardActor.html#a6ec05445061598e0130b0614ff66b55b", null ],
+    [ "visible", "classCardActor.html#ac42aa64c2e0a4b49c52738b51ef14ad8", null ],
     [ "currentDir", "classCardActor.html#a4051d5751cbcccd1b303d4f365b62032", null ],
     [ "isPCC", "classCardActor.html#a1458612f3f3824faafd3878a5bf4d15a", null ]
 ];

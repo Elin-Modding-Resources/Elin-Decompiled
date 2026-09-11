@@ -35,7 +35,7 @@ var classLot =
     [ "pointMinX", "classLot.html#ad7dcedff26ab41d0e70e3ecead6fbaf7", null ],
     [ "realHeight", "classLot.html#ab985a79cfb272b878605fd262cd2e66c", null ],
     [ "reverse", "classLot.html#af212030a6cfeda8380c57d6276059fe8", null ],
-    [ "roofCount", "classLot.html#a0ded601b945f299f9d2b4a2ae76abb5e", null ],
+    [ "roofCount", "classLot.html#ad98d735b8b516d1fdf9577951a0dc2ce", null ],
     [ "snow", "classLot.html#a92f2990694ae2ce155f66caed901057b", null ],
     [ "sync", "classLot.html#ac0071aeb1e42436f11e736f4dd10f90e", null ],
     [ "Void", "classLot.html#a80f540ac0d4095da0c7e32f5253ba993", null ],
