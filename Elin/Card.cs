@@ -5698,11 +5698,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		foreach (Thing thing7 in things)
+		if (!(trait is TraitPowerStatue))
 		{
-			if (thing7.GetInt(116) != 0)
+			foreach (Thing thing7 in things)
 			{
-				list.Add(thing7);
+				if (thing7.GetInt(116) != 0)
+				{
+					list.Add(thing7);
+				}
 			}
 		}
 		Point nearestPoint = GetRootCard().pos;

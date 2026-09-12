@@ -38,7 +38,7 @@ public class TraitFigure : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
-		if (p.input != ActInput.AllAction || source.tiles.Length <= 1)
+		if (p.input != ActInput.AllAction || source == null || source.tiles.Length <= 1)
 		{
 			return;
 		}

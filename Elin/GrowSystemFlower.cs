@@ -28,9 +28,4 @@ public class GrowSystemFlower : GrowSystemPlant
 			GrowSystem.cell.objDir = EClass.rnd(4);
 		}
 	}
-
-	public override int GetStageTile()
-	{
-		return source._tiles[GrowSystem.cell.objDir % source._tiles.Length];
-	}
 }

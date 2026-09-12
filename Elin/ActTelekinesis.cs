@@ -94,7 +94,7 @@ public class ActTelekinesis : Spell
 		long num = GetPower(Act.CC);
 		if (num * num <= int.MaxValue)
 		{
-			return (int)(num * num);
+			return (int)Mathf.Max(num * num, 1f);
 		}
 		return int.MaxValue;
 	}
