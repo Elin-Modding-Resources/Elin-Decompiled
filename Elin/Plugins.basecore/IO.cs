@@ -437,7 +437,7 @@ public class IO
 		if (typeFromHandle == typeof(Sprite))
 		{
 			SpriteLoadOption spriteLoadOption = option as SpriteLoadOption;
-			Texture2D texture2D = LoadPNG(_path);
+			Texture2D texture2D = ((spriteLoadOption == null || !spriteLoadOption.mipmap.HasValue) ? LoadPNG(_path) : ImageLoader.Load(_path, FilterMode.Point, spriteLoadOption.mipmap));
 			if (!texture2D)
 			{
 				return null;

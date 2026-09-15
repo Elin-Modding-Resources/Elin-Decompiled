@@ -55,6 +55,10 @@ public class ModItem<T> where T : Object
 			}
 			return cache;
 		}
+		if (option == null)
+		{
+			option = list.loadOption;
+		}
 		if (resourcePath != null)
 		{
 			return list.cache.Get(resourcePath, ResourceLoadType.Resource, option);

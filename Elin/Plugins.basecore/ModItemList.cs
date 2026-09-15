@@ -12,9 +12,17 @@ public class ModItemList<T> where T : Object
 
 	public int catLength;
 
+	public object loadOption;
+
 	public ModItemList(int _catLength = 0)
 	{
 		catLength = _catLength;
+	}
+
+	public ModItemList(int _catLength, object _loadOption)
+		: this(_catLength)
+	{
+		loadOption = _loadOption;
 	}
 
 	public string GetRandomID(string category = null)

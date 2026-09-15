@@ -5,6 +5,11 @@ public static class ImageLoader
 {
 	public static Texture2D LoadPNG(string _path, FilterMode filter = FilterMode.Point)
 	{
+		return Load(_path, filter, null);
+	}
+
+	public static Texture2D Load(string _path, FilterMode filter, Vector2Int? mipmap)
+	{
 		if (!File.Exists(_path))
 		{
 			return null;
@@ -35,10 +40,11 @@ public static class ImageLoader
 			}
 		}
 		TextureImportSetting.Data data = (TextureImportSetting.Instance ? TextureImportSetting.Instance.data : IO.importSetting);
-		Texture2D texture2D = new Texture2D(width, height, data.format, data.mipmap, data.linear);
+		bool flag = mipmap.HasValue && (width > mipmap.Value.x || height > mipmap.Value.y);
+		Texture2D texture2D = new Texture2D(width, height, data.format, data.mipmap || flag, data.linear);
 		texture2D.LoadImage(array);
 		texture2D.wrapMode = data.wrapMode;
-		texture2D.filterMode = filter;
+		texture2D.filterMode = (flag ? FilterMode.Trilinear : filter);
 		texture2D.anisoLevel = data.anisoLevel;
 		texture2D.mipMapBias = data.mipmapBias;
 		return texture2D;
