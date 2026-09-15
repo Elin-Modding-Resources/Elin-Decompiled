@@ -281,7 +281,19 @@ public class CardRenderer : RenderObject
 					p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
 					p.matColor = matColor;
 					pref = row.pref;
-					p.z += pref.z * 2f;
+					p.x += pref.x * (float)((owner.dir % 2 == 0) ? 1 : (-1));
+					p.z += pref.z;
+					switch (row.id)
+					{
+					case "bike_kane":
+					case "bike_kane_custom":
+					case "bike_leet":
+						p.z -= 0.1f;
+						break;
+					default:
+						p.y += pref.y;
+						break;
+					}
 					if (owner.noShadow || !owner.IsInstalled)
 					{
 						drawShadow = false;

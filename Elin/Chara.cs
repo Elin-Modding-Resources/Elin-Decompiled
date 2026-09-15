@@ -1690,6 +1690,12 @@ public class Chara : Card, IPathfindWalker
 		case "robot":
 			SetFeat(1248, 1 + EClass.rnd(5));
 			break;
+		case "shojo":
+			if (EClass.rnd(EClass.debug.enable ? 2 : 20) == 0)
+			{
+				SetFeat(1432);
+			}
+			break;
 		}
 		InitStats();
 		body.SetOwner(this);
