@@ -1,5 +1,8 @@
 var NAVTREEINDEX72 =
 {
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a12c0ff3873ea822a796b64379d6f536a":[1,0,617,6,1,4],
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a18f41d1a9c5f7b1d0e9f50bf1c66e648":[1,0,617,6,1,0],
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a1af2f246ded9115148c004daef45c1a9":[1,0,617,6,1,20],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a201e74cfd79a64369f73a3e8fbb3bb3f":[1,0,617,6,1,12],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a259017b47d9959d900749ecda0c63550":[1,0,617,6,1,11],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a272ecfd6484402c0aae069f586b4cb1b":[1,0,617,6,1,21],
@@ -246,8 +249,5 @@ var NAVTREEINDEX72 =
 "classGlobalGoalVisitAndStay.html#a6d4e93730627b7612f5788395ca23f10":[1,0,630,5],
 "classGlobalGoalVisitAndStay.html#a94a7140860225158c37d3677bc064115":[1,0,630,0],
 "classGlobalGoalVisitTown.html":[1,0,631],
-"classGlobalGoalVisitTown.html#aae4b5493cc8fb73c6767d901b6ae916b":[1,0,631,0],
-"classGoal.html":[1,0,632],
-"classGoal.html#a8dc8fa89a7623dcc1355574b41f7d4fa":[1,0,632,2],
-"classGoal.html#ac9b79ca4cf9a4be75f310c0b1aca7ac1":[1,0,632,0]
+"classGlobalGoalVisitTown.html#aae4b5493cc8fb73c6767d901b6ae916b":[1,0,631,0]
 };

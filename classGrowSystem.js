@@ -7,6 +7,7 @@ var classGrowSystem =
     [ "CanGrow", "classGrowSystem.html#ae899801287dff29d39a4d5360e85d501", null ],
     [ "CanHarvest", "classGrowSystem.html#a33766eed61c3655cdeb6448abde1ce2f", null ],
     [ "CanReapSeed", "classGrowSystem.html#a70a66c10a8b0f8a2067d6a99935a70aa", null ],
+    [ "CanRotate", "classGrowSystem.html#a1be4dcf9e4f58b8c493a5baa6baec945", null ],
     [ "CreateStage", "classGrowSystem.html#a6cf53e930c9922d3ffb79d539a9733a7", null ],
     [ "EqualizePlants", "classGrowSystem.html#a72ce78af1590ec09df53bbb5f6a92a3a", null ],
     [ "GetHp", "classGrowSystem.html#ae3a0fe38f80327335825c56511d60212", null ],

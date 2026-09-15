@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.344.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.345 Nightly</span>
    </div>
   </td>
  </tr>
@@ -223,20 +223,20 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModItem_8cs_source.html#l00065">65</a> of file <a class="el" href="ModItem_8cs_source.html">ModItem.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classModItem.html#addcd3c11090f5e64d6c1f005e53828e6">cache</a>)</div>
-<div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                Object.DestroyImmediate(<a class="code hl_variable" href="classModItem.html#addcd3c11090f5e64d6c1f005e53828e6">cache</a>);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.cache.Clear();</div>
+<p class="definition">Definition at line <a class="el" href="ModItem_8cs_source.html#l00069">69</a> of file <a class="el" href="ModItem_8cs_source.html">ModItem.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classModItem.html#addcd3c11090f5e64d6c1f005e53828e6">cache</a>)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                Object.DestroyImmediate(<a class="code hl_variable" href="classModItem.html#addcd3c11090f5e64d6c1f005e53828e6">cache</a>);</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
 <div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.cache.Clear();</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
 <div class="ttc" id="aclassModItem_html_addcd3c11090f5e64d6c1f005e53828e6"><div class="ttname"><a href="classModItem.html#addcd3c11090f5e64d6c1f005e53828e6">ModItem.cache</a></div><div class="ttdeci">T cache</div><div class="ttdef"><b>Definition:</b> <a href="ModItem_8cs_source.html#l00020">ModItem.cs:20</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ModItem_8cs_source.html#l00020">ModItem&lt; T &gt;.cache</a>, and <a class="el" href="ModItem_8cs_source.html#l00006">ModItem&lt; T &gt;.list</a>.</p>
@@ -281,12 +281,16 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>            }</div>
 <div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classModItem.html#addcd3c11090f5e64d6c1f005e53828e6">cache</a>;</div>
 <div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classModItem.html#ac3821cecd071a4519acfd03a84a6c847">resourcePath</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (option == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.cache.Get(<a class="code hl_variable" href="classModItem.html#ac3821cecd071a4519acfd03a84a6c847">resourcePath</a>, <a class="code hl_enumeration" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5">ResourceLoadType</a>.Resource, option);</div>
+<div class="line"><span class="lineno">   60</span>            option = <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.loadOption;</div>
 <div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.cache.Get(<a class="code hl_variable" href="classModItem.html#a658c23092ffbbe885ed4f0d889de7941">fileInfo</a>.FullName, <a class="code hl_enumeration" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5">ResourceLoadType</a>.Streaming, option);</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classModItem.html#ac3821cecd071a4519acfd03a84a6c847">resourcePath</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.cache.Get(<a class="code hl_variable" href="classModItem.html#ac3821cecd071a4519acfd03a84a6c847">resourcePath</a>, <a class="code hl_enumeration" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5">ResourceLoadType</a>.Resource, option);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classModItem.html#aa603134f7d3f3e8a028a5bf776885ca7">list</a>.cache.Get(<a class="code hl_variable" href="classModItem.html#a658c23092ffbbe885ed4f0d889de7941">fileInfo</a>.FullName, <a class="code hl_enumeration" href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5">ResourceLoadType</a>.Streaming, option);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
 <div class="ttc" id="aResourceLoadType_8cs_html_abcc2899f1dfbd8787ca4c2cda61ce5d5"><div class="ttname"><a href="ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5">ResourceLoadType</a></div><div class="ttdeci">ResourceLoadType</div><div class="ttdef"><b>Definition:</b> <a href="ResourceLoadType_8cs_source.html#l00001">ResourceLoadType.cs:2</a></div></div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00009">IO.cs:10</a></div></div>
 <div class="ttc" id="aclassModItem_html_a658c23092ffbbe885ed4f0d889de7941"><div class="ttname"><a href="classModItem.html#a658c23092ffbbe885ed4f0d889de7941">ModItem.fileInfo</a></div><div class="ttdeci">FileInfo fileInfo</div><div class="ttdef"><b>Definition:</b> <a href="ModItem_8cs_source.html#l00018">ModItem.cs:18</a></div></div>
@@ -374,7 +378,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModItem_8cs_source.html#l00020">20</a> of file <a class="el" href="ModItem_8cs_source.html">ModItem.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModItem_8cs_source.html#l00065">ModItem&lt; T &gt;.ClearCache()</a>, and <a class="el" href="ModItem_8cs_source.html#l00044">ModItem&lt; T &gt;.GetObject()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModItem_8cs_source.html#l00069">ModItem&lt; T &gt;.ClearCache()</a>, and <a class="el" href="ModItem_8cs_source.html#l00044">ModItem&lt; T &gt;.GetObject()</a>.</p>
 
 </div>
 </div>
@@ -392,7 +396,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModItem_8cs_source.html#l00008">8</a> of file <a class="el" href="ModItem_8cs_source.html">ModItem.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModItemList_8cs_source.html#l00020">ModItemList&lt; T &gt;.GetRandomID()</a>, and <a class="el" href="ModItem_8cs_source.html#l00029">ModItem&lt; T &gt;.Set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModItemList_8cs_source.html#l00028">ModItemList&lt; T &gt;.GetRandomID()</a>, and <a class="el" href="ModItem_8cs_source.html#l00029">ModItem&lt; T &gt;.Set()</a>.</p>
 
 </div>
 </div>
@@ -428,7 +432,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModItem_8cs_source.html#l00010">10</a> of file <a class="el" href="ModItem_8cs_source.html">ModItem.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModItemList_8cs_source.html#l00020">ModItemList&lt; T &gt;.GetRandomID()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">LayerEditPortrait.RefreshList()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00166">LayerEditPCC.SetPortraitSlider()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModItemList_8cs_source.html#l00028">ModItemList&lt; T &gt;.GetRandomID()</a>, <a class="el" href="LayerEditPortrait_8cs_source.html#l00116">LayerEditPortrait.RefreshList()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00166">LayerEditPCC.SetPortraitSlider()</a>.</p>
 
 </div>
 </div>
@@ -446,7 +450,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModItem_8cs_source.html#l00006">6</a> of file <a class="el" href="ModItem_8cs_source.html">ModItem.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModItem_8cs_source.html#l00065">ModItem&lt; T &gt;.ClearCache()</a>, <a class="el" href="ModItem_8cs_source.html#l00044">ModItem&lt; T &gt;.GetObject()</a>, <a class="el" href="ModItem_8cs_source.html#l00022">ModItem&lt; T &gt;.ModItem()</a>, and <a class="el" href="ModItem_8cs_source.html#l00029">ModItem&lt; T &gt;.Set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModItem_8cs_source.html#l00069">ModItem&lt; T &gt;.ClearCache()</a>, <a class="el" href="ModItem_8cs_source.html#l00044">ModItem&lt; T &gt;.GetObject()</a>, <a class="el" href="ModItem_8cs_source.html#l00022">ModItem&lt; T &gt;.ModItem()</a>, and <a class="el" href="ModItem_8cs_source.html#l00029">ModItem&lt; T &gt;.Set()</a>.</p>
 
 </div>
 </div>

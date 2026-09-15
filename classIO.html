@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.344.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.345 Nightly</span>
    </div>
   </td>
  </tr>
@@ -1217,12 +1217,12 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  437</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(Sprite))</div>
 <div class="line"><span class="lineno">  438</span>        {</div>
 <div class="line"><span class="lineno">  439</span>            <a class="code hl_class" href="classSpriteLoadOption.html">SpriteLoadOption</a> spriteLoadOption = option as <a class="code hl_class" href="classSpriteLoadOption.html">SpriteLoadOption</a>;</div>
-<div class="line"><span class="lineno">  440</span>            Texture2D texture2D = <a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(_path);</div>
+<div class="line"><span class="lineno">  440</span>            Texture2D texture2D = ((spriteLoadOption == <span class="keyword">null</span> || !spriteLoadOption.<a class="code hl_variable" href="classSpriteLoadOption.html#a26008c784353dc2f9b258f76b9b7802b">mipmap</a>.HasValue) ? <a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(_path) : <a class="code hl_class" href="classImageLoader.html">ImageLoader</a>.<a class="code hl_function" href="classImageLoader.html#a03ed6c802ec6782fdcb7d66e87191007">Load</a>(_path, FilterMode.Point, spriteLoadOption.<a class="code hl_variable" href="classSpriteLoadOption.html#a26008c784353dc2f9b258f76b9b7802b">mipmap</a>));</div>
 <div class="line"><span class="lineno">  441</span>            <span class="keywordflow">if</span> (!texture2D)</div>
 <div class="line"><span class="lineno">  442</span>            {</div>
 <div class="line"><span class="lineno">  443</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  444</span>            }</div>
-<div class="line"><span class="lineno">  445</span>            <span class="keywordflow">return</span> Sprite.Create(texture2D, <span class="keyword">new</span> Rect(0f, 0f, texture2D.width, texture2D.height), spriteLoadOption?.pivot ?? <span class="keyword">new</span> Vector2(0.5f, 0f), 100f) as T;</div>
+<div class="line"><span class="lineno">  445</span>            <span class="keywordflow">return</span> Sprite.Create(texture2D, <span class="keyword">new</span> Rect(0f, 0f, texture2D.width, texture2D.height), spriteLoadOption?.<a class="code hl_variable" href="classSpriteLoadOption.html#a18a90f2fd8188f92c52e6d33c4b3cb54">pivot</a> ?? <span class="keyword">new</span> Vector2(0.5f, 0f), 100f) as T;</div>
 <div class="line"><span class="lineno">  446</span>        }</div>
 <div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(Texture2D))</div>
 <div class="line"><span class="lineno">  448</span>        {</div>
@@ -1245,10 +1245,14 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  465</span>    }</div>
 <div class="ttc" id="aclassExcelData_html"><div class="ttname"><a href="classExcelData.html">ExcelData</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00010">ExcelData.cs:11</a></div></div>
 <div class="ttc" id="aclassIO_html_ae5e5735da261f46af4ae0e268b5bf1cf"><div class="ttname"><a href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">IO.LoadPNG</a></div><div class="ttdeci">static Texture2D LoadPNG(string _path, FilterMode filter=FilterMode.Point)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00473">IO.cs:473</a></div></div>
+<div class="ttc" id="aclassImageLoader_html"><div class="ttname"><a href="classImageLoader.html">ImageLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="ImageLoader_8cs_source.html#l00004">ImageLoader.cs:5</a></div></div>
+<div class="ttc" id="aclassImageLoader_html_a03ed6c802ec6782fdcb7d66e87191007"><div class="ttname"><a href="classImageLoader.html#a03ed6c802ec6782fdcb7d66e87191007">ImageLoader.Load</a></div><div class="ttdeci">static Texture2D Load(string _path, FilterMode filter, Vector2Int? mipmap)</div><div class="ttdef"><b>Definition:</b> <a href="ImageLoader_8cs_source.html#l00011">ImageLoader.cs:11</a></div></div>
 <div class="ttc" id="aclassSpriteLoadOption_html"><div class="ttname"><a href="classSpriteLoadOption.html">SpriteLoadOption</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteLoadOption_8cs_source.html#l00003">SpriteLoadOption.cs:4</a></div></div>
+<div class="ttc" id="aclassSpriteLoadOption_html_a18a90f2fd8188f92c52e6d33c4b3cb54"><div class="ttname"><a href="classSpriteLoadOption.html#a18a90f2fd8188f92c52e6d33c4b3cb54">SpriteLoadOption.pivot</a></div><div class="ttdeci">Vector2 pivot</div><div class="ttdef"><b>Definition:</b> <a href="SpriteLoadOption_8cs_source.html#l00005">SpriteLoadOption.cs:5</a></div></div>
+<div class="ttc" id="aclassSpriteLoadOption_html_a26008c784353dc2f9b258f76b9b7802b"><div class="ttname"><a href="classSpriteLoadOption.html#a26008c784353dc2f9b258f76b9b7802b">SpriteLoadOption.mipmap</a></div><div class="ttdeci">Vector2Int? mipmap</div><div class="ttdef"><b>Definition:</b> <a href="SpriteLoadOption_8cs_source.html#l00009">SpriteLoadOption.cs:9</a></div></div>
 <div class="ttc" id="aclassTextData_html"><div class="ttname"><a href="classTextData.html">TextData</a></div><div class="ttdef"><b>Definition:</b> <a href="TextData_8cs_source.html#l00003">TextData.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00473">LoadPNG()</a>, and <a class="el" href="SpriteLoadOption_8cs_source.html#l00005">SpriteLoadOption.pivot</a>.</p>
+<p class="reference">References <a class="el" href="ImageLoader_8cs_source.html#l00011">ImageLoader.Load()</a>, <a class="el" href="IO_8cs_source.html#l00473">LoadPNG()</a>, <a class="el" href="SpriteLoadOption_8cs_source.html#l00009">SpriteLoadOption.mipmap</a>, and <a class="el" href="SpriteLoadOption_8cs_source.html#l00005">SpriteLoadOption.pivot</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1294,6 @@ Properties</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  474</span>    {</div>
 <div class="line"><span class="lineno">  475</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classImageLoader.html">ImageLoader</a>.<a class="code hl_function" href="classImageLoader.html#a805c55d4e013e9338bcba645eff7318c">LoadPNG</a>(_path, filter);</div>
 <div class="line"><span class="lineno">  476</span>    }</div>
-<div class="ttc" id="aclassImageLoader_html"><div class="ttname"><a href="classImageLoader.html">ImageLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="ImageLoader_8cs_source.html#l00004">ImageLoader.cs:5</a></div></div>
 <div class="ttc" id="aclassImageLoader_html_a805c55d4e013e9338bcba645eff7318c"><div class="ttname"><a href="classImageLoader.html#a805c55d4e013e9338bcba645eff7318c">ImageLoader.LoadPNG</a></div><div class="ttdeci">static Texture2D LoadPNG(string _path, FilterMode filter=FilterMode.Point)</div><div class="ttdef"><b>Definition:</b> <a href="ImageLoader_8cs_source.html#l00006">ImageLoader.cs:6</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ImageLoader_8cs_source.html#l00006">ImageLoader.LoadPNG()</a>.</p>

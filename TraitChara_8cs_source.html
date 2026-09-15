@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.344.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.345 Nightly</span>
    </div>
   </td>
  </tr>
@@ -115,9 +115,9 @@ $(document).ready(function(){initNavTree('TraitChara_8cs_source.html',''); initR
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">get</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classCard.html#a17ef4146fe362eaf05ab5fdf4050800a">isImported</a> &amp;&amp; !<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_variable" href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">isDestroyed</a>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classCard.html#a17ef4146fe362eaf05ab5fdf4050800a">isImported</a> &amp;&amp; !<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_variable" href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">isDestroyed</a> &amp;&amp; !<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classChara.html#a429f64eaed4074c6971465fe582d0252">IsGlobal</a>)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">return</span> !<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classChara.html#a429f64eaed4074c6971465fe582d0252">IsGlobal</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">return</span> !<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classCard.html#a18df8b0c12925deda26841c2e7a41654">isSummon</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
@@ -283,6 +283,7 @@ $(document).ready(function(){initNavTree('TraitChara_8cs_source.html',''); initR
 <div class="ttc" id="aclassCard_html_a05dffd4f600c4a61fcabec797f77b221"><div class="ttname"><a href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">Card.isDestroyed</a></div><div class="ttdeci">bool isDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00078">Card.cs:78</a></div></div>
 <div class="ttc" id="aclassCard_html_a0a47546857be6de51c6e7150729bcd93"><div class="ttname"><a href="classCard.html#a0a47546857be6de51c6e7150729bcd93">Card.GetBestAttribute</a></div><div class="ttdeci">int GetBestAttribute()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02763">Card.cs:2763</a></div></div>
 <div class="ttc" id="aclassCard_html_a17ef4146fe362eaf05ab5fdf4050800a"><div class="ttname"><a href="classCard.html#a17ef4146fe362eaf05ab5fdf4050800a">Card.isImported</a></div><div class="ttdeci">bool isImported</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00616">Card.cs:617</a></div></div>
+<div class="ttc" id="aclassCard_html_a18df8b0c12925deda26841c2e7a41654"><div class="ttname"><a href="classCard.html#a18df8b0c12925deda26841c2e7a41654">Card.isSummon</a></div><div class="ttdeci">bool isSummon</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00712">Card.cs:713</a></div></div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02121">Card.cs:2122</a></div></div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00036">Card.cs:36</a></div></div>
 <div class="ttc" id="aclassCard_html_a273e02936a4fd9011e84fdef0bd1189d"><div class="ttname"><a href="classCard.html#a273e02936a4fd9011e84fdef0bd1189d">Card.IsUnique</a></div><div class="ttdeci">bool IsUnique</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02143">Card.cs:2143</a></div></div>

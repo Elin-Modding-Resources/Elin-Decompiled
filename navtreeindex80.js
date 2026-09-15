@@ -1,5 +1,11 @@
 var NAVTREEINDEX80 =
 {
+"classItemQuestTracker.html#a0966814ad8bd409bea458d03283998fc":[1,0,825,3],
+"classItemQuestTracker.html#a0c61c50f219c065f62681db6484a1bd0":[1,0,825,6],
+"classItemQuestTracker.html#a34556d413f279293853843946a18bd62":[1,0,825,2],
+"classItemQuestTracker.html#a6af1720a0e1396f587a1ce929841340f":[1,0,825,5],
+"classItemQuestTracker.html#a75f902b66b3f4650e8564ba19cb948d1":[1,0,825,7],
+"classItemQuestTracker.html#a8318a0648528b5130c7967865502ab53":[1,0,825,8],
 "classItemQuestTracker.html#a97a30a8323cf4a8ec6f89d66d12da2a4":[1,0,825,1],
 "classItemQuestTracker.html#ae3ccc2c9ef004647b3e9f96a0ffd900f":[1,0,825,9],
 "classItemQuestTracker.html#af0b8b2d68ed9489c792912ac4ae6e7c9":[1,0,825,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX80 =
 "classLayer.html#a3f7e1392fd6182b3950097e47a52ac7c":[1,0,849,56],
 "classLayer.html#a41ac5ecd6a4fc1da66ac959d7dfcbc85":[1,0,849,67],
 "classLayer.html#a479a903429591376dab7eb30cef26813":[1,0,849,47],
-"classLayer.html#a4e1cd829fffcba0635b5c219f23f2ea9":[1,0,849,71],
-"classLayer.html#a52a4916d5de1bccdbefad11e8d0ce90e":[1,0,849,16],
-"classLayer.html#a59cf3e727cb2775da2fdc0557b7ccada":[1,0,849,62],
-"classLayer.html#a5deca0cfd5f5c7646efd631ff57d169f":[1,0,849,29],
-"classLayer.html#a5e89378180364141410ae7369c44ba50":[1,0,849,19],
-"classLayer.html#a5f27cf909f9b4b3a742864af2c489aff":[1,0,849,53],
-"classLayer.html#a72dae296f306bb61ceb20c2cec1d449d":[1,0,849,21]
+"classLayer.html#a4e1cd829fffcba0635b5c219f23f2ea9":[1,0,849,71]
 };

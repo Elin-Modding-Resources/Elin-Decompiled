@@ -1,5 +1,8 @@
 var NAVTREEINDEX70 =
 {
+"classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafa858ba4765e53c712ef672a9570474b1d":[1,0,584,0,2],
+"classFactionRelation.html#a56d4934ec42f21682c66a50d43e84cafab6f4a2ec6356bbd56d49f2096bf9d3d3":[1,0,584,0,1],
+"classFactionRelation.html#a584972b646d98fbf03d75d3dbea570da":[1,0,584,13],
 "classFactionRelation.html#a73fc849d7918d90c1461a0ebe34212c9":[1,0,584,2],
 "classFactionRelation.html#a827af529ec3e0b535af676b52195ef52":[1,0,584,9],
 "classFactionRelation.html#a98730c36ad216a1eebc6c2b7e9215153":[1,0,584,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX70 =
 "classGameDate.html#ab23ab5ea00c8f8fe4fd353676208a07a":[1,0,607,7],
 "classGameDate.html#ac109306b1d3bf9612daf3a031e1290a7":[1,0,607,11],
 "classGameDate.html#ac61c9d6a6f627c7c4aa0be76bedc8fe7":[1,0,607,4],
-"classGameDate.html#ac8efda516018be8562d4dc820780b6e9":[1,0,607,12],
-"classGameDate.html#ad4f17b8c730db29a2383e27234268ba5":[1,0,607,3],
-"classGameDate.html#ae445863035cd10ca7d2061955859ae48":[1,0,607,1],
-"classGameDate.html#afa808c482a5ed0ccd1b8ab6bf2d6fb7f":[1,0,607,5]
+"classGameDate.html#ac8efda516018be8562d4dc820780b6e9":[1,0,607,12]
 };

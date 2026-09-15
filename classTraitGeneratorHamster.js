@@ -1,6 +1,7 @@
 var classTraitGeneratorHamster =
 [
     [ "CanUse", "classTraitGeneratorHamster.html#ae5a40c2d2302a023256c16881d47be04", null ],
+    [ "OnDie", "classTraitGeneratorHamster.html#ad6efb4d8d452ea4022b17d5e09298e6b", null ],
     [ "OnUse", "classTraitGeneratorHamster.html#a19e930bee3bf79c212c80631efee8e8b", null ],
     [ "IdSoundToggleOff", "classTraitGeneratorHamster.html#a39fd9f1fb117279f59f755d133d1c553", null ],
     [ "IdSoundToggleOn", "classTraitGeneratorHamster.html#a2bf9bb3367e9f51b6fbd73f550b9a099", null ],

@@ -1,6 +1,6 @@
 var classCoreConfig_1_1Test =
 [
-    [ "aaPortrait", "classCoreConfig_1_1Test.html#a1e792fec9fcd3632dcf856bd2ee7fe12", null ],
+    [ "aaPortraitFilter", "classCoreConfig_1_1Test.html#aca66a3dbc53daa80fdaea4b35f1c14d6", null ],
     [ "allowBlockOnItem", "classCoreConfig_1_1Test.html#a51b883e315faf3c71d17a985756ffff0", null ],
     [ "allRace", "classCoreConfig_1_1Test.html#adf476a734e94a361789a3dac60893216", null ],
     [ "alwaysFixCamera", "classCoreConfig_1_1Test.html#a7e1964bdadc08f5c341a137a60b7ac2b", null ],
@@ -30,5 +30,6 @@ var classCoreConfig_1_1Test =
     [ "showTrait", "classCoreConfig_1_1Test.html#a3bb6461e52c9bfbb569bb36b5dd5aa2d", null ],
     [ "stackNumbers", "classCoreConfig_1_1Test.html#abe77798eeca82895dfbac0843c09f930", null ],
     [ "toolNoPick", "classCoreConfig_1_1Test.html#a73bf949639e5c41206c2c40f96c37a92", null ],
-    [ "unsealWidgets", "classCoreConfig_1_1Test.html#a3ee62d506f19bc3c33ee116e1a8e840a", null ]
+    [ "unsealWidgets", "classCoreConfig_1_1Test.html#a3ee62d506f19bc3c33ee116e1a8e840a", null ],
+    [ "aaPortrait", "classCoreConfig_1_1Test.html#a1e792fec9fcd3632dcf856bd2ee7fe12", null ]
 ];

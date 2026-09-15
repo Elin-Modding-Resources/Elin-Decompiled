@@ -24,13 +24,14 @@ var classPortrait =
     [ "defaultScale", "classPortrait.html#a02c7bf48f0c28647a742d4a4126bc106", null ],
     [ "dictList", "classPortrait.html#a5623a5a1ed74ec3961c2b238a13e513a", null ],
     [ "enableFull", "classPortrait.html#af6b4340b5c9d59557ecb534c8c26d0e5", null ],
-    [ "filter", "classPortrait.html#a6e693e68fa642404dffbde2f4ed117af", null ],
     [ "fixSpritePos", "classPortrait.html#a4303f71a047c4523e52967d1f056e493", null ],
     [ "hideIfNoPortrait", "classPortrait.html#a6e10599b20d98eafe256d9b43102bf14", null ],
     [ "imageChara", "classPortrait.html#a966b7593d2d3aa7c2db2be19048ddb5b", null ],
     [ "imageFaith", "classPortrait.html#a57840e843523c61fa3087f0f2624e2d2", null ],
     [ "imageFrame", "classPortrait.html#a093d6512a5577835e36642926d128855", null ],
     [ "imageFull", "classPortrait.html#aefb1064e6f6b06b3c09b9d1c3b0d3b47", null ],
+    [ "loadOption", "classPortrait.html#a0b68a78fc8473b8069b163d4d92fa21f", null ],
+    [ "loadOptionFull", "classPortrait.html#a9c007e82ce1ab2b00b0acb864f8e6115", null ],
     [ "modFull", "classPortrait.html#aa853dca9a42c976efd791778749f0727", null ],
     [ "modOverlays", "classPortrait.html#a70d7127c05c1cb0feded1729703d29c9", null ],
     [ "modPortraitBGFs", "classPortrait.html#a0de72798be328261c73607c51a1ac540", null ],
@@ -39,5 +40,9 @@ var classPortrait =
     [ "overlay", "classPortrait.html#af76ca65889dbcee633baa2e5756c0d53", null ],
     [ "portrait", "classPortrait.html#a6357c084c9ade6420ea5f572af2d1fa8", null ],
     [ "showPortrait", "classPortrait.html#a6553d9b1a0cc36d0f889676e553a95ae", null ],
-    [ "spriteNoPortrait", "classPortrait.html#a3b80692a0194947b55f0054f6287d095", null ]
+    [ "spriteNoPortrait", "classPortrait.html#a3b80692a0194947b55f0054f6287d095", null ],
+    [ "standardFullSize", "classPortrait.html#a201c22d2669054dbfb6a9e0b19c9c47d", null ],
+    [ "standardSize", "classPortrait.html#a2e90e46b45bf88441886f96015f8bd5f", null ],
+    [ "UsePortraitAA", "classPortrait.html#acce928fc468d56b6eb3745a9d5114926", null ],
+    [ "UsePortraitFilter", "classPortrait.html#a6fe539525132afe2a33b4aff52be69c2", null ]
 ];

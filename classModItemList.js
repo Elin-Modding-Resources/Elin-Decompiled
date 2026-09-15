@@ -1,6 +1,7 @@
 var classModItemList =
 [
     [ "ModItemList", "classModItemList.html#a4a8767d5c933f628377f75ee8194ab25", null ],
+    [ "ModItemList", "classModItemList.html#a73d513e691204f042335b06090ca2a3f", null ],
     [ "Add", "classModItemList.html#a70e96ae02b07d5d4543cf6b47f342825", null ],
     [ "Add", "classModItemList.html#ad8c98842a7b6a1a23b4c02e870a025fa", null ],
     [ "GetItem", "classModItemList.html#af4da942d8edbe477a90852cae64c403f", null ],
@@ -11,5 +12,6 @@ var classModItemList =
     [ "cache", "classModItemList.html#abcfe23a795a10779a910471db127f581", null ],
     [ "catLength", "classModItemList.html#a81ea48a3c3edf39cffc856027ab72ad9", null ],
     [ "dict", "classModItemList.html#ac7a02cc0f4b982de36ea5226aeab4905", null ],
-    [ "list", "classModItemList.html#a70ce4a3ed9856cf11408b48be48f2596", null ]
+    [ "list", "classModItemList.html#a70ce4a3ed9856cf11408b48be48f2596", null ],
+    [ "loadOption", "classModItemList.html#a6600c60ff421ee9a06434b41abc97248", null ]
 ];

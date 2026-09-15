@@ -64,6 +64,7 @@ var classCoreConfig =
     [ "ApplyFPS", "classCoreConfig.html#abadc01f5c02a15d89e59295be4841c11", null ],
     [ "ApplyGrading", "classCoreConfig.html#a47738cb0a4e1272bc474287656b9aabd", null ],
     [ "ApplyHUD", "classCoreConfig.html#aa1cfb4ba8acc6fae946d3bcbae81c112", null ],
+    [ "ApplyPortraitAA", "classCoreConfig.html#abeb9d0cd3a913ac52017e84f2fbdad6e", null ],
     [ "ApplyResolution", "classCoreConfig.html#a6b5ea3267ffc04dfc463738796dbbaa1", null ],
     [ "ApplyScale", "classCoreConfig.html#a749b16ee27de7858429001261a3029a8", null ],
     [ "ApplySkin", "classCoreConfig.html#a74876a6fd575b9d46dbbbb50e98012c1", null ],

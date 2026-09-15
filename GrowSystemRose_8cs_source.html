@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.344.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.345 Nightly</span>
    </div>
   </td>
  </tr>
@@ -104,12 +104,22 @@ $(document).ready(function(){initNavTree('GrowSystemRose_8cs_source.html',''); i
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        }</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">return</span> base.GetStageTile();</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classGrowSystemRose.html#adc2c4507031dba9f3f7d01b770636735">   14</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGrowSystemRose.html#adc2c4507031dba9f3f7d01b770636735">CanRotate</a>()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span> (base.stage.idx == <a class="code hl_property" href="classGrowSystemFlower.html#ab20c1a2e8388da5cad4981840ae80fb7">HarvestStage</a> &amp;&amp; <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>.alias == <span class="stringliteral">&quot;roseflower&quot;</span>)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> base.CanRotate();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
 <div class="ttc" id="aclassGrowSystemFlower_html"><div class="ttname"><a href="classGrowSystemFlower.html">GrowSystemFlower</a></div><div class="ttdef"><b>Definition:</b> <a href="GrowSystemFlower_8cs_source.html#l00001">GrowSystemFlower.cs:2</a></div></div>
 <div class="ttc" id="aclassGrowSystemFlower_html_ab20c1a2e8388da5cad4981840ae80fb7"><div class="ttname"><a href="classGrowSystemFlower.html#ab20c1a2e8388da5cad4981840ae80fb7">GrowSystemFlower.HarvestStage</a></div><div class="ttdeci">override int HarvestStage</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystemFlower_8cs_source.html#l00003">GrowSystemFlower.cs:3</a></div></div>
 <div class="ttc" id="aclassGrowSystemRose_html"><div class="ttname"><a href="classGrowSystemRose.html">GrowSystemRose</a></div><div class="ttdef"><b>Definition:</b> <a href="GrowSystemRose_8cs_source.html#l00001">GrowSystemRose.cs:2</a></div></div>
 <div class="ttc" id="aclassGrowSystemRose_html_a0d4aaf525dfaffbe1cda43b3c55bd77a"><div class="ttname"><a href="classGrowSystemRose.html#a0d4aaf525dfaffbe1cda43b3c55bd77a">GrowSystemRose.UseGenericFirstStageTile</a></div><div class="ttdeci">override bool UseGenericFirstStageTile</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystemRose_8cs_source.html#l00003">GrowSystemRose.cs:3</a></div></div>
 <div class="ttc" id="aclassGrowSystemRose_html_ad4bebcd9d8ca664ca96efb66f0215f09"><div class="ttname"><a href="classGrowSystemRose.html#ad4bebcd9d8ca664ca96efb66f0215f09">GrowSystemRose.GetStageTile</a></div><div class="ttdeci">override int GetStageTile()</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystemRose_8cs_source.html#l00005">GrowSystemRose.cs:5</a></div></div>
+<div class="ttc" id="aclassGrowSystemRose_html_adc2c4507031dba9f3f7d01b770636735"><div class="ttname"><a href="classGrowSystemRose.html#adc2c4507031dba9f3f7d01b770636735">GrowSystemRose.CanRotate</a></div><div class="ttdeci">override bool CanRotate()</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystemRose_8cs_source.html#l00014">GrowSystemRose.cs:14</a></div></div>
 <div class="ttc" id="aclassGrowSystem_html_a663df27be6412bdcab650a8d5afd49e2"><div class="ttname"><a href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">GrowSystem.source</a></div><div class="ttdeci">SourceObj.Row source</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00045">GrowSystem.cs:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

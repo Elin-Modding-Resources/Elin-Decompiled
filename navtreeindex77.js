@@ -1,5 +1,10 @@
 var NAVTREEINDEX77 =
 {
+"classHotbar.html#a650e47383c3203b8d21e11ee34c9f2e3":[1,0,715,4],
+"classHotbar.html#a6c1ffa2355f16fc552e5bfd1c1c6fcf8":[1,0,715,7],
+"classHotbar.html#a7ed0c67d9fc52fa817aa6a7636ad4abe":[1,0,715,25],
+"classHotbar.html#a97745811347998a3944aecba37278df0":[1,0,715,26],
+"classHotbar.html#aae8a40b8f6699d3089acc4f23d960c60":[1,0,715,13],
 "classHotbar.html#abccbf8db8b82780829528ec369ca1a0b":[1,0,715,32],
 "classHotbar.html#ac121e89667a4a269c43cccd2014e29b1":[1,0,715,17],
 "classHotbar.html#ad1e6300dd3327113285277d6ec7c2f8e":[1,0,715,2],
@@ -108,13 +113,14 @@ var NAVTREEINDEX77 =
 "classImageExample_1_1DropInfo.html#a4a188020ac6f1aae983b13f47d87ac3d":[1,0,754,0,1],
 "classImageExample_1_1DropInfo.html#afb39d9bdc1f6d389ffb6863e4f1ed0be":[1,0,754,0,0],
 "classImageLoader.html":[1,0,755],
-"classImageLoader.html#a1f34ff65761a226c850278fe6e0fb8bb":[1,0,755,6],
-"classImageLoader.html#a362a4dc5545346825877be32fdbb5ac5":[1,0,755,7],
-"classImageLoader.html#a462c9bdf78004776fffb2ac66a022ad3":[1,0,755,5],
-"classImageLoader.html#a805c55d4e013e9338bcba645eff7318c":[1,0,755,3],
+"classImageLoader.html#a03ed6c802ec6782fdcb7d66e87191007":[1,0,755,3],
+"classImageLoader.html#a1f34ff65761a226c850278fe6e0fb8bb":[1,0,755,7],
+"classImageLoader.html#a362a4dc5545346825877be32fdbb5ac5":[1,0,755,8],
+"classImageLoader.html#a462c9bdf78004776fffb2ac66a022ad3":[1,0,755,6],
+"classImageLoader.html#a805c55d4e013e9338bcba645eff7318c":[1,0,755,4],
 "classImageLoader.html#a8ebd6066eb94b38303ec7eb62a75ca2e":[1,0,755,2],
 "classImageLoader.html#adb751f2afa36c42f63ef365c97235f48":[1,0,755,1],
-"classImageLoader.html#ae14d4a10432f4c25d932ad06c21b9b45":[1,0,755,4],
+"classImageLoader.html#ae14d4a10432f4c25d932ad06c21b9b45":[1,0,755,5],
 "classImageLoader.html#afb467ad69430595a61037001ca605a77":[1,0,755,0],
 "classIngredientAndRecipe.html":[1,0,757],
 "classIngredientAndRecipe.html#a03d142e47214cbdf200daf04518cacfa":[1,0,757,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX77 =
 "classInt3.html#aa8f3987af5510e10557ef97ccf34c06a":[1,0,770,7],
 "classInt3.html#ab7999a3f6f599f75199221bff863f43b":[1,0,770,1],
 "classInt3.html#ad8bc9e8b65073824a2f3015170e2c877":[1,0,770,0],
-"classInt3.html#ad901442cb5f30d007a66d64bdf86f33e":[1,0,770,8],
-"classIntColor.html":[1,0,771],
-"classIntColor.html#a3ddfc68761816a861a3d770f28fcbac5":[1,0,771,1],
-"classIntColor.html#a4ddaee709794c74b8e255e778d5612f7":[1,0,771,4],
-"classIntColor.html#a7fc449704cbd3add53a8956a0be96f20":[1,0,771,3],
-"classIntColor.html#aa1896d3a2fb16365e35456ad6c0d516b":[1,0,771,0],
-"classIntColor.html#ab9c4bddd05e5de3325a328f329cebfc8":[1,0,771,2]
+"classInt3.html#ad901442cb5f30d007a66d64bdf86f33e":[1,0,770,8]
 };

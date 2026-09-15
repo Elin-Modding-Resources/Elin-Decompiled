@@ -1,5 +1,8 @@
 var NAVTREEINDEX71 =
 {
+"classGameDate.html#ad4f17b8c730db29a2383e27234268ba5":[1,0,607,3],
+"classGameDate.html#ae445863035cd10ca7d2061955859ae48":[1,0,607,1],
+"classGameDate.html#afa808c482a5ed0ccd1b8ab6bf2d6fb7f":[1,0,607,5],
 "classGameDifficultySetting.html":[1,0,608],
 "classGameDifficultySetting.html#a10ddc37f8da725be80fe5be90e14fb3b":[1,0,608,4],
 "classGameDifficultySetting.html#a62558f5354c52d25af5bc841e55e5a6e":[1,0,608,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX71 =
 "classGameSetting_1_1RenderSetting_1_1ActorSetting.html":[1,0,617,6,0],
 "classGameSetting_1_1RenderSetting_1_1ActorSetting.html#a5375e0637042f926e57088d8c13d1d57":[1,0,617,6,0,0],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html":[1,0,617,6,1],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a0931ee1c54c80aaa5d893b4b2b120287":[1,0,617,6,1,6],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a12c0ff3873ea822a796b64379d6f536a":[1,0,617,6,1,4],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a18f41d1a9c5f7b1d0e9f50bf1c66e648":[1,0,617,6,1,0],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a1af2f246ded9115148c004daef45c1a9":[1,0,617,6,1,20]
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a0931ee1c54c80aaa5d893b4b2b120287":[1,0,617,6,1,6]
 };
