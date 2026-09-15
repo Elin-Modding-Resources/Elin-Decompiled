@@ -525,20 +525,20 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				int n = 0;
+				int n2 = 0;
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
 					if (p.HasChara && p.FirstChara.id == "cocoon")
 					{
-						n++;
+						n2++;
 					}
 				});
-				if (n < 2)
+				if (n2 < 2)
 				{
-					Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
-					if (randomPoint != null)
+					Point randomPoint2 = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
+					if (randomPoint2 != null)
 					{
-						Chara chara3 = EClass._zone.SpawnMob("cocoon", randomPoint);
+						Chara chara3 = EClass._zone.SpawnMob("cocoon", randomPoint2);
 						owner.Say("egglay", owner);
 						chara3.SetHostility(owner.OriginalHostility);
 					}
@@ -551,36 +551,33 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				int n2 = 0;
+				int n = 0;
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
 					if (p.HasChara && p.FirstChara.id == "mech_scarab")
 					{
-						n2++;
+						n++;
 					}
 				});
-				if (n2 >= 2)
+				if (n >= 2)
 				{
 					break;
 				}
-				Point randomPoint2 = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
-				if (randomPoint2 != null)
+				Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
+				if (randomPoint != null)
 				{
-					Card c = EClass._zone.AddCard(owner.Duplicate(), randomPoint2);
-					if (randomPoint2.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
+					Card c = EClass._zone.AddCard(owner.Duplicate(), randomPoint);
+					if (randomPoint.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
 					{
 						Msg.Say("self_dupe", owner, c);
 					}
 				}
 				break;
 			}
-			case "imotoroid":
-			case "marshmallow_monster":
-				if (owner.TryFuse(0.001f))
-				{
-					yield return Success();
-				}
-				break;
+			}
+			if (owner.HasElement(1432) && owner.TryFuse(0.001f))
+			{
+				yield return Success();
 			}
 		}
 		if (owner.IsMinion && owner.master != null && owner.master.id == "keeper_garden" && !(owner.master.ai is GoalCombat))

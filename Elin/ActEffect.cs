@@ -1145,7 +1145,10 @@ public class ActEffect : EClass
 			CC.TryDuplicate();
 			break;
 		case EffectId.Fuse:
-			CC.TryFuse();
+			if (!CC.TryFuse() && CC.IsPC)
+			{
+				EClass.pc.SayNothingHappans();
+			}
 			break;
 		case EffectId.Escape:
 			if (CC.IsPCFaction || (EClass._zone.Boss == CC && EClass.rnd(30) != 0))

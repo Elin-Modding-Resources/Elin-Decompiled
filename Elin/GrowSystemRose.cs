@@ -10,4 +10,13 @@ public class GrowSystemRose : GrowSystemFlower
 		}
 		return base.GetStageTile();
 	}
+
+	public override bool CanRotate()
+	{
+		if (base.stage.idx == HarvestStage && source.alias == "roseflower")
+		{
+			return true;
+		}
+		return base.CanRotate();
+	}
 }

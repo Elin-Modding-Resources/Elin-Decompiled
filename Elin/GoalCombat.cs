@@ -516,8 +516,7 @@ public class GoalCombat : Goal
 
 	public virtual bool TryFuse()
 	{
-		string text = owner.id;
-		if ((text == "imotoroid" || text == "marshmallow_monster") && owner.TryFuse(0.05f))
+		if (owner.HasElement(1432) && owner.TryFuse(0.05f))
 		{
 			return true;
 		}

@@ -824,7 +824,7 @@ public class Recipe : EClass
 			text = "(" + source.row.GetField<string>("id") + ")";
 		}
 		text = text.ToTitleCase();
-		if (source.row is CardRow && (source.row as CardRow).quality == 4)
+		if (source.row is CardRow && (source.row as CardRow).quality == 4 && !text.Contains("★"))
 		{
 			text = "★" + text;
 		}

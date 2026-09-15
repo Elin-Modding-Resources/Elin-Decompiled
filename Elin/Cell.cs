@@ -1582,16 +1582,23 @@ public class Cell : WeightCell, IFloodCell
 			}
 			else if (HasObj)
 			{
-				if (sourceObj.tileType.CanRotate(buildMode: false))
+				if (!sourceObj.tileType.CanRotate(buildMode: false))
 				{
-					RotateObj(flag, sourceObj.tileType.IsUseBlockDir);
+					GrowSystem growSystem = growth;
+					if (growSystem == null || !growSystem.CanRotate())
+					{
+						goto IL_00da;
+					}
 				}
+				RotateObj(flag, sourceObj.tileType.IsUseBlockDir);
 			}
 			else if (HasFloor)
 			{
 				RotateFloor((!flag) ? 1 : (-1));
 			}
 		}
+		goto IL_00da;
+		IL_00da:
 		GetPoint().RefreshNeighborTiles();
 	}
 

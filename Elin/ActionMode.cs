@@ -1460,7 +1460,7 @@ public class ActionMode : EClass
 			return;
 		}
 		hitPoint.cell.RotateAll();
-		if (EClass.debug.enable && !Input.GetKey(KeyCode.LeftShift))
+		if (EClass.debug.godBuild && !Input.GetKey(KeyCode.LeftShift))
 		{
 			hitPoint.growth?.Grow(100);
 			if (hitPoint.Installed?.trait is TraitSeed)

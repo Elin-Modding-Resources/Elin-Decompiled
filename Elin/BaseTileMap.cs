@@ -2959,6 +2959,10 @@ public class BaseTileMap : EMono
 							}
 							else
 							{
+								if ((tileType != TileType.Illumination || !this.cell.HasObj) && !tileType.AlwaysShow && !this.cell.toggleOcclusion && noRoofMode && currentRoom == null && t.altitude >= lowWallObjAltitude && tileType != TileType.ObjFloat)
+								{
+									continue;
+								}
 								thingPos.y += (float)t.altitude * altitudeFix.y;
 								thingPos.z += (float)t.altitude * altitudeFix.z;
 							}

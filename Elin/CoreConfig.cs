@@ -549,7 +549,7 @@ public class CoreConfig : EClass
 
 		public bool stackNumbers;
 
-		public bool aaPortrait;
+		public bool aaPortraitFilter;
 
 		public bool extraTurnaround;
 
@@ -588,6 +588,8 @@ public class CoreConfig : EClass
 		public bool cacheEffect;
 
 		public float brightnessNight;
+
+		public bool aaPortrait => true;
 	}
 
 	[Serializable]
@@ -917,9 +919,16 @@ public class CoreConfig : EClass
 			camSupport.beautify.bloom = test.bloom2;
 			camSupport.cam.allowHDR = graphic.hdr;
 			ApplyScale();
+			ApplyPortraitAA();
 			EClass.core.effects.KillAll();
 			EClass.core.effects.effects.usePool = test.cacheEffect;
 		}
+	}
+
+	public void ApplyPortraitAA()
+	{
+		Portrait.loadOption.mipmap = (test.aaPortraitFilter ? new Vector2Int?(Portrait.standardSize) : ((Vector2Int?)null));
+		Portrait.loadOptionFull.mipmap = (test.aaPortraitFilter ? new Vector2Int?(Portrait.standardFullSize) : ((Vector2Int?)null));
 	}
 
 	public void ApplyResolution(bool force = false)

@@ -819,6 +819,7 @@ public class Zone : Spatial, ICardParent, IInspect
 						Debug.Log("Importing New Chara:" + item.id + "/" + item.Name + "/" + item.orgPos);
 						map.serializedCharas.Add(item);
 					}
+					bool resetMedal = GetInt(4) != 0;
 					map.things.ForeachReverse(delegate(Thing t)
 					{
 						if (t.trait is TraitNewZone || t.trait is TraitPowerStatue)
@@ -856,7 +857,7 @@ public class Zone : Spatial, ICardParent, IInspect
 							}
 							return;
 						}
-						if (t.id == "medal" || t.id == "856")
+						if (!resetMedal && (t.id == "medal" || t.id == "856"))
 						{
 							foreach (Thing thing3 in orgMap.things)
 							{
@@ -868,6 +869,7 @@ public class Zone : Spatial, ICardParent, IInspect
 							RemoveCard(t);
 						}
 					});
+					SetInt(4);
 					foreach (KeyValuePair<int, int> item2 in EClass._map.backerObjs.ToList())
 					{
 						EClass._map.GetCell(item2.Key);
@@ -2912,12 +2914,12 @@ public class Zone : Spatial, ICardParent, IInspect
 	{
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (!chara.source.hostility.IsEmpty() && chara.source.hostility.ToEnum<Hostility>() >= Hostility.Friend && !chara.IsPCFactionOrMinion)
+			if (!chara.source.hostility.IsEmpty() && chara.source.hostility.ToEnum<Hostility>() >= Hostility.Friend && !chara.IsPCFactionOrMinion && !chara.isSummon && (EClass._zone is Zone_Civilized || EClass._zone.IsPCFactionOrTent))
 			{
 				chara.c_originalHostility = (Hostility)0;
 			}
 			chara.hostility = chara.OriginalHostility;
-			if (chara.enemy != null && (chara.enemy.IsPCFaction || chara.IsPCFaction))
+			if (chara.enemy != null && (chara.enemy.IsPCFaction || chara.IsPCFaction) && !chara.IsHostile(chara.enemy))
 			{
 				chara.SetEnemy();
 			}

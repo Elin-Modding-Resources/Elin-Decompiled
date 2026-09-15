@@ -184,9 +184,9 @@ public class Core : BaseCore
 		MOD.ResetResources();
 		Portrait.modPortraitBGFs = new ModItemList<Sprite>();
 		Portrait.modPortraitBGs = new ModItemList<Sprite>();
-		Portrait.modPortraits = new ModItemList<Sprite>();
-		Portrait.modOverlays = new ModItemList<Sprite>();
-		Portrait.modFull = new ModItemList<Sprite>();
+		Portrait.modPortraits = new ModItemList<Sprite>(0, Portrait.loadOption);
+		Portrait.modOverlays = new ModItemList<Sprite>(0, Portrait.loadOption);
+		Portrait.modFull = new ModItemList<Sprite>(0, Portrait.loadOptionFull);
 		Portrait.dictList = new Dictionary<string, List<ModItem<Sprite>>>();
 		TileType.Init();
 		screen.tileMap.rendererObjDummy.Init();

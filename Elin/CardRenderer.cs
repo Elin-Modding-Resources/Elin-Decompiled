@@ -281,9 +281,7 @@ public class CardRenderer : RenderObject
 					p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
 					p.matColor = matColor;
 					pref = row.pref;
-					p.x += pref.x * (float)((owner.dir % 2 == 0) ? 1 : (-1));
-					p.y += pref.y;
-					p.z += pref.z;
+					p.z += pref.z * 2f;
 					if (owner.noShadow || !owner.IsInstalled)
 					{
 						drawShadow = false;

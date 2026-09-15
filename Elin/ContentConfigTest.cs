@@ -129,9 +129,10 @@ public class ContentConfigTest : ContentConfig
 		{
 			base.config.test.extraMoveCancel = on;
 		});
-		toggleAAPortrait.SetToggle(base.config.test.aaPortrait, delegate(bool on)
+		toggleAAPortrait.SetToggle(base.config.test.aaPortraitFilter, delegate(bool on)
 		{
-			base.config.test.aaPortrait = on;
+			base.config.test.aaPortraitFilter = on;
+			base.config.Apply();
 		});
 		toggleBloom2.SetToggle(base.config.test.bloom2, delegate(bool on)
 		{

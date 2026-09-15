@@ -641,7 +641,7 @@ public class Thing : Card
 					{
 						text7 = text7 + ((dMG != 0 || source.offense[0] != 0) ? ", " : "") + hIT;
 					}
-					text2 = text2 + " (" + text7.IsEmpty(" - ") + ") ";
+					text2 = text2 + " (" + text7.IsEmpty(" - ") + ")";
 				}
 				int dV = DV;
 				int pV = PV;
@@ -649,7 +649,7 @@ public class Thing : Card
 				{
 					text2 += " [";
 					text2 = text2 + dV + ", " + pV;
-					text2 += "] ";
+					text2 += "]";
 				}
 				if (trait.HasCharges && trait.ShowCharges)
 				{

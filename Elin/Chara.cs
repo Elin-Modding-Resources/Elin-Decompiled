@@ -888,9 +888,9 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (!IsGlobal && !base.isSubsetCard)
+			if (!IsGlobal && !base.isSubsetCard && homeZone == EClass._zone)
 			{
-				return homeZone == EClass._zone;
+				return !base.isSummon;
 			}
 			return false;
 		}
@@ -1533,7 +1533,9 @@ public class Chara : Card, IPathfindWalker
 		Zone z = EClass.game.spatials.Find("somewhere");
 		if (trait is TraitAdventurer)
 		{
-			z = EClass.world.region.ListTowns().RandomItem();
+			z = (from zone in EClass.world.region.ListTowns()
+				where zone != EClass._zone
+				select zone).RandomItem();
 			SetHomeZone(z);
 		}
 		MoveZone(z, ZoneTransition.EnterState.RandomVisit);
@@ -1841,13 +1843,29 @@ public class Chara : Card, IPathfindWalker
 		Say("fuse", this);
 		string text = "marshmallow_king";
 		string text2 = "fusion";
-		if (id == "imotoroid")
+		switch (id)
 		{
+		case "imotoroid":
 			text = "imotomaton";
-			text2 = "";
+			text2 = "fusion2";
+			break;
+		case "shojo":
+			text = "shojomaton";
+			text2 = "fusion2";
+			break;
+		case "sister_cat":
+			text = "sister_catmaton";
+			text2 = "fusion2";
+			break;
+		case "younglady":
+			text = "youngladymaton";
+			text2 = "fusion2";
+			break;
 		}
 		Chara chara = EClass._zone.SpawnMob(text, pos);
 		chara.SetHostility(hostility);
+		list.Shuffle();
+		int num = 0;
 		foreach (Chara item in list)
 		{
 			if (!text2.IsEmpty())
@@ -1856,6 +1874,11 @@ public class Chara : Card, IPathfindWalker
 			}
 			Effect.Get<EffectIRenderer>("throw_fuse").Play(item, item, item.pos, pos);
 			item.Destroy();
+			num++;
+			if (num >= 8)
+			{
+				break;
+			}
 		}
 		Destroy();
 		chara.PlayAnime(AnimeID.FallSky);
@@ -5209,6 +5232,9 @@ public class Chara : Card, IPathfindWalker
 			case "mech_scarab":
 				AddThing("gun_laser");
 				break;
+			case "youngladymaton":
+			case "sister_catmaton":
+			case "shojomaton":
 			case "imotomaton":
 			case "rocketman":
 			{
@@ -5863,7 +5889,7 @@ public class Chara : Card, IPathfindWalker
 			if (origin.IsPCParty || origin.IsPCPartyMinion)
 			{
 				int num = 0;
-				if (trait is TraitMerchantTravel)
+				if (trait is TraitMerchantTravel && !base.isSummon)
 				{
 					num = -20;
 				}
@@ -7028,9 +7054,9 @@ public class Chara : Card, IPathfindWalker
 	{
 		CardRenderer cardRenderer = renderer;
 		CharaRenderer charaRenderer = new CharaRenderer();
-		if (source.skinAntiSpider != 0 && EClass.core.config.game.antiSpider)
+		if (source.skinAntiSpider != 0)
 		{
-			base.idSkin = source.skinAntiSpider;
+			base.idSkin = (EClass.core.config.game.antiSpider ? source.skinAntiSpider : 0);
 		}
 		if (host != null)
 		{

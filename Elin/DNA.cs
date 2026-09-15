@@ -352,6 +352,10 @@ public class DNA : EClass
 				AddSpecial();
 			}
 			AddSpecial();
+			if (EClass.debug.enable)
+			{
+				lv = 100;
+			}
 			if (EClass.rnd(3) != 0 && lv > 10)
 			{
 				IEnumerable<SourceElement.Row> enumerable = EClass.sources.elements.map.Values.Where(delegate(SourceElement.Row row)
@@ -360,7 +364,7 @@ public class DNA : EClass
 					{
 						return false;
 					}
-					if (row.LV > lv + ((!EClass.debug.enable) ? 1 : 100))
+					if (row.LV > lv)
 					{
 						return false;
 					}
@@ -368,33 +372,7 @@ public class DNA : EClass
 					{
 						return false;
 					}
-					if (row.category == "ability" && row.aliasRef != "mold" && !row.aliasRef.IsEmpty() && row.id > 10000 && !EClass.sources.elements.alias[row.aliasRef].tag.Contains(row.alias.Split('_')[0]))
-					{
-						bool flag = false;
-						foreach (SourceChara.Row value in EClass.sources.charas.map.Values)
-						{
-							if (!value.actCombat.IsEmpty())
-							{
-								string[] actCombat = value.actCombat;
-								for (int i = 0; i < actCombat.Length; i++)
-								{
-									if (actCombat[i].Split('/')[0] == row.alias)
-									{
-										flag = true;
-									}
-								}
-								if (flag)
-								{
-									break;
-								}
-							}
-						}
-						if (!flag)
-						{
-							return false;
-						}
-					}
-					return true;
+					return (!(row.category == "ability") || !(row.aliasRef != "mold") || row.aliasRef.IsEmpty() || row.id <= 10000 || (EClass.sources.elements.alias[row.aliasRef].tag.Contains(row.alias.Split('_')[0]) ? true : false)) ? true : false;
 				});
 				if (enumerable.Count() > 0)
 				{

@@ -126,6 +126,11 @@ public class GrowSystem : EClass
 		return idx == HarvestStage;
 	}
 
+	public virtual bool CanRotate()
+	{
+		return false;
+	}
+
 	public virtual bool BlockSight(Cell cell)
 	{
 		return false;

@@ -21,9 +21,9 @@ public class TraitChara : Trait
 	{
 		get
 		{
-			if (owner.isImported && !owner.isDestroyed)
+			if (owner.isImported && !owner.isDestroyed && !owner.IsGlobal)
 			{
-				return !owner.IsGlobal;
+				return !owner.isSummon;
 			}
 			return false;
 		}

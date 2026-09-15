@@ -7,9 +7,10 @@ public class TraitStrangeStatue : TraitVase
 			Chara chara = EClass._zone.SpawnMob(owner.pos.GetNearestPoint(allowBlock: false, allowChara: false), new SpawnSetting
 			{
 				idSpawnList = "c_statue",
-				filterLv = EClass._zone.DangerLv + 30
+				filterLv = EClass._zone.DangerLv + 20
 			});
 			chara.SetHostility((EClass.rnd(3) != 0 || chara.trait is TraitMerchant) ? Hostility.Enemy : Hostility.Neutral);
+			chara.SetSummon(9999);
 			Msg.Say("statue_chara", chara, owner);
 		}
 	}

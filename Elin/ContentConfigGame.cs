@@ -164,6 +164,17 @@ public class ContentConfigGame : ContentConfig
 		toggleAntiSpider.SetToggle(base.config.game.antiSpider, delegate(bool on)
 		{
 			base.config.game.antiSpider = on;
+			if (EClass.core.IsGameStarted)
+			{
+				foreach (Chara chara in EClass._map.charas)
+				{
+					chara._CreateRenderer();
+				}
+				foreach (Thing thing in EClass._map.things)
+				{
+					thing._CreateRenderer();
+				}
+			}
 		});
 		toggleOffhand.SetToggle(base.config.game.showOffhand, delegate(bool on)
 		{

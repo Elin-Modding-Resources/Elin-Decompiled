@@ -518,6 +518,14 @@ public class Game : EClass
 		{
 			CoreDebug._RemoveBodyPart(CoreDebug.BodyCode.relic);
 		}
+		if (version.IsBelow(0, 23, 345))
+		{
+			Zone zone = spatials.Find("oldkeep");
+			if (zone != null && zone.visitCount > 0)
+			{
+				zone.SetInt(4, 1);
+			}
+		}
 		if (version.IsBelow(0, 23, 336))
 		{
 			AddAdventurer("adv_schwert");
@@ -598,8 +606,8 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 195))
 		{
-			Zone zone = spatials.Find("startVillage2");
-			if (zone != null && zone.visitCount > 0)
+			Zone zone2 = spatials.Find("startVillage2");
+			if (zone2 != null && zone2.visitCount > 0)
 			{
 				world.SendPackage(ThingGen.CreateParcel(null, ThingGen.CreateCassette(113), ThingGen.CreateCassette(12)));
 			}

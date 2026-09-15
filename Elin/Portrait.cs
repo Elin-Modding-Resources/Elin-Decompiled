@@ -5,15 +5,29 @@ using UnityEngine.UI;
 
 public class Portrait : UIButton
 {
+	public static readonly Vector2Int standardSize = new Vector2Int(240, 320);
+
+	public static readonly Vector2Int standardFullSize = new Vector2Int(529, 838);
+
+	public static readonly SpriteLoadOption loadOption = new SpriteLoadOption
+	{
+		pivot = new Vector2(0.5f, 0f)
+	};
+
+	public static readonly SpriteLoadOption loadOptionFull = new SpriteLoadOption
+	{
+		pivot = new Vector2(0.5f, 0f)
+	};
+
 	public static ModItemList<Sprite> modPortraitBGFs = new ModItemList<Sprite>(3);
 
 	public static ModItemList<Sprite> modPortraitBGs = new ModItemList<Sprite>(3);
 
-	public static ModItemList<Sprite> modPortraits = new ModItemList<Sprite>(3);
+	public static ModItemList<Sprite> modPortraits = new ModItemList<Sprite>(3, loadOption);
 
-	public static ModItemList<Sprite> modOverlays = new ModItemList<Sprite>(3);
+	public static ModItemList<Sprite> modOverlays = new ModItemList<Sprite>(3, loadOption);
 
-	public static ModItemList<Sprite> modFull = new ModItemList<Sprite>(3);
+	public static ModItemList<Sprite> modFull = new ModItemList<Sprite>(3, loadOptionFull);
 
 	public static Dictionary<string, List<ModItem<Sprite>>> dictList = new Dictionary<string, List<ModItem<Sprite>>>();
 
@@ -57,7 +71,29 @@ public class Portrait : UIButton
 
 	private bool defaultPreserveAspect;
 
-	private FilterMode filter;
+	public static bool UsePortraitAA
+	{
+		get
+		{
+			if ((bool)EClass.core && EClass.core.config != null)
+			{
+				return EClass.core.config.test.aaPortrait;
+			}
+			return false;
+		}
+	}
+
+	public static bool UsePortraitFilter
+	{
+		get
+		{
+			if ((bool)EClass.core && EClass.core.config != null)
+			{
+				return EClass.core.config.test.aaPortraitFilter;
+			}
+			return false;
+		}
+	}
 
 	public static List<ModItem<Sprite>> ListPlayerPortraits(int gender, bool nullPortrait = false)
 	{
@@ -289,7 +325,8 @@ public class Portrait : UIButton
 		{
 			RestoreDefaults();
 		}
-		filter = ((isPortrait && Core.Instance.config.test.aaPortrait) ? FilterMode.Bilinear : FilterMode.Point);
+		bool aa = UsePortraitAA;
+		bool filter = UsePortraitFilter;
 		portrait.rectTransform.anchorMin = overlay.rectTransform.anchorMin;
 		portrait.rectTransform.anchorMax = overlay.rectTransform.anchorMax;
 		portrait.rectTransform.sizeDelta = overlay.rectTransform.sizeDelta;
@@ -321,10 +358,12 @@ public class Portrait : UIButton
 		{
 			if ((bool)s && isPortrait)
 			{
-				s.texture.wrapMode = TextureWrapMode.Clamp;
-				if (s.texture.filterMode != filter)
+				Texture2D texture = s.texture;
+				texture.wrapMode = TextureWrapMode.Clamp;
+				FilterMode filterMode = ((filter && texture.mipmapCount > 1) ? FilterMode.Trilinear : (aa ? FilterMode.Bilinear : FilterMode.Point));
+				if (texture.filterMode != filterMode)
 				{
-					s.texture.filterMode = filter;
+					texture.filterMode = filterMode;
 				}
 			}
 		}

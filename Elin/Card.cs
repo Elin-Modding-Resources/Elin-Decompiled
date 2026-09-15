@@ -5666,7 +5666,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						}
 					}
 				}
-				if (trait is TraitMerchantTravel && !EClass._zone.IsFestival)
+				if (trait is TraitMerchantTravel && !EClass._zone.IsFestival && !isSummon)
 				{
 					trait.OnBarter();
 					Thing thing4 = things.Find<TraitChestMerchant>();
