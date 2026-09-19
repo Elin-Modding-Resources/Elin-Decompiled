@@ -7,12 +7,40 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using Pluralize.NET;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public static class ClassExtension
 {
+	public static class EnumSize<T>
+	{
+		public static readonly bool IsInt = typeof(T).IsEnum && Enum.GetUnderlyingType(typeof(T)) == typeof(int);
+
+		public static readonly bool IsLong = typeof(T).IsEnum && Enum.GetUnderlyingType(typeof(T)) == typeof(long);
+	}
+
+	public static class EnumNames<T>
+	{
+		public static readonly Dictionary<string, T> cached;
+
+		public static readonly Dictionary<string, T> fuzzy;
+
+		static EnumNames()
+		{
+			cached = new Dictionary<string, T>();
+			fuzzy = new Dictionary<string, T>(StringComparer.OrdinalIgnoreCase);
+			string[] names = Enum.GetNames(typeof(T));
+			foreach (string text in names)
+			{
+				T value = (T)Enum.Parse(typeof(T), text);
+				cached[text] = value;
+				fuzzy.TryAdd(text, value);
+			}
+		}
+	}
+
 	private static Vector3 vector3;
 
 	public static IPluralize pluralizer = new Pluralizer();
@@ -141,16 +169,32 @@ public static class ClassExtension
 
 	public static T ToEnum<T>(this int value)
 	{
-		return (T)Enum.ToObject(typeof(T), value);
+		if (!EnumSize<T>.IsInt)
+		{
+			return (T)Enum.ToObject(typeof(T), value);
+		}
+		return UnsafeUtility.As<int, T>(ref value);
 	}
 
 	public static T ToEnum<T>(this long value)
 	{
-		return (T)Enum.ToObject(typeof(T), value);
+		if (!EnumSize<T>.IsLong)
+		{
+			return (T)Enum.ToObject(typeof(T), value);
+		}
+		return UnsafeUtility.As<long, T>(ref value);
 	}
 
 	public static T ToEnum<T>(this string value, bool ignoreCase = true)
 	{
+		if (EnumNames<T>.cached.TryGetValue(value, out var value2))
+		{
+			return value2;
+		}
+		if (ignoreCase && EnumNames<T>.fuzzy.TryGetValue(value, out value2))
+		{
+			return value2;
+		}
 		return (T)Enum.Parse(typeof(T), value, ignoreCase);
 	}
 
