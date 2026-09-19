@@ -108,6 +108,8 @@ public class UIInventory : EMono
 
 	public bool isList;
 
+	public bool sortDirty = true;
+
 	public Transaction lastTransaction;
 
 	public Image imageHighlight;
@@ -1023,33 +1025,46 @@ public class UIInventory : EMono
 		while (flag)
 		{
 			flag = false;
-			foreach (Thing thing in owner.Container.things)
+			Dictionary<string, List<Thing>> dict = new Dictionary<string, List<Thing>>();
+			foreach (Thing item in owner.Container.things.Copy())
 			{
-				if (thing.invY == 1)
+				if (item.invY == 1)
 				{
 					continue;
 				}
-				foreach (Thing thing2 in owner.Container.things)
+				List<Thing> orCreate = dict.GetOrCreate(item.id);
+				bool flag2 = false;
+				for (int i = 0; i < orCreate.Count; i++)
 				{
-					if (thing != thing2 && thing2.invY != 1 && thing.TryStackTo(thing2))
+					if (item.TryStackTo(orCreate[i]))
 					{
-						flag = true;
+						flag2 = true;
+						break;
+					}
+					if (orCreate[i].TryStackTo(item))
+					{
+						orCreate[i] = item;
+						flag2 = true;
 						break;
 					}
 				}
-				if (flag)
+				if (flag2)
 				{
-					break;
+					flag = true;
+				}
+				else
+				{
+					orCreate.Add(item);
 				}
 			}
 		}
 		int num = 0;
-		foreach (Thing thing3 in owner.Container.things)
+		foreach (Thing thing in owner.Container.things)
 		{
-			if (thing3.invY != 1)
+			if (thing.invY != 1)
 			{
-				thing3.invY = 0;
-				thing3.invX = -1;
+				thing.invY = 0;
+				thing.invX = -1;
 			}
 			num++;
 		}
@@ -1061,14 +1076,14 @@ public class UIInventory : EMono
 			Vector2 sizeDelta = list.Rect().sizeDelta;
 			sizeDelta.x -= 60f;
 			sizeDelta.y -= 60f;
-			foreach (Thing thing4 in owner.Container.things)
+			foreach (Thing thing2 in owner.Container.things)
 			{
-				if (thing4.invY != 0)
+				if (thing2.invY != 0)
 				{
 					continue;
 				}
-				thing4.posInvX = num2 + 30;
-				thing4.posInvY = (int)sizeDelta.y - num3 + 30;
+				thing2.posInvX = num2 + 30;
+				thing2.posInvY = (int)sizeDelta.y - num3 + 30;
 				num2 += 40;
 				if ((float)num2 > sizeDelta.x)
 				{
@@ -1081,6 +1096,7 @@ public class UIInventory : EMono
 				}
 			}
 		}
+		sortDirty = false;
 		if (redraw)
 		{
 			list.Redraw();
@@ -1324,14 +1340,17 @@ public class UIInventory : EMono
 			{
 				if (firstMouseRightDown || (!Input.GetMouseButton(1) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift)))
 				{
-					Sort(redraw: false);
+					if (sortDirty)
+					{
+						Sort(redraw: false);
+					}
 					firstMouseRightDown = false;
 					owner.Container.things.RefreshGrid(uiMagic, window.saveData);
 				}
 			}
 			else
 			{
-				if (window.saveData.alwaysSort && !sorted && (firstMouseRightDown || (!Input.GetMouseButton(1) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))))
+				if (window.saveData.alwaysSort && sortDirty && !sorted && (firstMouseRightDown || (!Input.GetMouseButton(1) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))))
 				{
 					sorted = true;
 					Sort();

@@ -94,7 +94,7 @@ public class LayerInventory : ELayer
 		{
 			if (item.invs[0].owner.Container == t.parent || ((bool)item.mini && item.mini.gameObject.activeInHierarchy))
 			{
-				item.invs[0].dirty = true;
+				item.invs[0].dirty = (item.invs[0].sortDirty = true);
 			}
 		}
 		if (t.invY == 1 || ELayer.pc.held == t)

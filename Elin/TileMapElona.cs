@@ -288,7 +288,7 @@ public class TileMapElona : BaseTileMap
 				}
 				else
 				{
-					sourceBlock.renderData.DrawRepeatTo(param, maxHeight, roomHeight, ref renderSetting.peakFixBlock, cell.hasDoor, cell.effect?.FireAmount ?? 0);
+					sourceBlock.renderData.DrawRepeatTo(param, maxHeight, roomHeight, ref renderSetting.peakFixBlock, cell.traitDoor?.height ?? 0, cell.effect?.FireAmount ?? 0);
 				}
 				break;
 			case BlockRenderMode.WallOrFence:
@@ -334,7 +334,7 @@ public class TileMapElona : BaseTileMap
 					}
 					else
 					{
-						_sourceBlock.renderData.DrawRepeatTo(param, maxHeight, roomHeight, ref renderSetting.peakFix, cell.hasDoor, cell.effect?.FireAmount ?? 0);
+						_sourceBlock.renderData.DrawRepeatTo(param, maxHeight, roomHeight, ref renderSetting.peakFix, cell.traitDoor?.height ?? 0, cell.effect?.FireAmount ?? 0);
 					}
 					param.z -= 0.01f;
 					if (blockDir == 2 || (cell.Front.HasWallOrFence && cell.Front.blockDir != 0))
@@ -407,7 +407,7 @@ public class TileMapElona : BaseTileMap
 					}
 					else
 					{
-						_sourceBlock.renderData.DrawRepeatTo(param, maxHeight, roomHeight, ref renderSetting.peakFix, cell.hasDoor, cell.effect?.FireAmount ?? 0);
+						_sourceBlock.renderData.DrawRepeatTo(param, maxHeight, roomHeight, ref renderSetting.peakFix, cell.traitDoor?.height ?? 0, cell.effect?.FireAmount ?? 0);
 					}
 					if (cell.Right.HasWallOrFence && cell.Right.blockDir != 1)
 					{

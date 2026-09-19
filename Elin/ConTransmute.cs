@@ -33,7 +33,7 @@ public class ConTransmute : BaseBuff
 		}
 	}
 
-	public void Change()
+	public virtual void Change()
 	{
 		if (owner.ai is GoalCombat { IsRunning: not false, abilities: not null } goalCombat)
 		{

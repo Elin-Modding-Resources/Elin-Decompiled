@@ -172,9 +172,9 @@ public class TraitCrafter : Trait
 				}
 				continue;
 			}
-			string[] array3 = text.Split('@');
-			if (array3.Length > 1)
+			if (text.Contains('@'))
 			{
+				string[] array3 = text.Split('@');
 				if (c.id != array3[0] && c.sourceCard._origin != array3[0])
 				{
 					return false;

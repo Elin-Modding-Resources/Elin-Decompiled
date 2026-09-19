@@ -121,6 +121,8 @@ public class Cell : WeightCell, IFloodCell
 
 	public Room room;
 
+	public TraitDoor traitDoor;
+
 	public bool pcSync;
 
 	public const int DIV_LIQUID = 10;
@@ -274,17 +276,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public bool hasDoor
-	{
-		get
-		{
-			return bits[3];
-		}
-		set
-		{
-			bits[3] = value;
-		}
-	}
+	public bool hasDoor => traitDoor != null;
 
 	public bool skipRender
 	{
@@ -1216,8 +1208,8 @@ public class Cell : WeightCell, IFloodCell
 		outOfBounds = x < bounds.x || z < bounds.z || x > bounds.maxX || z > bounds.maxZ;
 		isSurrounded4d = cell.HasFullBlock && cell2.HasFullBlock && cell3.HasFullBlock && cell4.HasFullBlock;
 		isSurrounded = isSurrounded4d && cell5.HasFullBlock && cell6.HasFullBlock && cell7.HasFullBlock && cell8.HasFullBlock && cell3.bridgeHeight == bridgeHeight && cell2.bridgeHeight == bridgeHeight && cell4.bridgeHeight == bridgeHeight && cell.bridgeHeight == bridgeHeight;
+		traitDoor = null;
 		isFloating = isForceFloat;
-		hasDoor = false;
 		hasDoorBoat = false;
 		isDeck = false;
 		isShoreSand = false;
@@ -1345,8 +1337,8 @@ public class Cell : WeightCell, IFloodCell
 				}
 				if (thing.trait is TraitDoor)
 				{
+					traitDoor = thing.trait as TraitDoor;
 					blocked = false;
-					hasDoor = true;
 					blockSight = true;
 				}
 				else if (thing.trait.IsBlockSight)

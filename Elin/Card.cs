@@ -6855,6 +6855,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			renderer.actor.RefreshSprite();
 		}
+		renderer.sync = -1L;
 		renderer.Draw(renderParam, ref v, drawShadow: false);
 	}
 

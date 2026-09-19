@@ -166,13 +166,13 @@ public class RenderData : EScriptable, IRenderer
 		_offset = offset;
 	}
 
-	public void DrawRepeatTo(RenderParam p, float maxY, float height, ref Vector3 peakFix, bool skipFirst = false, int fire = 0, bool isBlock = false)
+	public void DrawRepeatTo(RenderParam p, float maxY, float height, ref Vector3 peakFix, int skipRepeat = 0, int fire = 0, bool isBlock = false)
 	{
 		int num = (int)((maxY + height + peakFix.x - p.y) / peakFix.y);
 		bool snow = p.snow;
 		if (num == 0)
 		{
-			if (!skipFirst)
+			if (skipRepeat == 0)
 			{
 				Draw(p);
 			}
@@ -189,9 +189,9 @@ public class RenderData : EScriptable, IRenderer
 				p.z -= peakFix.z + peakFix.x;
 				p.snow = snow;
 			}
-			if (skipFirst)
+			if (skipRepeat > 0)
 			{
-				if (i != 0 && num > 1)
+				if (i >= skipRepeat && num > skipRepeat)
 				{
 					Draw(p);
 				}

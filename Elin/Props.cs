@@ -231,7 +231,6 @@ public class Props : EClass
 		{
 			FindAnyFood();
 		}
-		stack.list.Sort(UIList.SortMode.ByCategory);
 		return stack;
 		void Find(string text)
 		{
@@ -286,12 +285,19 @@ public class Props : EClass
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
 			{
-				foreach (Thing thing2 in things)
+				foreach (PropSetCategory value in categoryMap.Values)
 				{
-					Card obj = thing2.parent as Card;
-					if (obj != null && obj.c_lockLv == 0 && thing2.category.IsChildOf(cat.id) && !thing2.IsExcludeFromCraft(ing))
+					if (value.source.IsChildOf(cat))
 					{
-						stack.Add(thing2);
+						foreach (Card item5 in value)
+						{
+							Thing thing = item5.Thing;
+							Card obj = thing.parent as Card;
+							if (obj != null && obj.c_lockLv == 0 && !thing.IsExcludeFromCraft(ing))
+							{
+								stack.Add(thing);
+							}
+						}
 					}
 				}
 			}

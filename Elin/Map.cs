@@ -2441,6 +2441,19 @@ public class Map : MapBounds, IPathfindGrid
 		return list;
 	}
 
+	public List<Point> ListPointsOnEdge(Point center, int destDist, bool mustBeWalkable = true, bool los = true)
+	{
+		List<Point> list = new List<Point>();
+		ForeachSphere(center.x, center.z, destDist, delegate(Point p)
+		{
+			if (center.Distance(p) == destDist && (!mustBeWalkable || !p.cell.blocked) && (!los || Los.IsVisible(center, p)))
+			{
+				list.Add(p.Copy());
+			}
+		});
+		return list;
+	}
+
 	public List<Chara> ListCharasInCircle(Point center, float radius, bool los = true)
 	{
 		List<Chara> list = new List<Chara>();

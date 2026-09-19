@@ -32,6 +32,8 @@ public class TraitDoor : Trait
 
 	public virtual string idSound => "door1";
 
+	public virtual int height => 1;
+
 	public override void Update()
 	{
 		TryAutoClose();

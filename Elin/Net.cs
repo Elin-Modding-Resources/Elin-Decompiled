@@ -403,7 +403,7 @@ public class Net : MonoBehaviour
 			}
 			foreach (ChatLog item2 in list)
 			{
-				item2.msg = item2.msg.Replace("\n", "").Replace("\r", "").Replace("&quot;", "\"")
+				item2.msg = WebUtility.HtmlDecode(item2.msg).Replace("\n", "").Replace("\r", "")
 					.ToTitleCase();
 			}
 			list.Reverse();

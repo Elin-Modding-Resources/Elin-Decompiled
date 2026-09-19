@@ -113,293 +113,299 @@ public class CardRenderer : RenderObject
 		if (skip)
 		{
 			skip = false;
-			return;
 		}
-		sync = RenderObject.syncFrame;
-		RenderObject.currentParam = p;
-		p.dir = owner.dir;
-		if (!isSynced)
+		else
 		{
-			OnEnterScreen();
-			RenderObject.syncList.Add(this);
-		}
-		if (isChara && owner.parent == EClass.game.activeZone)
-		{
-			if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && !LayerDrama.Instance)
+			if (sync == RenderObject.syncFrame)
 			{
-				ShowBossText();
+				return;
 			}
-			if (owner.Chara.host == null)
+			sync = RenderObject.syncFrame;
+			RenderObject.currentParam = p;
+			p.dir = owner.dir;
+			if (!isSynced)
 			{
-				UpdatePosition(ref v, p);
+				OnEnterScreen();
+				RenderObject.syncList.Add(this);
 			}
-			if (owner.Chara.ai is AI_Trolley { IsRunning: not false } aI_Trolley)
+			if (isChara && owner.parent == EClass.game.activeZone)
 			{
-				drawShadow = false;
-				if (aI_Trolley.trolley.HideChara)
+				if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && !LayerDrama.Instance)
 				{
-					if (hasActor)
+					ShowBossText();
+				}
+				if (owner.Chara.host == null)
+				{
+					UpdatePosition(ref v, p);
+				}
+				if (owner.Chara.ai is AI_Trolley { IsRunning: not false } aI_Trolley)
+				{
+					drawShadow = false;
+					if (aI_Trolley.trolley.HideChara)
 					{
-						actor.SetActive(enable: false);
+						if (hasActor)
+						{
+							actor.SetActive(enable: false);
+						}
+						if ((bool)orbit)
+						{
+							orbit.Refresh();
+						}
+						return;
 					}
-					if ((bool)orbit)
-					{
-						orbit.Refresh();
-					}
+				}
+				if (hasActor)
+				{
+					actor.SetActive(enable: true);
+				}
+			}
+			else
+			{
+				p.x = (position.x = v.x);
+				p.y = (position.y = v.y);
+				p.z = (position.z = v.z);
+			}
+			if ((bool)orbit)
+			{
+				orbit.Refresh();
+			}
+			else
+			{
+				TrySpawnOrbit();
+			}
+			if (anime != null)
+			{
+				anime.Update();
+			}
+			if (owner.trait is TraitFakeObj)
+			{
+				TraitFakeObj traitFakeObj = owner.trait as TraitFakeObj;
+				if (traitFakeObj.growth != null)
+				{
+					traitFakeObj.growth?.OnRenderTileMap(p, owner.IsInstalled && owner.altitude == 0 && owner.pos.FirstThing == owner);
 					return;
 				}
 			}
-			if (hasActor)
+			if (!isChara && !owner.IsInstalled && owner.category.tileDummy != 0 && !owner.isRoofItem && owner.ExistsOnMap && owner.trait.UseDummyTile)
 			{
-				actor.SetActive(enable: true);
-			}
-		}
-		else
-		{
-			p.x = (position.x = v.x);
-			p.y = (position.y = v.y);
-			p.z = (position.z = v.z);
-		}
-		if ((bool)orbit)
-		{
-			orbit.Refresh();
-		}
-		else
-		{
-			TrySpawnOrbit();
-		}
-		if (anime != null)
-		{
-			anime.Update();
-		}
-		if (owner.trait is TraitFakeObj)
-		{
-			TraitFakeObj traitFakeObj = owner.trait as TraitFakeObj;
-			if (traitFakeObj.growth != null)
-			{
-				traitFakeObj.growth?.OnRenderTileMap(p, owner.IsInstalled && owner.altitude == 0 && owner.pos.FirstThing == owner);
-				return;
-			}
-		}
-		if (!isChara && !owner.IsInstalled && owner.category.tileDummy != 0 && !owner.isRoofItem && owner.ExistsOnMap && owner.trait.UseDummyTile)
-		{
-			SubPassData.Current = SubPassData.Default;
-			RenderDataObjDummy rendererObjDummy = EClass.scene.screenElin.tileMap.rendererObjDummy;
-			p.tile = rendererObjDummy.tile;
-			p.dir = 0;
-			if (hasActor)
-			{
-				actor.SetActive(enable: false);
-			}
-			rendererObjDummy.Draw(p);
-			if (drawShadow && !owner.pos.cell.ignoreObjShadow)
-			{
-				EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + rendererObjDummy.offsetShadow.x, position.y + rendererObjDummy.offsetShadow.y + p.shadowFix, position.z + rendererObjDummy.offsetShadow.z, ShadowData.Instance.items[rendererObjDummy.shadowPref.shadow], rendererObjDummy.shadowPref, 0, p.snow);
-			}
-		}
-		else
-		{
-			SubPassData.Current = owner.GetSubPassData();
-			SourcePref pref = GetPref();
-			RenderData renderData = data;
-			int prefIndex = owner.PrefIndex;
-			if (Player.seedHallucination != 0 && CanBeHallucinated())
-			{
-				Rand.SetSeed(Player.seedHallucination + owner.uid);
-				CardRow cardRow = null;
-				bool flag = false;
-				for (int i = 0; i < 20; i++)
+				SubPassData.Current = SubPassData.Default;
+				RenderDataObjDummy rendererObjDummy = EClass.scene.screenElin.tileMap.rendererObjDummy;
+				p.tile = rendererObjDummy.tile;
+				p.dir = 0;
+				if (hasActor)
 				{
-					if (owner.isChara)
-					{
-						cardRow = EClass.sources.charas.rows.RandomItem();
-						if (cardRow.multisize)
-						{
-							continue;
-						}
-					}
-					else
-					{
-						cardRow = EClass.sources.things.rows.RandomItem();
-						if (cardRow.tileType != owner.TileType)
-						{
-							continue;
-						}
-					}
-					if (cardRow.chance != 0 && cardRow._tiles.Length != 0 && cardRow.idActor.IsEmpty() && cardRow.idExtra.IsEmpty() && SubPassData.Current == SubPassData.Default && !(cardRow._idRenderData != owner.sourceCard._idRenderData))
-					{
-						flag = true;
-						break;
-					}
+					actor.SetActive(enable: false);
 				}
-				if (flag)
+				rendererObjDummy.Draw(p);
+				if (drawShadow && !owner.pos.cell.ignoreObjShadow)
 				{
-					renderData = cardRow.renderData;
-					pref = cardRow.pref;
-					cardRow.model.dir = owner.dir;
-					cardRow.model.SetRenderParam(p);
-					prefIndex = cardRow.model.PrefIndex;
+					EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + rendererObjDummy.offsetShadow.x, position.y + rendererObjDummy.offsetShadow.y + p.shadowFix, position.z + rendererObjDummy.offsetShadow.z, ShadowData.Instance.items[rendererObjDummy.shadowPref.shadow], rendererObjDummy.shadowPref, 0, p.snow);
 				}
-				Rand.SetSeed();
 			}
-			if (owner.trait is TraitFigure)
+			else
 			{
-				if (!owner.c_idRefCard.IsEmpty() && (owner.IsInstalled || (EClass.pc.held != owner && !owner.ExistsOnMap) || owner.isRoofItem))
+				SubPassData.Current = owner.GetSubPassData();
+				SourcePref pref = GetPref();
+				RenderData renderData = data;
+				int prefIndex = owner.PrefIndex;
+				if (Player.seedHallucination != 0 && CanBeHallucinated())
 				{
-					TraitFigure traitFigure = owner.trait as TraitFigure;
-					SourceChara.Row row = EClass.sources.charas.map.TryGetValue(owner.c_idRefCard) ?? EClass.sources.charas.map["putty"];
-					renderData = row.renderData;
-					pref = row.pref;
-					int matColor = traitFigure.GetMatColor();
-					drawShadow = traitFigure.ShowShadow;
-					if (row._tiles.Length == 0 || data.pass == null)
+					Rand.SetSeed(Player.seedHallucination + owner.uid);
+					CardRow cardRow = null;
+					bool flag = false;
+					for (int i = 0; i < 20; i++)
 					{
-						if (traitFigure.extraRenderer == null)
+						if (owner.isChara)
 						{
-							traitFigure.extraRenderer = new CharaRenderer();
-							traitFigure.extraRenderer.SetOwner(CharaGen.Create(row.id));
-						}
-						if (matColor >= -3)
-						{
-							if (matColor == -3)
+							cardRow = EClass.sources.charas.rows.RandomItem();
+							if (cardRow.multisize)
 							{
-								MatColors matColors = EClass.core.Colors.matColors["ether"];
-								p.matColor = BaseTileMap.GetColorInt(ref matColors.main, 100) * -1;
+								continue;
 							}
 						}
 						else
 						{
-							p.matColor = matColor;
+							cardRow = EClass.sources.things.rows.RandomItem();
+							if (cardRow.tileType != owner.TileType)
+							{
+								continue;
+							}
 						}
-						traitFigure.extraRenderer.Draw(p, ref v, drawShadow);
-						return;
+						if (cardRow.chance != 0 && cardRow._tiles.Length != 0 && cardRow.idActor.IsEmpty() && cardRow.idExtra.IsEmpty() && SubPassData.Current == SubPassData.Default && !(cardRow._idRenderData != owner.sourceCard._idRenderData))
+						{
+							flag = true;
+							break;
+						}
 					}
-					if (EClass.core.config.game.antiSpider && row.skinAntiSpider != 0)
+					if (flag)
 					{
-						owner.refVal = row.skinAntiSpider;
+						renderData = cardRow.renderData;
+						pref = cardRow.pref;
+						cardRow.model.dir = owner.dir;
+						cardRow.model.SetRenderParam(p);
+						prefIndex = cardRow.model.PrefIndex;
 					}
-					p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
-					p.matColor = matColor;
-					pref = row.pref;
-					p.x += pref.x * (float)((owner.dir % 2 == 0) ? 1 : (-1));
-					p.z += pref.z;
-					switch (row.id)
-					{
-					case "bike_kane":
-					case "bike_kane_custom":
-					case "bike_leet":
-						p.z -= 0.1f;
-						break;
-					default:
-						p.y += pref.y;
-						break;
-					}
-					if (owner.noShadow || !owner.IsInstalled)
-					{
-						drawShadow = false;
-					}
+					Rand.SetSeed();
 				}
-				else
+				if (owner.trait is TraitFigure)
 				{
-					renderData = owner.sourceCard.renderData;
+					if (!owner.c_idRefCard.IsEmpty() && (owner.IsInstalled || (EClass.pc.held != owner && !owner.ExistsOnMap) || owner.isRoofItem))
+					{
+						TraitFigure traitFigure = owner.trait as TraitFigure;
+						SourceChara.Row row = EClass.sources.charas.map.TryGetValue(owner.c_idRefCard) ?? EClass.sources.charas.map["putty"];
+						renderData = row.renderData;
+						pref = row.pref;
+						int matColor = traitFigure.GetMatColor();
+						drawShadow = traitFigure.ShowShadow;
+						if (row._tiles.Length == 0 || data.pass == null)
+						{
+							if (traitFigure.extraRenderer == null)
+							{
+								traitFigure.extraRenderer = new CharaRenderer();
+								traitFigure.extraRenderer.SetOwner(CharaGen.Create(row.id));
+							}
+							if (matColor >= -3)
+							{
+								if (matColor == -3)
+								{
+									MatColors matColors = EClass.core.Colors.matColors["ether"];
+									p.matColor = BaseTileMap.GetColorInt(ref matColors.main, 100) * -1;
+								}
+							}
+							else
+							{
+								p.matColor = matColor;
+							}
+							traitFigure.extraRenderer.Draw(p, ref v, drawShadow);
+							return;
+						}
+						if (EClass.core.config.game.antiSpider && row.skinAntiSpider != 0)
+						{
+							owner.refVal = row.skinAntiSpider;
+						}
+						p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
+						p.matColor = matColor;
+						pref = row.pref;
+						p.x += pref.x * (float)((owner.dir % 2 == 0) ? 1 : (-1));
+						p.z += pref.z;
+						switch (row.id)
+						{
+						case "bike_kane":
+						case "bike_kane_custom":
+						case "bike_leet":
+							p.z -= 0.1f;
+							break;
+						default:
+							p.y += pref.y;
+							break;
+						}
+						if (owner.noShadow || !owner.IsInstalled)
+						{
+							drawShadow = false;
+						}
+					}
+					else
+					{
+						renderData = owner.sourceCard.renderData;
+					}
 				}
-			}
-			if (replacer != null)
-			{
-				renderData = replacer.data;
-				pref = replacer.pref;
+				if (replacer != null)
+				{
+					renderData = replacer.data;
+					pref = replacer.pref;
+					SubPassData.Current = SubPassData.Default;
+				}
+				if (isChara || hasActor)
+				{
+					p.x += pref.x * (float)((!owner.flipX) ? 1 : (-1));
+					p.z += pref.z;
+				}
+				p.y += pref.y;
+				int shadow = pref.shadow;
+				bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.visibleWithTelepathy);
+				if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
+				{
+					bool flag3 = ((!isChara) ? (owner.dir % 2 == 1) : (owner.dir == 1 || owner.dir == 2));
+					EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - (owner.isChara ? 0f : (RenderObject.altitudeFix * (float)owner.altitude)), position.z + renderData.offsetShadow.z, ShadowData.Instance.items[shadow], pref, prefIndex, p.snow);
+				}
+				if (usePass)
+				{
+					if (owner.noSnow)
+					{
+						p.snow = false;
+					}
+					if (!flag2)
+					{
+						renderData.Draw(p);
+					}
+				}
+				else if (hasActor)
+				{
+					if (owner.isChara && owner.Chara.ride != null && (EClass.core.config.game.showRide == 2 || (EClass.core.config.game.showRide == 1 && !owner.Cell.HasRoof && !EClass._map.IsIndoor)) && !owner.IsDeadOrSleeping)
+					{
+						Chara ride = owner.Chara.ride;
+						CharaActorPCC charaActorPCC = ride.renderer.actor as CharaActorPCC;
+						CharaActorPCC charaActorPCC2 = actor as CharaActorPCC;
+						ride.angle = owner.angle;
+						if (charaActorPCC != null && charaActorPCC2 != null)
+						{
+							charaActorPCC.provider.currentDir = charaActorPCC2.provider.currentDir;
+							charaActorPCC.provider.currentFrame = charaActorPCC2.provider.currentFrame;
+							charaActorPCC.provider.SetSpriteMain();
+							charaActorPCC.RefreshSprite();
+						}
+						PCCData.RideData ride2 = (ride.renderer as CharaRenderer).pccData.ride;
+						float x = p.x;
+						float y = p.y;
+						float z = p.z;
+						Vector3 v2 = new Vector3(v.x, v.y, v.z);
+						ride.renderer.Draw(p, ref v2, drawShadow: false);
+						int currentDir = actor.currentDir;
+						p.x = x + RenderObject.renderSetting.ridePos[currentDir].x + ride2.x * (float)(currentDir switch
+						{
+							2 => -1, 
+							1 => 1, 
+							_ => 0, 
+						});
+						p.y = y + RenderObject.renderSetting.ridePos[currentDir].y + ride2.y + ride2.jump * (float)((actor.GetFrame() % 2 == 1) ? 1 : 0);
+						p.z = z + RenderObject.renderSetting.ridePos[currentDir].z - ride2.z;
+					}
+					if (flag2)
+					{
+						actor.SetActive(enable: false);
+					}
+					else
+					{
+						actor.SetActive(enable: true);
+						actor.OnRender(p);
+					}
+				}
+				if (isChara)
+				{
+					if (owner.Chara.parasite != null)
+					{
+						owner.Chara.parasite.renderer.position = position;
+					}
+					if (owner.Chara.ride != null)
+					{
+						owner.Chara.ride.renderer.position = position;
+					}
+				}
 				SubPassData.Current = SubPassData.Default;
 			}
-			if (isChara || hasActor)
+			if (listTC.Count > 0)
 			{
-				p.x += pref.x * (float)((!owner.flipX) ? 1 : (-1));
-				p.z += pref.z;
-			}
-			p.y += pref.y;
-			int shadow = pref.shadow;
-			bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.visibleWithTelepathy);
-			if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
-			{
-				bool flag3 = ((!isChara) ? (owner.dir % 2 == 1) : (owner.dir == 1 || owner.dir == 2));
-				EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - (owner.isChara ? 0f : (RenderObject.altitudeFix * (float)owner.altitude)), position.z + renderData.offsetShadow.z, ShadowData.Instance.items[shadow], pref, prefIndex, p.snow);
-			}
-			if (usePass)
-			{
-				if (owner.noSnow)
+				RenderObject.tempV = position;
+				RenderObject.tempV.y += data.offset.y + data.size.y + owner.Pref.heightFix;
+				for (int num = listTC.Count - 1; num >= 0; num--)
 				{
-					p.snow = false;
-				}
-				if (!flag2)
-				{
-					renderData.Draw(p);
+					listTC[num].OnDraw(ref RenderObject.tempV);
 				}
 			}
-			else if (hasActor)
+			if (owner.trait.RenderExtra)
 			{
-				if (owner.isChara && owner.Chara.ride != null && (EClass.core.config.game.showRide == 2 || (EClass.core.config.game.showRide == 1 && !owner.Cell.HasRoof && !EClass._map.IsIndoor)) && !owner.IsDeadOrSleeping)
-				{
-					Chara ride = owner.Chara.ride;
-					CharaActorPCC charaActorPCC = ride.renderer.actor as CharaActorPCC;
-					CharaActorPCC charaActorPCC2 = actor as CharaActorPCC;
-					ride.angle = owner.angle;
-					if (charaActorPCC != null && charaActorPCC2 != null)
-					{
-						charaActorPCC.provider.currentDir = charaActorPCC2.provider.currentDir;
-						charaActorPCC.provider.currentFrame = charaActorPCC2.provider.currentFrame;
-						charaActorPCC.provider.SetSpriteMain();
-						charaActorPCC.RefreshSprite();
-					}
-					PCCData.RideData ride2 = (ride.renderer as CharaRenderer).pccData.ride;
-					float x = p.x;
-					float y = p.y;
-					float z = p.z;
-					Vector3 v2 = new Vector3(v.x, v.y, v.z);
-					ride.renderer.Draw(p, ref v2, drawShadow: false);
-					int currentDir = actor.currentDir;
-					p.x = x + RenderObject.renderSetting.ridePos[currentDir].x + ride2.x * (float)(currentDir switch
-					{
-						2 => -1, 
-						1 => 1, 
-						_ => 0, 
-					});
-					p.y = y + RenderObject.renderSetting.ridePos[currentDir].y + ride2.y + ride2.jump * (float)((actor.GetFrame() % 2 == 1) ? 1 : 0);
-					p.z = z + RenderObject.renderSetting.ridePos[currentDir].z - ride2.z;
-				}
-				if (flag2)
-				{
-					actor.SetActive(enable: false);
-				}
-				else
-				{
-					actor.SetActive(enable: true);
-					actor.OnRender(p);
-				}
+				owner.trait.OnRenderExtra(p);
 			}
-			if (isChara)
-			{
-				if (owner.Chara.parasite != null)
-				{
-					owner.Chara.parasite.renderer.position = position;
-				}
-				if (owner.Chara.ride != null)
-				{
-					owner.Chara.ride.renderer.position = position;
-				}
-			}
-			SubPassData.Current = SubPassData.Default;
-		}
-		if (listTC.Count > 0)
-		{
-			RenderObject.tempV = position;
-			RenderObject.tempV.y += data.offset.y + data.size.y + owner.Pref.heightFix;
-			for (int num = listTC.Count - 1; num >= 0; num--)
-			{
-				listTC[num].OnDraw(ref RenderObject.tempV);
-			}
-		}
-		if (owner.trait.RenderExtra)
-		{
-			owner.trait.OnRenderExtra(p);
 		}
 		bool CanBeHallucinated()
 		{

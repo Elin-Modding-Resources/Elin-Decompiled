@@ -82,7 +82,9 @@ public class DropdownGrid : EMono
 
 	public List<Thing> ListIngredients(Recipe.Ingredient ingredient, StockSearchMode searchMode)
 	{
-		return EMono._map.Stocked.ListThingStack(ingredient, searchMode).list;
+		List<Thing> obj = EMono._map.Stocked.ListThingStack(ingredient, searchMode).list;
+		obj.Sort(UIList.SortMode.ByCategory);
+		return obj;
 	}
 
 	public void BuildIngredients(Recipe _recipe, Image _icon, Action _onValueChange, StockSearchMode _searchMode)
@@ -357,7 +359,7 @@ public class DropdownGrid : EMono
 			return;
 		}
 		Recipe.Ingredient ing = componentOf.ing;
-		List<Thing> list = EMono._map.Stocked.ListThingStack(ing, searchMode).list;
+		List<Thing> list = ListIngredients(ing, searchMode);
 		int num = list.IndexOf(ing.thing);
 		if (num != -1)
 		{

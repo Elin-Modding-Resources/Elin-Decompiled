@@ -1245,6 +1245,10 @@ public class FactionBranch : EClass
 		{
 			return null;
 		}
+		if (c.memberType == FactionMemberType.Livestock && policies.IsActive(2715))
+		{
+			return null;
+		}
 		Thing thing = EClass._zone.TryGetThingFromSharedContainer((Thing t) => c.CanEat(t, shouldEat: true) && !t.c_isImportant);
 		if (thing != null)
 		{

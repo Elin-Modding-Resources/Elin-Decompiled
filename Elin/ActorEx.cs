@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ActorEx : Actor
@@ -7,6 +8,8 @@ public class ActorEx : Actor
 		Default,
 		JukeBox
 	}
+
+	public static readonly List<ActorEx> instances = new List<ActorEx>();
 
 	public Type type;
 
@@ -30,6 +33,8 @@ public class ActorEx : Actor
 
 	public SoundData data;
 
+	private int sameSoundCount = 1;
+
 	public void SetOwner(Card c)
 	{
 		owner = c;
@@ -42,6 +47,7 @@ public class ActorEx : Actor
 			audioSource.clip = data.clip;
 			audioSource.pitch = data.pitch * (1f + ((data.randomPitch == 0f) ? 0f : Rand.Range(0f - data.randomPitch, data.randomPitch)));
 		}
+		RefreshNearbyCounts();
 		Refresh();
 	}
 
@@ -65,6 +71,7 @@ public class ActorEx : Actor
 		{
 			num2 *= outsideRoomVolume;
 		}
+		num2 /= (float)sameSoundCount;
 		if (num2 <= 0f)
 		{
 			return 0f;
@@ -157,5 +164,52 @@ public class ActorEx : Actor
 	public void Kill()
 	{
 		Object.Destroy(base.gameObject);
+	}
+
+	private void OnEnable()
+	{
+		if (!instances.Contains(this))
+		{
+			instances.Add(this);
+		}
+		RefreshNearbyCounts();
+	}
+
+	private void OnDisable()
+	{
+		instances.Remove(this);
+		RefreshNearbyCounts();
+	}
+
+	private void RefreshNearbyCounts()
+	{
+		foreach (ActorEx instance in instances)
+		{
+			if ((bool)instance)
+			{
+				instance.UpdateSameSoundCount();
+			}
+		}
+	}
+
+	private void UpdateSameSoundCount()
+	{
+		sameSoundCount = 1;
+		if (!audioSource || !audioSource.clip)
+		{
+			return;
+		}
+		sameSoundCount = 0;
+		float num = 4f;
+		AudioClip clip = audioSource.clip;
+		Vector3 position = base.transform.position;
+		foreach (ActorEx instance in instances)
+		{
+			if ((bool)instance && (bool)instance.audioSource && !(instance.audioSource.clip != clip) && !((instance.transform.position - position).sqrMagnitude > num))
+			{
+				sameSoundCount++;
+			}
+		}
+		sameSoundCount = Mathf.Max(1, sameSoundCount);
 	}
 }

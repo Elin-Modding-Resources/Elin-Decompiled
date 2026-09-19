@@ -1842,7 +1842,7 @@ public class Chara : Card, IPathfindWalker
 			return false;
 		}
 		List<Chara> list = ListFussableCharas(3);
-		if (list.Count < 8)
+		if (list.Count < 7)
 		{
 			return false;
 		}
@@ -1881,7 +1881,7 @@ public class Chara : Card, IPathfindWalker
 			Effect.Get<EffectIRenderer>("throw_fuse").Play(item, item, item.pos, pos);
 			item.Destroy();
 			num++;
-			if (num >= 8)
+			if (num >= 7)
 			{
 				break;
 			}
@@ -6870,6 +6870,10 @@ public class Chara : Card, IPathfindWalker
 			return false;
 		}
 		if (mimicry != null && mimicry.IsThing)
+		{
+			return false;
+		}
+		if (!base.IsPCFactionOrMinion && OriginalHostility == Hostility.Neutral && !(trait is TraitGuard) && id != "unicorn")
 		{
 			return false;
 		}

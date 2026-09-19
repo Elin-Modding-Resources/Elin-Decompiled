@@ -174,6 +174,8 @@ public class GameSetting : ScriptableObject
 
 		public Vector3[] rampFix;
 
+		public Vector3[] bigdoorFix;
+
 		public Vector3 vFix;
 
 		public Vector3 pccScale;

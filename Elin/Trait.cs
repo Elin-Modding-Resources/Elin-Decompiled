@@ -450,6 +450,8 @@ public class Trait : EClass
 
 	public virtual bool UseAltTiles => owner.isOn;
 
+	public virtual bool UsePositionFix => false;
+
 	public virtual bool UseLowblock => false;
 
 	public virtual bool UseExtra => true;
@@ -1327,6 +1329,10 @@ public class Trait : EClass
 	}
 
 	public virtual void OnUninstall()
+	{
+	}
+
+	public virtual void PositionFix(ref Vector3 v)
 	{
 	}
 

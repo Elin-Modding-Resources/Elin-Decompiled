@@ -32,6 +32,8 @@ public class UIMagicChest : EMono
 
 	public int pageMax;
 
+	public int pageJump = 7;
+
 	public List<Thing> filteredList = new List<Thing>();
 
 	public Color colorCat;
@@ -65,20 +67,18 @@ public class UIMagicChest : EMono
 		for (int i = 0; i < 9; i++)
 		{
 			UIButton b = Util.Instantiate(t, layoutPage);
-			b.mainText.text = (i + 1).ToString() ?? "";
 			buttonsPage.Add(b);
-			int _i = i;
 			b.SetOnClick(delegate
 			{
 				if (!UIContextMenu.Current)
 				{
-					page = _i;
-					groupPage.Select(b);
+					page = b.refInt;
 					SE.Tab();
 					Redraw();
 				}
 			});
 		}
+		groupPage.selectOnClick = false;
 		groupPage.Init();
 		inputSearch.onValueChanged.AddListener(Search);
 		inputSearch.onSubmit.AddListener(Search);
@@ -91,12 +91,20 @@ public class UIMagicChest : EMono
 	public void OnAfterRedraw()
 	{
 		RefreshBottom();
-		for (int i = 0; i < buttonsPage.Count; i++)
+		int count = buttonsPage.Count;
+		bool flag = pageMax >= count;
+		int num = ((!flag) ? 1 : Mathf.Clamp(page - count / 2 + 1, 1, pageMax - count + 2));
+		for (int i = 0; i < count; i++)
 		{
-			buttonsPage[i].interactable = i <= pageMax;
+			UIButton uIButton = buttonsPage[i];
+			int num2 = ((i != 0) ? ((flag && i == count - 1) ? pageMax : (num + i - 1)) : 0);
+			bool flag2 = (i == 1 && num2 > 1) || (i == count - 2 && num2 < pageMax - 1);
+			uIButton.refInt = (flag2 ? Mathf.Clamp(page + ((i == 1) ? (-pageJump) : pageJump), 0, pageMax) : num2);
+			uIButton.mainText.text = (flag2 ? "…" : ((num2 + 1).ToString() ?? ""));
+			uIButton.interactable = num2 <= pageMax;
 		}
 		groupPage.selected = null;
-		groupPage.Select(page);
+		groupPage.Select((UIButton a) => a.refInt == page);
 	}
 
 	public void RefreshCats()

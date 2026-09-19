@@ -568,6 +568,7 @@ public class GoalCombat : Goal
 				continue;
 			}
 			bool isHOT;
+			int[] list;
 			switch (text)
 			{
 			case "any":
@@ -585,17 +586,17 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag9 = owner.HasCondition<StanceTaunt>();
-				bool flag10 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag9 && !flag10) ? 100 : ((!flag9 && flag10) ? 100 : 0));
+				bool flag7 = owner.HasCondition<StanceTaunt>();
+				bool flag8 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
 				break;
 			}
 			case "song":
 			{
 				BaseSong baseSong = owner.GetCondition(act.source.proc[1]) as BaseSong;
 				bool num2 = baseSong != null;
-				bool flag8 = num2 && act.GetPower(owner) > baseSong.power;
-				num = ((!num2 || flag8) ? 200 : 0);
+				bool flag6 = num2 && act.GetPower(owner) > baseSong.power;
+				num = ((!num2 || flag6) ? 200 : 0);
 				break;
 			}
 			case "melee":
@@ -663,6 +664,14 @@ public class GoalCombat : Goal
 					ability.pt = true;
 				}
 				break;
+			case "restore":
+				list = ((s.id == 8471) ? Element.List_Mind : Element.List_Body);
+				num = ForeachChara(ability, (Chara c) => RestoreFactor(c), isFriendlyAbility: true);
+				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
+				{
+					ability.pt = true;
+				}
+				break;
 			case "dot":
 			case "attack":
 			case "attackMelee":
@@ -671,13 +680,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag7 = text == "dot";
-				if (flag7 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag10 = text == "dot";
+				if (flag10 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag7)
+				if (num > 0 && flag10)
 				{
 					num += 10;
 				}
@@ -693,13 +702,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = act is ActBolt;
-				if ((owner.pos.IsBlocked && (flag6 || act is ActBall || act is ActBreathe)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
+				bool flag9 = act is ActBolt;
+				if ((owner.pos.IsBlocked && (flag9 || act is ActBall || act is ActBreathe)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag6 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag6 ? 6 : 5) > 0))
+				GetNumEnemy(flag9 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag9 ? 6 : 5) > 0))
 				{
 					continue;
 				}
@@ -872,7 +881,7 @@ public class GoalCombat : Goal
 				break;
 			case 8200:
 			case 8201:
-				if (owner.HasElement(400))
+				if (owner.HasElement(400) || (tactics.DestDist > 1 && owner.Dist(tc) == tactics.DestDist))
 				{
 					continue;
 				}
@@ -1014,6 +1023,28 @@ public class GoalCombat : Goal
 					}
 				}
 				return num7;
+			}
+			int RestoreFactor(Chara c)
+			{
+				if (c.tempElements == null)
+				{
+					return 0;
+				}
+				int num6 = 0;
+				int[] array = list;
+				foreach (int num7 in array)
+				{
+					Element element = c.tempElements.GetElement(num7);
+					if (element != null && element.vBase < 0)
+					{
+						num6 += 20;
+					}
+				}
+				if (num6 != 0)
+				{
+					return num6 + tactics.P_Heal;
+				}
+				return 0;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);

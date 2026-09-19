@@ -19,7 +19,14 @@ public class ConBaseTransmuteMimic : ConTransmute
 	public override void OnRemoved()
 	{
 		owner.mimicry = null;
+		owner.RemoveAllStances();
 		base.OnRemoved();
+	}
+
+	public override void Change()
+	{
+		owner.RemoveAllStances();
+		base.Change();
 	}
 
 	public override void Reveal(Card attacker = null, bool surprise = false)

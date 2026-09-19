@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UIDragGridIngredients : EMono
@@ -16,7 +17,7 @@ public class UIDragGridIngredients : EMono
 		bool activeSelf = goList.activeSelf;
 		bool flag = EMono.pc.ai.IsNoGoal || !EMono.pc.ai.IsRunning;
 		goList.SetActive(flag);
-		if (activeSelf != flag)
+		if (activeSelf != flag && flag)
 		{
 			Refresh();
 		}
@@ -59,6 +60,11 @@ public class UIDragGridIngredients : EMono
 			}
 			list.Sort(UIList.SortMode.ByCategory);
 		}
+		if (this.list.buttons.Count > 0 && this.list.items.SequenceEqual(list))
+		{
+			this.list.Redraw();
+			return;
+		}
 		this.list.callbacks = new UIList.Callback<Thing, ButtonGrid>
 		{
 			onClick = delegate(Thing a, ButtonGrid b)
@@ -70,7 +76,6 @@ public class UIDragGridIngredients : EMono
 			},
 			onInstantiate = delegate(Thing a, ButtonGrid b)
 			{
-				b.SetCard(a, ButtonGrid.Mode.Grid);
 				b.SetOnClick(delegate
 				{
 				});
@@ -78,6 +83,10 @@ public class UIDragGridIngredients : EMono
 				{
 					this.list.callbacks.OnClick(a, b);
 				};
+			},
+			onRedraw = delegate(Thing a, ButtonGrid b, int i)
+			{
+				b.SetCard(a, ButtonGrid.Mode.Grid);
 			}
 		};
 		this.list.Clear();
