@@ -52,6 +52,7 @@ var classMap =
     [ "ListPointsInCircle", "classMap.html#ae0d570611322d47b16a2caa180bd4b19", null ],
     [ "ListPointsInLine", "classMap.html#ad9edbe8e7b77b16f351bb0e4c11a987b", null ],
     [ "ListPointsInSquare", "classMap.html#a9476495bd110eccc9078b9e0f77f0cd5", null ],
+    [ "ListPointsOnEdge", "classMap.html#ad9e7f894fa7a7c533ecbff22043bcb40", null ],
     [ "ListThing< T >", "classMap.html#a60ffcd91d59b14d07d3499bf2c2c5ddf", null ],
     [ "Load", "classMap.html#ad374b94267ddd46c0015aeaf963fcf7f", null ],
     [ "MineBlock", "classMap.html#a51bbbcb951eb4d3c64498ea00d50aa37", null ],

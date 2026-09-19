@@ -100,6 +100,7 @@ var classTrait =
     [ "OnUse", "classTrait.html#a03ccfd851f0b341ec354cec6c376a2df", null ],
     [ "OnUse", "classTrait.html#a8a2bc513279c43772264edcd309c2aa4", null ],
     [ "PlayToggleEffect", "classTrait.html#a70c7071919279552c1882df28b9d8fd6", null ],
+    [ "PositionFix", "classTrait.html#a5219520720e100a938e0986fb9b49f5f", null ],
     [ "RefreshRenderer", "classTrait.html#aa636e58d9419aed32777b133d1d2b301", null ],
     [ "Refuel", "classTrait.html#a7f66582144da3ace7184cb880bc57c99", null ],
     [ "SetMainText", "classTrait.html#a15f92ba5eb5da6d5f4ea350658938e90", null ],
@@ -260,5 +261,6 @@ var classTrait =
     [ "UseExtra", "classTrait.html#a9c5b44dfa8b346bc1709cc67b6acba9f", null ],
     [ "UseLightColor", "classTrait.html#acff2c19d1e4b56b34da358f7cd90849c", null ],
     [ "UseLowblock", "classTrait.html#a5c715d0d915115ba26fb9e31c5e90aee", null ],
+    [ "UsePositionFix", "classTrait.html#a8871bc7367a541091fb279c5b202185b", null ],
     [ "WeightMod", "classTrait.html#ae81e301facb283e15daed9f7191f06d7", null ]
 ];

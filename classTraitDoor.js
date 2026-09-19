@@ -16,6 +16,7 @@ var classTraitDoor =
     [ "CanBeTeleported", "classTraitDoor.html#aa2aab9bfa7125a999b5b2ac5a598d9c6", null ],
     [ "CanBuildInTown", "classTraitDoor.html#a01266a1c7b65a7c0d9e6b1d8711e1e57", null ],
     [ "HaveUpdate", "classTraitDoor.html#a87d71aa097e12f8717fa4f8d4d8e6e6b", null ],
+    [ "height", "classTraitDoor.html#a22e11b34d1efec390a4d4eeb449565d0", null ],
     [ "idSound", "classTraitDoor.html#ad0b7578066367ee483762b3dacf54578", null ],
     [ "IsDoor", "classTraitDoor.html#aceba9b32a32bbec0ec12806211fca9d3", null ],
     [ "IsOpenSight", "classTraitDoor.html#abaea5360af6614346d7e251fad646b03", null ],

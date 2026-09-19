@@ -83,6 +83,7 @@ var classUIInventory =
     [ "moldButtonGrid", "classUIInventory.html#a3ed9d8aad7e41695de1c69d7b73d6624", null ],
     [ "moldButtonGridless", "classUIInventory.html#ad8e25d0167e14e2250636223a6e987c5", null ],
     [ "moldSmallTab", "classUIInventory.html#ab153a97d2369a546fff97f4c2d1cd077", null ],
+    [ "sortDirty", "classUIInventory.html#a76b6484e8c39aa0e93c345638dfbaf95", null ],
     [ "tabs", "classUIInventory.html#aabca6c81bd09a0385aec49b3e8728792", null ],
     [ "transOverflow", "classUIInventory.html#a61e2a9128919831e352165b946d045f1", null ],
     [ "uiMagic", "classUIInventory.html#add4e649b95d3c83366db2c3304f3688d", null ],

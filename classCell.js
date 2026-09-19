@@ -93,6 +93,7 @@ var classCell =
     [ "shore", "classCell.html#a6b8fdd0ef28bc6cc4d14be57bfb2b7d9", null ],
     [ "Size", "classCell.html#a63124bc7d61755ebaa7514242a5eea1f", null ],
     [ "topHeight", "classCell.html#a6e6ad86902c7f41045f49d82523f824c", null ],
+    [ "traitDoor", "classCell.html#a8d4f3827cd22eae5043ccaa1ae86aa78", null ],
     [ "Void", "classCell.html#acc63ab24ff0dcb68d40812b6674ea603", null ],
     [ "x", "classCell.html#acac94c713ce0339a4942f640e64bc15e", null ],
     [ "z", "classCell.html#a991b9b8ae50a8f3e29f76e7d448a2bd8", null ],

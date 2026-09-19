@@ -13,6 +13,7 @@ var classGameSetting_1_1RenderSetting =
     [ "animeWalk", "classGameSetting_1_1RenderSetting.html#aae3f12482b5d262e0b6a67fc3646fb1f", null ],
     [ "astralBodyFixZ", "classGameSetting_1_1RenderSetting.html#a85fd15e047495a6a7380f75e61a56ea0", null ],
     [ "bgs", "classGameSetting_1_1RenderSetting.html#ac7fd6f9986812f6e8e0c475822b05456", null ],
+    [ "bigdoorFix", "classGameSetting_1_1RenderSetting.html#ad4992ffb07f0cc21b44b4508044e1bce", null ],
     [ "charaPos", "classGameSetting_1_1RenderSetting.html#a59a993c39fa2211745cabc04ace204a1", null ],
     [ "charaZ", "classGameSetting_1_1RenderSetting.html#a1aa001319b607780fe69619a9971da23", null ],
     [ "crateHeight", "classGameSetting_1_1RenderSetting.html#ac4d866a1b965d39be0461af57aec2d91", null ],

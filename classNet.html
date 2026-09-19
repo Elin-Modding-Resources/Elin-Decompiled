@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.345.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.346 Nightly</span>
    </div>
   </td>
  </tr>
@@ -395,7 +395,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  403</span>            }</div>
 <div class="line"><span class="lineno">  404</span>            <span class="keywordflow">foreach</span> (ChatLog item2 <span class="keywordflow">in</span> list)</div>
 <div class="line"><span class="lineno">  405</span>            {</div>
-<div class="line"><span class="lineno">  406</span>                item2.msg = item2.msg.Replace(<span class="stringliteral">&quot;\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;&amp;quot;&quot;</span>, <span class="stringliteral">&quot;\&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  406</span>                item2.msg = WebUtility.HtmlDecode(item2.msg).Replace(<span class="stringliteral">&quot;\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><span class="lineno">  407</span>                    .ToTitleCase();</div>
 <div class="line"><span class="lineno">  408</span>            }</div>
 <div class="line"><span class="lineno">  409</span>            list.Reverse();</div>

@@ -1,5 +1,6 @@
 var classConBaseTransmuteMimic =
 [
+    [ "Change", "classConBaseTransmuteMimic.html#af790536bbe4b58fa944f4b749f49befa", null ],
     [ "GetHoverText", "classConBaseTransmuteMimic.html#ada5338c6d17becce82a425dda8be481e", null ],
     [ "GetHoverText2", "classConBaseTransmuteMimic.html#a27e753e067ae56fd33d7c3357192e558", null ],
     [ "GetName", "classConBaseTransmuteMimic.html#a9b86f20c6cef9b3c7bd123460c67322b", null ],

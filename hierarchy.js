@@ -1759,6 +1759,10 @@ var hierarchy =
         [ "TraitDeedWedding", "classTraitDeedWedding.html", null ],
         [ "TraitDice", "classTraitDice.html", null ],
         [ "TraitDoor", "classTraitDoor.html", [
+          [ "TraitDoorBig", "classTraitDoorBig.html", [
+            [ "TraitDoorBigL", "classTraitDoorBigL.html", null ],
+            [ "TraitDoorBigR", "classTraitDoorBigR.html", null ]
+          ] ],
           [ "TraitDoorCurtain", "classTraitDoorCurtain.html", null ],
           [ "TraitDoorFence", "classTraitDoorFence.html", null ],
           [ "TraitDoorSwing", "classTraitDoorSwing.html", [
@@ -2268,6 +2272,8 @@ var hierarchy =
     [ "CoreRef.Icons.Enc", "classCoreRef_1_1Icons_1_1Enc.html", null ],
     [ "ENC", "classENC.html", null ],
     [ "TileManager.Entry", "classTileManager_1_1Entry.html", null ],
+    [ "ClassExtension.EnumNames< T >", "classClassExtension_1_1EnumNames.html", null ],
+    [ "ClassExtension.EnumSize< T >", "classClassExtension_1_1EnumSize.html", null ],
     [ "ERROR", "classERROR.html", null ],
     [ "InvOwner.ErrorMessage", "classInvOwner_1_1ErrorMessage.html", null ],
     [ "EScriptState", null, [

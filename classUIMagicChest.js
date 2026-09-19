@@ -29,6 +29,7 @@ var classUIMagicChest =
     [ "layoutPage", "classUIMagicChest.html#adc5bb57fa79ee896808379ba43537e6f", null ],
     [ "moldCat", "classUIMagicChest.html#acb6b3242e306dd4a49931dbbb479cc3e", null ],
     [ "page", "classUIMagicChest.html#a03875b33175263127ed5046ec6695a38", null ],
+    [ "pageJump", "classUIMagicChest.html#ac321fb3a172dec982e2e72959e3d328d", null ],
     [ "pageMax", "classUIMagicChest.html#a03dc9cb30be9958fb997e8591a0a5542", null ],
     [ "searchRecipes", "classUIMagicChest.html#ad608dbd6cfb2a1635236fe04618c034b", null ],
     [ "timerSearch", "classUIMagicChest.html#adf1f6ff6dcca1045ce9cfc666ea6d8f8", null ],

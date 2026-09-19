@@ -1,5 +1,7 @@
 var classClassExtension =
 [
+    [ "EnumNames", "classClassExtension_1_1EnumNames.html", "classClassExtension_1_1EnumNames" ],
+    [ "EnumSize", "classClassExtension_1_1EnumSize.html", "classClassExtension_1_1EnumSize" ],
     [ "_SetAnchor", "classClassExtension.html#acb16bcac176e1062529f57abd99f76cc", null ],
     [ "AddArticle", "classClassExtension.html#af4f2f7cdd714db06ef630a745c8f8cc4", null ],
     [ "AddArticle", "classClassExtension.html#a42e05560c64334d77310c3fecc4029fb", null ],

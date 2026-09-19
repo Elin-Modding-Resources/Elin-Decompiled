@@ -6,7 +6,7 @@ var classRenderData =
     [ "Draw", "classRenderData.html#ac31d8367cdfa01d4a669e8e9929e9392", null ],
     [ "Draw", "classRenderData.html#a337df6bccf7eb5af3e793530018cf0db", null ],
     [ "DrawRepeat", "classRenderData.html#a8c1c2117491d1b6bc58cdf4dfe2edba5", null ],
-    [ "DrawRepeatTo", "classRenderData.html#a13728265eeddbefd64b3f63d07475e36", null ],
+    [ "DrawRepeatTo", "classRenderData.html#a371d11e6c4dfc6c9c6d9da463ace363f", null ],
     [ "DrawShadow", "classRenderData.html#ad453357f4d2679af512271dd688e6160", null ],
     [ "DrawWithRotation", "classRenderData.html#a19a3abcb79eefb5b8e95a8e0a01f1834", null ],
     [ "Init", "classRenderData.html#aba75940aa3f40125a63c3e017ca8b69b", null ],
