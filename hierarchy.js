@@ -537,6 +537,7 @@ var hierarchy =
             [ "ConReload", "classConReload.html", null ],
             [ "ConSmoking", "classConSmoking.html", null ],
             [ "ConSuffocation", "classConSuffocation.html", null ],
+            [ "ConTimeStop", "classConTimeStop.html", null ],
             [ "ConVampire", "classConVampire.html", null ],
             [ "ConWait", "classConWait.html", null ],
             [ "ConWet", "classConWet.html", null ]
@@ -805,6 +806,7 @@ var hierarchy =
               [ "ActParasite", "classActParasite.html", null ]
             ] ],
             [ "ActSwarm", "classActSwarm.html", null ],
+            [ "ActTimeStop", "classActTimeStop.html", null ],
             [ "ActWhirlwind", "classActWhirlwind.html", null ],
             [ "Song", "classSong.html", null ],
             [ "Spell", "classSpell.html", [

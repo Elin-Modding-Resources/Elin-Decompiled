@@ -233,6 +233,7 @@ var classSPELL =
     [ "SpHealJure", "classSPELL.html#a0e48b2a1277287ec604016dbd44888a1", null ],
     [ "SpHealLight", "classSPELL.html#aa674702add00941e01a2357a4aa9009d", null ],
     [ "SpHealOdina", "classSPELL.html#ae4bf281a8b4dc4f5a861180f23ceb9e9", null ],
+    [ "SpHealTouch", "classSPELL.html#a3abbc1a4c3da7675dc3316e754f8f2d3", null ],
     [ "SpHero", "classSPELL.html#a10e8e4fa86c8f1c65a1f970751f8f4eb", null ],
     [ "SpHolyShield", "classSPELL.html#a0af8cce59c76bcd1781f847fb57eac33", null ],
     [ "SpHolyVeil", "classSPELL.html#a1ae7997fa14c80ab07a6bdd1b575fa00", null ],
