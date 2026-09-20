@@ -174,9 +174,9 @@ public class SKILL
 
 	public const int resDecay = 970;
 
-	public const int resDamage = 971;
-
 	public const int carpentry = 255;
+
+	public const int resDamage = 971;
 
 	public const int resCurse = 972;
 
@@ -208,9 +208,9 @@ public class SKILL
 
 	public const int eleDarkness = 913;
 
-	public const int handicraft = 261;
+	public const int weaving = 260;
 
-	public const int sculpture = 258;
+	public const int handicraft = 261;
 
 	public const int eleMind = 914;
 
@@ -228,7 +228,7 @@ public class SKILL
 
 	public const int building = 288;
 
-	public const int weaving = 260;
+	public const int jewelry = 259;
 
 	public const int anatomy = 290;
 
@@ -258,7 +258,7 @@ public class SKILL
 
 	public const int hygine = 310;
 
-	public const int jewelry = 259;
+	public const int sculpture = 258;
 
 	public const int faith = 306;
 
@@ -282,11 +282,11 @@ public class SKILL
 		73, 101, 100, 94, 93, 92, 91, 103, 90, 79,
 		78, 77, 76, 75, 74, 80, 250, 130, 256, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 927,
-		950, 951, 952, 953, 954, 955, 970, 971, 255, 972,
+		950, 951, 952, 953, 954, 955, 970, 255, 971, 972,
 		973, 965, 916, 964, 962, 961, 960, 958, 957, 956,
-		963, 915, 959, 913, 261, 258, 914, 257, 280, 281,
-		285, 286, 287, 288, 260, 290, 291, 292, 293, 289,
-		301, 912, 911, 910, 313, 300, 312, 311, 310, 259,
+		963, 915, 959, 913, 260, 261, 914, 257, 280, 281,
+		285, 286, 287, 288, 259, 290, 291, 292, 293, 289,
+		301, 912, 911, 910, 313, 300, 312, 311, 310, 258,
 		306, 302, 303, 304, 305, 307
 	};
 }

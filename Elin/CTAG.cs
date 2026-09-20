@@ -56,5 +56,6 @@ public enum CTAG
 	allowDevour,
 	noRide,
 	ride,
-	allowIngredient
+	allowIngredient,
+	nurse
 }

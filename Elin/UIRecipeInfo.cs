@@ -367,7 +367,7 @@ public class UIRecipeInfo : EMono
 		}
 		else
 		{
-			listIngredients.SetActive(!recipe.UseStock || recipe.VirtualBlock);
+			listIngredients.SetActive(!recipe.UseStock);
 			if ((bool)goMoney)
 			{
 				goMoney.SetActive(r.CostMoney != 0);

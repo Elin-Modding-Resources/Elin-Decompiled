@@ -273,8 +273,6 @@ public class FEAT
 
 	public const int featEarthStrength = 1411;
 
-	public const int featDiva = 1294;
-
 	public const int featReboot = 1410;
 
 	public const int featBoost = 1409;
@@ -291,9 +289,11 @@ public class FEAT
 
 	public const int featFarmer = 1403;
 
+	public const int featWizard = 1402;
+
 	public const int featFairysan = 1413;
 
-	public const int featWizard = 1402;
+	public const int featThief = 1401;
 
 	public const int featWarrior = 1400;
 
@@ -317,7 +317,7 @@ public class FEAT
 
 	public const int featGod_earth1 = 1305;
 
-	public const int featThief = 1401;
+	public const int featDiva = 1294;
 
 	public const int featWhiteVixen = 1414;
 
@@ -336,9 +336,9 @@ public class FEAT
 		1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211,
 		1212, 1213, 1214, 1215, 1216, 1230, 1229, 1228, 1227, 1226,
 		1225, 1292, 1224, 1222, 1221, 1220, 1219, 1218, 1217, 1223,
-		1293, 1270, 1300, 1412, 1411, 1294, 1410, 1409, 1408, 1407,
-		1406, 1405, 1404, 1403, 1413, 1402, 1400, 1355, 1350, 1345,
-		1340, 1335, 1325, 1320, 1315, 1310, 1305, 1401, 1414
+		1293, 1270, 1300, 1412, 1411, 1410, 1409, 1408, 1407, 1406,
+		1405, 1404, 1403, 1402, 1413, 1401, 1400, 1355, 1350, 1345,
+		1340, 1335, 1325, 1320, 1315, 1310, 1305, 1294, 1414
 	};
 }
 public class Feat : Element

@@ -1032,7 +1032,7 @@ public class UIInventory : EMono
 				{
 					continue;
 				}
-				List<Thing> orCreate = dict.GetOrCreate(item.id);
+				List<Thing> orCreate = dict.GetOrCreate(item.id + item.GetStr(53));
 				bool flag2 = false;
 				for (int i = 0; i < orCreate.Count; i++)
 				{

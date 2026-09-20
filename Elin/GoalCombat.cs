@@ -586,9 +586,9 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag7 = owner.HasCondition<StanceTaunt>();
-				bool flag8 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
+				bool flag9 = owner.HasCondition<StanceTaunt>();
+				bool flag10 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag9 && !flag10) ? 100 : ((!flag9 && flag10) ? 100 : 0));
 				break;
 			}
 			case "song":
@@ -658,7 +658,7 @@ public class GoalCombat : Goal
 			case "hot":
 			case "heal":
 				isHOT = text == "hot";
-				num = ForeachChara(ability, (Chara c) => HealFactor(c), isFriendlyAbility: true);
+				num = ForeachChara(ability, (Chara c) => HealFactor(c), !owner.HasTag(CTAG.nurse));
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
 				{
 					ability.pt = true;
@@ -666,7 +666,7 @@ public class GoalCombat : Goal
 				break;
 			case "restore":
 				list = ((s.id == 8471) ? Element.List_Mind : Element.List_Body);
-				num = ForeachChara(ability, (Chara c) => RestoreFactor(c), isFriendlyAbility: true);
+				num = ForeachChara(ability, (Chara c) => RestoreFactor(c), !owner.HasTag(CTAG.nurse));
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
 				{
 					ability.pt = true;
@@ -680,13 +680,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag10 = text == "dot";
-				if (flag10 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag8 = text == "dot";
+				if (flag8 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag10)
+				if (num > 0 && flag8)
 				{
 					num += 10;
 				}
@@ -702,13 +702,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag9 = act is ActBolt;
-				if ((owner.pos.IsBlocked && (flag9 || act is ActBall || act is ActBreathe)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
+				bool flag7 = act is ActBolt;
+				if ((owner.pos.IsBlocked && (flag7 || act is ActBall || act is ActBreathe)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag9 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag9 ? 6 : 5) > 0))
+				GetNumEnemy(flag7 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag7 ? 6 : 5) > 0))
 				{
 					continue;
 				}
@@ -994,11 +994,15 @@ public class GoalCombat : Goal
 					return 0;
 				}
 				float num6 = (float)c.hp / (float)c.MaxHP;
-				if (num6 > (isHOT ? 0.85f : 0.75f))
+				if (num6 > (isHOT ? 0.85f : 0.75f) && !owner.HasTag(CTAG.nurse))
 				{
 					return 0;
 				}
 				int num7 = tactics.P_Heal - (int)((float)tactics.P_Heal * num6) + (isHOT ? 50 : 25);
+				if (owner.HasTag(CTAG.nurse))
+				{
+					num7 += 100;
+				}
 				foreach (Condition condition2 in c.conditions)
 				{
 					if (condition2 is ConFear)

@@ -50,8 +50,6 @@ public class ENC
 
 	public const int mod_flurry = 621;
 
-	public const int negateFear = 423;
-
 	public const int negateSleep = 424;
 
 	public const int negateConfusion = 425;
@@ -70,7 +68,9 @@ public class ENC
 
 	public const int sanctified = 432;
 
-	public const int negateParalysis = 422;
+	public const int negateTimeStop = 433;
+
+	public const int negateFear = 423;
 
 	public const int defense_range = 435;
 
@@ -96,17 +96,17 @@ public class ENC
 
 	public const int guts = 436;
 
-	public const int sustain_CHA = 447;
+	public const int negateParalysis = 422;
 
 	public const int negateBlind = 421;
 
-	public const int encTail = 419;
+	public const int negatePoison = 420;
 
 	public const int mod_cleave = 622;
 
 	public const int counter = 380;
 
-	public const int rusher = 382;
+	public const int basher = 381;
 
 	public const int redirect_blaser = 383;
 
@@ -122,9 +122,9 @@ public class ENC
 
 	public const int slowDecay = 405;
 
-	public const int negatePoison = 420;
-
 	public const int resMutation = 406;
+
+	public const int travelSpeed = 407;
 
 	public const int resWeather = 408;
 
@@ -146,11 +146,13 @@ public class ENC
 
 	public const int innocence = 418;
 
-	public const int travelSpeed = 407;
+	public const int encTail = 419;
+
+	public const int sustain_CHA = 447;
 
 	public const int sustain_figure = 450;
 
-	public const int basher = 381;
+	public const int rusher = 382;
 
 	public const int bane_undead = 461;
 
@@ -224,19 +226,19 @@ public class ENC
 
 	public const int nonLethal = 485;
 
-	public static readonly int[] IDS = new int[112]
+	public static readonly int[] IDS = new int[113]
 	{
 		655, 654, 653, 652, 651, 641, 650, 656, 640, 660,
 		851, 662, 663, 664, 665, 666, 667, 850, 624, 865,
-		852, 661, 623, 864, 621, 423, 424, 425, 426, 427,
-		428, 429, 430, 431, 432, 422, 435, 437, 438, 439,
-		440, 441, 442, 443, 444, 445, 446, 436, 447, 421,
-		419, 622, 380, 382, 383, 400, 401, 402, 403, 404,
-		405, 420, 406, 408, 409, 410, 411, 412, 414, 415,
-		416, 417, 418, 407, 450, 381, 461, 603, 609, 608,
-		607, 460, 606, 605, 489, 490, 492, 493, 494, 495,
-		600, 601, 602, 491, 488, 604, 486, 462, 463, 464,
-		465, 466, 620, 467, 468, 480, 481, 487, 482, 483,
-		484, 485
+		852, 661, 623, 864, 621, 424, 425, 426, 427, 428,
+		429, 430, 431, 432, 433, 423, 435, 437, 438, 439,
+		440, 441, 442, 443, 444, 445, 446, 436, 422, 421,
+		420, 622, 380, 381, 383, 400, 401, 402, 403, 404,
+		405, 406, 407, 408, 409, 410, 411, 412, 414, 415,
+		416, 417, 418, 419, 447, 450, 382, 461, 603, 609,
+		608, 607, 460, 606, 605, 489, 490, 492, 493, 494,
+		495, 600, 601, 602, 491, 488, 604, 486, 462, 463,
+		464, 465, 466, 620, 467, 468, 480, 481, 487, 482,
+		483, 484, 485
 	};
 }

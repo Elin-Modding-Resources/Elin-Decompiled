@@ -117,6 +117,10 @@ public class AI_Goto : AIAct
 				pathFinderNode = path.nodes[path.nodeIndex];
 				shared.Set(pathFinderNode.X, pathFinderNode.Z);
 			}
+			if (!shared.IsValid)
+			{
+				return Cancel();
+			}
 			if (shared.HasChara && !owner.IsPC)
 			{
 				waitCount++;
