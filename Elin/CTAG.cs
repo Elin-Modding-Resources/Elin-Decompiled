@@ -57,5 +57,6 @@ public enum CTAG
 	noRide,
 	ride,
 	allowIngredient,
-	nurse
+	nurse,
+	notMeAgain
 }

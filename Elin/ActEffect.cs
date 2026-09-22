@@ -714,6 +714,7 @@ public class ActEffect : EClass
 			bool flag4 = actRef.n1 == "special";
 			int num5 = -1;
 			string text = "";
+			bool notMeAgain = CC.HasTag(CTAG.notMeAgain);
 			switch (actRef.n1)
 			{
 			case "shadow":
@@ -794,7 +795,7 @@ public class ActEffect : EClass
 					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_dragon", (SourceChara.Row r) => r.race == "dragon" || r.race == "drake" || r.race == "wyvern"), power / 5);
 					break;
 				case "undead":
-					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_undead", (SourceChara.Row r) => r.HasTag(CTAG.undead) || (EClass.sources.races.map.TryGetValue(r.race)?.IsUndead ?? false)), power / 5);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_undead", (SourceChara.Row r) => (!notMeAgain || !(r.id == CC.id)) && (r.HasTag(CTAG.undead) || (EClass.sources.races.map.TryGetValue(r.race)?.IsUndead ?? false))), power / 5);
 					break;
 				case "pawn":
 					chara2 = CharaGen.CreateFromFilter("c_pawn", power / 10);

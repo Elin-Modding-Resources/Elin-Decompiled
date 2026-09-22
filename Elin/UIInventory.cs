@@ -1036,14 +1036,14 @@ public class UIInventory : EMono
 				bool flag2 = false;
 				for (int i = 0; i < orCreate.Count; i++)
 				{
-					if (item.TryStackTo(orCreate[i]))
-					{
-						flag2 = true;
-						break;
-					}
 					if (orCreate[i].TryStackTo(item))
 					{
 						orCreate[i] = item;
+						flag2 = true;
+						break;
+					}
+					if (item.TryStackTo(orCreate[i]))
+					{
 						flag2 = true;
 						break;
 					}

@@ -329,6 +329,9 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 							array[4].ToInt()
 						});
 						break;
+					case "colortype":
+						row.colorType = ((array[1] == "none") ? "" : array[1]);
+						break;
 					case "skin":
 					{
 						string[] array3 = array[1].Split('|');

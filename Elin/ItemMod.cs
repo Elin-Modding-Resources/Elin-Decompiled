@@ -14,9 +14,17 @@ public class ItemMod : EMono
 
 	public UIButton buttonToggle;
 
+	public UIButton buttonRename;
+
+	public UIButton buttonDisband;
+
+	public UIButton buttonColor;
+
 	public Image imageActive;
 
 	public Image imageLock;
+
+	public Image imageGroup;
 
 	public Widget.Config config;
 

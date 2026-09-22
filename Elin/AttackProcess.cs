@@ -603,7 +603,7 @@ public class AttackProcess : EClass
 	public bool Perform(int count, bool hasHit, float dmgMulti = 1f, bool maxRoll = false, bool subAttack = false)
 	{
 		bool flag = CC.HasCondition<ConReload>();
-		bool flag2 = CC.HasElement(486) && CC.IsPCFactionOrMinion;
+		bool flag2 = (CC.HasElement(486) || (weapon != null && weapon.HasElement(486))) && CC.IsPCFactionOrMinion;
 		hit = CalcHit();
 		if (CC.id == "tsunami")
 		{

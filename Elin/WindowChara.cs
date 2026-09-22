@@ -999,7 +999,7 @@ public class WindowChara : WindowController
 				foreach (Chara item in list)
 				{
 					Date date = Date.ToDate(item.c_love.dateMarriage);
-					AddText("item_marriage".lang(item.NameBraced, date.year.ToString() ?? "", date.month.ToString() ?? "", item.c_love.nameZoneMarriage, date.day.ToString() ?? "") + (item.c_love.IsWed ? "already_wed".lang() : ""));
+					AddText("item_marriage".lang(item.NameBraced, date.year.ToString() ?? "", date.month.ToString() ?? "", item.c_love.nameZoneMarriage, date.day.ToString() ?? "") + " " + (item.c_love.IsWed ? "already_wed".lang() : ""));
 				}
 			}
 		}

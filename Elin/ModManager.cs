@@ -44,6 +44,8 @@ public class ModManager : ModManagerCore
 
 	public List<FileInfo> replaceFiles = new List<FileInfo>();
 
+	public readonly List<ModGroup> emptyGroups = new List<ModGroup>();
+
 	private HashSet<ulong> _subscribedItems;
 
 	private readonly HashSet<ulong> _blockedItems = new HashSet<ulong>();
@@ -103,27 +105,58 @@ public class ModManager : ModManagerCore
 
 	public void SaveLoadOrder()
 	{
+		SplitGroups();
 		if (disableMod)
 		{
 			return;
 		}
 		List<string> list = new List<string>();
+		ModGroup modGroup = null;
 		foreach (BaseModPackage package in packages)
 		{
 			string str = package.dirInfo?.FullName;
-			if (!package.builtin && !str.IsEmpty())
+			if (package.builtin || str.IsEmpty())
 			{
-				list.Add(FormatLoadOrder(package));
+				continue;
+			}
+			string text = FormatLoadOrder(package);
+			if (!text.IsEmpty())
+			{
+				if (package.group != modGroup)
+				{
+					modGroup = package.group;
+					list.Add(modGroup?.ToString() ?? "#group");
+				}
+				list.Add(text);
 			}
 		}
+		list.AddRange(emptyGroups.Select((ModGroup g) => g.ToString()));
 		File.WriteAllLines(CorePath.PathLoadOrder, list);
+	}
+
+	public void SplitGroups()
+	{
+		HashSet<ModGroup> hashSet = new HashSet<ModGroup>();
+		ModGroup modGroup = null;
+		ModGroup modGroup2 = null;
+		foreach (BaseModPackage package in packages)
+		{
+			if (package.group != modGroup)
+			{
+				modGroup = package.group;
+				modGroup2 = ((modGroup == null || hashSet.Add(modGroup)) ? modGroup : modGroup.Clone());
+			}
+			package.group = modGroup2;
+		}
 	}
 
 	public void LoadLoadOrder()
 	{
+		emptyGroups.Clear();
 		foreach (BaseModPackage package in packages)
 		{
 			package.orderIndex = -1;
+			package.group = null;
 		}
 		string pathLoadOrder = CorePath.PathLoadOrder;
 		if (!File.Exists(pathLoadOrder))
@@ -149,12 +182,26 @@ public class ModManager : ModManagerCore
 			}
 		}
 		int num = 0;
+		int num2 = 0;
+		ModGroup modGroup = null;
 		HashSet<BaseModPackage> hashSet = new HashSet<BaseModPackage>();
-		string[] array = File.ReadAllLines(pathLoadOrder);
-		for (int i = 0; i < array.Length; i++)
+		foreach (string item in File.ReadAllLines(pathLoadOrder).Append("#group"))
 		{
-			if (ParseLoadOrderLine(array[i], out var path, out var activate, out var id))
+			string path;
+			bool activate;
+			string id;
+			if (ModGroup.TryParse(item, out var group))
 			{
+				if (modGroup != null && num2 == 0)
+				{
+					emptyGroups.Add(modGroup);
+				}
+				modGroup = group;
+				num2 = 0;
+			}
+			else if (ParseLoadOrderLine(item, out path, out activate, out id))
+			{
+				num2++;
 				if (!dictionary.TryGetValue(NormalizeOrderPath(path), out var value))
 				{
 					dictionary2.TryGetValue(BaseModPackage.NormalizeId(id) ?? "", out value);
@@ -163,6 +210,7 @@ public class ModManager : ModManagerCore
 				{
 					value.orderIndex = num;
 					value.willActivate = activate;
+					value.group = modGroup;
 					num++;
 				}
 			}
@@ -176,29 +224,29 @@ public class ModManager : ModManagerCore
 			{
 				return false;
 			}
-			int num2 = line.LastIndexOf(',');
-			if (num2 <= 0)
-			{
-				return false;
-			}
-			string text3 = line[(num2 + 1)..].Trim();
-			if (text3 == "0" || text3 == "1")
-			{
-				reference = line[..num2];
-				reference2 = text3 == "1";
-				return !reference.IsEmpty();
-			}
-			int num3 = line.LastIndexOf(',', num2 - 1);
+			int num3 = line.LastIndexOf(',');
 			if (num3 <= 0)
 			{
 				return false;
 			}
-			string text4 = line[(num3 + 1)..num2].Trim();
+			string text3 = line[(num3 + 1)..].Trim();
+			if (text3 == "0" || text3 == "1")
+			{
+				reference = line[..num3];
+				reference2 = text3 == "1";
+				return !reference.IsEmpty();
+			}
+			int num4 = line.LastIndexOf(',', num3 - 1);
+			if (num4 <= 0)
+			{
+				return false;
+			}
+			string text4 = line[(num4 + 1)..num3].Trim();
 			if (text4 != "0" && text4 != "1")
 			{
 				return false;
 			}
-			reference = line[..num3];
+			reference = line[..num4];
 			reference2 = text4 == "1";
 			reference3 = text3;
 			return !reference.IsEmpty();
@@ -340,6 +388,7 @@ public class ModManager : ModManagerCore
 		}
 		packages.Clear();
 		packages.AddRange(list);
+		SplitGroups();
 	}
 
 	private void MapActivatedPackages()

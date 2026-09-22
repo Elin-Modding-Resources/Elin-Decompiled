@@ -276,8 +276,10 @@ public class SourceImporter : EClass
 		{
 			EClass.sources.floors.OnAfterInit();
 		}
-		if (list.Contains(EClass.sources.things) || list.Contains(EClass.sources.charas))
+		if (list.Any((SourceData s) => s == EClass.sources.things || s == EClass.sources.charas || s is SourceThingV))
 		{
+			EClass.sources.things.Init();
+			EClass.sources.charas.Init();
 			EClass.sources.cards.Init();
 		}
 		if (list.Any((SourceData s) => s == EClass.sources.blocks || s == EClass.sources.floors || s == EClass.sources.objs || s == EClass.sources.decos || s == EClass.sources.cellEffects))

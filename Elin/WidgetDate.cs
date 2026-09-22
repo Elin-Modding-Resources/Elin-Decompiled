@@ -96,7 +96,7 @@ public class WidgetDate : Widget
 		}
 		if (EMono._zone.isPeace)
 		{
-			text += "zone_peace".lang().TagColor(colorFestival);
+			text = text + " " + "zone_peace".lang().TagColor(colorFestival);
 		}
 		if (EMono.debug.showExtra)
 		{

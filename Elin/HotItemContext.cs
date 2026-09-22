@@ -76,7 +76,7 @@ public class HotItemContext : HotItem
 			if (id == "system")
 			{
 				UIContextMenu uIContextMenu = m.AddChild("etc");
-				uIContextMenu.AddButton("LayerFeedback".lang() + "(" + EInput.keys.report.key.ToString() + ")", delegate
+				uIContextMenu.AddButton("LayerFeedback".lang() + " (" + EInput.keys.report.key.ToString() + ")", delegate
 				{
 					EClass.ui.ToggleFeedback();
 				});

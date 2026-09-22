@@ -1017,7 +1017,10 @@ public class AI_Idle : AIAct
 				TryCast<ConGravity>(EffectId.Gravity, 300 + EClass.rnd(300));
 				break;
 			case "buffHealer":
-				TryCast(EffectId.Heal);
+				if (!owner.IsPCParty || owner.hp != owner.MaxHP)
+				{
+					TryCast(EffectId.Heal);
+				}
 				break;
 			case "readBook":
 			{
