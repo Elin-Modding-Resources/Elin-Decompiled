@@ -321,6 +321,9 @@ public class UIList : BaseList
 	[NonSerialized]
 	public float dragScrollSpeed = 2.5f;
 
+	[NonSerialized]
+	public Action<object> onDragBegin;
+
 	public LayoutGroup layoutItems => _layoutItems ?? (_layoutItems = GetComponent<LayoutGroup>());
 
 	public GridLayoutGroup gridLayout => layoutItems as GridLayoutGroup;
@@ -867,7 +870,8 @@ public class UIList : BaseList
 		if (callbacks.CanDragReorder(drag.item))
 		{
 			dragTarget = drag.item;
-			dragBeginIndex = drag.transform.GetSiblingIndex();
+			dragBeginIndex = (dragHoverIndex = drag.transform.GetSiblingIndex());
+			onDragBegin?.Invoke(drag.item);
 		}
 	}
 
@@ -875,12 +879,9 @@ public class UIList : BaseList
 	{
 		if (dragTarget != null)
 		{
-			int num = dragHoverIndex - dragBeginIndex;
+			int a = dragHoverIndex - dragBeginIndex;
 			dragTarget = null;
-			if (num != 0)
-			{
-				callbacks.OnDragReorder(drag.item, num);
-			}
+			callbacks.OnDragReorder(drag.item, a);
 		}
 	}
 
