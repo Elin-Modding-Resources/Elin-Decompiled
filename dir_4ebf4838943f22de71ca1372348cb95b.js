@@ -2099,6 +2099,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "XY.cs", "XY_8cs.html", "XY_8cs" ],
     [ "ZINT.cs", "ZINT_8cs.html", "ZINT_8cs" ],
     [ "Zone.cs", "Zone_8cs.html", "Zone_8cs" ],
+    [ "Zone_AcademyRoran.cs", "Zone__AcademyRoran_8cs.html", "Zone__AcademyRoran_8cs" ],
     [ "Zone_Aquli.cs", "Zone__Aquli_8cs.html", "Zone__Aquli_8cs" ],
     [ "Zone_Arena.cs", "Zone__Arena_8cs.html", "Zone__Arena_8cs" ],
     [ "Zone_Arena2.cs", "Zone__Arena2_8cs.html", "Zone__Arena2_8cs" ],

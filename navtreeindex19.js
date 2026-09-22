@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"TraitEditPlaylist_8cs.html":[2,0,0,1573],
+"TraitEditPlaylist_8cs_source.html":[2,0,0,1573],
+"TraitEditorSign_8cs.html":[2,0,0,1572],
 "TraitEditorSign_8cs_source.html":[2,0,0,1572],
 "TraitEffect_8cs.html":[2,0,0,1574],
 "TraitEffect_8cs_source.html":[2,0,0,1574],
@@ -246,8 +249,5 @@ var NAVTREEINDEX19 =
 "TraitLunch_8cs.html":[2,0,0,1696],
 "TraitLunch_8cs_source.html":[2,0,0,1696],
 "TraitMagicChest_8cs.html":[2,0,0,1698],
-"TraitMagicChest_8cs_source.html":[2,0,0,1698],
-"TraitMahjong_8cs.html":[2,0,0,1699],
-"TraitMahjong_8cs_source.html":[2,0,0,1699],
-"TraitMaid_8cs.html":[2,0,0,1700]
+"TraitMagicChest_8cs_source.html":[2,0,0,1698]
 };

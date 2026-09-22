@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"FontType_8cs.html#a72082b59a51886b2606c8c0be2f84684af1ae64df8f6147cfff9af52de3c81e1d":[2,0,0,3,35,0,3],
 "FontType_8cs_source.html":[2,0,0,3,35],
 "FoodEffect_8cs.html":[2,0,0,568],
 "FoodEffect_8cs_source.html":[2,0,0,568],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679":[2,0,0,662,0,3],
 "HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0bac429fde8b1b986d42f84ba63dbfef6ac":[2,0,0,662,0,2],
 "HealSource_8cs_source.html":[2,0,0,662],
-"HeuristicFormula_8cs.html":[2,0,0,0,1],
-"HeuristicFormula_8cs.html#a53b8d14b2d24c1ec77f42620b2171e4f":[2,0,0,0,1,0]
+"HeuristicFormula_8cs.html":[2,0,0,0,1]
 };

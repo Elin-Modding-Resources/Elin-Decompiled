@@ -1,5 +1,8 @@
 var NAVTREEINDEX21 =
 {
+"TraitRoadSign_8cs_source.html":[2,0,0,1822],
+"TraitRodRandom_8cs.html":[2,0,0,1824],
+"TraitRodRandom_8cs_source.html":[2,0,0,1824],
 "TraitRod_8cs.html":[2,0,0,1823],
 "TraitRod_8cs_source.html":[2,0,0,1823],
 "TraitRogue_8cs.html":[2,0,0,1825],
@@ -246,8 +249,5 @@ var NAVTREEINDEX21 =
 "TraitToolRangeGunEnergy_8cs_source.html":[2,0,0,1947],
 "TraitToolRangeGunGravity_8cs.html":[2,0,0,1948],
 "TraitToolRangeGunGravity_8cs_source.html":[2,0,0,1948],
-"TraitToolRangeGunRocket_8cs.html":[2,0,0,1949],
-"TraitToolRangeGunRocket_8cs_source.html":[2,0,0,1949],
-"TraitToolRangeGun_8cs.html":[2,0,0,1946],
-"TraitToolRangeGun_8cs_source.html":[2,0,0,1946]
+"TraitToolRangeGunRocket_8cs.html":[2,0,0,1949]
 };

@@ -109,6 +109,7 @@ var classUIList =
     [ "menu", "classUIList.html#aa88a51ac9ddca92bd1caeeab0519d5bb", null ],
     [ "moldItem", "classUIList.html#adff34870492959740758406341131a8d", null ],
     [ "moldList", "classUIList.html#acf630a1bbe61f4b1621009dd67a90e05", null ],
+    [ "onDragBegin", "classUIList.html#ac0b11bd1947d7b7d5687616d9f6f510c", null ],
     [ "onlyDirectChildrenButtonForGroup", "classUIList.html#aa27f055c8ffd62eb513de6667351ecfe", null ],
     [ "page", "classUIList.html#af2bd7f0342deb077d5c9e2855bade874", null ],
     [ "paginationBottom", "classUIList.html#ad346382ffb8c47358dadade26556f575", null ],

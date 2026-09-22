@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.347 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.348 Nightly</span>
    </div>
   </td>
  </tr>
@@ -145,254 +145,254 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00794">794</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  795</span>{</div>
-<div class="line"><span class="lineno">  796</span>        <span class="keywordtype">float</span> now = Time.realtimeSinceStartup;</div>
-<div class="line"><span class="lineno">  797</span>        List&lt;WorkshopDownload&gt; queue = (from p in packages</div>
-<div class="line"><span class="lineno">  798</span>            where p.item is WorkshopItem workshopItem &amp;&amp; (!p.installed || workshopItem.IsNeedsUpdate)</div>
-<div class="line"><span class="lineno">  799</span>            select <span class="keyword">new</span> WorkshopDownload(p, now)).ToList();</div>
-<div class="line"><span class="lineno">  800</span>        <span class="keywordflow">if</span> (queue.Count == 0)</div>
-<div class="line"><span class="lineno">  801</span>        {</div>
-<div class="line"><span class="lineno">  802</span>            yield <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  803</span>        }</div>
-<div class="line"><span class="lineno">  804</span>        WaitForEndOfFrame awaiter = <span class="keyword">new</span> WaitForEndOfFrame();</div>
-<div class="line"><span class="lineno">  805</span>        Text status = _loading.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloading {queue.Count} mods...&quot;</span>);</div>
-<div class="line"><span class="lineno">  806</span>        Dictionary&lt;ulong, EResult&gt; results = <span class="keyword">new</span> Dictionary&lt;ulong, EResult&gt;();</div>
-<div class="line"><span class="lineno">  807</span>        <span class="keywordtype">int</span> total = queue.Count;</div>
-<div class="line"><span class="lineno">  808</span>        <span class="keywordtype">int</span> completed = 0;</div>
-<div class="line"><span class="lineno">  809</span>        <span class="keywordtype">float</span> lastActivity = now;</div>
-<div class="line"><span class="lineno">  810</span>        <span class="keywordtype">float</span> nextStatus = 0f;</div>
-<div class="line"><span class="lineno">  811</span>        UserGeneratedContent.Client.EventItemDownloaded.AddListener(OnItemDownloaded);</div>
-<div class="line"><span class="lineno">  812</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  813</span>        {</div>
-<div class="line"><span class="lineno">  814</span>            <span class="keywordflow">while</span> (queue.Count &gt; 0)</div>
-<div class="line"><span class="lineno">  815</span>            {</div>
-<div class="line"><span class="lineno">  816</span>                now = Time.realtimeSinceStartup;</div>
-<div class="line"><span class="lineno">  817</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = queue.Count - 1; num &gt;= 0; num--)</div>
-<div class="line"><span class="lineno">  818</span>                {</div>
-<div class="line"><span class="lineno">  819</span>                    WorkshopDownload workshopDownload = queue[num];</div>
-<div class="line"><span class="lineno">  820</span>                    WorkshopItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = workshopDownload.item;</div>
-<div class="line"><span class="lineno">  821</span>                    ulong publishedFileId = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FileId.m_PublishedFileId;</div>
-<div class="line"><span class="lineno">  822</span>                    <span class="keywordtype">string</span> path = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  823</span>                    <span class="keywordtype">string</span> reason = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  824</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  825</span>                    EResult value;</div>
-<div class="line"><span class="lineno">  826</span>                    <span class="keywordflow">if</span> (!workshopDownload.package.downloadStarted)</div>
-<div class="line"><span class="lineno">  827</span>                    {</div>
-<div class="line"><span class="lineno">  828</span>                        workshopDownload.package.downloadStarted = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  829</span>                        workshopDownload.lastChange = now;</div>
-<div class="line"><span class="lineno">  830</span>                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DownloadItem(highPriority: <span class="keyword">true</span>))</div>
-<div class="line"><span class="lineno">  831</span>                        {</div>
-<div class="line"><span class="lineno">  832</span>                            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Start downloading: &quot;</span> + workshopDownload.Title + <span class="stringliteral">&quot; | &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Installed={item.IsInstalled}, &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Update={item.IsNeedsUpdate}, &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloading={item.IsDownloading}, &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Pending={item.IsDownloadPending}&quot;</span>);</div>
-<div class="line"><span class="lineno">  833</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  834</span>                        }</div>
-<div class="line"><span class="lineno">  835</span>                        reason = <span class="stringliteral">&quot;cannot start the download&quot;</span>;</div>
-<div class="line"><span class="lineno">  836</span>                    }</div>
-<div class="line"><span class="lineno">  837</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (results.TryGetValue(publishedFileId, out value) &amp;&amp; value != EResult.k_EResultOK)</div>
-<div class="line"><span class="lineno">  838</span>                    {</div>
-<div class="line"><span class="lineno">  839</span>                        reason = <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;download failed ({value})&quot;</span>;</div>
-<div class="line"><span class="lineno">  840</span>                    }</div>
-<div class="line"><span class="lineno">  841</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsItemReady(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, out path))</div>
-<div class="line"><span class="lineno">  842</span>                    {</div>
-<div class="line"><span class="lineno">  843</span>                        flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  844</span>                    }</div>
-<div class="line"><span class="lineno">  845</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  846</span>                    {</div>
-<div class="line"><span class="lineno">  847</span>                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloadPending)</div>
-<div class="line"><span class="lineno">  848</span>                        {</div>
-<div class="line"><span class="lineno">  849</span>                            workshopDownload.lastChange = now;</div>
-<div class="line"><span class="lineno">  850</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  851</span>                        }</div>
-<div class="line"><span class="lineno">  852</span>                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloading)</div>
-<div class="line"><span class="lineno">  853</span>                        {</div>
-<div class="line"><span class="lineno">  854</span>                            <span class="keywordtype">float</span> downloadCompletion = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DownloadCompletion;</div>
-<div class="line"><span class="lineno">  855</span>                            <span class="keywordflow">if</span> (downloadCompletion &gt; workshopDownload.progress)</div>
-<div class="line"><span class="lineno">  856</span>                            {</div>
-<div class="line"><span class="lineno">  857</span>                                workshopDownload.progress = downloadCompletion;</div>
-<div class="line"><span class="lineno">  858</span>                                <span class="keywordtype">float</span> lastChange;</div>
-<div class="line"><span class="lineno">  859</span>                                lastActivity = (lastChange = now);</div>
-<div class="line"><span class="lineno">  860</span>                                workshopDownload.lastChange = lastChange;</div>
-<div class="line"><span class="lineno">  861</span>                            }</div>
-<div class="line"><span class="lineno">  862</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  863</span>                        }</div>
-<div class="line"><span class="lineno">  864</span>                        <span class="keywordflow">if</span> (!(now - workshopDownload.lastChange &gt; 20f))</div>
-<div class="line"><span class="lineno">  865</span>                        {</div>
-<div class="line"><span class="lineno">  866</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  867</span>                        }</div>
-<div class="line"><span class="lineno">  868</span>                        reason = <span class="stringliteral">&quot;cannot start the download&quot;</span>;</div>
-<div class="line"><span class="lineno">  869</span>                    }</div>
-<div class="line"><span class="lineno">  870</span>                    queue.RemoveAt(num);</div>
-<div class="line"><span class="lineno">  871</span>                    lastActivity = now;</div>
-<div class="line"><span class="lineno">  872</span>                    <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  873</span>                    {</div>
-<div class="line"><span class="lineno">  874</span>                        completed++;</div>
-<div class="line"><span class="lineno">  875</span>                        InstallWorkshopPackage(workshopDownload, path);</div>
-<div class="line"><span class="lineno">  876</span>                    }</div>
-<div class="line"><span class="lineno">  877</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  878</span>                    {</div>
-<div class="line"><span class="lineno">  879</span>                        FailWorkshopPackage(workshopDownload, reason);</div>
-<div class="line"><span class="lineno">  880</span>                    }</div>
-<div class="line"><span class="lineno">  881</span>                }</div>
-<div class="line"><span class="lineno">  882</span>                <span class="keywordflow">if</span> (queue.Count == 0)</div>
-<div class="line"><span class="lineno">  883</span>                {</div>
-<div class="line"><span class="lineno">  884</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  885</span>                }</div>
-<div class="line"><span class="lineno">  886</span>                <span class="keywordflow">if</span> (IsCancelRequested())</div>
-<div class="line"><span class="lineno">  887</span>                {</div>
-<div class="line"><span class="lineno">  888</span>                    AbortDownloads(queue, <span class="stringliteral">&quot;cancelled&quot;</span>);</div>
-<div class="line"><span class="lineno">  889</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  890</span>                }</div>
-<div class="line"><span class="lineno">  891</span>                <span class="keywordflow">if</span> (now - lastActivity &gt; 90f)</div>
-<div class="line"><span class="lineno">  892</span>                {</div>
-<div class="line"><span class="lineno">  893</span>                    AbortDownloads(queue, <span class="stringliteral">&quot;not responding&quot;</span>);</div>
-<div class="line"><span class="lineno">  894</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  895</span>                }</div>
-<div class="line"><span class="lineno">  896</span>                <span class="keywordflow">if</span> (now &gt;= nextStatus)</div>
-<div class="line"><span class="lineno">  897</span>                {</div>
-<div class="line"><span class="lineno">  898</span>                    nextStatus = now + 0.5f;</div>
-<div class="line"><span class="lineno">  899</span>                    WorkshopDownload workshopDownload2 = queue.Find((WorkshopDownload d) =&gt; d.item.IsDownloading) ?? queue[0];</div>
-<div class="line"><span class="lineno">  900</span>                    SetStatus(status, <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloading mods {completed}/{total}: &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{workshopDownload2.Title} {Mathf.FloorToInt(workshopDownload2.progress * 100f)}%...(Hit ESC to cancel)&quot;</span>);</div>
-<div class="line"><span class="lineno">  901</span>                }</div>
-<div class="line"><span class="lineno">  902</span>                yield <span class="keywordflow">return</span> awaiter;</div>
-<div class="line"><span class="lineno">  903</span>            }</div>
-<div class="line"><span class="lineno">  904</span>        }</div>
-<div class="line"><span class="lineno">  905</span>        <span class="keywordflow">finally</span></div>
-<div class="line"><span class="lineno">  906</span>        {</div>
-<div class="line"><span class="lineno">  907</span>            UserGeneratedContent.Client.EventItemDownloaded.RemoveListener(OnItemDownloaded);</div>
-<div class="line"><span class="lineno">  908</span>        }</div>
-<div class="line"><span class="lineno">  909</span>        SetStatus(status, <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloaded {completed}/{total} mods&quot;</span>);</div>
-<div class="line"><span class="lineno">  910</span>        packages.RemoveAll((<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p) =&gt; p.<a class="code hl_variable" href="classBaseModPackage.html#a443d8d23f9e5a5ef9aff187e3bd62228">item</a> is WorkshopItem &amp;&amp; !p.<a class="code hl_variable" href="classBaseModPackage.html#ab5c8be7739d21d0ed4c144fc43d2f23d">installed</a>);</div>
-<div class="line"><span class="lineno">  911</span>        <span class="keywordtype">void</span> OnItemDownloaded(DownloadItemResult_t result)</div>
-<div class="line"><span class="lineno">  912</span>        {</div>
-<div class="line"><span class="lineno">  913</span>            results[result.m_nPublishedFileId.m_PublishedFileId] = result.m_eResult;</div>
-<div class="line"><span class="lineno">  914</span>        }</div>
-<div class="line"><span class="lineno">  915</span>    }</div>
-<div class="line"><span class="lineno">  916</span> </div>
-<div class="line"><span class="lineno">  917</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> LoadCachedWorkshopPackages()</div>
-<div class="line"><span class="lineno">  918</span>    {</div>
-<div class="line"><span class="lineno">  919</span>        HashSet&lt;string&gt; hashSet = packages.Select((<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p) =&gt; p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName).ToHashSet(StringComparer.OrdinalIgnoreCase);</div>
-<div class="line"><span class="lineno">  920</span>        DirectoryInfo[] directories = dirWorkshop.GetDirectories();</div>
-<div class="line"><span class="lineno">  921</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
-<div class="line"><span class="lineno">  922</span>        {</div>
-<div class="line"><span class="lineno">  923</span>            ulong result;</div>
-<div class="line"><span class="lineno">  924</span>            <span class="keywordtype">bool</span> flag = ulong.TryParse(directoryInfo.Name, out result);</div>
-<div class="line"><span class="lineno">  925</span>            <span class="keywordflow">if</span> ((!flag || !_blockedItems.Contains(result)) &amp;&amp; (_subscribedItems == <span class="keyword">null</span> || (flag &amp;&amp; _subscribedItems.Contains(result))) &amp;&amp; !hashSet.Contains(<span class="keyword">new</span> DirectoryInfo(directoryInfo.FullName.NormalizePath()).FullName))</div>
-<div class="line"><span class="lineno">  926</span>            {</div>
-<div class="line"><span class="lineno">  927</span>                <a class="code hl_class" href="classModPackage.html">ModPackage</a> modPackage = AddPackage(directoryInfo);</div>
-<div class="line"><span class="lineno">  928</span>                <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  929</span>                {</div>
-<div class="line"><span class="lineno">  930</span>                    modPackage.workshopId = directoryInfo.Name;</div>
-<div class="line"><span class="lineno">  931</span>                }</div>
-<div class="line"><span class="lineno">  932</span>            }</div>
-<div class="line"><span class="lineno">  933</span>        }</div>
-<div class="line"><span class="lineno">  934</span>    }</div>
-<div class="line"><span class="lineno">  935</span> </div>
-<div class="line"><span class="lineno">  936</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> InstallWorkshopPackage(WorkshopDownload download, <span class="keywordtype">string</span> path)</div>
-<div class="line"><span class="lineno">  937</span>    {</div>
-<div class="line"><span class="lineno">  938</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> <span class="keyword">package </span>= download.package;</div>
-<div class="line"><span class="lineno">  939</span>        package.installed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  940</span>        package.dirInfo = <span class="keyword">new</span> DirectoryInfo(path.NormalizePath());</div>
-<div class="line"><span class="lineno">  941</span>        <span class="keywordflow">if</span> (package is <a class="code hl_class" href="classModPackage.html">ModPackage</a> modPackage)</div>
-<div class="line"><span class="lineno">  942</span>        {</div>
-<div class="line"><span class="lineno">  943</span>            modPackage.Mapping = <span class="keyword">new</span> FileMapping(package.dirInfo);</div>
-<div class="line"><span class="lineno">  944</span>        }</div>
-<div class="line"><span class="lineno">  945</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Downloaded: &quot;</span> + download.Title + <span class="stringliteral">&quot; -&gt; &quot;</span> + package.dirInfo.FullName);</div>
-<div class="line"><span class="lineno">  946</span>    }</div>
-<div class="line"><span class="lineno">  947</span> </div>
-<div class="line"><span class="lineno">  948</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> FailWorkshopPackage(WorkshopDownload download, <span class="keywordtype">string</span> reason)</div>
-<div class="line"><span class="lineno">  949</span>    {</div>
-<div class="line"><span class="lineno">  950</span>        <span class="keywordflow">if</span> (download.isUpdate)</div>
-<div class="line"><span class="lineno">  951</span>        {</div>
-<div class="line"><span class="lineno">  952</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogWarning(<span class="stringliteral">&quot;Workshop update failed: &quot;</span> + download.Title + <span class="stringliteral">&quot;, &quot;</span> + reason);</div>
-<div class="line"><span class="lineno">  953</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  954</span>        }</div>
-<div class="line"><span class="lineno">  955</span>        _missingContent++;</div>
-<div class="line"><span class="lineno">  956</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogWarning(<span class="stringliteral">&quot;Workshop download failed: &quot;</span> + download.Title + <span class="stringliteral">&quot;, &quot;</span> + reason);</div>
-<div class="line"><span class="lineno">  957</span>    }</div>
-<div class="line"><span class="lineno">  958</span> </div>
-<div class="line"><span class="lineno">  959</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> AbortDownloads(List&lt;WorkshopDownload&gt; queue, <span class="keywordtype">string</span> reason)</div>
-<div class="line"><span class="lineno">  960</span>    {</div>
-<div class="line"><span class="lineno">  961</span>        <span class="keywordflow">foreach</span> (WorkshopDownload <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> queue)</div>
-<div class="line"><span class="lineno">  962</span>        {</div>
-<div class="line"><span class="lineno">  963</span>            FailWorkshopPackage(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, reason);</div>
-<div class="line"><span class="lineno">  964</span>        }</div>
-<div class="line"><span class="lineno">  965</span>        queue.Clear();</div>
-<div class="line"><span class="lineno">  966</span>    }</div>
-<div class="line"><span class="lineno">  967</span> </div>
-<div class="line"><span class="lineno">  968</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsItemReady(WorkshopItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, out <span class="keywordtype">string</span> path)</div>
-<div class="line"><span class="lineno">  969</span>    {</div>
-<div class="line"><span class="lineno">  970</span>        path = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  971</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsInstalled || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsNeedsUpdate || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloading || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloadPending)</div>
-<div class="line"><span class="lineno">  972</span>        {</div>
-<div class="line"><span class="lineno">  973</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  974</span>        }</div>
-<div class="line"><span class="lineno">  975</span>        <span class="keywordflow">if</span> (UserGeneratedContent.Client.GetItemInstallInfo(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FileId, out var _, out path, out var _) &amp;&amp; !path.IsEmpty())</div>
-<div class="line"><span class="lineno">  976</span>        {</div>
-<div class="line"><span class="lineno">  977</span>            <span class="keywordflow">return</span> Directory.Exists(path);</div>
-<div class="line"><span class="lineno">  978</span>        }</div>
-<div class="line"><span class="lineno">  979</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  980</span>    }</div>
-<div class="line"><span class="lineno">  981</span> </div>
-<div class="line"><span class="lineno">  982</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsCancelRequested()</div>
-<div class="line"><span class="lineno">  983</span>    {</div>
-<div class="line"><span class="lineno">  984</span>        <span class="keywordflow">return</span> UnityEngine.Input.GetKey(KeyCode.Escape);</div>
-<div class="line"><span class="lineno">  985</span>    }</div>
-<div class="line"><span class="lineno">  986</span> </div>
-<div class="line"><span class="lineno">  987</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetStatus(Text status, <span class="keywordtype">string</span> message)</div>
-<div class="line"><span class="lineno">  988</span>    {</div>
-<div class="line"><span class="lineno">  989</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)status)</div>
-<div class="line"><span class="lineno">  990</span>        {</div>
-<div class="line"><span class="lineno">  991</span>            status.text = message;</div>
-<div class="line"><span class="lineno">  992</span>        }</div>
-<div class="line"><span class="lineno">  993</span>    }</div>
-<div class="line"><span class="lineno">  994</span> </div>
-<div class="line"><span class="lineno">  995</span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ParseExtra(DirectoryInfo dir, <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> package)</div>
-<div class="line"><span class="lineno">  996</span>    {</div>
-<div class="line"><span class="lineno">  997</span>        <a class="code hl_class" href="classModPackage.html">ModPackage</a> modPackage = (<a class="code hl_class" href="classModPackage.html">ModPackage</a>)package;</div>
-<div class="line"><span class="lineno">  998</span>        <span class="keywordflow">switch</span> (dir.Name.ToLower())</div>
-<div class="line"><span class="lineno">  999</span>        {</div>
-<div class="line"><span class="lineno"> 1000</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;talktext&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1001</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a072f2b5dbd7447b5d4ff1dd9972cbf78">ParseTalkText</a>(dir);</div>
-<div class="line"><span class="lineno"> 1002</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1003</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;map&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1004</span>            <span class="keywordflow">if</span> (!package.<a class="code hl_variable" href="classBaseModPackage.html#a8812059106dbf5acf2ddfa74297e633e">builtin</a>)</div>
-<div class="line"><span class="lineno"> 1005</span>            {</div>
-<div class="line"><span class="lineno"> 1006</span>                modPackage.<a class="code hl_function" href="classModPackage.html#ac1136a3427d06aa6dd5067a181da32c2">ParseMap</a>(dir);</div>
-<div class="line"><span class="lineno"> 1007</span>            }</div>
-<div class="line"><span class="lineno"> 1008</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1009</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;map piece&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1010</span>            <span class="keywordflow">if</span> (!package.<a class="code hl_variable" href="classBaseModPackage.html#a8812059106dbf5acf2ddfa74297e633e">builtin</a>)</div>
-<div class="line"><span class="lineno"> 1011</span>            {</div>
-<div class="line"><span class="lineno"> 1012</span>                modPackage.<a class="code hl_function" href="classModPackage.html#a877ed16d8966c7554217f2991655dfad">ParseMapPiece</a>(dir);</div>
-<div class="line"><span class="lineno"> 1013</span>            }</div>
-<div class="line"><span class="lineno"> 1014</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1015</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;texture replace&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1016</span>            replaceFiles.AddRange(modPackage.<a class="code hl_function" href="classModPackage.html#ab5ed6541e94af68e7731fb37de55c7a0">ParseTextureReplace</a>(dir));</div>
-<div class="line"><span class="lineno"> 1017</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1018</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;texture&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1019</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a6b50991a0d3756729c9080a220da66e1">ParseTexture</a>(dir);</div>
-<div class="line"><span class="lineno"> 1020</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1021</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;portrait&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1022</span>            modPackage.<a class="code hl_function" href="classModPackage.html#abe0d1dee8ff69fc27460404b012d0a17">ParsePortrait</a>(dir);</div>
-<div class="line"><span class="lineno"> 1023</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1024</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;langmod&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1025</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a459960a956ff7340107730f98e9c1c5f">ParseLangMod</a>(dir);</div>
-<div class="line"><span class="lineno"> 1026</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1027</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;sound&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1028</span>            modPackage.<a class="code hl_function" href="classModPackage.html#acdc80fc9e458f35ecb57f4d764bbcfe8">ParseSound</a>(dir);</div>
-<div class="line"><span class="lineno"> 1029</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1030</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;lang&quot;</span>:</div>
-<div class="line"><span class="lineno"> 1031</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a6f831bd13aea62df6c0f699d14b11483">AddOrUpdateLang</a>(dir);</div>
-<div class="line"><span class="lineno"> 1032</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1033</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00843">843</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  844</span>{</div>
+<div class="line"><span class="lineno">  845</span>        <span class="keywordtype">float</span> now = Time.realtimeSinceStartup;</div>
+<div class="line"><span class="lineno">  846</span>        List&lt;WorkshopDownload&gt; queue = (from p in packages</div>
+<div class="line"><span class="lineno">  847</span>            where p.item is WorkshopItem workshopItem &amp;&amp; (!p.installed || workshopItem.IsNeedsUpdate)</div>
+<div class="line"><span class="lineno">  848</span>            select <span class="keyword">new</span> WorkshopDownload(p, now)).ToList();</div>
+<div class="line"><span class="lineno">  849</span>        <span class="keywordflow">if</span> (queue.Count == 0)</div>
+<div class="line"><span class="lineno">  850</span>        {</div>
+<div class="line"><span class="lineno">  851</span>            yield <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  852</span>        }</div>
+<div class="line"><span class="lineno">  853</span>        WaitForEndOfFrame awaiter = <span class="keyword">new</span> WaitForEndOfFrame();</div>
+<div class="line"><span class="lineno">  854</span>        Text status = _loading.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloading {queue.Count} mods...&quot;</span>);</div>
+<div class="line"><span class="lineno">  855</span>        Dictionary&lt;ulong, EResult&gt; results = <span class="keyword">new</span> Dictionary&lt;ulong, EResult&gt;();</div>
+<div class="line"><span class="lineno">  856</span>        <span class="keywordtype">int</span> total = queue.Count;</div>
+<div class="line"><span class="lineno">  857</span>        <span class="keywordtype">int</span> completed = 0;</div>
+<div class="line"><span class="lineno">  858</span>        <span class="keywordtype">float</span> lastActivity = now;</div>
+<div class="line"><span class="lineno">  859</span>        <span class="keywordtype">float</span> nextStatus = 0f;</div>
+<div class="line"><span class="lineno">  860</span>        UserGeneratedContent.Client.EventItemDownloaded.AddListener(OnItemDownloaded);</div>
+<div class="line"><span class="lineno">  861</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  862</span>        {</div>
+<div class="line"><span class="lineno">  863</span>            <span class="keywordflow">while</span> (queue.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  864</span>            {</div>
+<div class="line"><span class="lineno">  865</span>                now = Time.realtimeSinceStartup;</div>
+<div class="line"><span class="lineno">  866</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num = queue.Count - 1; num &gt;= 0; num--)</div>
+<div class="line"><span class="lineno">  867</span>                {</div>
+<div class="line"><span class="lineno">  868</span>                    WorkshopDownload workshopDownload = queue[num];</div>
+<div class="line"><span class="lineno">  869</span>                    WorkshopItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = workshopDownload.item;</div>
+<div class="line"><span class="lineno">  870</span>                    ulong publishedFileId = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FileId.m_PublishedFileId;</div>
+<div class="line"><span class="lineno">  871</span>                    <span class="keywordtype">string</span> path = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  872</span>                    <span class="keywordtype">string</span> reason = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  873</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  874</span>                    EResult value;</div>
+<div class="line"><span class="lineno">  875</span>                    <span class="keywordflow">if</span> (!workshopDownload.package.downloadStarted)</div>
+<div class="line"><span class="lineno">  876</span>                    {</div>
+<div class="line"><span class="lineno">  877</span>                        workshopDownload.package.downloadStarted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  878</span>                        workshopDownload.lastChange = now;</div>
+<div class="line"><span class="lineno">  879</span>                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DownloadItem(highPriority: <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  880</span>                        {</div>
+<div class="line"><span class="lineno">  881</span>                            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Start downloading: &quot;</span> + workshopDownload.Title + <span class="stringliteral">&quot; | &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Installed={item.IsInstalled}, &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Update={item.IsNeedsUpdate}, &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloading={item.IsDownloading}, &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Pending={item.IsDownloadPending}&quot;</span>);</div>
+<div class="line"><span class="lineno">  882</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  883</span>                        }</div>
+<div class="line"><span class="lineno">  884</span>                        reason = <span class="stringliteral">&quot;cannot start the download&quot;</span>;</div>
+<div class="line"><span class="lineno">  885</span>                    }</div>
+<div class="line"><span class="lineno">  886</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (results.TryGetValue(publishedFileId, out value) &amp;&amp; value != EResult.k_EResultOK)</div>
+<div class="line"><span class="lineno">  887</span>                    {</div>
+<div class="line"><span class="lineno">  888</span>                        reason = <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;download failed ({value})&quot;</span>;</div>
+<div class="line"><span class="lineno">  889</span>                    }</div>
+<div class="line"><span class="lineno">  890</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsItemReady(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, out path))</div>
+<div class="line"><span class="lineno">  891</span>                    {</div>
+<div class="line"><span class="lineno">  892</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  893</span>                    }</div>
+<div class="line"><span class="lineno">  894</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  895</span>                    {</div>
+<div class="line"><span class="lineno">  896</span>                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloadPending)</div>
+<div class="line"><span class="lineno">  897</span>                        {</div>
+<div class="line"><span class="lineno">  898</span>                            workshopDownload.lastChange = now;</div>
+<div class="line"><span class="lineno">  899</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  900</span>                        }</div>
+<div class="line"><span class="lineno">  901</span>                        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloading)</div>
+<div class="line"><span class="lineno">  902</span>                        {</div>
+<div class="line"><span class="lineno">  903</span>                            <span class="keywordtype">float</span> downloadCompletion = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.DownloadCompletion;</div>
+<div class="line"><span class="lineno">  904</span>                            <span class="keywordflow">if</span> (downloadCompletion &gt; workshopDownload.progress)</div>
+<div class="line"><span class="lineno">  905</span>                            {</div>
+<div class="line"><span class="lineno">  906</span>                                workshopDownload.progress = downloadCompletion;</div>
+<div class="line"><span class="lineno">  907</span>                                <span class="keywordtype">float</span> lastChange;</div>
+<div class="line"><span class="lineno">  908</span>                                lastActivity = (lastChange = now);</div>
+<div class="line"><span class="lineno">  909</span>                                workshopDownload.lastChange = lastChange;</div>
+<div class="line"><span class="lineno">  910</span>                            }</div>
+<div class="line"><span class="lineno">  911</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  912</span>                        }</div>
+<div class="line"><span class="lineno">  913</span>                        <span class="keywordflow">if</span> (!(now - workshopDownload.lastChange &gt; 20f))</div>
+<div class="line"><span class="lineno">  914</span>                        {</div>
+<div class="line"><span class="lineno">  915</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  916</span>                        }</div>
+<div class="line"><span class="lineno">  917</span>                        reason = <span class="stringliteral">&quot;cannot start the download&quot;</span>;</div>
+<div class="line"><span class="lineno">  918</span>                    }</div>
+<div class="line"><span class="lineno">  919</span>                    queue.RemoveAt(num);</div>
+<div class="line"><span class="lineno">  920</span>                    lastActivity = now;</div>
+<div class="line"><span class="lineno">  921</span>                    <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  922</span>                    {</div>
+<div class="line"><span class="lineno">  923</span>                        completed++;</div>
+<div class="line"><span class="lineno">  924</span>                        InstallWorkshopPackage(workshopDownload, path);</div>
+<div class="line"><span class="lineno">  925</span>                    }</div>
+<div class="line"><span class="lineno">  926</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  927</span>                    {</div>
+<div class="line"><span class="lineno">  928</span>                        FailWorkshopPackage(workshopDownload, reason);</div>
+<div class="line"><span class="lineno">  929</span>                    }</div>
+<div class="line"><span class="lineno">  930</span>                }</div>
+<div class="line"><span class="lineno">  931</span>                <span class="keywordflow">if</span> (queue.Count == 0)</div>
+<div class="line"><span class="lineno">  932</span>                {</div>
+<div class="line"><span class="lineno">  933</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  934</span>                }</div>
+<div class="line"><span class="lineno">  935</span>                <span class="keywordflow">if</span> (IsCancelRequested())</div>
+<div class="line"><span class="lineno">  936</span>                {</div>
+<div class="line"><span class="lineno">  937</span>                    AbortDownloads(queue, <span class="stringliteral">&quot;cancelled&quot;</span>);</div>
+<div class="line"><span class="lineno">  938</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  939</span>                }</div>
+<div class="line"><span class="lineno">  940</span>                <span class="keywordflow">if</span> (now - lastActivity &gt; 90f)</div>
+<div class="line"><span class="lineno">  941</span>                {</div>
+<div class="line"><span class="lineno">  942</span>                    AbortDownloads(queue, <span class="stringliteral">&quot;not responding&quot;</span>);</div>
+<div class="line"><span class="lineno">  943</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  944</span>                }</div>
+<div class="line"><span class="lineno">  945</span>                <span class="keywordflow">if</span> (now &gt;= nextStatus)</div>
+<div class="line"><span class="lineno">  946</span>                {</div>
+<div class="line"><span class="lineno">  947</span>                    nextStatus = now + 0.5f;</div>
+<div class="line"><span class="lineno">  948</span>                    WorkshopDownload workshopDownload2 = queue.Find((WorkshopDownload d) =&gt; d.item.IsDownloading) ?? queue[0];</div>
+<div class="line"><span class="lineno">  949</span>                    SetStatus(status, <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloading mods {completed}/{total}: &quot;</span> + <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{workshopDownload2.Title} {Mathf.FloorToInt(workshopDownload2.progress * 100f)}%...(Hit ESC to cancel)&quot;</span>);</div>
+<div class="line"><span class="lineno">  950</span>                }</div>
+<div class="line"><span class="lineno">  951</span>                yield <span class="keywordflow">return</span> awaiter;</div>
+<div class="line"><span class="lineno">  952</span>            }</div>
+<div class="line"><span class="lineno">  953</span>        }</div>
+<div class="line"><span class="lineno">  954</span>        <span class="keywordflow">finally</span></div>
+<div class="line"><span class="lineno">  955</span>        {</div>
+<div class="line"><span class="lineno">  956</span>            UserGeneratedContent.Client.EventItemDownloaded.RemoveListener(OnItemDownloaded);</div>
+<div class="line"><span class="lineno">  957</span>        }</div>
+<div class="line"><span class="lineno">  958</span>        SetStatus(status, <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;Downloaded {completed}/{total} mods&quot;</span>);</div>
+<div class="line"><span class="lineno">  959</span>        packages.RemoveAll((<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p) =&gt; p.<a class="code hl_variable" href="classBaseModPackage.html#a443d8d23f9e5a5ef9aff187e3bd62228">item</a> is WorkshopItem &amp;&amp; !p.<a class="code hl_variable" href="classBaseModPackage.html#ab5c8be7739d21d0ed4c144fc43d2f23d">installed</a>);</div>
+<div class="line"><span class="lineno">  960</span>        <span class="keywordtype">void</span> OnItemDownloaded(DownloadItemResult_t result)</div>
+<div class="line"><span class="lineno">  961</span>        {</div>
+<div class="line"><span class="lineno">  962</span>            results[result.m_nPublishedFileId.m_PublishedFileId] = result.m_eResult;</div>
+<div class="line"><span class="lineno">  963</span>        }</div>
+<div class="line"><span class="lineno">  964</span>    }</div>
+<div class="line"><span class="lineno">  965</span> </div>
+<div class="line"><span class="lineno">  966</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> LoadCachedWorkshopPackages()</div>
+<div class="line"><span class="lineno">  967</span>    {</div>
+<div class="line"><span class="lineno">  968</span>        HashSet&lt;string&gt; hashSet = packages.Select((<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p) =&gt; p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName).ToHashSet(StringComparer.OrdinalIgnoreCase);</div>
+<div class="line"><span class="lineno">  969</span>        DirectoryInfo[] directories = dirWorkshop.GetDirectories();</div>
+<div class="line"><span class="lineno">  970</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
+<div class="line"><span class="lineno">  971</span>        {</div>
+<div class="line"><span class="lineno">  972</span>            ulong result;</div>
+<div class="line"><span class="lineno">  973</span>            <span class="keywordtype">bool</span> flag = ulong.TryParse(directoryInfo.Name, out result);</div>
+<div class="line"><span class="lineno">  974</span>            <span class="keywordflow">if</span> ((!flag || !_blockedItems.Contains(result)) &amp;&amp; (_subscribedItems == <span class="keyword">null</span> || (flag &amp;&amp; _subscribedItems.Contains(result))) &amp;&amp; !hashSet.Contains(<span class="keyword">new</span> DirectoryInfo(directoryInfo.FullName.NormalizePath()).FullName))</div>
+<div class="line"><span class="lineno">  975</span>            {</div>
+<div class="line"><span class="lineno">  976</span>                <a class="code hl_class" href="classModPackage.html">ModPackage</a> modPackage = AddPackage(directoryInfo);</div>
+<div class="line"><span class="lineno">  977</span>                <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  978</span>                {</div>
+<div class="line"><span class="lineno">  979</span>                    modPackage.workshopId = directoryInfo.Name;</div>
+<div class="line"><span class="lineno">  980</span>                }</div>
+<div class="line"><span class="lineno">  981</span>            }</div>
+<div class="line"><span class="lineno">  982</span>        }</div>
+<div class="line"><span class="lineno">  983</span>    }</div>
+<div class="line"><span class="lineno">  984</span> </div>
+<div class="line"><span class="lineno">  985</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> InstallWorkshopPackage(WorkshopDownload download, <span class="keywordtype">string</span> path)</div>
+<div class="line"><span class="lineno">  986</span>    {</div>
+<div class="line"><span class="lineno">  987</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> <span class="keyword">package </span>= download.package;</div>
+<div class="line"><span class="lineno">  988</span>        package.installed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  989</span>        package.dirInfo = <span class="keyword">new</span> DirectoryInfo(path.NormalizePath());</div>
+<div class="line"><span class="lineno">  990</span>        <span class="keywordflow">if</span> (package is <a class="code hl_class" href="classModPackage.html">ModPackage</a> modPackage)</div>
+<div class="line"><span class="lineno">  991</span>        {</div>
+<div class="line"><span class="lineno">  992</span>            modPackage.Mapping = <span class="keyword">new</span> FileMapping(package.dirInfo);</div>
+<div class="line"><span class="lineno">  993</span>        }</div>
+<div class="line"><span class="lineno">  994</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Downloaded: &quot;</span> + download.Title + <span class="stringliteral">&quot; -&gt; &quot;</span> + package.dirInfo.FullName);</div>
+<div class="line"><span class="lineno">  995</span>    }</div>
+<div class="line"><span class="lineno">  996</span> </div>
+<div class="line"><span class="lineno">  997</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> FailWorkshopPackage(WorkshopDownload download, <span class="keywordtype">string</span> reason)</div>
+<div class="line"><span class="lineno">  998</span>    {</div>
+<div class="line"><span class="lineno">  999</span>        <span class="keywordflow">if</span> (download.isUpdate)</div>
+<div class="line"><span class="lineno"> 1000</span>        {</div>
+<div class="line"><span class="lineno"> 1001</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogWarning(<span class="stringliteral">&quot;Workshop update failed: &quot;</span> + download.Title + <span class="stringliteral">&quot;, &quot;</span> + reason);</div>
+<div class="line"><span class="lineno"> 1002</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1003</span>        }</div>
+<div class="line"><span class="lineno"> 1004</span>        _missingContent++;</div>
+<div class="line"><span class="lineno"> 1005</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogWarning(<span class="stringliteral">&quot;Workshop download failed: &quot;</span> + download.Title + <span class="stringliteral">&quot;, &quot;</span> + reason);</div>
+<div class="line"><span class="lineno"> 1006</span>    }</div>
+<div class="line"><span class="lineno"> 1007</span> </div>
+<div class="line"><span class="lineno"> 1008</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> AbortDownloads(List&lt;WorkshopDownload&gt; queue, <span class="keywordtype">string</span> reason)</div>
+<div class="line"><span class="lineno"> 1009</span>    {</div>
+<div class="line"><span class="lineno"> 1010</span>        <span class="keywordflow">foreach</span> (WorkshopDownload <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> queue)</div>
+<div class="line"><span class="lineno"> 1011</span>        {</div>
+<div class="line"><span class="lineno"> 1012</span>            FailWorkshopPackage(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, reason);</div>
+<div class="line"><span class="lineno"> 1013</span>        }</div>
+<div class="line"><span class="lineno"> 1014</span>        queue.Clear();</div>
+<div class="line"><span class="lineno"> 1015</span>    }</div>
+<div class="line"><span class="lineno"> 1016</span> </div>
+<div class="line"><span class="lineno"> 1017</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsItemReady(WorkshopItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, out <span class="keywordtype">string</span> path)</div>
+<div class="line"><span class="lineno"> 1018</span>    {</div>
+<div class="line"><span class="lineno"> 1019</span>        path = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno"> 1020</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsInstalled || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsNeedsUpdate || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloading || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsDownloadPending)</div>
+<div class="line"><span class="lineno"> 1021</span>        {</div>
+<div class="line"><span class="lineno"> 1022</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1023</span>        }</div>
+<div class="line"><span class="lineno"> 1024</span>        <span class="keywordflow">if</span> (UserGeneratedContent.Client.GetItemInstallInfo(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FileId, out var _, out path, out var _) &amp;&amp; !path.IsEmpty())</div>
+<div class="line"><span class="lineno"> 1025</span>        {</div>
+<div class="line"><span class="lineno"> 1026</span>            <span class="keywordflow">return</span> Directory.Exists(path);</div>
+<div class="line"><span class="lineno"> 1027</span>        }</div>
+<div class="line"><span class="lineno"> 1028</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1029</span>    }</div>
+<div class="line"><span class="lineno"> 1030</span> </div>
+<div class="line"><span class="lineno"> 1031</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsCancelRequested()</div>
+<div class="line"><span class="lineno"> 1032</span>    {</div>
+<div class="line"><span class="lineno"> 1033</span>        <span class="keywordflow">return</span> UnityEngine.Input.GetKey(KeyCode.Escape);</div>
 <div class="line"><span class="lineno"> 1034</span>    }</div>
-<div class="line"><span class="lineno"> 1035</span>}</div>
+<div class="line"><span class="lineno"> 1035</span> </div>
+<div class="line"><span class="lineno"> 1036</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetStatus(Text status, <span class="keywordtype">string</span> message)</div>
+<div class="line"><span class="lineno"> 1037</span>    {</div>
+<div class="line"><span class="lineno"> 1038</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)status)</div>
+<div class="line"><span class="lineno"> 1039</span>        {</div>
+<div class="line"><span class="lineno"> 1040</span>            status.text = message;</div>
+<div class="line"><span class="lineno"> 1041</span>        }</div>
+<div class="line"><span class="lineno"> 1042</span>    }</div>
+<div class="line"><span class="lineno"> 1043</span> </div>
+<div class="line"><span class="lineno"> 1044</span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ParseExtra(DirectoryInfo dir, <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> package)</div>
+<div class="line"><span class="lineno"> 1045</span>    {</div>
+<div class="line"><span class="lineno"> 1046</span>        <a class="code hl_class" href="classModPackage.html">ModPackage</a> modPackage = (<a class="code hl_class" href="classModPackage.html">ModPackage</a>)package;</div>
+<div class="line"><span class="lineno"> 1047</span>        <span class="keywordflow">switch</span> (dir.Name.ToLower())</div>
+<div class="line"><span class="lineno"> 1048</span>        {</div>
+<div class="line"><span class="lineno"> 1049</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;talktext&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1050</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a072f2b5dbd7447b5d4ff1dd9972cbf78">ParseTalkText</a>(dir);</div>
+<div class="line"><span class="lineno"> 1051</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1052</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;map&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1053</span>            <span class="keywordflow">if</span> (!package.<a class="code hl_variable" href="classBaseModPackage.html#a8812059106dbf5acf2ddfa74297e633e">builtin</a>)</div>
+<div class="line"><span class="lineno"> 1054</span>            {</div>
+<div class="line"><span class="lineno"> 1055</span>                modPackage.<a class="code hl_function" href="classModPackage.html#ac1136a3427d06aa6dd5067a181da32c2">ParseMap</a>(dir);</div>
+<div class="line"><span class="lineno"> 1056</span>            }</div>
+<div class="line"><span class="lineno"> 1057</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1058</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;map piece&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1059</span>            <span class="keywordflow">if</span> (!package.<a class="code hl_variable" href="classBaseModPackage.html#a8812059106dbf5acf2ddfa74297e633e">builtin</a>)</div>
+<div class="line"><span class="lineno"> 1060</span>            {</div>
+<div class="line"><span class="lineno"> 1061</span>                modPackage.<a class="code hl_function" href="classModPackage.html#a877ed16d8966c7554217f2991655dfad">ParseMapPiece</a>(dir);</div>
+<div class="line"><span class="lineno"> 1062</span>            }</div>
+<div class="line"><span class="lineno"> 1063</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1064</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;texture replace&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1065</span>            replaceFiles.AddRange(modPackage.<a class="code hl_function" href="classModPackage.html#ab5ed6541e94af68e7731fb37de55c7a0">ParseTextureReplace</a>(dir));</div>
+<div class="line"><span class="lineno"> 1066</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1067</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;texture&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1068</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a6b50991a0d3756729c9080a220da66e1">ParseTexture</a>(dir);</div>
+<div class="line"><span class="lineno"> 1069</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1070</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;portrait&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1071</span>            modPackage.<a class="code hl_function" href="classModPackage.html#abe0d1dee8ff69fc27460404b012d0a17">ParsePortrait</a>(dir);</div>
+<div class="line"><span class="lineno"> 1072</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1073</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;langmod&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1074</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a459960a956ff7340107730f98e9c1c5f">ParseLangMod</a>(dir);</div>
+<div class="line"><span class="lineno"> 1075</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1076</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;sound&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1077</span>            modPackage.<a class="code hl_function" href="classModPackage.html#acdc80fc9e458f35ecb57f4d764bbcfe8">ParseSound</a>(dir);</div>
+<div class="line"><span class="lineno"> 1078</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1079</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;lang&quot;</span>:</div>
+<div class="line"><span class="lineno"> 1080</span>            modPackage.<a class="code hl_function" href="classModPackage.html#a6f831bd13aea62df6c0f699d14b11483">AddOrUpdateLang</a>(dir);</div>
+<div class="line"><span class="lineno"> 1081</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1082</span>        }</div>
+<div class="line"><span class="lineno"> 1083</span>    }</div>
+<div class="line"><span class="lineno"> 1084</span>}</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
-<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00104">ModManager.cs:104</a></div></div>
+<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00106">ModManager.cs:106</a></div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassBaseModPackage_html"><div class="ttname"><a href="classBaseModPackage.html">BaseModPackage</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00009">BaseModPackage.cs:10</a></div></div>
-<div class="ttc" id="aclassBaseModPackage_html_a160bcff3504827d3ff76e373f60a1a67"><div class="ttname"><a href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">BaseModPackage.dirInfo</a></div><div class="ttdeci">DirectoryInfo dirInfo</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00073">BaseModPackage.cs:73</a></div></div>
-<div class="ttc" id="aclassBaseModPackage_html_a443d8d23f9e5a5ef9aff187e3bd62228"><div class="ttname"><a href="classBaseModPackage.html#a443d8d23f9e5a5ef9aff187e3bd62228">BaseModPackage.item</a></div><div class="ttdeci">object item</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00071">BaseModPackage.cs:71</a></div></div>
+<div class="ttc" id="aclassBaseModPackage_html_a160bcff3504827d3ff76e373f60a1a67"><div class="ttname"><a href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">BaseModPackage.dirInfo</a></div><div class="ttdeci">DirectoryInfo dirInfo</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00075">BaseModPackage.cs:75</a></div></div>
+<div class="ttc" id="aclassBaseModPackage_html_a443d8d23f9e5a5ef9aff187e3bd62228"><div class="ttname"><a href="classBaseModPackage.html#a443d8d23f9e5a5ef9aff187e3bd62228">BaseModPackage.item</a></div><div class="ttdeci">object item</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00073">BaseModPackage.cs:73</a></div></div>
 <div class="ttc" id="aclassBaseModPackage_html_a8812059106dbf5acf2ddfa74297e633e"><div class="ttname"><a href="classBaseModPackage.html#a8812059106dbf5acf2ddfa74297e633e">BaseModPackage.builtin</a></div><div class="ttdeci">bool builtin</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00043">BaseModPackage.cs:43</a></div></div>
 <div class="ttc" id="aclassBaseModPackage_html_ab5c8be7739d21d0ed4c144fc43d2f23d"><div class="ttname"><a href="classBaseModPackage.html#ab5c8be7739d21d0ed4c144fc43d2f23d">BaseModPackage.installed</a></div><div class="ttdeci">bool installed</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00049">BaseModPackage.cs:49</a></div></div>
 <div class="ttc" id="aclassModPackage_html"><div class="ttname"><a href="classModPackage.html">ModPackage</a></div><div class="ttdef"><b>Definition:</b> <a href="ModPackage_8cs_source.html#l00010">ModPackage.cs:11</a></div></div>
@@ -420,7 +420,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00104">104</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00106">106</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -437,9 +437,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00104">104</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00106">106</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00474">ModManager.ActivatePackageList()</a>, <a class="el" href="ModManager_8cs_source.html#l00794">ModManager.DownloadSubscriptions()</a>, <a class="el" href="ModManager_8cs_source.html#l00093">ModManager.FormatLoadOrder()</a>, <a class="el" href="ModManager_8cs_source.html#l00422">ModManager.InitPackagesMeta()</a>, <a class="el" href="ModManager_8cs_source.html#l00713">ModManager.QuerySubscriptions()</a>, <a class="el" href="ModManager_8cs_source.html#l00275">ModManager.RefreshMods()</a>, and <a class="el" href="ModManager_8cs_source.html#l00332">ModManager.SortPackages()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00523">ModManager.ActivatePackageList()</a>, <a class="el" href="ModManager_8cs_source.html#l00843">ModManager.DownloadSubscriptions()</a>, <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.FormatLoadOrder()</a>, <a class="el" href="ModManager_8cs_source.html#l00471">ModManager.InitPackagesMeta()</a>, <a class="el" href="ModManager_8cs_source.html#l00762">ModManager.QuerySubscriptions()</a>, <a class="el" href="ModManager_8cs_source.html#l00323">ModManager.RefreshMods()</a>, and <a class="el" href="ModManager_8cs_source.html#l00380">ModManager.SortPackages()</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00794">794</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00843">843</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -471,7 +471,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00465">465</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00514">514</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00917">917</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00966">966</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l02727">Zone.SpawnAltar()</a>.</p>
 
@@ -505,7 +505,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00917">917</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00966">966</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00917">917</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00966">966</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="PointTarget_8cs_source.html#l00204">PointTarget.CycleTarget()</a>.</p>
 

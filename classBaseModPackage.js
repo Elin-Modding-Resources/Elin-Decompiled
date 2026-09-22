@@ -20,6 +20,7 @@ var classBaseModPackage =
     [ "dirInfo", "classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67", null ],
     [ "downloadStarted", "classBaseModPackage.html#a741ee407d6f46ae5cf2fb55580e21617", null ],
     [ "duplicateOf", "classBaseModPackage.html#a2881e66490b7bb8d02e225fee357fa93", null ],
+    [ "group", "classBaseModPackage.html#ad27b50c6b86f557713b0ea9ff6c85750", null ],
     [ "hasPublishedPackage", "classBaseModPackage.html#ab19dd5b90c699c5741df31093ea2f964", null ],
     [ "id", "classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412", null ],
     [ "incompatible", "classBaseModPackage.html#ad944294c65d78d77381ab671e7988a69", null ],

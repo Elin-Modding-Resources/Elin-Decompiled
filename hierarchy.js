@@ -1269,6 +1269,7 @@ var hierarchy =
           ] ],
           [ "Zone_CaveElona", "classZone__CaveElona.html", null ],
           [ "Zone_Civilized", "classZone__Civilized.html", [
+            [ "Zone_AcademyRoran", "classZone__AcademyRoran.html", null ],
             [ "Zone_Asylum", "classZone__Asylum.html", null ],
             [ "Zone_Beach", "classZone__Beach.html", null ],
             [ "Zone_Casino", "classZone__Casino.html", null ],
@@ -2839,6 +2840,7 @@ var hierarchy =
     ] ],
     [ "Gross.Mod", "structGross_1_1Mod.html", null ],
     [ "MOD", "classMOD.html", null ],
+    [ "ModGroup", "classModGroup.html", null ],
     [ "ModItem< T >", "classModItem.html", null ],
     [ "ModItemList< T >", "classModItemList.html", null ],
     [ "ModItemList< Sprite >", "classModItemList.html", null ],

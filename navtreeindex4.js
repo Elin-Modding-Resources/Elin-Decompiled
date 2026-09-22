@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"ConSuspend_8cs.html":[2,0,0,367],
 "ConSuspend_8cs_source.html":[2,0,0,367],
 "ConTelepathy_8cs.html":[2,0,0,370],
 "ConTelepathy_8cs_source.html":[2,0,0,370],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "Currency_8cs_source.html":[2,0,0,435],
 "CursorInfo_8cs.html":[2,0,0,3,27],
 "CursorInfo_8cs_source.html":[2,0,0,3,27],
-"CursorSystem_8cs.html":[2,0,0,3,28],
-"CursorSystem_8cs_source.html":[2,0,0,3,28]
+"CursorSystem_8cs.html":[2,0,0,3,28]
 };

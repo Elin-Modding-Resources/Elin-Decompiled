@@ -1,5 +1,8 @@
 var NAVTREEINDEX20 =
 {
+"TraitMahjong_8cs.html":[2,0,0,1699],
+"TraitMahjong_8cs_source.html":[2,0,0,1699],
+"TraitMaid_8cs.html":[2,0,0,1700],
 "TraitMaid_8cs_source.html":[2,0,0,1700],
 "TraitMailPost_8cs.html":[2,0,0,1701],
 "TraitMailPost_8cs_source.html":[2,0,0,1701],
@@ -246,8 +249,5 @@ var NAVTREEINDEX20 =
 "TraitResourceMain_8cs_source.html":[2,0,0,1820],
 "TraitRide_8cs.html":[2,0,0,1821],
 "TraitRide_8cs_source.html":[2,0,0,1821],
-"TraitRoadSign_8cs.html":[2,0,0,1822],
-"TraitRoadSign_8cs_source.html":[2,0,0,1822],
-"TraitRodRandom_8cs.html":[2,0,0,1824],
-"TraitRodRandom_8cs_source.html":[2,0,0,1824]
+"TraitRoadSign_8cs.html":[2,0,0,1822]
 };

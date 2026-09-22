@@ -58,6 +58,7 @@ var CTAG_8cs =
       [ "noRide", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a49a37dfd96201b42724aa33d7c4e3cbf", null ],
       [ "ride", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a059763450f095b4973b450eaf58399c1", null ],
       [ "allowIngredient", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a076bdc2ccdccbd39fa9dcd72c98d2e0c", null ],
-      [ "nurse", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a0701aa317da5a004fbf6111545678a6c", null ]
+      [ "nurse", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a0701aa317da5a004fbf6111545678a6c", null ],
+      [ "notMeAgain", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a9af54679aae62f702dcaa57526481c21", null ]
     ] ]
 ];

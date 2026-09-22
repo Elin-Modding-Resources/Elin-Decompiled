@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"CalcGold_8cs_source.html":[2,0,0,252],
 "CalcMoney_8cs.html":[2,0,0,253],
 "CalcMoney_8cs_source.html":[2,0,0,253],
 "CalcPlat_8cs.html":[2,0,0,254],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ConSuffocation_8cs.html":[2,0,0,365],
 "ConSuffocation_8cs_source.html":[2,0,0,365],
 "ConSupress_8cs.html":[2,0,0,366],
-"ConSupress_8cs_source.html":[2,0,0,366],
-"ConSuspend_8cs.html":[2,0,0,367]
+"ConSupress_8cs_source.html":[2,0,0,366]
 };

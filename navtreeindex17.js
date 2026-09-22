@@ -1,5 +1,8 @@
 var NAVTREEINDEX17 =
 {
+"ThrowType_8cs.html#a05c5b2190a1fd92db99fcaca11eeee80ab5b0389d9e572efc85dbcd8e555f47d3":[2,0,0,1334,0,5],
+"ThrowType_8cs.html#a05c5b2190a1fd92db99fcaca11eeee80ae7f88ae03dba148b8660029cbdfddee3":[2,0,0,1334,0,6],
+"ThrowType_8cs.html#a05c5b2190a1fd92db99fcaca11eeee80af4d889918bba79c6b2e3d343d31d8d57":[2,0,0,1334,0,4],
 "ThrowType_8cs.html#a05c5b2190a1fd92db99fcaca11eeee80af7f5d540f521d6d642502a9d459e7b16":[2,0,0,1334,0,1],
 "ThrowType_8cs_source.html":[2,0,0,1334],
 "TileLookup_8cs.html":[2,0,0,1335],
@@ -155,8 +158,8 @@ var NAVTREEINDEX17 =
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8ae045615354060a83511b41ee31db4ae9":[2,0,0,1404,0,5],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8aee3c6e8ed9c27c45f161ea416c997df8":[2,0,0,1404,0,4],
 "ToggleType_8cs_source.html":[2,0,0,1404],
-"ToneDataList_8cs.html":[2,0,0,2,89],
-"ToneDataList_8cs_source.html":[2,0,0,2,89],
+"ToneDataList_8cs.html":[2,0,0,2,90],
+"ToneDataList_8cs_source.html":[2,0,0,2,90],
 "TooltipData_8cs.html":[2,0,0,3,106],
 "TooltipData_8cs_source.html":[2,0,0,3,106],
 "TooltipManager_8cs.html":[2,0,0,3,107],
@@ -246,8 +249,5 @@ var NAVTREEINDEX17 =
 "TraitBigDaddy_8cs.html":[2,0,0,1446],
 "TraitBigDaddy_8cs_source.html":[2,0,0,1446],
 "TraitBigSister_8cs.html":[2,0,0,1447],
-"TraitBigSister_8cs_source.html":[2,0,0,1447],
-"TraitBill_8cs.html":[2,0,0,1448],
-"TraitBill_8cs_source.html":[2,0,0,1448],
-"TraitBinocular_8cs.html":[2,0,0,1449]
+"TraitBigSister_8cs_source.html":[2,0,0,1447]
 };

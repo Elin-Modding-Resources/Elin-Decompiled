@@ -1,10 +1,13 @@
 var NAVTREEINDEX13 =
 {
+"PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3a16594136459321de397433be35349964":[2,0,0,984,0,0],
+"PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3a22ae0e2b89e5e3d477f988cc36d3272b":[2,0,0,984,0,2],
+"PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3aaa0d528ba11ea1485d466dfe1ea40819":[2,0,0,984,0,3],
 "PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3acd89c6c781d9d83b7f88482a839f30ce":[2,0,0,984,0,4],
 "PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3ae1b849f9631ffc1829b2e31402373e3c":[2,0,0,984,0,1],
 "PrefFlag_8cs_source.html":[2,0,0,984],
-"PrefabFix_8cs.html":[2,0,0,2,67],
-"PrefabFix_8cs_source.html":[2,0,0,2,67],
+"PrefabFix_8cs.html":[2,0,0,2,68],
+"PrefabFix_8cs_source.html":[2,0,0,2,68],
 "PriceType_8cs.html":[2,0,0,985],
 "PriceType_8cs.html#a482277e66af02c7d65679d7485095573":[2,0,0,985,0],
 "PriceType_8cs.html#a482277e66af02c7d65679d7485095573a07a308c39c94d7dc58593cf15e59e21b":[2,0,0,985,0,3],
@@ -209,8 +212,8 @@ var NAVTREEINDEX13 =
 "RadialBlurImage_8cs_source.html":[2,0,0,3,0,5],
 "RainbowTextColor_8cs.html":[2,0,0,3,78],
 "RainbowTextColor_8cs_source.html":[2,0,0,3,78],
-"Rand_8cs.html":[2,0,0,2,68],
-"Rand_8cs_source.html":[2,0,0,2,68],
+"Rand_8cs.html":[2,0,0,2,69],
+"Rand_8cs_source.html":[2,0,0,2,69],
 "RandomPositionMover_8cs.html":[2,0,0,1079],
 "RandomPositionMover_8cs_source.html":[2,0,0,1079],
 "RankedZoneManager_8cs.html":[2,0,0,1081],
@@ -243,11 +246,8 @@ var NAVTREEINDEX13 =
 "RecipeUpdater_8cs_source.html":[2,0,0,1089],
 "Recipe_8cs.html":[2,0,0,1083],
 "Recipe_8cs_source.html":[2,0,0,1083],
-"RectData_8cs.html":[2,0,0,2,69],
-"RectData_8cs_source.html":[2,0,0,2,69],
-"RectPosition_8cs.html":[2,0,0,2,70],
-"RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623":[2,0,0,2,70,0],
-"RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623a06b9281e396db002010bde1de57262eb":[2,0,0,2,70,0,0],
-"RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623a2f20e1f6ee555ffccb5a96e0cbd0046b":[2,0,0,2,70,0,1],
-"RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623a4f1f6016fc9f3f2353c0cc7c67b292bd":[2,0,0,2,70,0,5]
+"RectData_8cs.html":[2,0,0,2,70],
+"RectData_8cs_source.html":[2,0,0,2,70],
+"RectPosition_8cs.html":[2,0,0,2,71],
+"RectPosition_8cs.html#a3710d51f7d4efe0dcd0dc570ee11f623":[2,0,0,2,71,0]
 };
