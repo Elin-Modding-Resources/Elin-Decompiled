@@ -60,6 +60,8 @@ public class BaseModPackage
 
 	public int orderIndex = -1;
 
+	public ModGroup group;
+
 	public BaseModPackage blockedBy;
 
 	public string langDepError;
