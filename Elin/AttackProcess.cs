@@ -904,10 +904,26 @@ public class AttackProcess : EClass
 		{
 			return true;
 		}
-		if (CC.HasElement(1253) && (!CC.HasElement(486) || !CC.IsPCFactionOrMinion))
+		if (CC.HasElement(1253))
 		{
-			TC.DamageHP(num7 / 10, 916, 100, AttackSource.None, CC);
+			if (!CC.HasElement(486))
+			{
+				Thing thing = weapon;
+				if (thing == null || !thing.HasElement(486))
+				{
+					goto IL_0f19;
+				}
+			}
+			if (!CC.IsPCFactionOrMinion)
+			{
+				goto IL_0f19;
+			}
 		}
+		goto IL_0f3c;
+		IL_0f19:
+		TC.DamageHP(num7 / 10, 916, 100, AttackSource.None, CC);
+		goto IL_0f3c;
+		IL_0f3c:
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
 		{
 			return true;

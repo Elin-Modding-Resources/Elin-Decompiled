@@ -105,21 +105,28 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			}, "home");
 			uIButton.icon.SetAlpha((bed != null) ? 1f : 0.4f);
 			uIButton.SetActive(enable: true);
-			UIButton sub2 = null;
-			sub2 = b.AddSubButton(EClass.core.refs.icons.sharedEquip, delegate
+			if (a.IsPCFaction)
 			{
-				a.SetInt(113, (a.GetInt(113) == 0) ? 1 : 0);
-				SE.Tab();
+				UIButton sub2 = null;
+				sub2 = b.AddSubButton(EClass.core.refs.icons.sharedEquip, delegate
+				{
+					a.SetInt(113, (a.GetInt(113) == 0) ? 1 : 0);
+					SE.Tab();
+					sub2.icon.SetAlpha((a.GetInt(113) == 1) ? 0.4f : 1f);
+					UIButton.TryShowTip();
+				}, null, delegate(UITooltip t)
+				{
+					t.note.Clear();
+					t.note.AddHeader("infoSharedEquip".lang((a.GetInt(113) == 1) ? "none".lang() : "infoSharedEquip_on".lang()));
+					t.note.Build();
+				}, "sharedEquip");
 				sub2.icon.SetAlpha((a.GetInt(113) == 1) ? 0.4f : 1f);
-				UIButton.TryShowTip();
-			}, null, delegate(UITooltip t)
+				sub2.SetActive(enable: true);
+			}
+			else
 			{
-				t.note.Clear();
-				t.note.AddHeader("infoSharedEquip".lang((a.GetInt(113) == 1) ? "none".lang() : "infoSharedEquip_on".lang()));
-				t.note.Build();
-			}, "sharedEquip");
-			sub2.icon.SetAlpha((a.GetInt(113) == 1) ? 0.4f : 1f);
-			sub2.SetActive(enable: true);
+				b.AddSubButton(EClass.core.refs.icons.sharedEquip, null, null, null, "sharedEquip").SetActive(enable: false);
+			}
 		}
 		else
 		{

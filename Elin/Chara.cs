@@ -5275,7 +5275,7 @@ public class Chara : Card, IPathfindWalker
 				EQ_CAT(job.weapon.RandomItem());
 			}
 		}
-		for (int k = 0; k < ((!(race.id == "mutant")) ? 1 : (2 + base.LV / 30)); k++)
+		for (int k = 0; k < ((!(race.id == "mutant")) ? 1 : Mathf.Min(2 + base.LV / 30, 20)); k++)
 		{
 			if (flag)
 			{
@@ -10555,14 +10555,6 @@ public class Chara : Card, IPathfindWalker
 	{
 		Feat feat = elements.GetElement(id) as Feat;
 		int num = 0;
-		if (feat == null)
-		{
-			Debug.Log("1: null/" + EClass.sources.elements.map[id].id);
-		}
-		else
-		{
-			Debug.Log("1:" + feat.Name + "/" + feat.Value);
-		}
 		if (feat != null && feat.Value > 0)
 		{
 			if (value == feat.Value)
@@ -10573,14 +10565,6 @@ public class Chara : Card, IPathfindWalker
 			feat.Apply(-feat.Value, elements);
 		}
 		feat = elements.SetBase(id, value - (feat?.vSource ?? 0)) as Feat;
-		if (feat == null)
-		{
-			Debug.Log("1: null" + EClass.sources.elements.map[id].id);
-		}
-		else
-		{
-			Debug.Log("1:" + feat.Name + "/" + feat.Value);
-		}
 		if (feat != null && feat.Value != 0)
 		{
 			feat.Apply(feat.Value, elements);

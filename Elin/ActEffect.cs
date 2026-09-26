@@ -433,7 +433,7 @@ public class ActEffect : EClass
 				{
 					chara = EClass.pc;
 				}
-				if (chara != null && chara.IsAliveInCurrentZone)
+				if (chara != null && chara.IsAliveInCurrentZone && (!c.isChara || !c.IsPCFactionOrMinion || chara.IsHostile(c.Chara)))
 				{
 					chara.DoHostileAction(c);
 				}

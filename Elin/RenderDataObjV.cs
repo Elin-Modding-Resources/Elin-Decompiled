@@ -4,6 +4,8 @@ public class RenderDataObjV : RenderDataObj
 {
 	public bool topOnly;
 
+	public Vector3 topFix;
+
 	public override bool ForceAltHeldPosition => true;
 
 	public override void Draw(RenderParam p)
@@ -44,9 +46,9 @@ public class RenderDataObjV : RenderDataObj
 			else
 			{
 				meshBatch.colors[meshPass.idx] = p.color;
-				meshBatch.matrices[meshPass.idx].m03 = p.x + offset.x * (float)num;
-				meshBatch.matrices[meshPass.idx].m13 = p.y + offset.y + meshPass.pmesh.size.y;
-				meshBatch.matrices[meshPass.idx].m23 = p.z + offset.z + RenderData.renderSetting.vFix.z;
+				meshBatch.matrices[meshPass.idx].m03 = p.x + (topFix.x + offset.x) * (float)num;
+				meshBatch.matrices[meshPass.idx].m13 = p.y + topFix.y + offset.y + meshPass.pmesh.size.y;
+				meshBatch.matrices[meshPass.idx].m23 = p.z + topFix.z + offset.z + RenderData.renderSetting.vFix.z;
 			}
 			meshPass.idx++;
 			if (meshPass.idx == meshPass.batchSize)

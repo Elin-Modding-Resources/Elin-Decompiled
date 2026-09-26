@@ -33,7 +33,7 @@ public class ListPeople : BaseListPeople
 
 	public override bool ShowGoto => true;
 
-	public override bool ShowHome => memberType != FactionMemberType.Guest;
+	public override bool ShowHome => true;
 
 	public override bool ShowShowMode => true;
 }

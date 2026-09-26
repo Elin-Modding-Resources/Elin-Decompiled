@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TraitFoodEggFertilized : TraitFoodEgg
 {
 	public override int DecaySpeed => 1;
@@ -32,7 +30,6 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 			for (int i = 0; i < chara.Evalue(1644); i++)
 			{
 				chara.RemoveLastBodyPart();
-				Debug.Log(i + "/" + chara.body.slots.Count);
 			}
 			chara.elements.SetBase(1644, 0);
 		}

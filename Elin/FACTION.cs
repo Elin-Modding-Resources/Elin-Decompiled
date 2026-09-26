@@ -577,9 +577,9 @@ public class Faction : EClass
 	public void SetTaxTooltip(UINote n)
 	{
 		n.AddHeader("tax");
-		n.AddTopic("tax_base", Lang._currency(GetBaseTax(evasion: true), showUnit: true) + " (" + Lang._currency(GetBaseTax(evasion: false)) + ")");
-		n.AddTopic("tax_fame", Lang._currency(GetFameTax(evasion: true), showUnit: true) + " (" + Lang._currency(GetFameTax(evasion: false)) + ")");
-		n.AddTopic("tax_extra", Lang._currency(EClass.player.extraTax, showUnit: true));
+		n.AddTopic("TopicDefault_fit", "tax_base", Lang._currency(GetBaseTax(evasion: true), showUnit: true) + " (" + Lang._currency(GetBaseTax(evasion: false)) + ")");
+		n.AddTopic("TopicDefault_fit", "tax_fame", Lang._currency(GetFameTax(evasion: true), showUnit: true) + " (" + Lang._currency(GetFameTax(evasion: false)) + ")");
+		n.AddTopic("TopicDefault_fit", "tax_extra", Lang._currency(EClass.player.extraTax, showUnit: true));
 	}
 
 	public int CountTaxFreeLand()

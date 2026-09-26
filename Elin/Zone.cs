@@ -1380,7 +1380,7 @@ public class Zone : Spatial, ICardParent, IInspect
 						{
 							item.conSleep.Kill();
 						}
-						if (EClass.rnd(EClass.world.date.IsNight ? 20 : 200) == 0 && !item.IsPCFaction)
+						if (EClass.rnd(EClass.world.date.IsNight ? 20 : 200) == 0 && !item.IsPCFaction && !item.IsGuest())
 						{
 							item.AddCondition<ConSleep>(1000 + EClass.rnd(1000), force: true);
 						}
@@ -1433,6 +1433,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					{
 						item2.ChooseNewGoal();
 						item2.ai.SimulateZone(num6);
+						item2.ai.OnSimulatePosition();
 					}
 					continue;
 				}

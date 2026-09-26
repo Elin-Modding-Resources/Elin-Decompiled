@@ -1021,28 +1021,29 @@ public class UIInventory : EMono
 	public void Sort(bool redraw = true)
 	{
 		UIList.SortMode m = (IsShop ? EMono.player.pref.sortInvShop : (IsAdvSort ? window.saveData.sortMode : EMono.player.pref.sortInv));
+		LayerDragGrid instance = LayerDragGrid.Instance;
 		bool flag = true;
 		while (flag)
 		{
 			flag = false;
 			Dictionary<string, List<Thing>> dict = new Dictionary<string, List<Thing>>();
-			foreach (Thing item in owner.Container.things.Copy())
+			foreach (Thing t in owner.Container.things.Copy())
 			{
-				if (item.invY == 1)
+				if (t.invY == 1 || ((bool)instance && (bool)instance.buttons.Find((ButtonGrid b) => b.card == t)))
 				{
 					continue;
 				}
-				List<Thing> orCreate = dict.GetOrCreate(item.id + item.GetStr(53));
+				List<Thing> orCreate = dict.GetOrCreate(t.id + t.GetStr(53));
 				bool flag2 = false;
-				for (int i = 0; i < orCreate.Count; i++)
+				for (int num = 0; num < orCreate.Count; num++)
 				{
-					if (orCreate[i].TryStackTo(item))
+					if (orCreate[num].TryStackTo(t))
 					{
-						orCreate[i] = item;
+						orCreate[num] = t;
 						flag2 = true;
 						break;
 					}
-					if (item.TryStackTo(orCreate[i]))
+					if (t.TryStackTo(orCreate[num]))
 					{
 						flag2 = true;
 						break;
@@ -1054,11 +1055,11 @@ public class UIInventory : EMono
 				}
 				else
 				{
-					orCreate.Add(item);
+					orCreate.Add(t);
 				}
 			}
 		}
-		int num = 0;
+		int num2 = 0;
 		foreach (Thing thing in owner.Container.things)
 		{
 			if (thing.invY != 1)
@@ -1066,13 +1067,13 @@ public class UIInventory : EMono
 				thing.invY = 0;
 				thing.invX = -1;
 			}
-			num++;
+			num2++;
 		}
 		owner.Container.things.Sort(m, IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? window.saveData.sort_ascending : EMono.player.pref.sort_ascending), owner.currency);
 		if (!UseGrid)
 		{
-			int num2 = 0;
 			int num3 = 0;
+			int num4 = 0;
 			Vector2 sizeDelta = list.Rect().sizeDelta;
 			sizeDelta.x -= 60f;
 			sizeDelta.y -= 60f;
@@ -1082,16 +1083,16 @@ public class UIInventory : EMono
 				{
 					continue;
 				}
-				thing2.posInvX = num2 + 30;
-				thing2.posInvY = (int)sizeDelta.y - num3 + 30;
-				num2 += 40;
-				if ((float)num2 > sizeDelta.x)
+				thing2.posInvX = num3 + 30;
+				thing2.posInvY = (int)sizeDelta.y - num4 + 30;
+				num3 += 40;
+				if ((float)num3 > sizeDelta.x)
 				{
-					num2 = 0;
-					num3 += 40;
-					if ((float)num3 > sizeDelta.y)
+					num3 = 0;
+					num4 += 40;
+					if ((float)num4 > sizeDelta.y)
 					{
-						num3 = 20;
+						num4 = 20;
 					}
 				}
 			}
