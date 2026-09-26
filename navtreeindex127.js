@@ -1,5 +1,6 @@
 var NAVTREEINDEX127 =
 {
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba416cbeae2070fddbfc244e8c51179235":[1,0,1631,1,12],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba451f9c5171a55b1b6003778d2a35f138":[1,0,1631,1,13],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b":[1,0,1631,1,7],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754":[1,0,1631,1,0],
@@ -155,6 +156,7 @@ var NAVTREEINDEX127 =
 "classTraitDoorBig.html":[1,0,1655],
 "classTraitDoorBig.html#a4a2f279b8ed6f8a4302b87c47c1cd808":[1,0,1655,0],
 "classTraitDoorBig.html#a544e2d3c3606ec0f6aa598466678e219":[1,0,1655,2],
+"classTraitDoorBig.html#abb6ea90a544c4dcedbb74734adb620c3":[1,0,1655,3],
 "classTraitDoorBig.html#afd49d41abe48d96f5d1322b96a9a57c5":[1,0,1655,1],
 "classTraitDoorBigL.html":[1,0,1656],
 "classTraitDoorBigL.html#a0b7e3e8a0562b1da29ea82a8582fb41b":[1,0,1656,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitDryBrick.html#aad88cfbd9d6750a4cede8b44c8732451":[1,0,1677,1],
 "classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1677,0],
 "classTraitDuponne.html":[1,0,1678],
-"classTraitDuponne.html#a2a1d43050b041451480fe1682608583c":[1,0,1678,1],
-"classTraitDuponne.html#a78f6665690c3ea7da372008c47699d8a":[1,0,1678,0],
-"classTraitDuponneBall.html":[1,0,1679]
+"classTraitDuponne.html#a2a1d43050b041451480fe1682608583c":[1,0,1678,1]
 };

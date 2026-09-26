@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classSteam.html#a7ed989445273162de59dd96ac322d9ee":[1,0,1366,0],
 "classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4":[1,0,1366,15],
 "classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247":[1,0,1366,14],
 "classSteam.html#a97a5dc96771772c2d6aa9326f22fd65a":[1,0,1366,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTactics.html#aa76cbbe19acb219e5ebc5872e8acd898":[1,0,1378,9],
 "classTactics.html#ac38e80d3123c55c28839380b395e0e3e":[1,0,1378,19],
 "classTactics.html#ac4322cddc93ca830748a7cc0d56f52f0":[1,0,1378,12],
-"classTactics.html#aca6e83ceafab77d366a230842eca1fb8":[1,0,1378,2],
-"classTactics.html#ad00ead456657bbe3c0770824b9a40ba6":[1,0,1378,4]
+"classTactics.html#aca6e83ceafab77d366a230842eca1fb8":[1,0,1378,2]
 };

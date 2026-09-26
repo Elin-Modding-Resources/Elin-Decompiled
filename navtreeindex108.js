@@ -1,5 +1,6 @@
 var NAVTREEINDEX108 =
 {
+"classScene.html#afa0653ad8eace72b7702c67897b46698":[1,0,1231,38],
 "classScene.html#afdad28e07ce9d68dc2955bdbc0cbee73":[1,0,1231,44],
 "classSceneColorProfile.html":[1,0,1232],
 "classSceneColorProfile.html#a3de37fc995cac3e0fe0719a77092956a":[1,0,1232,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX108 =
 "classShopTransaction.html#aba928fd7bb645131594be67c06d49a4d":[1,0,1252,1],
 "classShopTransaction.html#ae8c8a4ca98f3d7da5cea489b9c0e8654":[1,0,1252,7],
 "classShopTransaction.html#af57279fbec99dc4f1d6357899a9ebe00":[1,0,1252,2],
-"classShopTransaction.html#afe6f919401ef765fe041e0e9d3f8fb0a":[1,0,1252,4],
-"classShopTransaction.html#aff4a9a6fedb3e67a9d8cafde3100f88d":[1,0,1252,6]
+"classShopTransaction.html#afe6f919401ef765fe041e0e9d3f8fb0a":[1,0,1252,4]
 };

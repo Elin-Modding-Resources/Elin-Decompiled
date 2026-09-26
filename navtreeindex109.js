@@ -1,5 +1,6 @@
 var NAVTREEINDEX109 =
 {
+"classShopTransaction.html#aff4a9a6fedb3e67a9d8cafde3100f88d":[1,0,1252,6],
 "classShopTransaction_1_1Item.html":[1,0,1252,0],
 "classShopTransaction_1_1Item.html#a4f72169eed4dcfbda5c8a8981ae35336":[1,0,1252,0,1],
 "classShopTransaction_1_1Item.html#ab0e48469215b133ab973454f133c6d25":[1,0,1252,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX109 =
 "classSkinRootStatic.html#ae7cf7d7c35d521a3a7b7075d57508ef4":[1,0,1273,12],
 "classSkinRootStatic.html#aefd60849188c3c958776c5f62b5a4a91":[1,0,1273,28],
 "classSkinRootStatic.html#af1f8a9f7c66622fcf1f84df73bb1a287":[1,0,1273,19],
-"classSkinRootStatic.html#afa7470f623acd40437f0107f83d851da":[1,0,1273,27],
-"classSkinRootStatic.html#afbff97b5ad2b01fedc5496b8b6f8dd30":[1,0,1273,8]
+"classSkinRootStatic.html#afa7470f623acd40437f0107f83d851da":[1,0,1273,27]
 };

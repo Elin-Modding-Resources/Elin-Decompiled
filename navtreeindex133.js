@@ -1,5 +1,7 @@
 var NAVTREEINDEX133 =
 {
+"classTraitSilvercat.html#aa5b0b9936bfa33b44c3dc8c3a193bc4e":[1,0,1966,2],
+"classTraitSilvercatBall.html":[1,0,1967],
 "classTraitSilvercatBall.html#aa24b62f76ac7a6d9e33a96598a50b7c2":[1,0,1967,0],
 "classTraitSkyHelm.html":[1,0,1968],
 "classTraitSkyHelm.html#a6cdec724298876f465d53bc4f45473e4":[1,0,1968,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX133 =
 "classTraitToolBrush.html":[1,0,2040],
 "classTraitToolBrush.html#a32ab5b833450060e7e76ac78a203e25f":[1,0,2040,0],
 "classTraitToolBrush.html#a3474a006dd903ebcb2ba60fc1b61e498":[1,0,2040,3],
-"classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4":[1,0,2040,1],
-"classTraitToolBrush.html#aaaa0913443854cd228cfc143adce056a":[1,0,2040,2],
-"classTraitToolBrushStrip.html":[1,0,2041]
+"classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4":[1,0,2040,1]
 };

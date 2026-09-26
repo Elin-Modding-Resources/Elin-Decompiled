@@ -1,5 +1,7 @@
 var NAVTREEINDEX132 =
 {
+"classTraitRecipe.html#a6257a9c12ae0a2b44150f40b2407f8bd":[1,0,1923,4],
+"classTraitRecipe.html#a8bc4ee4817fb8db2cd2a688c611e2337":[1,0,1923,6],
 "classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1923,7],
 "classTraitRecipe.html#aa609c89aa917d5d61b9b3b35cb3fc6c5":[1,0,1923,3],
 "classTraitRecipe.html#aaa59f50841aa5f8763647eaa24cc1dfb":[1,0,1923,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX132 =
 "classTraitSilvercat.html":[1,0,1966],
 "classTraitSilvercat.html#a03fc07fe11b84645d3072c2b6e8d0694":[1,0,1966,3],
 "classTraitSilvercat.html#a23a1fe33f02fcd73b68f929112190064":[1,0,1966,1],
-"classTraitSilvercat.html#a3a29a6825a4eddc94d1ba291767a3561":[1,0,1966,0],
-"classTraitSilvercat.html#aa5b0b9936bfa33b44c3dc8c3a193bc4e":[1,0,1966,2],
-"classTraitSilvercatBall.html":[1,0,1967]
+"classTraitSilvercat.html#a3a29a6825a4eddc94d1ba291767a3561":[1,0,1966,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX135 =
 {
+"classTraitWoodMill.html#afca35db92647661ebf8a23142925832d":[1,0,2105,7],
+"classTraitWorkbench.html":[1,0,2106],
 "classTraitWorkbenchFuel.html":[1,0,2107],
 "classTraitWorkbenchFuel.html#a65b0b18e5e4ae87520795159830a1021":[1,0,2107,1],
 "classTraitWorkbenchFuel.html#ad8077da04cad339921e6c5e0c9736afe":[1,0,2107,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX135 =
 "classUI.html#a980340b0c681d5262f64cf4e57e4fc7a":[1,0,2125,47],
 "classUI.html#a98ddd497acae2499f721049436c6a424":[1,0,2125,41],
 "classUI.html#a99991ca3b9efac07f1b0d1ce4eb604d1":[1,0,2125,23],
-"classUI.html#a9b02bb27cbbb0f63aeba9e0be03febfb":[1,0,2125,43],
-"classUI.html#a9c6f553eabd0ee7461f259f07c84cc9b":[1,0,2125,25],
-"classUI.html#a9c9ad79602bcaa8e44209fa1d2695bd4":[1,0,2125,46]
+"classUI.html#a9b02bb27cbbb0f63aeba9e0be03febfb":[1,0,2125,43]
 };

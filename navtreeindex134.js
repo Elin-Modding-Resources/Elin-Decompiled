@@ -1,5 +1,7 @@
 var NAVTREEINDEX134 =
 {
+"classTraitToolBrush.html#aaaa0913443854cd228cfc143adce056a":[1,0,2040,2],
+"classTraitToolBrushStrip.html":[1,0,2041],
 "classTraitToolBrushStrip.html#a09a7c6902282ebb842f344e10b2379c6":[1,0,2041,0],
 "classTraitToolBrushStrip.html#aefe45499974caea5ca18a2b46680f8ee":[1,0,2041,1],
 "classTraitToolBuild.html":[1,0,2042],
@@ -247,7 +249,5 @@ var NAVTREEINDEX134 =
 "classTraitWoodMill.html#a8fdf4ad951b5f61f4401c2b84eaab05c":[1,0,2105,0],
 "classTraitWoodMill.html#ad001d7a987bbe811b56ee893fc3a1a01":[1,0,2105,8],
 "classTraitWoodMill.html#ad508dcda5bd2fa9132d3bf23be611341":[1,0,2105,3],
-"classTraitWoodMill.html#af61707b6bd1384da1f3b96903cd18c59":[1,0,2105,2],
-"classTraitWoodMill.html#afca35db92647661ebf8a23142925832d":[1,0,2105,7],
-"classTraitWorkbench.html":[1,0,2106]
+"classTraitWoodMill.html#af61707b6bd1384da1f3b96903cd18c59":[1,0,2105,2]
 };

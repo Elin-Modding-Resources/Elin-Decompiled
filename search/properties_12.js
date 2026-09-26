@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['race_0',['race',['../classChara.html#aff51c1a00af6403830b9d32980033a66',1,'Chara']]],
-  ['race_1',['Race',['../classQuestTaskHunt.html#a8cc6a02eab3d8a3e1de5878767e581a0',1,'QuestTaskHunt']]],
+  ['race_0',['Race',['../classQuestTaskHunt.html#a8cc6a02eab3d8a3e1de5878767e581a0',1,'QuestTaskHunt']]],
+  ['race_1',['race',['../classChara.html#aff51c1a00af6403830b9d32980033a66',1,'Chara']]],
   ['race_5frow_2',['race_row',['../classSourceChara_1_1Row.html#a608904857a5ba665d54ae72d13d2795b',1,'SourceChara::Row']]],
   ['radius_3',['radius',['../classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21',1,'TraitSpotFuel']]],
   ['radius_4',['Radius',['../classAct.html#a11990d35974a3e8fea8e758384c4ee30',1,'Act']]],

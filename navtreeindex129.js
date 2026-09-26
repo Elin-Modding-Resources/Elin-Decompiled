@@ -1,5 +1,7 @@
 var NAVTREEINDEX129 =
 {
+"classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1741,0],
+"classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1741,4],
 "classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1741,1],
 "classTraitGene.html#a8e6b1c7317611d1cf438e56d285a37af":[1,0,1741,6],
 "classTraitGene.html#aaac1b8bb856a544a6550160fe9e76d90":[1,0,1741,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX129 =
 "classTraitLightSource.html":[1,0,1798],
 "classTraitLightSource.html#aa595dc36c0ef6dbad1355b52fe516581":[1,0,1798,0],
 "classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1798,1],
-"classTraitLightSun.html":[1,0,1799],
-"classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1799,2],
-"classTraitLightSun.html#a3af4cf2161f05c1de3f608ad33cc6ed6":[1,0,1799,0]
+"classTraitLightSun.html":[1,0,1799]
 };
