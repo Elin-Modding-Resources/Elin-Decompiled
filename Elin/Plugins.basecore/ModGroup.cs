@@ -9,6 +9,8 @@ public class ModGroup
 
 	public Color? color;
 
+	public BaseModPackage after;
+
 	public ModGroup Clone()
 	{
 		return (ModGroup)MemberwiseClone();
