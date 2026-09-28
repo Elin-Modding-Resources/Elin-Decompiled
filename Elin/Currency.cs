@@ -9,6 +9,7 @@ public class Currency
 			CurrencyType.Influence => "influence", 
 			CurrencyType.Casino_coin => "casino_coin", 
 			CurrencyType.Ecopo => "ecopo", 
+			CurrencyType.Money3 => "money3", 
 			CurrencyType.Plat => "plat", 
 			_ => "money", 
 		};

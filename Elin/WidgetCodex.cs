@@ -62,7 +62,7 @@ public class WidgetCodex : Widget
 		{
 			foreach (RecipeSource item in RecipeManager.list)
 			{
-				if (!item.isChara && !item.noListing && !item.isBridgePillar && (item.row.GetSearchName(jp: false).Contains(s) || item.row.GetSearchName(jp: true).Contains(s)) && (EMono.player.recipes.knownRecipes.ContainsKey(item.id) || item.alwaysKnown))
+				if (!item.isChara && item.ShouldList() && !item.isBridgePillar && (item.row.GetSearchName(jp: false).Contains(s) || item.row.GetSearchName(jp: true).Contains(s)) && (EMono.player.recipes.knownRecipes.ContainsKey(item.id) || item.alwaysKnown))
 				{
 					hashSet.Add(Recipe.Create(item));
 				}
@@ -72,7 +72,7 @@ public class WidgetCodex : Widget
 		{
 			foreach (RecipeSource item2 in RecipeManager.list)
 			{
-				if (!item2.isChara && !item2.noListing && (EMono.player.recipes.knownRecipes.ContainsKey(item2.id) || item2.alwaysKnown))
+				if (!item2.isChara && item2.ShouldList() && (EMono.player.recipes.knownRecipes.ContainsKey(item2.id) || item2.alwaysKnown))
 				{
 					hashSet.Add(Recipe.Create(item2));
 				}

@@ -552,7 +552,19 @@ public class SurvivalManager : EClass
 		for (int i = 0; i < (EClass.debug.enable ? 10 : 2); i++)
 		{
 			SourceChara.Row row = list.RandomItem();
-			if (row != null)
+			if (row == null)
+			{
+				continue;
+			}
+			bool flag = true;
+			foreach (HireInfo item in branch.listRecruit)
+			{
+				if (item.chara.id == row.id)
+				{
+					flag = false;
+				}
+			}
+			if (flag)
 			{
 				Chara chara = CharaGen.Create(row.id);
 				chara.RemoveEditorTag(EditorTag.AINoMove);

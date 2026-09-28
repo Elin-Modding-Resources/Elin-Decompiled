@@ -9,5 +9,6 @@ public enum CurrencyType
 	BranchMoney,
 	Influence,
 	Casino_coin,
-	BlueCapsule
+	BlueCapsule,
+	Money3
 }

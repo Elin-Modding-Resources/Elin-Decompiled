@@ -91,8 +91,6 @@ public class LayerMod : ELayer
 
 	private UIButton buttonCollapse;
 
-	private Action<ModPackage, ItemMod> onInstantiate;
-
 	private BaseModPackage panelTarget;
 
 	private float timerSearch;
@@ -156,22 +154,27 @@ public class LayerMod : ELayer
 				goto IL_00b8;
 			}
 		}
-		goto IL_00d2;
+		goto IL_00de;
 		IL_00b8:
 		if (num2)
 		{
+			if (a > 0)
+			{
+				LeaveGroup(baseModPackage);
+			}
 			baseModPackage.group = ((a > 0) ? null : modGroup2);
 			OnReorder();
 			return;
 		}
-		goto IL_00d2;
-		IL_00d2:
+		goto IL_00de;
+		IL_00de:
 		MoveTo(row, obj);
 	}
 
 	private void MoveTo(object row, object target)
 	{
 		List<BaseModPackage> packages = manager.packages;
+		List<ModGroup> emptyGroups = manager.emptyGroups;
 		List<object> items = this.list.items;
 		ModGroup modGroup = row as ModGroup;
 		BaseModPackage baseModPackage = target as BaseModPackage;
@@ -183,36 +186,75 @@ public class LayerMod : ELayer
 			return;
 		}
 		bool flag = items.IndexOf(row) < items.IndexOf(target);
-		List<BaseModPackage> list = ((modGroup != null) ? Members(modGroup) : new List<BaseModPackage> { (BaseModPackage)row });
-		if (list.Count == 0)
+		List<BaseModPackage> block = ((modGroup != null) ? Members(modGroup) : new List<BaseModPackage> { (BaseModPackage)row });
+		bool flag2 = emptyGroups.Contains(modGroup2);
+		if (block.Count == 0)
+		{
+			(BaseModPackage, int) tuple = (modGroup.after, emptyGroups.IndexOf(modGroup));
+			emptyGroups.Remove(modGroup);
+			if (flag2)
+			{
+				modGroup.after = modGroup2.after;
+				emptyGroups.Insert(emptyGroups.IndexOf(modGroup2) + (flag ? 1 : 0), modGroup);
+			}
+			else
+			{
+				List<BaseModPackage> list = ((modGroup2 != null) ? Members(modGroup2) : null);
+				BaseModPackage edge = ((list == null || list.Count <= 0) ? baseModPackage : (flag ? list[^1] : list[0]));
+				modGroup.after = (flag ? edge : packages.TakeWhile((BaseModPackage p) => p != edge).LastOrDefault((BaseModPackage p) => !p.builtin));
+				emptyGroups.Insert(GetGroupIndex(modGroup.after, !flag), modGroup);
+			}
+			BaseModPackage after = modGroup.after;
+			int num = emptyGroups.IndexOf(modGroup);
+			var (baseModPackage2, num2) = tuple;
+			if (after == baseModPackage2 && num == num2)
+			{
+				SE.BeepSmall();
+				RefreshLists();
+			}
+			else
+			{
+				OnReorder(restart: false);
+			}
+			return;
+		}
+		bool flag3 = modGroup == null && flag && (flag2 || (modGroup2 != null && !modGroup2.collapsed));
+		ModGroup modGroup3 = ((modGroup != null) ? block[0].group : ((modGroup2 == null) ? baseModPackage.group : (flag3 ? modGroup2 : null)));
+		if (modGroup == null && modGroup3 != block[0].group)
+		{
+			LeaveGroup(block[0]);
+		}
+		int num3 = packages.IndexOf(block[0]);
+		BaseModPackage after2 = packages.TakeWhile((BaseModPackage p) => p != block[0]).LastOrDefault((BaseModPackage p) => !p.builtin);
+		foreach (BaseModPackage item in block)
+		{
+			packages.Remove(item);
+		}
+		List<BaseModPackage> list2 = ((modGroup2 != null) ? Members(modGroup2) : null);
+		bool flag4 = flag && !flag3;
+		BaseModPackage baseModPackage3 = ((list2 == null) ? baseModPackage : ((list2.Count == 0) ? null : (flag4 ? list2[^1] : list2[0])));
+		int num4 = ((baseModPackage3 != null) ? (packages.IndexOf(baseModPackage3) + (flag4 ? 1 : 0)) : ((flag2 && !block.Contains(modGroup2.after)) ? ((modGroup2.after != null) ? (packages.IndexOf(modGroup2.after) + 1) : packages.Count((BaseModPackage p) => p.builtin)) : num3));
+		if (!flag2 && num4 == num3 && modGroup3 == block[0].group)
 		{
 			SE.BeepSmall();
 			RefreshLists();
 			return;
 		}
-		int num = packages.IndexOf(list[0]);
-		foreach (BaseModPackage item in list)
+		packages.InsertRange(num4, block);
+		BaseModPackage baseModPackage4 = (flag2 ? modGroup2.after : null);
+		foreach (ModGroup item2 in emptyGroups)
 		{
-			packages.Remove(item);
+			if (block.Contains(item2.after) && (num4 != num3 || (flag2 && flag && emptyGroups.IndexOf(item2) <= emptyGroups.IndexOf(modGroup2))))
+			{
+				item2.after = after2;
+			}
+			else if ((baseModPackage3 != null && flag4 && item2.after == baseModPackage3) || (flag2 && !flag && item2.after == baseModPackage4 && emptyGroups.IndexOf(item2) >= emptyGroups.IndexOf(modGroup2)))
+			{
+				item2.after = block[^1];
+			}
 		}
-		bool flag2 = manager.emptyGroups.Contains(modGroup2);
-		bool flag3 = modGroup == null && flag && (flag2 || (modGroup2 != null && !modGroup2.collapsed));
-		List<BaseModPackage> list2 = ((modGroup2 != null) ? Members(modGroup2) : null);
-		bool flag4 = flag && !flag3;
-		BaseModPackage baseModPackage2 = ((list2 == null) ? baseModPackage : ((list2.Count == 0) ? null : (flag4 ? list2[^1] : list2[0])));
-		int num2 = ((baseModPackage2 != null) ? (packages.IndexOf(baseModPackage2) + (flag4 ? 1 : 0)) : (flag2 ? packages.Count : num));
-		packages.InsertRange(num2, list);
-		ModGroup modGroup3 = ((modGroup != null) ? list[0].group : ((modGroup2 == null) ? baseModPackage.group : (flag3 ? modGroup2 : null)));
-		if (num2 == num && modGroup3 == list[0].group)
-		{
-			SE.BeepSmall();
-			RefreshLists();
-		}
-		else
-		{
-			list[0].group = modGroup3;
-			OnReorder();
-		}
+		block[0].group = modGroup3;
+		OnReorder();
 	}
 
 	private void OnReorder(bool restart = true)
@@ -266,7 +308,6 @@ public class LayerMod : ELayer
 				SetMembersActive(g, active: false);
 			}
 		};
-		onInstantiate = SetModRow;
 		list.callbacks = CreateCallbacks(list, builtin: false);
 		list2.callbacks = CreateCallbacks(list2, builtin: true);
 		InitSearchUI();
@@ -297,12 +338,22 @@ public class LayerMod : ELayer
 				}
 				else
 				{
-					onInstantiate((ModPackage)row, b);
+					SetModRow((ModPackage)row, b);
 				}
 			},
 			onList = delegate
 			{
 				ModGroup modGroup = null;
+				if (!builtin && !HasFilter)
+				{
+					foreach (ModGroup emptyGroup in manager.emptyGroups)
+					{
+						if (emptyGroup.after == null)
+						{
+							target.Add(emptyGroup);
+						}
+					}
+				}
 				foreach (BaseModPackage package in manager.packages)
 				{
 					if (package.builtin == builtin && (builtin || Match(package)))
@@ -319,11 +370,17 @@ public class LayerMod : ELayer
 						{
 							target.Add(package);
 						}
+						if (!HasFilter)
+						{
+							foreach (ModGroup emptyGroup2 in manager.emptyGroups)
+							{
+								if (emptyGroup2.after == package)
+								{
+									target.Add(emptyGroup2);
+								}
+							}
+						}
 					}
-				}
-				if (!builtin && !HasFilter)
-				{
-					target.AddCollection(manager.emptyGroups);
 				}
 			},
 			onRefresh = Refresh,
@@ -351,8 +408,19 @@ public class LayerMod : ELayer
 		b.buttonActivate.mainText.SetText(FitTitle(b.buttonActivate.mainText, title), (!a.IsValidVersion() || a.blockedBy != null || !a.langDepError.IsEmpty()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));
 		b.buttonActivate.subText.text = a.version;
 		b.buttonLock.mainText.text = a.author;
+		ItemMod itemMod = ((a.group != null && !HasFilter) ? list.GetPair<ItemMod>(a.group) : null);
+		b.imageMember.SetActive(itemMod);
+		if ((bool)itemMod)
+		{
+			b.imageMember.color = itemMod.buttonActivate.mainText.color;
+		}
 		b.buttonUp.SetActive(!a.builtin);
 		b.buttonDown.SetActive(!a.builtin);
+		b.buttonConfig.SetActive(a.onBuildConfig != null);
+		b.buttonConfig.SetOnClick(delegate
+		{
+			LayerModConfig.Open(a);
+		});
 		b.buttonToggle.SetToggle(a.willActivate);
 		b.buttonUp.SetOnClick(delegate
 		{
@@ -382,7 +450,7 @@ public class LayerMod : ELayer
 		b.buttonActivate.onClick.AddListener(delegate
 		{
 			Refresh();
-			UIContextMenu uIContextMenu = ELayer.ui.CreateContextMenuInteraction();
+			UIContextMenu uIContextMenu = ELayer.ui.CreateContextMenuInteraction().SetHighlightTarget(b.buttonActivate);
 			if (!a.builtin)
 			{
 				if (ELayer.debug.enable || (!BaseCore.IsOffline && a.isInPackages && !ELayer.core.version.demo))
@@ -436,6 +504,14 @@ public class LayerMod : ELayer
 					});
 				}
 				AddGroupButtons(uIContextMenu, a);
+			}
+			if (a.onBuildConfig != null)
+			{
+				uIContextMenu.AddButton("config", delegate
+				{
+					SE.Click();
+					LayerModConfig.Open(a);
+				});
 			}
 			if (ModPreview.FindPreviewFile(a) != null || (bool)SteamPreview(a))
 			{
@@ -505,6 +581,22 @@ public class LayerMod : ELayer
 		}
 	}
 
+	private void LeaveGroup(BaseModPackage p)
+	{
+		ModGroup g = p.group;
+		if (g != null && !manager.packages.Any((BaseModPackage m) => m != p && m.group == g))
+		{
+			manager.emptyGroups.Insert(GetGroupIndex(p, last: false), g);
+			g.after = manager.packages.TakeWhile((BaseModPackage m) => m != p).LastOrDefault((BaseModPackage m) => !m.builtin);
+		}
+	}
+
+	private int GetGroupIndex(BaseModPackage anchor, bool last)
+	{
+		List<BaseModPackage> l = manager.packages;
+		return manager.emptyGroups.Count((ModGroup e) => l.IndexOf(e.after) < l.IndexOf(anchor) || (last && e.after == anchor));
+	}
+
 	private void NewGroup()
 	{
 		if (ModManager.disableMod)
@@ -521,7 +613,8 @@ public class LayerMod : ELayer
 			}
 			ModGroup item = new ModGroup
 			{
-				name = name
+				name = name,
+				after = manager.packages.LastOrDefault((BaseModPackage p) => !p.builtin)
 			};
 			manager.emptyGroups.Add(item);
 			OnReorder(restart: false);
@@ -534,10 +627,10 @@ public class LayerMod : ELayer
 	{
 		List<BaseModPackage> members = Members(g);
 		int on = members.Count((BaseModPackage p) => p.willActivate);
-		string title = (g.collapsed ? "[+] " : "[-] ") + g.name;
+		string title = ((members.Count == 0) ? "" : (g.collapsed ? "[+] " : "[-] ")) + g.name;
 		UIText mainText = b.buttonActivate.mainText;
 		mainText.fontStyle = FontStyle.Bold;
-		mainText.SetText(FitTitle(mainText, title, " (" + on + "/" + members.Count + ")"), FontColor.Topic);
+		mainText.SetText(FitTitle(mainText, title, (members.Count > 0) ? (" (" + on + "/" + members.Count + ")") : ""), FontColor.Topic);
 		Color topic = mainText.color;
 		Color? color = g.color;
 		if (color.HasValue)
@@ -653,12 +746,29 @@ public class LayerMod : ELayer
 			ClearSearch();
 		}
 		List<BaseModPackage> packages = manager.packages;
+		List<ModGroup> emptyGroups = manager.emptyGroups;
 		ModGroup host = ((g != null && packages.Any((BaseModPackage m) => m.group == g)) ? g : p.group);
 		BaseModPackage baseModPackage = ((host == null) ? null : packages.LastOrDefault((BaseModPackage m) => m != p && m.group == host));
-		if (baseModPackage != null)
+		if (g != p.group)
 		{
-			packages.Remove(p);
-			packages.Insert(packages.IndexOf(baseModPackage) + 1, p);
+			LeaveGroup(p);
+		}
+		int num = packages.IndexOf(p);
+		BaseModPackage after = packages.TakeWhile((BaseModPackage m) => m != p).LastOrDefault((BaseModPackage m) => !m.builtin);
+		packages.Remove(p);
+		int num2 = ((!emptyGroups.Contains(g)) ? ((baseModPackage != null) ? (packages.IndexOf(baseModPackage) + 1) : num) : ((g.after == p) ? num : ((g.after != null) ? (packages.IndexOf(g.after) + 1) : packages.Count((BaseModPackage m) => m.builtin))));
+		packages.Insert(num2, p);
+		BaseModPackage baseModPackage2 = (emptyGroups.Contains(g) ? g.after : null);
+		foreach (ModGroup item in emptyGroups)
+		{
+			if (item.after == p && num2 != num)
+			{
+				item.after = after;
+			}
+			else if (emptyGroups.Contains(g) && item.after == baseModPackage2 && emptyGroups.IndexOf(item) >= emptyGroups.IndexOf(g))
+			{
+				item.after = p;
+			}
 		}
 		p.group = g;
 		if (g != null)
@@ -938,6 +1048,9 @@ public class LayerMod : ELayer
 		PreviewEntry thumb = GetThumb(p);
 		infoPreview.SetActive(enable: true);
 		infoPreview.image1.sprite = thumb.sprite ?? spriteNoPreview;
+		Image image = infoPreview.image1;
+		Vector2 size = image.sprite.rect.size;
+		infoPreview.image2.rectTransform.sizeDelta = size * Mathf.Min(image.rectTransform.rect.width / size.x, image.rectTransform.rect.height / size.y) + Vector2.one * 18f;
 		SetTopic(infoAuthor, p.author.IsEmpty("-"), null);
 		SetTopic(infoVersion, p.version.IsEmpty("-"), null);
 		SetTopic(infoId, p.id, null);

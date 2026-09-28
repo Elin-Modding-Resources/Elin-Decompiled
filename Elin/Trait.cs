@@ -2089,6 +2089,12 @@ public class Trait : EClass
 					}
 					break;
 				}
+				case ShopType.Sorin:
+					Add("1282", 1, 0).SetNum(5);
+					AddThing(ThingGen.CreateSpellbook(9155, 1, 3));
+					AddThing(ThingGen.CreateScroll(8288).SetNum(5));
+					Add("1386", 1, 0);
+					break;
 				case ShopType.Medal:
 					NoRestockId("hammer_garokk", 3, 0);
 					NoRestockId("sword_dragon", 1, 0);
@@ -2117,13 +2123,11 @@ public class Trait : EClass
 					Add("diary_lady", 1, 0);
 					Add("1165", 1, 0).SetNum(5);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));
-					Add("1282", 1, 0).SetNum(5);
 					Add("monsterball", 1, 0).SetNum(3).SetLv(20);
 					Add("monsterball", 1, 0).SetNum(3).SetLv(40);
 					Add("bill_tax", 1, 0).c_bill = 1;
 					Add("bill_tax", 1, 0).c_bill = 1;
 					Add("bill_tax", 1, 0).c_bill = 1;
-					AddThing(ThingGen.CreateScroll(8288).SetNum(5));
 					Add("container_magic", 1, 0);
 					Add("container_magic", 1, 0).ChangeMaterial("iron").idSkin = 1;
 					Add("container_magic", 1, 0).ChangeMaterial("bamboo").idSkin = 2;
@@ -2136,7 +2140,6 @@ public class Trait : EClass
 					Add("wrench_fridge", 1, 0).SetNum(1);
 					Add("wrench_extend_v", 1, 0).SetNum(2);
 					Add("wrench_extend_h", 1, 0).SetNum(2);
-					AddThing(ThingGen.CreateSpellbook(9155, 1, 3));
 					break;
 				default:
 				{
@@ -2218,7 +2221,7 @@ public class Trait : EClass
 				switch (ShopType)
 				{
 				case ShopType.Curry:
-					if (EClass.game.quests.IsCompleted("curry"))
+					if (EClass.game.quests.IsCompleted("curry") || EClass.game.IsSurvival)
 					{
 						AddThing(TraitSeed.MakeSeed("redpepper").SetNum(5));
 					}

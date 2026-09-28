@@ -36,6 +36,7 @@ public class TraitSkyHelm : TraitItem
 						EClass.game.survival.listGateZone.Clear();
 						EClass.ui.CloseLayers();
 						EClass.pc.pos.TalkWitnesses(EClass.pc, "ahoy", 6, WitnessType.everyone, (Chara chara) => true);
+						EClass.pc.ModExp(240, costSkyTravel * 20);
 					}
 				},
 				onRedraw = delegate(Zone a, ButtonElement b, int i)

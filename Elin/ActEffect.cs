@@ -886,13 +886,15 @@ public class ActEffect : EClass
 					chara2.hp = chara2.MaxHP / 2;
 				}
 				EClass._zone.AddCard(chara2, point);
-				if (flag)
+				if (actRef.n1 == "special2")
 				{
-					Chara chara3 = chara2;
-					Hostility hostility = (chara2.c_originalHostility = Hostility.Enemy);
-					chara3.hostility = hostility;
+					chara2.SetHostility(Hostility.Enemy);
 				}
-				else if (!(chara2.id == "cocoon") && (!(actRef.n1 == "monster") || actRef.refThing == null))
+				else if (flag)
+				{
+					chara2.SetHostility(Hostility.Enemy);
+				}
+				else if (!(actRef.n1 == "monster") || actRef.refThing == null)
 				{
 					chara2.MakeMinion(CC);
 				}
@@ -954,11 +956,11 @@ public class ActEffect : EClass
 			{
 				foreach (Point item4 in EClass._map.ListPointsInCircle(cc.pos, 6f, mustBeWalkable: false, los: false))
 				{
-					foreach (Chara chara4 in item4.Charas)
+					foreach (Chara chara3 in item4.Charas)
 					{
-						if (chara4.ResistLv(957) <= 0)
+						if (chara3.ResistLv(957) <= 0)
 						{
-							chara4.AddCondition<ConParalyze>(power);
+							chara3.AddCondition<ConParalyze>(power);
 						}
 					}
 				}

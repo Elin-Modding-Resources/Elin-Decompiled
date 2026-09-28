@@ -246,7 +246,7 @@ public class BuildMenu : EMono
 		{
 			foreach (RecipeSource item in RecipeManager.list)
 			{
-				if (item.noListing || item.isBridgePillar || (!EMono.debug.godBuild && !item.alwaysKnown && !EMono.player.recipes.knownRecipes.ContainsKey(item.id)) || (!item.row.GetSearchName(jp: false).Contains(s) && !item.row.GetSearchName(jp: true).Contains(s) && !item.id.Contains(s) && !item.row.category.Contains(s)))
+				if (!item.ShouldList() || item.isBridgePillar || (!EMono.debug.godBuild && !item.alwaysKnown && !EMono.player.recipes.knownRecipes.ContainsKey(item.id)) || (!item.row.GetSearchName(jp: false).Contains(s) && !item.row.GetSearchName(jp: true).Contains(s) && !item.id.Contains(s) && !item.row.category.Contains(s)))
 				{
 					continue;
 				}
@@ -271,7 +271,7 @@ public class BuildMenu : EMono
 					continue;
 				}
 				Recipe recipe2 = Recipe.Create(thing);
-				if (!recipe2.source.noListing)
+				if (recipe2.source.ShouldList())
 				{
 					if (recipe2 == null)
 					{
@@ -288,7 +288,7 @@ public class BuildMenu : EMono
 				if (t.trait.CanBeDropped && !t.trait.CanOnlyCarry && !t.isEquipped && (t.source.name.Contains(s) || t.source.name_JP.Contains(s) || t.NameOne.Contains(s)))
 				{
 					Recipe recipe3 = Recipe.Create(t);
-					if (!recipe3.source.noListing)
+					if (recipe3.source.ShouldList())
 					{
 						if (recipe3 == null)
 						{
@@ -577,7 +577,7 @@ public class BuildMenu : EMono
 				}
 				foreach (RecipeSource item in RecipeManager.list)
 				{
-					if (EMono.debug.godBuild || !(item.row.GetAlias != "block_invisi") || (!item.noListing && !item.row.tileType.EditorTile && EMono.player.recipes.IsKnown(item.id) && (item.row.factory.Length == 0 || !(item.row.factory[0] == "none"))))
+					if (EMono.debug.godBuild || !(item.row.GetAlias != "block_invisi") || (item.ShouldList() && !item.row.tileType.EditorTile && EMono.player.recipes.IsKnown(item.id) && (item.row.factory.Length == 0 || !(item.row.factory[0] == "none"))))
 					{
 						counts[item.recipeCat]++;
 						if (!(item.recipeCat != cat))

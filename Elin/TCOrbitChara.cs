@@ -80,50 +80,9 @@ public class TCOrbitChara : TCOrbit
 			{
 				emo = owner.trait.GetRestockedIcon();
 			}
-			else
+			else if ((owner.quest != null && EMono.game.quests.list.Contains(owner.quest)) || owner.trait.ShouldShowQuestIcon())
 			{
-				bool flag = false;
-				if (owner.quest != null && EMono.game.quests.list.Contains(owner.quest))
-				{
-					flag = true;
-				}
-				else if (owner.IsUnique && !EMono.game.IsSurvival)
-				{
-					string id = owner.id;
-					if (!(id == "ashland"))
-					{
-						if (id == "fiama")
-						{
-							if (EMono.game.quests.GetPhase<QuestMain>() >= 200 && EMono.player.dialogFlags.TryGetValue("fiama1", 0) == 0)
-							{
-								flag = true;
-							}
-							else if (EMono.pc.homeBranch != null)
-							{
-								foreach (Chara member in EMono.pc.homeBranch.members)
-								{
-									if (member.isDead && member.GetInt(100) != 0)
-									{
-										flag = true;
-										break;
-									}
-								}
-							}
-						}
-					}
-					else
-					{
-						int phase = EMono.game.quests.GetPhase<QuestMain>();
-						if ((phase == 0 && EMono.player.dialogFlags.TryGetValue("ash1", 0) == 0) || phase == 200)
-						{
-							flag = true;
-						}
-					}
-				}
-				if (flag)
-				{
-					emo = Emo2.hint;
-				}
+				emo = Emo2.hint;
 			}
 		}
 		if (EMono.player.currentHotItem.Thing != null && EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner) != Emo2.none)
@@ -136,16 +95,16 @@ public class TCOrbitChara : TCOrbit
 			iconStatus.sprite = EMono.core.refs.spritesEmo[(int)emo];
 		}
 		iconStatus.SetActive(showIcon);
-		bool flag2 = owner.isChara && owner.HasElement(1421);
+		bool flag = owner.isChara && owner.HasElement(1421);
 		float num = (float)owner.hp / (float)owner.MaxHP;
-		if (flag2)
+		if (flag)
 		{
 			num = (float)(owner.hp + owner.mana.value) / (float)(owner.MaxHP + owner.mana.max);
 		}
 		showHP = num < 0.9f && (owner.IsPCParty || owner.IsHostile() || (owner.enemy != null && owner.enemy.IsPCParty)) && !owner.IsPCFactionMinion;
 		if (showHP)
 		{
-			if (flag2)
+			if (flag)
 			{
 				float x = (float)owner.mana.max / (float)(owner.mana.max + owner.MaxHP);
 				bgMP.transform.localScale = new Vector3(x, 1f, 1f);
@@ -153,7 +112,7 @@ public class TCOrbitChara : TCOrbit
 			barHP.transform.SetLocalScaleX(Mathf.Max(0f, num));
 			barHP.SetActive(enable: true);
 			bgHP.SetActive(enable: true);
-			bgMP.SetActive(flag2);
+			bgMP.SetActive(flag);
 		}
 		else
 		{

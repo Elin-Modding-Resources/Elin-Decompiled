@@ -20,11 +20,15 @@ public class ItemMod : EMono
 
 	public UIButton buttonColor;
 
+	public UIButton buttonConfig;
+
 	public Image imageActive;
 
 	public Image imageLock;
 
 	public Image imageGroup;
+
+	public Image imageMember;
 
 	public Widget.Config config;
 

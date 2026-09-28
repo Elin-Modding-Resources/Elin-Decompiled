@@ -194,6 +194,7 @@ public class UIInventory : EMono
 	{
 		CurrencyType.Medal => "medal", 
 		CurrencyType.Ecopo => "ecopo", 
+		CurrencyType.Money3 => "money3", 
 		_ => "money", 
 	};
 

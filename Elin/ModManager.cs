@@ -112,14 +112,17 @@ public class ModManager : ModManagerCore
 		}
 		List<string> list = new List<string>();
 		ModGroup modGroup = null;
+		foreach (ModGroup emptyGroup in emptyGroups)
+		{
+			if (emptyGroup.after == null)
+			{
+				list.Add((modGroup = emptyGroup).ToString());
+			}
+		}
 		foreach (BaseModPackage package in packages)
 		{
 			string str = package.dirInfo?.FullName;
-			if (package.builtin || str.IsEmpty())
-			{
-				continue;
-			}
-			string text = FormatLoadOrder(package);
+			string text = ((package.builtin || str.IsEmpty()) ? "" : FormatLoadOrder(package));
 			if (!text.IsEmpty())
 			{
 				if (package.group != modGroup)
@@ -129,8 +132,14 @@ public class ModManager : ModManagerCore
 				}
 				list.Add(text);
 			}
+			foreach (ModGroup emptyGroup2 in emptyGroups)
+			{
+				if (emptyGroup2.after == package)
+				{
+					list.Add((modGroup = emptyGroup2).ToString());
+				}
+			}
 		}
-		list.AddRange(emptyGroups.Select((ModGroup g) => g.ToString()));
 		File.WriteAllLines(CorePath.PathLoadOrder, list);
 	}
 
@@ -147,6 +156,16 @@ public class ModManager : ModManagerCore
 				modGroup2 = ((modGroup == null || hashSet.Add(modGroup)) ? modGroup : modGroup.Clone());
 			}
 			package.group = modGroup2;
+		}
+		foreach (ModGroup emptyGroup in emptyGroups)
+		{
+			foreach (BaseModPackage package2 in packages)
+			{
+				if (package2.group != null && package2.group == emptyGroup.after?.group)
+				{
+					emptyGroup.after = package2;
+				}
+			}
 		}
 	}
 
@@ -184,6 +203,7 @@ public class ModManager : ModManagerCore
 		int num = 0;
 		int num2 = 0;
 		ModGroup modGroup = null;
+		BaseModPackage after = null;
 		HashSet<BaseModPackage> hashSet = new HashSet<BaseModPackage>();
 		foreach (string item in File.ReadAllLines(pathLoadOrder).Append("#group"))
 		{
@@ -194,6 +214,7 @@ public class ModManager : ModManagerCore
 			{
 				if (modGroup != null && num2 == 0)
 				{
+					modGroup.after = after;
 					emptyGroups.Add(modGroup);
 				}
 				modGroup = group;
@@ -211,6 +232,7 @@ public class ModManager : ModManagerCore
 					value.orderIndex = num;
 					value.willActivate = activate;
 					value.group = modGroup;
+					after = value;
 					num++;
 				}
 			}

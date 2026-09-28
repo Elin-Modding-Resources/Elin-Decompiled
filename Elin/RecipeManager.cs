@@ -213,7 +213,7 @@ public class RecipeManager : EClass
 		List<RecipeSource> list = new List<RecipeSource>();
 		foreach (RecipeSource item in RecipeManager.list)
 		{
-			if (item.isBridgePillar || (factory == null && item.idFactory != "self") || (factory != null && !factory.trait.Contains(item)) || item.isChara || item.noListing)
+			if (item.isBridgePillar || (factory == null && item.idFactory != "self") || (factory != null && !factory.trait.Contains(item)) || item.isChara || !item.ShouldList())
 			{
 				continue;
 			}

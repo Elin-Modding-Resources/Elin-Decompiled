@@ -720,7 +720,8 @@ public class InvOwner : EClass
 				money2 = (currency == CurrencyType.Money2),
 				influence = (currency == CurrencyType.Influence),
 				casino = (currency == CurrencyType.Casino_coin),
-				ecopo = (currency == CurrencyType.Ecopo)
+				ecopo = (currency == CurrencyType.Ecopo),
+				mandrake = (currency == CurrencyType.Money3)
 			});
 		}
 	}
@@ -1698,7 +1699,8 @@ public class InvOwner : EClass
 				string id = IDCostIcon(t);
 				int price = transaction.GetPrice();
 				uIItem.text1.SetText(Lang._currency(price), transaction.IsValid() ? FontColor.Good : FontColor.Bad);
-				uIItem.image1.sprite = (Trader.UseHomeResource ? Trader.homeResource.Sprite : SpriteSheet.Get(id));
+				uIItem.image1.sprite = (Trader.UseHomeResource ? Trader.homeResource.Sprite : (SpriteSheet.Get(id) ?? EClass.sources.cards.map.TryGetValue(IDCurrency)?.GetSprite()));
+				uIItem.image1.SetNativeSize();
 			}
 		}
 	}

@@ -16,6 +16,12 @@ public class ModPackage : EMod
 		public int old;
 	}
 
+	public Action<UINote> onBuildConfig;
+
+	public Action onResetConfig;
+
+	public string configPath;
+
 	public void CopyContentTo(string dir)
 	{
 		IO.DeleteDirectory(dir);

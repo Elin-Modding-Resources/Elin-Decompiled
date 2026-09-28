@@ -7851,6 +7851,27 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 25000;
 				}
 				break;
+			case CurrencyType.Money3:
+				switch (id)
+				{
+				case "1282":
+					return 1;
+				case "1386":
+					return 5;
+				case "scroll_random":
+					if (refVal == 8288)
+					{
+						return 3;
+					}
+					break;
+				case "spellbook":
+					if (refVal == 9155)
+					{
+						return 1;
+					}
+					break;
+				}
+				break;
 			case CurrencyType.Plat:
 				switch (id)
 				{
@@ -8045,6 +8066,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			break;
 		case CurrencyType.Money2:
 			p *= 0.004999999888241291;
+			break;
+		case CurrencyType.Money3:
+			p *= 9.999999747378752E-05;
 			break;
 		default:
 			if (IsIdentified || (this.trait is TraitErohon && !sell) || priceType == PriceType.Tourism)

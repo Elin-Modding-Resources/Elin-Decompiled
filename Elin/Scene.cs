@@ -420,7 +420,7 @@ public class Scene : EMono
 		{
 			if (EMono.ui.isPointerOverUI)
 			{
-				if (!EMono.ui.GetLayer<LayerConfig>())
+				if (!EMono.ui.GetLayer<LayerConfig>() && !EMono.ui.GetLayer<LayerModConfig>())
 				{
 					UIDropdown componentOf = InputModuleEX.GetComponentOf<UIDropdown>();
 					if ((bool)componentOf && !UIDropdown.activeInstance)

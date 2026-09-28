@@ -107,6 +107,19 @@ public class RecipeSource : EClass
 		}
 	}
 
+	public bool ShouldList()
+	{
+		if (noListing)
+		{
+			if (id == "f90" && EClass.game.IsSurvival)
+			{
+				return true;
+			}
+			return false;
+		}
+		return true;
+	}
+
 	public string GetDetail()
 	{
 		return row.GetDetail();

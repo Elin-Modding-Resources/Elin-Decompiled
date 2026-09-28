@@ -105,9 +105,13 @@ public class TraitChara : Trait
 	{
 		get
 		{
-			if (!IsUnique && owner.rarity < Rarity.Legendary && !owner.IsMultisize && !owner.IsGlobal && !owner.IsPCFaction && EClass._zone.Boss != owner && CanInvite)
+			if (!IsUnique && owner.rarity < Rarity.Legendary && !owner.IsMultisize && !owner.IsGlobal && !owner.IsPCFaction && EClass._zone.Boss != owner && CanInvite && owner.c_bossType == BossType.none)
 			{
-				return owner.c_bossType == BossType.none;
+				if (EClass._zone.IsUserZone)
+				{
+					return !EClass.game.principal.disableUsermapBenefit;
+				}
+				return true;
 			}
 			return false;
 		}
@@ -142,6 +146,11 @@ public class TraitChara : Trait
 	public virtual bool CanFish => owner.job.id == "tourist";
 
 	public virtual bool IdleAct()
+	{
+		return false;
+	}
+
+	public virtual bool ShouldShowQuestIcon()
 	{
 		return false;
 	}

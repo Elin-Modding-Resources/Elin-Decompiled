@@ -332,6 +332,10 @@ public class TileType : EClass
 		{
 			return HitResult.Invalid;
 		}
+		if (this is TileTypeSky && EClass.game.IsSurvival && (pos.HasChara || pos.HasObj))
+		{
+			return HitResult.Invalid;
+		}
 		if (pos.cell.IsTopWater)
 		{
 			if (!CanBuiltOnWater)

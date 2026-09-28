@@ -513,6 +513,20 @@ public class DramaOutcome : EMono
 		}
 	}
 
+	public void reward_sorin()
+	{
+		if (EMono.pc.body.GetSlot(46, onlyEmpty: false) == null)
+		{
+			CoreDebug._AddBodyPart(CoreDebug.BodyCode.relic);
+		}
+		if (!EMono.player.recipes.IsKnown("relic_lesser") || EMono.debug.enable)
+		{
+			EMono.player.recipes.Add("relic_lesser");
+		}
+		SE.Play("godbless");
+		EMono.pc.PlayEffect("aura_heaven");
+	}
+
 	public static bool If(DramaChoice item, Chara c)
 	{
 		_ = item.IF.Split('/')[0] == "costHire";

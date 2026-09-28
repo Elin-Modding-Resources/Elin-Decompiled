@@ -55,5 +55,6 @@ public enum ShopType
 	TravelMerchant,
 	TravelMerchant2,
 	CustomContent,
-	AnimalGoods
+	AnimalGoods,
+	Sorin
 }

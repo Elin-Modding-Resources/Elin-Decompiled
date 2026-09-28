@@ -107,13 +107,13 @@ public class ModUtil : EClass
 	public static ModPackage FindFileProviderPackage(FileInfo file)
 	{
 		string path = file.FullName.NormalizePath();
-		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName.NormalizePath())) as ModPackage;
+		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName.NormalizePath() + "/")) as ModPackage;
 	}
 
 	public static ModPackage FindDirectoryProviderPackage(DirectoryInfo dir)
 	{
-		string path = dir.FullName.NormalizePath();
-		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName.NormalizePath())) as ModPackage;
+		string path = dir.FullName.NormalizePath() + "/";
+		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName.NormalizePath() + "/")) as ModPackage;
 	}
 
 	public static ModPackage FindSourceRowPackage(SourceData.BaseRow row)
