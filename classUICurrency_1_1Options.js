@@ -9,6 +9,7 @@ var classUICurrency_1_1Options =
     [ "ecopo", "classUICurrency_1_1Options.html#a9fa0f16bd746f20e84db23910961dc08", null ],
     [ "influence", "classUICurrency_1_1Options.html#ab82f29788c52d3048caeb3182de169a7", null ],
     [ "knowledge", "classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0", null ],
+    [ "mandrake", "classUICurrency_1_1Options.html#a924ade638b916de54d1533259c9e5676", null ],
     [ "medal", "classUICurrency_1_1Options.html#ac8ef2470ca8e3d64494997128a439455", null ],
     [ "money", "classUICurrency_1_1Options.html#ac84385f7ab5abe491383b9bb0fd85c6d", null ],
     [ "money2", "classUICurrency_1_1Options.html#af9db50dd789eb41504ee9479ddf0afa3", null ],

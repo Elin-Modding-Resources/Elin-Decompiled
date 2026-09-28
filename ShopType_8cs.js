@@ -56,6 +56,7 @@ var ShopType_8cs =
       [ "TravelMerchant", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba15ad0e98a76b2521eb7bf8ec497c08a8", null ],
       [ "TravelMerchant2", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50cabfff47520fb5143437c05924174f", null ],
       [ "CustomContent", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa434f90146c7c910f3fb5035bb615f42", null ],
-      [ "AnimalGoods", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafc4887af369e4fe938386e5d245765c6", null ]
+      [ "AnimalGoods", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafc4887af369e4fe938386e5d245765c6", null ],
+      [ "Sorin", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba246080d25b4b620f925664c1147185f1", null ]
     ] ]
 ];

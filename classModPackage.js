@@ -19,5 +19,8 @@ var classModPackage =
     [ "UpdateExcelBook", "classModPackage.html#a4a9bc6337b252ce3d5a9ca95a44080fd", null ],
     [ "UpdateExcelSheet", "classModPackage.html#ac1dfd69dd3f411e9318b71996d14f37d", null ],
     [ "UpdateSourceLocalizationFile", "classModPackage.html#a3cc1119cddf2b24a3300d695bc40aef8", null ],
-    [ "UpdateTalks", "classModPackage.html#aa9800a5000d230d1dc0082e4ec5e8694", null ]
+    [ "UpdateTalks", "classModPackage.html#aa9800a5000d230d1dc0082e4ec5e8694", null ],
+    [ "configPath", "classModPackage.html#a0c38ea199379e3fa00cc7aa39920ae1a", null ],
+    [ "onBuildConfig", "classModPackage.html#ad001695f7286c54bd535243befddcefa", null ],
+    [ "onResetConfig", "classModPackage.html#a9d6e136c33cbceb456685f6d7d415357", null ]
 ];

@@ -1667,7 +1667,6 @@ var hierarchy =
             [ "TraitPuppy", "classTraitPuppy.html", null ],
             [ "TraitQuru", "classTraitQuru.html", null ],
             [ "TraitRaina", "classTraitRaina.html", null ],
-            [ "TraitSorin", "classTraitSorin.html", null ],
             [ "TraitStrangeGirl", "classTraitStrangeGirl.html", null ],
             [ "TraitTyche", "classTraitTyche.html", null ],
             [ "TraitUniqueCharaNoJoin", "classTraitUniqueCharaNoJoin.html", [
@@ -1685,7 +1684,8 @@ var hierarchy =
               [ "TraitMiral", "classTraitMiral.html", null ],
               [ "TraitNino", "classTraitNino.html", null ],
               [ "TraitNola", "classTraitNola.html", null ],
-              [ "TraitSeeker", "classTraitSeeker.html", null ]
+              [ "TraitSeeker", "classTraitSeeker.html", null ],
+              [ "TraitSorin", "classTraitSorin.html", null ]
             ] ],
             [ "TraitVesda", "classTraitVesda.html", null ],
             [ "TraitVishnu", "classTraitVishnu.html", null ]
@@ -2007,6 +2007,7 @@ var hierarchy =
         [ "TraitRoadSign", "classTraitRoadSign.html", null ],
         [ "TraitSack", "classTraitSack.html", [
           [ "TraitVase", "classTraitVase.html", [
+            [ "TraitStrangePainting", "classTraitStrangePainting.html", null ],
             [ "TraitStrangeStatue", "classTraitStrangeStatue.html", null ]
           ] ]
         ] ],
@@ -2523,6 +2524,7 @@ var hierarchy =
       [ "InnerOutline", "classInnerOutline.html", null ],
       [ "OverlayTexture", "classOverlayTexture.html", null ]
     ] ],
+    [ "IModConfig", "interfaceIModConfig.html", null ],
     [ "IMouseHint", "interfaceIMouseHint.html", [
       [ "ButtonAbility", "classButtonAbility.html", null ],
       [ "ButtonGrid", "classButtonGrid.html", null ]
@@ -2746,6 +2748,7 @@ var hierarchy =
           [ "LayerMapList", "classLayerMapList.html", null ],
           [ "LayerMiniGame", "classLayerMiniGame.html", null ],
           [ "LayerMod", "classLayerMod.html", null ],
+          [ "LayerModConfig", "classLayerModConfig.html", null ],
           [ "LayerNewZone", "classLayerNewZone.html", null ],
           [ "LayerNewspaper", "classLayerNewspaper.html", null ],
           [ "LayerPause", "classLayerPause.html", null ],

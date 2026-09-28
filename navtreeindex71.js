@@ -1,5 +1,14 @@
 var NAVTREEINDEX71 =
 {
+"classGame.html#a8cfd43f8d90725c45136d2e6781ab2b6":[1,0,605,11],
+"classGame.html#a90d4eb47250a3ee9c51e1d4e802ef16d":[1,0,605,17],
+"classGame.html#a99cb93de92987268f756afc2ad1f5445":[1,0,605,65],
+"classGame.html#a9b9247f3b710c3ca35c2c4ad34ccd83e":[1,0,605,16],
+"classGame.html#a9dccaf6fb486511d5ad1b3fd01c6c113":[1,0,605,23],
+"classGame.html#aa15e3562b9e4c6e7ecc7ea9b11a5d038":[1,0,605,67],
+"classGame.html#aa24cab7df1c85dc6efe68c3d68703fe7":[1,0,605,34],
+"classGame.html#aabe7e6472b92da43673526dca5d41bd9":[1,0,605,24],
+"classGame.html#aaf3a6ba060d72c88051a40c58db7f7d8":[1,0,605,72],
 "classGame.html#ab07259f062c45e3591ccd2b1e9b9330c":[1,0,605,44],
 "classGame.html#ab25d260f6837c8fad664a8d59a2697b0":[1,0,605,60],
 "classGame.html#ab5a1c307fccf9aecd72bfaafc1b69558":[1,0,605,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX71 =
 "classGameSetting_1_1EffectData.html#ad10ed2f8c327061283540b60a1367990":[1,0,619,2,0],
 "classGameSetting_1_1EffectData.html#ae890c7263b1d04b1a4005bfbe800769d":[1,0,619,2,4],
 "classGameSetting_1_1EffectSetting.html":[1,0,619,3],
-"classGameSetting_1_1EffectSetting.html#a47ec64f0cb7a3baedd83a02be7c1cdc4":[1,0,619,3,0],
-"classGameSetting_1_1GenSetting.html":[1,0,619,4],
-"classGameSetting_1_1GenSetting.html#ae629c72c80fa6f159d2065cc9a2aca74":[1,0,619,4,0],
-"classGameSetting_1_1PassSetting.html":[1,0,619,5],
-"classGameSetting_1_1PassSetting.html#a7ad9f1bbef598f43ef1f1a1b36f650e6":[1,0,619,5,1],
-"classGameSetting_1_1PassSetting.html#ab938cf6dba4731e405449d682af803da":[1,0,619,5,3],
-"classGameSetting_1_1PassSetting.html#ac814b0b0fcb53ff11a7ccb70372d0fa3":[1,0,619,5,0],
-"classGameSetting_1_1PassSetting.html#af0c4b88fce51de8efb4d147f8eb4b8fa":[1,0,619,5,2],
-"classGameSetting_1_1RenderSetting.html":[1,0,619,6],
-"classGameSetting_1_1RenderSetting.html#a023c5412236fa1a7ebaf04cb1536336d":[1,0,619,6,25]
+"classGameSetting_1_1EffectSetting.html#a47ec64f0cb7a3baedd83a02be7c1cdc4":[1,0,619,3,0]
 };

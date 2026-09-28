@@ -236,6 +236,7 @@ var NAVTREEINDEX4 =
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730e":[2,0,0,436,0],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea01a45f97a6830e3bb29a6f8ddfd259c8":[2,0,0,436,0,5],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea12cf08020be04c9b1f8ad50a614cdd7f":[2,0,0,436,0,4],
+"CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea3558188f600d6dde972f5a8254451a12":[2,0,0,436,0,10],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea69d7f1d911f3e28651a2dee1a9c7fd34":[2,0,0,436,0,2],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730ea6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,436,0,0],
 "CurrencyType_8cs.html#ae0bc22f8030e9a947eaf6b905e7b730eaa48e5b1fbb4f27cf327ad64bef088b78":[2,0,0,436,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "Currency_8cs.html":[2,0,0,435],
 "Currency_8cs_source.html":[2,0,0,435],
 "CursorInfo_8cs.html":[2,0,0,3,27],
-"CursorInfo_8cs_source.html":[2,0,0,3,27],
-"CursorSystem_8cs.html":[2,0,0,3,28]
+"CursorInfo_8cs_source.html":[2,0,0,3,27]
 };

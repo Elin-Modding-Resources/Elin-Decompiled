@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"HeuristicFormula_8cs.html":[2,0,0,0,1],
 "HeuristicFormula_8cs.html#a53b8d14b2d24c1ec77f42620b2171e4f":[2,0,0,0,1,0],
 "HeuristicFormula_8cs.html#a53b8d14b2d24c1ec77f42620b2171e4fa1834cdf9bf35ea1d737c15eef72e18c7":[2,0,0,0,1,0,0],
 "HeuristicFormula_8cs.html#a53b8d14b2d24c1ec77f42620b2171e4fa3e43207685247008d9e1ae53ecf8cab3":[2,0,0,0,1,0,3],
@@ -243,11 +244,10 @@ var NAVTREEINDEX9 =
 "IGlobalValue_8cs_source.html":[2,0,0,721],
 "IInspect_8cs.html":[2,0,0,722],
 "IInspect_8cs_source.html":[2,0,0,722],
-"IMouseHint_8cs.html":[2,0,0,723],
-"IMouseHint_8cs_source.html":[2,0,0,723],
+"IModConfig_8cs.html":[2,0,0,723],
+"IModConfig_8cs_source.html":[2,0,0,723],
+"IMouseHint_8cs.html":[2,0,0,724],
+"IMouseHint_8cs_source.html":[2,0,0,724],
 "IO_8cs.html":[2,0,0,2,44],
-"IO_8cs_source.html":[2,0,0,2,44],
-"IPathfindGrid_8cs.html":[2,0,0,769],
-"IPathfindGrid_8cs_source.html":[2,0,0,769],
-"IPathfindWalker_8cs.html":[2,0,0,770]
+"IO_8cs_source.html":[2,0,0,2,44]
 };

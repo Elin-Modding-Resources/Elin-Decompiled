@@ -2,7 +2,7 @@ var classUINote =
 [
     [ "AddButton", "classUINote.html#ac252d26bf09a0ac1494732cc7271d79a", null ],
     [ "AddButtonLink", "classUINote.html#a08fd4d6ff4f49c116641a55fe3783af6", null ],
-    [ "AddDropdown", "classUINote.html#a2c575724ed5912978c7b79ab1525bc19", null ],
+    [ "AddDropdown", "classUINote.html#a1f5d0c4e7fc5af984cfb8257add0f4d6", null ],
     [ "AddExtra< T >", "classUINote.html#a75bb2f27141eacacc4f70043cce5417e", null ],
     [ "AddHeader", "classUINote.html#a57b0b05dab58783be4c52b1abcfb0bdc", null ],
     [ "AddHeader", "classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25", null ],
@@ -13,6 +13,7 @@ var classUINote =
     [ "AddItem", "classUINote.html#a8a25d45903bd5450ef6af108da51a614", null ],
     [ "AddNote", "classUINote.html#a2f9d7048945b147a14b4aa5ebbe2c74b", null ],
     [ "AddPrefab", "classUINote.html#a44f805252fb49bdb22578ec62632aec1", null ],
+    [ "AddSlider", "classUINote.html#a7d4c566ac02b96db9ac52aa89e3ca294", null ],
     [ "AddText", "classUINote.html#a8782583d8bc19fa0164a6ad8c8342333", null ],
     [ "AddText", "classUINote.html#a8b8d7bd73fb9df58bbd01e615168a833", null ],
     [ "AddText", "classUINote.html#ac98d4745e050d794de75189eb678e1a0", null ],

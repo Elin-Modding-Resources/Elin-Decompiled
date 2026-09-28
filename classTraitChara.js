@@ -12,6 +12,7 @@ var classTraitChara =
     [ "GetDramaText", "classTraitChara.html#a2bd44c5e5fb7182a0450bfd8139e6fc9", null ],
     [ "GetValue", "classTraitChara.html#a082aebc8ded8a214962006a21717b046", null ],
     [ "IdleAct", "classTraitChara.html#ad5c4df45be3036b5b5b6279fdf9edc64", null ],
+    [ "ShouldShowQuestIcon", "classTraitChara.html#ac5bed87d4cf01ce73c1220ce2c41ab6b", null ],
     [ "ListRank", "classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2", null ],
     [ "AdvType", "classTraitChara.html#a6a3934cb4a11d57398b6fb7117ebe58e", null ],
     [ "CanAutoRevive", "classTraitChara.html#a9b232d96239ea131a2cdfcd93447dd1f", null ],

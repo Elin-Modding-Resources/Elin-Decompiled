@@ -3,6 +3,7 @@ var classItemMod =
     [ "buttonActivate", "classItemMod.html#a768c5c32d2ceddda91b023a4d082e008", null ],
     [ "buttonBG", "classItemMod.html#a47dc065df482b818fafcb5103ee54dfb", null ],
     [ "buttonColor", "classItemMod.html#a4070e5cbf78eafd887c8a490bb48ab7d", null ],
+    [ "buttonConfig", "classItemMod.html#a0b814e5aa803113179c6d977ba5da1dc", null ],
     [ "buttonDisband", "classItemMod.html#ae0455249a286e2959386568f8f42b254", null ],
     [ "buttonDown", "classItemMod.html#ad047ed292c472c6204efee5eaafb6f64", null ],
     [ "buttonLock", "classItemMod.html#ae4e644ef1ec06311d29c0a866ea7fb3b", null ],
@@ -13,5 +14,6 @@ var classItemMod =
     [ "imageActive", "classItemMod.html#a38a857a834786d89b5aab44f1db659aa", null ],
     [ "imageGroup", "classItemMod.html#a7efe312be407ef8608f6287447930703", null ],
     [ "imageLock", "classItemMod.html#a8b6f762d16907d4b6c72d8baae307be4", null ],
+    [ "imageMember", "classItemMod.html#a292f9bb9a1312758e94b2d669275b718", null ],
     [ "package", "classItemMod.html#aac191efcd83ecc3e30835d6dedb00f0c", null ]
 ];

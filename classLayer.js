@@ -10,6 +10,7 @@ var classLayer =
     [ "AddLayer< T >", "classLayer.html#ad68fcb43d0e1b002c29d518f262e5dbf", null ],
     [ "AddLayerDontCloseOthers", "classLayer.html#ad2414260ee46b801ed11f837a026a606", null ],
     [ "AddLayerDontCloseOthers< T >", "classLayer.html#ac5d7fb02457a9afe367d55cd32283a7a", null ],
+    [ "AddLayerDontCloseOthers< T >", "classLayer.html#aa89807d48a8fe20aeb45c609d07a1554", null ],
     [ "ApplySkin", "classLayer.html#a8fc2b85fc21333bf9a4043bfaf0bc931", null ],
     [ "Awake", "classLayer.html#a83b01770508f1124636b2c73bf00da76", null ],
     [ "Close", "classLayer.html#aea402e8b975897fa67e7ae26abfd2f7d", null ],
