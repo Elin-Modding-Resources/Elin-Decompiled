@@ -202,9 +202,28 @@ public class UINote : MonoBehaviour
 		return button;
 	}
 
-	public UIDropdown AddDropdown(string id = "DropdownDefault")
+	public UIDropdown AddDropdown(string text)
 	{
-		return Load<UIDropdown>("UI/Element/Other/" + id);
+		UIItem uIItem = Load("UI/Element/Item/ItemDropdown");
+		uIItem.text1.SetText(text.lang());
+		return uIItem.GetComponentInChildren<UIDropdown>();
+	}
+
+	public Slider AddSlider(float value, Func<float, string> action, float min = 0f, float max = 1f, bool isInt = false)
+	{
+		Slider componentInChildren = Load<Transform>("UI/Element/Input/Slider").GetComponentInChildren<Slider>();
+		UIText t = componentInChildren.GetComponentInChildren<UIText>(includeInactive: true);
+		t.SetSize(0);
+		componentInChildren.minValue = min;
+		componentInChildren.maxValue = max;
+		componentInChildren.wholeNumbers = isInt;
+		componentInChildren.SetValueWithoutNotify(value);
+		componentInChildren.onValueChanged.AddListener(delegate(float a)
+		{
+			t.text = action(a);
+		});
+		t.text = action(componentInChildren.value);
+		return componentInChildren;
 	}
 
 	public UIButton AddToggle(string idLang = "", bool isOn = false, Action<bool> action = null)

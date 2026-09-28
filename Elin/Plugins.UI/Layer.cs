@@ -354,6 +354,11 @@ public class Layer : MonoBehaviour, IUISkin
 		return AddLayerDontCloseOthers(Create<T>()) as T;
 	}
 
+	public T AddLayerDontCloseOthers<T>(string path) where T : Layer
+	{
+		return AddLayerDontCloseOthers(Create<T>(path)) as T;
+	}
+
 	public Layer AddLayerDontCloseOthers(Layer l)
 	{
 		l.option.screenlockType = Option.ScreenlockType.Default;
