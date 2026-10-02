@@ -7,6 +7,10 @@ public class TraitWhipEgg : TraitWhipLove
 
 	public override void TrySetHeldAct(ActPlan p)
 	{
+		if (EClass.game.principal.disableUsermapBenefit && EClass._zone.IsUserZone)
+		{
+			return;
+		}
 		p.pos.ListCards().ForEach(delegate(Card c)
 		{
 			if (p.IsSelfOrNeighbor && EClass.pc.CanSee(c))

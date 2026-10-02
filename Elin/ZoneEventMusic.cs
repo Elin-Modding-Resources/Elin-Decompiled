@@ -97,6 +97,12 @@ public class ZoneEventMusic : ZoneEventQuest
 			Hostility c_originalHostility = (c.hostility = Hostility.Neutral);
 			c.c_originalHostility = c_originalHostility;
 		}
+		if (questMusic.partyLv > 0)
+		{
+			c.SetLv(c.LV * (100 + questMusic.partyLv * 100) / 100);
+			c.things.DestroyAll();
+			c.TryRestock(onCreate: true);
+		}
 	}
 
 	public override ZoneInstance.Status OnReachTimeLimit()

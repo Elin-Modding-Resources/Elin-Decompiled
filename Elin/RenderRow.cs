@@ -83,6 +83,9 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 	public bool useRandomColor;
 
 	[NonSerialized]
+	public bool useDyeColor;
+
+	[NonSerialized]
 	public SourceMaterial.Row DefaultMaterial;
 
 	[NonSerialized]
@@ -234,17 +237,17 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 			this.renderData.Init();
 		}
 		SetTiles();
-		string text2 = colorType;
-		if (!(text2 == "alt"))
+		switch (colorType.Split('/').TryGet(0))
 		{
-			if (text2 == "random")
-			{
-				useRandomColor = true;
-			}
-		}
-		else
-		{
+		case "alt":
 			useAltColor = true;
+			break;
+		case "random":
+			useRandomColor = true;
+			break;
+		case "dye":
+			useDyeColor = true;
+			break;
 		}
 		Dictionary<string, SourceMaterial.Row> alias = sources.materials.alias;
 		if (!alias.TryGetValue(defMat.IsEmpty("granite"), out var defaultMaterial))

@@ -336,7 +336,7 @@ public class AI_PlayMusic : AIAct
 							{
 								bool isMinion = item2.IsMinion;
 								p.cancelWhenDamaged = false;
-								if (num < item2.LV && EClass.rnd(2) == 0)
+								if (num < item2.LV && EClass.rnd(2 + (item2.LV - num) / 50) == 0)
 								{
 									reacted.Add(item2);
 									if (!isMinion)
@@ -547,6 +547,11 @@ public class AI_PlayMusic : AIAct
 				{
 					num /= 5;
 				}
+			}
+			int num2 = Mathf.Max((owner.Evalue(241) + tool?.Evalue(241)).Value * (100 + toolLv) / 100, 1) * 1000;
+			if (num > num2)
+			{
+				num = num2;
 			}
 			if (num < 1)
 			{

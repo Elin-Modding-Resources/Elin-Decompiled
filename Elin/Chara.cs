@@ -3418,7 +3418,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				AddExp(Mathf.Clamp((int)Mathf.Sqrt(base.ExpToNext / 100), 1, 1000));
 			}
-			if (pos.IsBlocked && EClass.rnd(IsPC ? 2 : 20) == 0)
+			if (pos.IsBlocked && EClass.rnd(IsPC ? 1 : 20) == 0)
 			{
 				stamina.Mod(-1);
 			}

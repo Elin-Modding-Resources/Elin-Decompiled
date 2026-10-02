@@ -670,10 +670,6 @@ public class Zone : Spatial, ICardParent, IInspect
 		bool flag = false;
 		Debug.Log(idCurrentSubset + "/" + IDSubset);
 		bool flag2 = idCurrentSubset != IDSubset || forceSubset != null;
-		if (flag2 && map != null)
-		{
-			UnloadMap();
-		}
 		string fullName = pathExport;
 		string lhs = CorePath.ZoneSave + "_new.z";
 		bool flag3 = File.Exists(fullName) && !PathComparer.Default.Equals(lhs, fullName);
@@ -723,7 +719,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				AddGlobalCharasOnActivate();
 			}
 		}
-		else if (IsLoaded)
+		else if (IsLoaded && !flag2)
 		{
 			Debug.Log("zone is already loaded");
 			map.SetZone(this);
@@ -757,7 +753,14 @@ public class Zone : Spatial, ICardParent, IInspect
 					isImported = true;
 					if (flag5)
 					{
-						zoneExportData.orgMap = GameIO.LoadFile<Map>(base.pathSave + "map");
+						if (IsLoaded)
+						{
+							zoneExportData.orgMap = IO.DeepCopy(map);
+						}
+						else
+						{
+							zoneExportData.orgMap = GameIO.LoadFile<Map>(base.pathSave + "map");
+						}
 					}
 				}
 				catch (Exception message)
@@ -767,6 +770,10 @@ public class Zone : Spatial, ICardParent, IInspect
 					base.isGenerated = true;
 					isImported = true;
 				}
+			}
+			if (map != null)
+			{
+				UnloadMap();
 			}
 			EClass.game.countLoadedMaps++;
 			Debug.Log("loading map: imported? " + isImported + " regenerate? " + flag5);

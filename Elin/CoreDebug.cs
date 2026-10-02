@@ -392,8 +392,12 @@ public class CoreDebug : EScriptable
 		{
 			foreach (SourceElement.Row row in EClass.sources.elements.rows)
 			{
-				if (row.category == "ability" && row.aliasRef != "mold" && !EClass.pc.HasElement(row.id) && (row.aliasRef.IsEmpty() || row.id <= 10000 || EClass.sources.elements.alias[row.aliasRef].tag.Contains(row.alias.Split('_')[0])))
+				if (row.category == "ability" && row.aliasRef != "mold" && !EClass.pc.HasElement(row.id))
 				{
+					if (!row.aliasRef.IsEmpty() && row.id > 10000)
+					{
+						_ = EClass.sources.elements.alias[row.aliasRef];
+					}
 					EClass.pc.elements.ModBase(row.id, lv).vPotential = 30;
 				}
 			}

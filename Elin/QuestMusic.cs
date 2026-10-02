@@ -11,6 +11,9 @@ public class QuestMusic : QuestInstance
 	[JsonProperty]
 	public int sumMoney;
 
+	[JsonProperty]
+	public int partyLv;
+
 	public override DifficultyType difficultyType => DifficultyType.Music;
 
 	public override string IdZone => "instance_music";
@@ -20,6 +23,20 @@ public class QuestMusic : QuestInstance
 	public override string RefDrama2 => destScore.ToString() ?? "";
 
 	public override int KarmaOnFail => 0;
+
+	public override bool FameContent => partyLv > 0;
+
+	public override int DangerLv
+	{
+		get
+		{
+			if (partyLv <= 0)
+			{
+				return 1;
+			}
+			return partyLv * 50;
+		}
+	}
 
 	public override ZoneEventQuest CreateEvent()
 	{
@@ -43,7 +60,11 @@ public class QuestMusic : QuestInstance
 
 	public override void OnInit()
 	{
-		destScore = difficulty * 150;
+		if (EClass.rnd(100) < EClass.rnd(EClass.pc.Evalue(241)))
+		{
+			partyLv = 1 + EClass.rnd(EClass.pc.Evalue(241) / 10);
+		}
+		destScore = difficulty * 150 * (100 + partyLv * 50) / 100;
 		destScore += EClass.rnd(destScore / 5);
 	}
 }

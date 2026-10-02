@@ -467,7 +467,7 @@ public class CharaBody : EClass
 		int num = 0;
 		foreach (BodySlot slot in slots)
 		{
-			if (slot.thing != null && (!armorOnly || (slot.elementId != 44 && slot.elementId != 45)))
+			if (slot.thing != null && (!armorOnly || (slot.elementId != 46 && slot.elementId != 44 && slot.elementId != 45)))
 			{
 				num += slot.thing.ChildrenAndSelfWeight;
 			}

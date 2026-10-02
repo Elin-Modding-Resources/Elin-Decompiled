@@ -332,6 +332,10 @@ public class Thing : Card
 		{
 			base.idSkin = EClass.rnd(source.skins.Length + 1);
 		}
+		if (source.useDyeColor)
+		{
+			Dye(source.colorType.Split('/')[1]);
+		}
 	}
 
 	public override void ApplyMaterialElements(bool remove)

@@ -7857,19 +7857,21 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "1282":
 					return 1;
 				case "1386":
-					return 5;
+					return 13;
+				case "book_black":
+					return 100;
 				case "scroll_random":
 					if (refVal == 8288)
 					{
 						return 3;
 					}
-					break;
+					return 1;
 				case "spellbook":
-					if (refVal == 9155)
-					{
-						return 1;
-					}
-					break;
+					_ = refVal;
+					_ = 9155;
+					return 1;
+				case "rp_random":
+					return 6;
 				}
 				break;
 			case CurrencyType.Plat:

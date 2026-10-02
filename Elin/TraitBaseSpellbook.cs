@@ -10,7 +10,8 @@ public class TraitBaseSpellbook : TraitScroll
 		Spell,
 		RandomSpell,
 		Ero,
-		Dojin
+		Dojin,
+		BlackNote
 	}
 
 	public static ElementSelecter selecter = new ElementSelecter
@@ -70,7 +71,8 @@ public class TraitBaseSpellbook : TraitScroll
 	public override bool TryProgress(AIProgress p)
 	{
 		Chara c = p.owner;
-		if (BookType == Type.Ancient && owner.isOn)
+		Type bookType = BookType;
+		if ((bookType == Type.Ancient || bookType == Type.BlackNote) && owner.isOn)
 		{
 			if (c.IsPC)
 			{
@@ -160,6 +162,14 @@ public class TraitBaseSpellbook : TraitScroll
 		}
 		switch (BookType)
 		{
+		case Type.BlackNote:
+			c.Say("book_decode", c, name);
+			c.Say("dingExp", c);
+			c.feat += (c.IsPC ? 1 : 4);
+			c.PlaySound("godbless");
+			c.PlayEffect("aura_heaven");
+			(owner.c_idRefName.IsEmpty() ? EClass.pc : EClass._map.FindChara(owner.c_idRefName))?.Die();
+			break;
 		case Type.Ancient:
 			c.Say("book_decode", c, name);
 			if (!c.IsPC)
@@ -272,12 +282,17 @@ public class TraitBaseSpellbook : TraitScroll
 			break;
 		case Type.Ero:
 		case Type.Dojin:
+		case Type.BlackNote:
 		{
 			string c_idRefName = owner.c_idRefName;
 			if (!c_idRefName.IsEmpty())
 			{
 				string @ref = ((BookType == Type.Dojin) ? EClass.game.religions.dictAll.TryGetValue(c_idRefName, EClass.game.religions.Eyth).Name : EClass.sources.charas.map.TryGetValue(c_idRefName, "putty").GetName());
 				s = "_'s".lang(@ref, s);
+			}
+			if (BookType == Type.BlackNote && owner.isOn)
+			{
+				s = "_deciphered".lang(s);
 			}
 			break;
 		}
