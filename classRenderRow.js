@@ -55,6 +55,7 @@ var classRenderRow =
     [ "tiles", "classRenderRow.html#ac57c52424ee83fc3f783e0cbddb7bcca", null ],
     [ "tileType", "classRenderRow.html#a92b1a12f2812bb1c486ce1b23ce093c9", null ],
     [ "useAltColor", "classRenderRow.html#a73919878ff8f3bb5fd01ebc41493ceb1", null ],
+    [ "useDyeColor", "classRenderRow.html#accad4573e8d0d98412e11ffca74c28c1", null ],
     [ "useRandomColor", "classRenderRow.html#a8c129b04b68b1b58ab1d2b9ac7b55972", null ],
     [ "value", "classRenderRow.html#acd185bcd12119d3cd2cab52b47d47923", null ],
     [ "W", "classRenderRow.html#a430cf4dd98a65d9e4ec2458b62de39ef", null ],

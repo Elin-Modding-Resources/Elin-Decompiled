@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"classChara.html#a8db87f59730c8374d1692fdc04e652da":[1,0,284,413],
+"classChara.html#a8ed26e43e0e7b2e90933dc223fbabac7":[1,0,284,40],
+"classChara.html#a8eeb3d71a9ef2293dd43a8025082d29e":[1,0,284,166],
+"classChara.html#a8f5be3e0748fb8c5e2639f5c0d973a99":[1,0,284,272],
 "classChara.html#a8ff380c16471b4e91f39b06b22ed3670":[1,0,284,389],
 "classChara.html#a901fb24f84542b6cfd25edd33317bc19":[1,0,284,501],
 "classChara.html#a90c17ce565460d91da2803db50747f2d":[1,0,284,170],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "classCharaAbility.html#ab6700b71776d339a548021bd14e5c739":[1,0,285,2],
 "classCharaAbility.html#af0cba40d33b6f10a36477b55966f8150":[1,0,285,3],
 "classCharaAbility.html#af354380ffc5eea640f3ea0d50ec0df06":[1,0,285,5],
-"classCharaActor.html":[1,0,286],
-"classCharaActor.html#a2fbd3db65a54845c18c7972be246ccb8":[1,0,286,4],
-"classCharaActor.html#a66d3fe606aea4ca5d00c8ac2e7980643":[1,0,286,3],
-"classCharaActor.html#ad09021b9b657eef4060dfb01f48e1236":[1,0,286,2],
-"classCharaActor.html#adc55d0c18ec8ff5e7d683270685f8deb":[1,0,286,5]
+"classCharaActor.html":[1,0,286]
 };

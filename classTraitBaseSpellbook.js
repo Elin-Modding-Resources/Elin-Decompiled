@@ -5,7 +5,8 @@ var classTraitBaseSpellbook =
       [ "Spell", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a968ae4f03d7e0c30fe4eb26b83c855dd", null ],
       [ "RandomSpell", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3ae0ca2db63b4b9d0cbde2f31d67376f1c", null ],
       [ "Ero", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a615755cd42631ce31ff696a9891b3c2a", null ],
-      [ "Dojin", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb", null ]
+      [ "Dojin", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb", null ],
+      [ "BlackNote", "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3af726801994a64d5203b0bb1641bd4bcf", null ]
     ] ],
     [ "CanRead", "classTraitBaseSpellbook.html#a0b97be9a164b766e6256c23aab2afa1c", null ],
     [ "GetActDuration", "classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551", null ],

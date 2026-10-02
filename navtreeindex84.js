@@ -1,5 +1,9 @@
 var NAVTREEINDEX84 =
 {
+"classLayerGlobalMap.html#a923a64b338a159b9880d856bb6b2651a":[1,0,885,1],
+"classLayerGlobalMap.html#ad82e7d94fa46907d2ca14802527529ec":[1,0,885,8],
+"classLayerGlobalMap.html#af1d8cb4b855a19e9eb81e44b44b6afe0":[1,0,885,5],
+"classLayerHelp.html":[1,0,886],
 "classLayerHelp.html#a167d244fe3958cd27fafddfb6ad08ef0":[1,0,886,0],
 "classLayerHelp.html#a1a30b2b5c286fcbef97171a048bf02c3":[1,0,886,8],
 "classLayerHelp.html#a6245a4610c4cea16b6e0a91a96f00bc5":[1,0,886,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX84 =
 "classLayerLoadGame.html#a11154e547372b6d1dfd259efa75e6e97":[1,0,898,3],
 "classLayerLoadGame.html#a1a61b274ca682b0dbf1647500b9e7700":[1,0,898,1],
 "classLayerLoadGame.html#a221fc68e319573ad9a468a5602f36fb0":[1,0,898,16],
-"classLayerLoadGame.html#a27da1222a70affb084da4225427b1630":[1,0,898,25],
-"classLayerLoadGame.html#a2b2d822fad64cbf38bc019d5493b39b9":[1,0,898,9],
-"classLayerLoadGame.html#a2d690350335fce619571d79284f5e681":[1,0,898,4],
-"classLayerLoadGame.html#a3ccfcc3a7c799b77bfdbe6885c2313a7":[1,0,898,18],
-"classLayerLoadGame.html#a45a93859a098a60452d957008c4d1f68":[1,0,898,24]
+"classLayerLoadGame.html#a27da1222a70affb084da4225427b1630":[1,0,898,25]
 };

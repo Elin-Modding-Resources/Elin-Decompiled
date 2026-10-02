@@ -1,5 +1,9 @@
 var NAVTREEINDEX36 =
 {
+"classBackerContentInspector_1_1Content.html":[1,0,211,0],
+"classBackerContentInspector_1_1Content.html#a32ff9049c429e9ddefbbc1f609f97eec":[1,0,211,0,1],
+"classBackerContentInspector_1_1Content.html#a60958bdeb1d7db63288cba09d2ad3f22":[1,0,211,0,4],
+"classBackerContentInspector_1_1Content.html#a6dcf1dc6e708bc0c2fc93b49aa5cf9da":[1,0,211,0,0],
 "classBackerContentInspector_1_1Content.html#abf34e6809c9cdd0a270ae7a9ea1985e0":[1,0,211,0,2],
 "classBackerContentInspector_1_1Content.html#ad53f46d5ae93a027dccd18daecd864c3":[1,0,211,0,3],
 "classBackerContentInspector_1_1ContentCard.html":[1,0,211,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX36 =
 "classBaseGameScreen.html#aa00d0863bb7d4073239e1efe29432f03":[1,0,220,105],
 "classBaseGameScreen.html#aa0bef21fb06da3399a033731932f29ae":[1,0,220,62],
 "classBaseGameScreen.html#aa6765379dcc1770b527f52dab5c84fe6":[1,0,220,71],
-"classBaseGameScreen.html#aa72aaa1ec8bf4c0bb42fbd923e35dd2c":[1,0,220,25],
-"classBaseGameScreen.html#aa739161ae81993f807f2b03ad9dfc65d":[1,0,220,49],
-"classBaseGameScreen.html#aa82b7d56efa09785855c6852feb94519":[1,0,220,36],
-"classBaseGameScreen.html#aab057afe327f6d7543e25c85435828c2":[1,0,220,61],
-"classBaseGameScreen.html#aaea8fb5e572b175f78a87072f7761797":[1,0,220,42]
+"classBaseGameScreen.html#aa72aaa1ec8bf4c0bb42fbd923e35dd2c":[1,0,220,25]
 };

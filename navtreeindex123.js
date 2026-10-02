@@ -1,5 +1,13 @@
 var NAVTREEINDEX123 =
 {
+"classTileTypeFloorScaffold.html#ac6f681072e1cfa6810c702201fbbab0b":[1,0,1467,0],
+"classTileTypeHalfBlock.html":[1,0,1468],
+"classTileTypeHalfBlock.html#a323fa4d4aad1083766c09ea07111e42b":[1,0,1468,0],
+"classTileTypeHalfBlock.html#a3d577917e5db9444a9276cde45f1a193":[1,0,1468,1],
+"classTileTypeHalfBlock.html#a9889458181687b5d95ba01303f05c644":[1,0,1468,2],
+"classTileTypeIllumination.html":[1,0,1469],
+"classTileTypeIllumination.html#a74411db318ad0a1ff045c8333b3b247a":[1,0,1469,0],
+"classTileTypeInvisibleBlock.html":[1,0,1470],
 "classTileTypeInvisibleBlock.html#a84956b2f558c924344a78cc7975f95d9":[1,0,1470,3],
 "classTileTypeInvisibleBlock.html#ab86ba7b92859974b740af232bb185bca":[1,0,1470,4],
 "classTileTypeInvisibleBlock.html#ad499fbd4bcb861ea8f17dd0bc1f21927":[1,0,1470,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX123 =
 "classTrait.html#a079d08960c9c3455958636f326f2376c":[1,0,1518,241],
 "classTrait.html#a07db3b3661073b4b2f354f56325bf324":[1,0,1518,49],
 "classTrait.html#a0826d316a7a09a58676e12ce3b24030f":[1,0,1518,180],
-"classTrait.html#a084ca609ac3ba2761f415fb29cb0e967":[1,0,1518,122],
-"classTrait.html#a0a7e5cdb59af92f5951899d1e1cf4df9":[1,0,1518,181],
-"classTrait.html#a0c0503f13752c71b4848747d2d52afe8":[1,0,1518,163],
-"classTrait.html#a0caa424c507858d532c559d32dbde569":[1,0,1518,218],
-"classTrait.html#a0e831d89088a69a6b279f0b0c94c022d":[1,0,1518,20],
-"classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4":[1,0,1518,115],
-"classTrait.html#a0fe5b36ec4e77dd011ece5a51e8fad66":[1,0,1518,105],
-"classTrait.html#a1011ad220bae8e82e64bc1c9e2ca1f38":[1,0,1518,119],
-"classTrait.html#a11bd4a1ccbf223849a58849b520fb341":[1,0,1518,164]
+"classTrait.html#a084ca609ac3ba2761f415fb29cb0e967":[1,0,1518,122]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX27 =
 {
+"classAIWork.html#a43d3863762df78c231e7ff70df9a5035":[1,0,137,9],
+"classAIWork.html#a45bc2734b93e902595d007bcd474e58d":[1,0,137,17],
+"classAIWork.html#a751ce6464ca3848fa1ba0219447d30db":[1,0,137,10],
+"classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186f":[1,0,137,0],
 "classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186fa1819001b72329e2ef5799fe504238035":[1,0,137,0,1],
 "classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186fa7a1920d61156abc05a60135aefe8bc67":[1,0,137,0,0],
 "classAIWork.html#a8aa4d29ba23530f00d9251595b23ffa6":[1,0,137,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX27 =
 "classAI__Offer.html#a64e70f4c7d519819e21905f9dab7e199":[1,0,108,3],
 "classAI__Offer.html#ab3f633b09048472bfc0a7a3d30889eef":[1,0,108,0],
 "classAI__Offer.html#ac9397be49a7952b967ddd54274db56f8":[1,0,108,1],
-"classAI__OpenGambleChest.html":[1,0,109],
-"classAI__OpenGambleChest.html#a2220127eca513fa4deb0bf7b1d4ebad8":[1,0,109,3],
-"classAI__OpenGambleChest.html#a2582f64fbac57a04906e27afcb0e9ef6":[1,0,109,2],
-"classAI__OpenGambleChest.html#a2b215b7c9c4c02aca76f39ec9448bdf0":[1,0,109,4],
-"classAI__OpenGambleChest.html#add0c2ebdc6ffd7ca4be3916dc6f54a10":[1,0,109,1]
+"classAI__OpenGambleChest.html":[1,0,109]
 };

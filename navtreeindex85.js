@@ -1,5 +1,9 @@
 var NAVTREEINDEX85 =
 {
+"classLayerLoadGame.html#a2b2d822fad64cbf38bc019d5493b39b9":[1,0,898,9],
+"classLayerLoadGame.html#a2d690350335fce619571d79284f5e681":[1,0,898,4],
+"classLayerLoadGame.html#a3ccfcc3a7c799b77bfdbe6885c2313a7":[1,0,898,18],
+"classLayerLoadGame.html#a45a93859a098a60452d957008c4d1f68":[1,0,898,24],
 "classLayerLoadGame.html#a4c92ce4b5736db70bb4757e5004d4771":[1,0,898,29],
 "classLayerLoadGame.html#a4de2c75e866339b3819e3eec4a0abfb7":[1,0,898,22],
 "classLayerLoadGame.html#a5d2342020030abc4349084760422976b":[1,0,898,26],
@@ -245,9 +249,5 @@ var NAVTREEINDEX85 =
 "classLayerPickPCC.html#ae64a5f250c711c210d394702a8232b95":[1,0,909,7],
 "classLayerPixelPaint.html":[1,0,910],
 "classLayerPixelPaint.html#a0f0c6fa20654f43b4252586245d327f4":[1,0,910,3],
-"classLayerPixelPaint.html#a101cebc4ab33f2eb9cb939f20e809db4":[1,0,910,6],
-"classLayerPixelPaint.html#a154eb2e697b24dd12e6a768f997b1d87":[1,0,910,4],
-"classLayerPixelPaint.html#a2e13e150f8a2870a427dc72d91c824f9":[1,0,910,7],
-"classLayerPixelPaint.html#a73947e90064479bd61d45ede91fc3b73":[1,0,910,0],
-"classLayerPixelPaint.html#a75742d70ebc8c38f2fc1585d62fb1550":[1,0,910,5]
+"classLayerPixelPaint.html#a101cebc4ab33f2eb9cb939f20e809db4":[1,0,910,6]
 };

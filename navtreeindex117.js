@@ -1,5 +1,13 @@
 var NAVTREEINDEX117 =
 {
+"classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208":[1,0,1336,1],
+"classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b":[1,0,1336,7],
+"classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5":[1,0,1336,2],
+"classSpawnList.html#a42196007e10f710e467dac045b76bb2e":[1,0,1336,6],
+"classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38":[1,0,1336,10],
+"classSpawnList.html#a4a16374107c2972f88dbaf5eee915927":[1,0,1336,5],
+"classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3":[1,0,1336,9],
+"classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f":[1,0,1336,12],
 "classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76":[1,0,1336,13],
 "classSpawnList.html#a996f0031a8413a114d4a114c252dad70":[1,0,1336,8],
 "classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2":[1,0,1336,11],
@@ -37,8 +45,8 @@ var NAVTREEINDEX117 =
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1339,7],
 "classSpawnSetting.html#afb8be743bcf6c0e4e96afaa18bc388d3":[1,0,1339,11],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1339,4],
-"classSpell.html":[1,0,1340],
-"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1340,0],
+"classSpell.html":[1,0,1341],
+"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1341,0],
 "classSplashText.html":[1,0,1342],
 "classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1342,3],
 "classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1342,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX117 =
 "classStatsHunger.html#aefe1f54f1118595eaea912943f4c6cc0":[1,0,1362,1],
 "classStatsHygiene.html":[1,0,1363],
 "classStatsHygiene.html#a5eb1462e40463795a44ed1974b7a310b":[1,0,1363,8],
-"classStatsHygiene.html#a615ffac0962a109eed250db4376fea5b":[1,0,1363,6],
-"classStatsHygiene.html#a7d0a64e95d5474c922aabfcfc2fb7fd3":[1,0,1363,5],
-"classStatsHygiene.html#abf57329ae8308098489a0db82c48e279":[1,0,1363,2],
-"classStatsHygiene.html#ac0e03ed015afaeb9e62c3378239a4856":[1,0,1363,0],
-"classStatsHygiene.html#ac2c182189f1546a0bd808c4352c4837e":[1,0,1363,7],
-"classStatsHygiene.html#ac4dadda2948de038fb993b3216e955c6":[1,0,1363,4],
-"classStatsHygiene.html#acc387b5e0d55446700712682abdac70d":[1,0,1363,1],
-"classStatsHygiene.html#ad0889bab0571eb9d8e6b63a6f261fadb":[1,0,1363,3],
-"classStatsMana.html":[1,0,1364]
+"classStatsHygiene.html#a615ffac0962a109eed250db4376fea5b":[1,0,1363,6]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.350.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.351 Nightly</span>
    </div>
   </td>
  </tr>
@@ -101,54 +101,63 @@ $(document).ready(function(){initNavTree('TraitWhipEgg_8cs_source.html',''); ini
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classTraitWhipEgg.html#ab223c93b3249453b9e0a2cf6ec7b03d9">    8</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitWhipEgg.html#ab223c93b3249453b9e0a2cf6ec7b03d9">TrySetHeldAct</a>(<a class="code hl_class" href="classActPlan.html">ActPlan</a> p)</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>().ForEach(delegate(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>.<a class="code hl_variable" href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">disableUsermapBenefit</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a>)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classActPlan.html#a94c625121e2dd85d04edfcf19a1277dc">IsSelfOrNeighbor</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(c))</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                p.TrySetAct(<span class="stringliteral">&quot;actWhip&quot;</span>, delegate</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                    EClass.pc.Say(<span class="stringliteral">&quot;use_whip&quot;</span>, EClass.pc, c, owner.Name);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                    EClass.pc.Say(<span class="stringliteral">&quot;use_scope2&quot;</span>, c);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                    EClass.player.forceTalk = true;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                    EClass.pc.Talk(<span class="stringliteral">&quot;egg&quot;</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    c.Talk(<span class="stringliteral">&quot;pervert2&quot;</span>);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    EClass.pc.PlaySound(<span class="stringliteral">&quot;whip&quot;</span>);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                    c.PlayAnime(AnimeID.Shiver);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                    if (c.isChara)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                        c.Chara.OnInsulted();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                    Thing c2 = c.MakeEgg();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    c.Say(<span class="stringliteral">&quot;item_drop&quot;</span>, c2);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    owner.ModCharge(-1);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    if (owner.c_charges &lt;= 0)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        EClass.pc.Say(<span class="stringliteral">&quot;spellbookCrumble&quot;</span>, owner);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        owner.Destroy();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    EClass.player.ModKarma(-1);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    if (c.isChara &amp;&amp; c.Chara.mimicry != null)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        c.Chara.mimicry.Reveal(EClass.pc);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    return true;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                }, c);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        });</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>().ForEach(delegate(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classActPlan.html#a94c625121e2dd85d04edfcf19a1277dc">IsSelfOrNeighbor</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">CanSee</a>(c))</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                p.TrySetAct(<span class="stringliteral">&quot;actWhip&quot;</span>, delegate</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    EClass.pc.Say(<span class="stringliteral">&quot;use_whip&quot;</span>, EClass.pc, c, owner.Name);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    EClass.pc.Say(<span class="stringliteral">&quot;use_scope2&quot;</span>, c);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                    EClass.player.forceTalk = true;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                    EClass.pc.Talk(<span class="stringliteral">&quot;egg&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                    c.Talk(<span class="stringliteral">&quot;pervert2&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    EClass.pc.PlaySound(<span class="stringliteral">&quot;whip&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    c.PlayAnime(AnimeID.Shiver);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                    if (c.isChara)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                        c.Chara.OnInsulted();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    Thing c2 = c.MakeEgg();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                    c.Say(<span class="stringliteral">&quot;item_drop&quot;</span>, c2);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                    owner.ModCharge(-1);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    if (owner.c_charges &lt;= 0)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        EClass.pc.Say(<span class="stringliteral">&quot;spellbookCrumble&quot;</span>, owner);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                        owner.Destroy();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    EClass.player.ModKarma(-1);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    if (c.isChara &amp;&amp; c.Chara.mimicry != null)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                        c.Chara.mimicry.Reveal(EClass.pc);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    return true;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                }, c);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        });</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
 <div class="ttc" id="aclassActPlan_html"><div class="ttname"><a href="classActPlan.html">ActPlan</a></div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00007">ActPlan.cs:8</a></div></div>
 <div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00152">ActPlan.cs:152</a></div></div>
 <div class="ttc" id="aclassActPlan_html_a94c625121e2dd85d04edfcf19a1277dc"><div class="ttname"><a href="classActPlan.html#a94c625121e2dd85d04edfcf19a1277dc">ActPlan.IsSelfOrNeighbor</a></div><div class="ttdeci">bool IsSelfOrNeighbor</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00178">ActPlan.cs:178</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassChara_html_a7a2cba8247d8ef5dd17fe2a46edede4d"><div class="ttname"><a href="classChara.html#a7a2cba8247d8ef5dd17fe2a46edede4d">Chara.CanSee</a></div><div class="ttdeci">bool CanSee(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01277">Chara.cs:1277</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00009">EClass.cs:9</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00021">EClass.cs:21</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00015">EClass.cs:15</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_aaa0084e8e866cc69c9c2e774c37a24a2"><div class="ttname"><a href="classGamePrincipal.html#aaa0084e8e866cc69c9c2e774c37a24a2">GamePrincipal.disableUsermapBenefit</a></div><div class="ttdeci">bool disableUsermapBenefit</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00146">GamePrincipal.cs:146</a></div></div>
+<div class="ttc" id="aclassGame_html_a4f1fa7c6eec10a3a8c09592da6ec95eb"><div class="ttname"><a href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">Game.principal</a></div><div class="ttdeci">GamePrincipal principal</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00225">Game.cs:225</a></div></div>
 <div class="ttc" id="aclassPoint_html_a256787e4a6e7438db25289f56e618463"><div class="ttname"><a href="classPoint.html#a256787e4a6e7438db25289f56e618463">Point.ListCards</a></div><div class="ttdeci">List&lt; Card &gt; ListCards(bool includeMasked=false)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01057">Point.cs:1057</a></div></div>
 <div class="ttc" id="aclassTraitWhipEgg_html"><div class="ttname"><a href="classTraitWhipEgg.html">TraitWhipEgg</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitWhipEgg_8cs_source.html#l00001">TraitWhipEgg.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitWhipEgg_html_ab223c93b3249453b9e0a2cf6ec7b03d9"><div class="ttname"><a href="classTraitWhipEgg.html#ab223c93b3249453b9e0a2cf6ec7b03d9">TraitWhipEgg.TrySetHeldAct</a></div><div class="ttdeci">override void TrySetHeldAct(ActPlan p)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWhipEgg_8cs_source.html#l00008">TraitWhipEgg.cs:8</a></div></div>
 <div class="ttc" id="aclassTraitWhipEgg_html_ae6161200fdfa65150762066cf6e88a26"><div class="ttname"><a href="classTraitWhipEgg.html#ae6161200fdfa65150762066cf6e88a26">TraitWhipEgg.OnCreate</a></div><div class="ttdeci">override void OnCreate(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWhipEgg_8cs_source.html#l00003">TraitWhipEgg.cs:3</a></div></div>
 <div class="ttc" id="aclassTraitWhipLove_html"><div class="ttname"><a href="classTraitWhipLove.html">TraitWhipLove</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitWhipLove_8cs_source.html#l00004">TraitWhipLove.cs:5</a></div></div>
+<div class="ttc" id="aclassZone_html_a7a2728e8894a1803eeba17ffc4c9f735"><div class="ttname"><a href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">Zone.IsUserZone</a></div><div class="ttdeci">virtual bool IsUserZone</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00278">Zone.cs:278</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

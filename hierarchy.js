@@ -2015,6 +2015,9 @@ var hierarchy =
         [ "TraitScroll", "classTraitScroll.html", [
           [ "TraitBaseSpellbook", "classTraitBaseSpellbook.html", [
             [ "TraitAncientbook", "classTraitAncientbook.html", null ],
+            [ "TraitBlackNote", "classTraitBlackNote.html", [
+              [ "TraitDeathNote", "classTraitDeathNote.html", null ]
+            ] ],
             [ "TraitErohon", "classTraitErohon.html", [
               [ "TraitUsuihon", "classTraitUsuihon.html", null ]
             ] ],
