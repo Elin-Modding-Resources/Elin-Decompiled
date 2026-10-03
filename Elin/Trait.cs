@@ -2093,7 +2093,7 @@ public class Trait : EClass
 				{
 					Add("1282", 1, 0).SetNum(5);
 					AddThing(ThingGen.CreateSpellbook(9155, 1, 3));
-					AddThing(ThingGen.CreateSpellbook(8406, 1, 7));
+					AddThing(ThingGen.CreateSpellbook(8404, 1, 7));
 					AddThing(ThingGen.CreateScroll(8281, 6));
 					AddThing(ThingGen.CreateScroll(8280, 7));
 					AddThing(ThingGen.CreateScroll(8288, 5));

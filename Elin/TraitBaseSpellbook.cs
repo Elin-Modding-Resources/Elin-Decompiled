@@ -93,7 +93,10 @@ public class TraitBaseSpellbook : TraitScroll
 			return true;
 		}
 		ReadFailEffect(c);
-		ModCharge(c);
+		if (HasCharges)
+		{
+			ModCharge(c);
+		}
 		return false;
 		bool ReadCheck()
 		{

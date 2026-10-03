@@ -51,6 +51,10 @@ public class ContentConfigTest : ContentConfig
 
 	public Slider sliderExtraHeight;
 
+	public Slider sliderSleepSimHour;
+
+	public Slider sliderSimBase;
+
 	public override void OnInstantiate()
 	{
 		List<SkinRootStatic> mainSkins = EClass.ui.skins.mainSkins;
@@ -173,6 +177,16 @@ public class ContentConfigTest : ContentConfig
 			base.config.test.screenExtraHeight = (int)a;
 			base.config.ApplyGrading();
 			return Lang.Get("screenExtraHeight") + "(" + (int)a + ")";
+		});
+		SetSlider(sliderSleepSimHour, base.config.test.maxSleepSimHours / 24, delegate(float a)
+		{
+			base.config.test.maxSleepSimHours = (int)a * 24;
+			return Lang.Get("maxSleepSimHours") + "(" + (int)a + ")";
+		});
+		SetSlider(sliderSimBase, base.config.test.maxSimBases, delegate(float a)
+		{
+			base.config.test.maxSimBases = (int)a;
+			return Lang.Get("maxSimBases") + "(" + (int)a + ")";
 		});
 	}
 }

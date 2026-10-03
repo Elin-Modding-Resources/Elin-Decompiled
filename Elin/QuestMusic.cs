@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class QuestMusic : QuestInstance
 {
@@ -55,16 +56,16 @@ public class QuestMusic : QuestInstance
 
 	public override int GetRewardPlat(int money)
 	{
-		return difficulty + EClass.rnd(2);
+		return (difficulty + EClass.rnd(2)) * (100 + Mathf.Min(partyLv, 20) * 50) / 100;
 	}
 
 	public override void OnInit()
 	{
 		if (EClass.rnd(100) < EClass.rnd(EClass.pc.Evalue(241)))
 		{
-			partyLv = 1 + EClass.rnd(EClass.pc.Evalue(241) / 10);
+			partyLv = Mathf.Min(1 + EClass.rnd(EClass.pc.Evalue(241) / 10), 1000000);
 		}
-		destScore = difficulty * 150 * (100 + partyLv * 50) / 100;
+		destScore = difficulty * 150 * (100 + Mathf.Min(partyLv, 10) * 10) / 100;
 		destScore += EClass.rnd(destScore / 5);
 	}
 }

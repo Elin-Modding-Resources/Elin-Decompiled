@@ -7866,9 +7866,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						return 3;
 					}
 					return 1;
-				case "spellbook":
-					_ = refVal;
-					_ = 9155;
+				case "372":
+					if (refVal == 9155)
+					{
+						return 1;
+					}
+					if (refVal == 8404)
+					{
+						return 2;
+					}
 					return 1;
 				case "rp_random":
 					return 6;
