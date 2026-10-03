@@ -166,13 +166,19 @@ public class TraitBaseSpellbook : TraitScroll
 		switch (BookType)
 		{
 		case Type.BlackNote:
+		{
 			c.Say("book_decode", c, name);
 			c.Say("dingExp", c);
 			c.feat += (c.IsPC ? 1 : 4);
 			c.PlaySound("godbless");
 			c.PlayEffect("aura_heaven");
-			(owner.c_idRefName.IsEmpty() ? EClass.pc : EClass._map.FindChara(owner.c_idRefName))?.Die();
+			Chara chara = (owner.c_idRefName.IsEmpty() ? EClass.pc : EClass._map.FindChara(owner.c_idRefName));
+			if (chara != null && (c.IsPC || chara != EClass.pc))
+			{
+				chara.Die();
+			}
 			break;
+		}
 		case Type.Ancient:
 			c.Say("book_decode", c, name);
 			if (!c.IsPC)

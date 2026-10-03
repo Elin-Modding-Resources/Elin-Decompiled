@@ -1047,7 +1047,7 @@ public class AI_Idle : AIAct
 					thing8 = ThingGen.CreateFromCategory((EClass.rnd(5) != 0) ? "spellbook" : "ancientbook");
 					thing8.isNPCProperty = true;
 				}
-				if (!(thing8.id == "1084") || !owner.IsPCFaction)
+				if ((!(thing8.id == "1084") || !owner.IsPCFaction) && !(thing8.id == "book_death") && !(thing8.id == "book_black"))
 				{
 					if (!owner.HasElement(285))
 					{
