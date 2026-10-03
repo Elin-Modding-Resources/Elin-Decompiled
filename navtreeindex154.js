@@ -1,5 +1,7 @@
 var NAVTREEINDEX154 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad505b9a7b586e3146ac69840a32c136":[0,4,3,0,8,37],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad90bbd2a27a06001844447d20e9590a":[0,4,3,0,8,167],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daaf5a690fd5ec6f789dbfc51ec6a891ba":[0,4,3,0,8,157],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dab127d163c55a6603f3a37ce3a642c36d":[0,4,3,0,8,111],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dab25fa566fdbfeb73dbd452d39957e4e0":[0,4,3,0,8,132],
@@ -247,7 +249,5 @@ var NAVTREEINDEX154 =
 "structVersion.html#a0ec5f39242107585b2f65f0af2e84e49":[1,0,2209,11],
 "structVersion.html#a15c79ef52d7a6e998ae1a96e43ab9fff":[1,0,2209,14],
 "structVersion.html#a164de79593dd755d101eb18e251d05cf":[1,0,2209,7],
-"structVersion.html#a1f1c97b1ab5ecae4fe77b925735f1509":[1,0,2209,0],
-"structVersion.html#a203337ecac55613eab1a36cb4cbc1e61":[1,0,2209,19],
-"structVersion.html#a2868a63e699bd5f755ea82186e877369":[1,0,2209,1]
+"structVersion.html#a1f1c97b1ab5ecae4fe77b925735f1509":[1,0,2209,0]
 };

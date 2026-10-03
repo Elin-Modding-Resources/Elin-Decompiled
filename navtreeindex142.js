@@ -1,5 +1,7 @@
 var NAVTREEINDEX142 =
 {
+"classUISong.html#afb98ccdca62127e6ff61d421b372774c":[1,0,2199,8],
+"classUIText.html":[1,0,2200],
 "classUIText.html#a005e5d0643acb271e250c80424e8980b":[1,0,2200,20],
 "classUIText.html#a07435f587d14fe48572f478350085fec":[1,0,2200,9],
 "classUIText.html#a1163a1672b1b67321171376d326a3401":[1,0,2200,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX142 =
 "classWidget.html#acff238f1edde59feb5b454e873c0cec5":[1,0,2216,28],
 "classWidget.html#ad00ac46c24aed99d7016c15a0a7c67c9":[1,0,2216,19],
 "classWidget.html#ad079af82fc1bf8225c36fc277e93c926":[1,0,2216,9],
-"classWidget.html#ad2732b674b864ef872b939069ac321bc":[1,0,2216,30],
-"classWidget.html#ad337395ff179624b2e16a1b4e40de7f6":[1,0,2216,8],
-"classWidget.html#ad609d2633bca92b69f91569c9a7e5c07":[1,0,2216,22]
+"classWidget.html#ad2732b674b864ef872b939069ac321bc":[1,0,2216,30]
 };

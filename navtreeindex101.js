@@ -1,5 +1,7 @@
 var NAVTREEINDEX101 =
 {
+"classQuestMusic.html#aef0b0382da5fb05bfcd5696d4a46ea06":[1,0,1127,6],
+"classQuestMusic.html#af0c8e7a2f533e99f1eec42b3fd98b63e":[1,0,1127,8],
 "classQuestMusic.html#af36c6da51fff84856e7d2d6dca395298":[1,0,1127,10],
 "classQuestNasu.html":[1,0,1128],
 "classQuestNasu.html#addd044d92c4b79dcd9acdee3bc45bb51":[1,0,1128,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX101 =
 "classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1":[1,0,1161,2],
 "classRankedZoneManager.html#ab95dca50e72d372a1fc0d4ed79674db8":[1,0,1161,3],
 "classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289":[1,0,1161,0],
-"classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d":[1,0,1161,1],
-"classRecipe.html":[1,0,1162],
-"classRecipe.html#a040c3f5e15fef1caad347e061707d507":[1,0,1162,47]
+"classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d":[1,0,1161,1]
 };

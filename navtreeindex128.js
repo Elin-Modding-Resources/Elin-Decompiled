@@ -1,5 +1,7 @@
 var NAVTREEINDEX128 =
 {
+"classTraitDrawingPaperM.html":[1,0,1674],
+"classTraitDrawingPaperM.html#a20361a9263ec4315d2d90751a74d1dd3":[1,0,1674,1],
 "classTraitDrawingPaperM.html#a814597900babcc5071f3fdd0bf4e9b10":[1,0,1674,2],
 "classTraitDrawingPaperM.html#ad8092b4a561151c1a2b9481e7d85ead5":[1,0,1674,0],
 "classTraitDreamBug.html":[1,0,1675],
@@ -247,7 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitFridge.html#a15de8c2e1aac0bdd1fe9a2c098ebb729":[1,0,1735,1],
 "classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1735,0],
 "classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1735,2],
-"classTraitGM.html":[1,0,1758],
-"classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1758,0],
-"classTraitGM__Fighter.html":[1,0,1759]
+"classTraitGM.html":[1,0,1758]
 };

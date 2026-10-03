@@ -1,5 +1,7 @@
 var NAVTREEINDEX125 =
 {
+"classTraitASMR.html#a4961a7777cc7e7c99867d2dc354b44c7":[1,0,1541,4],
+"classTraitASMR.html#a6cc2964e302bff468ca05c89a017483f":[1,0,1541,1],
 "classTraitASMR.html#aaf0acf5e64fddc815ba6c6d5226e1f13":[1,0,1541,2],
 "classTraitASMR.html#aed11bbe035eaeccb784d57739203736c":[1,0,1541,3],
 "classTraitAbility.html":[1,0,1519],
@@ -247,7 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1572,3],
 "classTraitBoard.html":[1,0,1573],
 "classTraitBoard.html#a407b7284961e1471d7c5bbbd3e7f31e1":[1,0,1573,1],
-"classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1573,0],
-"classTraitBoat.html":[1,0,1574],
-"classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1574,6]
+"classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1573,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX130 =
 {
+"classTraitKeeperOfGarden.html#a433a30f6044c129a53b406e2b6242848":[1,0,1791,2],
+"classTraitKeeperOfGarden.html#a4768838e8fb7334a2445396afdc31d18":[1,0,1791,3],
 "classTraitKeeperOfGarden.html#a5b2ae11e46452096fc548df518559cfb":[1,0,1791,0],
 "classTraitKeeperOfGarden.html#a9b2caec811559b74d3e2ab69589589ea":[1,0,1791,1],
 "classTraitKettle.html":[1,0,1792],
@@ -247,7 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitMerchantWeapon.html#af0080d32bcb9f5aade5f2099b25dcd70":[1,0,1856,0],
 "classTraitMiko__Mifu.html":[1,0,1857],
 "classTraitMiko__Nefu.html":[1,0,1858],
-"classTraitMill.html":[1,0,1859],
-"classTraitMill.html#a2131821af05b10eddd12f4eb27e79ef1":[1,0,1859,1],
-"classTraitMill.html#a84499c7b08b7c9c36f90ecdc442490a3":[1,0,1859,2]
+"classTraitMill.html":[1,0,1859]
 };

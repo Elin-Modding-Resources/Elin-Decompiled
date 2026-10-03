@@ -1,5 +1,7 @@
 var NAVTREEINDEX152 =
 {
+"classZone__User.html":[1,0,2353],
+"classZone__User.html#a2a32a9f8d095bc68c699b283fc3ea93a":[1,0,2353,5],
 "classZone__User.html#a3025bd2f1e2bcd662726f384cb4d4cea":[1,0,2353,3],
 "classZone__User.html#a39276fd8e5123d0429967d4b37a6fcc2":[1,0,2353,1],
 "classZone__User.html#a5a72848a084a95fd2575eba184c3cbef":[1,0,2353,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX152 =
 "interfaceIMouseHint.html#ad7a7fdc0757dc8f014d581c8bfb0a280":[1,0,759,1],
 "interfaceIPathfindGrid.html":[1,0,808],
 "interfaceIPathfindWalker.html":[1,0,809],
-"interfaceIPathfindWalker.html#ac337512091d7037ca4c4bdfbda2c1b9a":[1,0,809,0],
-"interfaceIPathfinder.html":[1,0,807],
-"interfaceIPathfinder.html#a5b4fce198c3a23e0b312579f6e87fe52":[1,0,807,0]
+"interfaceIPathfindWalker.html#ac337512091d7037ca4c4bdfbda2c1b9a":[1,0,809,0]
 };

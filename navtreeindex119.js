@@ -1,5 +1,7 @@
 var NAVTREEINDEX119 =
 {
+"classTCText.html#ab8fefaf1553f830af4a9bb7268243717":[1,0,1427,7],
+"classTCText.html#af9b7d546956cb237fdec2a7590bd1b57":[1,0,1427,2],
 "classTCText.html#af9ffb0f1cd0553b79f7883fd22939623":[1,0,1427,0],
 "classTCUI.html":[1,0,1428],
 "classTCUI.html#a02b77a321a2e971388b8c23db364fcbf":[1,0,1428,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX119 =
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a7a1920d61156abc05a60135aefe8bc67":[1,0,1403,0,0],
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a99b4c3afc6aaa3ab4de17c90455a55eb":[1,0,1403,0,1],
 "classTaskDig.html#ab932e4175ec1ceefcd63e5d67b756eb1":[1,0,1403,3],
-"classTaskDig.html#abc60f1808f14111a9020e64fe7dcc8b8":[1,0,1403,2],
-"classTaskDig.html#abffd8fc5396ed9fa14971cd6093cd372":[1,0,1403,7],
-"classTaskDig.html#ac8628e934cfd5e03160bfa4bb687f8f1":[1,0,1403,9]
+"classTaskDig.html#abc60f1808f14111a9020e64fe7dcc8b8":[1,0,1403,2]
 };

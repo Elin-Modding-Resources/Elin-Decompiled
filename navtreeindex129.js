@@ -1,5 +1,7 @@
 var NAVTREEINDEX129 =
 {
+"classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1758,0],
+"classTraitGM__Fighter.html":[1,0,1759],
 "classTraitGM__Mage.html":[1,0,1760],
 "classTraitGM__Merchant.html":[1,0,1761],
 "classTraitGM__Thief.html":[1,0,1762],
@@ -247,7 +249,5 @@ var NAVTREEINDEX129 =
 "classTraitJukeBox.html#a4e911805d2bcc70ed774469a2e21dae3":[1,0,1790,3],
 "classTraitJukeBox.html#ae867fe71ec6018d7fb4bd6442f18eccc":[1,0,1790,1],
 "classTraitJukeBox.html#ae930e9ca8ec707709494695e8d74c5d0":[1,0,1790,2],
-"classTraitKeeperOfGarden.html":[1,0,1791],
-"classTraitKeeperOfGarden.html#a433a30f6044c129a53b406e2b6242848":[1,0,1791,2],
-"classTraitKeeperOfGarden.html#a4768838e8fb7334a2445396afdc31d18":[1,0,1791,3]
+"classTraitKeeperOfGarden.html":[1,0,1791]
 };

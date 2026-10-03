@@ -1,5 +1,7 @@
 var NAVTREEINDEX153 =
 {
+"interfaceIPathfinder.html":[1,0,807],
+"interfaceIPathfinder.html#a5b4fce198c3a23e0b312579f6e87fe52":[1,0,807,0],
 "interfaceIPathfinder.html#a883ce17fbbce91b1d4ef0757ef84e26c":[1,0,807,1],
 "interfaceIPoolObject.html":[1,0,810],
 "interfaceIPoolObject.html#a016f411cb77fa7a76a1d835c29cfc546":[1,0,810,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX153 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daac7d5ef4d8b66eb46c5d9972cf09e3b1":[0,4,3,0,8,124],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daac9aa1bcf28331716951265820a5c0c1":[0,4,3,0,8,193],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad18af9632adaa78d81fad6d506332bf":[0,4,3,0,8,90],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad4bbdff47f09b1e8571f436ba9ed6d9":[0,4,3,0,8,133],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad505b9a7b586e3146ac69840a32c136":[0,4,3,0,8,37],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad90bbd2a27a06001844447d20e9590a":[0,4,3,0,8,167]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad4bbdff47f09b1e8571f436ba9ed6d9":[0,4,3,0,8,133]
 };

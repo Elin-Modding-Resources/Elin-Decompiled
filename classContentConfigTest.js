@@ -7,6 +7,8 @@ var classContentConfigTest =
     [ "ddSkin", "classContentConfigTest.html#a50451f3a9b5c95121216621c91116979", null ],
     [ "sliderBrightness", "classContentConfigTest.html#a83a85de4a048c7b3036ab544631799b7", null ],
     [ "sliderExtraHeight", "classContentConfigTest.html#a1a7d08b549e3a02eef3e8ff6cf500191", null ],
+    [ "sliderSimBase", "classContentConfigTest.html#a0e8144caf928f0eabbde0740469e4b0b", null ],
+    [ "sliderSleepSimHour", "classContentConfigTest.html#af4fac0a68f9eb3d0a71f591a98f9c358", null ],
     [ "toggleAAPortrait", "classContentConfigTest.html#a033c67f001fee196a5e85ba67e6bac93", null ],
     [ "toggleAlwaysFixCamera", "classContentConfigTest.html#acff8b709c54320831168a450265a7d03", null ],
     [ "toggleAlwaysRun", "classContentConfigTest.html#a5bff129b26c3fea40903647fe774ff1e", null ],
