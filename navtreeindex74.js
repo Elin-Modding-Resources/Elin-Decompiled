@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classGross.html":[1,0,661],
 "classGross.html#a1f5f94c881f7f98540884ff081d94bad":[1,0,661,3],
 "classGross.html#a83e75bf4914156b2c79918af7a94cb26":[1,0,661,2],
 "classGross.html#aed49cbfc74743a0723404d16c6ede4d0":[1,0,661,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classGuildRankData.html#ac30df4712bdd809645df1aa715b0b441":[1,0,688,0],
 "classGuildRankData.html#acd460ee5840491cac11074c18d9ea07d":[1,0,688,2],
 "classGuildRankData.html#af424e08454994b0c714f4f6ce58ef695":[1,0,688,1],
-"classGuildThief.html":[1,0,689],
-"classGuildThief.html#a1714d4ec590bf4628d3dfb36006cf2e6":[1,0,689,0]
+"classGuildThief.html":[1,0,689]
 };

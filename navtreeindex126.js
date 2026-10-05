@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1573,0],
 "classTraitBoat.html":[1,0,1574],
 "classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1574,6],
 "classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1574,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1626,0],
 "classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1626,2],
 "classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1626,4],
-"classTraitCookerMicrowave.html":[1,0,1627],
-"classTraitCookerMicrowave.html#a09995ff5750a6aafd9db13aaf8649805":[1,0,1627,5]
+"classTraitCookerMicrowave.html":[1,0,1627]
 };

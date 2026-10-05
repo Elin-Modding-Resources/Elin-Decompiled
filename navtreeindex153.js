@@ -1,5 +1,6 @@
 var NAVTREEINDEX153 =
 {
+"interfaceIPathfindWalker.html#ac337512091d7037ca4c4bdfbda2c1b9a":[1,0,809,0],
 "interfaceIPathfinder.html":[1,0,807],
 "interfaceIPathfinder.html#a5b4fce198c3a23e0b312579f6e87fe52":[1,0,807,0],
 "interfaceIPathfinder.html#a883ce17fbbce91b1d4ef0757ef84e26c":[1,0,807,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX153 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daac018c9cb5f969a6ec2b32373b79f92c":[0,4,3,0,8,212],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daac7d5ef4d8b66eb46c5d9972cf09e3b1":[0,4,3,0,8,124],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daac9aa1bcf28331716951265820a5c0c1":[0,4,3,0,8,193],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad18af9632adaa78d81fad6d506332bf":[0,4,3,0,8,90],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad4bbdff47f09b1e8571f436ba9ed6d9":[0,4,3,0,8,133]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daad18af9632adaa78d81fad6d506332bf":[0,4,3,0,8,90]
 };

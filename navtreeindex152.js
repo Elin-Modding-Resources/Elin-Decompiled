@@ -1,5 +1,6 @@
 var NAVTREEINDEX152 =
 {
+"classZone__UnderseaTemple.html#afc7c619b0b3318b6e03a499701414444":[1,0,2352,0],
 "classZone__User.html":[1,0,2353],
 "classZone__User.html#a2a32a9f8d095bc68c699b283fc3ea93a":[1,0,2353,5],
 "classZone__User.html#a3025bd2f1e2bcd662726f384cb4d4cea":[1,0,2353,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX152 =
 "interfaceIMouseHint.html#a75528713c7deb9501223d2b8b9e09a10":[1,0,759,3],
 "interfaceIMouseHint.html#ad7a7fdc0757dc8f014d581c8bfb0a280":[1,0,759,1],
 "interfaceIPathfindGrid.html":[1,0,808],
-"interfaceIPathfindWalker.html":[1,0,809],
-"interfaceIPathfindWalker.html#ac337512091d7037ca4c4bdfbda2c1b9a":[1,0,809,0]
+"interfaceIPathfindWalker.html":[1,0,809]
 };

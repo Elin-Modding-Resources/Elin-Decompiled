@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"classUIMouseInfo.html#a64439b414f07ab5cf26079eac0ad5f2a":[1,0,2184,2],
 "classUIMouseInfo.html#a70b022470071460750f8e5460a132884":[1,0,2184,4],
 "classUIMouseInfo.html#a73d3835f9954dded8e4df6461b987512":[1,0,2184,5],
 "classUIMouseInfo.html#a7e4253892afdd111228ecfb5831e5340":[1,0,2184,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f":[1,0,2199,12],
 "classUISong.html#aaba69511c4b133170c4d02523b1509ef":[1,0,2199,9],
 "classUISong.html#ac20a95ba4beed45a735ccf8eccd97822":[1,0,2199,7],
-"classUISong.html#ac20d663437f4002d26673c766c3e8540":[1,0,2199,3],
-"classUISong.html#ad7cc0e937c588c12d87bb0017915e29b":[1,0,2199,10]
+"classUISong.html#ac20d663437f4002d26673c766c3e8540":[1,0,2199,3]
 };

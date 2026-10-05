@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"classLangSetting.html#a927d2432624547d71766f3518ab7b8aa":[1,0,849,6],
 "classLangSetting.html#a9ade4eb63d485eccbd3653f8c80c17d0":[1,0,849,11],
 "classLangSetting.html#abcb98457be827fb37adf73b094f3b629":[1,0,849,10],
 "classLangSetting.html#ac58269087d19f278b477f66192a16401":[1,0,849,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "classLayerConfig.html#a6b6937655465e4d9f17f854ac98ccb71":[1,0,862,54],
 "classLayerConfig.html#a6cb757243bce78b56c9558e8cfefcb85":[1,0,862,18],
 "classLayerConfig.html#a6e0d3e9f1babb2fb9819ff1fbaa22612":[1,0,862,56],
-"classLayerConfig.html#a73a13371a09d5ef0e52fa6f9d3c7f138":[1,0,862,55],
-"classLayerConfig.html#a786d3616458166899668cfa52f12dd5b":[1,0,862,37]
+"classLayerConfig.html#a73a13371a09d5ef0e52fa6f9d3c7f138":[1,0,862,55]
 };

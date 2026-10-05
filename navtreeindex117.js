@@ -1,5 +1,6 @@
 var NAVTREEINDEX117 =
 {
+"classSpawnList.html":[1,0,1336],
 "classSpawnList.html#a1177d7c0ce0db04f591c6320ba035993":[1,0,1336,3],
 "classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8":[1,0,1336,4],
 "classSpawnList.html#a31989d041006b1bc3db7f14b0ff81208":[1,0,1336,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX117 =
 "classStatsHunger.html#aa2d6fa33c0a7894055ea8ed2ea4005f0":[1,0,1362,2],
 "classStatsHunger.html#aba707ff24a544f3899f763771e51b41f":[1,0,1362,5],
 "classStatsHunger.html#addd47478909db67d73d30901f134e797":[1,0,1362,0],
-"classStatsHunger.html#aefe1f54f1118595eaea912943f4c6cc0":[1,0,1362,1],
-"classStatsHygiene.html":[1,0,1363]
+"classStatsHunger.html#aefe1f54f1118595eaea912943f4c6cc0":[1,0,1362,1]
 };

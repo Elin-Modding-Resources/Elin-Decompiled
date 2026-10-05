@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classMosframe_1_1ScrollbarHandleSize.html#ae7699ca4b0258c1c696652bf3465c43b":[1,0,6,4,0],
 "classMsg.html":[1,0,995],
 "classMsg.html#a026edeb7ff47d163fd1ec45d0f06a324":[1,0,995,7],
 "classMsg.html#a04aa23131b1feb5338fed5cf0025ba7a":[1,0,995,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classNotificationGuest.html":[1,0,1014],
 "classNotificationGuest.html#a0d0a871a77190192c3d856d6015d65ba":[1,0,1014,2],
 "classNotificationGuest.html#a7221896cbdeec3ddf8884758ba2f4ab5":[1,0,1014,3],
-"classNotificationGuest.html#a9a98bc5a883fe9733c52bbae2d7ea55c":[1,0,1014,5],
-"classNotificationGuest.html#acdaa83ce055ebd1b1b2be615d8f6db0c":[1,0,1014,4]
+"classNotificationGuest.html#a9a98bc5a883fe9733c52bbae2d7ea55c":[1,0,1014,5]
 };

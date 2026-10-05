@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classStatsHygiene.html":[1,0,1363],
 "classStatsHygiene.html#a5eb1462e40463795a44ed1974b7a310b":[1,0,1363,8],
 "classStatsHygiene.html#a615ffac0962a109eed250db4376fea5b":[1,0,1363,6],
 "classStatsHygiene.html#a7d0a64e95d5474c922aabfcfc2fb7fd3":[1,0,1363,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTCText.html#a2b09382c9b128aeabad5b03842704f2c":[1,0,1427,1],
 "classTCText.html#a52fb1f4d631520a4182bbd23c1a62866":[1,0,1427,6],
 "classTCText.html#a547b65a6f6aade46d7245555d1c8225d":[1,0,1427,8],
-"classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8":[1,0,1427,5],
-"classTCText.html#a81e8e6f0482659e1feaf394fc4acd31e":[1,0,1427,4]
+"classTCText.html#a76cdd11ffe26321ea157bc0f6233c4b8":[1,0,1427,5]
 };

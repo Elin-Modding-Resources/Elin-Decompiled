@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"classDramaActor.html#add2d49bf6ba26f5e06c5f248c1a976b2":[1,0,495,5],
 "classDramaActor.html#af4d105a979cecc1d374e44c2ab702466":[1,0,495,7],
 "classDramaChoice.html":[1,0,496],
 "classDramaChoice.html#a0389856ea3878c846bbb2852c15d2faa":[1,0,496,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "classDramaOutcome.html#af6e17351a6de04fcb7246d4c8932415b":[1,0,507,19],
 "classDramaOutcome.html#afde0716948fd98986696bb8e3330c8ec":[1,0,507,59],
 "classDramaProp.html":[1,0,508],
-"classDramaProp.html#a03eb7b6ac3c4f108e112c5253cea0e62":[1,0,508,1],
-"classDramaProp.html#a31e21ccee8986a6aac65d2194f815642":[1,0,508,7]
+"classDramaProp.html#a03eb7b6ac3c4f108e112c5253cea0e62":[1,0,508,1]
 };

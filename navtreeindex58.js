@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"classCoreRef_1_1Renderers.html#a8eba232bab79b1a348f421f462ef01db":[1,0,438,10,0],
 "classCoreRef_1_1Renderers.html#aa841c8e8636b2a0f7533ef04fc131f11":[1,0,438,10,3],
 "classCoreRef_1_1Renderers.html#ae8508c1ff81736ddf55703347b612f68":[1,0,438,10,4],
 "classCoreRef_1_1StateIcons.html":[1,0,438,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135adc929a6461aceeab9137cc5fe5117421":[1,0,457,0,1],
 "classCustomAssetManager.html":[1,0,458],
 "classCustomAssetManager.html#a02e86fbc0c568acc70f19b7e46cd7d62":[1,0,458,10],
-"classCustomAssetManager.html#a054eb7b25892f4197cde0dfa42d19277":[1,0,458,2],
-"classCustomAssetManager.html#a2eb62409c6ccd420e182d23c1e83db6a":[1,0,458,0]
+"classCustomAssetManager.html#a054eb7b25892f4197cde0dfa42d19277":[1,0,458,2]
 };

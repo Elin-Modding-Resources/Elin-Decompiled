@@ -1,5 +1,6 @@
 var NAVTREEINDEX131 =
 {
+"classTraitMill.html":[1,0,1859],
 "classTraitMill.html#a2131821af05b10eddd12f4eb27e79ef1":[1,0,1859,1],
 "classTraitMill.html#a84499c7b08b7c9c36f90ecdc442490a3":[1,0,1859,2],
 "classTraitMill.html#a89329c74d83b9a6c1bf84c6397bf8335":[1,0,1859,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitPotionRandom.html#adbaf7305ae19e67a415e1ac710688c4f":[1,0,1917,4],
 "classTraitPotionRandom.html#af5d2e6755f6bcfa5b0b53d091fd6473c":[1,0,1917,6],
 "classTraitPotionRandom.html#afeb385428a5da22849b31f3c55176170":[1,0,1917,2],
-"classTraitPowerStatue.html":[1,0,1918],
-"classTraitPowerStatue.html#a40d46b2fc824c7f9451db3850511a98f":[1,0,1918,11]
+"classTraitPowerStatue.html":[1,0,1918]
 };
