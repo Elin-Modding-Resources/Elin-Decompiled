@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class Chara : Card, IPathfindWalker
 {
+	public const int LevelLimit = 99999999;
+
 	private static Point shared = new Point();
 
 	private static List<Hobby> listHobby = new List<Hobby>();

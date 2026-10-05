@@ -99,7 +99,7 @@ public class ZoneEventMusic : ZoneEventQuest
 		}
 		if (questMusic.partyLv > 0)
 		{
-			c.SetLv(c.LV * (100 + questMusic.partyLv * 100) / 100);
+			c.SetLv(Mathf.Min(MathEx.ClampToInt((long)c.LV * (long)(100 + questMusic.partyLv * 100) / 100), 99999999));
 			c.things.DestroyAll();
 			c.TryRestock(onCreate: true);
 		}
