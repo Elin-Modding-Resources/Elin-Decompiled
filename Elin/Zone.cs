@@ -1009,6 +1009,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			if (IsRegion)
 			{
 				cell.decal = 0;
+				cell._bridge = (cell._bridgeMat = 0);
 			}
 		});
 		if (EClass.world.weather.IsRaining)

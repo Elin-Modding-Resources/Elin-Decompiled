@@ -237,7 +237,7 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 			this.renderData.Init();
 		}
 		SetTiles();
-		switch (colorType.Split('/').TryGet(0))
+		switch (colorType?.Split('/').TryGet(0))
 		{
 		case "alt":
 			useAltColor = true;

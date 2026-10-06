@@ -391,12 +391,17 @@ public class ActThrow : ActBaseAttack
 		}
 		if (!flag && Act.TC != null)
 		{
+			Card tC = Act.TC;
+			Chara cC = Act.CC;
 			AttackProcess.Current.Prepare(c.Chara, t, Act.TC, Act.TP, 0, _isThrow: true);
 			if (method == ThrowMethod.Punish && t.rarity >= Rarity.Legendary)
 			{
 				AttackProcess.Current.critFury = true;
 			}
-			if (AttackProcess.Current.Perform(0, hasHit: false))
+			bool num = AttackProcess.Current.Perform(0, hasHit: false);
+			Act.TC = tC;
+			Act.CC = cC;
+			if (num)
 			{
 				if (Act.TC.IsAliveInCurrentZone && t.trait is TraitErohon && Act.TC.id == t.c_idRefName)
 				{
