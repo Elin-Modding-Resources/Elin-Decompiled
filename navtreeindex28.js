@@ -1,5 +1,11 @@
 var NAVTREEINDEX28 =
 {
+"classAI__Offer.html":[1,0,108],
+"classAI__Offer.html#a2f99b82da9dd2959034b3108d14b818d":[1,0,108,2],
+"classAI__Offer.html#a64e70f4c7d519819e21905f9dab7e199":[1,0,108,3],
+"classAI__Offer.html#ab3f633b09048472bfc0a7a3d30889eef":[1,0,108,0],
+"classAI__Offer.html#ac9397be49a7952b967ddd54274db56f8":[1,0,108,1],
+"classAI__OpenGambleChest.html":[1,0,109],
 "classAI__OpenGambleChest.html#a2220127eca513fa4deb0bf7b1d4ebad8":[1,0,109,3],
 "classAI__OpenGambleChest.html#a2582f64fbac57a04906e27afcb0e9ef6":[1,0,109,2],
 "classAI__OpenGambleChest.html#a2b215b7c9c4c02aca76f39ec9448bdf0":[1,0,109,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX28 =
 "classAM__Adv.html#aaa03a6ac54dc547d8e346279bb26cf52":[1,0,145,25],
 "classAM__Adv.html#aaa5de71ddd9f01f28ab9c7fafacd526a":[1,0,145,40],
 "classAM__Adv.html#aaabd441e4b69e20ef37afd0ca5d791b9":[1,0,145,26],
-"classAM__Adv.html#aaec9dec8db78b17c40cdcebb76691c70":[1,0,145,20],
-"classAM__Adv.html#ab35d9513952ebb2a37ae8e0f19ab16fa":[1,0,145,33],
-"classAM__Adv.html#ab79241cb19313dbecd5e70f7a85893b6":[1,0,145,19],
-"classAM__Adv.html#abc31660add7731af152a696576619db4":[1,0,145,39],
-"classAM__Adv.html#abc73ac0a8fa9a8b6b64e851b9f683eda":[1,0,145,35],
-"classAM__Adv.html#ac07f5d84e588ca189baa7e0f41c1d8b0":[1,0,145,3],
-"classAM__Adv.html#ad5a92e488f852a29671e30e63d20c9d1":[1,0,145,34]
+"classAM__Adv.html#aaec9dec8db78b17c40cdcebb76691c70":[1,0,145,20]
 };

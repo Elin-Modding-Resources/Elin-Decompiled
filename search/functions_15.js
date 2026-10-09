@@ -372,7 +372,7 @@ var searchData=
   ['setstringlist_369',['SetStringList',['../classLayerList.html#adc4d514087e114210ca0d756f0de8e95',1,'LayerList']]],
   ['setsubtext_370',['SetSubText',['../classHotItemThing.html#a300e922e2ec13b65bfe512f02934d245',1,'HotItemThing.SetSubText()'],['../classUIButton_1_1Item.html#ab6f63a7af15d15adeb1fe8a4834bf5f0',1,'UIButton.Item.SetSubText()'],['../classListPeopleExpedition.html#ac7cd1cfd718045fd418695b42e9c8639',1,'ListPeopleExpedition.SetSubText()'],['../classItemGeneral.html#ae2b8778fd74445f36964a7224550426a',1,'ItemGeneral.SetSubText()'],['../classBaseListPeople.html#aecfda02d64995b7e5eefb5c3d6b96fae',1,'BaseListPeople.SetSubText()']]],
   ['setsubtext2_371',['SetSubText2',['../classItemGeneral.html#a2ce248e2eb75dcd1faf1de9a808bab8c',1,'ItemGeneral']]],
-  ['setsummon_372',['SetSummon',['../classChara.html#ad48714792e6b622b1334923d37eaffd0',1,'Chara']]],
+  ['setsummon_372',['SetSummon',['../classChara.html#a94687a6e6e0c7d7a503e8cf6e6781eaa',1,'Chara']]],
   ['settag_373',['SetTag',['../classClassExtension.html#acc573af25bd9869ebddbd4bb2b7d07fa',1,'ClassExtension']]],
   ['settarget_374',['SetTarget',['../classAM__MoveInstalled.html#a868aa03da2ec092adeb7a34246c61503',1,'AM_MoveInstalled.SetTarget()'],['../classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8',1,'BaseTaskHarvest.SetTarget()'],['../classUIDragPanel.html#a018550b160cbb210dc15c0d4e0586d01',1,'UIDragPanel.SetTarget()'],['../classUIFollow.html#a20f65951d6cde63e1d6aae1aad25ea0b',1,'UIFollow.SetTarget()']]],
   ['settargetzoomindex_375',['SetTargetZoomIndex',['../classBaseGameScreen.html#a3c54241f21cea559e09305fb758ca474',1,'BaseGameScreen']]],

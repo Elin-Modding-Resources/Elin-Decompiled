@@ -251,7 +251,7 @@ var classChara =
     [ "SetRenderParam", "classChara.html#acd50b61ee223ce1a104e64818215e3a2", null ],
     [ "SetSortVal", "classChara.html#a2d707524ab7ea973182089fe39e0da9f", null ],
     [ "SetSource", "classChara.html#a695badea79c9ea30cecda8be52d2a966", null ],
-    [ "SetSummon", "classChara.html#ad48714792e6b622b1334923d37eaffd0", null ],
+    [ "SetSummon", "classChara.html#a94687a6e6e0c7d7a503e8cf6e6781eaa", null ],
     [ "SetTempHand", "classChara.html#aa5d23539c607ca814ba0c64a5ccf7322", null ],
     [ "ShouldEquip", "classChara.html#a6bcd4bb073098bb1f24627836cb6e492", null ],
     [ "ShouldThrowAway", "classChara.html#a83f112387ebafee8cdc6da228a015146", null ],

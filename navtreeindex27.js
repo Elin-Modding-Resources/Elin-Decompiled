@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"classAIProgress.html#af4afe1ea2821d62d67544fb72f6f9e3a":[1,0,136,7],
+"classAIWork.html":[1,0,137],
+"classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f":[1,0,137,14],
+"classAIWork.html#a16a11b4aada2cc3952d0a9da51e51cd6":[1,0,137,15],
+"classAIWork.html#a1766ec0c976dea1607ff4d8618dca613":[1,0,137,3],
+"classAIWork.html#a3b976b4f8261696f0b29acc0b1159f05":[1,0,137,18],
 "classAIWork.html#a43d3863762df78c231e7ff70df9a5035":[1,0,137,9],
 "classAIWork.html#a45bc2734b93e902595d007bcd474e58d":[1,0,137,17],
 "classAIWork.html#a751ce6464ca3848fa1ba0219447d30db":[1,0,137,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "classAI__Mofu.html#a3f7f0ac1e84cb2acbaeddb59bb585654":[1,0,107,3],
 "classAI__Mofu.html#a5e71f9daf472e9ad939b5d2af36dc9b3":[1,0,107,0],
 "classAI__Mofu.html#a87a6bef406adac66497648ebfe20999e":[1,0,107,2],
-"classAI__Mofu.html#aab8a1276894a5e6aae79a84f1ef17857":[1,0,107,1],
-"classAI__Offer.html":[1,0,108],
-"classAI__Offer.html#a2f99b82da9dd2959034b3108d14b818d":[1,0,108,2],
-"classAI__Offer.html#a64e70f4c7d519819e21905f9dab7e199":[1,0,108,3],
-"classAI__Offer.html#ab3f633b09048472bfc0a7a3d30889eef":[1,0,108,0],
-"classAI__Offer.html#ac9397be49a7952b967ddd54274db56f8":[1,0,108,1],
-"classAI__OpenGambleChest.html":[1,0,109]
+"classAI__Mofu.html#aab8a1276894a5e6aae79a84f1ef17857":[1,0,107,1]
 };

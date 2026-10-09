@@ -1,5 +1,12 @@
 var NAVTREEINDEX52 =
 {
+"classConInvisibility.html#af0165653c4373e4fd5f7699b34e13a4b":[1,0,362,3],
+"classConInvulnerable.html":[1,0,363],
+"classConLevitate.html":[1,0,364],
+"classConLevitate.html#a1ba1f70b88cd19584e777da183736b61":[1,0,364,1],
+"classConLevitate.html#a5ccdcd8f92a788a17ca510237f211a04":[1,0,364,0],
+"classConLevitate.html#a9948f98226735557999565a550fdf9c9":[1,0,364,2],
+"classConMiasma.html":[1,0,365],
 "classConMiasma.html#a0e4b16048c4c380aff9bfddd04d39273":[1,0,365,2],
 "classConMiasma.html#a8e409d57ce969bec288f55bef2ae0562":[1,0,365,1],
 "classConMiasma.html#ab6ca61a0a078bff1f293ff276037d5d8":[1,0,365,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX52 =
 "classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3":[1,0,349,1],
 "classConfigAutoCombat.html#aef94da1414894a453cb58d218c821454":[1,0,349,8],
 "classConfigAutoCombat.html#afea261310e16d3794bf25988c252ab09":[1,0,349,7],
-"classConfigPreference.html":[1,0,350],
-"classConfigPreference.html#a503cb51b259fcff233c120aa85092fb1":[1,0,350,0],
-"classConfigPreference.html#a8cd362445590ff4623b1ef76f882ce5b":[1,0,350,1],
-"classConfigPreference.html#af01013389586f3c55a43a4bdcd949432":[1,0,350,2],
-"classConfigTactics.html":[1,0,351],
-"classConfigTactics.html#a47dffa4b1ca69a9226fa4054e1d6d405":[1,0,351,1],
-"classConfigTactics.html#a70a0db59b46e9424171d363f2ad2f188":[1,0,351,0],
-"classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d":[1,0,351,2]
+"classConfigPreference.html":[1,0,350]
 };

@@ -57,6 +57,7 @@ var classCINT =
     [ "isSleepBeside", "classCINT.html#a67bcdeee2e8e208ea1459de67dbb12df", null ],
     [ "isSleepLock", "classCINT.html#a57b958b886a5351e0a459641c6a35163", null ],
     [ "isStolenFromPC", "classCINT.html#ae653809d26880c1e5cfb7d03c8ec8091", null ],
+    [ "isSummonDropCorpse", "classCINT.html#aa308ada7a8983b1256af2f31b7a0936b", null ],
     [ "isTrained", "classCINT.html#a1aba8891d8885f93352d700b6f3d6740", null ],
     [ "lightColor", "classCINT.html#ab055a2239ed009e83468c2d5fbe709c5", null ],
     [ "lockedAge", "classCINT.html#a82fd10ebc0e78d058c441323b51e18d7", null ],
