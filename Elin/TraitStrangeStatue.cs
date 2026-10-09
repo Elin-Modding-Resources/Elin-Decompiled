@@ -10,7 +10,7 @@ public class TraitStrangeStatue : TraitVase
 				filterLv = EClass._zone.DangerLv + 20
 			});
 			chara.SetHostility((EClass.rnd(3) != 0 || chara.trait is TraitMerchant) ? Hostility.Enemy : Hostility.Neutral);
-			chara.SetSummon(9999);
+			chara.SetSummon(9999, dropCorpse: true);
 			Msg.Say("statue_chara", chara, owner);
 		}
 	}

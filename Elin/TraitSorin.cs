@@ -4,6 +4,8 @@ public class TraitSorin : TraitUniqueMerchant
 
 	public override CurrencyType CurrencyType => CurrencyType.Money3;
 
+	public override int CostRerollShop => 2;
+
 	public override bool CanInvest => false;
 
 	public override int ShopLv => 1;

@@ -2640,10 +2640,14 @@ public class Chara : Card, IPathfindWalker
 		return false;
 	}
 
-	public void SetSummon(int duration)
+	public void SetSummon(int duration, bool dropCorpse = false)
 	{
 		base.c_summonDuration = duration;
 		base.isSummon = true;
+		if (dropCorpse)
+		{
+			SetBool(136, enable: true);
+		}
 	}
 
 	public Chara FindMaster()
@@ -5693,7 +5697,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass._zone.ResetHostility();
 			}
-			if (base.isSummon)
+			if (base.isSummon && !GetBool(136))
 			{
 				if (id == "tsunami")
 				{

@@ -19,7 +19,7 @@ public class HotItemActionSleep : HotAction
 		Thing thing = EClass.pc.things.Find<TraitBed>();
 		if (thing == null)
 		{
-			Msg.Say("noBedFound".langGame());
+			Msg.Say("noBedFound");
 			SE.Beep();
 			return;
 		}

@@ -62,7 +62,7 @@ public class QuestEscort : QuestDestZone
 			}
 			else
 			{
-				target.SetSummon(60);
+				target.SetSummon(60, dropCorpse: true);
 			}
 		}
 	}

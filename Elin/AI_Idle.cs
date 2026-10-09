@@ -195,6 +195,15 @@ public class AI_Idle : AIAct
 					{
 						yield return KeepRunning();
 					}
+					if (owner.hp < owner.MaxHP * 60 / 100)
+					{
+						Action action = owner.things.Find((Thing thing10) => thing10.trait.GetHealAction(owner) != null)?.trait.GetHealAction(owner) ?? null;
+						if (action != null)
+						{
+							action();
+							yield return KeepRunning();
+						}
+					}
 				}
 			}
 			if (owner.IsPCFaction && EClass._zone.IsPCFaction)

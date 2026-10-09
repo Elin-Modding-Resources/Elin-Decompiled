@@ -433,6 +433,10 @@ public class WidgetHotbar : Widget, IDragParent
 		{
 			SetItem(b, new HotItemActionSleep());
 		});
+		m.AddButton("hotActionBinocular".lang(), delegate
+		{
+			SetItem(b, new HotItemActionBinocular());
+		});
 	}
 
 	public void SetItem(ButtonHotItem b, HotItem item)

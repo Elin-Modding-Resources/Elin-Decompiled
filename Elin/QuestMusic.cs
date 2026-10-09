@@ -63,7 +63,7 @@ public class QuestMusic : QuestInstance
 	{
 		if (EClass.rnd(100) < EClass.rnd(EClass.pc.elements.ValueWithoutLink(241)))
 		{
-			partyLv = Mathf.Min(1 + EClass.rnd(EClass.pc.elements.ValueWithoutLink(241) / 10), 1000000);
+			partyLv = Mathf.Min(1 + EClass.rnd(EClass.pc.elements.ValueWithoutLink(241) / 25), 1000000);
 		}
 		destScore = difficulty * 150 * (100 + Mathf.Min(partyLv, 10) * 10) / 100;
 		destScore += EClass.rnd(destScore / 5);

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TraitViewMap : TraitItem
 {
 	public override bool IsLocalAct => false;
@@ -8,7 +6,6 @@ public class TraitViewMap : TraitItem
 
 	public override bool OnUse(Chara c)
 	{
-		Debug.Log("a");
 		ActionMode.ViewMap.Activate();
 		return false;
 	}
