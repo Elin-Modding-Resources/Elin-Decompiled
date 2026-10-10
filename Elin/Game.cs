@@ -500,6 +500,11 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.IsBelow(0, 23, 354))
+		{
+			FixElement(EClass.pc, 1421);
+			FixElement(EClass.pc, 6904);
+		}
 		if (version.IsBelow(0, 23, 345))
 		{
 			Zone zone = spatials.Find("oldkeep");
@@ -686,6 +691,32 @@ public class Game : EClass
 		if (version.IsBelow(0, 22, 45))
 		{
 			player.debt = 20000000;
+		}
+		static void FixElement(Chara c, int idEle)
+		{
+			int num2 = ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)c.race.elementMap, idEle, 0) + ClassExtension.TryGetValue<int, int>((IDictionary<int, int>)c.job.elementMap, idEle, 0);
+			if (c.c_genes != null)
+			{
+				num2 += c.c_genes.CountDNA(idEle);
+			}
+			foreach (BodySlot slot in c.body.slots)
+			{
+				if (slot.thing != null && slot.thing.c_DNA != null)
+				{
+					num2 += ((slot.thing.c_DNA.GetElement(idEle) != null) ? 1 : 0);
+				}
+			}
+			Element orCreateElement = c.elements.GetOrCreateElement(idEle);
+			if (num2 > 0 && orCreateElement.ValueWithoutLink != num2)
+			{
+				Debug.Log("FixElement: " + orCreateElement.Name + "/" + orCreateElement.vBase + "/" + orCreateElement.vSource + "/" + num2);
+				orCreateElement.vBase = num2 - orCreateElement.vSource;
+			}
+			if (orCreateElement is Ability && orCreateElement.Value > 0 && orCreateElement.vPotential < 0)
+			{
+				Debug.Log("FixElement(Ability): " + orCreateElement.Name + "/" + orCreateElement.Value + "/" + orCreateElement.vPotential + "/" + num2);
+				orCreateElement.vPotential = 0;
+			}
 		}
 		void TryAddQuest(string idQuest, string idReqQuest)
 		{

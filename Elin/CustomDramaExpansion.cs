@@ -368,7 +368,7 @@ public class CustomDramaExpansion : EClass
 				if (item2.Num >= count)
 				{
 					item2.ModNum(-count);
-					continue;
+					break;
 				}
 				count -= item2.Num;
 				item2.Destroy();

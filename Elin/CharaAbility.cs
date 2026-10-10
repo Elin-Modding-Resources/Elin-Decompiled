@@ -228,6 +228,10 @@ public class CharaAbility : EClass
 				return true;
 			}
 		}
+		if (owner.IsPC && owner.faithElements != null && owner.faithElements.Has(id))
+		{
+			return true;
+		}
 		return false;
 	}
 }

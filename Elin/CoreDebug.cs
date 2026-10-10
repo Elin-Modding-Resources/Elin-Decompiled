@@ -630,6 +630,7 @@ public class CoreDebug : EScriptable
 			thing8.AddThing("casino_coin").SetNum(30000000);
 			thing8.AddThing("medal").SetNum(1000);
 			thing8.ModCurrency(500, "plat");
+			thing8.ModCurrency(5000, "money3");
 			EClass.pc.AddThing("record");
 			EClass.pc.AddThing("deed").SetNum(5);
 			EClass.pc.AddThing("book_story");

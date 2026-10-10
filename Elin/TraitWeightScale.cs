@@ -6,11 +6,11 @@ public class TraitWeightScale : Trait
 		c.Say("trap", c, owner);
 		if (this is TraitHeightMeasure)
 		{
-			owner.TalkRaw("weightScale".langGame(c.Name, c.bio.weight.ToFormat() ?? ""));
+			owner.TalkRaw("heightMeasure".langGame(c.Name, c.bio.height.ToFormat() ?? ""));
 		}
 		else
 		{
-			owner.TalkRaw("heightMeasure".langGame(c.Name, c.bio.height.ToFormat() ?? ""));
+			owner.TalkRaw("weightScale".langGame(c.Name, c.bio.weight.ToFormat() ?? ""));
 		}
 	}
 }

@@ -2,7 +2,7 @@ public class TraitBlackNote : TraitBaseSpellbook
 {
 	public override Type BookType => Type.BlackNote;
 
-	public override bool CanStack => owner.isOn;
+	public override bool CanStack => true;
 
 	public override bool HasCharges => false;
 
@@ -12,6 +12,23 @@ public class TraitBlackNote : TraitBaseSpellbook
 
 	public override int GetActDuration(Chara c)
 	{
-		return 100;
+		if (!EClass.debug.enable)
+		{
+			return 100;
+		}
+		return 1;
+	}
+
+	public override bool CanStackTo(Thing to)
+	{
+		if (to.isOn != owner.isOn)
+		{
+			return false;
+		}
+		if (to.c_idRefName != owner.c_idRefName)
+		{
+			return false;
+		}
+		return base.CanStackTo(to);
 	}
 }

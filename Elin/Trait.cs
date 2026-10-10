@@ -2108,7 +2108,7 @@ public class Trait : EClass
 					}
 					else
 					{
-						thing2.c_idRefName = EClass.game.cards.globalCharas.Values.Where((Chara a) => a.IsUnique && a.id != "sorin").RandomItem().id;
+						thing2.c_idRefName = EClass.game.cards.globalCharas.Values.Where((Chara a) => a.IsUnique && a.id != "sorin" && a.race.id != "machinegod" && a.IsPCFaction).RandomItem().id;
 						AddThing(thing2);
 					}
 					Add("1386", 1, 0);

@@ -10561,19 +10561,19 @@ public class Chara : Card, IPathfindWalker
 	{
 		Feat feat = elements.GetElement(id) as Feat;
 		int num = 0;
-		if (feat != null && feat.Value > 0)
+		if (feat != null && feat.ValueWithoutLink > 0)
 		{
-			if (value == feat.Value)
+			if (value == feat.ValueWithoutLink)
 			{
 				return;
 			}
-			num = feat.Value;
-			feat.Apply(-feat.Value, elements);
+			num = feat.ValueWithoutLink;
+			feat.Apply(-feat.ValueWithoutLink, elements);
 		}
 		feat = elements.SetBase(id, value - (feat?.vSource ?? 0)) as Feat;
-		if (feat != null && feat.Value != 0)
+		if (feat != null && feat.ValueWithoutLink != 0)
 		{
-			feat.Apply(feat.Value, elements);
+			feat.Apply(feat.ValueWithoutLink, elements);
 		}
 		if (EClass.core.IsGameStarted)
 		{

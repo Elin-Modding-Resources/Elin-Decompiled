@@ -344,7 +344,6 @@ public class Scene : EMono
 	{
 		actionMode.Deactivate();
 		mouseTarget.Clear();
-		hideBalloon = false;
 		actionMode = null;
 		PCC.PurgeCache();
 		Clear();

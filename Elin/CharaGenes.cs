@@ -59,4 +59,20 @@ public class CharaGenes : EClass
 		}
 		return null;
 	}
+
+	public int CountDNA(int idEle)
+	{
+		int num = 0;
+		foreach (DNA item in items)
+		{
+			for (int i = 0; i < item.vals.Count; i += 2)
+			{
+				if (item.vals[i] == idEle)
+				{
+					num++;
+				}
+			}
+		}
+		return num;
+	}
 }

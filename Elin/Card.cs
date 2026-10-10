@@ -7861,7 +7861,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "book_black":
 					if (!(c_idRefName == "sorin"))
 					{
-						return 20;
+						return 50;
 					}
 					return 100;
 				case "scroll_random":
