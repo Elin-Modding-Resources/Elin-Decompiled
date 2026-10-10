@@ -1,5 +1,6 @@
 var classCharaGenes =
 [
+    [ "CountDNA", "classCharaGenes.html#a1639e506eaf23e283542c335cc447a5f", null ],
     [ "GetDNA", "classCharaGenes.html#a970dc312c5bc8f6fa32d5ec433ca22b6", null ],
     [ "GetGeneSlot", "classCharaGenes.html#af7fe457103e5f19a8ae0992f887afdfc", null ],
     [ "GetTotalCost", "classCharaGenes.html#ab713318600866c3c801445026737d288", null ],

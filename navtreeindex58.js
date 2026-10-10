@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"classCoreRef_1_1Rects.html#a4d5ab247f8488c8cdd85e0d1d510834d":[1,0,438,9,3],
 "classCoreRef_1_1Rects.html#a61b1d2086446d460d4fd21b2cc1172bd":[1,0,438,9,5],
 "classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5":[1,0,438,9,2],
 "classCoreRef_1_1Renderers.html":[1,0,438,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "classCurveEffect.html#a36c44031fd96679fb10f9d29283c0443":[1,0,457,8],
 "classCurveEffect.html#a4de2c00445b65ff28da37c2ed81050e0":[1,0,457,6],
 "classCurveEffect.html#abbc9ba05b616114a986f9ef6bfef2eeb":[1,0,457,3],
-"classCurveEffect.html#adf8a5fc0eeb571dbc9c62c1d26304afd":[1,0,457,7],
-"classCurveEffect.html#ae9e0987d000760780ea8c0dee5ca0af8":[1,0,457,5]
+"classCurveEffect.html#adf8a5fc0eeb571dbc9c62c1d26304afd":[1,0,457,7]
 };

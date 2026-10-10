@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"classRefChara.html#ab151b5d2bb2357fed3ba938925619e09":[1,0,1173,3],
 "classRefFaction.html":[1,0,1174],
 "classRefFaction.html#a10a6111ce1db282335bc69c966930613":[1,0,1174,0],
 "classRefFaction.html#a86f73f6e511dcf9600eac1b8aa7e5a60":[1,0,1174,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX103 =
 "classRenderCamUpscaler.html#ae1ad368123b964350ad04e7450e70346":[1,0,1200,3],
 "classRenderData.html":[1,0,1201],
 "classRenderData.html#a029e764485ea47e29b457b9a1286ca4a":[1,0,1201,47],
-"classRenderData.html#a12cd827ccd4c21e04368b43f8f2be2f2":[1,0,1201,15],
-"classRenderData.html#a131bd4c9786afdd2a1be75497a397711":[1,0,1201,20]
+"classRenderData.html#a12cd827ccd4c21e04368b43f8f2be2f2":[1,0,1201,15]
 };

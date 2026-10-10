@@ -1,5 +1,6 @@
 var NAVTREEINDEX68 =
 {
+"classEmpyrean_1_1Utils_1_1Extensions.html#aeb67f99fe6c979d48703d39f9b60019c":[1,0,5,1,1,4],
 "classEventAwareSlider.html":[1,0,570],
 "classEventAwareSlider.html#af7b2fabe7136dcf8185a20d0c43a35ae":[1,0,570,0],
 "classExcelBookImportSetting.html":[1,0,571],
@@ -248,6 +249,5 @@ var NAVTREEINDEX68 =
 "classFEAT.html#a837c3c0b1a633c3937b10b1df9c0d3dc":[1,0,590,145],
 "classFEAT.html#a84de4d872622596f4376dd2353da59fa":[1,0,590,23],
 "classFEAT.html#a852623eb65a5a8f74fb79ba963cc6902":[1,0,590,96],
-"classFEAT.html#a85310f26f3bf584f37dfa768ce5060ed":[1,0,590,50],
-"classFEAT.html#a857bd30e110346b9a20e59a93f42626e":[1,0,590,70]
+"classFEAT.html#a85310f26f3bf584f37dfa768ce5060ed":[1,0,590,50]
 };

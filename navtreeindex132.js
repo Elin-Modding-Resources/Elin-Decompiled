@@ -1,5 +1,7 @@
 var NAVTREEINDEX132 =
 {
+"classTraitPotionLove.html":[1,0,1918],
+"classTraitPotionRandom.html":[1,0,1919],
 "classTraitPotionRandom.html#a446a2199968a1bd5756385afb8bf1d5c":[1,0,1919,0],
 "classTraitPotionRandom.html#a531b0e1d3ffaa723f9ed9ab0cd05f928":[1,0,1919,9],
 "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1919,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX132 =
 "classTraitSeed.html#a346a08c0db4fdbb57b8086666608db8e":[1,0,1963,16],
 "classTraitSeed.html#a3aa16e52587f4375ef3bad7d638a09a5":[1,0,1963,0],
 "classTraitSeed.html#a4c8fc307a12d9be529fdcc916a6fa541":[1,0,1963,12],
-"classTraitSeed.html#a4e85436bb9800c6440030b79204601d9":[1,0,1963,6],
-"classTraitSeed.html#a502a7261aa65ae535c1d8299f74d353e":[1,0,1963,17],
-"classTraitSeed.html#a61ae35f26f93dc15995f201e669f1f56":[1,0,1963,14]
+"classTraitSeed.html#a4e85436bb9800c6440030b79204601d9":[1,0,1963,6]
 };

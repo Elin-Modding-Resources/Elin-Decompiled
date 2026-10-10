@@ -1,5 +1,7 @@
 var NAVTREEINDEX131 =
 {
+"classTraitMerchantTravel.html#a3baf443a09e79d01b6f463b1d4846c3e":[1,0,1856,1],
+"classTraitMerchantTravel.html#ab4ea96afb857d11a726973b7b9e61256":[1,0,1856,3],
 "classTraitMerchantTravel.html#abde8d41b30fb79f251a2f2fc9c0eefc0":[1,0,1856,6],
 "classTraitMerchantTravel.html#adb35b76764f080a2c550f7c4cf5825bb":[1,0,1856,5],
 "classTraitMerchantTravel.html#adb929c793f00e4824f8cb10737b7c958":[1,0,1856,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitPotionEmpty.html#a827023eb995b6e874b6c13f1ec9dabbb":[1,0,1917,4],
 "classTraitPotionEmpty.html#aca8c5b343e5ee07e3f37bc4c937dcc06":[1,0,1917,2],
 "classTraitPotionEmpty.html#acf75a07b204c6897c1318f5068aefd27":[1,0,1917,5],
-"classTraitPotionEmpty.html#ae2b5d3e8d70472d582ab0bd42d9b966f":[1,0,1917,1],
-"classTraitPotionLove.html":[1,0,1918],
-"classTraitPotionRandom.html":[1,0,1919]
+"classTraitPotionEmpty.html#ae2b5d3e8d70472d582ab0bd42d9b966f":[1,0,1917,1]
 };

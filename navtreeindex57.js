@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"classCorePath.html#a04e3995d5c70ce695d1f01f93d14c4dd":[1,0,437,53],
 "classCorePath.html#a14d601287968907ef2791eaaf2bccb91":[1,0,437,61],
 "classCorePath.html#a16a920e278ed6fa43cbc4b110059708d":[1,0,437,3],
 "classCorePath.html#a1f745b21d3da1566127122a218be10f8":[1,0,437,55],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,438,9,4],
 "classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,438,9,1],
 "classCoreRef_1_1Rects.html#a1bb9b25c6a64ebe300ae82af5951103e":[1,0,438,9,0],
-"classCoreRef_1_1Rects.html#a2d213a0f6c0ae766b67549f8d0151233":[1,0,438,9,6],
-"classCoreRef_1_1Rects.html#a4d5ab247f8488c8cdd85e0d1d510834d":[1,0,438,9,3]
+"classCoreRef_1_1Rects.html#a2d213a0f6c0ae766b67549f8d0151233":[1,0,438,9,6]
 };

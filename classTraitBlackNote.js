@@ -1,5 +1,6 @@
 var classTraitBlackNote =
 [
+    [ "CanStackTo", "classTraitBlackNote.html#a31684e13d7711bd5f54a983372e8a68d", null ],
     [ "GetActDuration", "classTraitBlackNote.html#a66143f369cc056055bedfbf07d38a10a", null ],
     [ "BookType", "classTraitBlackNote.html#a4bd53f4648e4e99583600b2e140c9f83", null ],
     [ "CanStack", "classTraitBlackNote.html#a33df25327bc0b326502be3471a19a9b5", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"classCurveEffect.html#ae9e0987d000760780ea8c0dee5ca0af8":[1,0,457,5],
 "classCurveEffect.html#af99f4432517f8b98a85e0d89ebdfe078":[1,0,457,4],
 "classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135":[1,0,457,0],
 "classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135a24f61a4979dc619f0818897243ddb6c6":[1,0,457,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "classDSVRow.html":[1,0,515],
 "classDSVRow.html#a31776807fbe96d79a132fd421456646a":[1,0,515,4],
 "classDSVRow.html#a8f0c2f9110433e7b5ba875189da181b1":[1,0,515,2],
-"classDSVRow.html#a9929cfe2b18a76e9551fb5cb95dff257":[1,0,515,3],
-"classDSVRow.html#aaf4dae3198b3314fc836a8becc8df6c6":[1,0,515,5]
+"classDSVRow.html#a9929cfe2b18a76e9551fb5cb95dff257":[1,0,515,3]
 };

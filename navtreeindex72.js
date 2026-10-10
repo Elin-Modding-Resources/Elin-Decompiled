@@ -1,5 +1,6 @@
 var NAVTREEINDEX72 =
 {
+"classGameSetting_1_1EffectData.html#a36043b73d70691849a6c538381743cc7":[1,0,619,2,15],
 "classGameSetting_1_1EffectData.html#a47fd91b6edf86e92bf2b2dc7c38e5bd2":[1,0,619,2,13],
 "classGameSetting_1_1EffectData.html#a49218d9ed1a3fe5249a46a4743c42fe5":[1,0,619,2,5],
 "classGameSetting_1_1EffectData.html#a57320fd86547754f1598723d5f201c94":[1,0,619,2,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX72 =
 "classGenBounds.html#a2a04f9ca95e3faa4ba4d0d8b3a4990de":[1,0,622,5],
 "classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003":[1,0,622,6],
 "classGenBounds.html#a39e1ebea591891342ecc73ee3076bb8c":[1,0,622,1],
-"classGenBounds.html#a47c04dbce161e0b866a954888a2bb061":[1,0,622,7],
-"classGenBounds.html#a6004ead0830ca7d5ab4fd26b51476220":[1,0,622,18]
+"classGenBounds.html#a47c04dbce161e0b866a954888a2bb061":[1,0,622,7]
 };

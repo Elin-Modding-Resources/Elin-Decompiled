@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTrait.html#af1967dc797493c26375ce1f8f1f6e75e":[1,0,1519,94],
 "classTrait.html#af198baeac5df3a1a0efc771401772f0d":[1,0,1519,15],
 "classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf":[1,0,1519,183],
 "classTrait.html#af2cfd467256e84bf8e266705b6714af6":[1,0,1519,7],
@@ -237,17 +238,16 @@ var NAVTREEINDEX125 =
 "classTraitBitchDancer.html#aaff86ca2a1ba915a96df9dd919145bd8":[1,0,1565,0],
 "classTraitBitchDancer.html#abb15b7f0168a14d8acb7617e06963571":[1,0,1565,1],
 "classTraitBlackNote.html":[1,0,1567],
-"classTraitBlackNote.html#a33df25327bc0b326502be3471a19a9b5":[1,0,1567,2],
-"classTraitBlackNote.html#a4bd53f4648e4e99583600b2e140c9f83":[1,0,1567,1],
-"classTraitBlackNote.html#a66143f369cc056055bedfbf07d38a10a":[1,0,1567,0],
-"classTraitBlackNote.html#a852a4cda71d519121b4173a63c8ca82a":[1,0,1567,4],
-"classTraitBlackNote.html#a95be990c39fcef95d41d94023083a987":[1,0,1567,3],
-"classTraitBlackNote.html#aed04311a5a649fe9fd25321d69c47b3e":[1,0,1567,5],
+"classTraitBlackNote.html#a31684e13d7711bd5f54a983372e8a68d":[1,0,1567,0],
+"classTraitBlackNote.html#a33df25327bc0b326502be3471a19a9b5":[1,0,1567,3],
+"classTraitBlackNote.html#a4bd53f4648e4e99583600b2e140c9f83":[1,0,1567,2],
+"classTraitBlackNote.html#a66143f369cc056055bedfbf07d38a10a":[1,0,1567,1],
+"classTraitBlackNote.html#a852a4cda71d519121b4173a63c8ca82a":[1,0,1567,5],
+"classTraitBlackNote.html#a95be990c39fcef95d41d94023083a987":[1,0,1567,4],
+"classTraitBlackNote.html#aed04311a5a649fe9fd25321d69c47b3e":[1,0,1567,6],
 "classTraitBlanket.html":[1,0,1568],
 "classTraitBlanket.html#a53d27637cc556e3c125c466cc8ac652c":[1,0,1568,3],
 "classTraitBlanket.html#a782f100d552308d63b1ddac41ca4cf87":[1,0,1568,0],
 "classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1568,1],
-"classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1568,2],
-"classTraitBlanketColdproof.html":[1,0,1569],
-"classTraitBlanketFireproof.html":[1,0,1570]
+"classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1568,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTileMapElona.html#a49e671ed65b0e1190fdd02a3ae8da777":[1,0,1448,2],
 "classTileMapElona.html#a52cd769879119ed7960a1b287c85e076":[1,0,1448,1],
 "classTileRow.html":[1,0,1449],
 "classTileRow.html#a0169ed80d4cf6db68dbe0cfc6d3f4d9b":[1,0,1449,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTileTypeFenceClosed.html#ab1fa77eaa088f908a1976290e1d0b829":[1,0,1465,1],
 "classTileTypeFenceClosed.html#ade8fcabd8c974c3a87060f5b7e0e6c5c":[1,0,1465,0],
 "classTileTypeFenceClosed.html#ae453a633a0748cdb42f5fb2537847a56":[1,0,1465,2],
-"classTileTypeFloor.html":[1,0,1466],
-"classTileTypeFloor.html#a00ccb722a5c472f4e31ef05f2b9f336d":[1,0,1466,2]
+"classTileTypeFloor.html":[1,0,1466]
 };

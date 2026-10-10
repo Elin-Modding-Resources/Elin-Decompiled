@@ -1,5 +1,7 @@
 var NAVTREEINDEX127 =
 {
+"classTraitContainerPurse.html":[1,0,1623],
+"classTraitContainerPurse.html#a9c4a857406e55a4b88e6a2b1989e2c36":[1,0,1623,0],
 "classTraitContainerShared.html":[1,0,1624],
 "classTraitContainerShared.html#ad1c35637c320a062119c4a541ba3ec91":[1,0,1624,0],
 "classTraitContainerShop.html":[1,0,1625],
@@ -247,7 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitDoorSwingGrass.html":[1,0,1673],
 "classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1673,0],
 "classTraitDoorman__Fighter.html":[1,0,1669],
-"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1669,1],
-"classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1669,2],
-"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1669,0]
+"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1669,1]
 };

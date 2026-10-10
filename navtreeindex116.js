@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classSourceTactics_1_1Row.html#aa253a8f1cb580dc890859fb9ca9dc44b":[1,0,1328,0,2],
 "classSourceTactics_1_1Row.html#aa3431dec3066e835f8b67199a468cfa5":[1,0,1328,0,11],
 "classSourceTactics_1_1Row.html#aaca20ed08e1636cd4bd6edb8376af3d5":[1,0,1328,0,21],
 "classSourceTactics_1_1Row.html#aafcb448d3258f8b237e4455876afbcdd":[1,0,1328,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classSpatialInspector.html#adcec7e3aaa5b7313b9ba42987ad4e3ae":[1,0,1335,0],
 "classSpatialManager.html":[1,0,1336],
 "classSpatialManager.html#a15075004b4748e12c876388d05c9b166":[1,0,1336,12],
-"classSpatialManager.html#a34bd1b55d88a81b155de56893d5f8e74":[1,0,1336,1],
-"classSpatialManager.html#a425a6b8b8e4a330f5ea955d5f605d881":[1,0,1336,6]
+"classSpatialManager.html#a34bd1b55d88a81b155de56893d5f8e74":[1,0,1336,1]
 };

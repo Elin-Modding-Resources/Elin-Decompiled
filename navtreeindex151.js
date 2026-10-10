@@ -1,5 +1,7 @@
 var NAVTREEINDEX151 =
 {
+"classZone__Dungeon.html#a587320df847dfb64930fc14c6a21a499":[1,0,2292,4],
+"classZone__Dungeon.html#a5fe8ab15c2de66244d24a922f10a0564":[1,0,2292,18],
 "classZone__Dungeon.html#a7a803fd94070c4fafa2dc01e10d16028":[1,0,2292,13],
 "classZone__Dungeon.html#a89426432734a283e5165c7e89e9e3bf0":[1,0,2292,16],
 "classZone__Dungeon.html#a933a5e4c23a03e6862e90315b91a2035":[1,0,2292,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX151 =
 "classZone__Town.html#a563f2f2382e94fe5f17c487f4b9e6132":[1,0,2352,1],
 "classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25":[1,0,2352,4],
 "classZone__Town.html#ab522c0ae6fa3efe82885116b08a59797":[1,0,2352,0],
-"classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2352,5],
-"classZone__TruceGround.html":[1,0,2353],
-"classZone__TruceGround.html#acd95161ed33a202914ec10488724e5b0":[1,0,2353,0]
+"classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2352,5]
 };

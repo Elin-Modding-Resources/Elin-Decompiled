@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"classDSVRow.html#aaf4dae3198b3314fc836a8becc8df6c6":[1,0,515,5],
 "classDSVRow.html#abea881868b56d89bfda7235def77db04":[1,0,515,1],
 "classDSVRow_1_1Item.html":[1,0,515,0],
 "classDSVRow_1_1Item.html#a003bab314bf5d076edd21e17c44de9a3":[1,0,515,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "classDragItemCard_1_1DragInfo.html#a66ab05fdde5b3b5cce694069128e3845":[1,0,494,0,7],
 "classDragItemCard_1_1DragInfo.html#a6cdce183e30b3eef79c8f23e9e31fb61":[1,0,494,0,9],
 "classDragItemCard_1_1DragInfo.html#ade34e454eef147e1d2e53915a06955b1":[1,0,494,0,0],
-"classDramaActor.html":[1,0,495],
-"classDramaActor.html#a1546558468e3ad3f579138fcfd1f8e2e":[1,0,495,2]
+"classDramaActor.html":[1,0,495]
 };

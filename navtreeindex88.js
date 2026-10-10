@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"classListPeopleParty.html#ae0cc726d79e7ed7d7f0e0f472287d9ba":[1,0,946,6],
 "classListPeopleParty.html#aebb6099287ed4d3d9141f74431f81a77":[1,0,946,0],
 "classListPeopleRevive.html":[1,0,947],
 "classListPeopleRevive.html#a203c1c3a7446c73695de968c39447d95":[1,0,947,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX88 =
 "classMap.html#a25bafc20956f401cc2da5cc148894108":[1,0,960,87],
 "classMap.html#a27d795ab54d6422ef7539689e7bb68ac":[1,0,960,173],
 "classMap.html#a27e8449a4430875df1e1130e686eea9b":[1,0,960,167],
-"classMap.html#a28078ccefdbe996cd56f515b75f612aa":[1,0,960,120],
-"classMap.html#a284060766b12d79433bd1c5e427d037a":[1,0,960,137]
+"classMap.html#a28078ccefdbe996cd56f515b75f612aa":[1,0,960,120]
 };

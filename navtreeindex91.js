@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"classModGroup.html#a3c6d02830db2c3534341701c4580eac0":[1,0,988,2],
 "classModGroup.html#a50c5c608746ad508c5e8faa1d7cd03ad":[1,0,988,4],
 "classModGroup.html#a5762ff4ef44e1bf0d035848f2f3d67bc":[1,0,988,1],
 "classModGroup.html#a9e3d688f6c2174edca5ada968a909e7b":[1,0,988,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "classMosframe_1_1DynamicVScrollView.html#ac8c505bf44d30a57f832836aa0d9c0a4":[0,4,6,3,5],
 "classMosframe_1_1ScrollbarHandleSize.html":[0,4,6,4],
 "classMosframe_1_1ScrollbarHandleSize.html":[1,0,6,4],
-"classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[1,0,6,4,5],
-"classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[0,4,6,4,5]
+"classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[1,0,6,4,5]
 };

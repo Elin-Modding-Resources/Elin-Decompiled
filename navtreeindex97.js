@@ -1,5 +1,6 @@
 var NAVTREEINDEX97 =
 {
+"classPopItem.html":[1,0,1056],
 "classPopItem.html#a1124deefa90f17ee0066f47bc2e695af":[1,0,1056,5],
 "classPopItem.html#a1a4ac33b9ecbf0b6ab0f7cdb1cd3beb2":[1,0,1056,2],
 "classPopItem.html#a4c55e8f71796c1b98fbb08f4ef19206d":[1,0,1056,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX97 =
 "classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a354b226cf370a0b592c9287a70b800ab":[0,4,7,0,2,13],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a43096e93300b3b45967377384e9d7e66":[1,0,7,0,2,0],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a43096e93300b3b45967377384e9d7e66":[0,4,7,0,2,0],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a4cc750263b664960f3a54f86eb9d1ab9":[1,0,7,0,2,6],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a4cc750263b664960f3a54f86eb9d1ab9":[0,4,7,0,2,6]
+"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a4cc750263b664960f3a54f86eb9d1ab9":[1,0,7,0,2,6]
 };
