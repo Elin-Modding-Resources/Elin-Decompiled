@@ -42,10 +42,6 @@ public class Point : EClass
 
 	public static BaseGameScreen _screen;
 
-	private static List<Card> listCard = new List<Card>();
-
-	private static List<Chara> listChara = new List<Chara>();
-
 	public int index => x + z * map.Size;
 
 	public Cell cell => map.cells[x, z];
@@ -1056,7 +1052,7 @@ public class Point : EClass
 
 	public List<Card> ListCards(bool includeMasked = false)
 	{
-		listCard.Clear();
+		List<Card> list = new List<Card>();
 		bool flag = EClass.scene.actionMode != null && EClass.scene.actionMode.IsRoofEditMode();
 		if (detail != null)
 		{
@@ -1064,41 +1060,41 @@ public class Point : EClass
 			{
 				if (!thing.isHidden && (includeMasked || !thing.isMasked) && thing.isRoofItem == flag)
 				{
-					listCard.Add(thing);
+					list.Add(thing);
 				}
 			}
 			if (!flag)
 			{
 				foreach (Chara chara in detail.charas)
 				{
-					listCard.Add(chara);
+					list.Add(chara);
 				}
 			}
 		}
-		return listCard;
+		return list;
 	}
 
 	public List<Card> ListVisibleCards()
 	{
-		listCard.Clear();
+		List<Card> list = new List<Card>();
 		if (detail != null)
 		{
 			foreach (Thing thing in detail.things)
 			{
 				if (!thing.isHidden && !thing.isMasked && !thing.isRoofItem)
 				{
-					listCard.Add(thing);
+					list.Add(thing);
 				}
 			}
 			foreach (Chara chara in detail.charas)
 			{
 				if (EClass.pc.CanSee(chara))
 				{
-					listCard.Add(chara);
+					list.Add(chara);
 				}
 			}
 		}
-		return listCard;
+		return list;
 	}
 
 	public Card FindAttackTarget()
@@ -1160,52 +1156,52 @@ public class Point : EClass
 
 	public List<Card> ListThings<T>(bool onlyInstalled = true) where T : Trait
 	{
-		listCard.Clear();
+		List<Card> list = new List<Card>();
 		if (detail != null)
 		{
 			foreach (Thing thing in detail.things)
 			{
 				if (!thing.isHidden && !thing.isRoofItem && !thing.isMasked && (!onlyInstalled || thing.IsInstalled) && thing.trait is T)
 				{
-					listCard.Add(thing);
+					list.Add(thing);
 				}
 			}
 		}
-		return listCard;
+		return list;
 	}
 
 	public List<Chara> ListCharas()
 	{
-		listChara.Clear();
+		List<Chara> list = new List<Chara>();
 		if (detail != null)
 		{
 			foreach (Chara chara in detail.charas)
 			{
-				listChara.Add(chara);
+				list.Add(chara);
 			}
 		}
-		return listChara;
+		return list;
 	}
 
 	public List<Chara> ListVisibleCharas()
 	{
-		listChara.Clear();
+		List<Chara> list = new List<Chara>();
 		if (detail != null)
 		{
 			foreach (Chara chara in detail.charas)
 			{
 				if (EClass.pc.CanSee(chara))
 				{
-					listChara.Add(chara);
+					list.Add(chara);
 				}
 			}
 		}
-		return listChara;
+		return list;
 	}
 
 	public List<Chara> ListCharasInNeighbor(Func<Chara, bool> func)
 	{
-		listChara.Clear();
+		List<Chara> list = new List<Chara>();
 		ForeachNeighbor(delegate(Point p)
 		{
 			if (p.detail == null)
@@ -1216,24 +1212,24 @@ public class Point : EClass
 			{
 				if (func(chara))
 				{
-					listChara.Add(chara);
+					list.Add(chara);
 				}
 			}
 		});
-		return listChara;
+		return list;
 	}
 
 	public List<Chara> ListCharasInRadius(Chara cc, int dist, Func<Chara, bool> func, bool onlyVisible = true)
 	{
-		listChara.Clear();
+		List<Chara> list = new List<Chara>();
 		foreach (Chara chara in EClass._map.charas)
 		{
 			if (func(chara) && chara.Dist(cc) < dist && (!onlyVisible || Los.IsVisible(chara, cc)))
 			{
-				listChara.Add(chara);
+				list.Add(chara);
 			}
 		}
-		return listChara;
+		return list;
 	}
 
 	public T GetInstalled<T>() where T : Trait

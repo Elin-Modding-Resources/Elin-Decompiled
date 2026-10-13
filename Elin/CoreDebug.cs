@@ -1045,6 +1045,10 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
+			for (int j = 0; j < 1000; j++)
+			{
+				EClass.pc.ModExp(241, 1000);
+			}
 			string text2 = new string[4] { "エターナルフォースブリザード", "Eternal Force Blizzard", "ぬるぽ", "Null Pointer" }.RandomItem();
 			EClass.pc.renderer.Say("| " + text2 + " ");
 			return;

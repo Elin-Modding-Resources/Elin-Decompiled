@@ -1027,7 +1027,7 @@ public class Element : EClass
 
 	public void CheckLevelBonus(ElementContainer owner, UINote n = null)
 	{
-		if (owner == null || source.levelBonus.IsEmpty())
+		if (owner == null || source.levelBonus.IsEmpty() || (!owner.HasBase(1405) && id == 241))
 		{
 			return;
 		}

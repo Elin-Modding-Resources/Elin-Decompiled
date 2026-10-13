@@ -2,7 +2,7 @@ public class TraitDoorBig : TraitDoor
 {
 	public override int height => 2;
 
-	public override string idSound => "door3";
+	public override string idSound => GetParam(1);
 
 	public override void ToggleDoor(bool sound = true, bool refresh = true)
 	{

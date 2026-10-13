@@ -16,7 +16,7 @@ public class ActWhirlwind : Ability
 		List<Chara> list = Act.CC.pos.ListCharasInNeighbor((Chara c) => !c.pos.Equals(Act.CC.pos));
 		Act.CC.PlaySound("ab_shred2");
 		Act.CC.Say("abWhirlwind", Act.CC);
-		foreach (Chara item in list.Copy())
+		foreach (Chara item in list)
 		{
 			Act.TC = item;
 			if (Act.CC.IsAliveInCurrentZone && Act.TC.IsAliveInCurrentZone)

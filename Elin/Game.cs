@@ -500,6 +500,7 @@ public class Game : EClass
 				}
 			}
 		});
+		version.IsBelow(0, 23, 356);
 		if (version.IsBelow(0, 23, 354))
 		{
 			FixElement(EClass.pc, 1421);

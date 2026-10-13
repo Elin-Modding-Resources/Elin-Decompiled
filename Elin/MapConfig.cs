@@ -47,6 +47,9 @@ public class MapConfig : EClass
 	public bool reverseRoof;
 
 	[JsonProperty]
+	public bool shufflePL;
+
+	[JsonProperty]
 	public Weather.Condition fixedCondition = Weather.Condition.None;
 
 	[JsonProperty]

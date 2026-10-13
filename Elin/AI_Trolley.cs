@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class AI_Trolley : AIAct
@@ -96,7 +95,7 @@ public class AI_Trolley : AIAct
 				}
 				EClass.Sound.Stop(idSound, Mathf.Max(1f, trolley.FadeDuration));
 			}
-			foreach (Chara item in point.ListCharas().ToList())
+			foreach (Chara item in point.ListCharas())
 			{
 				owner.Kick(item, ignoreSelf: true, karmaLoss: false);
 			}

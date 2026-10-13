@@ -673,7 +673,7 @@ public class Recipe : EClass
 			EClass._map.SetBlock(pos.x, pos.z, mat, ramp, dir);
 			if (tileType.IsBlockPass && pos.HasChara)
 			{
-				foreach (Chara item in pos.ListCharas().Copy())
+				foreach (Chara item in pos.ListCharas())
 				{
 					chara.Kick(item, ignoreSelf: false, karmaLoss: false);
 				}

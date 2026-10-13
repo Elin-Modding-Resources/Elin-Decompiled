@@ -488,7 +488,7 @@ public class ActPlan : EClass
 		}
 		Point _pos = new Point(pos);
 		_ = target.pos.cell;
-		List<Card> items = _pos.ListCards();
+		List<Card> cards = _pos.ListCards();
 		bool isKey = input == ActInput.Key;
 		altAction = (EInput.isShiftDown && !EInput.isAltDown && !isKey) || input == ActInput.AllAction;
 		_canInteractNeighbor = dist == 0 || (dist == 1 && cc.CanInteractTo(_pos));
@@ -526,7 +526,7 @@ public class ActPlan : EClass
 					}, null, CursorSystem.MoveZone, 1, isHostileAct: false, localAct: false);
 				}
 			}
-			items.ForeachReverse(delegate(Card _c)
+			cards.ForeachReverse(delegate(Card _c)
 			{
 				Chara c = _c.Chara;
 				if (c != null && !c.IsPC && EClass.pc.CanSee(c))
@@ -626,7 +626,7 @@ public class ActPlan : EClass
 			}
 			if (IsSelfOrNeighbor)
 			{
-				items.ForeachReverse(delegate(Card _c)
+				cards.ForeachReverse(delegate(Card _c)
 				{
 					Chara c = _c.Chara;
 					if (c != null && (c.mimicry == null || c.mimicry.IsChara || c.IsPCParty))
@@ -868,10 +868,9 @@ public class ActPlan : EClass
 					}
 					else
 					{
-						IList<Card> _cards = items.Copy();
 						TrySetAct("actPickAll", delegate
 						{
-							foreach (Card item2 in _cards)
+							foreach (Card item2 in cards)
 							{
 								if (item2.isThing && item2.placeState == PlaceState.roaming)
 								{
@@ -939,7 +938,7 @@ public class ActPlan : EClass
 			{
 				return;
 			}
-			items.ForeachReverse(delegate(Card _c)
+			cards.ForeachReverse(delegate(Card _c)
 			{
 				if (_c.isThing && _c.trait.CanBeAttacked && !(_c.trait is TraitTrainingDummy))
 				{

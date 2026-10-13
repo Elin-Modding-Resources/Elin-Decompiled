@@ -816,7 +816,7 @@ public class Thing : Card
 			}
 			else if (trait.CanOpenContainer)
 			{
-				text += "empty".lang();
+				text = text + " " + "empty".lang();
 			}
 		}
 		if ((trait is TraitRoomPlate || trait is TraitHouseBoard) && pos.IsValid)

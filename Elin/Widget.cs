@@ -593,11 +593,26 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 
 	public void InstantiateDeco(SkinDeco deco)
 	{
-		SkinDecoActor skinDecoActor = (deco.actor = Util.Instantiate<SkinDecoActor>("UI/Widget/SkinDecoActor", base.transform));
+		SkinDecoActor skinDecoActor = Util.Instantiate<SkinDecoActor>("UI/Widget/SkinDecoActor", base.transform);
+		deco.actor = skinDecoActor;
 		skinDecoActor.owner = deco;
-		skinDecoActor.image.sprite = ResourceCache.Load<Sprite>("Media/Graphics/Deco/deco" + deco.id);
+		skinDecoActor.image.sprite = GetSprite();
 		skinDecoActor.Rect().anchoredPosition = new Vector2(deco.x, deco.y);
-		skinDecoActor.Refresh();
+		skinDecoActor.Refresh(editing: false);
+		Sprite GetSprite()
+		{
+			if (!deco.name.IsEmpty())
+			{
+				foreach (Sprite customSprite in LayerSkinDeco.GetCustomSprites())
+				{
+					if (customSprite.name == deco.name)
+					{
+						return customSprite;
+					}
+				}
+			}
+			return ResourceCache.Load<Sprite>("Media/Graphics/Deco/deco" + deco.id);
+		}
 	}
 
 	public void AddDeco(SkinDeco deco)

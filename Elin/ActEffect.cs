@@ -213,7 +213,7 @@ public class ActEffect : EClass
 			{
 				EClass._map.TryShatter(p, 911, power, CC);
 			}
-			foreach (Card item in p.ListCards().ToList())
+			foreach (Card item in p.ListCards())
 			{
 				Card c = item;
 				if ((!c.isChara && !c.trait.CanBeAttacked) || (c.IsMultisize && item == CC) || (c.isChara && (c.Chara.host == CC || c.Chara.parasite == CC || c.Chara.ride == CC)))
@@ -1087,7 +1087,7 @@ public class ActEffect : EClass
 			return;
 		}
 		}
-		List<Card> list11 = tp.ListCards().ToList();
+		List<Card> list11 = tp.ListCards();
 		list11.Reverse();
 		if (list11.Contains(CC))
 		{

@@ -157,6 +157,13 @@ public class LayerEditPlaylist : ELayer
 					itemsNight.Add(bgms[item2]);
 				}
 			}
+			UIButton b = null;
+			b = windows[0].AddBottomButton(Text(), delegate
+			{
+				SE.Tab();
+				ELayer._map.config.shufflePL = !ELayer._map.config.shufflePL;
+				b.mainText.SetText(Text());
+			});
 		}
 		else
 		{
@@ -168,6 +175,10 @@ public class LayerEditPlaylist : ELayer
 		foreach (ListOwner owner in multi.owners)
 		{
 			owner.OnSwitchContent();
+		}
+		static string Text()
+		{
+			return "shufflePL".lang() + ": " + (ELayer._map.config.shufflePL ? "on" : "off").lang();
 		}
 	}
 

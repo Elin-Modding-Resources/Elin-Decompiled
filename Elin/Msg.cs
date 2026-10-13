@@ -122,7 +122,7 @@ public class Msg : EClass
 			currentColor = colors.Default;
 			return "";
 		}
-		ToUpperFirst(text);
+		text = text.ToSentenceCase();
 		if ((bool)feed)
 		{
 			feed.System(text);

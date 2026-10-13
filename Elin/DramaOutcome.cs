@@ -508,7 +508,7 @@ public class DramaOutcome : EMono
 		Chara chara = EMono.game.cards.globalCharas.Find("farris");
 		if (chara != null)
 		{
-			chara.ability.Add(6754, 50, pt: false);
+			chara.ability.Add(6754, 50, pt: false, permanent: true);
 			Msg.Say("learnSkill", chara.NameBraced, EMono.sources.elements.map[6754].GetName());
 		}
 	}

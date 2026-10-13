@@ -57,12 +57,26 @@ public class ElementContainerCard : ElementContainer
 			TryLearn(6720, 1657, 0);
 			TryLearn(6450, 132, 5);
 			TryLearn(6603, 6020, 20);
+			if (HasBase(1405))
+			{
+				TryLearn(6750, 241, 3);
+				TryLearn(6752, 241, 8);
+				TryLearn(6754, 241, 25);
+				TryLearn(6753, 241, 36);
+			}
 		}
 		void TryLearn(int eleAction, int reqEle, int lqlv)
 		{
-			if (!HasBase(eleAction) && HasBase(reqEle) && GetElement(reqEle).ValueWithoutLink >= lqlv)
+			if (HasBase(eleAction) || !HasBase(reqEle) || GetElement(reqEle).ValueWithoutLink < lqlv)
 			{
-				SetBase(eleAction, 1);
+				if (HasBase(eleAction) && HasBase(reqEle) && GetElement(reqEle).ValueWithoutLink >= lqlv)
+				{
+					GetElement(eleAction).vPotential = 1;
+				}
+			}
+			else
+			{
+				SetBase(eleAction, 1, 1);
 				if (EClass.core.IsGameStarted)
 				{
 					if (owner.IsPC)

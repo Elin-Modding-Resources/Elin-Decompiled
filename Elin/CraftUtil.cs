@@ -391,20 +391,20 @@ public class CraftUtil : EClass
 		}
 		if (!noMix)
 		{
-			foreach (Element value2 in product.elements.dict.Values)
+			foreach (Element item in product.elements.dict.Values.ToList())
 			{
-				int id = value2.id;
-				if ((uint)(id - 914) > 1u && value2.Value >= 0 && (value2.HasTag("noInherit") || IsValidTrait(value2)))
+				int id = item.id;
+				if ((uint)(id - 914) > 1u && item.Value >= 0 && (item.HasTag("noInherit") || IsValidTrait(item)))
 				{
-					product.elements.SetTo(value2.id, 0);
+					product.elements.SetTo(item.id, 0);
 				}
 			}
 		}
 		if (product.HasCraftBonusTrait())
 		{
-			foreach (Element item in product.ListCraftBonusTraits())
+			foreach (Element item2 in product.ListCraftBonusTraits())
 			{
-				product.elements.ModBase(item.id, item.Value);
+				product.elements.ModBase(item2.id, item2.Value);
 			}
 		}
 		if (isDrink)
@@ -549,13 +549,13 @@ public class CraftUtil : EClass
 		{
 			if (t != null)
 			{
-				foreach (Element value3 in t.elements.dict.Values)
+				foreach (Element value2 in t.elements.dict.Values)
 				{
-					if (IsValidTrait(value3) && (!noMix || value3.id == 2))
+					if (IsValidTrait(value2) && (!noMix || value2.id == 2))
 					{
-						if (isFoodOrDrink && value3.IsFoodTraitMain)
+						if (isFoodOrDrink && value2.IsFoodTraitMain)
 						{
-							int num5 = value3.Value;
+							int num5 = value2.Value;
 							if (product.id == "lunch_dystopia")
 							{
 								num5 *= -1;
@@ -564,14 +564,14 @@ public class CraftUtil : EClass
 							{
 								num5 = 500;
 							}
-							product.elements.ModBase(value3.id, num5);
+							product.elements.ModBase(value2.id, num5);
 						}
 						else
 						{
-							int num6 = product.elements.Base(value3.id);
-							if ((num6 <= 0 && value3.Value < 0 && value3.Value < num6) || (value3.Value > 0 && value3.Value > num6))
+							int num6 = product.elements.Base(value2.id);
+							if ((num6 <= 0 && value2.Value < 0 && value2.Value < num6) || (value2.Value > 0 && value2.Value > num6))
 							{
-								product.elements.SetTo(value3.id, value3.Value);
+								product.elements.SetTo(value2.id, value2.Value);
 							}
 						}
 					}

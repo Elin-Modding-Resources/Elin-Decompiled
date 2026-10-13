@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class LayerSkinDeco : ELayer
@@ -7,11 +9,34 @@ public class LayerSkinDeco : ELayer
 	[NonSerialized]
 	public Widget widget;
 
+	public static List<Sprite> customSprites;
+
 	public Transform widgetHolder;
 
 	public List<SkinDeco> decos => widget.config.skin.decos;
 
 	public SkinConfig cfg => widget.config.skin;
+
+	public static List<Sprite> GetCustomSprites()
+	{
+		if (customSprites == null)
+		{
+			customSprites = new List<Sprite>();
+			string[] files = Directory.GetFiles(CorePath.custom + "Deco");
+			foreach (string text in files)
+			{
+				FileInfo fileInfo = new FileInfo(text);
+				if (fileInfo.Extension == ".png")
+				{
+					Texture2D texture2D = IO.LoadPNG(text, FilterMode.Bilinear);
+					Sprite sprite = Sprite.Create(texture2D, new Rect(0f, 0f, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+					sprite.name = "_" + fileInfo.Name;
+					customSprites.Add(sprite);
+				}
+			}
+		}
+		return customSprites;
+	}
 
 	public override void OnInit()
 	{
@@ -105,7 +130,15 @@ public class LayerSkinDeco : ELayer
 							sy = 100,
 							color = Color.white
 						};
-						skinDeco.id = int.Parse(a.name.Remove(0, 4));
+						if (a.name.StartsWith("_"))
+						{
+							skinDeco.name = a.name;
+							skinDeco.id = 0;
+						}
+						else
+						{
+							skinDeco.id = int.Parse(a.name.Remove(0, 4));
+						}
 						widget.AddDeco(skinDeco);
 						SkinDecoActor actor = skinDeco.actor;
 						Activate(actor);
@@ -114,10 +147,9 @@ public class LayerSkinDeco : ELayer
 						m.Hide();
 					}
 				};
-				Sprite[] array = Resources.LoadAll<Sprite>("Media/Graphics/Deco/");
-				foreach (Sprite o in array)
+				foreach (Sprite item in Resources.LoadAll<Sprite>("Media/Graphics/Deco/").Concat(GetCustomSprites()))
 				{
-					uIList.Add(o);
+					uIList.Add(item);
 				}
 				uIList.Refresh();
 			}
@@ -142,6 +174,10 @@ public class LayerSkinDeco : ELayer
 		uIDragPanel.target = actor.Rect();
 		uIDragPanel.bound = actor.Rect();
 		uIDragPanel.clamp = false;
+		foreach (SkinDeco deco in decos)
+		{
+			deco.actor?.Refresh();
+		}
 	}
 
 	public override void OnKill()
@@ -156,7 +192,7 @@ public class LayerSkinDeco : ELayer
 			actor.transform.SetParent(widget.transform, worldPositionStays: true);
 			deco.x = (int)actor.Rect().anchoredPosition.x;
 			deco.y = (int)actor.Rect().anchoredPosition.y;
-			actor.Refresh();
+			actor.Refresh(editing: false);
 		}
 	}
 }

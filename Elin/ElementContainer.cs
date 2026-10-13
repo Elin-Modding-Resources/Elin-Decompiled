@@ -265,6 +265,11 @@ public class ElementContainer : EClass
 	public void Learn(int ele, int v = 1)
 	{
 		ModBase(ele, v);
+		Element element = GetElement(ele);
+		if (element is Ability && !element.PotentialAsStock)
+		{
+			element.vPotential = 1;
+		}
 		OnLearn(ele);
 	}
 

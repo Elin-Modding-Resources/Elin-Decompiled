@@ -3484,7 +3484,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
-		list.Copy().ForeachReverse(delegate(Chara c)
+		list.ForeachReverse(delegate(Chara c)
 		{
 			if ((trait is TraitSnitch && c.IsPCFactionOrMinion) || (!c.ai.IsMoveAI && !c.IsPC && c.trait.CanBePushed && c != this && !c.noMove && (!EClass._zone.IsRegion || c.IsPCFactionOrMinion)))
 			{

@@ -12,7 +12,7 @@ public class AI_Shear : AI_TargetCard
 	{
 		string[] list = Lang.GetList("fur");
 		string text = list[Mathf.Clamp(target.c_fur / 10, 0, list.Length - 1)];
-		return "AI_Shear".lang() + "(" + text + ")";
+		return "AI_Shear".lang() + " (" + text + ")";
 	}
 
 	public override bool IsValidTC(Card c)

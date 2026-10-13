@@ -1036,18 +1036,32 @@ public class Map : MapBounds, IPathfindGrid
 	{
 		ForeachSphere(x, z, radius, delegate(Point p)
 		{
-			List<Card> list = p.ListCards();
-			if (recalculate)
+			CellDetail detail = p.detail;
+			if (detail == null)
 			{
-				foreach (Card item in list)
-				{
-					item.RecalculateFOV();
-				}
 				return;
 			}
-			foreach (Card item2 in list)
+			foreach (Thing thing in detail.things)
 			{
-				item2.CalculateFOV();
+				if (recalculate)
+				{
+					thing.RecalculateFOV();
+				}
+				else
+				{
+					thing.CalculateFOV();
+				}
+			}
+			foreach (Chara chara in detail.charas)
+			{
+				if (recalculate)
+				{
+					chara.RecalculateFOV();
+				}
+				else
+				{
+					chara.CalculateFOV();
+				}
 			}
 		});
 	}

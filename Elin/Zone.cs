@@ -3307,6 +3307,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			map.plDay = CreatePlaylist(ref map._plDay, EClass.Sound.GetPlaylist(IDPlayList));
 		}
+		map.plDay.shuffle = EClass._map.config.shufflePL;
 	}
 
 	public void ResetPlaylist()

@@ -161,7 +161,7 @@ public class CharaAbility : EClass
 		}
 	}
 
-	public void Add(int id, int chance, bool pt)
+	public void Add(int id, int chance, bool pt, bool permanent = false)
 	{
 		if (owner._listAbility == null)
 		{
@@ -177,7 +177,14 @@ public class CharaAbility : EClass
 			}
 			else if (!(element is Spell))
 			{
-				element.vPotential = 0;
+				if (element.vPotential < 0)
+				{
+					element.vPotential = 0;
+				}
+				if (element.vPotential <= 0 && permanent)
+				{
+					element.vPotential = 1;
+				}
 			}
 		}
 		Refresh();
@@ -197,13 +204,13 @@ public class CharaAbility : EClass
 		Refresh();
 	}
 
-	public void Remove(int id)
+	public void Remove(int id, bool permanent = false)
 	{
 		owner._listAbility.Remove(id);
 		if (owner.IsPC && owner.HasElement(id) && owner._listAbility.IndexOf(id) == -1)
 		{
 			Element element = EClass.pc.elements.GetElement(id);
-			if (!(element is Spell))
+			if (!(element is Spell) && (permanent || element.vPotential <= 0))
 			{
 				element.vPotential = -1;
 			}

@@ -74,7 +74,7 @@ public class AM_Deconstruct : AM_BaseTileSelect
 		List<Card> list = point.ListCards();
 		int num = 0;
 		list.Reverse();
-		foreach (Card item in list.Copy())
+		foreach (Card item in list)
 		{
 			if ((!EClass.debug.ignoreBuildRule && (!item.isThing || !item.trait.CanPutAway)) || (ignoreInstalled && item.IsInstalled) || item.IsPCParty)
 			{
