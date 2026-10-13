@@ -9,7 +9,7 @@ public class SkinDecoActor : MonoBehaviour
 
 	public Shadow shadow;
 
-	public void Refresh()
+	public void Refresh(bool editing = true)
 	{
 		image.SetNativeSize();
 		Vector2 sizeDelta = this.Rect().sizeDelta;
@@ -21,7 +21,11 @@ public class SkinDecoActor : MonoBehaviour
 		shadow.effectDistance = new Vector2(owner.reverse ? (-3) : 3, -3f);
 		if (owner.bottom)
 		{
-			base.transform.SetSiblingIndex(1);
+			base.transform.SetSiblingIndex(editing ? 1 : 0);
+		}
+		else
+		{
+			base.transform.SetSiblingIndex(base.transform.childCount - 1);
 		}
 	}
 }

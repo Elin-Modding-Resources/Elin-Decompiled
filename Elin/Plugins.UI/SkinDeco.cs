@@ -10,6 +10,9 @@ public class SkinDeco
 	[JsonProperty]
 	public int[] ints = new int[9];
 
+	[JsonProperty]
+	public string name;
+
 	public BitArray32 bits;
 
 	public int id
