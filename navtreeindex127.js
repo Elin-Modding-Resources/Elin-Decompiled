@@ -1,5 +1,8 @@
 var NAVTREEINDEX127 =
 {
+"classTraitContainerCurrency.html#a20aecfb494ee77aaa8b2f1e6f02f8ded":[1,0,1622,1],
+"classTraitContainerCurrency.html#a9a9f5a71c54e46d2aa9a9f2395ce5290":[1,0,1622,2],
+"classTraitContainerCurrency.html#ac5d783d294fc8c6ea1df54dd5f86cdb9":[1,0,1622,0],
 "classTraitContainerPurse.html":[1,0,1623],
 "classTraitContainerPurse.html#a9c4a857406e55a4b88e6a2b1989e2c36":[1,0,1623,0],
 "classTraitContainerShared.html":[1,0,1624],
@@ -246,8 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitDoorSwing.html#ab03d902cf8b1d11252ef9038eacd7f1d":[1,0,1672,1],
 "classTraitDoorSwing.html#aca0158988369ad823267b50e84e975c1":[1,0,1672,3],
 "classTraitDoorSwing.html#ad93b92fd8e8cad28f6a870398bf54f2b":[1,0,1672,0],
-"classTraitDoorSwingGrass.html":[1,0,1673],
-"classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1673,0],
-"classTraitDoorman__Fighter.html":[1,0,1669],
-"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1669,1]
+"classTraitDoorSwingGrass.html":[1,0,1673]
 };

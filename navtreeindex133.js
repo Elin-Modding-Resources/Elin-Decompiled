@@ -1,5 +1,8 @@
 var NAVTREEINDEX133 =
 {
+"classTraitSeed.html#a3aa16e52587f4375ef3bad7d638a09a5":[1,0,1963,0],
+"classTraitSeed.html#a4c8fc307a12d9be529fdcc916a6fa541":[1,0,1963,12],
+"classTraitSeed.html#a4e85436bb9800c6440030b79204601d9":[1,0,1963,6],
 "classTraitSeed.html#a502a7261aa65ae535c1d8299f74d353e":[1,0,1963,17],
 "classTraitSeed.html#a61ae35f26f93dc15995f201e669f1f56":[1,0,1963,14],
 "classTraitSeed.html#a846200a872efeb8f6e2d71fbf026a608":[1,0,1963,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX133 =
 "classTraitTape.html#ada3c7e68235c5b4d8b97976003acbe9e":[1,0,2031,1],
 "classTraitTaxChest.html":[1,0,2032],
 "classTraitTaxChest.html#a58e868a8ae2bce3c5d6dc3ab233ea3d5":[1,0,2032,1],
-"classTraitTaxChest.html#aac0f885c3e5e65646fa30f6c7f17d01b":[1,0,2032,0],
-"classTraitTeleporter.html":[1,0,2033],
-"classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422":[1,0,2033,0],
-"classTraitTeleporter.html#a14bb9eb09bdd5f58ade2ec65c2788a9c":[1,0,2033,10]
+"classTraitTaxChest.html#aac0f885c3e5e65646fa30f6c7f17d01b":[1,0,2032,0]
 };

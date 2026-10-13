@@ -1,5 +1,9 @@
 var NAVTREEINDEX90 =
 {
+"classMapGenVariation.html#aefbddb1b9b0fd90166345d8da35d9a0b":[1,0,967,3],
+"classMapHeight.html":[1,0,968],
+"classMapHeight.html#a200fa2fca5ba34ce90ee25a880b0193f":[1,0,968,1],
+"classMapHeight.html#a77738537192080f3d554c62f2e0ef295":[1,0,968,0],
 "classMapHeight.html#a894e94fec37ec029fd53caaebc722ca3":[1,0,968,3],
 "classMapHeight.html#ab07576fff5b64ee0f6a2a609151938be":[1,0,968,4],
 "classMapHeight.html#ad441ca2c0673d03738ffefbf2522a66c":[1,0,968,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX90 =
 "classMissileHomingEffect.html#af75e3096bba708fc19beb0d6fb6a5e56":[1,0,985,31],
 "classMissileHomingEffect.html#afe40bf47b0a96fd0824b6cfc8f0c48f7":[1,0,985,30],
 "classMissileHomingEffect.html#afe57cb9cda842268a6e23693b75ae8c4":[1,0,985,27],
-"classMixedFoodData.html":[1,0,986],
-"classMixedFoodData.html#aeff83c350438ae62a0196f68ce5d148e":[1,0,986,0],
-"classModGroup.html":[1,0,988],
-"classModGroup.html#a2659810378144937e0b26089543c3d26":[1,0,988,5],
-"classModGroup.html#a2c7c4e5f148b868bca1a97da619baef6":[1,0,988,3]
+"classMixedFoodData.html":[1,0,986]
 };

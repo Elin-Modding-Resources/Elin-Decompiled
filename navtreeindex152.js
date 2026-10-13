@@ -1,5 +1,8 @@
 var NAVTREEINDEX152 =
 {
+"classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25":[1,0,2352,4],
+"classZone__Town.html#ab522c0ae6fa3efe82885116b08a59797":[1,0,2352,0],
+"classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2352,5],
 "classZone__TruceGround.html":[1,0,2353],
 "classZone__TruceGround.html#acd95161ed33a202914ec10488724e5b0":[1,0,2353,0],
 "classZone__TruceGround.html#ae2d8ad9a977834fd27063071a4c3653a":[1,0,2353,1],
@@ -68,8 +71,8 @@ var NAVTREEINDEX152 =
 "classZone__Yowyn.html#adb44b596d5aec8a6f5de868d95c0ecc8":[1,0,2363,0],
 "classZone__Yowyn.html#ae06b0b6751f31fb892c2d0af76691405":[1,0,2363,1],
 "classZone__Yowyn.html#ae0cb126cce3f9edf5e6644e2167542bc":[1,0,2363,2],
-"classelona_1_1MsgPlain.html":[0,4,4,0],
 "classelona_1_1MsgPlain.html":[1,0,4,0],
+"classelona_1_1MsgPlain.html":[0,4,4,0],
 "classes.html":[1,1],
 "dir_0371084ab70e3b075313a71a837c9b7c.html":[2,0,0,3,5],
 "dir_0cd198719780437fea113b819007e81e.html":[2,0,0,2,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX152 =
 "interfaceIDragParent.html#afaebc90d9389a33cabfbc0be7f0a720a":[1,0,754,0],
 "interfaceIGlobalValue.html":[1,0,755],
 "interfaceIGlobalValue.html#a5bcca28f13ae08915eb0a54186b3e572":[1,0,755,0],
-"interfaceIInspect.html":[1,0,756],
-"interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f":[1,0,756,1],
-"interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c":[1,0,756,2],
-"interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e":[1,0,756,5]
+"interfaceIInspect.html":[1,0,756]
 };

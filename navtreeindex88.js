@@ -1,5 +1,8 @@
 var NAVTREEINDEX88 =
 {
+"classListPeopleParty.html#a8ef19e75b3cbfd04f78b541ddf44daae":[1,0,946,1],
+"classListPeopleParty.html#a941df1cccae7ff487092b4d2cdbc4a27":[1,0,946,2],
+"classListPeopleParty.html#a98c4c5ad124023e0f6ebbfacf9eee011":[1,0,946,3],
 "classListPeopleParty.html#ae0cc726d79e7ed7d7f0e0f472287d9ba":[1,0,946,6],
 "classListPeopleParty.html#aebb6099287ed4d3d9141f74431f81a77":[1,0,946,0],
 "classListPeopleRevive.html":[1,0,947],
@@ -246,8 +249,5 @@ var NAVTREEINDEX88 =
 "classMap.html#a23ce45b95f1ea57c3c73161608b04806":[1,0,960,122],
 "classMap.html#a23d207ec7157765b32f746e583ae9aac":[1,0,960,19],
 "classMap.html#a24d3fee4afaf93534658fecee5237d5c":[1,0,960,92],
-"classMap.html#a25bafc20956f401cc2da5cc148894108":[1,0,960,87],
-"classMap.html#a27d795ab54d6422ef7539689e7bb68ac":[1,0,960,173],
-"classMap.html#a27e8449a4430875df1e1130e686eea9b":[1,0,960,167],
-"classMap.html#a28078ccefdbe996cd56f515b75f612aa":[1,0,960,120]
+"classMap.html#a25bafc20956f401cc2da5cc148894108":[1,0,960,87]
 };

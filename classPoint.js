@@ -77,8 +77,6 @@ var classPoint =
     [ "_screen", "classPoint.html#a95f35cc7f49a3c8059d1be746d7d0116", null ],
     [ "fixedPos", "classPoint.html#aedb465e9f29ea5ef027f6dfa613b91dc", null ],
     [ "Invalid", "classPoint.html#a0df46e81ce85121a6dc87a8af523c0b4", null ],
-    [ "listCard", "classPoint.html#ae18ab9258abf724bee55824bc5f64fdd", null ],
-    [ "listChara", "classPoint.html#a9eb8d14c902e4c1e0c2e91076995a366", null ],
     [ "map", "classPoint.html#afdd73040f1cdad07157e653686acad1d", null ],
     [ "shared", "classPoint.html#a090d94a6a4141358d605e78ba8cb56fa", null ],
     [ "shared2", "classPoint.html#a2db9fb5ae54d834b2f148bb803072a3e", null ],

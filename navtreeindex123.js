@@ -1,5 +1,8 @@
 var NAVTREEINDEX123 =
 {
+"classTileTypeFenceClosed.html#ade8fcabd8c974c3a87060f5b7e0e6c5c":[1,0,1465,0],
+"classTileTypeFenceClosed.html#ae453a633a0748cdb42f5fb2537847a56":[1,0,1465,2],
+"classTileTypeFloor.html":[1,0,1466],
 "classTileTypeFloor.html#a00ccb722a5c472f4e31ef05f2b9f336d":[1,0,1466,2],
 "classTileTypeFloor.html#a1ac9a3179f92ae5f85884942e10c1304":[1,0,1466,3],
 "classTileTypeFloor.html#a542b7a0a47ce9e409a8299467d7916b6":[1,0,1466,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX123 =
 "classTooltipManager.html#a7e5c15fb299cd8a55190ab10c90b4e44":[1,0,1518,3],
 "classTooltipManager.html#a827860af7a7443920bed563e47b8a475":[1,0,1518,7],
 "classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f":[1,0,1518,6],
-"classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d":[1,0,1518,1],
-"classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb":[1,0,1518,8],
-"classTooltipManager.html#adca56be292c3fbc644ec72267f02a5fb":[1,0,1518,5],
-"classTrait.html":[1,0,1519]
+"classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d":[1,0,1518,1]
 };

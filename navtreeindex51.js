@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a":[1,0,312,5],
 "classColorComparer.html":[1,0,313],
 "classColorComparer.html#aaeec063da23e0b3cd3e7e091fa86ddd2":[1,0,313,0],
 "classColorComparer.html#abbde65daa5c19fce35ec0ab2b6391a3c":[1,0,313,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "classConInsane.html#a7b0bd17d749ff8c3d0664f7a432002e7":[1,0,361,0],
 "classConInsane.html#ae33280dafb330ef3f2e48e05427ed4d0":[1,0,361,1],
 "classConInvisibility.html":[1,0,362],
-"classConInvisibility.html#a5e00a7acf18605b3badae025680be443":[1,0,362,2],
-"classConInvisibility.html#a640e09a4fd2ff5531b2b8cfb25884aa4":[1,0,362,1]
+"classConInvisibility.html#a5e00a7acf18605b3badae025680be443":[1,0,362,2]
 };

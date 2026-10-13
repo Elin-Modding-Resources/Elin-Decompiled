@@ -1,5 +1,8 @@
 var NAVTREEINDEX130 =
 {
+"classTraitItemProc.html#a25f0438f464274462cdf60267819711f":[1,0,1790,1],
+"classTraitItemProc.html#a2bff6aad8b590965d2578ef609b3de3c":[1,0,1790,6],
+"classTraitItemProc.html#a895d2db928219040f9b50a037df763f3":[1,0,1790,2],
 "classTraitItemProc.html#a95b7c80b73bd495afbf5ff3a7317261c":[1,0,1790,0],
 "classTraitItemProc.html#a96192938bb52d92789c5c8a52517fa1b":[1,0,1790,4],
 "classTraitItemProc.html#a9fe6b0c967ab01b71b106878bfb5b9e0":[1,0,1790,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitMerchantPlat.html#adc26d42455bdacb98b2a88007aedbbed":[1,0,1853,3],
 "classTraitMerchantSeed.html":[1,0,1854],
 "classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1854,0],
-"classTraitMerchantSouvenir.html":[1,0,1855],
-"classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1855,0],
-"classTraitMerchantTravel.html":[1,0,1856],
-"classTraitMerchantTravel.html#a3941fe587384376ffa17244d78097109":[1,0,1856,0]
+"classTraitMerchantSouvenir.html":[1,0,1855]
 };

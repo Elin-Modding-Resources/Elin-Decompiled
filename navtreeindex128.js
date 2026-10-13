@@ -1,5 +1,8 @@
 var NAVTREEINDEX128 =
 {
+"classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1673,0],
+"classTraitDoorman__Fighter.html":[1,0,1669],
+"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1669,1],
 "classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1669,2],
 "classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1669,0],
 "classTraitDoorman__Mage.html":[1,0,1670],
@@ -246,8 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitFoodNut.html":[1,0,1729],
 "classTraitFoodNut.html#acaa966d671c0513320a6c4776f394d25":[1,0,1729,0],
 "classTraitFoodPrepared.html":[1,0,1730],
-"classTraitFoodPrepared.html#abfed20f491eec7c0fbdde9db74ff859a":[1,0,1730,0],
-"classTraitFoodPreparedPackage.html":[1,0,1731],
-"classTraitFoodPreparedPackage.html#a68d433792e701946bbe99206018e94e7":[1,0,1731,2],
-"classTraitFoodPreparedPackage.html#a6d50baf3f04d64802668f797894f8e87":[1,0,1731,3]
+"classTraitFoodPrepared.html#abfed20f491eec7c0fbdde9db74ff859a":[1,0,1730,0]
 };

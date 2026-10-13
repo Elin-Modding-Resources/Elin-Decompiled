@@ -33,5 +33,6 @@ var classMapConfig =
     [ "reverseRoof", "classMapConfig.html#ad8667a98de5f92fde47304a84c2511cd", null ],
     [ "seaDir", "classMapConfig.html#a78efe4b9d04b9fea47aca2ff057e6237", null ],
     [ "shadowStrength", "classMapConfig.html#aca3970bb82383da940200752590738ee", null ],
+    [ "shufflePL", "classMapConfig.html#aa86369bfd7f8e9991e7b3c7f19d776f1", null ],
     [ "skyBlockHeight", "classMapConfig.html#a6975da84308f50dfa79dfa41abea2bb5", null ]
 ];

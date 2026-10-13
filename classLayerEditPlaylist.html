@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.355 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.356.1 Nightly</span>
    </div>
   </td>
  </tr>
@@ -495,41 +495,57 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  157</span>                    <a class="code hl_variable" href="classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8">itemsNight</a>.Add(<a class="code hl_property" href="classLayerEditPlaylist.html#ac89f0458c64e3ae9606cf99208cae015">bgms</a>[item2]);</div>
 <div class="line"><span class="lineno">  158</span>                }</div>
 <div class="line"><span class="lineno">  159</span>            }</div>
-<div class="line"><span class="lineno">  160</span>        }</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  162</span>        {</div>
-<div class="line"><span class="lineno">  163</span>            <a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[1].SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[0].SetPosition();</div>
-<div class="line"><span class="lineno">  165</span>            multi.Double = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23">Refresh</a>();</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classListOwner.html">ListOwner</a> owner <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>)</div>
+<div class="line"><span class="lineno">  160</span>            <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  161</span>            b = <a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[0].AddBottomButton(Text(), delegate</div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                SE.Tab();</div>
+<div class="line"><span class="lineno">  164</span>                ELayer._map.config.shufflePL = !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">config</a>.<a class="code hl_variable" href="classMapConfig.html#aa86369bfd7f8e9991e7b3c7f19d776f1">shufflePL</a>;</div>
+<div class="line"><span class="lineno">  165</span>                b.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(Text());</div>
+<div class="line"><span class="lineno">  166</span>            });</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  169</span>        {</div>
-<div class="line"><span class="lineno">  170</span>            owner.<a class="code hl_function" href="classListOwner.html#a6094e79696b1f11fb891b7a98e272180">OnSwitchContent</a>();</div>
-<div class="line"><span class="lineno">  171</span>        }</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="line"><span class="lineno">  170</span>            <a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[1].SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  171</span>            <a class="code hl_variable" href="classLayer.html#adcabbb5f9207fa402487950097b491cd">windows</a>[0].SetPosition();</div>
+<div class="line"><span class="lineno">  172</span>            multi.Double = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_function" href="classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23">Refresh</a>();</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classListOwner.html">ListOwner</a> owner <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            owner.<a class="code hl_function" href="classListOwner.html#a6094e79696b1f11fb891b7a98e272180">OnSwitchContent</a>();</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> Text()</div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;shufflePL&quot;</span>.lang() + <span class="stringliteral">&quot;: &quot;</span> + (ELayer._map.config.shufflePL ? <span class="stringliteral">&quot;on&quot;</span> : <span class="stringliteral">&quot;off&quot;</span>).lang();</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
 <div class="ttc" id="aclassELayer_html_a7279056e1f65908594bdc003e872ec26"><div class="ttname"><a href="classELayer.html#a7279056e1f65908594bdc003e872ec26">ELayer._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00023">ELayer.cs:23</a></div></div>
-<div class="ttc" id="aclassLayerEditPlaylist_html_a0acfa5567c46dcd925eef687f5cf5f9c"><div class="ttname"><a href="classLayerEditPlaylist.html#a0acfa5567c46dcd925eef687f5cf5f9c">LayerEditPlaylist.TogglePL</a></div><div class="ttdeci">void TogglePL()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00230">LayerEditPlaylist.cs:230</a></div></div>
+<div class="ttc" id="aclassLayerEditPlaylist_html_a0acfa5567c46dcd925eef687f5cf5f9c"><div class="ttname"><a href="classLayerEditPlaylist.html#a0acfa5567c46dcd925eef687f5cf5f9c">LayerEditPlaylist.TogglePL</a></div><div class="ttdeci">void TogglePL()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00241">LayerEditPlaylist.cs:241</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_a423b2b5e11caa93716604f365e1df923"><div class="ttname"><a href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">LayerEditPlaylist.Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00006">LayerEditPlaylist.cs:7</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_a71191503ba1e52d80fa5181a1457f39b"><div class="ttname"><a href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">LayerEditPlaylist.multi</a></div><div class="ttdeci">UIMultiList multi</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00100">LayerEditPlaylist.cs:100</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_a8174f6bdc11a0bf24f5e40a309a87bc8"><div class="ttname"><a href="classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8">LayerEditPlaylist.itemsNight</a></div><div class="ttdeci">List&lt; BGMData &gt; itemsNight</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00098">LayerEditPlaylist.cs:98</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_a99097a5d50df0ee1d6eca1e1702fb652"><div class="ttname"><a href="classLayerEditPlaylist.html#a99097a5d50df0ee1d6eca1e1702fb652">LayerEditPlaylist.itemsDay</a></div><div class="ttdeci">List&lt; BGMData &gt; itemsDay</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00096">LayerEditPlaylist.cs:96</a></div></div>
-<div class="ttc" id="aclassLayerEditPlaylist_html_abafe0a88654f40927c6b7a33fcf8eb23"><div class="ttname"><a href="classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23">LayerEditPlaylist.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00174">LayerEditPlaylist.cs:174</a></div></div>
+<div class="ttc" id="aclassLayerEditPlaylist_html_abafe0a88654f40927c6b7a33fcf8eb23"><div class="ttname"><a href="classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23">LayerEditPlaylist.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00185">LayerEditPlaylist.cs:185</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_ac0fd5f3eaab23e80d4438ec8749badcf"><div class="ttname"><a href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">LayerEditPlaylist.mode</a></div><div class="ttdeci">Mode mode</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00110">LayerEditPlaylist.cs:110</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_ac89f0458c64e3ae9606cf99208cae015"><div class="ttname"><a href="classLayerEditPlaylist.html#ac89f0458c64e3ae9606cf99208cae015">LayerEditPlaylist.bgms</a></div><div class="ttdeci">Dictionary&lt; int, BGMData &gt; bgms</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00116">LayerEditPlaylist.cs:116</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_acea5e72c22e83969a34e0b851b39b6b2"><div class="ttname"><a href="classLayerEditPlaylist.html#acea5e72c22e83969a34e0b851b39b6b2">LayerEditPlaylist.dayNight</a></div><div class="ttdeci">bool dayNight</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00108">LayerEditPlaylist.cs:108</a></div></div>
 <div class="ttc" id="aclassLayer_html_adcabbb5f9207fa402487950097b491cd"><div class="ttname"><a href="classLayer.html#adcabbb5f9207fa402487950097b491cd">Layer.windows</a></div><div class="ttdeci">List&lt; Window &gt; windows</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00116">Layer.cs:116</a></div></div>
 <div class="ttc" id="aclassListOwner_html"><div class="ttname"><a href="classListOwner.html">ListOwner</a></div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_8cs_source.html#l00003">ListOwner.cs:4</a></div></div>
 <div class="ttc" id="aclassListOwner_html_a6094e79696b1f11fb891b7a98e272180"><div class="ttname"><a href="classListOwner.html#a6094e79696b1f11fb891b7a98e272180">ListOwner.OnSwitchContent</a></div><div class="ttdeci">virtual void OnSwitchContent()</div><div class="ttdef"><b>Definition:</b> <a href="ListOwner_8cs_source.html#l00085">ListOwner.cs:85</a></div></div>
+<div class="ttc" id="aclassMapConfig_html_aa86369bfd7f8e9991e7b3c7f19d776f1"><div class="ttname"><a href="classMapConfig.html#aa86369bfd7f8e9991e7b3c7f19d776f1">MapConfig.shufflePL</a></div><div class="ttdeci">bool shufflePL</div><div class="ttdef"><b>Definition:</b> <a href="MapConfig_8cs_source.html#l00050">MapConfig.cs:50</a></div></div>
 <div class="ttc" id="aclassMap_html_a03abbdf51b05a2128e8e1daf7a1f5a18"><div class="ttname"><a href="classMap.html#a03abbdf51b05a2128e8e1daf7a1f5a18">Map._plNight</a></div><div class="ttdeci">List&lt; int &gt; _plNight</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00061">Map.cs:61</a></div></div>
 <div class="ttc" id="aclassMap_html_a67a2150aacf587c4020081438994d021"><div class="ttname"><a href="classMap.html#a67a2150aacf587c4020081438994d021">Map._plDay</a></div><div class="ttdeci">List&lt; int &gt; _plDay</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00058">Map.cs:58</a></div></div>
+<div class="ttc" id="aclassMap_html_acf5607e9bd5dba288f9a980965f0c419"><div class="ttname"><a href="classMap.html#acf5607e9bd5dba288f9a980965f0c419">Map.config</a></div><div class="ttdeci">MapConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00040">Map.cs:40</a></div></div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_ae11b2b472e2b195c160f2a611701b22c"><div class="ttname"><a href="classMsg.html#ae11b2b472e2b195c160f2a611701b22c">Msg.Nerun</a></div><div class="ttdeci">static void Nerun(string lang, string idPortrait=&quot;UN_nerun&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00150">Msg.cs:150</a></div></div>
+<div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
+<div class="ttc" id="aclassUIButton_html_a2c91e2485c1dea09ccf8cf5865e4c4dd"><div class="ttname"><a href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">UIButton.mainText</a></div><div class="ttdeci">UIText mainText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00102">UIButton.cs:102</a></div></div>
 <div class="ttc" id="aclassUIMultiList_html_a844a8d8423b4fb520114408034a27a49"><div class="ttname"><a href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">UIMultiList.owners</a></div><div class="ttdeci">List&lt; ListOwner &gt; owners</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00006">UIMultiList.cs:6</a></div></div>
+<div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00163">UIText.cs:163</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00023">ELayer._map</a>, <a class="el" href="Map_8cs_source.html#l00058">Map._plDay</a>, <a class="el" href="Map_8cs_source.html#l00061">Map._plNight</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00116">bgms</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00108">dayNight</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00096">itemsDay</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00098">itemsNight</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00110">mode</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">multi</a>, <a class="el" href="Msg_8cs_source.html#l00150">Msg.Nerun()</a>, <a class="el" href="ListOwner_8cs_source.html#l00085">ListOwner&lt; T1, T2 &gt;.OnSwitchContent()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00006">UIMultiList.owners</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00230">TogglePL()</a>, and <a class="el" href="Layer_8cs_source.html#l00116">Layer.windows</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00023">ELayer._map</a>, <a class="el" href="Map_8cs_source.html#l00058">Map._plDay</a>, <a class="el" href="Map_8cs_source.html#l00061">Map._plNight</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00116">bgms</a>, <a class="el" href="Map_8cs_source.html#l00040">Map.config</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00108">dayNight</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00096">itemsDay</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00098">itemsNight</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00110">mode</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">multi</a>, <a class="el" href="Msg_8cs_source.html#l00150">Msg.Nerun()</a>, <a class="el" href="ListOwner_8cs_source.html#l00085">ListOwner&lt; T1, T2 &gt;.OnSwitchContent()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00006">UIMultiList.owners</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>, <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>, <a class="el" href="MapConfig_8cs_source.html#l00050">MapConfig.shufflePL</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00241">TogglePL()</a>, and <a class="el" href="Layer_8cs_source.html#l00116">Layer.windows</a>.</p>
 
 </div>
 </div>
@@ -665,41 +681,41 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classLayer.html#a80f8bdde0014bfeaacabe62942c9f019">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00238">238</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  239</span>    {</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM)</div>
-<div class="line"><span class="lineno">  241</span>        {</div>
-<div class="line"><span class="lineno">  242</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.StopBGM();</div>
-<div class="line"><span class="lineno">  243</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">RefreshBGM</a>();</div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  245</span>        }</div>
-<div class="line"><span class="lineno">  246</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a67a2150aacf587c4020081438994d021">_plDay</a>.Clear();</div>
-<div class="line"><span class="lineno">  247</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a03abbdf51b05a2128e8e1daf7a1f5a18">_plNight</a>.Clear();</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">foreach</span> (BGMData <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerEditPlaylist.html#a99097a5d50df0ee1d6eca1e1702fb652">itemsDay</a>)</div>
-<div class="line"><span class="lineno">  249</span>        {</div>
-<div class="line"><span class="lineno">  250</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a67a2150aacf587c4020081438994d021">_plDay</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id);</div>
-<div class="line"><span class="lineno">  251</span>        }</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">foreach</span> (BGMData item2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8">itemsNight</a>)</div>
-<div class="line"><span class="lineno">  253</span>        {</div>
-<div class="line"><span class="lineno">  254</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a03abbdf51b05a2128e8e1daf7a1f5a18">_plNight</a>.Add(item2.id);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        Object.DestroyImmediate(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a6a1d2d1d90078294bbb3342ab1535ba8">plDay</a>);</div>
-<div class="line"><span class="lineno">  257</span>        ELayer._map.plDay = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  258</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a68a67c01937768a11ea0632514dae377">RefreshPlaylist</a>();</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerEditPlaylist.html#a7d6e85390df2a6706a7fae774cba9b12">keepPlaying</a>)</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00249">249</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  250</span>    {</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM)</div>
+<div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.StopBGM();</div>
+<div class="line"><span class="lineno">  254</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">RefreshBGM</a>();</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a67a2150aacf587c4020081438994d021">_plDay</a>.Clear();</div>
+<div class="line"><span class="lineno">  258</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a03abbdf51b05a2128e8e1daf7a1f5a18">_plNight</a>.Clear();</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">foreach</span> (BGMData <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerEditPlaylist.html#a99097a5d50df0ee1d6eca1e1702fb652">itemsDay</a>)</div>
 <div class="line"><span class="lineno">  260</span>        {</div>
-<div class="line"><span class="lineno">  261</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.StopBGM();</div>
-<div class="line"><span class="lineno">  262</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">RefreshBGM</a>();</div>
-<div class="line"><span class="lineno">  263</span>        }</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="line"><span class="lineno">  261</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a67a2150aacf587c4020081438994d021">_plDay</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id);</div>
+<div class="line"><span class="lineno">  262</span>        }</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">foreach</span> (BGMData item2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8">itemsNight</a>)</div>
+<div class="line"><span class="lineno">  264</span>        {</div>
+<div class="line"><span class="lineno">  265</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a03abbdf51b05a2128e8e1daf7a1f5a18">_plNight</a>.Add(item2.id);</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>        Object.DestroyImmediate(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a7279056e1f65908594bdc003e872ec26">_map</a>.<a class="code hl_variable" href="classMap.html#a6a1d2d1d90078294bbb3342ab1535ba8">plDay</a>);</div>
+<div class="line"><span class="lineno">  268</span>        ELayer._map.plDay = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  269</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a68a67c01937768a11ea0632514dae377">RefreshPlaylist</a>();</div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerEditPlaylist.html#a7d6e85390df2a6706a7fae774cba9b12">keepPlaying</a>)</div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#ab11922d6365826fec4c710a4ce358940">Sound</a>.StopBGM();</div>
+<div class="line"><span class="lineno">  273</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">_zone</a>.<a class="code hl_function" href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">RefreshBGM</a>();</div>
+<div class="line"><span class="lineno">  274</span>        }</div>
+<div class="line"><span class="lineno">  275</span>    }</div>
 <div class="ttc" id="aclassELayer_html_ab11922d6365826fec4c710a4ce358940"><div class="ttname"><a href="classELayer.html#ab11922d6365826fec4c710a4ce358940">ELayer.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00041">ELayer.cs:41</a></div></div>
 <div class="ttc" id="aclassELayer_html_afc9fa03a5b05d1a1a05ffbd867feb3be"><div class="ttname"><a href="classELayer.html#afc9fa03a5b05d1a1a05ffbd867feb3be">ELayer._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00025">ELayer.cs:25</a></div></div>
 <div class="ttc" id="aclassLayerEditPlaylist_html_a7d6e85390df2a6706a7fae774cba9b12"><div class="ttname"><a href="classLayerEditPlaylist.html#a7d6e85390df2a6706a7fae774cba9b12">LayerEditPlaylist.keepPlaying</a></div><div class="ttdeci">bool keepPlaying</div><div class="ttdef"><b>Definition:</b> <a href="LayerEditPlaylist_8cs_source.html#l00104">LayerEditPlaylist.cs:104</a></div></div>
 <div class="ttc" id="aclassMap_html_a6a1d2d1d90078294bbb3342ab1535ba8"><div class="ttname"><a href="classMap.html#a6a1d2d1d90078294bbb3342ab1535ba8">Map.plDay</a></div><div class="ttdeci">Playlist plDay</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00080">Map.cs:80</a></div></div>
-<div class="ttc" id="aclassZone_html_a5ffc60aaaf210f368a9b2d30c01ad4b0"><div class="ttname"><a href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">Zone.RefreshBGM</a></div><div class="ttdeci">void RefreshBGM()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03320">Zone.cs:3320</a></div></div>
+<div class="ttc" id="aclassZone_html_a5ffc60aaaf210f368a9b2d30c01ad4b0"><div class="ttname"><a href="classZone.html#a5ffc60aaaf210f368a9b2d30c01ad4b0">Zone.RefreshBGM</a></div><div class="ttdeci">void RefreshBGM()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03321">Zone.cs:3321</a></div></div>
 <div class="ttc" id="aclassZone_html_a68a67c01937768a11ea0632514dae377"><div class="ttname"><a href="classZone.html#a68a67c01937768a11ea0632514dae377">Zone.RefreshPlaylist</a></div><div class="ttdeci">void RefreshPlaylist()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03304">Zone.cs:3304</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00023">ELayer._map</a>, <a class="el" href="Map_8cs_source.html#l00058">Map._plDay</a>, <a class="el" href="Map_8cs_source.html#l00061">Map._plNight</a>, <a class="el" href="ELayer_8cs_source.html#l00025">ELayer._zone</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00096">itemsDay</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00098">itemsNight</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00104">keepPlaying</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00110">mode</a>, <a class="el" href="Map_8cs_source.html#l00080">Map.plDay</a>, <a class="el" href="Zone_8cs_source.html#l03320">Zone.RefreshBGM()</a>, <a class="el" href="Zone_8cs_source.html#l03304">Zone.RefreshPlaylist()</a>, and <a class="el" href="ELayer_8cs_source.html#l00041">ELayer.Sound</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00023">ELayer._map</a>, <a class="el" href="Map_8cs_source.html#l00058">Map._plDay</a>, <a class="el" href="Map_8cs_source.html#l00061">Map._plNight</a>, <a class="el" href="ELayer_8cs_source.html#l00025">ELayer._zone</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00096">itemsDay</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00098">itemsNight</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00104">keepPlaying</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00110">mode</a>, <a class="el" href="Map_8cs_source.html#l00080">Map.plDay</a>, <a class="el" href="Zone_8cs_source.html#l03321">Zone.RefreshBGM()</a>, <a class="el" href="Zone_8cs_source.html#l03304">Zone.RefreshPlaylist()</a>, and <a class="el" href="ELayer_8cs_source.html#l00041">ELayer.Sound</a>.</p>
 
 </div>
 </div>
@@ -729,13 +745,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classLayer.html#a8379ac99a029b03f2a623889cc0714b6">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00266">266</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  267</span>    {</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>.Count &gt; 0)</div>
-<div class="line"><span class="lineno">  269</span>        {</div>
-<div class="line"><span class="lineno">  270</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>[window.<a class="code hl_variable" href="classWindow.html#a241153a391bfebfcb513d424640bb4a2">windowIndex</a>].OnSwitchContent();</div>
-<div class="line"><span class="lineno">  271</span>        }</div>
-<div class="line"><span class="lineno">  272</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00277">277</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  278</span>    {</div>
+<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  280</span>        {</div>
+<div class="line"><span class="lineno">  281</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_variable" href="classUIMultiList.html#a844a8d8423b4fb520114408034a27a49">owners</a>[window.<a class="code hl_variable" href="classWindow.html#a241153a391bfebfcb513d424640bb4a2">windowIndex</a>].OnSwitchContent();</div>
+<div class="line"><span class="lineno">  282</span>        }</div>
+<div class="line"><span class="lineno">  283</span>    }</div>
 <div class="ttc" id="aclassWindow_html_a241153a391bfebfcb513d424640bb4a2"><div class="ttname"><a href="classWindow.html#a241153a391bfebfcb513d424640bb4a2">Window.windowIndex</a></div><div class="ttdeci">int windowIndex</div><div class="ttdef"><b>Definition:</b> <a href="Plugins_8UI_2Window_8cs_source.html#l00697">Window.cs:697</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">multi</a>, <a class="el" href="UIMultiList_8cs_source.html#l00006">UIMultiList.owners</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00697">Window.windowIndex</a>.</p>
@@ -765,61 +781,61 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">174</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>        List&lt;BGMData&gt; list = ((<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM) ? <span class="keyword">new</span> List&lt;BGMData&gt;() : (<a class="code hl_variable" href="classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066">day</a> ? <a class="code hl_variable" href="classLayerEditPlaylist.html#a99097a5d50df0ee1d6eca1e1702fb652">itemsDay</a> : <a class="code hl_variable" href="classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8">itemsNight</a>));</div>
-<div class="line"><span class="lineno">  177</span>        List&lt;BGMData&gt; list2 = <span class="keyword">new</span> List&lt;BGMData&gt;();</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">foreach</span> (BGMData value <span class="keywordflow">in</span> <a class="code hl_property" href="classLayerEditPlaylist.html#ac89f0458c64e3ae9606cf99208cae015">bgms</a>.Values)</div>
-<div class="line"><span class="lineno">  179</span>        {</div>
-<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a12a2f6e21c28d7331fcd33275871cf08">allBGM</a> &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.Contains(value.id))</div>
-<div class="line"><span class="lineno">  181</span>            {</div>
-<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  183</span>            }</div>
-<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM)</div>
-<div class="line"><span class="lineno">  185</span>            {</div>
-<div class="line"><span class="lineno">  186</span>                list.Add(value);</div>
-<div class="line"><span class="lineno">  187</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  188</span>            }</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordtype">bool</span> flag = value.id != 0;</div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">foreach</span> (BGMData <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">  191</span>            {</div>
-<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id == value.id)</div>
-<div class="line"><span class="lineno">  193</span>                {</div>
-<div class="line"><span class="lineno">  194</span>                    flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  195</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  196</span>                }</div>
-<div class="line"><span class="lineno">  197</span>            }</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  199</span>            {</div>
-<div class="line"><span class="lineno">  200</span>                list2.Add(value);</div>
-<div class="line"><span class="lineno">  201</span>            }</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a364a26b3bdd27f06f7cef32f4d6c5100">Clear</a>();</div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM)</div>
-<div class="line"><span class="lineno">  205</span>        {</div>
-<div class="line"><span class="lineno">  206</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e">AddOwner</a>(0, <span class="keyword">new</span> ListBGM</div>
-<div class="line"><span class="lineno">  207</span>            {</div>
-<div class="line"><span class="lineno">  208</span>                items = list,</div>
-<div class="line"><span class="lineno">  209</span>                idTitle = <span class="stringliteral">&quot;wBGMLot&quot;</span>,</div>
-<div class="line"><span class="lineno">  210</span>                <a class="code hl_variable" href="classLayerEditPlaylist.html#adf798fdcaabe60e061a58ef5e312a7a1">single</a> = <span class="keyword">true</span></div>
-<div class="line"><span class="lineno">  211</span>            });</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  214</span>        {</div>
-<div class="line"><span class="lineno">  215</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e">AddOwner</a>(0, <span class="keyword">new</span> ListBGM</div>
-<div class="line"><span class="lineno">  216</span>            {</div>
-<div class="line"><span class="lineno">  217</span>                items = list,</div>
-<div class="line"><span class="lineno">  218</span>                idTitle = <span class="stringliteral">&quot;wPlaylist&quot;</span>,</div>
-<div class="line"><span class="lineno">  219</span>                sort = <span class="keyword">false</span></div>
-<div class="line"><span class="lineno">  220</span>            });</div>
-<div class="line"><span class="lineno">  221</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e">AddOwner</a>(1, <span class="keyword">new</span> ListBGM</div>
-<div class="line"><span class="lineno">  222</span>            {</div>
-<div class="line"><span class="lineno">  223</span>                items = list2,</div>
-<div class="line"><span class="lineno">  224</span>                idTitle = <span class="stringliteral">&quot;wPlaylist2&quot;</span></div>
-<div class="line"><span class="lineno">  225</span>            });</div>
-<div class="line"><span class="lineno">  226</span>        }</div>
-<div class="line"><span class="lineno">  227</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#ae6c7f04d7a627f226efa024f695b92f2">Build</a>();</div>
-<div class="line"><span class="lineno">  228</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">185</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        List&lt;BGMData&gt; list = ((<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM) ? <span class="keyword">new</span> List&lt;BGMData&gt;() : (<a class="code hl_variable" href="classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066">day</a> ? <a class="code hl_variable" href="classLayerEditPlaylist.html#a99097a5d50df0ee1d6eca1e1702fb652">itemsDay</a> : <a class="code hl_variable" href="classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8">itemsNight</a>));</div>
+<div class="line"><span class="lineno">  188</span>        List&lt;BGMData&gt; list2 = <span class="keyword">new</span> List&lt;BGMData&gt;();</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">foreach</span> (BGMData value <span class="keywordflow">in</span> <a class="code hl_property" href="classLayerEditPlaylist.html#ac89f0458c64e3ae9606cf99208cae015">bgms</a>.Values)</div>
+<div class="line"><span class="lineno">  190</span>        {</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a12a2f6e21c28d7331fcd33275871cf08">allBGM</a> &amp;&amp; !<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.Contains(value.id))</div>
+<div class="line"><span class="lineno">  192</span>            {</div>
+<div class="line"><span class="lineno">  193</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  194</span>            }</div>
+<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM)</div>
+<div class="line"><span class="lineno">  196</span>            {</div>
+<div class="line"><span class="lineno">  197</span>                list.Add(value);</div>
+<div class="line"><span class="lineno">  198</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  199</span>            }</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordtype">bool</span> flag = value.id != 0;</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">foreach</span> (BGMData <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">  202</span>            {</div>
+<div class="line"><span class="lineno">  203</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id == value.id)</div>
+<div class="line"><span class="lineno">  204</span>                {</div>
+<div class="line"><span class="lineno">  205</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  206</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  207</span>                }</div>
+<div class="line"><span class="lineno">  208</span>            }</div>
+<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  210</span>            {</div>
+<div class="line"><span class="lineno">  211</span>                list2.Add(value);</div>
+<div class="line"><span class="lineno">  212</span>            }</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a364a26b3bdd27f06f7cef32f4d6c5100">Clear</a>();</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerEditPlaylist.html#ac0fd5f3eaab23e80d4438ec8749badcf">mode</a> == <a class="code hl_enumeration" href="classLayerEditPlaylist.html#a423b2b5e11caa93716604f365e1df923">Mode</a>.LotBGM)</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e">AddOwner</a>(0, <span class="keyword">new</span> ListBGM</div>
+<div class="line"><span class="lineno">  218</span>            {</div>
+<div class="line"><span class="lineno">  219</span>                items = list,</div>
+<div class="line"><span class="lineno">  220</span>                idTitle = <span class="stringliteral">&quot;wBGMLot&quot;</span>,</div>
+<div class="line"><span class="lineno">  221</span>                <a class="code hl_variable" href="classLayerEditPlaylist.html#adf798fdcaabe60e061a58ef5e312a7a1">single</a> = <span class="keyword">true</span></div>
+<div class="line"><span class="lineno">  222</span>            });</div>
+<div class="line"><span class="lineno">  223</span>        }</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e">AddOwner</a>(0, <span class="keyword">new</span> ListBGM</div>
+<div class="line"><span class="lineno">  227</span>            {</div>
+<div class="line"><span class="lineno">  228</span>                items = list,</div>
+<div class="line"><span class="lineno">  229</span>                idTitle = <span class="stringliteral">&quot;wPlaylist&quot;</span>,</div>
+<div class="line"><span class="lineno">  230</span>                sort = <span class="keyword">false</span></div>
+<div class="line"><span class="lineno">  231</span>            });</div>
+<div class="line"><span class="lineno">  232</span>            <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e">AddOwner</a>(1, <span class="keyword">new</span> ListBGM</div>
+<div class="line"><span class="lineno">  233</span>            {</div>
+<div class="line"><span class="lineno">  234</span>                items = list2,</div>
+<div class="line"><span class="lineno">  235</span>                idTitle = <span class="stringliteral">&quot;wPlaylist2&quot;</span></div>
+<div class="line"><span class="lineno">  236</span>            });</div>
+<div class="line"><span class="lineno">  237</span>        }</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#ae6c7f04d7a627f226efa024f695b92f2">Build</a>();</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
 <div class="ttc" id="aclassCoreDebug_html_a12a2f6e21c28d7331fcd33275871cf08"><div class="ttname"><a href="classCoreDebug.html#a12a2f6e21c28d7331fcd33275871cf08">CoreDebug.allBGM</a></div><div class="ttdeci">bool allBGM</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00215">CoreDebug.cs:215</a></div></div>
 <div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00013">ELayer.cs:13</a></div></div>
 <div class="ttc" id="aclassELayer_html_a59df319a8b64e794d95ea0ac5dd5cc3f"><div class="ttname"><a href="classELayer.html#a59df319a8b64e794d95ea0ac5dd5cc3f">ELayer.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00043">ELayer.cs:43</a></div></div>
@@ -831,7 +847,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIMultiList_8cs_source.html#l00025">UIMultiList.AddOwner()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00215">CoreDebug.allBGM</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00116">bgms</a>, <a class="el" href="UIMultiList_8cs_source.html#l00041">UIMultiList.Build()</a>, <a class="el" href="UIMultiList_8cs_source.html#l00020">UIMultiList.Clear()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00102">day</a>, <a class="el" href="ELayer_8cs_source.html#l00043">ELayer.debug</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00096">itemsDay</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00098">itemsNight</a>, <a class="el" href="Player_8cs_source.html#l01134">Player.knownBGMs</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00110">mode</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">multi</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00106">single</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00230">TogglePL()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00241">TogglePL()</a>.</p>
 
 </div>
 </div>
@@ -858,16 +874,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00230">230</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  231</span>    {</div>
-<div class="line"><span class="lineno">  232</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066">day</a> = !<a class="code hl_variable" href="classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066">day</a>;</div>
-<div class="line"><span class="lineno">  233</span>        <a class="code hl_function" href="classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23">Refresh</a>();</div>
-<div class="line"><span class="lineno">  234</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#ac5fa57a2778464ca9071484d8a8c3dc7">Refresh</a>();</div>
-<div class="line"><span class="lineno">  235</span>        SE.Click();</div>
-<div class="line"><span class="lineno">  236</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00241">241</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>    {</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066">day</a> = !<a class="code hl_variable" href="classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066">day</a>;</div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_function" href="classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23">Refresh</a>();</div>
+<div class="line"><span class="lineno">  245</span>        <a class="code hl_variable" href="classLayerEditPlaylist.html#a71191503ba1e52d80fa5181a1457f39b">multi</a>.<a class="code hl_function" href="classUIMultiList.html#ac5fa57a2778464ca9071484d8a8c3dc7">Refresh</a>();</div>
+<div class="line"><span class="lineno">  246</span>        SE.Click();</div>
+<div class="line"><span class="lineno">  247</span>    }</div>
 <div class="ttc" id="aclassUIMultiList_html_ac5fa57a2778464ca9071484d8a8c3dc7"><div class="ttname"><a href="classUIMultiList.html#ac5fa57a2778464ca9071484d8a8c3dc7">UIMultiList.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="UIMultiList_8cs_source.html#l00054">UIMultiList.cs:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerEditPlaylist_8cs_source.html#l00102">day</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">multi</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>, and <a class="el" href="UIMultiList_8cs_source.html#l00054">UIMultiList.Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="LayerEditPlaylist_8cs_source.html#l00102">day</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">multi</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>, and <a class="el" href="UIMultiList_8cs_source.html#l00054">UIMultiList.Refresh()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>.</p>
 
@@ -906,7 +922,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00102">102</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00230">TogglePL()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00241">TogglePL()</a>.</p>
 
 </div>
 </div>
@@ -942,7 +958,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00096">96</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00238">OnKill()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00249">OnKill()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -960,7 +976,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00098">98</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00238">OnKill()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00249">OnKill()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -996,7 +1012,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00104">104</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00238">OnKill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00249">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1030,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00110">110</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00026">LayerEditPlaylist.ListBGM.List()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00238">OnKill()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00026">LayerEditPlaylist.ListBGM.List()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00249">OnKill()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1048,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00100">100</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00266">OnSwitchContent()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00230">TogglePL()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00277">OnSwitchContent()</a>, <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00241">TogglePL()</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1066,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00106">106</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00122">Activate()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00122">Activate()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1077,7 +1093,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerEditPlaylist_8cs_source.html#l00116">116</a> of file <a class="el" href="LayerEditPlaylist_8cs_source.html">LayerEditPlaylist.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00174">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00136">Activate()</a>, and <a class="el" href="LayerEditPlaylist_8cs_source.html#l00185">Refresh()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,8 @@
 var NAVTREEINDEX134 =
 {
+"classTraitTeleporter.html":[1,0,2033],
+"classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422":[1,0,2033,0],
+"classTraitTeleporter.html#a14bb9eb09bdd5f58ade2ec65c2788a9c":[1,0,2033,10],
 "classTraitTeleporter.html#a22ce50c2eb094f47e298fab1fdee4f4f":[1,0,2033,2],
 "classTraitTeleporter.html#a3f158449655d0697742adccd620425d6":[1,0,2033,4],
 "classTraitTeleporter.html#a4110ffe98170b471c57bc33e5aca87f2":[1,0,2033,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX134 =
 "classTraitUniqueMonsterAdv.html":[1,0,2096],
 "classTraitUniqueMonsterAdv.html#a04fbe84ed5fc45dc54fe70dec34ceef3":[1,0,2096,1],
 "classTraitUniqueMonsterAdv.html#a3e5f2dd493a5b4d356273079602aaa20":[1,0,2096,0],
-"classTraitUsuihon.html":[1,0,2097],
-"classTraitUsuihon.html#a5f8fb26257cfdeb2d813d39037cbffde":[1,0,2097,3],
-"classTraitUsuihon.html#a83c2b5be4d84bb3cc2fea024ede26ea5":[1,0,2097,1],
-"classTraitUsuihon.html#a9e2b8cfd1c42ff883b3a18d76e751689":[1,0,2097,0]
+"classTraitUsuihon.html":[1,0,2097]
 };

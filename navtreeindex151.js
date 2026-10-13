@@ -1,5 +1,8 @@
 var NAVTREEINDEX151 =
 {
+"classZone__Dungeon.html#a1866eecd3a3eebe039a903b990651ff8":[1,0,2292,11],
+"classZone__Dungeon.html#a46a98ed4b8b845af3cdda793e4c7257a":[1,0,2292,6],
+"classZone__Dungeon.html#a53c7458033c3025a1941a405719a2381":[1,0,2292,9],
 "classZone__Dungeon.html#a587320df847dfb64930fc14c6a21a499":[1,0,2292,4],
 "classZone__Dungeon.html#a5fe8ab15c2de66244d24a922f10a0564":[1,0,2292,18],
 "classZone__Dungeon.html#a7a803fd94070c4fafa2dc01e10d16028":[1,0,2292,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX151 =
 "classZone__Town.html":[1,0,2352],
 "classZone__Town.html#a1b85d1e8a15a86d4409abf44b8d7603f":[1,0,2352,2],
 "classZone__Town.html#a1e86e8ab9035a69df4d7c3c926fb6f37":[1,0,2352,3],
-"classZone__Town.html#a563f2f2382e94fe5f17c487f4b9e6132":[1,0,2352,1],
-"classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25":[1,0,2352,4],
-"classZone__Town.html#ab522c0ae6fa3efe82885116b08a59797":[1,0,2352,0],
-"classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2352,5]
+"classZone__Town.html#a563f2f2382e94fe5f17c487f4b9e6132":[1,0,2352,1]
 };
