@@ -1129,6 +1129,29 @@ public static class ClassExtension
 		return new string(array);
 	}
 
+	public static string ToSentenceCase(this string s)
+	{
+		char[] array = s.ToCharArray();
+		bool flag = true;
+		for (int i = 0; i < array.Length; i++)
+		{
+			char c = array[i];
+			if (char.IsLetter(c))
+			{
+				if (flag)
+				{
+					array[i] = char.ToUpperInvariant(c);
+				}
+				flag = false;
+			}
+			else if (c == '.' || c == '!' || c == '?')
+			{
+				flag = true;
+			}
+		}
+		return new string(array);
+	}
+
 	public static void LoopTail<T>(this List<T> list, bool vertical = false) where T : Selectable
 	{
 		if (list.Count > 1)
