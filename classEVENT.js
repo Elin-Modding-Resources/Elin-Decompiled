@@ -20,5 +20,6 @@ var classEVENT =
     [ "SourceImporting", "classEVENT.html#a1b4ab2321a7fb9462d9575d8fcbb63e4", null ],
     [ "SourceLangSet", "classEVENT.html#a23133f989081ea326a66140f3f021a26", null ],
     [ "ThingCreated", "classEVENT.html#a3c4b40cae5d433aced9791f314a15a4e", null ],
-    [ "Undefined", "classEVENT.html#aa5a0d08c485e9abc5da2d28810a5cda5", null ]
+    [ "Undefined", "classEVENT.html#aa5a0d08c485e9abc5da2d28810a5cda5", null ],
+    [ "WidgetMetasBuilding", "classEVENT.html#a8d3bc45186053c87ef6a0666af07eefd", null ]
 ];

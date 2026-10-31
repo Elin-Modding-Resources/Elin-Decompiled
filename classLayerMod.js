@@ -16,7 +16,6 @@ var classLayerMod =
     [ "DescribeEntries", "classLayerMod.html#ad4eda11244b4c0ca892b0c90aba1d870", null ],
     [ "FilterLabel", "classLayerMod.html#a85ec57913d5853fd4a1cf6dc1ffe91ce", null ],
     [ "FirstInfoTarget", "classLayerMod.html#aece36778721f1474a88b171934de7655", null ],
-    [ "FitTitle", "classLayerMod.html#ab798f8c8d73b6dd95f9a53fa89ef2b4b", null ],
     [ "GetGroupIndex", "classLayerMod.html#a68c95fb18992ff88748406a021703bcd", null ],
     [ "GetThumb", "classLayerMod.html#a772431db29fda858bbc653b4094c576c", null ],
     [ "Groups", "classLayerMod.html#a0c5b2b5575cf0898bcb9415e9ad9c333", null ],

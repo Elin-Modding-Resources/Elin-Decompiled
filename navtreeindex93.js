@@ -1,5 +1,14 @@
 var NAVTREEINDEX93 =
 {
+"classNotificationCondition.html#a463b141154e86a639f206f5bd6c72b3a":[1,0,1011,5],
+"classNotificationCondition.html#a99dc8923e44e831f0005bf4d367232cc":[1,0,1011,8],
+"classNotificationCondition.html#aae0d73ac2e80778fe241db9fa0a236c6":[1,0,1011,6],
+"classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26":[1,0,1011,3],
+"classNotificationCooldown.html":[1,0,1012],
+"classNotificationCooldown.html#a01333f09880521bf29377d85d1c3a246":[1,0,1012,3],
+"classNotificationCooldown.html#a093ffc8f828fb550940e1fe91a4c91c7":[1,0,1012,8],
+"classNotificationCooldown.html#a2028e864389ad438b6d31f5c0e1e7c00":[1,0,1012,4],
+"classNotificationCooldown.html#a8b8e59afa5b8257ee385df1f9ce18aab":[1,0,1012,0],
 "classNotificationCooldown.html#a912bba5053f60ebdbb7e6620b93c52cd":[1,0,1012,7],
 "classNotificationCooldown.html#a9156ce246369fef83e2e6b721db4bbf8":[1,0,1012,2],
 "classNotificationCooldown.html#aa7ee643e0ae7282832af10915aad8a97":[1,0,1012,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX93 =
 "classPartialMap.html#a845a72bfb177eaaef400ee175e28b06ba5e520da5341f2fec6d3bbfe7ef357922":[1,0,1031,1,0],
 "classPartialMap.html#a845a72bfb177eaaef400ee175e28b06ba9639e32cab248434a17ab32237cb3b71":[1,0,1031,1,2],
 "classPartialMap.html#a845a72bfb177eaaef400ee175e28b06bab086843368d1c92d0a86cbee76b20b6f":[1,0,1031,1,3],
-"classPartialMap.html#a845a72bfb177eaaef400ee175e28b06bae1acb4e1c43aa1dde75dd53592db2202":[1,0,1031,1,1],
-"classPartialMap.html#a8caa6971c6e6e33f9dc753591f032668":[1,0,1031,12],
-"classPartialMap.html#a8d3d914d0f39beb2508c9f2193b9f1aa":[1,0,1031,5],
-"classPartialMap.html#a912adc5a36d7a14e7a9ae94a92f42375":[1,0,1031,9],
-"classPartialMap.html#a9200f40aa3d57ab9299581c16ff5a30e":[1,0,1031,25],
-"classPartialMap.html#a9417cee171afb5587ac2a4d5d8285dfe":[1,0,1031,41],
-"classPartialMap.html#a961fe6999383e127a5214187d7b02e3b":[1,0,1031,24],
-"classPartialMap.html#aa4f6ab878dc8a7071c59d52f26d9c509":[1,0,1031,13],
-"classPartialMap.html#aa57b027cba4575c120dc5af7c16dff2f":[1,0,1031,35],
-"classPartialMap.html#aa768a3502013be3c6bbc19d4dd75b439":[1,0,1031,40]
+"classPartialMap.html#a845a72bfb177eaaef400ee175e28b06bae1acb4e1c43aa1dde75dd53592db2202":[1,0,1031,1,1]
 };

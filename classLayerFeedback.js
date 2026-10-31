@@ -7,6 +7,7 @@ var classLayerFeedback =
     [ "OnSubmit", "classLayerFeedback.html#ac7bbc9a4763a208b2317ec76b8599df6", null ],
     [ "Submit", "classLayerFeedback.html#a135c9896fcfbf1df5ddde06a87d73e3f", null ],
     [ "Validate", "classLayerFeedback.html#a5c2d21afcbe14a838c9a6fd2e620dc17", null ],
+    [ "ZipSave", "classLayerFeedback.html#a0df4ac9c24fe25038edab1e41ff5bedd", null ],
     [ "backerId", "classLayerFeedback.html#a9300b055d3a504b06c91e879e5515292", null ],
     [ "buttonLinkDiscord", "classLayerFeedback.html#aa05c93813e57056d9def270f0aa8dfcf", null ],
     [ "buttonLinkFAQ", "classLayerFeedback.html#aa426a11ea37e5c24788e19e59a640e5e", null ],

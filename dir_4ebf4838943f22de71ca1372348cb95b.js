@@ -1055,6 +1055,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "QuestMusic.cs", "QuestMusic_8cs.html", "QuestMusic_8cs" ],
     [ "QuestNasu.cs", "QuestNasu_8cs.html", "QuestNasu_8cs" ],
     [ "QuestNegotiationDarkness.cs", "QuestNegotiationDarkness_8cs.html", "QuestNegotiationDarkness_8cs" ],
+    [ "QuestNevernight.cs", "QuestNevernight_8cs.html", "QuestNevernight_8cs" ],
     [ "QuestProgression.cs", "QuestProgression_8cs.html", "QuestProgression_8cs" ],
     [ "QuestPuppy.cs", "QuestPuppy_8cs.html", "QuestPuppy_8cs" ],
     [ "QuestRandom.cs", "QuestRandom_8cs.html", "QuestRandom_8cs" ],

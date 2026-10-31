@@ -6,5 +6,6 @@ var classLayerModConfig =
     [ "buttonFile", "classLayerModConfig.html#a6410c8b0cf293e90ce43f35db06851ca", null ],
     [ "buttonReset", "classLayerModConfig.html#a1cae7de0152a5f20232964981028b9ff", null ],
     [ "current", "classLayerModConfig.html#a77641fed4f50303edfa55b55ca45b90e", null ],
+    [ "moldLine", "classLayerModConfig.html#a38701dc61335b3a666a5e5398484b7ca", null ],
     [ "note", "classLayerModConfig.html#a8d5a2af80e44feb969b90bd7631542b1", null ]
 ];

@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classAIProgress.html#ae2e9e3f0e73f628c6008106f73243751":[1,0,136,8],
+"classAIProgress.html#af3cf75cd38c68befaae09a30ecb4bb7e":[1,0,136,10],
 "classAIProgress.html#af4afe1ea2821d62d67544fb72f6f9e3a":[1,0,136,7],
 "classAIWork.html":[1,0,137],
 "classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f":[1,0,137,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classAI__Meditate.html#acb19b8576d1f61068ee45d14f45c74f6":[1,0,106,1],
 "classAI__Mofu.html":[1,0,107],
 "classAI__Mofu.html#a3f7f0ac1e84cb2acbaeddb59bb585654":[1,0,107,3],
-"classAI__Mofu.html#a5e71f9daf472e9ad939b5d2af36dc9b3":[1,0,107,0],
-"classAI__Mofu.html#a87a6bef406adac66497648ebfe20999e":[1,0,107,2],
-"classAI__Mofu.html#aab8a1276894a5e6aae79a84f1ef17857":[1,0,107,1]
+"classAI__Mofu.html#a5e71f9daf472e9ad939b5d2af36dc9b3":[1,0,107,0]
 };

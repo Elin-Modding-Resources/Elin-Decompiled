@@ -1,5 +1,14 @@
 var NAVTREEINDEX96 =
 {
+"classPlayer_1_1Stats.html#a7ea7dd5fee508438475b04643b52a86d":[1,0,1043,4,0],
+"classPlayer_1_1Stats.html#a84e326e192127f9a31c6e8e110d20f30":[1,0,1043,4,33],
+"classPlayer_1_1Stats.html#a864d62a9e5bd808a0711351b779ca016":[1,0,1043,4,29],
+"classPlayer_1_1Stats.html#a880c56672bfc8671c2216cee460d042f":[1,0,1043,4,3],
+"classPlayer_1_1Stats.html#a91248095f0fbfca0e26d0fd01abceaf1":[1,0,1043,4,9],
+"classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0":[1,0,1043,4,18],
+"classPlayer_1_1Stats.html#a9a23525a8d3547fc02647602955f78e6":[1,0,1043,4,14],
+"classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007":[1,0,1043,4,19],
+"classPlayer_1_1Stats.html#aa2f7a5cbde1a90ee1080f2620ee56ac0":[1,0,1043,4,12],
 "classPlayer_1_1Stats.html#ab85ff926e445e3a4aea392a745684295":[1,0,1043,4,2],
 "classPlayer_1_1Stats.html#aba555ea8a12aa6e4d618808f692065ef":[1,0,1043,4,6],
 "classPlayer_1_1Stats.html#ac2a82472efbf79c31f62bbee9f1d3d71":[1,0,1043,4,11],
@@ -240,14 +249,5 @@ var NAVTREEINDEX96 =
 "classPoolManager.html#a920563cd26bc7f4083f9203bbe7106cb":[1,0,1052,16],
 "classPoolManager.html#aa4e8fb78c6d87effae5bc62923efdf61":[1,0,1052,1],
 "classPoolManager.html#ac5e8a7cc2690ccee43ee587bd60ef935":[1,0,1052,15],
-"classPoolManager.html#ae4f81908f8eb5b2139681a7c72bb1f47":[1,0,1052,5],
-"classPoolManager.html#ae6f7d97bb806cdfe1996bfde3079104d":[1,0,1052,9],
-"classPoolManager.html#aeb8b3c5ea4a8834087c6ae242a98e258":[1,0,1052,3],
-"classPoolManager.html#aeda2324f89fa124e2106e5a2381ce269":[1,0,1052,10],
-"classPoolManager_1_1PoolGroup.html":[1,0,1052,0],
-"classPoolManager_1_1PoolGroup.html#a010197180d3d2c9de8e9cd7688c8a087":[1,0,1052,0,6],
-"classPoolManager_1_1PoolGroup.html#a3235d4c8fcfc61dda7636261657d1b3d":[1,0,1052,0,2],
-"classPoolManager_1_1PoolGroup.html#a7980b62757060fc401c7f571d3235a3f":[1,0,1052,0,4],
-"classPoolManager_1_1PoolGroup.html#a84621f10ce92599badd0383449f91103":[1,0,1052,0,1],
-"classPoolManager_1_1PoolGroup.html#a8829c3ce8019f8a4f7deee5767ed452c":[1,0,1052,0,3]
+"classPoolManager.html#ae4f81908f8eb5b2139681a7c72bb1f47":[1,0,1052,5]
 };

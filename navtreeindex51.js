@@ -1,5 +1,9 @@
 var NAVTREEINDEX51 =
 {
+"classCollectibleActor.html#a81ab4fa3e0dbb32ab2e0ced1acaf9e53":[1,0,312,3],
+"classCollectibleActor.html#a8861e0d895aa91c870b2bb4ad4ff71eb":[1,0,312,8],
+"classCollectibleActor.html#a918aab8414397c90eee59a9e1fc23a5b":[1,0,312,10],
+"classCollectibleActor.html#ad678e98c65bbf5d558fdcfe82ddb2dce":[1,0,312,7],
 "classCollectibleActor.html#af93429ef439cd618acf6216f4530ff8a":[1,0,312,5],
 "classColorComparer.html":[1,0,313],
 "classColorComparer.html#aaeec063da23e0b3cd3e7e091fa86ddd2":[1,0,313,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX51 =
 "classConIncognito.html":[1,0,360],
 "classConIncognito.html#a96ec991c84d3614b0db47de69b2b27af":[1,0,360,0],
 "classConIncognito.html#ac3b6f4eedc529569734c6f6861a3dfce":[1,0,360,1],
-"classConInsane.html":[1,0,361],
-"classConInsane.html#a7b0bd17d749ff8c3d0664f7a432002e7":[1,0,361,0],
-"classConInsane.html#ae33280dafb330ef3f2e48e05427ed4d0":[1,0,361,1],
-"classConInvisibility.html":[1,0,362],
-"classConInvisibility.html#a5e00a7acf18605b3badae025680be443":[1,0,362,2]
+"classConInsane.html":[1,0,361]
 };

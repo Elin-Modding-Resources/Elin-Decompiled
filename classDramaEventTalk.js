@@ -12,6 +12,7 @@ var classDramaEventTalk =
     [ "choices", "classDramaEventTalk.html#ac5513c2eb5d49110bef39b71fa3eef79", null ],
     [ "funcText", "classDramaEventTalk.html#abeb2e80b9d6d34472f7aa5fdcb203cb5", null ],
     [ "idCancelJump", "classDramaEventTalk.html#a51a1d7f93a290956dd2d13fd0a93a3a7", null ],
+    [ "ignoreClickSound", "classDramaEventTalk.html#a808d608c3e575974142ada17ef16a63a", null ],
     [ "text", "classDramaEventTalk.html#ae471b19a0925d4e0b5ee44711d729e01", null ],
     [ "timer", "classDramaEventTalk.html#a253096b8c89bef2112f92ba9ef47da6d", null ],
     [ "unknown", "classDramaEventTalk.html#a642a339bcfefc90b0b0103d09ac9f689", null ]

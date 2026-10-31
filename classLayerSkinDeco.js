@@ -1,7 +1,7 @@
 var classLayerSkinDeco =
 [
     [ "Activate", "classLayerSkinDeco.html#a27801be629c0c92ae369790cf75d6c8f", null ],
-    [ "GetCustomSprites", "classLayerSkinDeco.html#a7b9b3ec01ce5386dfc4fbaa4dbe72c2c", null ],
+    [ "GetCustomSprites", "classLayerSkinDeco.html#a3da365f70758b60055471a7f31a490e4", null ],
     [ "OnInit", "classLayerSkinDeco.html#aaba708edb224256b0f77e125cbf492a4", null ],
     [ "OnKill", "classLayerSkinDeco.html#a66b5f52af3b8c5f7b40d7b2fdf23adda", null ],
     [ "OnUpdateInput", "classLayerSkinDeco.html#aaae1e1f55dfedc295d83275df833d453", null ],

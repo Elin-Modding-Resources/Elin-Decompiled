@@ -1,5 +1,9 @@
 var NAVTREEINDEX58 =
 {
+"classCoreRef_1_1Rects.html":[1,0,438,9],
+"classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,438,9,4],
+"classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,438,9,1],
+"classCoreRef_1_1Rects.html#a1bb9b25c6a64ebe300ae82af5951103e":[1,0,438,9,0],
 "classCoreRef_1_1Rects.html#a2d213a0f6c0ae766b67549f8d0151233":[1,0,438,9,6],
 "classCoreRef_1_1Rects.html#a4d5ab247f8488c8cdd85e0d1d510834d":[1,0,438,9,3],
 "classCoreRef_1_1Rects.html#a61b1d2086446d460d4fd21b2cc1172bd":[1,0,438,9,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX58 =
 "classCursorSystem.html#af8975fc41be5e40b35dbc1de53fde4a4":[1,0,456,26],
 "classCursorSystem.html#afd6e6c2813a93fb13fb26d1785d80467":[1,0,456,7],
 "classCurveEffect.html":[1,0,457],
-"classCurveEffect.html#a23da238be27fe6799a1794157d666f5c":[1,0,457,2],
-"classCurveEffect.html#a25c7e050fc84c8cb85c2df853f9487bc":[1,0,457,1],
-"classCurveEffect.html#a36c44031fd96679fb10f9d29283c0443":[1,0,457,8],
-"classCurveEffect.html#a4de2c00445b65ff28da37c2ed81050e0":[1,0,457,6],
-"classCurveEffect.html#abbc9ba05b616114a986f9ef6bfef2eeb":[1,0,457,3]
+"classCurveEffect.html#a23da238be27fe6799a1794157d666f5c":[1,0,457,2]
 };

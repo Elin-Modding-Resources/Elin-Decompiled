@@ -1208,6 +1208,7 @@ var annotated_dup =
     [ "QuestMusic", "classQuestMusic.html", "classQuestMusic" ],
     [ "QuestNasu", "classQuestNasu.html", "classQuestNasu" ],
     [ "QuestNegotiationDarkness", "classQuestNegotiationDarkness.html", "classQuestNegotiationDarkness" ],
+    [ "QuestNevernight", "classQuestNevernight.html", "classQuestNevernight" ],
     [ "QuestProgression", "classQuestProgression.html", "classQuestProgression" ],
     [ "QuestPuppy", "classQuestPuppy.html", "classQuestPuppy" ],
     [ "QuestRandom", "classQuestRandom.html", "classQuestRandom" ],

@@ -48,6 +48,7 @@ var classClassExtension =
     [ "FindMax< T >", "classClassExtension.html#a9849ed79304c3da25456031f9256fdb9", null ],
     [ "FindTagInParents", "classClassExtension.html#aa8c321edce495f7e964169eba67f6f12", null ],
     [ "FirstItem< TKey, TValue >", "classClassExtension.html#a95ef1b31fa7cdc89341d862308e4eb17", null ],
+    [ "Fit", "classClassExtension.html#a21e7edc03b3f83462fa5c18cda444215", null ],
     [ "ForeachReverse< T >", "classClassExtension.html#a9ec6855e7769150f20f1de3d0fdd3b53", null ],
     [ "ForeachReverse< T >", "classClassExtension.html#ae61b0d966610fb63f8e5116ef1a272e0", null ],
     [ "FromInt2", "classClassExtension.html#a42c95437c7e2de0027b87d049321418a", null ],
