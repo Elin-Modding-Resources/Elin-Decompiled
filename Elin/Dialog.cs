@@ -183,7 +183,7 @@ public class Dialog : ELayer
 				}
 				foreach (EInput.KeyMap item in ELayer.core.config.input.keys.List())
 				{
-					if (item.key == value && item.GetGroup() == keymap.GetGroup())
+					if (keymap.action != EAction.None && item.key == value && item.GetGroup() == keymap.GetGroup())
 					{
 						item.key = keymap.key;
 					}

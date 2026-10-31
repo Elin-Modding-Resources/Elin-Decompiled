@@ -189,4 +189,6 @@ public class CINT
 	public const int isSleepLock = 135;
 
 	public const int isSummonDropCorpse = 136;
+
+	public const int isAlreadyCommitedSuicide = 137;
 }

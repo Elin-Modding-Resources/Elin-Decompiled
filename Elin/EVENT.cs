@@ -39,6 +39,8 @@ public static class EVENT
 
 	public const string ModsActivated = "elin.mods.activated";
 
+	public const string WidgetMetasBuilding = "elin.widget.metas_building";
+
 	public const string SourceImporting = "elin.source.importing";
 
 	public const string SourceImported = "elin.source.imported";

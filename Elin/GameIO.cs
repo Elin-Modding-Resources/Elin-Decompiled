@@ -81,20 +81,7 @@ public class GameIO : EClass
 
 	public static GameIndex SaveGame()
 	{
-		string text = JsonConvert.SerializeObject(EClass.core.game, formatting, jsWriteGame);
-		string path = pathCurrentSave + "game.txt";
-		GameIndex gameIndex = new GameIndex().Create(EClass.core.game);
-		gameIndex.id = Game.id;
-		gameIndex.cloud = EClass.game.isCloud;
-		IO.SaveFile(pathCurrentSave + "index.txt", gameIndex);
-		if (compressSave)
-		{
-			IO.Compress(path, text);
-		}
-		else
-		{
-			File.WriteAllText(path, text);
-		}
+		GameIndex gameIndex = WriteGame(pathCurrentSave);
 		DirectoryInfo[] directories = new DirectoryInfo(pathCurrentSave).GetDirectories();
 		foreach (DirectoryInfo directoryInfo in directories)
 		{
@@ -108,6 +95,40 @@ public class GameIO : EClass
 		if (gameIndex.cloud)
 		{
 			PrepareSteamCloud(gameIndex.id);
+		}
+		return gameIndex;
+	}
+
+	public static void SaveGameCopy(string path)
+	{
+		IO.CopyDir(pathCurrentSave, path, (string s) => s == "Temp");
+		IO.DeleteFile(path + "cloud.zip");
+		foreach (Zone zone in EClass.game.spatials.Zones)
+		{
+			if (zone.map != null)
+			{
+				zone.map.Save(path + zone.uid + "/");
+			}
+		}
+		EClass.game.version = EClass.core.version;
+		WriteGame(path);
+	}
+
+	public static GameIndex WriteGame(string root)
+	{
+		string text = JsonConvert.SerializeObject(EClass.core.game, formatting, jsWriteGame);
+		string path = root + "game.txt";
+		GameIndex gameIndex = new GameIndex().Create(EClass.core.game);
+		gameIndex.id = Game.id;
+		gameIndex.cloud = EClass.game.isCloud;
+		IO.SaveFile(root + "index.txt", gameIndex);
+		if (compressSave)
+		{
+			IO.Compress(path, text);
+		}
+		else
+		{
+			File.WriteAllText(path, text);
 		}
 		return gameIndex;
 	}

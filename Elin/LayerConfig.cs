@@ -174,6 +174,10 @@ public class LayerConfig : ELayer
 				ELayer.ui.AddLayer<LayerConfig>();
 			});
 		});
+		windows[0].AddBottomButton("LayerMod", delegate
+		{
+			ELayer.ui.AddLayer<LayerMod>();
+		});
 		List<PostEffectProfile> list = (from p in Resources.LoadAll<PostEffectProfile>("Scene/Profile/PostEffect/")
 			where !p.disable
 			select p).ToList();

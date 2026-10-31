@@ -1112,6 +1112,7 @@ public class DramaManager : EMono
 				}
 				return text2;
 			})) as DramaEventTalk;
+			lastTalk.ignoreClickSound = action == "ignoreClickSound";
 			lastTalk.center = p2 == "center";
 			break;
 		case "new":

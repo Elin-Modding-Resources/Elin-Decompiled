@@ -1045,22 +1045,17 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			for (int j = 0; j < 1000; j++)
-			{
-				EClass.pc.ModExp(241, 1000);
-			}
-			string text2 = new string[4] { "エターナルフォースブリザード", "Eternal Force Blizzard", "ぬるぽ", "Null Pointer" }.RandomItem();
-			EClass.pc.renderer.Say("| " + text2 + " ");
+			LayerDrama.Activate("sorin", "sorin", "quest_nevernight1");
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))
 		{
-			string text3 = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
-			if (text3 != Game.id)
+			string text2 = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
+			if (text2 != Game.id)
 			{
-				IO.DeleteDirectory(CorePath.RootSave + text3);
-				IO.CopyAll(CorePath.RootSave + Game.id, CorePath.RootSave + text3);
-				Game.id = text3;
+				IO.DeleteDirectory(CorePath.RootSave + text2);
+				IO.CopyAll(CorePath.RootSave + Game.id, CorePath.RootSave + text2);
+				Game.id = text2;
 			}
 			EClass.game.isCloud = false;
 			EClass.game.Save();

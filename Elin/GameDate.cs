@@ -229,6 +229,10 @@ public class GameDate : Date
 		{
 			EClass.game.quests.Add("stone_dream", "loytel");
 		}
+		if (EClass.game.quests.IsCompleted("stone_dream") && !EClass.game.quests.IsAdded("nevernight"))
+		{
+			EClass.game.quests.Add("nevernight", "sorin");
+		}
 		if (EClass.game.quests.IsCompleted("exploration"))
 		{
 			EClass.player.flags.daysAfterQuestExploration++;

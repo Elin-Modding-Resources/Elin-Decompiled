@@ -136,19 +136,14 @@ public class LayerFeedback : ELayer
 		};
 		category.Init((string s) => ("form_" + s).lang());
 		List<GameIndex> gameList = GameIO.GetGameList((ELayer.core.config.cloud || (ELayer.core.IsGameStarted && ELayer.game.isCloud)) ? CorePath.RootSaveCloud : CorePath.RootSave);
+		if (ELayer.core.IsGameStarted)
+		{
+			gameList.Insert(0, null);
+		}
 		if (gameList.Count > 0)
 		{
-			int index = 0;
 			saveIndex = gameList[0];
-			for (int num = 0; num < gameList.Count; num++)
-			{
-				if (ELayer.core.IsGameStarted && gameList[num].id == Game.id)
-				{
-					index = num;
-					saveIndex = gameList[num];
-				}
-			}
-			ddSave.SetList(index, gameList, (GameIndex a, int b) => ((ELayer.core.IsGameStarted && a.id == Game.id) ? "currentSave".lang() : "") + a.FormTitle, delegate(int a, GameIndex b)
+			ddSave.SetList(0, gameList, (GameIndex a, int b) => (a != null) ? a.FormTitle : "feedbackCurrentSave".lang(), delegate(int a, GameIndex b)
 			{
 				saveIndex = b;
 			});
@@ -191,6 +186,7 @@ public class LayerFeedback : ELayer
 
 	public void CollectFiles()
 	{
+		byte[] array = (toggleSave.isOn ? ZipSave() : null);
 		ReportTitle.ignore = false;
 		ReportTitle.strAdd = "";
 		TextField.strAddText = "";
@@ -211,13 +207,13 @@ public class LayerFeedback : ELayer
 		}
 		string text4 = inputDetail.text;
 		int num = 0;
-		string[] array = new string[23]
+		string[] array2 = new string[23]
 		{
 			"シーラカンス", "ナーフ", "つまらない", "面白くない", "不合理", "やめて", "無駄", "弱体化", "不親切", "クソ",
 			"糞", "バカ", "馬鹿", "coelacanth", "nerf", "boring", "please don't", "waste", "fuck", "suck",
 			"tbh", "shit", "stupid"
 		};
-		foreach (string c in array)
+		foreach (string c in array2)
 		{
 			num += CountString(text4, c);
 		}
@@ -235,43 +231,35 @@ public class LayerFeedback : ELayer
 			zipFile.Save(text3);
 		}
 		form.CurrentReport.AttachFile("log.zip", File.ReadAllBytes(text3));
-		if (toggleSave.isOn)
+		if (array != null)
 		{
-			bool flag = ELayer.core.config.cloud || (ELayer.core.IsGameStarted && ELayer.game.isCloud);
-			string text5 = text2 + "/save.zip";
-			using (ZipFile zipFile2 = new ZipFile())
-			{
-				zipFile2.ExtractExistingFile = ExtractExistingFileAction.OverwriteSilently;
-				zipFile2.AddDirectory((flag ? CorePath.RootSaveCloud : CorePath.RootSave) + saveIndex.id);
-				zipFile2.Save(text5);
-			}
-			form.CurrentReport.AttachFile(saveIndex.id + ".zip", File.ReadAllBytes(text5));
+			form.CurrentReport.AttachFile((saveIndex?.id ?? Game.id) + ".zip", array);
 		}
 		IO.DeleteDirectory(text2);
-		static int CountString(string s, string text6)
+		static int CountString(string s, string text5)
 		{
-			string newValue = text6.Substring(0, text6.Length - 1);
-			return s.Length - s.Replace(text6, newValue).Length;
+			string newValue = text5.Substring(0, text5.Length - 1);
+			return s.Length - s.Replace(text5, newValue).Length;
 		}
 		void ParseLog(string path)
 		{
 			if (File.Exists(path))
 			{
-				string[] array2 = IO.LoadTextArray(path);
-				foreach (string text6 in array2)
+				string[] array3 = IO.LoadTextArray(path);
+				foreach (string text5 in array3)
 				{
-					switch (text6)
+					switch (text5)
 					{
 					case "InvalidOperationException: Collection was modified; enumeration operation may not execute.":
 					case "NullReferenceException: Object reference not set to an instance of an object":
 						errors++;
 						break;
 					default:
-						if (text6.Contains("exception"))
+						if (text5.Contains("exception"))
 						{
 							errors++;
 						}
-						else if (text6.Contains("Exception"))
+						else if (text5.Contains("Exception"))
 						{
 							errors++;
 						}
@@ -280,6 +268,37 @@ public class LayerFeedback : ELayer
 						break;
 					}
 				}
+			}
+		}
+	}
+
+	private byte[] ZipSave()
+	{
+		bool flag = ELayer.core.config.cloud || (ELayer.core.IsGameStarted && ELayer.game.isCloud);
+		string text = ((saveIndex == null) ? (Application.persistentDataPath + "/_temp_save") : ((flag ? CorePath.RootSaveCloud : CorePath.RootSave) + saveIndex.id));
+		try
+		{
+			if (saveIndex == null)
+			{
+				IO.DeleteDirectory(text);
+				GameIO.SaveGameCopy(text + "/");
+			}
+			using ZipFile zipFile = new ZipFile();
+			using MemoryStream memoryStream = new MemoryStream();
+			zipFile.AddDirectory(text);
+			zipFile.Save(memoryStream);
+			return memoryStream.ToArray();
+		}
+		catch (Exception exception)
+		{
+			Debug.LogException(exception);
+			return null;
+		}
+		finally
+		{
+			if (saveIndex == null)
+			{
+				IO.DeleteDirectory(text);
 			}
 		}
 	}

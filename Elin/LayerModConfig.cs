@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class LayerModConfig : ELayer
 {
@@ -7,6 +8,8 @@ public class LayerModConfig : ELayer
 	public UIButton buttonReset;
 
 	public UIButton buttonFile;
+
+	public Transform moldLine;
 
 	public ModPackage current;
 
@@ -54,6 +57,14 @@ public class LayerModConfig : ELayer
 		catch (Exception ex)
 		{
 			ModUtil.LogModError(ex.ToString(), p);
+		}
+		Transform transform = note.transform;
+		for (int num = transform.childCount - 1; num >= 0; num--)
+		{
+			if (transform.GetChild(num).name == "HeaderNote(Clone)")
+			{
+				Util.Instantiate(moldLine, transform).SetSiblingIndex(num + 1);
+			}
 		}
 		note.Build();
 	}

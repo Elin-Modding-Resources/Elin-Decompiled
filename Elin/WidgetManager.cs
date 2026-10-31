@@ -12,6 +12,8 @@ public class WidgetManager : EMono
 		public Dictionary<string, Widget.Config> dict;
 	}
 
+	public static readonly List<Func<string, WidgetManager, Widget>> widgetLoaders = new List<Func<string, WidgetManager, Widget>>();
+
 	public Dictionary<string, Widget.Meta> metaMap = new Dictionary<string, Widget.Meta>();
 
 	public string currentPath;
@@ -82,34 +84,21 @@ public class WidgetManager : EMono
 				}
 			}
 		}
-		if (metaMap.Count == 0)
+		BaseModManager.PublishEvent("elin.widget.metas_building", this);
+		foreach (Widget.Meta meta in metas)
 		{
-			foreach (Widget.Meta meta in metas)
-			{
-				metaMap.Add(meta.id, meta);
-			}
+			metaMap[meta.id] = meta;
 		}
 		foreach (Widget.Meta meta2 in metas)
 		{
 			if (!configs.ContainsKey(meta2.id))
 			{
-				Widget.Config config = new Widget.Config
-				{
-					meta = meta2,
-					valid = true,
-					id = meta2.id,
-					state = ((!meta2.enabled) ? Widget.State.Inactive : Widget.State.Active),
-					locked = meta2.locked
-				};
-				config.skin.SetID(0);
-				configs.Add(meta2.id, config);
+				configs.Add(meta2.id, CreateConfig(meta2));
+				continue;
 			}
-			else
-			{
-				Widget.Config config2 = configs[meta2.id];
-				config2.valid = true;
-				config2.meta = meta2;
-			}
+			Widget.Config config = configs[meta2.id];
+			config.valid = true;
+			config.meta = meta2;
 		}
 		foreach (Widget.Config item2 in configs.Values.ToList())
 		{
@@ -118,6 +107,48 @@ public class WidgetManager : EMono
 				configs.Remove(item2.id);
 			}
 		}
+	}
+
+	public void RegisterMeta(Widget.Meta meta)
+	{
+		if (meta == null || meta.id.IsEmpty())
+		{
+			return;
+		}
+		int num = metas.FindIndex((Widget.Meta m) => m.id == meta.id);
+		if (num >= 0)
+		{
+			metas[num] = meta;
+		}
+		else
+		{
+			metas.Add(meta);
+		}
+		metaMap[meta.id] = meta;
+		if (EMono.player?.widgets != null)
+		{
+			if (configs.TryGetValue(meta.id, out var value))
+			{
+				value.valid = true;
+				value.meta = meta;
+			}
+			else
+			{
+				configs.Add(meta.id, CreateConfig(meta));
+			}
+		}
+	}
+
+	private Widget.Config CreateConfig(Widget.Meta m)
+	{
+		Widget.Config config = new Widget.Config();
+		config.meta = m;
+		config.valid = true;
+		config.id = m.id;
+		config.state = ((!m.enabled) ? Widget.State.Inactive : Widget.State.Active);
+		config.locked = m.locked;
+		config.skin.SetID(0);
+		return config;
 	}
 
 	public void OnKillGame()
@@ -185,7 +216,11 @@ public class WidgetManager : EMono
 	public Widget ActivateWidget(string id)
 	{
 		string text = "Widget" + id;
-		Widget widget = Util.Instantiate<Widget>("UI/Widget/" + text, this) ?? Util.Instantiate<Widget>("UI/Widget/" + text + "/" + text, this);
+		Widget widget = LoadCustomWidget(id);
+		if (!widget)
+		{
+			widget = Util.Instantiate<Widget>("UI/Widget/" + text, this) ?? Util.Instantiate<Widget>("UI/Widget/" + text + "/" + text, this);
+		}
 		if (!widget)
 		{
 			Debug.LogError("Widget:" + id + " not found.");
@@ -200,6 +235,26 @@ public class WidgetManager : EMono
 			widget.OnManagerActivate();
 		}
 		return widget;
+	}
+
+	private Widget LoadCustomWidget(string id)
+	{
+		foreach (Func<string, WidgetManager, Widget> widgetLoader in widgetLoaders)
+		{
+			try
+			{
+				Widget widget = widgetLoader(id, this);
+				if ((bool)widget)
+				{
+					return widget;
+				}
+			}
+			catch (Exception exception)
+			{
+				Debug.LogException(exception);
+			}
+		}
+		return null;
 	}
 
 	public void RefreshWidget(Widget.Config c)

@@ -144,6 +144,7 @@ public class Steam : MonoBehaviour
 		void ExecutePage()
 		{
 			query.SetReturnKeyValueTags(tags: true);
+			query.SetReturnMetadata(metadata: true);
 			if (!query.Execute(HandleResults))
 			{
 				ReportError("UgcQuery.Execute failed at page " + page);
@@ -163,7 +164,7 @@ public class Steam : MonoBehaviour
 				else
 				{
 					query.SetPage(++page);
-					ExecutePage();
+					EClass.core.actionsNextFrame.Add(ExecutePage);
 				}
 			}
 		}

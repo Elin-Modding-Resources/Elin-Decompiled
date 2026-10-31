@@ -884,24 +884,33 @@ public class Player : EClass
 				PlayStory(availableStories[0]);
 				availableStories.RemoveAt(0);
 			}
-			if (!LayerDrama.Instance && !EClass.game.isLoading && EClass._zone.IsPCFaction)
+			if ((bool)LayerDrama.Instance || EClass.game.isLoading || !EClass._zone.IsPCFaction)
 			{
-				if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 0 && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 5)
+				return;
+			}
+			if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 0 && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 5)
+			{
+				EClass.game.quests.Get<QuestNegotiationDarkness>().Complete();
+				EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+			}
+			else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 1)
+			{
+				EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+			}
+			else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 2)
+			{
+				EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+			}
+			else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 3)
+			{
+				EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+			}
+			if (EClass.game.quests.GetPhase<QuestNevernight>() == 0)
+			{
+				QuestNevernight questNevernight = EClass.game.quests.Get<QuestNevernight>();
+				if (EClass.world.date.GetElapsedHour(questNevernight.dateStarted) >= 24)
 				{
-					EClass.game.quests.Get<QuestNegotiationDarkness>().Complete();
-					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
-				}
-				else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 1)
-				{
-					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
-				}
-				else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 2)
-				{
-					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
-				}
-				else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 3)
-				{
-					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+					questNevernight.UpdateOnTalk();
 				}
 			}
 		}

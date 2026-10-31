@@ -494,7 +494,14 @@ public class Map : MapBounds, IPathfindGrid
 					serializedCharas.Add(chara);
 				}
 			}
-			GameIO.SaveFile(path + "map", this);
+			try
+			{
+				GameIO.SaveFile(path + "map", this);
+			}
+			finally
+			{
+				serializedCharas.Clear();
+			}
 		}
 		else
 		{

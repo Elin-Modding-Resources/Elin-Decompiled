@@ -6962,7 +6962,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (base.IsPCFactionOrMinion)
 		{
-			if ((c == EClass.pc.enemy && !c.IsPCFactionOrMinion) || c.hostility <= Hostility.Enemy)
+			if (((c == EClass.pc.enemy || c == enemy) && !c.IsPCFactionOrMinion) || c.hostility <= Hostility.Enemy)
 			{
 				return true;
 			}

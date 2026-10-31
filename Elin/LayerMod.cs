@@ -404,8 +404,8 @@ public class LayerMod : ELayer
 	private void SetModRow(ModPackage a, ItemMod b)
 	{
 		b.package = a;
-		string title = ((a.group != null && !HasFilter) ? "   " : "") + (ELayer.core.mods.packages.IndexOf(a) + 1) + ". " + (a.isInPackages ? "[Local] " : "") + a.title.IsEmpty(a.dirInfo.Name);
-		b.buttonActivate.mainText.SetText(FitTitle(b.buttonActivate.mainText, title), (!a.IsValidVersion() || a.blockedBy != null || !a.langDepError.IsEmpty()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));
+		string s = ((a.group != null && !HasFilter) ? "   " : "") + (ELayer.core.mods.packages.IndexOf(a) + 1) + ". " + (a.isInPackages ? "[Local] " : "") + a.title.IsEmpty(a.dirInfo.Name);
+		b.buttonActivate.mainText.SetText(b.buttonActivate.mainText.Fit(s), (!a.IsValidVersion() || a.blockedBy != null || !a.langDepError.IsEmpty()) ? FontColor.Bad : (a.activated ? FontColor.ButtonGeneral : FontColor.Passive));
 		b.buttonActivate.subText.text = a.version;
 		b.buttonLock.mainText.text = a.author;
 		ItemMod itemMod = ((a.group != null && !HasFilter) ? list.GetPair<ItemMod>(a.group) : null);
@@ -627,10 +627,10 @@ public class LayerMod : ELayer
 	{
 		List<BaseModPackage> members = Members(g);
 		int on = members.Count((BaseModPackage p) => p.willActivate);
-		string title = ((members.Count == 0) ? "" : (g.collapsed ? "[+] " : "[-] ")) + g.name;
+		string s = ((members.Count == 0) ? "" : (g.collapsed ? "[+] " : "[-] ")) + g.name;
 		UIText mainText = b.buttonActivate.mainText;
 		mainText.fontStyle = FontStyle.Bold;
-		mainText.SetText(FitTitle(mainText, title, (members.Count > 0) ? (" (" + on + "/" + members.Count + ")") : ""), FontColor.Topic);
+		mainText.SetText(mainText.Fit(s, (members.Count > 0) ? (" (" + on + "/" + members.Count + ")") : ""), FontColor.Topic);
 		Color topic = mainText.color;
 		Color? color = g.color;
 		if (color.HasValue)
@@ -811,23 +811,6 @@ public class LayerMod : ELayer
 				}
 			}
 		});
-	}
-
-	private static string FitTitle(UIText text, string title, string suffix = "")
-	{
-		TextGenerationSettings generationSettings = text.GetGenerationSettings(Vector2.zero);
-		TextGenerator cachedTextGeneratorForLayout = text.cachedTextGeneratorForLayout;
-		float num = text.rectTransform.rect.width * text.pixelsPerUnit;
-		if (cachedTextGeneratorForLayout.GetPreferredWidth(title + suffix, generationSettings) <= num)
-		{
-			return title + suffix;
-		}
-		int num2 = title.Length;
-		while (num2 > 1 && cachedTextGeneratorForLayout.GetPreferredWidth(title[..num2].TrimEnd() + ".." + suffix, generationSettings) > num)
-		{
-			num2--;
-		}
-		return title[..num2].TrimEnd() + ".." + suffix;
 	}
 
 	private bool Match(BaseModPackage p)

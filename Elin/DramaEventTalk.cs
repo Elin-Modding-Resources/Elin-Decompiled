@@ -16,6 +16,8 @@ public class DramaEventTalk : DramaEvent
 
 	public bool unknown;
 
+	public bool ignoreClickSound;
+
 	public float timer;
 
 	public Func<string> funcText;
@@ -86,7 +88,10 @@ public class DramaEventTalk : DramaEvent
 				{
 					sequence.tempEvents.Clear();
 				}
-				EClass.Sound.Play("click_chat");
+				if (!ignoreClickSound)
+				{
+					EClass.Sound.Play("click_chat");
+				}
 				if (idCancelJump == "back")
 				{
 					return true;
@@ -132,7 +137,10 @@ public class DramaEventTalk : DramaEvent
 						return false;
 					}
 					base.actor.gameObject.SetActive(value: false);
-					EClass.Sound.Play("click_chat");
+					if (!ignoreClickSound)
+					{
+						EClass.Sound.Play("click_chat");
+					}
 					if (temp)
 					{
 						sequence.tempEvents.Clear();

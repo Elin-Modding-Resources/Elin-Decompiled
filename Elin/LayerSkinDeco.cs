@@ -17,20 +17,40 @@ public class LayerSkinDeco : ELayer
 
 	public SkinConfig cfg => widget.config.skin;
 
-	public static List<Sprite> GetCustomSprites()
+	public static List<Sprite> GetCustomSprites(bool rescan = false)
 	{
-		if (customSprites == null)
+		if (customSprites == null || rescan)
 		{
-			customSprites = new List<Sprite>();
-			string[] files = Directory.GetFiles(CorePath.custom + "Deco");
-			foreach (string text in files)
+			List<DirectoryInfo> list = new List<DirectoryInfo>
 			{
-				FileInfo fileInfo = new FileInfo(text);
-				if (fileInfo.Extension == ".png")
+				new DirectoryInfo(CorePath.custom + "Deco")
+			};
+			if (customSprites == null)
+			{
+				list.AddRange(PackageIterator.GetDirectories("Deco"));
+			}
+			if (customSprites == null)
+			{
+				customSprites = new List<Sprite>();
+			}
+			Dictionary<string, FileInfo> dictionary = new Dictionary<string, FileInfo>();
+			foreach (FileInfo item in list.SelectMany((DirectoryInfo d) => d.GetFiles("*.png")))
+			{
+				dictionary["_" + item.Name] = item;
+			}
+			foreach (Sprite customSprite in customSprites)
+			{
+				dictionary.Remove(customSprite.name);
+			}
+			foreach (KeyValuePair<string, FileInfo> item2 in dictionary)
+			{
+				item2.Deconstruct(out var key, out var value);
+				string text = key;
+				Texture2D texture2D = IO.LoadPNG(value.FullName, FilterMode.Bilinear);
+				if ((bool)texture2D)
 				{
-					Texture2D texture2D = IO.LoadPNG(text, FilterMode.Bilinear);
 					Sprite sprite = Sprite.Create(texture2D, new Rect(0f, 0f, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
-					sprite.name = "_" + fileInfo.Name;
+					sprite.name = text;
 					customSprites.Add(sprite);
 				}
 			}
@@ -147,7 +167,7 @@ public class LayerSkinDeco : ELayer
 						m.Hide();
 					}
 				};
-				foreach (Sprite item in Resources.LoadAll<Sprite>("Media/Graphics/Deco/").Concat(GetCustomSprites()))
+				foreach (Sprite item in Resources.LoadAll<Sprite>("Media/Graphics/Deco/").Concat(GetCustomSprites(rescan: true)))
 				{
 					uIList.Add(item);
 				}
