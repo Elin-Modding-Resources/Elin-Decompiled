@@ -1346,6 +1346,23 @@ public static class ClassExtension
 		text.color = new Color(text.color.r, text.color.g, text.color.b, aloha);
 	}
 
+	public static string Fit(this Text text, string s, string suffix = "")
+	{
+		TextGenerationSettings generationSettings = text.GetGenerationSettings(Vector2.zero);
+		TextGenerator cachedTextGeneratorForLayout = text.cachedTextGeneratorForLayout;
+		float num = text.rectTransform.rect.width * text.pixelsPerUnit;
+		if (cachedTextGeneratorForLayout.GetPreferredWidth(s + suffix, generationSettings) <= num)
+		{
+			return s + suffix;
+		}
+		int num2 = s.Length;
+		while (num2 > 1 && cachedTextGeneratorForLayout.GetPreferredWidth(s[..num2].TrimEnd() + ".." + suffix, generationSettings) > num)
+		{
+			num2--;
+		}
+		return s[..num2].TrimEnd() + ".." + suffix;
+	}
+
 	public static void SetSlider(this Slider slider, float value, Func<float, string> action, bool notify)
 	{
 		slider.SetSlider(value, action, -1, -1, notify);
