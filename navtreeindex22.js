@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"TraitToolLoom_8cs.html":[2,0,0,1946],
 "TraitToolLoom_8cs_source.html":[2,0,0,1946],
 "TraitToolMusicBig_8cs.html":[2,0,0,1948],
 "TraitToolMusicBig_8cs_source.html":[2,0,0,1948],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "UIHighlightObject_8cs.html":[2,0,0,3,133],
 "UIHighlightObject_8cs_source.html":[2,0,0,3,133],
 "UIHighlight_8cs.html":[2,0,0,3,132],
-"UIHighlight_8cs_source.html":[2,0,0,3,132],
-"UIHomeInfo_8cs.html":[2,0,0,2028]
+"UIHighlight_8cs_source.html":[2,0,0,3,132]
 };

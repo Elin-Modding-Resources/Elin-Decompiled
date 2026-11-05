@@ -1,5 +1,6 @@
 var NAVTREEINDEX131 =
 {
+"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1851,0],
 "classTraitMerchantMilk.html":[1,0,1852],
 "classTraitMerchantMilk.html#a1425f96b7285390b82e48446a25f6e49":[1,0,1852,0],
 "classTraitMerchantPlan.html":[1,0,1853],
@@ -248,6 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitPoina.html":[1,0,1912],
 "classTraitPolicyBoard.html":[1,0,1913],
 "classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1913,1],
-"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1913,0],
-"classTraitPoolTable.html":[1,0,1914]
+"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1913,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"classMapGenVariation.html":[1,0,967],
 "classMapGenVariation.html#a42e9f93ff30e76e5e2f43f55ea2b54b5":[1,0,967,9],
 "classMapGenVariation.html#a6666364efc7990097eb7c171b8cc7a94":[1,0,967,8],
 "classMapGenVariation.html#a84aaf571b55d274dea195f893ad8b0a9":[1,0,967,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "classMissileHomingEffect.html#ac1de5363196909fa96484147a3b0c88f":[1,0,985,8],
 "classMissileHomingEffect.html#acd078c2a6e630c2d5d8834172bdd44ad":[1,0,985,14],
 "classMissileHomingEffect.html#ad00eccea7b29a782d790b1e625fdf1f5":[1,0,985,0],
-"classMissileHomingEffect.html#ad19a4fd03282ba8fd550cf21e981f8b3":[1,0,985,37],
-"classMissileHomingEffect.html#ad2813a7d0cc7af758d2cebd3f3e43ba9":[1,0,985,25]
+"classMissileHomingEffect.html#ad19a4fd03282ba8fd550cf21e981f8b3":[1,0,985,37]
 };

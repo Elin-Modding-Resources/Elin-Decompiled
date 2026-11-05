@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"PopupManager_8cs.html":[2,0,0,984],
 "PopupManager_8cs_source.html":[2,0,0,984],
 "Portrait_8cs.html":[2,0,0,985],
 "Portrait_8cs_source.html":[2,0,0,985],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "RecipeManager_8cs.html":[2,0,0,1091],
 "RecipeManager_8cs.html#a432503dc7f38330c914d1d4c0c93db9c":[2,0,0,1091,2],
 "RecipeManager_8cs.html#abbe662f3a29b3dcfea0270d7679482a3":[2,0,0,1091,1],
-"RecipeManager_8cs_source.html":[2,0,0,1091],
-"RecipeSource_8cs.html":[2,0,0,1092]
+"RecipeManager_8cs_source.html":[2,0,0,1091]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classGradientEffect.html#abfa6492afb1c2d45bbb5d606894109c5":[1,0,656,7],
 "classGridItem.html":[1,0,657],
 "classGridItem.html#a164a239460c2beee2065eb770412d45b":[1,0,657,0],
 "classGridItem.html#a33f9c4f7efefaccdd70f52a45027f63a":[1,0,657,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classGuildFighter.html":[1,0,685],
 "classGuildFighter.html#a22f91f806934e4857465d31fff28ddcf":[1,0,685,3],
 "classGuildFighter.html#a4a2f7c8e99bdd6642f4d9533d586e158":[1,0,685,4],
-"classGuildFighter.html#a507da7baf36e3e45bbe77898dd00fc2e":[1,0,685,1],
-"classGuildFighter.html#abcb58ab873d564b6f5d06ebee392cb58":[1,0,685,2]
+"classGuildFighter.html#a507da7baf36e3e45bbe77898dd00fc2e":[1,0,685,1]
 };

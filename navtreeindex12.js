@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"MathEx_8cs_source.html":[2,0,0,2,59],
 "MeetingFarris_8cs.html":[2,0,0,917],
 "MeetingFarris_8cs_source.html":[2,0,0,917],
 "MeetingManager_8cs.html":[2,0,0,918],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "PopperManager_8cs.html":[2,0,0,3,77],
 "PopperManager_8cs_source.html":[2,0,0,3,77],
 "Popper_8cs.html":[2,0,0,3,76],
-"Popper_8cs_source.html":[2,0,0,3,76],
-"PopupManager_8cs.html":[2,0,0,984]
+"Popper_8cs_source.html":[2,0,0,3,76]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"classAM__Visibility.html#a93afdd826b09ab6b4a97646b9e26c489":[1,0,185,3],
 "classAM__Visibility.html#aa7f8d5cdbcef7e00cda89d6a083e39e8":[1,0,185,5],
 "classAM__Visibility.html#af2b7e2ceb84afb7802f11ebb5f905edf":[1,0,185,1],
 "classAbility.html":[1,0,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "classActMoneyThrow.html#a98a4facca83d1775a09b4e3167bc2301":[1,0,52,0],
 "classActMultihit.html":[1,0,53],
 "classActMultihit.html#a374cdb568d902102960a4ee76a715adf":[1,0,53,0],
-"classActMultihit.html#a5bd79883248af7acaeb3412078e184f6":[1,0,53,1],
-"classActNTR.html":[1,0,55]
+"classActMultihit.html#a5bd79883248af7acaeb3412078e184f6":[1,0,53,1]
 };

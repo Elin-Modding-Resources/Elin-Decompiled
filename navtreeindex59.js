@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"classCurveEffect.html#a23da238be27fe6799a1794157d666f5c":[1,0,457,2],
 "classCurveEffect.html#a25c7e050fc84c8cb85c2df853f9487bc":[1,0,457,1],
 "classCurveEffect.html#a36c44031fd96679fb10f9d29283c0443":[1,0,457,8],
 "classCurveEffect.html#a4de2c00445b65ff28da37c2ed81050e0":[1,0,457,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "classDOMAIN.html#aa69ef5b5d6f28956ad2aa9cca63825fd":[1,0,490,0],
 "classDOMAIN.html#ab2bcc2b7f0b09898e6772ff24152913d":[1,0,490,16],
 "classDOMAIN.html#ad1cf6733f2c9b23999ce3b4d7c6c4aee":[1,0,490,15],
-"classDOMAIN.html#ad31eb9353cf1bb7aa7a64846f559b680":[1,0,490,14],
-"classDOMAIN.html#ad58848b3c1511bb802e8840f2d3e350f":[1,0,490,3]
+"classDOMAIN.html#ad31eb9353cf1bb7aa7a64846f559b680":[1,0,490,14]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"LayerCollectible_8cs_source.html":[2,0,0,809],
 "LayerColorPicker_8cs.html":[2,0,0,810],
 "LayerColorPicker_8cs_source.html":[2,0,0,810],
 "LayerConfig_8cs.html":[2,0,0,811],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "Map_8cs_source.html":[2,0,0,902],
 "MatColors_8cs.html":[2,0,0,2,58],
 "MatColors_8cs_source.html":[2,0,0,2,58],
-"MathEx_8cs.html":[2,0,0,2,59],
-"MathEx_8cs_source.html":[2,0,0,2,59]
+"MathEx_8cs.html":[2,0,0,2,59]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"classCoreRef_1_1PrefData.html#af49c9e2087e313b82ecfa202b1981c81":[1,0,438,8,2],
 "classCoreRef_1_1Rects.html":[1,0,438,9],
 "classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,438,9,4],
 "classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,438,9,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "classCursorSystem.html#af0be3fdfb388384d628117833e3a5c30":[1,0,456,51],
 "classCursorSystem.html#af8975fc41be5e40b35dbc1de53fde4a4":[1,0,456,26],
 "classCursorSystem.html#afd6e6c2813a93fb13fb26d1785d80467":[1,0,456,7],
-"classCurveEffect.html":[1,0,457],
-"classCurveEffect.html#a23da238be27fe6799a1794157d666f5c":[1,0,457,2]
+"classCurveEffect.html":[1,0,457]
 };

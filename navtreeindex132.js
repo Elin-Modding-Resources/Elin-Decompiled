@@ -1,5 +1,6 @@
 var NAVTREEINDEX132 =
 {
+"classTraitPoolTable.html":[1,0,1914],
 "classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1914,0],
 "classTraitPoop.html":[1,0,1915],
 "classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1915,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX132 =
 "classTraitScrollStatic.html#a9e01940fa32300d27a385f9c23872960":[1,0,1961,0],
 "classTraitScrollStatic.html#afe20ba20c3509dd52b314b300fc71d4f":[1,0,1961,3],
 "classTraitSculpture.html":[1,0,1962],
-"classTraitSculpture.html#a11c9397c46d08a30050c7985340f336b":[1,0,1962,1],
-"classTraitSculpture.html#a2f529009ac3f323b1112e3806487d5e7":[1,0,1962,3]
+"classTraitSculpture.html#a11c9397c46d08a30050c7985340f336b":[1,0,1962,1]
 };

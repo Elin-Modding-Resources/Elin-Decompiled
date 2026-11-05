@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"ThrowMethod_8cs.html#affb590f54f8533b392d16826a627ccc0a35281ac0e8d77e142fdcd41c07ce47dd":[2,0,0,1337,0,1],
 "ThrowMethod_8cs.html#affb590f54f8533b392d16826a627ccc0a3cf0ae436099c4ccf39493220c7f75b6":[2,0,0,1337,0,2],
 "ThrowMethod_8cs.html#affb590f54f8533b392d16826a627ccc0a7a1920d61156abc05a60135aefe8bc67":[2,0,0,1337,0,0],
 "ThrowMethod_8cs_source.html":[2,0,0,1337],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitBaseSpellbook_8cs_source.html":[2,0,0,1443],
 "TraitBasketGame_8cs.html":[2,0,0,1444],
 "TraitBasketGame_8cs_source.html":[2,0,0,1444],
-"TraitBath_8cs.html":[2,0,0,1445],
-"TraitBath_8cs_source.html":[2,0,0,1445]
+"TraitBath_8cs.html":[2,0,0,1445]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX100 =
 {
+"classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,1082,1],
 "classQuestDebt.html#a5d289654a81bdd243fb33a4c5487b8dd":[1,0,1082,4],
 "classQuestDebt.html#a9e71514a893633df9b31c44acab9aeb4":[1,0,1082,0],
 "classQuestDebt.html#aa4f5d7d6ba7e8c0b8f3a5aa48d967281":[1,0,1082,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX100 =
 "classQuestMeal__egg.html#a3eb2f86af5427a26a39a8988597d46a8":[1,0,1120,0],
 "classQuestMeal__fish.html":[1,0,1121],
 "classQuestMeal__fish.html#a694c9487de1da0957025a56324e2fac3":[1,0,1121,0],
-"classQuestMeal__fruit.html":[1,0,1122],
-"classQuestMeal__fruit.html#a5c8a51598aae6c96335ad33879976be7":[1,0,1122,0]
+"classQuestMeal__fruit.html":[1,0,1122]
 };

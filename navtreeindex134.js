@@ -1,5 +1,6 @@
 var NAVTREEINDEX134 =
 {
+"classTraitSyringeGene.html":[1,0,2029],
 "classTraitSyringeGene.html#ab1f4770127aaf0bbf84eb7428a1258bb":[1,0,2029,0],
 "classTraitSyringeHeaven.html":[1,0,2030],
 "classTraitSyringeHeaven.html#a6a425d99bf997b603378092c768b36d1":[1,0,2030,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX134 =
 "classTraitTrolleyBig.html#a09dcd9bc79cac19122a973307407f0c0":[1,0,2088,0],
 "classTraitTutorialBook.html":[1,0,2089],
 "classTraitTutorialBook.html#a05430eee448599a3b9a58ec882a7244b":[1,0,2089,0],
-"classTraitTyche.html":[1,0,2091],
-"classTraitTyche.html#a034d5b80a70b0f27703a14f06cc8c95d":[1,0,2091,0]
+"classTraitTyche.html":[1,0,2091]
 };

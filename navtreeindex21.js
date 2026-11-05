@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"TraitRecipeCat_8cs.html":[2,0,0,1822],
 "TraitRecipeCat_8cs_source.html":[2,0,0,1822],
 "TraitRecipe_8cs.html":[2,0,0,1820],
 "TraitRecipe_8cs_source.html":[2,0,0,1820],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "TraitToolHammerStrip_8cs.html":[2,0,0,1945],
 "TraitToolHammerStrip_8cs_source.html":[2,0,0,1945],
 "TraitToolHammer_8cs.html":[2,0,0,1944],
-"TraitToolHammer_8cs_source.html":[2,0,0,1944],
-"TraitToolLoom_8cs.html":[2,0,0,1946]
+"TraitToolHammer_8cs_source.html":[2,0,0,1944]
 };

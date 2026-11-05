@@ -1,5 +1,6 @@
 var NAVTREEINDEX73 =
 {
+"classGauge.html#adfb3d64751a7b5a04a2c0c5bf9a9e6a9":[1,0,621,21],
 "classGauge.html#aeb663d038ae1fd396afce37e9b2234ed":[1,0,621,11],
 "classGauge.html#af381beab50f75d545b4e16f906eb14dc":[1,0,621,13],
 "classGenBounds.html":[1,0,622],
@@ -248,6 +249,5 @@ var NAVTREEINDEX73 =
 "classGradientEffect.html#a78e89801cae0fe981c77920abfeeece0":[1,0,656,0],
 "classGradientEffect.html#a94763e120a75ea634de92a340a095b8f":[1,0,656,6],
 "classGradientEffect.html#aab085485b6b8e9b74d84768475fe6e31":[1,0,656,9],
-"classGradientEffect.html#ab260ebdcdded7bde38f179fe441f783c":[1,0,656,2],
-"classGradientEffect.html#abfa6492afb1c2d45bbb5d606894109c5":[1,0,656,7]
+"classGradientEffect.html#ab260ebdcdded7bde38f179fe441f783c":[1,0,656,2]
 };

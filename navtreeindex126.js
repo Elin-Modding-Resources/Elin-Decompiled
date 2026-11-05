@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitBitch.html#a0229b481536a7dc8ab0f33f98c8cfcef":[1,0,1565,0],
 "classTraitBitch.html#ab408dea815eb741838f705f5702046f7":[1,0,1565,1],
 "classTraitBitch.html#ad20e834013f30d0c761aad0371ead036":[1,0,1565,2],
 "classTraitBitchDancer.html":[1,0,1566],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitCoffin.html":[1,0,1617],
 "classTraitCoffin.html#a6e2277b00dc1174a525ab5b05022f553":[1,0,1617,0],
 "classTraitComputer.html":[1,0,1618],
-"classTraitContainer.html":[1,0,1619],
-"classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1619,5]
+"classTraitContainer.html":[1,0,1619]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX130 =
 {
+"classTraitIncubator.html#ac84f64d0a27de94f83fdc996b2ac5250":[1,0,1786,4],
 "classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1786,1],
 "classTraitIndulgence.html":[1,0,1787],
 "classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1787,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitMerchantMap.html":[1,0,1850],
 "classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1850,1],
 "classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1850,0],
-"classTraitMerchantMeat.html":[1,0,1851],
-"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1851,0]
+"classTraitMerchantMeat.html":[1,0,1851]
 };

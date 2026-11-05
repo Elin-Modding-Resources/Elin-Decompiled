@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTileManager.html#ae041ceb969e86acb274e14f7369aafd7":[1,0,1447,7],
 "classTileManager.html#af6634269a94010d18ee1c7ae929a7cda":[1,0,1447,13],
 "classTileManager_1_1Entry.html":[1,0,1447,0],
 "classTileManager_1_1Entry.html#a0b9a7d3ce29a834c6e7db50d31ff3708":[1,0,1447,0,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTileTypeDoor.html":[1,0,1464],
 "classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7":[1,0,1464,5],
 "classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe":[1,0,1464,2],
-"classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0":[1,0,1464,3],
-"classTileTypeDoor.html#a8de81492b03e44fe5715b34a5a28bc1b":[1,0,1464,0]
+"classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0":[1,0,1464,3]
 };

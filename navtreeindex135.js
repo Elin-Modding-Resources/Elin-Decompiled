@@ -1,5 +1,6 @@
 var NAVTREEINDEX135 =
 {
+"classTraitTyche.html#a034d5b80a70b0f27703a14f06cc8c95d":[1,0,2091,0],
 "classTraitUniqueChara.html":[1,0,2092],
 "classTraitUniqueChara.html#ac677a6c2395ef425343f0eb8d612b874":[1,0,2092,0],
 "classTraitUniqueCharaNoJoin.html":[1,0,2093],
@@ -248,6 +249,5 @@ var NAVTREEINDEX135 =
 "classUD__String__ElementRef.html":[1,0,2127],
 "classUD__String__Gradient.html":[1,0,2128],
 "classUD__String__LightData.html":[1,0,2129],
-"classUD__String__MatData.html":[1,0,2130],
-"classUD__String__PaintPosition.html":[1,0,2131]
+"classUD__String__MatData.html":[1,0,2130]
 };

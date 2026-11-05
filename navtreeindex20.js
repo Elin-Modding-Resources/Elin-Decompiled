@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitLittleOne_8cs_source.html":[2,0,0,1697],
 "TraitLockpick_8cs.html":[2,0,0,1698],
 "TraitLockpick_8cs_source.html":[2,0,0,1698],
 "TraitLoom_8cs.html":[2,0,0,1699],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "TraitRationMaker_8cs.html":[2,0,0,1819],
 "TraitRationMaker_8cs_source.html":[2,0,0,1819],
 "TraitRecipeBook_8cs.html":[2,0,0,1821],
-"TraitRecipeBook_8cs_source.html":[2,0,0,1821],
-"TraitRecipeCat_8cs.html":[2,0,0,1822]
+"TraitRecipeBook_8cs_source.html":[2,0,0,1821]
 };

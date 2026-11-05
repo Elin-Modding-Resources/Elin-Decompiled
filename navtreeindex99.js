@@ -1,5 +1,6 @@
 var NAVTREEINDEX99 =
 {
+"classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80":[1,0,1066,6],
 "classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c":[1,0,1066,10],
 "classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06":[1,0,1066,5],
 "classProgress__Custom.html#a9fd907953c4c00ea8d4fcab4371dac61":[1,0,1066,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX99 =
 "classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,1081,2],
 "classQuestDebt.html":[1,0,1082],
 "classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,1082,2],
-"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,1082,10],
-"classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,1082,1]
+"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,1082,10]
 };

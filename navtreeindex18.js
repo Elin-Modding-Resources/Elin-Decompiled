@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitBath_8cs_source.html":[2,0,0,1445],
 "TraitBedCoffin_8cs.html":[2,0,0,1448],
 "TraitBedCoffin_8cs_source.html":[2,0,0,1448],
 "TraitBed_8cs.html":[2,0,0,1447],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitDrink_8cs_source.html":[2,0,0,1568],
 "TraitDrug_8cs.html":[2,0,0,1571],
 "TraitDrug_8cs_source.html":[2,0,0,1571],
-"TraitDryBrick_8cs.html":[2,0,0,1572],
-"TraitDryBrick_8cs_source.html":[2,0,0,1572]
+"TraitDryBrick_8cs.html":[2,0,0,1572]
 };
