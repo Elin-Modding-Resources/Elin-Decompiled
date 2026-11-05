@@ -46,7 +46,7 @@ public class AI_Torture : AI_Practice
 					}
 				}
 				list.Sort((Chara a, Chara b) => SortVal(a) - SortVal(b));
-				int num = 1 + EClass.Branch.members.Count / 5;
+				int num = 1 + ((EClass.Branch != null) ? (EClass.Branch.members.Count / 5) : 0);
 				int num2 = 0;
 				foreach (Chara item in list)
 				{

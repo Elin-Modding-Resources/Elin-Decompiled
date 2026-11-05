@@ -58,5 +58,6 @@ public enum CTAG
 	ride,
 	allowIngredient,
 	nurse,
-	notMeAgain
+	notMeAgain,
+	fixedMat
 }

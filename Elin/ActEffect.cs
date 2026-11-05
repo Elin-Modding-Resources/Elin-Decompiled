@@ -993,7 +993,7 @@ public class ActEffect : EClass
 				{
 					radius = 1.5f;
 				}
-				CC.SetBool(137, enable: true);
+				cc.SetBool(137, enable: true);
 			}
 			bool flag3 = id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket;
 			List<Point> list10 = EClass._map.ListPointsInCircle((id == EffectId.GravityGun || id == EffectId.Rocket || id == EffectId.Flare) ? tp : cc.pos, radius, !flag3, !flag3);
@@ -1019,10 +1019,10 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			DamageEle(actRef.origin ?? cc, id, power, element, list10, actRef, (id == EffectId.Suicide) ? "suicide" : "spell_ball");
-			CC.SetBool(137, enable: false);
-			if (id == EffectId.Suicide && CC.IsAliveInCurrentZone)
+			cc.SetBool(137, enable: false);
+			if (id == EffectId.Suicide && cc.IsAliveInCurrentZone)
 			{
-				CC.Die();
+				cc.Die();
 			}
 			return;
 		}

@@ -1071,6 +1071,9 @@ public class Recipe : EClass
 			EClass.ui.widgets.ActivateWidget("QuestTracker");
 			WidgetHotbar.RefreshButtons();
 		}
-		WidgetQuestTracker.Instance.Refresh();
+		if ((bool)WidgetQuestTracker.Instance)
+		{
+			WidgetQuestTracker.Instance.Refresh();
+		}
 	}
 }

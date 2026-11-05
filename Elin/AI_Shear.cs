@@ -73,7 +73,7 @@ public class AI_Shear : AI_TargetCard
 					num = ((num <= 0) ? 1 : (2 + num / 10));
 					if (num > 1)
 					{
-						List<Point> list = EClass._map.ListPointsInSquare(pos, num - 1);
+						List<Point> list = EClass._map.ListPointsInSquare(pos, num - 1, mustBeWalkable: false);
 						list.Sort((Point a, Point b) => a.Distance(pos) - b.Distance(pos));
 						{
 							foreach (Point item in list)

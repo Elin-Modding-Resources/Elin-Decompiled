@@ -2969,7 +2969,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else
 		{
-			bool flag = (bp != null && bp.fixedMat) || sourceCard.quality == 4 || sourceCard.tierGroup.IsEmpty();
+			bool flag = (bp != null && bp.fixedMat) || sourceCard.quality == 4 || sourceCard.tierGroup.IsEmpty() || HasTag(CTAG.fixedMat);
 			if (_idMat != -1)
 			{
 				_material = EClass.sources.materials.map.TryGetValue(_idMat) ?? EClass.sources.materials.map[1];
@@ -6843,7 +6843,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (useCurrentPosition)
 		{
 			v = renderer.position;
-			v.z += -0.01f;
 		}
 		if (TileType == TileType.Door)
 		{

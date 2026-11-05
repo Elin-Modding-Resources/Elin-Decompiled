@@ -1876,12 +1876,15 @@ public class Trait : EClass
 			Add("block_kiwi", EClass.rndHalf(6), 0);
 			Add("block_peach", EClass.rndHalf(6), 0);
 			Add("water", 1, 0);
-			if (EClass.rndSeed(EClass.debug.enable ? 1 : 3, seed) == 0)
+			Rand.SetSeed(seed);
+			if (EClass.rnd(EClass.debug.enable ? 1 : 3) == 0)
 			{
+				int v = 1 + EClass.rnd(EClass.rnd(20) + 1);
 				Thing thing6 = Add("scrubber", 1, 0);
 				thing6.rarity = Rarity.Legendary;
-				thing6.elements.SetBase(770, 1 + EClass.rndSeed(EClass.rndSeed(20, seed) + 1, seed));
+				thing6.elements.SetBase(770, v);
 			}
+			Rand.SetSeed();
 			if (EClass.rndSeed(EClass.debug.enable ? 1 : 5, seed) == 0)
 			{
 				Add("hammer_garokk", 1, 0);
@@ -2247,7 +2250,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num18 = 1; num18 <= 25; num18++)
+					for (int num18 = 1; num18 <= 26; num18++)
 					{
 						AddAdvWeek(num18);
 					}
