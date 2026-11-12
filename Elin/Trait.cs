@@ -380,6 +380,8 @@ public class Trait : EClass
 
 	public virtual string LangUse => "actUse";
 
+	public virtual string LangRefText => "_named";
+
 	public virtual bool IgnoreOnSteppedWhenMoving => false;
 
 	public virtual bool IsOn => owner.isOn;
@@ -2250,7 +2252,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num18 = 1; num18 <= 26; num18++)
+					for (int num18 = 1; num18 <= 27; num18++)
 					{
 						AddAdvWeek(num18);
 					}

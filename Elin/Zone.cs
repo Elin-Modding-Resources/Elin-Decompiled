@@ -1041,6 +1041,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				Chara chara = card.Chara;
 				chara.dirtySpeed = true;
+				chara.wasInWater = IsUnderwater || (card.Cell.IsTopWater && !card.Cell.isFloating);
 				if (!card.isDyed && card.HasTag(CTAG.random_color))
 				{
 					card.DyeRandom();

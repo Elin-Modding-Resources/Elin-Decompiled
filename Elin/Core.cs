@@ -140,6 +140,7 @@ public class Core : BaseCore
 		SpriteSheet.dict.Clear();
 		SpriteSheet.loadedPath.Clear();
 		SpriteReplacerAnimation.dict.Clear();
+		SpriteReplacer.dictOverrides.Clear();
 		LayerDrama.haltPlaylist = false;
 		LayerDrama.keepBGM = false;
 		BaseModManager.isInitialized = false;
@@ -452,6 +453,10 @@ public class Core : BaseCore
 						{
 							value.data?.LoadPrefAndFixDensity();
 						}
+						foreach (SpriteReplacer value2 in SpriteReplacer.dictOverrides.Values)
+						{
+							value2.Validate();
+						}
 						if (RenderObject.syncList != null)
 						{
 							foreach (ISyncScreen sync in RenderObject.syncList)
@@ -469,11 +474,11 @@ public class Core : BaseCore
 		}
 		if (IsGameStarted && debug.enable)
 		{
-			foreach (PCC.Part value2 in pccs.allParts.Values)
+			foreach (PCC.Part value3 in pccs.allParts.Values)
 			{
-				foreach (ModItem<Texture2D> value3 in value2.modTextures.Values)
+				foreach (ModItem<Texture2D> value4 in value3.modTextures.Values)
 				{
-					value3.ClearCache();
+					value4.ClearCache();
 				}
 			}
 			CharaActorPCC[] array = UnityEngine.Object.FindObjectsOfType<CharaActorPCC>();

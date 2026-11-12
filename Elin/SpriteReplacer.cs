@@ -2,17 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class SpriteReplacer
 {
 	public static Dictionary<string, SpriteReplacer> dictSkins = new Dictionary<string, SpriteReplacer>();
 
+	public static Dictionary<string, SpriteReplacer> dictOverrides = new Dictionary<string, SpriteReplacer>();
+
+	public static List<(string suffix, Func<Card, bool> when)> states = new List<(string, Func<Card, bool>)>();
+
 	public static Dictionary<string, string> dictModItems = new Dictionary<string, string>();
 
 	private static List<string> sortedModIds = new List<string>();
 
 	private static bool modIdsDirty = true;
+
+	private static Dictionary<(int, int, bool, string), List<string>> suffixKeys = new Dictionary<(int, int, bool, string), List<string>>();
+
+	private static HashSet<string> failedStates = new HashSet<string>();
 
 	public SpriteData data;
 
@@ -91,29 +100,80 @@ public class SpriteReplacer
 
 	public Sprite GetSprite(int dir, int skin, bool snow)
 	{
-		foreach (string item in new List<string>
+		return GetData(dir, skin, snow)?.GetSprite();
+	}
+
+	public SpriteData GetData(int dir, int skin, bool snow, Card card = null)
+	{
+		SpriteData spriteData = FindData(dir, skin, snow, "");
+		if (card == null)
 		{
-			$"_skin{skin}_dir{dir}",
-			$"_skin{skin}",
-			$"_dir{dir}",
-			""
-		})
+			return spriteData;
+		}
+		foreach (var state in states)
 		{
-			Sprite sprite = null;
-			if (snow)
+			string item = state.suffix;
+			Func<Card, bool> item2 = state.when;
+			SpriteData spriteData2 = FindData(dir, skin, snow, item);
+			if (spriteData2 == spriteData)
 			{
-				sprite = GetSprite(item + "_snow");
+				continue;
 			}
-			if ((object)sprite == null)
+			try
 			{
-				sprite = GetSprite(item);
+				if (item2(card))
+				{
+					return spriteData2;
+				}
 			}
-			if ((bool)sprite)
+			catch (Exception arg)
 			{
-				return sprite;
+				if (failedStates.Add(item))
+				{
+					Debug.LogError($"#sprite failed to load state {item} on {card.id}\n{arg}");
+				}
 			}
 		}
-		return data?.GetSprite();
+		return spriteData;
+	}
+
+	public SpriteData FindData(int dir, int skin, bool snow, string state)
+	{
+		if (!suffixKeys.TryGetValue((dir, skin, snow, state), out var value))
+		{
+			value = new List<string>
+			{
+				$"_skin{skin}_dir{dir}",
+				$"_skin{skin}",
+				$"_dir{dir}",
+				""
+			};
+			if (snow)
+			{
+				value = value.SelectMany((string k) => new string[2]
+				{
+					k + "_snow",
+					k
+				}).ToList();
+			}
+			if (state != "")
+			{
+				value = value.Select((string k) => state + k).Concat(value).ToList();
+			}
+			suffixKeys[(dir, skin, snow, state)] = value;
+		}
+		foreach (string item in value)
+		{
+			if (suffixes.TryGetValue(item, out var value2))
+			{
+				Sprite[] sprites = value2.sprites;
+				if (sprites == null || sprites.Length != 0)
+				{
+					return value2;
+				}
+			}
+		}
+		return data;
 	}
 
 	public void Validate()
@@ -136,19 +196,24 @@ public class SpriteReplacer
 		for (int num2 = num; num2 < list.Count; num2++)
 		{
 			string text = list[num2];
-			if (text.StartsWith(id))
+			if (!text.StartsWith(id))
 			{
-				string text2 = text[id.Length..];
-				SpriteData spriteData = new SpriteData
-				{
-					path = dictTexItems[text]
-				};
-				spriteData.Init();
-				suffixes[text2] = spriteData;
-				Debug.Log("#sprite replacer " + text2.IsEmpty("<base>") + "/" + dictTexItems[text].ShortPath());
-				continue;
+				break;
 			}
-			break;
+			string text2 = text[id.Length..];
+			if (text2.StartsWith("_"))
+			{
+				text2 = string.Concat(from t in text2.Split('_').Skip(1)
+					orderby (!(t == "snow")) ? ((!Regex.IsMatch(t, "^dir\\d+$")) ? (Regex.IsMatch(t, "^skin\\d+$") ? 1 : 0) : 2) : 3
+					select "_" + t);
+			}
+			SpriteData spriteData = new SpriteData
+			{
+				path = dictTexItems[text]
+			};
+			spriteData.Init();
+			suffixes[text2] = spriteData;
+			Debug.Log("#sprite replacer " + text2.IsEmpty("<base>") + "/" + dictTexItems[text].ShortPath());
 		}
 	}
 

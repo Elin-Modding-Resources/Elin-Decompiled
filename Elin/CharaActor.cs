@@ -27,6 +27,7 @@ public class CharaActor : CardActor
 		if (owner != null)
 		{
 			sr.sprite = owner.GetSprite();
+			mpb.SetTexture("_MainTex", sr.sprite.texture);
 			RefreshSprite();
 		}
 	}

@@ -1,18 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
 
 public class BaseCondition : BaseStats
 {
 	[JsonProperty]
-	public int[] _ints = new int[5];
+	public int[] _ints = new int[6];
 
 	public int phase = -1;
 
 	public ElementContainer elements;
 
 	public Chara owner;
+
+	public Chara _giver;
 
 	public int value
 	{
@@ -62,6 +65,18 @@ public class BaseCondition : BaseStats
 		}
 	}
 
+	public int idGiver
+	{
+		get
+		{
+			return _ints[5];
+		}
+		set
+		{
+			_ints[5] = value;
+		}
+	}
+
 	public bool givenByPcParty
 	{
 		get
@@ -87,6 +102,22 @@ public class BaseCondition : BaseStats
 	}
 
 	public override Chara Owner => owner;
+
+	public Chara Giver
+	{
+		get
+		{
+			if (_giver != null && _giver.ExistsOnMap)
+			{
+				return _giver;
+			}
+			if (idGiver != 0 && _giver == null)
+			{
+				_giver = EClass._map.FindChara(idGiver);
+			}
+			return null;
+		}
+	}
 
 	public virtual string Name => base.source.GetText();
 
@@ -159,6 +190,15 @@ public class BaseCondition : BaseStats
 	public virtual ElementContainer GetElementContainer()
 	{
 		return elements;
+	}
+
+	[OnDeserialized]
+	private void OnDeserialized(StreamingContext context)
+	{
+		if (_ints.Length < 6)
+		{
+			Array.Resize(ref _ints, 6);
+		}
 	}
 
 	public void SetElement(int id)

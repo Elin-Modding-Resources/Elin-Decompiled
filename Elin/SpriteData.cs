@@ -63,7 +63,14 @@ public class SpriteData
 		pref = null;
 		if (File.Exists(path + ".pref"))
 		{
-			pref = SourcePref.ReadFromIni(path + ".pref");
+			try
+			{
+				pref = SourcePref.ReadFromIni(path + ".pref");
+			}
+			catch (Exception arg)
+			{
+				Debug.LogError($"#sprite failed to read {path}.pref\n{arg}");
+			}
 		}
 	}
 
@@ -73,7 +80,7 @@ public class SpriteData
 		LoadPref();
 		if (sprites != null && !Mathf.Approximately(a, pref?.ScaleTex ?? 1f))
 		{
-			LoadSprites();
+			Load();
 		}
 	}
 
@@ -176,6 +183,18 @@ public class SpriteData
 	{
 		LoadAnimationIni();
 		LoadPref();
-		LoadSprites();
+		try
+		{
+			LoadSprites();
+		}
+		catch (Exception arg)
+		{
+			Debug.LogError($"#sprite failed to load {path}.png\n{arg}");
+			frame = 1;
+			if (sprites == null)
+			{
+				sprites = Array.Empty<Sprite>();
+			}
+		}
 	}
 }

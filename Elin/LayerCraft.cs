@@ -229,9 +229,14 @@ public class LayerCraft : LayerBaseCraft
 				window.SetInteractable(enable: true);
 			}
 			list.Redraw();
+			recipe = list.objects.OfType<Recipe>().FirstOrDefault((Recipe r) => r.id == recipe.id && r.idSkin == recipe.idSkin) ?? recipe;
+			if (recipe.ingredients.Count == 0)
+			{
+				recipe.BuildIngredientList();
+			}
 			RefreshRecipe(first: true);
 			windowList.groupTab.RefreshButtons();
-			list.Select((Recipe r) => recipe.id == r.id);
+			list.Select(recipe);
 		});
 	}
 
@@ -487,6 +492,11 @@ public class LayerCraft : LayerBaseCraft
 			}
 		}
 		info1.buttonProduct.SetCard(thing);
+		ButtonGrid comp = this.list.GetComp<ButtonGrid>(recipe);
+		if ((bool)comp)
+		{
+			recipe.SetImage(comp.icon);
+		}
 		thing.WriteNote(info1.note, null, IInspect.NoteMode.Product, recipe);
 		product = thing;
 	}

@@ -67,7 +67,7 @@ public class CharaRenderer : CardRenderer
 		else if (replacer == null && !owner.c_idSpriteReplacer.IsEmpty())
 		{
 			SpriteReplacer spriteReplacer = SpriteReplacer.dictSkins.TryGetValue(owner.c_idSpriteReplacer);
-			if (spriteReplacer != null)
+			if ((bool)spriteReplacer?.GetSprite())
 			{
 				data = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom_" + ((SpriteData.BaseHeight(spriteReplacer.GetSprite()) <= 128f) ? "128" : "256"));
 				owner.spriteReplacer = spriteReplacer;
@@ -78,6 +78,20 @@ public class CharaRenderer : CardRenderer
 			hopCurve = EClass.setting.render.anime.hop;
 		}
 		base.SetOwner(c);
+		string idOverride = owner.GetStr("sprite_override");
+		if (!usePass && pccData == null && replacer == null && !idOverride.IsEmpty())
+		{
+			SpriteReplacer orCreate = SpriteReplacer.dictOverrides.GetOrCreate(idOverride, delegate
+			{
+				SpriteReplacer spriteReplacer2 = new SpriteReplacer();
+				spriteReplacer2.HasSprite(idOverride);
+				return spriteReplacer2;
+			});
+			if ((bool)orCreate.GetSprite())
+			{
+				owner.spriteReplacer = orCreate;
+			}
+		}
 	}
 
 	public override void OnEnterScreen()

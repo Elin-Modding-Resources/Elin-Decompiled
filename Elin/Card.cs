@@ -6571,11 +6571,17 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			return EClass.sources.objs[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
 		}
-		if (trait is TraitAbility)
+		if (!(trait is TraitAbility))
 		{
-			return (trait as TraitAbility).CreateAct()?.GetSprite() ?? EClass.core.refs.icons.defaultAbility;
+			bool snow = IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile;
+			return GetSpriteData(dir, snow)?.GetSprite() ?? sourceCard.GetSprite(dir, trait.IdSkin, snow);
 		}
-		return sourceCard.GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
+		return (trait as TraitAbility).CreateAct()?.GetSprite() ?? EClass.core.refs.icons.defaultAbility;
+	}
+
+	public virtual SpriteData GetSpriteData(int dir = 0, bool snow = false)
+	{
+		return sourceCard.GetSpriteData(dir, trait.IdSkin, snow, this);
 	}
 
 	public virtual Sprite GetImageSprite()
@@ -6596,10 +6602,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return;
 		}
 		Sprite sprite = GetSprite();
-		if (!c_idSpriteReplacer.IsEmpty())
+		if (!c_idSpriteReplacer.IsEmpty() && (IsPCC || Chara?.spriteReplacer == null))
 		{
 			SpriteReplacer spriteReplacer = SpriteReplacer.dictSkins.TryGetValue(c_idSpriteReplacer);
-			if (spriteReplacer != null)
+			if ((bool)spriteReplacer?.GetSprite())
 			{
 				sprite = spriteReplacer.GetSprite();
 				RenderData renderData = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom_" + ((SpriteData.BaseHeight(sprite) <= 128f) ? "128" : "256"));

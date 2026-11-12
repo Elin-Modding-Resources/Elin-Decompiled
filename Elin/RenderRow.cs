@@ -283,6 +283,15 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		return renderData.ConvertTile(tile);
 	}
 
+	public SpriteData GetSpriteData(int dir, int skin, bool snow, Card card = null)
+	{
+		if (!replacer.HasSprite(idSprite, renderData))
+		{
+			return null;
+		}
+		return replacer.GetData(dir, skin, snow, card);
+	}
+
 	public Sprite GetSprite(int dir = 0, int skin = 0, bool snow = false)
 	{
 		bool flag = this is SourceChara.Row;

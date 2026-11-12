@@ -325,6 +325,7 @@ public class CardRenderer : RenderObject
 				bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.visibleWithTelepathy);
 				if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
 				{
+					shadow = Mathf.Clamp(shadow, 0, ShadowData.Instance.items.Count - 1);
 					bool flag3 = ((!isChara) ? (owner.dir % 2 == 1) : (owner.dir == 1 || owner.dir == 2));
 					EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - (owner.isChara ? 0f : (RenderObject.altitudeFix * (float)owner.altitude)), position.z + renderData.offsetShadow.z, ShadowData.Instance.items[shadow], pref, prefIndex, p.snow);
 				}

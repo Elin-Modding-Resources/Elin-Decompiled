@@ -814,9 +814,16 @@ public class Chara : Card, IPathfindWalker
 					spriteReplacer.data.tryFixPrefNotLoadedAtStart = true;
 					spriteReplacer.data.LoadPrefAndFixDensity();
 				}
-				return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
+				if (spriteReplacer.data?.pref != null)
+				{
+					return spriteReplacer.data.pref;
+				}
+				if (renderer.data != sourceCard.renderData)
+				{
+					return EClass.core.refs.prefs.replacer1;
+				}
 			}
-			if (base.idSkin > 0)
+			else if (base.idSkin > 0)
 			{
 				switch (sourceCard.tiles.TryGet(base.idSkin))
 				{
@@ -1165,6 +1172,22 @@ public class Chara : Card, IPathfindWalker
 				return HasElement(419);
 			}
 			return true;
+		}
+	}
+
+	public int SpriteSkin
+	{
+		get
+		{
+			if (sourceCard.tiles.Length > 1)
+			{
+				if (base.idSkin == 0 && !source.staticSkin)
+				{
+					return base.uid % sourceCard.tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0);
+				}
+				return base.idSkin;
+			}
+			return 0;
 		}
 	}
 
@@ -1693,6 +1716,7 @@ public class Chara : Card, IPathfindWalker
 			SetFeat(1248, 1 + EClass.rnd(5));
 			break;
 		case "shojo":
+		case "younglady":
 			if (EClass.rnd(EClass.debug.enable ? 2 : 20) == 0)
 			{
 				SetFeat(1432);
@@ -1866,7 +1890,7 @@ public class Chara : Card, IPathfindWalker
 			text2 = "fusion2";
 			break;
 		case "younglady":
-			text = "youngladymaton";
+			text = "ojomaton";
 			text2 = "fusion2";
 			break;
 		}
@@ -5215,6 +5239,12 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("sword_katana");
 			}
 			break;
+		case "samurai_kamikaze":
+			if (onCreate)
+			{
+				EQ_ID("sword_katana");
+			}
+			break;
 		case "mimu":
 			if (onCreate)
 			{
@@ -5244,7 +5274,7 @@ public class Chara : Card, IPathfindWalker
 			case "mech_scarab":
 				AddThing("gun_laser");
 				break;
-			case "youngladymaton":
+			case "ojomaton":
 			case "sister_catmaton":
 			case "shojomaton":
 			case "imotomaton":
@@ -7119,7 +7149,7 @@ public class Chara : Card, IPathfindWalker
 	public override Sprite GetSprite(int dir = 0)
 	{
 		string str = GetStr("sprite_override");
-		if (!str.IsEmpty())
+		if (!str.IsEmpty() && (spriteReplacer == null || spriteReplacer != SpriteReplacer.dictOverrides.TryGetValue(str)))
 		{
 			Sprite sprite = ModUtil.LoadSprite(str);
 			if ((bool)sprite)
@@ -7134,20 +7164,21 @@ public class Chara : Card, IPathfindWalker
 			return pCC.variation.idle[0, 0];
 		}
 		bool snow = EClass.core.IsGameStarted && EClass._zone.IsSnowCovered;
-		int skin = 0;
-		if (spriteReplacer?.data != null)
+		return GetSpriteData(dir, snow)?.GetSprite() ?? sourceCard.GetSprite(dir, SpriteSkin, snow);
+	}
+
+	public override SpriteData GetSpriteData(int dir = 0, bool snow = false)
+	{
+		SpriteData spriteData = sourceCard.GetSpriteData(dir, SpriteSkin, snow, this);
+		if (!IsPCC)
 		{
-			Sprite sprite2 = spriteReplacer.GetSprite(dir, skin, snow);
-			if ((bool)sprite2)
+			if (spriteReplacer?.data == null)
 			{
-				return sprite2;
+				return spriteData;
 			}
+			return spriteReplacer.GetData(dir, 0, snow, this);
 		}
-		if (sourceCard.tiles.Length > 1)
-		{
-			skin = ((base.idSkin == 0 && !source.staticSkin) ? (base.uid % sourceCard.tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0)) : base.idSkin);
-		}
-		return sourceCard.GetSprite(dir, skin, snow);
+		return null;
 	}
 
 	public void SetTempHand(int right = 0, int left = 0)
@@ -9892,7 +9923,17 @@ public class Chara : Card, IPathfindWalker
 
 	public Condition AddCondition(Condition c, bool force = false)
 	{
+		return AddCondition(c, null, force);
+	}
+
+	public Condition AddCondition(Condition c, Chara giver, bool force = false)
+	{
 		c.owner = this;
+		if (giver != null)
+		{
+			c._giver = giver;
+			c.idGiver = giver.uid;
+		}
 		if (!(c is ConBurning))
 		{
 			if (c is ConBleed && ResistLv(964) >= 3)

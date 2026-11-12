@@ -62,6 +62,6 @@ public class SpriteReplacerAnimation : MonoBehaviour
 		{
 			index = 0;
 		}
-		sr.sprite = data.GetSprites()[index];
+		sr.sprite = data.GetSprites().TryGet(index, returnNull: true);
 	}
 }

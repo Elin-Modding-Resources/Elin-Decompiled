@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ConHOT : Timebuff
 {
@@ -6,8 +7,12 @@ public class ConHOT : Timebuff
 	{
 		if (owner.hp < owner.MaxHP)
 		{
-			Dice dice = Dice.Create("SpHOT", base.power);
-			owner.HealHP(dice.Roll(), HealSource.HOT);
+			long num = Dice.Create("SpHOT", base.power).Roll();
+			if (base.Giver != null)
+			{
+				num = num * Mathf.Max(100 + base.Giver.Evalue(413), 0) / 100;
+			}
+			owner.HealHP(num, HealSource.HOT);
 		}
 		Mod(-1);
 	}

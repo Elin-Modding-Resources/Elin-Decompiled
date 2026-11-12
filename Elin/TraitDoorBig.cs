@@ -14,7 +14,7 @@ public class TraitDoorBig : TraitDoor
 		}
 	}
 
-	public TraitDoorBig GetDoorPair()
+	public virtual TraitDoorBig GetDoorPair()
 	{
 		int dir = owner.dir;
 		Cell cell = null;

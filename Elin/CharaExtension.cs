@@ -25,7 +25,15 @@ public static class CharaExtension
 	public static void SetSpriteOverride(this Chara chara, string spriteId = null)
 	{
 		chara.SetStr("sprite_override", spriteId);
-		chara.RefreshSpriteRenderer();
+		bool? flag = chara.renderer?.usePass;
+		if (flag.HasValue && flag != true && !chara.IsPCC)
+		{
+			chara._CreateRenderer();
+		}
+		if (chara.IsPCParty)
+		{
+			WidgetRoster.SetDirty();
+		}
 	}
 
 	public static void SetPortraitOverride(this Chara chara, string portraitId = null)

@@ -624,7 +624,7 @@ public class Thing : Card
 		{
 			if (!base.c_refText.IsEmpty())
 			{
-				text = "_named".lang(base.c_refText, text);
+				text = trait.LangRefText.lang(base.c_refText, text);
 			}
 			if (base.IsIdentified)
 			{
@@ -943,7 +943,14 @@ public class Thing : Card
 			else
 			{
 				UIItem uIItem = n.AddHeaderCard(text2);
-				SetImage(uIItem.image2);
+				if (flag && !(recipe?.IsThing ?? true))
+				{
+					recipe.SetImage(uIItem.image2);
+				}
+				else
+				{
+					SetImage(uIItem.image2);
+				}
 				uIItem.image2.Rect().pivot = new Vector2(0.5f, 0.5f);
 				string text4 = base.Num.ToFormat() ?? "";
 				string text5 = (0.01f * (float)base.ChildrenAndSelfWeight * 0.1f).ToString((base.ChildrenAndSelfWeight == 0) ? "F0" : ((base.ChildrenAndSelfWeight >= 1000) ? "F1" : "F2")) + "s";

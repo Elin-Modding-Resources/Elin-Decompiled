@@ -26,9 +26,11 @@ public class CardActor : Actor
 
 	private float destLiquid;
 
-	private float spriteTimer;
+	public float spriteTimer;
 
-	private int spriteIndex;
+	public int spriteIndex;
+
+	public SpriteData spriteData;
 
 	private bool visible = true;
 
@@ -183,6 +185,33 @@ public class CardActor : Actor
 		}
 		base.transform.position = tempV;
 		base.transform.localScale = tempV2;
+		SpriteData spriteData = owner.GetSpriteData((!owner.isChara) ? owner.dir : 0, p.snow);
+		if (spriteData != this.spriteData)
+		{
+			this.spriteData = spriteData;
+			spriteIndex = 0;
+			spriteTimer = 0f;
+			ReloadSprite();
+		}
+		if (spriteData != null && spriteData.frame > 1)
+		{
+			spriteTimer += Core.delta;
+			if (spriteTimer >= spriteData.time)
+			{
+				spriteTimer -= spriteData.time;
+				spriteIndex++;
+				if (spriteIndex >= spriteData.frame)
+				{
+					spriteIndex = 0;
+				}
+				Sprite sprite = spriteData.GetSprites().TryGet(spriteIndex, returnNull: true);
+				if ((bool)sprite)
+				{
+					sr.sprite = sprite;
+					mpb.SetTexture("_MainTex", sprite.texture);
+				}
+			}
+		}
 		destLiquid = Mathf.Lerp(destLiquid, p.liquidLv, Core.gameDeltaNoPause * (float)((destLiquid > (float)p.liquidLv) ? 90 : 20));
 		mpb.SetFloat("_MatColor", p.matColor);
 		mpb.SetFloat("_Color", p.color);
@@ -199,35 +228,6 @@ public class CardActor : Actor
 			mpb2.SetFloat("_Color", p.color);
 			mpb2.SetFloat("_Liquid", destLiquid);
 			sr2.SetPropertyBlock(mpb2);
-		}
-		SpriteReplacer replacer = owner.sourceCard.replacer;
-		if (!replacer.HasSprite(owner.sourceCard.idSprite, data))
-		{
-			return;
-		}
-		SpriteData spriteData = replacer.data;
-		if (p.snow && replacer.suffixes.TryGetValue("_snow", out var value))
-		{
-			spriteData = value;
-		}
-		if (spriteData.frame <= 1)
-		{
-			return;
-		}
-		spriteTimer += Core.delta;
-		if (spriteTimer >= spriteData.time)
-		{
-			spriteTimer -= spriteData.time;
-			spriteIndex++;
-			if (spriteIndex >= spriteData.frame)
-			{
-				spriteIndex = 0;
-			}
-			sr.sprite = spriteData.GetSprites().TryGet(spriteIndex, returnNull: true);
-			if ((bool)sr.sprite)
-			{
-				mpb.SetTexture("_MainTex", sr.sprite.texture);
-			}
 		}
 		return;
 		IL_0079:
