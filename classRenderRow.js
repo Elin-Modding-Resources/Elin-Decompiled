@@ -7,6 +7,7 @@ var classRenderRow =
     [ "GetRenderParam", "classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4", null ],
     [ "GetSearchName", "classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a", null ],
     [ "GetSprite", "classRenderRow.html#acc4325d305863606f002e014de0e5bd1", null ],
+    [ "GetSpriteData", "classRenderRow.html#acf08deb0b8f2aef93868bb25b1573ac1", null ],
     [ "GetTile", "classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce", null ],
     [ "HasTag", "classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b", null ],
     [ "OnImportData", "classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49", null ],

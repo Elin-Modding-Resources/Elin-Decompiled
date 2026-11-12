@@ -220,6 +220,7 @@ var classTrait =
     [ "IsTool", "classTrait.html#a3c9f561376bd9d2a64d731b08ebb587a", null ],
     [ "LangBarter", "classTrait.html#a0022e2d2cd75f779cd0205150933c4ac", null ],
     [ "langNote", "classTrait.html#a5403dc0110848cbb7e18de734186502c", null ],
+    [ "LangRefText", "classTrait.html#a7f847b8034d88c8659bb8a4f7c2c064e", null ],
     [ "LangUse", "classTrait.html#aed4006f6efad2511c58e0a56d28d4312", null ],
     [ "LevelAsQuality", "classTrait.html#ae204452f89f0b124aa60bb296ecb3928", null ],
     [ "MaskOnBuild", "classTrait.html#ad027fbfb568ff382828f91be479cbd72", null ],

@@ -110,6 +110,7 @@ var classCard =
     [ "GetRuneEnc", "classCard.html#aa566fb8a4254c234d9fe1aa9b1d0cb4c", null ],
     [ "GetSightRadius", "classCard.html#a26e851f88238cf1e3f8deb09c1f3562f", null ],
     [ "GetSprite", "classCard.html#a9425ca0f611875f348af4f663829b963", null ],
+    [ "GetSpriteData", "classCard.html#a33fb6dd5f82344aff9b0ca39c665c801", null ],
     [ "GetStr", "classCard.html#a7bce49851a4520966a9c6ecd8f7b60ea", null ],
     [ "GetSubPassData", "classCard.html#a90fd2492db6ebd4a34ec1f5ab689b11e", null ],
     [ "GetTalkText", "classCard.html#a8084bac883c3a8b5d002730f9cf179d3", null ],

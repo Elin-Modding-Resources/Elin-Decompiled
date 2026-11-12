@@ -23,6 +23,7 @@ var classCardActor =
     [ "mpb2", "classCardActor.html#a7aa516cfc8878d7ed0f11e73487c1090", null ],
     [ "originalScale", "classCardActor.html#ae0465d46fdd8e99b3c0006cb7239c3dd", null ],
     [ "owner", "classCardActor.html#ae2092905a6795a9d5cc5a7361c3dcfe8", null ],
+    [ "spriteData", "classCardActor.html#af7b859a7c3cccc92bf50aa1124324aed", null ],
     [ "spriteIndex", "classCardActor.html#a0935e229bd39594838adebd01edf6060", null ],
     [ "spriteTimer", "classCardActor.html#a5cf44e4ca09c2229160b23cbadd92cc9", null ],
     [ "sr", "classCardActor.html#a3de5f9882941311a771357dc5ec04a35", null ],

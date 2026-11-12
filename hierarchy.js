@@ -1765,7 +1765,8 @@ var hierarchy =
         [ "TraitDoor", "classTraitDoor.html", [
           [ "TraitDoorBig", "classTraitDoorBig.html", [
             [ "TraitDoorBigL", "classTraitDoorBigL.html", null ],
-            [ "TraitDoorBigR", "classTraitDoorBigR.html", null ]
+            [ "TraitDoorBigR", "classTraitDoorBigR.html", null ],
+            [ "TraitDoorTrapBig", "classTraitDoorTrapBig.html", null ]
           ] ],
           [ "TraitDoorCurtain", "classTraitDoorCurtain.html", null ],
           [ "TraitDoorFence", "classTraitDoorFence.html", null ],
@@ -1799,7 +1800,8 @@ var hierarchy =
         ] ],
         [ "TraitDye", "classTraitDye.html", null ],
         [ "TraitEQ", "classTraitEQ.html", [
-          [ "TraitEQFlower", "classTraitEQFlower.html", null ]
+          [ "TraitEQFlower", "classTraitEQFlower.html", null ],
+          [ "TraitEQRelic", "classTraitEQRelic.html", null ]
         ] ],
         [ "TraitEcoMark", "classTraitEcoMark.html", null ],
         [ "TraitEditorSign", "classTraitEditorSign.html", null ],

@@ -28,6 +28,7 @@ var classENC =
     [ "defense_range", "classENC.html#a2b1bc110813f36d8ce6e84785ee90d97", null ],
     [ "eco", "classENC.html#a8985c5073f4af9fb87c5145322f65953", null ],
     [ "eheluck", "classENC.html#aa7fc17245e590db0dea62ac57a2cea30", null ],
+    [ "encHeal", "classENC.html#a4a8d8276be87475b8ec201a6ef3e803c", null ],
     [ "encHit", "classENC.html#a3dc9b5f8557459c047b2f8c87aba5876", null ],
     [ "encRagnarok", "classENC.html#a1a52076845fc0c6f76a6985c6f19e6f7", null ],
     [ "encSpell", "classENC.html#a082acb3ccb9281afd0da55f67c959264", null ],

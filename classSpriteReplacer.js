@@ -1,6 +1,8 @@
 var classSpriteReplacer =
 [
     [ "BuildSuffixData", "classSpriteReplacer.html#ae48945a175171d20d2ddb840566feaba", null ],
+    [ "FindData", "classSpriteReplacer.html#adf68f01997ce9581b3ba14d672ed472b", null ],
+    [ "GetData", "classSpriteReplacer.html#aa0d08959c044a5b785ea4bb8cfdc0859", null ],
     [ "GetSprite", "classSpriteReplacer.html#adae3887c758236ff74a63afadbb64568", null ],
     [ "GetSprite", "classSpriteReplacer.html#a85f20c864603c141f8b9324105b1a0c5", null ],
     [ "HasSprite", "classSpriteReplacer.html#a3e1e07244267d344fa0b921dd7c522b1", null ],
@@ -11,9 +13,13 @@ var classSpriteReplacer =
     [ "Validate", "classSpriteReplacer.html#a267847f0e77fc22baffd77880c79391a", null ],
     [ "data", "classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37", null ],
     [ "dictModItems", "classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403", null ],
+    [ "dictOverrides", "classSpriteReplacer.html#ac6b931dc2667d8be05487686dc1c5482", null ],
     [ "dictSkins", "classSpriteReplacer.html#a88313578a2ab905ddc3e88795168977d", null ],
+    [ "failedStates", "classSpriteReplacer.html#a6eead2c6271614b15971a54fb22c42ae", null ],
     [ "isChecked", "classSpriteReplacer.html#a4202ebcd0888ed99208261d5328ec9b4", null ],
     [ "modIdsDirty", "classSpriteReplacer.html#a7c1f4eca44920b7d8da6ab6a4311cdc5", null ],
     [ "sortedModIds", "classSpriteReplacer.html#ad3202afb347af9e3bc1b9a7c7d4d1f9b", null ],
-    [ "suffixes", "classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9", null ]
+    [ "states", "classSpriteReplacer.html#ae22fdd870414dc049cda1331bfffcc4b", null ],
+    [ "suffixes", "classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9", null ],
+    [ "suffixKeys", "classSpriteReplacer.html#a812e03fe91b9049bca23350760a92a9d", null ]
 ];
