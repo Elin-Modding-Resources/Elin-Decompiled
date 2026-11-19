@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.359.1 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.360 Nightly</span>
    </div>
   </td>
  </tr>
@@ -210,204 +210,283 @@ $(document).ready(function(){initNavTree('Steam_8cs_source.html',''); initResiza
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classSteam.html#aeaa01c2e930f6a94ccd945bf3a4ebfcd">  117</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#aeaa01c2e930f6a94ccd945bf3a4ebfcd">CreateUserContent</a>(<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p)</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_function" href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">Start</a>(<span class="stringliteral">&quot;Uploading&quot;</span>).<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> = delegate</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        };</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        p.<a class="code hl_function" href="classBaseModPackage.html#a2c2fffb215cd4d11cba9c200563d1ade">UpdateMeta</a>(updateOnly: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a> = p;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_function" href="classSteam.html#abd65c2672e76e1179de50670f27bceec">QueryAllMyPublished</a>(<a class="code hl_function" href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">CreateOrUpdateUserContent</a>, delegate(<span class="keywordtype">string</span> error)</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(error);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        });</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classSteam.html#abd65c2672e76e1179de50670f27bceec">  132</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#abd65c2672e76e1179de50670f27bceec">QueryAllMyPublished</a>(Action&lt;List&lt;WorkshopItem&gt;&gt; onComplete, Action&lt;string&gt; onFail = <span class="keyword">null</span>, <span class="keywordtype">float</span> timeout = 10f)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        List&lt;WorkshopItem&gt; results = <span class="keyword">new</span> List&lt;WorkshopItem&gt;();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        HashSet&lt;PublishedFileId_t&gt; ids = <span class="keyword">new</span> HashSet&lt;PublishedFileId_t&gt;();</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        uint page = 1u;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordtype">bool</span> done = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        UgcQuery query = UgcQuery.GetMyPublished();</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        ExecutePage();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">if</span> (!done &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.StartCoroutine(Timeout());</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordtype">void</span> ExecutePage()</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            query.SetReturnKeyValueTags(tags: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            query.SetReturnMetadata(metadata: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keywordflow">if</span> (!query.Execute(HandleResults))</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                ReportError(<span class="stringliteral">&quot;UgcQuery.Execute failed at page &quot;</span> + page);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">void</span> HandleResults(UgcQuery q)</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">if</span> (!done)</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                results.AddRange(q.ResultsList.Where((WorkshopItem r) =&gt; ids.Add(r.FileId)));</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <span class="keywordflow">if</span> (q.ResultsList.Count == 0 || page &gt;= q.pageCount)</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    done = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    query.Dispose();</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    onComplete?.Invoke(results);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    query.SetPage(++page);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Add(ExecutePage);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordtype">void</span> ReportError(<span class="keywordtype">string</span> error)</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">if</span> (!done)</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            {</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                done = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                query.Dispose();</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                <span class="keywordflow">if</span> (onFail != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    onFail(error);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(error);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                }</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        IEnumerator Timeout()</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            uint lastPage = page;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordtype">float</span> time = Time.realtimeSinceStartup;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">while</span> (!done)</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                <span class="keywordflow">if</span> (lastPage != page)</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                {</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                    lastPage = page;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    time = Time.realtimeSinceStartup;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                <span class="keywordflow">if</span> (Time.realtimeSinceStartup - time &gt; timeout)</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    ReportError(<span class="stringliteral">&quot;UgcQuery timed out at page &quot;</span> + page + <span class="stringliteral">&quot; (&quot;</span> + results.Count + <span class="stringliteral">&quot; items fetched)&quot;</span>);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                }</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">  208</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">CreateOrUpdateUserContent</a>(List&lt;WorkshopItem&gt; items)</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content2&quot;</span>);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> baseModPackage = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(items.Count);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">foreach</span> (WorkshopItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> items)</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.keyValueTags.IsEmpty())</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            {</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            }</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            StringKeyValuePair[] keyValueTags = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.keyValueTags;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyValueTags.Length; i++)</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                StringKeyValuePair stringKeyValuePair = keyValueTags[i];</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.id &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Owner.IsMe)</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FileId);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            }</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content&quot;</span>);</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(baseModPackage).Create(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">new</span> WorkshopItemKeyValueTag[1]</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keyword">new</span> WorkshopItemKeyValueTag</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                key = <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                value = baseModPackage.id</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }, delegate(WorkshopItemDataCreateStatus result)</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordflow">if</span> (result.hasError)</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(result.errorMessage);</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            }</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            {</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_created&quot;</span>);</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;created&quot;</span>);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        });</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">  256</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(PublishedFileId_t fileId)</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    {</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        WorkshopItemData workshopItemData = <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(p);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        workshopItemData.publishedFileId = fileId;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        workshopItemData.Update(delegate(WorkshopItemDataUpdateStatus result)</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keywordflow">if</span> (result.hasError)</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            {</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                EClass.ui.Say(result.errorMessage);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                Debug.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_updated&quot;</span>);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                Debug.Log(<span class="stringliteral">&quot;updated&quot;</span>);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            }</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        });</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">  279</a></span>    <span class="keyword">public</span> WorkshopItemData <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName + <span class="stringliteral">&quot;/preview.jpg&quot;</span>);</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        WorkshopItemData result = <span class="keyword">new</span> WorkshopItemData</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            appId = <a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId,</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a> = p.<a class="code hl_variable" href="classBaseModPackage.html#af7e9ef827bae0391356fc343de2ce63e">title</a>,</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            description = p.<a class="code hl_variable" href="classBaseModPackage.html#af237d8eedaa4198ca8715b9c135374c8">description</a>,</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            content = directoryInfo,</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            preview = fileInfo,</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            metadata = (p.id ?? <span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            tags = p.<a class="code hl_variable" href="classBaseModPackage.html#a563934f48e99a229420164d09e366f9a">tags</a>,</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        };</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">switch</span> (p.<a class="code hl_variable" href="classBaseModPackage.html#a5631997e1a7639c5162d468254ca34b3">visibility</a>)</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Unlisted&quot;</span>:</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityUnlisted;</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Private&quot;</span>:</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;FriendsOnly&quot;</span>:</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityFriendsOnly;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(App.Client.Owner.id);</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(result.appId);</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(p.<a class="code hl_variable" href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">id</a>);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(directoryInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.FullName);</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(fileInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.FullName);</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>}</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">bool</span> cancelled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_function" href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">Start</a>(<span class="stringliteral">&quot;Uploading&quot;</span>).<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> = delegate</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            cancelled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        };</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        p.<a class="code hl_function" href="classBaseModPackage.html#a2c2fffb215cd4d11cba9c200563d1ade">UpdateMeta</a>(updateOnly: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a> = p;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_function" href="classSteam.html#a51579b1153303c79b2cf924b66627dfe">QueryAllMyPublished</a>(delegate(List&lt;WorkshopItem&gt; items)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">if</span> (!cancelled)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <a class="code hl_function" href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">CreateOrUpdateUserContent</a>(items);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }, delegate(<span class="keywordtype">string</span> error)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">if</span> (!cancelled)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                <a class="code hl_function" href="classSteam.html#a34ca986cf282cdbb6c7d8e2d7d3f1079">OnPublishError</a>(error);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        });</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classSteam.html#a34ca986cf282cdbb6c7d8e2d7d3f1079">  141</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#a34ca986cf282cdbb6c7d8e2d7d3f1079">OnPublishError</a>(<span class="keywordtype">string</span> error)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(error);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>.lang() + <span class="stringliteral">&quot;\n\n&quot;</span> + error);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classSteam.html#a5c505431ea4fd31f370c0d4989441279">  148</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="classSteam.html#a5c505431ea4fd31f370c0d4989441279">IsUgcError</a>(<span class="keywordtype">string</span> error, EResult? result)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">switch</span> (result)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            EResult? eResult = result;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> error + <span class="stringliteral">&quot; (&quot;</span> + eResult.ToString() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">case</span> <span class="keyword">null</span>:</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">case</span> EResult.k_EResultNone:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">case</span> EResult.k_EResultOK:</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordflow">return</span> error;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classSteam.html#a51579b1153303c79b2cf924b66627dfe">  164</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#a51579b1153303c79b2cf924b66627dfe">QueryAllMyPublished</a>(Action&lt;List&lt;WorkshopItem&gt;&gt; onComplete, Action&lt;string&gt; onFail = <span class="keyword">null</span>, <span class="keywordtype">float</span> timeout = 60f)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        List&lt;WorkshopItem&gt; results = <span class="keyword">new</span> List&lt;WorkshopItem&gt;();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        HashSet&lt;PublishedFileId_t&gt; ids = <span class="keyword">new</span> HashSet&lt;PublishedFileId_t&gt;();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        AppId_t app = SteamUtils.GetAppID();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        AccountID_t account = SteamUser.GetSteamID().GetAccountID();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        CallResult&lt;SteamUGCQueryCompleted_t&gt; callResult = CallResult&lt;SteamUGCQueryCompleted_t&gt;.Create();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        UGCQueryHandle_t handle = UGCQueryHandle_t.Invalid;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        uint page = 0u;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordtype">bool</span> done = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordtype">float</span> time = 0f;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        NextPage();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">if</span> (!done &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.StartCoroutine(Timeout());</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1">Fail</a>(<span class="keywordtype">string</span> reason)</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordflow">if</span> (!done)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                done = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                callResult.Cancel();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                Release();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;UgcQuery &quot;</span> + reason + <span class="stringliteral">&quot; at page &quot;</span> + page + <span class="stringliteral">&quot; (&quot;</span> + results.Count + <span class="stringliteral">&quot; items fetched)&quot;</span>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                <span class="keywordflow">if</span> (onFail != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                    onFail(text);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(text);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordtype">void</span> NextPage()</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            page++;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            time = Time.realtimeSinceStartup;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            handle = SteamUGC.CreateQueryUserUGCRequest(account, EUserUGCList.k_EUserUGCList_Published, EUGCMatchingUGCType.k_EUGCMatchingUGCType_Items_ReadyToUse, EUserUGCListSortOrder.k_EUserUGCListSortOrder_CreationOrderDesc, app, app, page);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordflow">if</span> (handle == UGCQueryHandle_t.Invalid)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <a class="code hl_enumvalue" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1">Fail</a>(<span class="stringliteral">&quot;could not be created&quot;</span>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                SteamUGC.SetReturnKeyValueTags(handle, bReturnKeyValueTags: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                SteamUGC.SetReturnMetadata(handle, bReturnMetadata: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                SteamUGC.SetReturnLongDescription(handle, bReturnLongDescription: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                SteamAPICall_t steamAPICall_t = SteamUGC.SendQueryUGCRequest(handle);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                <span class="keywordflow">if</span> (steamAPICall_t == SteamAPICall_t.Invalid)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                    <a class="code hl_enumvalue" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1">Fail</a>(<span class="stringliteral">&quot;could not be sent&quot;</span>);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                    callResult.Set(steamAPICall_t, OnQueryCompleted);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordtype">void</span> OnQueryCompleted(SteamUGCQueryCompleted_t r, <span class="keywordtype">bool</span> ioFailure)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">if</span> (!done)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="keywordflow">if</span> (ioFailure || r.m_eResult != EResult.k_EResultOK)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    <a class="code hl_enumvalue" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1">Fail</a>(<span class="stringliteral">&quot;failed with &quot;</span> + (ioFailure ? <span class="stringliteral">&quot;IO failure&quot;</span> : r.m_eResult.ToString()));</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    <span class="keywordflow">for</span> (uint num = 0u; num &lt; r.m_unNumResultsReturned; num++)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                    {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                        <span class="keywordflow">if</span> (SteamUGC.GetQueryUGCResult(r.m_handle, num, out var pDetails) &amp;&amp; ids.Add(pDetails.m_nPublishedFileId))</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                        {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                            WorkshopItem workshopItem = <span class="keyword">new</span> WorkshopItem(pDetails);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                            SteamUGC.GetQueryUGCMetadata(r.m_handle, num, out workshopItem.metadata, 5000u);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                            uint queryUGCNumKeyValueTags = SteamUGC.GetQueryUGCNumKeyValueTags(r.m_handle, num);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                            workshopItem.keyValueTags = <span class="keyword">new</span> StringKeyValuePair[queryUGCNumKeyValueTags];</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                            <span class="keywordflow">for</span> (uint num2 = 0u; num2 &lt; queryUGCNumKeyValueTags; num2++)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                            {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                                SteamUGC.GetQueryUGCKeyValueTag(r.m_handle, num, num2, out var pchKey, 255u, out var pchValue, 255u);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                                workshopItem.keyValueTags[num2] = <span class="keyword">new</span> StringKeyValuePair</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                                {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                                    key = pchKey?.Trim(),</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                                    value = pchValue?.Trim()</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                                };</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                            }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                            results.Add(workshopItem);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                        }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                    }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    Release();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                    <span class="keywordflow">if</span> (r.m_unNumResultsReturned == 0 || page * 50 &gt;= r.m_unTotalMatchingResults)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                    {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        done = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                        onComplete?.Invoke(results);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                    {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#a647d6b64fd99120d09aebff659b6c0a5">actionsNextFrame</a>.Add(NextPage);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                    }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordtype">void</span> Release()</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keywordflow">if</span> (!(handle == UGCQueryHandle_t.Invalid))</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                SteamUGC.ReleaseQueryUGCRequest(handle);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                handle = UGCQueryHandle_t.Invalid;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        IEnumerator Timeout()</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <span class="keywordflow">while</span> (!done)</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                <span class="keywordflow">if</span> (Time.realtimeSinceStartup - time &gt; timeout)</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                    <a class="code hl_enumvalue" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1">Fail</a>(<span class="stringliteral">&quot;timed out after &quot;</span> + timeout + <span class="stringliteral">&quot;s&quot;</span>);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">  288</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">CreateOrUpdateUserContent</a>(List&lt;WorkshopItem&gt; items)</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content2&quot;</span>);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> baseModPackage = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(items.Count);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">foreach</span> (WorkshopItem <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> items)</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.keyValueTags.IsEmpty())</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            StringKeyValuePair[] keyValueTags = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.keyValueTags;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyValueTags.Length; i++)</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                StringKeyValuePair stringKeyValuePair = keyValueTags[i];</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.id &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Owner.IsMe)</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                    <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.FileId);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content&quot;</span>);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(baseModPackage).Create(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">new</span> WorkshopItemKeyValueTag[1]</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="keyword">new</span> WorkshopItemKeyValueTag</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                key = <span class="stringliteral">&quot;id&quot;</span>,</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                value = baseModPackage.id</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        }, delegate(WorkshopItemDataCreateStatus result)</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordflow">if</span> (result.hasError)</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                <span class="keywordtype">string</span> errorMessage = result.errorMessage;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                ref SubmitItemUpdateResult_t? submitItemUpdateResult = ref result.submitItemUpdateResult;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                <a class="code hl_function" href="classSteam.html#a34ca986cf282cdbb6c7d8e2d7d3f1079">OnPublishError</a>(<a class="code hl_function" href="classSteam.html#a5c505431ea4fd31f370c0d4989441279">IsUgcError</a>(errorMessage, submitItemUpdateResult.HasValue ? <span class="keyword">new</span> EResult?(submitItemUpdateResult.GetValueOrDefault().m_eResult) : result.createItemResult?.m_eResult));</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            }</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_created&quot;</span>);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;created&quot;</span>);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        });</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">  336</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(PublishedFileId_t fileId)</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        WorkshopItemData workshopItemData = <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(p);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        workshopItemData.publishedFileId = fileId;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        workshopItemData.Update(delegate(WorkshopItemDataUpdateStatus result)</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keywordflow">if</span> (result.hasError)</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                OnPublishError(IsUgcError(result.errorMessage, result.submitItemUpdateResult?.m_eResult));</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            }</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_updated&quot;</span>);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                Debug.Log(<span class="stringliteral">&quot;updated&quot;</span>);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        });</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    }</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">  357</a></span>    <span class="keyword">public</span> WorkshopItemData <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(<a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p)</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName + <span class="stringliteral">&quot;/preview.jpg&quot;</span>);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        WorkshopItemData result = <span class="keyword">new</span> WorkshopItemData</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        {</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            appId = <a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId,</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a> = p.<a class="code hl_variable" href="classBaseModPackage.html#af7e9ef827bae0391356fc343de2ce63e">title</a>,</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            description = p.<a class="code hl_variable" href="classBaseModPackage.html#af237d8eedaa4198ca8715b9c135374c8">description</a>,</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            content = directoryInfo,</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            preview = fileInfo,</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>            metadata = (p.id ?? <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            tags = p.<a class="code hl_variable" href="classBaseModPackage.html#a563934f48e99a229420164d09e366f9a">tags</a>,</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        };</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        <span class="keywordflow">switch</span> (p.<a class="code hl_variable" href="classBaseModPackage.html#a5631997e1a7639c5162d468254ca34b3">visibility</a>)</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        {</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Unlisted&quot;</span>:</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityUnlisted;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Private&quot;</span>:</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;FriendsOnly&quot;</span>:</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityFriendsOnly;</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        }</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(App.Client.Owner.id);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(result.appId);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(p.<a class="code hl_variable" href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">id</a>);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(directoryInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.FullName);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(fileInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.FullName);</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    }</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>}</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aID__Achievement_8cs_html_af30f45c9abd9d83624e399923fe2e1e9"><div class="ttname"><a href="ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9">ID_Achievement</a></div><div class="ttdeci">ID_Achievement</div><div class="ttdef"><b>Definition:</b> <a href="ID__Achievement_8cs_source.html#l00001">ID_Achievement.cs:2</a></div></div>
 <div class="ttc" id="aID__DLC_8cs_html_a388d737f2417abc42bf7c1cb10e469f9"><div class="ttname"><a href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a></div><div class="ttdeci">ID_DLC</div><div class="ttdef"><b>Definition:</b> <a href="ID__DLC_8cs_source.html#l00001">ID_DLC.cs:2</a></div></div>
+<div class="ttc" id="aLockOpenState_8cs_html_a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1"><div class="ttname"><a href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85aceaa0734f0b3c738120c67344d8f3ec1">LockOpenState.Fail</a></div><div class="ttdeci">@ Fail</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aUIBook_8cs_html_a270e3896fe3ee5b1a258e8c8091a1945"><div class="ttname"><a href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a></div><div class="ttdeci">item3. title</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00640">UIBook.cs:640</a></div></div>
 <div class="ttc" id="aclassBaseCore_html"><div class="ttname"><a href="classBaseCore.html">BaseCore</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00007">BaseCore.cs:8</a></div></div>
@@ -432,11 +511,14 @@ $(document).ready(function(){initNavTree('Steam_8cs_source.html',''); initResiza
 <div class="ttc" id="aclassLayerProgress_html_a0b1344b3c0c9b2b18a4b2102f8126b85"><div class="ttname"><a href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">LayerProgress.onCancel</a></div><div class="ttdeci">Action onCancel</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00034">LayerProgress.cs:34</a></div></div>
 <div class="ttc" id="aclassLayerProgress_html_a8b560e07065b5164a6bc68750bce6c78"><div class="ttname"><a href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">LayerProgress.Start</a></div><div class="ttdeci">static LayerProgress Start(string text, Action onComplete=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00100">LayerProgress.cs:100</a></div></div>
 <div class="ttc" id="aclassSteam_html"><div class="ttname"><a href="classSteam.html">Steam</a></div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00011">Steam.cs:12</a></div></div>
-<div class="ttc" id="aclassSteam_html_a18718c8872733ffe0e2d561c94abcc6f"><div class="ttname"><a href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">Steam.UpdateUserContent</a></div><div class="ttdeci">void UpdateUserContent(PublishedFileId_t fileId)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00256">Steam.cs:256</a></div></div>
+<div class="ttc" id="aclassSteam_html_a18718c8872733ffe0e2d561c94abcc6f"><div class="ttname"><a href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">Steam.UpdateUserContent</a></div><div class="ttdeci">void UpdateUserContent(PublishedFileId_t fileId)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00336">Steam.cs:336</a></div></div>
 <div class="ttc" id="aclassSteam_html_a202d04d123f0110ae37da006d3a839ba"><div class="ttname"><a href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">Steam.steamworks</a></div><div class="ttdeci">SteamworksBehaviour steamworks</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00015">Steam.cs:15</a></div></div>
 <div class="ttc" id="aclassSteam_html_a288fc6f71e08467fecbe0559de6ccc32"><div class="ttname"><a href="classSteam.html#a288fc6f71e08467fecbe0559de6ccc32">Steam.GetAchievement</a></div><div class="ttdeci">static void GetAchievement(ID_Achievement id)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00053">Steam.cs:53</a></div></div>
+<div class="ttc" id="aclassSteam_html_a34ca986cf282cdbb6c7d8e2d7d3f1079"><div class="ttname"><a href="classSteam.html#a34ca986cf282cdbb6c7d8e2d7d3f1079">Steam.OnPublishError</a></div><div class="ttdeci">static void OnPublishError(string error)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00141">Steam.cs:141</a></div></div>
 <div class="ttc" id="aclassSteam_html_a39d10fbb39e03c39d1f509fb2e75d392"><div class="ttname"><a href="classSteam.html#a39d10fbb39e03c39d1f509fb2e75d392">Steam.ResetAchievement</a></div><div class="ttdeci">static void ResetAchievement(ID_Achievement id)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00101">Steam.cs:101</a></div></div>
 <div class="ttc" id="aclassSteam_html_a4ca228997c65c35b796ddb721042a21a"><div class="ttname"><a href="classSteam.html#a4ca228997c65c35b796ddb721042a21a">Steam.CheckDLC</a></div><div class="ttdeci">void CheckDLC()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00038">Steam.cs:38</a></div></div>
+<div class="ttc" id="aclassSteam_html_a51579b1153303c79b2cf924b66627dfe"><div class="ttname"><a href="classSteam.html#a51579b1153303c79b2cf924b66627dfe">Steam.QueryAllMyPublished</a></div><div class="ttdeci">static void QueryAllMyPublished(Action&lt; List&lt; WorkshopItem &gt; &gt; onComplete, Action&lt; string &gt; onFail=null, float timeout=60f)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00164">Steam.cs:164</a></div></div>
+<div class="ttc" id="aclassSteam_html_a5c505431ea4fd31f370c0d4989441279"><div class="ttname"><a href="classSteam.html#a5c505431ea4fd31f370c0d4989441279">Steam.IsUgcError</a></div><div class="ttdeci">static string IsUgcError(string error, EResult? result)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00148">Steam.cs:148</a></div></div>
 <div class="ttc" id="aclassSteam_html_a611e6d30df5e4f3179483fa6b0e543e5"><div class="ttname"><a href="classSteam.html#a611e6d30df5e4f3179483fa6b0e543e5">Steam.ResetAllAchievement</a></div><div class="ttdeci">static void ResetAllAchievement()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00092">Steam.cs:92</a></div></div>
 <div class="ttc" id="aclassSteam_html_a7ed989445273162de59dd96ac322d9ee"><div class="ttname"><a href="classSteam.html#a7ed989445273162de59dd96ac322d9ee">Steam.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00023">Steam.cs:23</a></div></div>
 <div class="ttc" id="aclassSteam_html_a8042508c3cfc8f7c6cb9ed189614bdb4"><div class="ttname"><a href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Steam.Instance</a></div><div class="ttdeci">static Steam Instance</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00013">Steam.cs:13</a></div></div>
@@ -444,10 +526,9 @@ $(document).ready(function(){initNavTree('Steam_8cs_source.html',''); initResiza
 <div class="ttc" id="aclassSteam_html_a97a5dc96771772c2d6aa9326f22fd65a"><div class="ttname"><a href="classSteam.html#a97a5dc96771772c2d6aa9326f22fd65a">Steam.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00028">Steam.cs:28</a></div></div>
 <div class="ttc" id="aclassSteam_html_a9a3517abe94edb870b327fbb128ee3a7"><div class="ttname"><a href="classSteam.html#a9a3517abe94edb870b327fbb128ee3a7">Steam.TestHasDLC</a></div><div class="ttdeci">void TestHasDLC()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00111">Steam.cs:111</a></div></div>
 <div class="ttc" id="aclassSteam_html_aa8e05cdeeba8f9bdbe101b0b184500e9"><div class="ttname"><a href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">Steam.HasDLC</a></div><div class="ttdeci">static bool HasDLC(ID_DLC id)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00043">Steam.cs:43</a></div></div>
-<div class="ttc" id="aclassSteam_html_abd65c2672e76e1179de50670f27bceec"><div class="ttname"><a href="classSteam.html#abd65c2672e76e1179de50670f27bceec">Steam.QueryAllMyPublished</a></div><div class="ttdeci">static void QueryAllMyPublished(Action&lt; List&lt; WorkshopItem &gt; &gt; onComplete, Action&lt; string &gt; onFail=null, float timeout=10f)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00132">Steam.cs:132</a></div></div>
-<div class="ttc" id="aclassSteam_html_ad02beae41acbf0ce08577d502edfb641"><div class="ttname"><a href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">Steam.CreateItemData</a></div><div class="ttdeci">WorkshopItemData CreateItemData(BaseModPackage p)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00279">Steam.cs:279</a></div></div>
+<div class="ttc" id="aclassSteam_html_ad02beae41acbf0ce08577d502edfb641"><div class="ttname"><a href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">Steam.CreateItemData</a></div><div class="ttdeci">WorkshopItemData CreateItemData(BaseModPackage p)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00357">Steam.cs:357</a></div></div>
 <div class="ttc" id="aclassSteam_html_ad53d3b37126f7e3214dd8bd45d92c279"><div class="ttname"><a href="classSteam.html#ad53d3b37126f7e3214dd8bd45d92c279">Steam.CheckUpdate</a></div><div class="ttdeci">void CheckUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00034">Steam.cs:34</a></div></div>
-<div class="ttc" id="aclassSteam_html_ad57df1e50f0816bb9c3e63a2ad68cbc2"><div class="ttname"><a href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">Steam.CreateOrUpdateUserContent</a></div><div class="ttdeci">void CreateOrUpdateUserContent(List&lt; WorkshopItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00208">Steam.cs:208</a></div></div>
+<div class="ttc" id="aclassSteam_html_ad57df1e50f0816bb9c3e63a2ad68cbc2"><div class="ttname"><a href="classSteam.html#ad57df1e50f0816bb9c3e63a2ad68cbc2">Steam.CreateOrUpdateUserContent</a></div><div class="ttdeci">void CreateOrUpdateUserContent(List&lt; WorkshopItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00288">Steam.cs:288</a></div></div>
 <div class="ttc" id="aclassSteam_html_ae193d1da32d1e51042206b4f81b4605f"><div class="ttname"><a href="classSteam.html#ae193d1da32d1e51042206b4f81b4605f">Steam.ugc</a></div><div class="ttdeci">UserGeneratedContentQueryManager ugc</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00017">Steam.cs:17</a></div></div>
 <div class="ttc" id="aclassSteam_html_aeaa01c2e930f6a94ccd945bf3a4ebfcd"><div class="ttname"><a href="classSteam.html#aeaa01c2e930f6a94ccd945bf3a4ebfcd">Steam.CreateUserContent</a></div><div class="ttdeci">void CreateUserContent(BaseModPackage p)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00117">Steam.cs:117</a></div></div>
 <div class="ttc" id="aclassSteam_html_af927db6236cb57cdef86a4aa75023d54"><div class="ttname"><a href="classSteam.html#af927db6236cb57cdef86a4aa75023d54">Steam.testData</a></div><div class="ttdeci">WorkshopItem testData</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00019">Steam.cs:19</a></div></div>

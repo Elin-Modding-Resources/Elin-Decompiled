@@ -1,5 +1,14 @@
 var NAVTREEINDEX134 =
 {
+"classTraitStoryBookHome.html":[1,0,2022],
+"classTraitStoryBookHome.html#a14b9c17c5033ce2e84c0b6293039c109":[1,0,2022,0],
+"classTraitStove.html":[1,0,2023],
+"classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a":[1,0,2023,0],
+"classTraitStrangeGirl.html":[1,0,2024],
+"classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8":[1,0,2024,0],
+"classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,2024,1],
+"classTraitStrangePainting.html":[1,0,2025],
+"classTraitStrangePainting.html#a1dea64b396faa5c98adae2df0c213c19":[1,0,2025,0],
 "classTraitStrangeStatue.html":[1,0,2026],
 "classTraitStrangeStatue.html#ad8bcce712e1c6f7a9e0ae41e6b648229":[1,0,2026,0],
 "classTraitSwing.html":[1,0,2027],
@@ -240,14 +249,5 @@ var NAVTREEINDEX134 =
 "classTraitTrainingDummy.html":[1,0,2082],
 "classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,2082,0],
 "classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,2082,1],
-"classTraitTrainingDummy.html#a4b356fb1fe2328acbd4482e2f6f3dc65":[1,0,2082,3],
-"classTraitTrainingDummy.html#a6b66cf5d030f6577f9317b14db659234":[1,0,2082,2],
-"classTraitTrainingDummyArmor.html":[1,0,2083],
-"classTraitTrainingDummyArmor.html#a1943884ccec196581f39fd3f20f40134":[1,0,2083,0],
-"classTraitTrainingDummyArmor.html#a7ede5fa583c669e66a118b54f82ff460":[1,0,2083,2],
-"classTraitTrainingDummyArmor.html#adddc474b9eb399dddfa9a6e78c94e03a":[1,0,2083,1],
-"classTraitTrap.html":[1,0,2084],
-"classTraitTrap.html#a0f89a55557d64f2a53fe20d56b1500f3":[1,0,2084,5],
-"classTraitTrap.html#a16a2fcd972c2577745be91cc1e8e652b":[1,0,2084,0],
-"classTraitTrap.html#a3e712b85feeb8d21b1517003f6209bea":[1,0,2084,2]
+"classTraitTrainingDummy.html#a4b356fb1fe2328acbd4482e2f6f3dc65":[1,0,2082,3]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX126 =
 {
+"classTraitBed.html#a34a3cbb665f0f0e11346eb701079bde7":[1,0,1558,14],
+"classTraitBed.html#a4435f2f8b8997c03cbea0f7c37824f1d":[1,0,1558,9],
+"classTraitBed.html#a4a0a38bf3561473e8951dc8d64f1a8b8":[1,0,1558,15],
+"classTraitBed.html#a560cbcda92f36fd65f2da4e6b5f208c7":[1,0,1558,2],
+"classTraitBed.html#a7d20b131e4fc7cccdae60a2e19788efd":[1,0,1558,4],
+"classTraitBed.html#a89c9557454b47a7f30b3af53e30679bc":[1,0,1558,6],
+"classTraitBed.html#a95a7c5c2914d6e0ba1725c21cb5274d7":[1,0,1558,7],
+"classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80":[1,0,1558,10],
+"classTraitBed.html#ac01d84f3d0fb3e10a42cd5d4c170c4ae":[1,0,1558,1],
 "classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768":[1,0,1558,11],
 "classTraitBed.html#ad92ddc87aafebdedf361f47d92a6ef4f":[1,0,1558,3],
 "classTraitBedCoffin.html":[1,0,1559],
@@ -240,14 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1604,2],
 "classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1604,1],
 "classTraitChestOyster.html":[1,0,1605],
-"classTraitChestOyster.html#ad89f91220e999eaf2bb6055adbbb012d":[1,0,1605,1],
-"classTraitChestOyster.html#afe2b414ab91f33a90cc9acf35fab0fb4":[1,0,1605,0],
-"classTraitChestPractice.html":[1,0,1606],
-"classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1606,0],
-"classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1606,3],
-"classTraitChestPractice.html#aa888ef024cbf4d967f1780c60ffeab9d":[1,0,1606,2],
-"classTraitChestPractice.html#ad10c89e064ae12a6d55672e2c02e0fcd":[1,0,1606,1],
-"classTraitChopper.html":[1,0,1607],
-"classTraitChopper.html#a94d6375d40d335e6b98e54be09f2185a":[1,0,1607,0],
-"classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1607,2]
+"classTraitChestOyster.html#ad89f91220e999eaf2bb6055adbbb012d":[1,0,1605,1]
 };

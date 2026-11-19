@@ -6,7 +6,7 @@ var searchData=
   ['badeffect_3',['BadEffect',['../classTraitWell.html#a227abc4c403af92c9f4495bb61c2c538',1,'TraitWell']]],
   ['banish_4',['Banish',['../classChara.html#a575c2bebbc73ff8458c9f1b32196399f',1,'Chara']]],
   ['banishallminions_5',['BanishAllMinions',['../classChara.html#ac2b8e9985474c0ee89fd11d94ffd0a26',1,'Chara']]],
-  ['banishmember_6',['BanishMember',['../classFactionBranch.html#af3e0056cddbc23577321456176f5de3f',1,'FactionBranch']]],
+  ['banishmember_6',['BanishMember',['../classFactionBranch.html#a31bfaf02e5b7c286e28bb11575cc2a9b',1,'FactionBranch']]],
   ['base_7',['Base',['../classElementContainer.html#a406cc6245cf539e973e4851028830529',1,'ElementContainer']]],
   ['baseheight_8',['BaseHeight',['../classSpriteData.html#a3abc7c5e5fda430c174effe97d0106b1',1,'SpriteData']]],
   ['basewidth_9',['BaseWidth',['../classSpriteData.html#aa83b87bae254e3f5bd9827894f9d4798',1,'SpriteData']]],

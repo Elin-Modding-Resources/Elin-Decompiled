@@ -274,6 +274,7 @@ var classSPELL =
     [ "SpSummonMonster", "classSPELL.html#ad1dc4dc56f9d4af54f0234ad3e5beb5c", null ],
     [ "SpSummonOrc", "classSPELL.html#aa4583afc997268495fcbab7d99c64d54", null ],
     [ "SpSummonPawn", "classSPELL.html#aa21fe69d1f27b85785ac95b4bebc9c48", null ],
+    [ "SpSummonPutty", "classSPELL.html#a677374dc4777d24b824d786df33a42cd", null ],
     [ "SpSummonShadow", "classSPELL.html#a09708286208c11ba240f4a9c81242737", null ],
     [ "SpSummonShubKid", "classSPELL.html#a8ca4f55ce65aaa682ac08a0cb3bcb836", null ],
     [ "SpSummonTako", "classSPELL.html#a8fd46c53bfc560dc318b6647c2c68222", null ],

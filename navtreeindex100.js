@@ -1,5 +1,11 @@
 var NAVTREEINDEX100 =
 {
+"classQuestCraft.html#ad07345ad6920b9ffa60372337f47c1a5":[1,0,1078,15],
+"classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36":[1,0,1078,10],
+"classQuestCraft.html#aed22b02c64a9fe3a818f51a7049e6ae5":[1,0,1078,6],
+"classQuestCraft_1_1Req.html":[1,0,1078,0],
+"classQuestCraft_1_1Req.html#a30f0b1eab88459120f5693dd1955bb19":[1,0,1078,0,0],
+"classQuestCraft_1_1Req.html#a5f575d57e195558ec2e4928258c7ae22":[1,0,1078,0,3],
 "classQuestCraft_1_1Req.html#af769acbc82faf22ef62213d979d53612":[1,0,1078,0,2],
 "classQuestCraft_1_1Req.html#afcb4d5eebbb33b29e77b3b4c96ab5db4":[1,0,1078,0,1],
 "classQuestCrafter.html":[1,0,1079],
@@ -243,11 +249,5 @@ var NAVTREEINDEX100 =
 "classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e":[1,0,1114,28],
 "classQuestManager.html#ac87fcf8fa65b2eb1b59a24a3f5666efd":[1,0,1114,21],
 "classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e":[1,0,1114,32],
-"classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f":[1,0,1114,12],
-"classQuestManager.html#ae66c5dda98498edcb42971241ec929d0":[1,0,1114,31],
-"classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12":[1,0,1114,7],
-"classQuestManager.html#aec5882cb61c245f609ece8a62fa9a946":[1,0,1114,17],
-"classQuestManager.html#aee656082e2037dfef69293944f3fc838":[1,0,1114,9],
-"classQuestManager.html#afa05d353fe6e1fdb70e3a0dc85ef4574":[1,0,1114,24],
-"classQuestMeal.html":[1,0,1115]
+"classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f":[1,0,1114,12]
 };

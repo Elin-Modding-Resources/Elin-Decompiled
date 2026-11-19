@@ -1,5 +1,14 @@
 var NAVTREEINDEX132 =
 {
+"classTraitPhone.html#a9c08ee840f6c744b1add6f609f688547":[1,0,1899,2],
+"classTraitPhone.html#ade162582ff883a09c05beea2e5a45557":[1,0,1899,3],
+"classTraitPhoto.html":[1,0,1900],
+"classTraitPhoto.html#ad4c423b12256d4e26950e812ec93579e":[1,0,1900,0],
+"classTraitPillow.html":[1,0,1901],
+"classTraitPillowEhekatl.html":[1,0,1902],
+"classTraitPillowEhekatl.html#a78bb4dcb6ef29eee389886b1651b5021":[1,0,1902,0],
+"classTraitPillowGod.html":[1,0,1903],
+"classTraitPillowGod.html#a12103e758f3a07f7cfde68d18d211303":[1,0,1903,0],
 "classTraitPillowItzpalt.html":[1,0,1904],
 "classTraitPillowItzpalt.html#a53db86df55de7a593f182c72e3b393e8":[1,0,1904,0],
 "classTraitPillowJure.html":[1,0,1905],
@@ -240,14 +249,5 @@ var NAVTREEINDEX132 =
 "classTraitScroll.html#a1373d9916e36ca2f4d2e64e9ca16261b":[1,0,1959,7],
 "classTraitScroll.html#a2da72f058b8d178c5bb4711b594a0178":[1,0,1959,2],
 "classTraitScroll.html#a446f046317c1d8fe209ee33db4d6c044":[1,0,1959,0],
-"classTraitScroll.html#a463b2bf283a2cdcc2f42e218ba9503ae":[1,0,1959,4],
-"classTraitScroll.html#ac7d1b953cfcde5d9ae85396795ad3d2d":[1,0,1959,6],
-"classTraitScroll.html#af9a2497cf6c86cfd800d295aae53061d":[1,0,1959,3],
-"classTraitScroll.html#afd7a0040e801c53bac9e70d29fd078e2":[1,0,1959,5],
-"classTraitScrollMap.html":[1,0,1960],
-"classTraitScrollMap.html#a0904a0579abb4d0c7bd18be934cd277b":[1,0,1960,7],
-"classTraitScrollMap.html#a15d370c2fb3c3e6c7c90ed717086eb68":[1,0,1960,4],
-"classTraitScrollMap.html#a1bb1825d5b45d557376237e9c242742b":[1,0,1960,3],
-"classTraitScrollMap.html#a57fbef95039c8457ddfea625a6a28f6b":[1,0,1960,1],
-"classTraitScrollMap.html#a828288b79a2394619279a7fe6b3bbbce":[1,0,1960,0]
+"classTraitScroll.html#a463b2bf283a2cdcc2f42e218ba9503ae":[1,0,1959,4]
 };

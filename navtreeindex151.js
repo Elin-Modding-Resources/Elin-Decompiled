@@ -1,5 +1,14 @@
 var NAVTREEINDEX151 =
 {
+"classZone__Arena.html#a23f93026eb8b48371b37ca1c5d5644b3":[1,0,2281,1],
+"classZone__Arena.html#a34a1cd9398e8fb458e0a3ba38fc50907":[1,0,2281,0],
+"classZone__Arena.html#a5b657d752ffb0416861456d6ed94b93d":[1,0,2281,4],
+"classZone__Arena.html#a7b031408533c6fa2374f687f3a23242a":[1,0,2281,2],
+"classZone__Arena.html#ab3d8a0106bdadf316735e15ca2aa3974":[1,0,2281,3],
+"classZone__Arena2.html":[1,0,2282],
+"classZone__Arena2.html#a603f243a7ab6f6ff69262ca571aca7bf":[1,0,2282,2],
+"classZone__Arena2.html#a8b7ecb177fe1fb7a5b6ca27beb4dfe84":[1,0,2282,0],
+"classZone__Arena2.html#aee348b90dbad10453fe48556ffb3a605":[1,0,2282,1],
 "classZone__Asylum.html":[1,0,2283],
 "classZone__Asylum.html#a8a8b700be96946dac961b60545aff9af":[1,0,2283,0],
 "classZone__Beach.html":[1,0,2284],
@@ -240,14 +249,5 @@ var NAVTREEINDEX151 =
 "classZone__RandomDungeonNature.html":[1,0,2337],
 "classZone__RandomDungeonNature.html#a3b3a542113fc933ff04c32724c2e24a4":[1,0,2337,0],
 "classZone__RandomDungeonNature.html#af5e1db33f5a3dc44b2bec3898088666c":[1,0,2337,1],
-"classZone__RandomDungeonPlain.html":[1,0,2338],
-"classZone__RandomDungeonWater.html":[1,0,2339],
-"classZone__RandomDungeonWater.html#a768ce264e05aa7123e791e05a1431554":[1,0,2339,0],
-"classZone__Seeker.html":[1,0,2340],
-"classZone__Shelter.html":[1,0,2341],
-"classZone__SisterHouse.html":[1,0,2342],
-"classZone__SisterHouse.html#a5d0fc5c3dd908253821f96d2c9244b43":[1,0,2342,1],
-"classZone__SisterHouse.html#af45daf26c459a9e7de55b1d301dfce4d":[1,0,2342,0],
-"classZone__SnowGrave.html":[1,0,2343],
-"classZone__SnowGrave.html#a273e579519f373d313f9f2caa0be44e7":[1,0,2343,1]
+"classZone__RandomDungeonPlain.html":[1,0,2338]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX131 =
 {
+"classTraitMerchantExotic.html#a3664f3c679c914d3c28fab3bff9ad2ef":[1,0,1839,0],
+"classTraitMerchantExotic.html#ac58139989bb307f7f8ec6c7a243b7e41":[1,0,1839,1],
+"classTraitMerchantFestival.html":[1,0,1840],
+"classTraitMerchantFestival.html#a7210e546e1a6bed156031704e8a2a17d":[1,0,1840,0],
+"classTraitMerchantFestival.html#abd43f9437bc6f61d53b9de5619219f84":[1,0,1840,1],
+"classTraitMerchantFestival.html#afeae3be395de985707af611b1b94d310":[1,0,1840,2],
+"classTraitMerchantFireworks.html":[1,0,1841],
+"classTraitMerchantFireworks.html#a30a2f89321d28133f532d8ac79063746":[1,0,1841,0],
+"classTraitMerchantFireworks.html#af84a04a6dfc173d2a6a94831393cb686":[1,0,1841,1],
 "classTraitMerchantFish.html":[1,0,1842],
 "classTraitMerchantFish.html#ad1f0cdfc5509de5d5e99febb5e334e67":[1,0,1842,0],
 "classTraitMerchantFood.html":[1,0,1843],
@@ -240,14 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitPetHouse.html":[1,0,1898],
 "classTraitPhone.html":[1,0,1899],
 "classTraitPhone.html#a03ee09278876eda6ca5cff99e3655166":[1,0,1899,1],
-"classTraitPhone.html#a53928cb9b367df41094aba39e66ae737":[1,0,1899,0],
-"classTraitPhone.html#a9c08ee840f6c744b1add6f609f688547":[1,0,1899,2],
-"classTraitPhone.html#ade162582ff883a09c05beea2e5a45557":[1,0,1899,3],
-"classTraitPhoto.html":[1,0,1900],
-"classTraitPhoto.html#ad4c423b12256d4e26950e812ec93579e":[1,0,1900,0],
-"classTraitPillow.html":[1,0,1901],
-"classTraitPillowEhekatl.html":[1,0,1902],
-"classTraitPillowEhekatl.html#a78bb4dcb6ef29eee389886b1651b5021":[1,0,1902,0],
-"classTraitPillowGod.html":[1,0,1903],
-"classTraitPillowGod.html#a12103e758f3a07f7cfde68d18d211303":[1,0,1903,0]
+"classTraitPhone.html#a53928cb9b367df41094aba39e66ae737":[1,0,1899,0]
 };

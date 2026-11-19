@@ -1,5 +1,6 @@
 var NAVTREEINDEX73 =
 {
+"classGauge.html#a34b419cd84810594f07b84a39931c2d9":[1,0,621,17],
 "classGauge.html#a36034b60b7f8164dd0625448920fd0d5":[1,0,621,2],
 "classGauge.html#a3e8ee81d5ce81eea7a1982316e9a0d89":[1,0,621,1],
 "classGauge.html#a40facaa1259c3ffd4ee32063991142f5":[1,0,621,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX73 =
 "classGradientColor.html#abca4107c73318e3a29b433631446fdddae63eb7d53d38ac541a315c35e2c15ba5":[1,0,655,2,2],
 "classGradientColor.html#ac5061647f96453763cf473f028a80f26":[1,0,655,7],
 "classGradientColor.html#ac7a92f478cb18ee473b063279dfe364e":[1,0,655,14],
-"classGradientColor.html#ad8271edab39d14d3665c94601106cd5f":[1,0,655,17],
-"classGradientColor.html#adfad48061f2695e1dc3de28a14906c95":[1,0,655,0]
+"classGradientColor.html#ad8271edab39d14d3665c94601106cd5f":[1,0,655,17]
 };
