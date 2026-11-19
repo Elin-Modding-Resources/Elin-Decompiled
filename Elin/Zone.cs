@@ -795,6 +795,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			if (isImported)
 			{
 				map.deadCharas.Clear();
+				map.deadCharasShort.Clear();
 				map.OnImport(zoneExportData);
 				if (UseFog && !flag5)
 				{
@@ -1249,6 +1250,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 		}
 		map.deadCharas.Clear();
+		map.deadCharasShort.Clear();
 	}
 
 	public virtual void OnRegenerate()

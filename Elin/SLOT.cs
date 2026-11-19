@@ -6,9 +6,9 @@ public class SLOT
 
 	public const int neck = 31;
 
-	public const int arm = 34;
-
 	public const int toolbelt = 44;
+
+	public const int arm = 34;
 
 	public const int relic = 46;
 
@@ -24,19 +24,19 @@ public class SLOT
 
 	public const int hand = 35;
 
+	public const int back = 33;
+
 	public const int ammo = 42;
 
 	public const int finger = 36;
 
-	public const int head = 30;
-
 	public const int range = 41;
 
-	public const int back = 33;
+	public const int head = 30;
 
 	public static readonly int[] IDS = new int[17]
 	{
-		43, 40, 31, 34, 44, 46, 38, 39, 45, 37,
-		32, 35, 42, 36, 30, 41, 33
+		43, 40, 31, 44, 34, 46, 38, 39, 45, 37,
+		32, 35, 33, 42, 36, 41, 30
 	};
 }

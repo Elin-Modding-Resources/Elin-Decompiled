@@ -429,7 +429,7 @@ public class DramaCustomSequence : EClass
 		{
 			Choice("daMakeMaid", "_daMakeMaid");
 		}
-		if (c.trait.CanBeBanished && !c.IsPCParty)
+		if (c.trait.CanBeBanished)
 		{
 			Choice("daBanish", "_depart");
 		}
@@ -490,6 +490,10 @@ public class DramaCustomSequence : EClass
 		Step("_depart");
 		Talk("depart_choice", StepDefault);
 		Choice("depart1", "_depart1");
+		if (c.c_uniqueData == null && !c.trait.IsUnique)
+		{
+			Choice("depart3", "_depart3");
+		}
 		Choice("depart2", "_depart2");
 		Step("_depart1");
 		Method(delegate
@@ -497,6 +501,15 @@ public class DramaCustomSequence : EClass
 			LayerDrama.Instance.SetOnKill(delegate
 			{
 				c.homeBranch.BanishMember(c);
+			});
+		});
+		Talk("depart1", StepEnd);
+		Step("_depart3");
+		Method(delegate
+		{
+			LayerDrama.Instance.SetOnKill(delegate
+			{
+				c.homeBranch.BanishMember(c, skipMsg: false, sendback: false);
 			});
 		});
 		Talk("depart1", StepEnd);

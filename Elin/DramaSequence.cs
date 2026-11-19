@@ -80,7 +80,7 @@ public class DramaSequence : EClass
 			};
 			if (Portrait.allIds.Contains("UN_" + id + ".png"))
 			{
-				person.idPortrait = "UN_" + id + ".png";
+				person.idPortrait = "UN_" + id;
 			}
 			else
 			{

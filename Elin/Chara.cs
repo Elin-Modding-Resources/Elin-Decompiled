@@ -1534,7 +1534,7 @@ public class Chara : Card, IPathfindWalker
 		return this;
 	}
 
-	public void OnBanish()
+	public void OnBanish(bool sendback = true)
 	{
 		if (!IsGlobal)
 		{
@@ -1544,6 +1544,10 @@ public class Chara : Card, IPathfindWalker
 		foreach (Thing item in things.List((Thing a) => a.HasTag(CTAG.godArtifact)).ToList())
 		{
 			EClass.pc.PickOrDrop(EClass.pc.pos, item);
+		}
+		if (!sendback)
+		{
+			return;
 		}
 		UniqueData uniqueData = base.c_uniqueData;
 		if (uniqueData != null)
@@ -1877,6 +1881,9 @@ public class Chara : Card, IPathfindWalker
 		string text2 = "fusion";
 		switch (id)
 		{
+		case "putty_pack":
+			text = "putty_king";
+			break;
 		case "imotoroid":
 			text = "imotomaton";
 			text2 = "fusion2";
@@ -1925,7 +1932,14 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (c.id != id)
+		if (id == "putty_pack")
+		{
+			if (c.id != "putty")
+			{
+				return false;
+			}
+		}
+		else if (c.id != id)
 		{
 			return false;
 		}
@@ -5903,6 +5917,10 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass._map.deadCharas.Add(this);
 			}
+			else if (!IsGlobal)
+			{
+				EClass._map.deadCharasShort.Add(this);
+			}
 			currentZone.RemoveCard(this);
 		}
 		if ((origin != null && origin.IsPCParty) || IsPCFaction)
@@ -8477,6 +8495,34 @@ public class Chara : Card, IPathfindWalker
 	public Room FindRoom()
 	{
 		return FindBed()?.owner.pos.cell.room;
+	}
+
+	public Chara FindCharaToRevive()
+	{
+		if (IsPCFaction || IsPCFactionMinion)
+		{
+			List<KeyValuePair<int, Chara>> list = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList();
+			if (IsPC && list.Count == 0)
+			{
+				list = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
+			}
+			if (list.Count > 0)
+			{
+				return list.RandomItem().Value.Chara;
+			}
+		}
+		else
+		{
+			EClass._map.deadCharasShort.Shuffle();
+			foreach (Chara item in EClass._map.deadCharasShort)
+			{
+				if (!item.IsHostile(this))
+				{
+					return item;
+				}
+			}
+		}
+		return null;
 	}
 
 	public void ModAffinity(Chara c, int a, bool show = true, bool showOnlyEmo = false)

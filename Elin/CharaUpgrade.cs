@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class CharaUpgrade : EClass
 {
@@ -81,7 +82,7 @@ public class CharaUpgrade : EClass
 			{
 				if (element is Feat)
 				{
-					c.SetFeat(item.idEle, 0);
+					c.SetFeat(item.idEle, Mathf.Max(0, element.ValueWithoutLink - item.value));
 				}
 				else
 				{

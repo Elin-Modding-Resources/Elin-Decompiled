@@ -500,6 +500,32 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.IsBelow(0, 23, 360))
+		{
+			foreach (Element item2 in EClass.pc.elements.dict.Values.ToList())
+			{
+				if (!(item2 is Feat) || item2.vSource <= 0)
+				{
+					continue;
+				}
+				switch (item2.source.categorySub)
+				{
+				case "general":
+				case "attribute":
+				case "skill":
+				case "special":
+				{
+					int dNABonus = item2.GetDNABonus(EClass.pc);
+					if (item2.vBase < dNABonus)
+					{
+						Debug.Log("FixFeat: " + item2.Name + "/" + item2.vBase + "/" + item2.vSource + "/" + dNABonus);
+						EClass.pc.SetFeat(item2.id, item2.vSource + dNABonus);
+					}
+					break;
+				}
+				}
+			}
+		}
 		version.IsBelow(0, 23, 356);
 		if (version.IsBelow(0, 23, 354))
 		{
@@ -683,9 +709,9 @@ public class Game : EClass
 			{
 				EClass.pc.faithElements.SetParent();
 			}
-			foreach (Element item2 in EClass.pc.elements.ListElements((Element e) => e.source.categorySub == "god"))
+			foreach (Element item3 in EClass.pc.elements.ListElements((Element e) => e.source.categorySub == "god"))
 			{
-				EClass.pc.SetFeat(item2.id, 0);
+				EClass.pc.SetFeat(item3.id, 0);
 			}
 			EClass.pc.RefreshFaithElement();
 		}

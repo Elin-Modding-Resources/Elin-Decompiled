@@ -116,88 +116,168 @@ public class Steam : MonoBehaviour
 
 	public void CreateUserContent(BaseModPackage p)
 	{
+		bool cancelled = false;
 		LayerProgress.Start("Uploading").onCancel = delegate
 		{
+			cancelled = true;
 		};
 		p.UpdateMeta(updateOnly: true);
 		currentPackage = p;
-		QueryAllMyPublished(CreateOrUpdateUserContent, delegate(string error)
+		QueryAllMyPublished(delegate(List<WorkshopItem> items)
 		{
-			LayerProgress.completed = true;
-			Debug.LogError(error);
-			Dialog.Ok("mod_publish_error");
+			if (!cancelled)
+			{
+				CreateOrUpdateUserContent(items);
+			}
+		}, delegate(string error)
+		{
+			if (!cancelled)
+			{
+				OnPublishError(error);
+			}
 		});
 	}
 
-	public static void QueryAllMyPublished(Action<List<WorkshopItem>> onComplete, Action<string> onFail = null, float timeout = 10f)
+	private static void OnPublishError(string error)
+	{
+		LayerProgress.completed = true;
+		Debug.LogError(error);
+		Dialog.Ok("mod_publish_error".lang() + "\n\n" + error);
+	}
+
+	private static string IsUgcError(string error, EResult? result)
+	{
+		switch (result)
+		{
+		default:
+		{
+			EResult? eResult = result;
+			return error + " (" + eResult.ToString() + ")";
+		}
+		case null:
+		case EResult.k_EResultNone:
+		case EResult.k_EResultOK:
+			return error;
+		}
+	}
+
+	public static void QueryAllMyPublished(Action<List<WorkshopItem>> onComplete, Action<string> onFail = null, float timeout = 60f)
 	{
 		List<WorkshopItem> results = new List<WorkshopItem>();
 		HashSet<PublishedFileId_t> ids = new HashSet<PublishedFileId_t>();
-		uint page = 1u;
+		AppId_t app = SteamUtils.GetAppID();
+		AccountID_t account = SteamUser.GetSteamID().GetAccountID();
+		CallResult<SteamUGCQueryCompleted_t> callResult = CallResult<SteamUGCQueryCompleted_t>.Create();
+		UGCQueryHandle_t handle = UGCQueryHandle_t.Invalid;
+		uint page = 0u;
 		bool done = false;
-		UgcQuery query = UgcQuery.GetMyPublished();
-		ExecutePage();
+		float time = 0f;
+		NextPage();
 		if (!done && (bool)Instance)
 		{
 			Instance.StartCoroutine(Timeout());
 		}
-		void ExecutePage()
-		{
-			query.SetReturnKeyValueTags(tags: true);
-			query.SetReturnMetadata(metadata: true);
-			if (!query.Execute(HandleResults))
-			{
-				ReportError("UgcQuery.Execute failed at page " + page);
-			}
-		}
-		void HandleResults(UgcQuery q)
-		{
-			if (!done)
-			{
-				results.AddRange(q.ResultsList.Where((WorkshopItem r) => ids.Add(r.FileId)));
-				if (q.ResultsList.Count == 0 || page >= q.pageCount)
-				{
-					done = true;
-					query.Dispose();
-					onComplete?.Invoke(results);
-				}
-				else
-				{
-					query.SetPage(++page);
-					EClass.core.actionsNextFrame.Add(ExecutePage);
-				}
-			}
-		}
-		void ReportError(string error)
+		void Fail(string reason)
 		{
 			if (!done)
 			{
 				done = true;
-				query.Dispose();
+				callResult.Cancel();
+				Release();
+				string text = "UgcQuery " + reason + " at page " + page + " (" + results.Count + " items fetched)";
 				if (onFail != null)
 				{
-					onFail(error);
+					onFail(text);
 				}
 				else
 				{
-					Debug.LogError(error);
+					Debug.LogError(text);
 				}
+			}
+		}
+		void NextPage()
+		{
+			page++;
+			time = Time.realtimeSinceStartup;
+			handle = SteamUGC.CreateQueryUserUGCRequest(account, EUserUGCList.k_EUserUGCList_Published, EUGCMatchingUGCType.k_EUGCMatchingUGCType_Items_ReadyToUse, EUserUGCListSortOrder.k_EUserUGCListSortOrder_CreationOrderDesc, app, app, page);
+			if (handle == UGCQueryHandle_t.Invalid)
+			{
+				Fail("could not be created");
+			}
+			else
+			{
+				SteamUGC.SetReturnKeyValueTags(handle, bReturnKeyValueTags: true);
+				SteamUGC.SetReturnMetadata(handle, bReturnMetadata: true);
+				SteamUGC.SetReturnLongDescription(handle, bReturnLongDescription: true);
+				SteamAPICall_t steamAPICall_t = SteamUGC.SendQueryUGCRequest(handle);
+				if (steamAPICall_t == SteamAPICall_t.Invalid)
+				{
+					Fail("could not be sent");
+				}
+				else
+				{
+					callResult.Set(steamAPICall_t, OnQueryCompleted);
+				}
+			}
+		}
+		void OnQueryCompleted(SteamUGCQueryCompleted_t r, bool ioFailure)
+		{
+			if (!done)
+			{
+				if (ioFailure || r.m_eResult != EResult.k_EResultOK)
+				{
+					Fail("failed with " + (ioFailure ? "IO failure" : r.m_eResult.ToString()));
+				}
+				else
+				{
+					for (uint num = 0u; num < r.m_unNumResultsReturned; num++)
+					{
+						if (SteamUGC.GetQueryUGCResult(r.m_handle, num, out var pDetails) && ids.Add(pDetails.m_nPublishedFileId))
+						{
+							WorkshopItem workshopItem = new WorkshopItem(pDetails);
+							SteamUGC.GetQueryUGCMetadata(r.m_handle, num, out workshopItem.metadata, 5000u);
+							uint queryUGCNumKeyValueTags = SteamUGC.GetQueryUGCNumKeyValueTags(r.m_handle, num);
+							workshopItem.keyValueTags = new StringKeyValuePair[queryUGCNumKeyValueTags];
+							for (uint num2 = 0u; num2 < queryUGCNumKeyValueTags; num2++)
+							{
+								SteamUGC.GetQueryUGCKeyValueTag(r.m_handle, num, num2, out var pchKey, 255u, out var pchValue, 255u);
+								workshopItem.keyValueTags[num2] = new StringKeyValuePair
+								{
+									key = pchKey?.Trim(),
+									value = pchValue?.Trim()
+								};
+							}
+							results.Add(workshopItem);
+						}
+					}
+					Release();
+					if (r.m_unNumResultsReturned == 0 || page * 50 >= r.m_unTotalMatchingResults)
+					{
+						done = true;
+						onComplete?.Invoke(results);
+					}
+					else
+					{
+						EClass.core.actionsNextFrame.Add(NextPage);
+					}
+				}
+			}
+		}
+		void Release()
+		{
+			if (!(handle == UGCQueryHandle_t.Invalid))
+			{
+				SteamUGC.ReleaseQueryUGCRequest(handle);
+				handle = UGCQueryHandle_t.Invalid;
 			}
 		}
 		IEnumerator Timeout()
 		{
-			uint lastPage = page;
-			float time = Time.realtimeSinceStartup;
 			while (!done)
 			{
-				if (lastPage != page)
-				{
-					lastPage = page;
-					time = Time.realtimeSinceStartup;
-				}
 				if (Time.realtimeSinceStartup - time > timeout)
 				{
-					ReportError("UgcQuery timed out at page " + page + " (" + results.Count + " items fetched)");
+					Fail("timed out after " + timeout + "s");
 					break;
 				}
 				yield return null;
@@ -241,9 +321,9 @@ public class Steam : MonoBehaviour
 			LayerProgress.completed = true;
 			if (result.hasError)
 			{
-				Dialog.Ok("mod_publish_error");
-				EClass.ui.Say(result.errorMessage);
-				Debug.Log("error:" + result.errorMessage);
+				string errorMessage = result.errorMessage;
+				ref SubmitItemUpdateResult_t? submitItemUpdateResult = ref result.submitItemUpdateResult;
+				OnPublishError(IsUgcError(errorMessage, submitItemUpdateResult.HasValue ? new EResult?(submitItemUpdateResult.GetValueOrDefault().m_eResult) : result.createItemResult?.m_eResult));
 			}
 			else
 			{
@@ -264,9 +344,7 @@ public class Steam : MonoBehaviour
 			LayerProgress.completed = true;
 			if (result.hasError)
 			{
-				Dialog.Ok("mod_publish_error");
-				EClass.ui.Say(result.errorMessage);
-				Debug.Log("error:" + result.errorMessage);
+				OnPublishError(IsUgcError(result.errorMessage, result.submitItemUpdateResult?.m_eResult));
 			}
 			else
 			{

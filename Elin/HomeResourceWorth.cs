@@ -95,7 +95,7 @@ public class HomeResourceWorth : HomeResourceRate
 			}
 			if (!hashSet.Contains(text))
 			{
-				int num5 = item2.sortVal * num4;
+				long num5 = item2.sortVal * num4;
 				if (num3 > 0)
 				{
 					num5 = num5 * (110 + (int)Mathf.Sqrt(num3) * 4) / 100;
@@ -105,7 +105,7 @@ public class HomeResourceWorth : HomeResourceRate
 			}
 			else if (num2 > 0)
 			{
-				int num6 = item2.sortVal * num4 / Mathf.Max(20, 30 - (int)Mathf.Sqrt(num2));
+				long num6 = item2.sortVal * num4 / Mathf.Max(20, 30 - (int)Mathf.Sqrt(num2));
 				if (num6 > 0)
 				{
 					num += num6;
@@ -121,7 +121,7 @@ public class HomeResourceWorth : HomeResourceRate
 		}
 		int num7 = branch.Evalue(3780) + branch.Evalue(3781) + branch.Evalue(3782) + branch.Evalue(3783) + branch.Evalue(3784);
 		num = (100 + num) * (100 + num7 * 15) / 100;
-		branch.tourism = (int)num;
+		branch.tourism = MathEx.ClampToInt(num, 999999999);
 		foreach (Thing item3 in list2)
 		{
 			item3.sortVal = GetPrice(item3);

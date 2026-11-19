@@ -91,6 +91,8 @@ public class LayerMod : ELayer
 
 	private UIButton buttonCollapse;
 
+	private UIButton buttonToggleAll;
+
 	private BaseModPackage panelTarget;
 
 	private float timerSearch;
@@ -277,11 +279,52 @@ public class LayerMod : ELayer
 		{
 			textNoResult.SetActive(HasFilter && list.items.Count == 0);
 		}
+		RefreshBottomButtons();
+	}
+
+	private void RefreshBottomButtons()
+	{
 		if ((bool)buttonCollapse)
 		{
 			buttonCollapse.mainText.text = (Groups().Any((ModGroup g) => !g.collapsed) ? "mod_group_collapse_all" : "mod_group_expand_all").lang();
+			buttonToggleAll.mainText.text = (ToggleTargets().Any((BaseModPackage p) => p.willActivate) ? "mod_uncheck_all" : "mod_check_all").lang();
 			windows[0].rectBottom.RebuildLayout(recursive: true);
 		}
+	}
+
+	private IEnumerable<BaseModPackage> ToggleTargets()
+	{
+		if (!HasFilter)
+		{
+			return manager.packages.Where((BaseModPackage p) => !p.builtin);
+		}
+		return list.items.OfType<BaseModPackage>();
+	}
+
+	private void ToggleAll()
+	{
+		if (ModManager.disableMod)
+		{
+			Dialog.Ok("mod_preset_disabled");
+			return;
+		}
+		bool on = !ToggleTargets().Any((BaseModPackage p) => p.willActivate);
+		List<BaseModPackage> changed = (from p in ToggleTargets()
+			where p.willActivate != @on && (!@on || p.duplicateOf == null)
+			select p).ToList();
+		if (changed.Count == 0)
+		{
+			SE.BeepSmall();
+			return;
+		}
+		Dialog.YesNo((on ? "mod_check_all_confirm" : "mod_uncheck_all_confirm").lang(changed.Count.ToString() ?? ""), delegate
+		{
+			foreach (BaseModPackage item in changed)
+			{
+				item.willActivate = on;
+			}
+			OnReorder();
+		});
 	}
 
 	public override void OnInit()
@@ -311,6 +354,7 @@ public class LayerMod : ELayer
 		list.callbacks = CreateCallbacks(list, builtin: false);
 		list2.callbacks = CreateCallbacks(list2, builtin: true);
 		InitSearchUI();
+		buttonToggleAll = windows[0].AddBottomButton("mod_uncheck_all", ToggleAll);
 		windows[0].AddBottomButton("mod_preset", ShowPresetMenu);
 		windows[0].AddBottomButton("mod_group_new", NewGroup);
 		buttonCollapse = windows[0].AddBottomButton("mod_group_collapse_all", CollapseAll);
@@ -445,6 +489,7 @@ public class LayerMod : ELayer
 			{
 				SetGroupRow(a.group, list.GetPair<ItemMod>(a.group));
 			}
+			RefreshBottomButtons();
 		});
 		bt.interactable = !a.builtin;
 		b.buttonActivate.onClick.AddListener(delegate

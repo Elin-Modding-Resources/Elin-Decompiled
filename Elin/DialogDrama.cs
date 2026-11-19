@@ -85,6 +85,10 @@ public class DialogDrama : EMono
 	{
 		transChoices.DestroyChildren();
 		transChoices.gameObject.SetActive(value: false);
+		if ((bool)transChoices.GetComponentInParent<ScrollRect>())
+		{
+			transChoices.Rect().anchoredPosition = Vector2.zero;
+		}
 	}
 
 	public virtual void SetText(string detail = "", bool center = false)

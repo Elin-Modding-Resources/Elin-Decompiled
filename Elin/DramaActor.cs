@@ -32,7 +32,7 @@ public class DramaActor : EMono
 		dialog.textName.text = (unknown ? "???" : owner.GetDramaTitle());
 		if ((bool)dialog.portrait)
 		{
-			dialog.portrait.enableFull = sequence.fullPortrait;
+			dialog.portrait.enableFull = sequence.fullPortrait && id != "pc";
 			dialog.portrait.SetPerson(owner);
 		}
 		if (!owner.HumanSpeak)

@@ -49,6 +49,9 @@ public class Map : MapBounds, IPathfindGrid
 	public List<Chara> deadCharas = new List<Chara>();
 
 	[JsonProperty]
+	public List<Chara> deadCharasShort = new List<Chara>();
+
+	[JsonProperty]
 	public List<Thing> things = new List<Thing>();
 
 	[JsonProperty]

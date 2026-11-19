@@ -940,6 +940,12 @@ public class GoalCombat : Goal
 				num = num4 * 15;
 				break;
 			}
+			case 8430:
+				if (owner.FindCharaToRevive() != null)
+				{
+					num = 100;
+				}
+				break;
 			}
 			if (s.target == "Neighbor")
 			{

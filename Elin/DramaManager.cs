@@ -329,10 +329,16 @@ public class DramaManager : EMono
 		}
 		switch (action)
 		{
+		case "enableFullPortrait":
 		case "disableFullPortrait":
 			AddEvent(delegate
 			{
-				sequence.fullPortrait = false;
+				bool flag3 = action == "enableFullPortrait";
+				if (sequence.fullPortrait != flag3)
+				{
+					sequence.fullPortrait = flag3;
+					SetDialog();
+				}
 			});
 			break;
 		case "enableTone":
@@ -1171,13 +1177,17 @@ public class DramaManager : EMono
 
 	public void SetDialog(string id = "Default")
 	{
+		if (id == "Default")
+		{
+			DramaSequence dramaSequence = sequence;
+			if (dramaSequence != null && dramaSequence.fullPortrait)
+			{
+				id = "Full";
+			}
+		}
 		DialogDrama[] componentsInChildren = GetComponentsInChildren<DialogDrama>(includeInactive: true);
 		foreach (DialogDrama dialogDrama in componentsInChildren)
 		{
-			if ((bool)dialogDrama.portrait)
-			{
-				dialogDrama.portrait.imageFull.SetActive(enable: false);
-			}
 			dialogDrama.SetActive(enable: false);
 			if (dialogDrama.name == "Dialog" + id)
 			{

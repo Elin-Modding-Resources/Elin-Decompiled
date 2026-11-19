@@ -6,7 +6,7 @@ public class ActNTR : Ability
 		{
 			return false;
 		}
-		if (Act.TC == null || !Act.TC.isChara)
+		if (Act.TC == null || !Act.TC.isChara || Act.TC == Act.CC)
 		{
 			return false;
 		}

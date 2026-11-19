@@ -1584,8 +1584,12 @@ public class FactionBranch : EClass
 		policies.Validate();
 	}
 
-	public void BanishMember(Chara c, bool skipMsg = false)
+	public void BanishMember(Chara c, bool skipMsg = false, bool sendback = true)
 	{
+		if (c.IsPCParty)
+		{
+			EClass.pc.party.RemoveMember(c);
+		}
 		RemoveMemeber(c);
 		if (!skipMsg)
 		{
@@ -1597,9 +1601,9 @@ public class FactionBranch : EClass
 		}
 		if (c.IsGlobal)
 		{
-			c.OnBanish();
+			c.OnBanish(sendback);
 		}
-		else
+		else if (sendback)
 		{
 			c.Destroy();
 		}
