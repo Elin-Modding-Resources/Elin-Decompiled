@@ -214,6 +214,9 @@ public class IO
 			case 10:
 			case 13:
 			case 32:
+			case 187:
+			case 191:
+			case 239:
 				continue;
 			case -1:
 				return false;
