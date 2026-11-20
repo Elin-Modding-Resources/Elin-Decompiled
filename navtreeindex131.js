@@ -1,5 +1,6 @@
 var NAVTREEINDEX131 =
 {
+"classTraitMerchantExotic.html":[1,0,1839],
 "classTraitMerchantExotic.html#a3664f3c679c914d3c28fab3bff9ad2ef":[1,0,1839,0],
 "classTraitMerchantExotic.html#ac58139989bb307f7f8ec6c7a243b7e41":[1,0,1839,1],
 "classTraitMerchantFestival.html":[1,0,1840],
@@ -248,6 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1897,0],
 "classTraitPetHouse.html":[1,0,1898],
 "classTraitPhone.html":[1,0,1899],
-"classTraitPhone.html#a03ee09278876eda6ca5cff99e3655166":[1,0,1899,1],
-"classTraitPhone.html#a53928cb9b367df41094aba39e66ae737":[1,0,1899,0]
+"classTraitPhone.html#a03ee09278876eda6ca5cff99e3655166":[1,0,1899,1]
 };

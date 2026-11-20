@@ -1,5 +1,6 @@
 var NAVTREEINDEX152 =
 {
+"classZone__RandomDungeonPlain.html":[1,0,2338],
 "classZone__RandomDungeonWater.html":[1,0,2339],
 "classZone__RandomDungeonWater.html#a768ce264e05aa7123e791e05a1431554":[1,0,2339,0],
 "classZone__Seeker.html":[1,0,2340],
@@ -248,6 +249,5 @@ var NAVTREEINDEX152 =
 "functions_vars_c.html":[1,3,2,3],
 "functions_vars_d.html":[1,3,2,4],
 "functions_vars_e.html":[1,3,2,5],
-"functions_vars_f.html":[1,3,2,6],
-"functions_vars_g.html":[1,3,2,7]
+"functions_vars_f.html":[1,3,2,6]
 };

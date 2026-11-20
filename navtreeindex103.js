@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"classRecipeUpdater.html#aaebcb9fc50d8c69a6861a1f884269c76":[1,0,1170,14],
 "classRecipeUpdater.html#ade9645fe135cc6060607744242707bbc":[1,0,1170,2],
 "classRecipe_1_1Ingredient.html":[1,0,1164,0],
 "classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16":[1,0,1164,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX103 =
 "classReligionManager.html#ab5a8f054052e21f5f4cb8045dba783e3":[1,0,1194,9],
 "classReligionManager.html#abb35a900a1414883f71e413b177176a4":[1,0,1194,14],
 "classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92":[1,0,1194,3],
-"classReligionMinor.html":[1,0,1195],
-"classReligionMinor.html#af3c264773bb108d66fcdf6f955e0e515":[1,0,1195,0]
+"classReligionMinor.html":[1,0,1195]
 };

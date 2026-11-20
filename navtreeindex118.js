@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classStanceFury.html":[1,0,1353],
 "classStanceIai.html":[1,0,1354],
 "classStanceMama.html":[1,0,1355],
 "classStanceManaCost.html":[1,0,1356],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTCExtraProgress.html#a60c53ebac7c6fbc7bf01f03908a5e7bb":[1,0,1421,7],
 "classTCExtraProgress.html#a6ffa7596412cd4dbe0907057f6ad6b0a":[1,0,1421,9],
 "classTCExtraProgress.html#a89adce211cee03321fb4114a86057b41":[1,0,1421,4],
-"classTCExtraProgress.html#a9611ec331c7cef6441bcfc24d3d335e0":[1,0,1421,10],
-"classTCExtraProgress.html#a9c703cc6564819e8e1bab1923dc5bfbe":[1,0,1421,2]
+"classTCExtraProgress.html#a9611ec331c7cef6441bcfc24d3d335e0":[1,0,1421,10]
 };

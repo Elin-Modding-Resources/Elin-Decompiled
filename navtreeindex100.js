@@ -1,5 +1,6 @@
 var NAVTREEINDEX100 =
 {
+"classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021":[1,0,1078,3],
 "classQuestCraft.html#ad07345ad6920b9ffa60372337f47c1a5":[1,0,1078,15],
 "classQuestCraft.html#aebfc14eda4ffc1b558019576d8404c36":[1,0,1078,10],
 "classQuestCraft.html#aed22b02c64a9fe3a818f51a7049e6ae5":[1,0,1078,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX100 =
 "classQuestManager.html#ab651e7c02717adeaa6e1ac0652dbd39b":[1,0,1114,8],
 "classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e":[1,0,1114,28],
 "classQuestManager.html#ac87fcf8fa65b2eb1b59a24a3f5666efd":[1,0,1114,21],
-"classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e":[1,0,1114,32],
-"classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f":[1,0,1114,12]
+"classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e":[1,0,1114,32]
 };

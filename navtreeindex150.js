@@ -1,5 +1,6 @@
 var NAVTREEINDEX150 =
 {
+"classZoneEventManager.html#ac27d19281651862f33109d225b7f44f7":[1,0,2372,15],
 "classZoneEventManager.html#ad6eecf0bedc5a6e4d90e39c73b188b44":[1,0,2372,5],
 "classZoneEventManager.html#ad83418e67cbcf8a48b6e9f487e7f64d5":[1,0,2372,4],
 "classZoneEventManager.html#ad91925d5b80641654ce190d9fd16da4f":[1,0,2372,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX150 =
 "classZone__AcademyRoran.html":[1,0,2279],
 "classZone__Aquli.html":[1,0,2280],
 "classZone__Aquli.html#accc3131e12f50fa9949721c1ecfb6228":[1,0,2280,0],
-"classZone__Aquli.html#aeccea45d3a47568a226557443f46b984":[1,0,2280,1],
-"classZone__Arena.html":[1,0,2281]
+"classZone__Aquli.html#aeccea45d3a47568a226557443f46b984":[1,0,2280,1]
 };

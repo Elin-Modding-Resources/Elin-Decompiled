@@ -484,6 +484,7 @@ var classCard =
     [ "IsMultisize", "classCard.html#a0e7c89c955500ed272f9389f073f4358", null ],
     [ "IsNegativeGift", "classCard.html#a01c9d5f5e97e0a34642cc641c7a0094f", null ],
     [ "isNew", "classCard.html#aa9149d5a9d78151ae64c2fe5ae61fdd7", null ],
+    [ "isNonFarmable", "classCard.html#a9df226b8bded53344e0d2239cd57c22e", null ],
     [ "isNPCProperty", "classCard.html#a26108155cef3dd565735e6d8e3bc6322", null ],
     [ "isOn", "classCard.html#ac47c1e60f53b25b3eefa678bda0340ba", null ],
     [ "IsPC", "classCard.html#aafbb34c9bea4b056ef8c3e8981604870", null ],

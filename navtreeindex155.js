@@ -1,5 +1,6 @@
 var NAVTREEINDEX155 =
 {
+"structB83_1_1Win32_1_1POINT.html#adf0708674514e0284358eaf36b1af1fe":[1,0,3,0,2,3],
 "structB83_1_1Win32_1_1POINT.html#adf0708674514e0284358eaf36b1af1fe":[0,4,3,0,2,3],
 "structB83_1_1Win32_1_1RECT.html":[0,4,3,0,3],
 "structB83_1_1Win32_1_1RECT.html":[1,0,3,0,3],

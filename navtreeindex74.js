@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classGradientColor.html#ad8271edab39d14d3665c94601106cd5f":[1,0,655,17],
 "classGradientColor.html#adfad48061f2695e1dc3de28a14906c95":[1,0,655,0],
 "classGradientColor.html#adfad48061f2695e1dc3de28a14906c95a3f7b3d8ee7bf0d542bd50821c083888f":[1,0,655,0,1],
 "classGradientColor.html#adfad48061f2695e1dc3de28a14906c95a6da8e67225fdcfa78c3ea5dc3154b849":[1,0,655,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classGrowSystem_1_1Stage.html#a7c9d88a20e51eb0b582b5f20e2eee1ff":[1,0,662,0,4],
 "classGrowSystem_1_1Stage.html#acb367e63cd28051c647f051a8b8a91f9":[1,0,662,0,1],
 "classGuild.html":[1,0,684],
-"classGuild.html#a217e6901e1885ed24f421ba7743d168b":[1,0,684,3],
-"classGuild.html#a3f91ff199d8d0b1ddfb13ce56210ecf8":[1,0,684,9]
+"classGuild.html#a217e6901e1885ed24f421ba7743d168b":[1,0,684,3]
 };
