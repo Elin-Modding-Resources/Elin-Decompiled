@@ -941,7 +941,7 @@ public class GoalCombat : Goal
 				break;
 			}
 			case 8430:
-				if (owner.FindCharaToRevive() != null)
+				if (EClass.rnd(30) == 0 && !owner.IsPCFactionOrMinion && owner.FindCharaToRevive() != null)
 				{
 					num = 100;
 				}

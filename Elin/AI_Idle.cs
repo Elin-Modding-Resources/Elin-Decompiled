@@ -191,7 +191,7 @@ public class AI_Idle : AIAct
 							}
 						}
 					}
-					if (actRevive != null && owner.FindCharaToRevive() != null && owner.UseAbility(actRevive.source.alias, owner))
+					if (actRevive != null && owner.IsPCFactionOrMinion && owner.FindCharaToRevive() != null && owner.UseAbility(actRevive.source.alias, owner))
 					{
 						yield return KeepRunning();
 					}

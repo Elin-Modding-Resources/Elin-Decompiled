@@ -949,6 +949,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public bool isNonFarmable
+	{
+		get
+		{
+			return _bits2[12];
+		}
+		set
+		{
+			_bits2[12] = value;
+		}
+	}
+
 	public bool isBackerContent => c_idBacker != 0;
 
 	public SourceBacker.Row sourceBacker
@@ -5353,7 +5365,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void SpawnLoot(Card origin)
 	{
-		if (!isChara || IsPCFactionMinion || (isCopy && EClass.rnd(10) != 0))
+		if (!isChara || IsPCFactionMinion || (isCopy && EClass.rnd(10) != 0) || isNonFarmable)
 		{
 			return;
 		}
@@ -5666,7 +5678,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						}
 					}
 				}
-				if (trait is TraitMerchantTravel && !EClass._zone.IsFestival && !isSummon)
+				if (trait is TraitMerchantTravel && !EClass._zone.IsFestival && !isSummon && !isNonFarmable)
 				{
 					trait.OnBarter();
 					Thing thing4 = things.Find<TraitChestMerchant>();

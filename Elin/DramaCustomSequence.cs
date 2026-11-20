@@ -137,7 +137,7 @@ public class DramaCustomSequence : EClass
 					}
 				});
 			}
-			if (!c.IsPCParty || EClass._zone.IsPCFaction)
+			if (!c.isNonFarmable && (!c.IsPCParty || EClass._zone.IsPCFaction))
 			{
 				if (c.trait.CanGuide)
 				{
@@ -217,7 +217,7 @@ public class DramaCustomSequence : EClass
 				{
 					if (EClass.pc.HasElement(1232) || EClass.pc.HasElement(1291))
 					{
-						goto IL_098d;
+						goto IL_099d;
 					}
 					num2 = EClass.pc.HasCondition<StanceMama>();
 				}
@@ -227,17 +227,17 @@ public class DramaCustomSequence : EClass
 				}
 				if (num2)
 				{
-					goto IL_098d;
+					goto IL_099d;
 				}
-				goto IL_099e;
+				goto IL_09ae;
 			}
 			if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
 			{
 				Choice2(flag2 ? "daBird" : "daTail", "_tail");
 			}
 		}
-		goto IL_0db7;
-		IL_09ee:
+		goto IL_0dc7;
+		IL_09fe:
 		if (c.trait.CanRevive)
 		{
 			Choice2("daRevive", "_revive").DisableSound();
@@ -306,18 +306,15 @@ public class DramaCustomSequence : EClass
 		{
 			Choice2("daBlessing", "_blessing");
 		}
-		goto IL_0db7;
-		IL_098d:
-		Choice2("daMama", "_mama");
-		goto IL_099e;
-		IL_099e:
+		goto IL_0dc7;
+		IL_09ae:
 		ConTransmuteHuman condition2 = c.GetCondition<ConTransmuteHuman>();
 		bool num3;
 		if (condition2 == null)
 		{
 			if (c.HasElement(1232))
 			{
-				goto IL_09dd;
+				goto IL_09ed;
 			}
 			num3 = c.HasElement(1291);
 		}
@@ -327,13 +324,16 @@ public class DramaCustomSequence : EClass
 		}
 		if (num3)
 		{
-			goto IL_09dd;
+			goto IL_09ed;
 		}
-		goto IL_09ee;
-		IL_09dd:
+		goto IL_09fe;
+		IL_099d:
+		Choice2("daMama", "_mama");
+		goto IL_09ae;
+		IL_09ed:
 		Choice2("daBaby", "_baby");
-		goto IL_09ee;
-		IL_0db7:
+		goto IL_09fe;
+		IL_0dc7:
 		if (c.IsHomeMember())
 		{
 			if (c.IsMaid)
@@ -490,7 +490,7 @@ public class DramaCustomSequence : EClass
 		Step("_depart");
 		Talk("depart_choice", StepDefault);
 		Choice("depart1", "_depart1");
-		if (c.c_uniqueData == null && !c.trait.IsUnique)
+		if (c.c_uniqueData == null && !c.trait.IsUnique && !c.IsAdventurer)
 		{
 			Choice("depart3", "_depart3");
 		}

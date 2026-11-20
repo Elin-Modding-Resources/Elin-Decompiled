@@ -897,9 +897,9 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (!IsGlobal && !base.isSubsetCard && homeZone == EClass._zone)
+			if (!IsGlobal && !base.isSubsetCard && homeZone == EClass._zone && !base.isSummon)
 			{
-				return !base.isSummon;
+				return !base.isNonFarmable;
 			}
 			return false;
 		}
@@ -2595,6 +2595,7 @@ public class Chara : Card, IPathfindWalker
 		orgPos = null;
 		base.c_summonDuration = 0;
 		base.isSummon = false;
+		base.isNonFarmable = false;
 		UnmakeMinion();
 		SetInt(32);
 		Refresh();
@@ -5917,7 +5918,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass._map.deadCharas.Add(this);
 			}
-			else if (!IsGlobal)
+			else if (!currentZone.IsRegion && !IsGlobal && base.c_bossType != BossType.Boss)
 			{
 				EClass._map.deadCharasShort.Add(this);
 			}

@@ -1602,10 +1602,19 @@ public class FactionBranch : EClass
 		if (c.IsGlobal)
 		{
 			c.OnBanish(sendback);
+			return;
 		}
-		else if (sendback)
+		foreach (Thing item in c.things.List((Thing a) => a.HasTag(CTAG.godArtifact)).ToList())
+		{
+			EClass.pc.PickOrDrop(EClass.pc.pos, item);
+		}
+		if (sendback)
 		{
 			c.Destroy();
+		}
+		else
+		{
+			c.isNonFarmable = true;
 		}
 	}
 
