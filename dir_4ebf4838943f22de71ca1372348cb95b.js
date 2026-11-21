@@ -1661,6 +1661,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitGrave.cs", "TraitGrave_8cs.html", "TraitGrave_8cs" ],
     [ "TraitGriffin.cs", "TraitGriffin_8cs.html", "TraitGriffin_8cs" ],
     [ "TraitGrimoire.cs", "TraitGrimoire_8cs.html", "TraitGrimoire_8cs" ],
+    [ "TraitGrimoireForbidden.cs", "TraitGrimoireForbidden_8cs.html", "TraitGrimoireForbidden_8cs" ],
     [ "TraitGrindstone.cs", "TraitGrindstone_8cs.html", "TraitGrindstone_8cs" ],
     [ "TraitGuard.cs", "TraitGuard_8cs.html", "TraitGuard_8cs" ],
     [ "TraitGuildClerk.cs", "TraitGuildClerk_8cs.html", "TraitGuildClerk_8cs" ],

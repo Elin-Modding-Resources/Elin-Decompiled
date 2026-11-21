@@ -1,5 +1,7 @@
 var NAVTREEINDEX119 =
 {
+"classTCExtraProgress.html#a89adce211cee03321fb4114a86057b41":[1,0,1421,4],
+"classTCExtraProgress.html#a9611ec331c7cef6441bcfc24d3d335e0":[1,0,1421,10],
 "classTCExtraProgress.html#a9c703cc6564819e8e1bab1923dc5bfbe":[1,0,1421,2],
 "classTCExtraProgress.html#a9e9efdc1f1e87b2b137e946fecb82859":[1,0,1421,6],
 "classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6":[1,0,1421,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX119 =
 "classTaskCraft.html#a59d420aff4354ed8658c2304cebe40cc":[1,0,1401,1],
 "classTaskCraft.html#a5ff77727afd9263f0bbcefa0e50cd334":[1,0,1401,19],
 "classTaskCraft.html#a6072100d0eb8162cc64199df7d7be537":[1,0,1401,8],
-"classTaskCraft.html#a607918eff9586d11a4de8bd20c2fea02":[1,0,1401,7],
-"classTaskCraft.html#a62d09e2acf9a079d0fdb5e298bd54cc5":[1,0,1401,20],
-"classTaskCraft.html#a79339b48f3823f058399ea2e67b8623e":[1,0,1401,13]
+"classTaskCraft.html#a607918eff9586d11a4de8bd20c2fea02":[1,0,1401,7]
 };

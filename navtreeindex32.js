@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classActMoneySlap.html#aa6ecb6382f1557208a61eb15dd1d091c":[1,0,51,2],
+"classActMoneyThrow.html":[1,0,52],
 "classActMoneyThrow.html#a98a4facca83d1775a09b4e3167bc2301":[1,0,52,0],
 "classActMultihit.html":[1,0,53],
 "classActMultihit.html#a374cdb568d902102960a4ee76a715adf":[1,0,53,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classActionMode.html#a6ee5399bbdad2a038b637ea1d40b8ba5":[1,0,35,152],
 "classActionMode.html#a71450cbdb462b951ff04a2f8c9e1d7d6":[1,0,35,142],
 "classActionMode.html#a718bbb620f45aedfa48c9d5078fa5895":[1,0,35,104],
-"classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180":[1,0,35,62],
-"classActionMode.html#a7336e0d2d984efbbaad0df9acb461e05":[1,0,35,150],
-"classActionMode.html#a74f34d5258aab237f632b504d44af0c5":[1,0,35,73]
+"classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180":[1,0,35,62]
 };

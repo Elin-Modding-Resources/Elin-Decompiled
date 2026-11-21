@@ -1,5 +1,7 @@
 var NAVTREEINDEX73 =
 {
+"classGauge.html#a110cf1f7bed9cc59da2dabe51aec0323":[1,0,621,0],
+"classGauge.html#a141ddfea6150f21af106aaa3c41b3029":[1,0,621,3],
 "classGauge.html#a163ecdc667c5f09aa030072d9cef6397":[1,0,621,8],
 "classGauge.html#a34b419cd84810594f07b84a39931c2d9":[1,0,621,17],
 "classGauge.html#a36034b60b7f8164dd0625448920fd0d5":[1,0,621,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX73 =
 "classGradientColor.html#abca4107c73318e3a29b433631446fddd":[1,0,655,2],
 "classGradientColor.html#abca4107c73318e3a29b433631446fddda219f5839fffc7673d62ad8728e714403":[1,0,655,2,1],
 "classGradientColor.html#abca4107c73318e3a29b433631446fddda509820290d57f333403f490dde7316f4":[1,0,655,2,0],
-"classGradientColor.html#abca4107c73318e3a29b433631446fdddae63eb7d53d38ac541a315c35e2c15ba5":[1,0,655,2,2],
-"classGradientColor.html#ac5061647f96453763cf473f028a80f26":[1,0,655,7],
-"classGradientColor.html#ac7a92f478cb18ee473b063279dfe364e":[1,0,655,14]
+"classGradientColor.html#abca4107c73318e3a29b433631446fdddae63eb7d53d38ac541a315c35e2c15ba5":[1,0,655,2,2]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX126 =
 {
+"classTraitBed.html#a26c7c52784804d1ec6c9e557d940500b":[1,0,1558,8],
+"classTraitBed.html#a28ec384a8d046d5c6da999820f89c57b":[1,0,1558,13],
 "classTraitBed.html#a333714ba3ee1c05449866a65d5191c96":[1,0,1558,12],
 "classTraitBed.html#a34a3cbb665f0f0e11346eb701079bde7":[1,0,1558,14],
 "classTraitBed.html#a4435f2f8b8997c03cbea0f7c37824f1d":[1,0,1558,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1603,1],
 "classTraitChestMerchant.html":[1,0,1604],
 "classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1604,0],
-"classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1604,2],
-"classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1604,1],
-"classTraitChestOyster.html":[1,0,1605]
+"classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1604,2]
 };

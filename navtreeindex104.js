@@ -1,5 +1,7 @@
 var NAVTREEINDEX104 =
 {
+"classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92":[1,0,1194,3],
+"classReligionMinor.html":[1,0,1195],
 "classReligionMinor.html#af3c264773bb108d66fcdf6f955e0e515":[1,0,1195,0],
 "classReligionMoonShadow.html":[1,0,1196],
 "classReligionMoonShadow.html#a40e869a015a9a79206d33a19d689e7f1":[1,0,1196,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX104 =
 "classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364":[1,0,1220,30],
 "classRenderRow.html#aea949f00c2d71b1a2065f925193da56d":[1,0,1220,27],
 "classRenderRow.html#aed3ac25d06114085ec605995cd3d9171":[1,0,1220,39],
-"classRenderRow.html#aed9f55425b781368edaf43d3316bf539":[1,0,1220,48],
-"classRenderRow.html#aeef0ce3d1caad12ea1943519e9decdb7":[1,0,1220,36],
-"classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49":[1,0,1220,10]
+"classRenderRow.html#aed9f55425b781368edaf43d3316bf539":[1,0,1220,48]
 };

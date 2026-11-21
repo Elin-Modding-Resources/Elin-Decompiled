@@ -1849,6 +1849,7 @@ var annotated_dup =
     [ "TraitGrave", "classTraitGrave.html", null ],
     [ "TraitGriffin", "classTraitGriffin.html", "classTraitGriffin" ],
     [ "TraitGrimoire", "classTraitGrimoire.html", null ],
+    [ "TraitGrimoireForbidden", "classTraitGrimoireForbidden.html", null ],
     [ "TraitGrindstone", "classTraitGrindstone.html", "classTraitGrindstone" ],
     [ "TraitGuard", "classTraitGuard.html", "classTraitGuard" ],
     [ "TraitGuildClerk", "classTraitGuildClerk.html", "classTraitGuildClerk" ],

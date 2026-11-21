@@ -1514,6 +1514,7 @@ var hierarchy =
             [ "TraitDeposit", "classTraitDeposit.html", null ],
             [ "TraitFridge", "classTraitFridge.html", null ],
             [ "TraitGrimoire", "classTraitGrimoire.html", null ],
+            [ "TraitGrimoireForbidden", "classTraitGrimoireForbidden.html", null ],
             [ "TraitMagicChest", "classTraitMagicChest.html", null ],
             [ "TraitQuiver", "classTraitQuiver.html", null ],
             [ "TraitSalaryChest", "classTraitSalaryChest.html", [

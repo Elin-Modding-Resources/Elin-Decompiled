@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"classAI__Meditate.html":[1,0,106],
+"classAI__Meditate.html#a26599f012eea010b62ab082e044c96d1":[1,0,106,0],
 "classAI__Meditate.html#a80dcd9cb058e03cfc65deb967ea29e3b":[1,0,106,2],
 "classAI__Meditate.html#acb19b8576d1f61068ee45d14f45c74f6":[1,0,106,1],
 "classAI__Mofu.html":[1,0,107],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "classAM__Adv.html#a7d9e4dfb46c8711a5c5cd9c81087c094":[1,0,145,41],
 "classAM__Adv.html#a828496be96ac316e2eb5bc82392bde5a":[1,0,145,45],
 "classAM__Adv.html#a85e7f9ca0ed9737ed0b50306de3c9b5f":[1,0,145,14],
-"classAM__Adv.html#a87201e0614f8539fb9e4cfa6e7edeed5":[1,0,145,36],
-"classAM__Adv.html#a8a5948fcad54ecf35bc1836afbdf5cb8":[1,0,145,15],
-"classAM__Adv.html#a8b37c5dd5c90d245f0223dd4fe7edf14":[1,0,145,43]
+"classAM__Adv.html#a87201e0614f8539fb9e4cfa6e7edeed5":[1,0,145,36]
 };

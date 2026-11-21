@@ -1,5 +1,7 @@
 var NAVTREEINDEX118 =
 {
+"classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016":[1,0,1352,4],
+"classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714":[1,0,1352,5],
 "classStanceFury.html":[1,0,1353],
 "classStanceIai.html":[1,0,1354],
 "classStanceMama.html":[1,0,1355],
@@ -247,7 +249,5 @@ var NAVTREEINDEX118 =
 "classTCExtraProgress.html#a545cf4d793ee254ba5c850aa4ee0f2ee":[1,0,1421,8],
 "classTCExtraProgress.html#a603cb12c156196937d884c688d749ced":[1,0,1421,3],
 "classTCExtraProgress.html#a60c53ebac7c6fbc7bf01f03908a5e7bb":[1,0,1421,7],
-"classTCExtraProgress.html#a6ffa7596412cd4dbe0907057f6ad6b0a":[1,0,1421,9],
-"classTCExtraProgress.html#a89adce211cee03321fb4114a86057b41":[1,0,1421,4],
-"classTCExtraProgress.html#a9611ec331c7cef6441bcfc24d3d335e0":[1,0,1421,10]
+"classTCExtraProgress.html#a6ffa7596412cd4dbe0907057f6ad6b0a":[1,0,1421,9]
 };
