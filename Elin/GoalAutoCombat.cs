@@ -90,12 +90,27 @@ public class GoalAutoCombat : GoalCombat
 
 	public void GetAbilities(Func<Element, bool> func)
 	{
+		List<int> list = new List<int>();
+		foreach (Thing thing in EClass.pc.things)
+		{
+			if (!(thing.trait is TraitGrimoireForbidden))
+			{
+				continue;
+			}
+			foreach (Thing thing2 in thing.things)
+			{
+				if (thing2.trait is TraitAbility)
+				{
+					list.Add((thing2.trait as TraitAbility).act?.id ?? 0);
+				}
+			}
+		}
 		if (config.bUseHotBar)
 		{
 			foreach (Thing item in EClass.pc.things.Where((Thing t) => t.IsHotItem && t.trait is TraitAbility))
 			{
 				Element element = owner.elements.GetElement(item.c_idAbility);
-				if (element != null && func(element) && (element.id != 9150 || EClass.player.favAbility.Contains(element.id)))
+				if (element != null && func(element) && (element.id != 9150 || EClass.player.favAbility.Contains(element.id)) && !list.Contains(element.id))
 				{
 					AddAbility(element.act, 15);
 				}
@@ -107,7 +122,7 @@ public class GoalAutoCombat : GoalCombat
 		}
 		foreach (Element value in owner.elements.dict.Values)
 		{
-			if ((!config.bUseFav || EClass.player.favAbility.Contains(value.id)) && func(value) && (value.id != 9150 || EClass.player.favAbility.Contains(value.id)))
+			if ((!config.bUseFav || EClass.player.favAbility.Contains(value.id)) && func(value) && (value.id != 9150 || EClass.player.favAbility.Contains(value.id)) && !list.Contains(value.id))
 			{
 				AddAbility(value.act);
 			}

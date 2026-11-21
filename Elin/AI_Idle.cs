@@ -584,7 +584,7 @@ public class AI_Idle : AIAct
 				break;
 			}
 			}
-			if (owner.HasElement(1432) && owner.TryFuse(0.001f))
+			if ((owner.HasElement(1432) || EClass.debug.enable) && owner.TryFuse(EClass._zone.IsPCFactionOrTent ? 0.001f : 0.02f))
 			{
 				yield return Success();
 			}

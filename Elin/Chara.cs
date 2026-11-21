@@ -1881,10 +1881,12 @@ public class Chara : Card, IPathfindWalker
 		string text2 = "fusion";
 		switch (id)
 		{
+		case "putty":
 		case "putty_pack":
 			text = "putty_king";
 			break;
 		case "imotoroid":
+		case "sister":
 			text = "imotomaton";
 			text2 = "fusion2";
 			break;
@@ -1893,7 +1895,6 @@ public class Chara : Card, IPathfindWalker
 			text2 = "fusion2";
 			break;
 		case "sister_cat":
-			text = "sister_catmaton";
 			text2 = "fusion2";
 			break;
 		case "younglady":
@@ -1951,7 +1952,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (!EClass.debug.enable && (c.affinity.CanSleepBeside() || affinity.CanSleepBeside()))
+		if (!EClass.debug.enable && EClass._zone.IsPCFactionOrTent && (c.affinity.CanSleepBeside() || affinity.CanSleepBeside()))
 		{
 			return false;
 		}

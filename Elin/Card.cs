@@ -4203,6 +4203,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			a = a * Mathf.Max(100 - Evalue(93), 1) / 100;
 		}
+		if (a > 0 && HasCondition<ConPoison>())
+		{
+			a /= 2;
+		}
 		if (a + hp >= MaxHP)
 		{
 			hp = MaxHP;
