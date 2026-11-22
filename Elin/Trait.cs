@@ -2067,6 +2067,7 @@ public class Trait : EClass
 					Add("monsterball", 1, 0).SetNum(3).SetLv(10);
 					Add("1175", 1, 0);
 					Add("1176", 1, 0);
+					AddCassette(127, null, 999);
 					Add("pillow_ehekatl", 1, 0);
 					Add("grave_dagger1", 1, 0);
 					Add("grave_dagger2", 1, 0);

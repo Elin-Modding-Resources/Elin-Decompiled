@@ -7916,6 +7916,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 50;
 				}
 				break;
+			case CurrencyType.Casino_coin:
+				if (id == "856")
+				{
+					return 10000;
+				}
+				break;
 			case CurrencyType.Medal:
 				switch (id)
 				{
