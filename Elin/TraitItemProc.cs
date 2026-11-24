@@ -25,9 +25,13 @@ public class TraitItemProc : TraitItem
 		int num = owner.Power;
 		if (IdEffect == EffectId.Buff && n1 == "ConBandage")
 		{
+			Debug.Log(num);
 			num += owner.Evalue(750) * 5;
-			num = num * (100 + (int)Mathf.Sqrt(c.Evalue(300)) * 5) / 100;
+			Debug.Log(num);
+			num = num * (100 + (int)Mathf.Sqrt(Mathf.Max(c.Evalue(300), 0)) * 5) / 100;
+			Debug.Log(num);
 		}
+		Debug.Log(IdEffect.ToString() + "/" + num);
 		ActEffect.Proc(IdEffect, GetParamInt(3, num), owner.blessedState, c, null, new ActRef
 		{
 			n1 = n1,

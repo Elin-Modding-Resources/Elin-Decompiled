@@ -455,12 +455,24 @@ public class AI_Fuck : AIAct
 			{
 				chara2.DoHostileAction(chara);
 			}
+			chara2.ModAffinity(chara, (flag || (chara.IsPC && chara2.affinity.CanSleepBeside() && EClass.rnd(10) != 0)) ? 10 : (-5));
 			if (variation == Variation.Bloodsuck)
 			{
-				int value = chara.hunger.value;
-				Thing food = CraftUtil.MakeBloodMeal(chara, chara2);
-				FoodEffect.Proc(chara, food, consume: false);
-				chara2.AddCondition<ConBleed>(EClass.rndHalf(value * 10));
+				if (chara2.Evalue(964) > 0 && !chara.HasElement(480))
+				{
+					chara.ShowEmo(Emo.sad);
+					Msg.Say("blood_oil");
+				}
+				else
+				{
+					int value = chara.hunger.value;
+					Thing food = CraftUtil.MakeBloodMeal(chara, chara2);
+					FoodEffect.Proc(chara, food, consume: false);
+					if (chara2.Evalue(964) <= 0)
+					{
+						chara2.AddCondition<ConBleed>(EClass.rndHalf(value * 10));
+					}
+				}
 			}
 			else
 			{
@@ -472,7 +484,6 @@ public class AI_Fuck : AIAct
 				SuccubusExp(chara, chara2);
 				SuccubusExp(chara2, chara);
 			}
-			chara2.ModAffinity(chara, (flag || (chara.IsPC && chara2.affinity.CanSleepBeside() && EClass.rnd(10) != 0)) ? 10 : (-5));
 			if (chara == EClass.pc || chara2 == EClass.pc)
 			{
 				if (variation == Variation.MotherMilk)

@@ -8,7 +8,7 @@ public class ActBloodsuck : ActNTR
 		{
 			return false;
 		}
-		if (Act.TC.Evalue(964) > 0)
+		if (!Act.CC.IsPC && Act.TC.Evalue(964) > 0 && !Act.CC.HasElement(480))
 		{
 			return false;
 		}

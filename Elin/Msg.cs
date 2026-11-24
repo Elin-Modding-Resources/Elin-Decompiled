@@ -295,11 +295,15 @@ public class Msg : EClass
 
 	public static bool IsThirdPerson(Card c)
 	{
-		if (c == null)
+		if (c == null || c.IsPC)
 		{
 			return false;
 		}
-		if (c.IsPC || c.Num > 1)
+		if (c.parent == EClass._zone && (EClass.pc.isBlind || !EClass.pc.CanSee(c)))
+		{
+			return true;
+		}
+		if (c.Num > 1)
 		{
 			return false;
 		}
