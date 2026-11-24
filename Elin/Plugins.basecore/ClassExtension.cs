@@ -1138,7 +1138,7 @@ public static class ClassExtension
 			char c = array[i];
 			if (char.IsLetter(c))
 			{
-				if (flag)
+				if (flag && array[0] != ' ')
 				{
 					array[i] = char.ToUpperInvariant(c);
 				}
