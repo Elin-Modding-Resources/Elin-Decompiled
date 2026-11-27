@@ -179,7 +179,7 @@ public class ActEffect : EClass
 					TryDelay(delegate
 					{
 						effect.Play(CC.pos);
-						effect.GetComponent<MissileHomingEffect>().Launch(CC.pos.PositionCenter(), p.PositionCenter());
+						effect.GetComponent<MissileHomingEffect>().Launch(CC.pos.PositionCenter(), p.PositionCenter(), e.source.aliasRef == "resCat");
 					});
 					break;
 				case EffectId.Arrow:
