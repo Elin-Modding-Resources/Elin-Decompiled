@@ -1778,11 +1778,11 @@ public class ActEffect : EClass
 				}
 				if (id == EffectId.Gate && CC.IsPC)
 				{
-					foreach (Chara chara5 in EClass._map.charas)
+					foreach (Chara item5 in EClass._map.charas.ToList())
 					{
-						if (!chara5.HasHost && chara5 != tc && (chara5.IsPCParty || chara5.IsPCPartyMinion))
+						if (!item5.HasHost && item5 != tc && item5.ExistsOnMap && (item5.IsPCParty || item5.IsPCPartyMinion))
 						{
-							chara5.Teleport(tc.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? tc.pos);
+							item5.Teleport(tc.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? tc.pos);
 						}
 					}
 				}
@@ -1846,9 +1846,9 @@ public class ActEffect : EClass
 			TC.Say("unpolluted", TC);
 			list11.Shuffle();
 			{
-				foreach (Condition item5 in list11)
+				foreach (Condition item6 in list11)
 				{
-					item5.Kill();
+					item6.Kill();
 					if (CC.IsHostile(TC))
 					{
 						break;
@@ -1895,21 +1895,21 @@ public class ActEffect : EClass
 				{
 					center.PlaySound("shutterhex");
 				});
-				foreach (Chara item6 in list3)
+				foreach (Chara item7 in list3)
 				{
-					if (item6.ExistsOnMap)
+					if (item7.ExistsOnMap)
 					{
 						Effect effect = Effect.Get("spell_moonspear");
 						TrailRenderer componentInChildren = effect.GetComponentInChildren<TrailRenderer>();
 						Color startColor = (componentInChildren.endColor = EClass.Colors.elementColors["eleHoly"]);
 						componentInChildren.startColor = startColor;
-						Point pos = item6.pos.Copy();
+						Point pos = item7.pos.Copy();
 						TweenUtil.Delay((float)num15 * 0.1f, delegate
 						{
 							effect.Play(center, 0f, pos);
 						});
 						long dmg = Dice.Create("SpShutterHex", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
-						item6.DamageHP(dmg, 919, power, AttackSource.None, CC, showEffect: false);
+						item7.DamageHP(dmg, 919, power, AttackSource.None, CC, showEffect: false);
 					}
 				}
 			}
@@ -2111,9 +2111,9 @@ public class ActEffect : EClass
 					}
 				}
 			});
-			foreach (Thing item7 in list7)
+			foreach (Thing item8 in list7)
 			{
-				item7.GetRootCard()?.TryStack(item7);
+				item8.GetRootCard()?.TryStack(item8);
 			}
 			if (success == 0 && fail == 0)
 			{
@@ -2388,16 +2388,16 @@ public class ActEffect : EClass
 				}
 			}
 			int num16 = 0;
-			foreach (Element item8 in list5)
+			foreach (Element item9 in list5)
 			{
-				int dNABonus = item8.GetDNABonus(EClass.pc);
-				if (dNABonus < item8.vBase)
+				int dNABonus = item9.GetDNABonus(EClass.pc);
+				if (dNABonus < item9.vBase)
 				{
-					for (int num17 = 0; num17 < item8.vBase - dNABonus; num17++)
+					for (int num17 = 0; num17 < item9.vBase - dNABonus; num17++)
 					{
-						num16 += item8.source.cost.TryGet(item8.vSource + num17);
+						num16 += item9.source.cost.TryGet(item9.vSource + num17);
 					}
-					EClass.pc.SetFeat(item8.id, item8.vSource + dNABonus);
+					EClass.pc.SetFeat(item9.id, item9.vSource + dNABonus);
 				}
 			}
 			EClass.pc.feat += num16;
@@ -2634,24 +2634,24 @@ public class ActEffect : EClass
 			list4.Shuffle();
 			CC.PlaySound("remove_hex");
 			CC.PlayEffect("remove_hex");
-			foreach (Condition item9 in list4)
+			foreach (Condition item10 in list4)
 			{
-				if (item9.Type != ConditionType.Debuff || item9.IsKilled)
+				if (item10.Type != ConditionType.Debuff || item10.IsKilled)
 				{
 					continue;
 				}
-				if (EClass.rnd(power * (CC.IsPowerful ? 5 : 2)) > EClass.rnd(item9.power) || (id == EffectId.RemoveHex && EClass.rnd(2) == 0))
+				if (EClass.rnd(power * (CC.IsPowerful ? 5 : 2)) > EClass.rnd(item10.power) || (id == EffectId.RemoveHex && EClass.rnd(2) == 0))
 				{
-					CC.Say("removeHex", TC, item9.Name.ToLower());
-					item9.Kill();
+					CC.Say("removeHex", TC, item10.Name.ToLower());
+					item10.Kill();
 				}
 				else
 				{
 					if (id == EffectId.RemoveHexAll)
 					{
-						item9.power /= 2;
+						item10.power /= 2;
 					}
-					CC.Say("removeHex_fail", TC, item9.Name.ToLower());
+					CC.Say("removeHex_fail", TC, item10.Name.ToLower());
 				}
 				if (id == EffectId.RemoveHex)
 				{

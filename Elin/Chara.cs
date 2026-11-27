@@ -1719,8 +1719,10 @@ public class Chara : Card, IPathfindWalker
 		case "robot":
 			SetFeat(1248, 1 + EClass.rnd(5));
 			break;
+		case "putty":
 		case "shojo":
 		case "younglady":
+		case "sister_cat":
 			if (EClass.rnd(EClass.debug.enable ? 2 : 20) == 0)
 			{
 				SetFeat(1432);
@@ -1895,6 +1897,7 @@ public class Chara : Card, IPathfindWalker
 			text2 = "fusion2";
 			break;
 		case "sister_cat":
+			text = "imotonekomaton";
 			text2 = "fusion2";
 			break;
 		case "younglady":
@@ -3310,11 +3313,11 @@ public class Chara : Card, IPathfindWalker
 		SyncRide();
 		if (IsPC && EClass._zone.PetFollow && (!EClass._zone.KeepAllyDistance || !EClass.game.config.tactics.allyKeepDistance) && !EClass._zone.IsRegion)
 		{
-			foreach (Chara member in EClass.pc.party.members)
+			foreach (Chara item2 in EClass.pc.party.members.ToList())
 			{
-				if (member.isLeashed && !member.IsPC && member.host == null && !member.IsDisabled && !member.HasCondition<ConEntangle>() && !member.IsInCombat && member.Dist(EClass.pc) > 1)
+				if (item2.isLeashed && !item2.IsPC && item2.host == null && !item2.IsDisabled && !item2.HasCondition<ConEntangle>() && !item2.IsInCombat && item2.Dist(EClass.pc) > 1)
 				{
-					member.TryMoveTowards(EClass.pc.pos);
+					item2.TryMoveTowards(EClass.pc.pos);
 				}
 			}
 		}
@@ -3327,30 +3330,30 @@ public class Chara : Card, IPathfindWalker
 			PlaySound("Footstep/Extra/pcfootstep");
 			if (pos.HasThing)
 			{
-				foreach (Card item2 in pos.ListCards())
+				foreach (Card item3 in pos.ListCards())
 				{
-					if (!item2.isThing || item2.placeState != PlaceState.roaming || item2.ignoreAutoPick)
+					if (!item3.isThing || item3.placeState != PlaceState.roaming || item3.ignoreAutoPick)
 					{
 						continue;
 					}
 					if (EClass.core.config.game.advancedMenu)
 					{
 						Window.SaveData dataPick = EClass.player.dataPick;
-						ContainerFlag containerFlag = item2.category.GetRoot().id.ToEnum<ContainerFlag>();
+						ContainerFlag containerFlag = item3.category.GetRoot().id.ToEnum<ContainerFlag>();
 						if (containerFlag == ContainerFlag.none)
 						{
 							containerFlag = ContainerFlag.other;
 						}
-						if ((dataPick.noRotten && item2.IsDecayed) || (dataPick.onlyRottable && item2.trait.Decay == 0))
+						if ((dataPick.noRotten && item3.IsDecayed) || (dataPick.onlyRottable && item3.trait.Decay == 0))
 						{
 							continue;
 						}
 						if (dataPick.userFilter)
 						{
-							switch (dataPick.IsFilterPass(item2.GetName(NameStyle.Full, 1)))
+							switch (dataPick.IsFilterPass(item3.GetName(NameStyle.Full, 1)))
 							{
 							case Window.SaveData.FilterResult.PassWithoutFurtherTest:
-								Pick(item2.Thing);
+								Pick(item3.Thing);
 								continue;
 							case Window.SaveData.FilterResult.Block:
 								continue;
@@ -3360,20 +3363,20 @@ public class Chara : Card, IPathfindWalker
 						{
 							foreach (int cat in dataPick.cats)
 							{
-								if (item2.category.uid == cat)
+								if (item3.category.uid == cat)
 								{
-									Pick(item2.Thing);
+									Pick(item3.Thing);
 								}
 							}
 						}
 						else if (!dataPick.flag.HasFlag(containerFlag))
 						{
-							Pick(item2.Thing);
+							Pick(item3.Thing);
 						}
 					}
 					else
 					{
-						Pick(item2.Thing);
+						Pick(item3.Thing);
 					}
 				}
 			}
@@ -5291,7 +5294,7 @@ public class Chara : Card, IPathfindWalker
 				AddThing("gun_laser");
 				break;
 			case "ojomaton":
-			case "sister_catmaton":
+			case "imotonekomaton":
 			case "shojomaton":
 			case "imotomaton":
 			case "rocketman":
@@ -9053,24 +9056,24 @@ public class Chara : Card, IPathfindWalker
 			return false;
 		}
 		bool flag = false;
-		foreach (Chara chara in EClass._map.charas)
+		foreach (Chara item in EClass._map.charas.ToList())
 		{
-			if (chara == attacker || chara.enemy == this || chara == this || chara.host != null || chara.IsDisabled || !chara.IsFriendOrAbove(this) || chara.conSuspend != null || (chara.IsPCParty && !IsPCParty) || (IsPCFaction && !chara.IsPCFaction) || (attacker.IsPCFactionOrMinion && chara.IsPCFactionOrMinion) || chara.HasElement(1277))
+			if (item == attacker || item.enemy == this || item == this || item.host != null || item.IsDisabled || !item.ExistsOnMap || !item.IsFriendOrAbove(this) || item.conSuspend != null || (item.IsPCParty && !IsPCParty) || (IsPCFaction && !item.IsPCFaction) || (attacker.IsPCFactionOrMinion && item.IsPCFactionOrMinion) || item.HasElement(1277))
 			{
 				continue;
 			}
-			bool flag2 = chara.HasElement(1225) && !chara.GetBool(126);
-			if ((!flag2 && (flag || EClass.rnd(2) == 0 || !chara.HasCondition<StanceTaunt>())) || chara.HasCooldown(1225))
+			bool flag2 = item.HasElement(1225) && !item.GetBool(126);
+			if ((!flag2 && (flag || EClass.rnd(2) == 0 || !item.HasCondition<StanceTaunt>())) || item.HasCooldown(1225))
 			{
 				continue;
 			}
-			int num = Mathf.Max(chara.Evalue(1649), (!flag2) ? 1 : 3);
-			int num2 = Dist(chara);
+			int num = Mathf.Max(item.Evalue(1649), (!flag2) ? 1 : 3);
+			int num2 = Dist(item);
 			if (num2 > 25)
 			{
 				continue;
 			}
-			if (num2 > num || !chara.CanSeeLos(pos, num2))
+			if (num2 > num || !item.CanSeeLos(pos, num2))
 			{
 				if (!flag2)
 				{
@@ -9081,29 +9084,33 @@ public class Chara : Card, IPathfindWalker
 				{
 					continue;
 				}
-				chara.Teleport(nearestPoint);
-				chara.AddCooldown(1225, 10);
-				num2 = Dist(chara);
-				Say("intercept_loyal", chara, this);
-				chara.SetEnemy(attacker);
-				attacker.SetEnemy(chara);
-				if (num2 > num || !chara.CanSeeLos(pos, num2))
+				item.Teleport(nearestPoint);
+				if (!item.IsAliveInCurrentZone)
+				{
+					continue;
+				}
+				item.AddCooldown(1225, 10);
+				num2 = Dist(item);
+				Say("intercept_loyal", item, this);
+				item.SetEnemy(attacker);
+				attacker.SetEnemy(item);
+				if (num2 > num || !item.CanSeeLos(pos, num2))
 				{
 					continue;
 				}
 			}
 			if (!flag && !HasElement(1225))
 			{
-				Say("intercept", chara, this);
+				Say("intercept", item, this);
 				if (EClass.rnd(10) == 0)
 				{
-					chara.Talk("intercept", base.NameSimple);
+					item.Talk("intercept", base.NameSimple);
 				}
 				if (attacker.enemy == this)
 				{
-					attacker.SetEnemy(chara);
+					attacker.SetEnemy(item);
 				}
-				action(chara);
+				action(item);
 				flag = true;
 			}
 		}

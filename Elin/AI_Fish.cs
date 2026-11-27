@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AI_Fish : AIAct
@@ -8,6 +9,8 @@ public class AI_Fish : AIAct
 		public int hit = -1;
 
 		public Point posWater;
+
+		public List<Thing> listFished;
 
 		public override bool ShowProgress => false;
 
@@ -158,6 +161,10 @@ public class AI_Fish : AIAct
 					thing.Destroy();
 				}
 			}
+			if (!thing.isDestroyed)
+			{
+				listFished.Add(thing);
+			}
 			if (traitToolFishing != null)
 			{
 				num = num * 100 / (50 + traitToolFishing.owner.material.hardness * 2);
@@ -179,6 +186,8 @@ public class AI_Fish : AIAct
 	}
 
 	public Point pos;
+
+	public List<Thing> listFished = new List<Thing>();
 
 	public static bool shouldCancel;
 
@@ -204,7 +213,8 @@ public class AI_Fish : AIAct
 	{
 		return new ProgressFish
 		{
-			posWater = pos
+			posWater = pos,
+			listFished = listFished
 		};
 	}
 
@@ -212,7 +222,7 @@ public class AI_Fish : AIAct
 	{
 		if (!owner.IsPC)
 		{
-			owner.TryPickGroundItem((Card t) => t.category.IsChildOf("fish") || t.SelfWeight <= 1000);
+			owner.TryPickGroundItem((Card t) => listFished.Contains(t));
 		}
 		if (pos != null)
 		{
@@ -250,10 +260,14 @@ public class AI_Fish : AIAct
 				yield return Restart();
 			}
 			yield return DoWait(2);
-			if (owner != null && !owner.IsPC)
+			if (owner != null)
 			{
-				owner.TryPickGroundItem((Card t) => t.category.IsChildOf("fish") || t.SelfWeight <= 1000);
-				owner.TryClearInventory();
+				if (!owner.IsPC)
+				{
+					owner.TryPickGroundItem((Card t) => listFished.Contains(t));
+					owner.TryClearInventory();
+				}
+				listFished.Clear();
 			}
 			yield return Success();
 		}
@@ -465,6 +479,14 @@ public class AI_Fish : AIAct
 			{
 				Rand.SetSeed(EClass.player.stats.days * 10 + EClass.player.fished);
 			}
+		}
+	}
+
+	public override void OnCancelOrSuccess()
+	{
+		if (owner != null && !owner.IsPC && owner.IsAliveInCurrentZone)
+		{
+			owner.TryPickGroundItem((Card t) => listFished.Contains(t));
 		}
 	}
 }

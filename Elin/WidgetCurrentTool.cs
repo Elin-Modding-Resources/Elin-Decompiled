@@ -196,6 +196,27 @@ public class WidgetCurrentTool : Widget
 		buttonHotItem.item = hotItem;
 		buttonHotItem.icon.material = (hotItem.UseUIObjMaterial ? EMono.core.refs.matUIObj : null);
 		hotItem.SetImage(buttonHotItem.icon);
+		Transform[] array = buttonHotItem.listAttach.ToArray();
+		foreach (Transform transform in array)
+		{
+			buttonHotItem.Dettach(transform.name);
+		}
+		if (hotItem.Thing?.trait is TraitFigure traitFigure)
+		{
+			traitFigure.OnSetCardGrid(buttonHotItem);
+			foreach (Transform item in buttonHotItem.listAttach)
+			{
+				MaskableGraphic[] componentsInChildren = item.GetComponentsInChildren<MaskableGraphic>();
+				foreach (MaskableGraphic maskableGraphic in componentsInChildren)
+				{
+					if (maskableGraphic.enabled)
+					{
+						maskableGraphic.maskable = false;
+						maskableGraphic.RecalculateClipping();
+					}
+				}
+			}
+		}
 		buttonHotItem.interactable = true;
 		buttonHotItem.Refresh();
 		iconHeld.SetActive(hotItem is HotItemHeld);

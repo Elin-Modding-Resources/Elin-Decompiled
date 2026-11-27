@@ -7814,11 +7814,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			switch (currency)
 			{
 			case CurrencyType.Money:
-				if (id == "crimale2")
+			{
+				string text = id;
+				if (!(text == "crimale2"))
 				{
-					return 6480;
+					if (!(text == "rp_random") || !(GetStr(53) == "cooking_stove"))
+					{
+						break;
+					}
+					return 100000;
 				}
-				break;
+				return 6480;
+			}
 			case CurrencyType.Influence:
 				switch (id)
 				{

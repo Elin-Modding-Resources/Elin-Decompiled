@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json;
 
 public class ConSleep : BadCondition
@@ -65,6 +66,10 @@ public class ConSleep : BadCondition
 		{
 			SuccubusVisit(owner);
 			succubusChecked = true;
+			if (owner.isDead)
+			{
+				return;
+			}
 		}
 		if (owner.IsPC && pcSleep > 0)
 		{
@@ -175,33 +180,37 @@ public class ConSleep : BadCondition
 		{
 			return;
 		}
-		foreach (Chara chara in EClass._map.charas)
+		foreach (Chara item in EClass._map.charas.ToList())
 		{
-			if (chara == tg || chara.IsPC || chara.host != null || chara.IsDisabled || !chara.IsIdle || chara.Evalue(418) > 0 || tg.Evalue(418) > 0 || chara.GetInt(119) != 0)
+			if (item == tg || item.IsPC || item.host != null || item.IsDisabled || !item.ExistsOnMap || !item.IsIdle || item.Evalue(418) > 0 || tg.Evalue(418) > 0 || item.GetInt(119) != 0)
 			{
 				continue;
 			}
-			Thing thing = chara.things.Find<TraitDreamBug>();
-			if ((!chara.HasElement(1216) && thing == null) || (tg.Evalue(418) == 0 && (EClass.rnd(3) != 0 || (tg.IsPC && thing == null && EClass.rnd(200) != 0))))
+			Thing thing = item.things.Find<TraitDreamBug>();
+			if ((!item.HasElement(1216) && thing == null) || (tg.Evalue(418) == 0 && (EClass.rnd(3) != 0 || (tg.IsPC && thing == null && EClass.rnd(200) != 0))))
 			{
 				continue;
 			}
-			chara.Teleport(tg.pos);
-			if (chara.Dist(tg.pos) > 2)
+			item.Teleport(tg.pos);
+			if (tg.isDead)
+			{
+				break;
+			}
+			if (!item.IsAliveInCurrentZone || item.Dist(tg.pos) > 2)
 			{
 				continue;
 			}
 			if (thing != null)
 			{
-				tg.Say("dreambug_teleport", chara, tg);
+				tg.Say("dreambug_teleport", item, tg);
 				thing.ModCharge(-1);
 				if (thing.c_charges <= 0)
 				{
-					tg.Say("dreambug_destroy", chara, thing);
+					tg.Say("dreambug_destroy", item, thing);
 					thing.Destroy();
 				}
 			}
-			chara.SetAI(new AI_Fuck
+			item.SetAI(new AI_Fuck
 			{
 				target = tg,
 				variation = AI_Fuck.Variation.Succubus

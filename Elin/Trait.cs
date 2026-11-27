@@ -2250,6 +2250,7 @@ public class Trait : EClass
 					{
 						AddThing(TraitSeed.MakeSeed("redpepper").SetNum(5));
 					}
+					NoRestock(ThingGen.CreateRecipe("cooking_stove"));
 					break;
 				case ShopType.Moyer:
 				{

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class ConPoison : BadCondition
 {
 	public override Emo2 EmoIcon => Emo2.poison;
@@ -11,17 +13,21 @@ public class ConPoison : BadCondition
 		switch (newPhase)
 		{
 		case 1:
-			elements.SetBase(70, -10);
+			ModSTR(10, 0.2f);
 			break;
 		case 2:
-			elements.SetBase(70, -10);
+			ModSTR(15, 0.3f);
 			break;
 		case 3:
-			elements.SetBase(70, -15);
+			ModSTR(20, 0.4f);
 			break;
 		default:
-			elements.SetBase(70, -5);
+			ModSTR(5, 0.1f);
 			break;
+		}
+		void ModSTR(int min, float ratio)
+		{
+			elements.SetBase(70, -Mathf.Max(min, (int)(ratio * (float)owner.elements.ValueWithoutLink(70))));
 		}
 	}
 
