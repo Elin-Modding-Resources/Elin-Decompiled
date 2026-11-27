@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.362.1 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.363 Nightly</span>
    </div>
   </td>
  </tr>
@@ -438,25 +438,52 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  196</span>        buttonHotItem.item = hotItem;</div>
 <div class="line"><span class="lineno">  197</span>        buttonHotItem.icon.material = (hotItem.UseUIObjMaterial ? EMono.core.refs.matUIObj : <span class="keyword">null</span>);</div>
 <div class="line"><span class="lineno">  198</span>        hotItem.<a class="code hl_function" href="classHotItem.html#a5235e1399f78eedc0600c8406fec31cc">SetImage</a>(<a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>);</div>
-<div class="line"><span class="lineno">  199</span>        buttonHotItem.interactable = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  200</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>.<a class="code hl_function" href="classButtonHotItem.html#aa40b4c0db04ff289ee39a21c579c645e">Refresh</a>();</div>
-<div class="line"><span class="lineno">  201</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#aedbc9ace7b8345c659665e108b70a040">iconHeld</a>.SetActive(hotItem is <a class="code hl_class" href="classHotItemHeld.html">HotItemHeld</a>);</div>
-<div class="line"><span class="lineno">  202</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea">RefreshHighlight</a>();</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
+<div class="line"><span class="lineno">  199</span>        Transform[] array = <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>.<a class="code hl_variable" href="classButtonGrid.html#ad9c81ccf274b1ccb67c482c9e3129680">listAttach</a>.ToArray();</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">foreach</span> (Transform transform <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>.<a class="code hl_function" href="classButtonGrid.html#aebe9fce30903447b0168bdca6e03c64c">Dettach</a>(transform.name);</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">if</span> (hotItem.<a class="code hl_property" href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">Thing</a>?.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitFigure.html">TraitFigure</a> traitFigure)</div>
+<div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            traitFigure.OnSetCardGrid(<a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>);</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">foreach</span> (Transform <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>.<a class="code hl_variable" href="classButtonGrid.html#ad9c81ccf274b1ccb67c482c9e3129680">listAttach</a>)</div>
+<div class="line"><span class="lineno">  208</span>            {</div>
+<div class="line"><span class="lineno">  209</span>                MaskableGraphic[] componentsInChildren = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.GetComponentsInChildren&lt;MaskableGraphic&gt;();</div>
+<div class="line"><span class="lineno">  210</span>                <span class="keywordflow">foreach</span> (MaskableGraphic maskableGraphic <span class="keywordflow">in</span> componentsInChildren)</div>
+<div class="line"><span class="lineno">  211</span>                {</div>
+<div class="line"><span class="lineno">  212</span>                    <span class="keywordflow">if</span> (maskableGraphic.enabled)</div>
+<div class="line"><span class="lineno">  213</span>                    {</div>
+<div class="line"><span class="lineno">  214</span>                        maskableGraphic.maskable = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  215</span>                        maskableGraphic.RecalculateClipping();</div>
+<div class="line"><span class="lineno">  216</span>                    }</div>
+<div class="line"><span class="lineno">  217</span>                }</div>
+<div class="line"><span class="lineno">  218</span>            }</div>
+<div class="line"><span class="lineno">  219</span>        }</div>
+<div class="line"><span class="lineno">  220</span>        buttonHotItem.interactable = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  221</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>.<a class="code hl_function" href="classButtonHotItem.html#aa40b4c0db04ff289ee39a21c579c645e">Refresh</a>();</div>
+<div class="line"><span class="lineno">  222</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#aedbc9ace7b8345c659665e108b70a040">iconHeld</a>.SetActive(hotItem is <a class="code hl_class" href="classHotItemHeld.html">HotItemHeld</a>);</div>
+<div class="line"><span class="lineno">  223</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea">RefreshHighlight</a>();</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
+<div class="ttc" id="aclassButtonGrid_html_ad9c81ccf274b1ccb67c482c9e3129680"><div class="ttname"><a href="classButtonGrid.html#ad9c81ccf274b1ccb67c482c9e3129680">ButtonGrid.listAttach</a></div><div class="ttdeci">List&lt; Transform &gt; listAttach</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00033">ButtonGrid.cs:33</a></div></div>
+<div class="ttc" id="aclassButtonGrid_html_aebe9fce30903447b0168bdca6e03c64c"><div class="ttname"><a href="classButtonGrid.html#aebe9fce30903447b0168bdca6e03c64c">ButtonGrid.Dettach</a></div><div class="ttdeci">void Dettach(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00078">ButtonGrid.cs:78</a></div></div>
 <div class="ttc" id="aclassButtonHotItem_html_aa40b4c0db04ff289ee39a21c579c645e"><div class="ttname"><a href="classButtonHotItem.html#aa40b4c0db04ff289ee39a21c579c645e">ButtonHotItem.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00092">ButtonHotItem.cs:92</a></div></div>
+<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00054">Card.cs:54</a></div></div>
 <div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
 <div class="ttc" id="aclassEMono_html_a5ef429a90c9f0705e7ab9c6db87c2047"><div class="ttname"><a href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">EMono.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00011">EMono.cs:11</a></div></div>
 <div class="ttc" id="aclassHotItemHeld_html"><div class="ttname"><a href="classHotItemHeld.html">HotItemHeld</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemHeld_8cs_source.html#l00003">HotItemHeld.cs:4</a></div></div>
 <div class="ttc" id="aclassHotItem_html"><div class="ttname"><a href="classHotItem.html">HotItem</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItem_8cs_source.html#l00004">HotItem.cs:5</a></div></div>
 <div class="ttc" id="aclassHotItem_html_a5235e1399f78eedc0600c8406fec31cc"><div class="ttname"><a href="classHotItem.html#a5235e1399f78eedc0600c8406fec31cc">HotItem.SetImage</a></div><div class="ttdeci">virtual void SetImage(Image icon)</div><div class="ttdef"><b>Definition:</b> <a href="HotItem_8cs_source.html#l00091">HotItem.cs:91</a></div></div>
+<div class="ttc" id="aclassHotItem_html_af7819bb69ba852812357b84aca4ed137"><div class="ttname"><a href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">HotItem.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="HotItem_8cs_source.html#l00038">HotItem.cs:38</a></div></div>
 <div class="ttc" id="aclassPlayer_html_ab5b3e5e408eccafc485520970da759f2"><div class="ttname"><a href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">Player.currentHotItem</a></div><div class="ttdeci">HotItem currentHotItem</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01179">Player.cs:1179</a></div></div>
 <div class="ttc" id="aclassPlayer_html_ae199db6a497b6fb9241caf64c13927c5"><div class="ttname"><a href="classPlayer.html#ae199db6a497b6fb9241caf64c13927c5">Player.hotItemNoItem</a></div><div class="ttdeci">HotItemNoItem hotItemNoItem</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01313">Player.cs:1313</a></div></div>
+<div class="ttc" id="aclassTraitFigure_html"><div class="ttname"><a href="classTraitFigure.html">TraitFigure</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFigure_8cs_source.html#l00004">TraitFigure.cs:5</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
-<div class="ttc" id="aclassWidgetCurrentTool_html_ad9d858d3c247a775dd993c21cdbe6fea"><div class="ttname"><a href="classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea">WidgetCurrentTool.RefreshHighlight</a></div><div class="ttdeci">void RefreshHighlight()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00294">WidgetCurrentTool.cs:294</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_ad9d858d3c247a775dd993c21cdbe6fea"><div class="ttname"><a href="classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea">WidgetCurrentTool.RefreshHighlight</a></div><div class="ttdeci">void RefreshHighlight()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00315">WidgetCurrentTool.cs:315</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_adea7ce8cf2a21739caa6fd509a599356"><div class="ttname"><a href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">WidgetCurrentTool.buttonHotItem</a></div><div class="ttdeci">ButtonHotItem buttonHotItem</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00022">WidgetCurrentTool.cs:22</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_aedbc9ace7b8345c659665e108b70a040"><div class="ttname"><a href="classWidgetCurrentTool.html#aedbc9ace7b8345c659665e108b70a040">WidgetCurrentTool.iconHeld</a></div><div class="ttdeci">Image iconHeld</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00026">WidgetCurrentTool.cs:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00022">buttonHotItem</a>, <a class="el" href="Player_8cs_source.html#l01179">Player.currentHotItem</a>, <a class="el" href="Player_8cs_source.html#l01313">Player.hotItemNoItem</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00026">iconHeld</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00092">ButtonHotItem.Refresh()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">RefreshHighlight()</a>, and <a class="el" href="HotItem_8cs_source.html#l00091">HotItem.SetImage()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00022">buttonHotItem</a>, <a class="el" href="Player_8cs_source.html#l01179">Player.currentHotItem</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00078">ButtonGrid.Dettach()</a>, <a class="el" href="Player_8cs_source.html#l01313">Player.hotItemNoItem</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00026">iconHeld</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00033">ButtonGrid.listAttach</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="ButtonHotItem_8cs_source.html#l00092">ButtonHotItem.Refresh()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">RefreshHighlight()</a>, and <a class="el" href="HotItem_8cs_source.html#l00091">HotItem.SetImage()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00161">CheckDirty()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00171">RefreshCurrentHotItem()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00179">SwitchPage()</a>.</p>
 
@@ -487,15 +514,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ad337395ff179624b2e16a1b4e40de7f6">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00308">308</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  309</span>    {</div>
-<div class="line"><span class="lineno">  310</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> componentOf = <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)componentOf &amp;&amp; componentOf != <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>)</div>
-<div class="line"><span class="lineno">  312</span>        {</div>
-<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  314</span>        }</div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span> base.CanShowContextMenu();</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00329">329</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>    {</div>
+<div class="line"><span class="lineno">  331</span>        <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> componentOf = <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>&gt;();</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)componentOf &amp;&amp; componentOf != <a class="code hl_variable" href="classWidgetCurrentTool.html#adea7ce8cf2a21739caa6fd509a599356">buttonHotItem</a>)</div>
+<div class="line"><span class="lineno">  333</span>        {</div>
+<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  335</span>        }</div>
+<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">return</span> base.CanShowContextMenu();</div>
+<div class="line"><span class="lineno">  337</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html"><div class="ttname"><a href="classButtonGrid.html">ButtonGrid</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00006">ButtonGrid.cs:7</a></div></div>
 <div class="ttc" id="aclassInputModuleEX_html"><div class="ttname"><a href="classInputModuleEX.html">InputModuleEX</a></div><div class="ttdef"><b>Definition:</b> <a href="InputModuleEX_8cs_source.html#l00005">InputModuleEX.cs:6</a></div></div>
 </div><!-- fragment -->
@@ -601,21 +628,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00225">225</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>    {</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> + 1;</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">if</span> (num &gt;= <a class="code hl_variable" href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">maxSlots</a>)</div>
-<div class="line"><span class="lineno">  229</span>        {</div>
-<div class="line"><span class="lineno">  230</span>            num = -1;</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00246">246</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> + 1;</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">if</span> (num &gt;= <a class="code hl_variable" href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">maxSlots</a>)</div>
+<div class="line"><span class="lineno">  250</span>        {</div>
+<div class="line"><span class="lineno">  251</span>            num = -1;</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  254</span>    }</div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a021087935f186c105a8cc4e7e67bf7cf"><div class="ttname"><a href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">WidgetCurrentTool.maxSlots</a></div><div class="ttdeci">int maxSlots</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00034">WidgetCurrentTool.cs:34</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a36452bc25664c77b7481aaab15495d6f"><div class="ttname"><a href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">WidgetCurrentTool.selected</a></div><div class="ttdeci">int selected</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00044">WidgetCurrentTool.cs:44</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">maxSlots</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00218">ModSelected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00239">ModSelected()</a>.</p>
 
 </div>
 </div>
@@ -642,19 +669,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00235">235</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> - 1;</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> (num &lt;= -2)</div>
-<div class="line"><span class="lineno">  239</span>        {</div>
-<div class="line"><span class="lineno">  240</span>            num = <a class="code hl_variable" href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">maxSlots</a> - 1;</div>
-<div class="line"><span class="lineno">  241</span>        }</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00256">256</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  257</span>    {</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> - 1;</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (num &lt;= -2)</div>
+<div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            num = <a class="code hl_variable" href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">maxSlots</a> - 1;</div>
+<div class="line"><span class="lineno">  262</span>        }</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">maxSlots</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00218">ModSelected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00239">ModSelected()</a>.</p>
 
 </div>
 </div>
@@ -682,17 +709,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00218">218</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
-<div class="line"><span class="lineno">  220</span>        SE.SelectHotitem();</div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">int</span> index = ((a &gt; 0) ? <a class="code hl_function" href="classWidgetCurrentTool.html#a562a11b6ce760a4b855cc6c52dc35000">GetNextSelectableIndex</a>() : <a class="code hl_function" href="classWidgetCurrentTool.html#a1fbd380ac9e5b127378e36d21d2dc601">GetPrevSelectableIndex</a>());</div>
-<div class="line"><span class="lineno">  222</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(index);</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-<div class="ttc" id="aclassWidgetCurrentTool_html_a1fbd380ac9e5b127378e36d21d2dc601"><div class="ttname"><a href="classWidgetCurrentTool.html#a1fbd380ac9e5b127378e36d21d2dc601">WidgetCurrentTool.GetPrevSelectableIndex</a></div><div class="ttdeci">int GetPrevSelectableIndex()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00235">WidgetCurrentTool.cs:235</a></div></div>
-<div class="ttc" id="aclassWidgetCurrentTool_html_a562a11b6ce760a4b855cc6c52dc35000"><div class="ttname"><a href="classWidgetCurrentTool.html#a562a11b6ce760a4b855cc6c52dc35000">WidgetCurrentTool.GetNextSelectableIndex</a></div><div class="ttdeci">int GetNextSelectableIndex()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00225">WidgetCurrentTool.cs:225</a></div></div>
-<div class="ttc" id="aclassWidgetCurrentTool_html_a778e32ad7caa0de0851954a3ced5fae5"><div class="ttname"><a href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">WidgetCurrentTool.Select</a></div><div class="ttdeci">void Select(int index, bool fromHotkey=false)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00250">WidgetCurrentTool.cs:250</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00239">239</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>    {</div>
+<div class="line"><span class="lineno">  241</span>        SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordtype">int</span> index = ((a &gt; 0) ? <a class="code hl_function" href="classWidgetCurrentTool.html#a562a11b6ce760a4b855cc6c52dc35000">GetNextSelectableIndex</a>() : <a class="code hl_function" href="classWidgetCurrentTool.html#a1fbd380ac9e5b127378e36d21d2dc601">GetPrevSelectableIndex</a>());</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(index);</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a1fbd380ac9e5b127378e36d21d2dc601"><div class="ttname"><a href="classWidgetCurrentTool.html#a1fbd380ac9e5b127378e36d21d2dc601">WidgetCurrentTool.GetPrevSelectableIndex</a></div><div class="ttdeci">int GetPrevSelectableIndex()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00256">WidgetCurrentTool.cs:256</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a562a11b6ce760a4b855cc6c52dc35000"><div class="ttname"><a href="classWidgetCurrentTool.html#a562a11b6ce760a4b855cc6c52dc35000">WidgetCurrentTool.GetNextSelectableIndex</a></div><div class="ttdeci">int GetNextSelectableIndex()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00246">WidgetCurrentTool.cs:246</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a778e32ad7caa0de0851954a3ced5fae5"><div class="ttname"><a href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">WidgetCurrentTool.Select</a></div><div class="ttdeci">void Select(int index, bool fromHotkey=false)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00271">WidgetCurrentTool.cs:271</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00225">GetNextSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00235">GetPrevSelectableIndex()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00246">GetNextSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00256">GetPrevSelectableIndex()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00470">AM_Adv._OnUpdateInput()</a>.</p>
 
@@ -749,14 +776,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a026d2a629ff4d74acd15d5fe806bd04b"><div class="ttname"><a href="classWidgetCurrentTool.html#a026d2a629ff4d74acd15d5fe806bd04b">WidgetCurrentTool.Instance</a></div><div class="ttdeci">static WidgetCurrentTool Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00020">WidgetCurrentTool.cs:20</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a14c7cc42ccd5f7fe4f6b0ea9b386a13f"><div class="ttname"><a href="classWidgetCurrentTool.html#a14c7cc42ccd5f7fe4f6b0ea9b386a13f">WidgetCurrentTool.buttonSwitchPage</a></div><div class="ttdeci">UIButton buttonSwitchPage</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00024">WidgetCurrentTool.cs:24</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a1d18110e82b5dfd1ac803f3b0ed93bd0"><div class="ttname"><a href="classWidgetCurrentTool.html#a1d18110e82b5dfd1ac803f3b0ed93bd0">WidgetCurrentTool.SwitchPage</a></div><div class="ttdeci">void SwitchPage()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00179">WidgetCurrentTool.cs:179</a></div></div>
-<div class="ttc" id="aclassWidgetCurrentTool_html_a22a7d8e4c6d258c28a937afdc89f3a48"><div class="ttname"><a href="classWidgetCurrentTool.html#a22a7d8e4c6d258c28a937afdc89f3a48">WidgetCurrentTool.OnClickButtonHotItem</a></div><div class="ttdeci">void OnClickButtonHotItem()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00205">WidgetCurrentTool.cs:205</a></div></div>
+<div class="ttc" id="aclassWidgetCurrentTool_html_a22a7d8e4c6d258c28a937afdc89f3a48"><div class="ttname"><a href="classWidgetCurrentTool.html#a22a7d8e4c6d258c28a937afdc89f3a48">WidgetCurrentTool.OnClickButtonHotItem</a></div><div class="ttdeci">void OnClickButtonHotItem()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00226">WidgetCurrentTool.cs:226</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a24b205db86aec45d764880686b1c81b0"><div class="ttname"><a href="classWidgetCurrentTool.html#a24b205db86aec45d764880686b1c81b0">WidgetCurrentTool.page</a></div><div class="ttdeci">int page</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00050">WidgetCurrentTool.cs:51</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_a28fb63cd0ccad4be8370ba8249e6cfc7"><div class="ttname"><a href="classWidgetCurrentTool.html#a28fb63cd0ccad4be8370ba8249e6cfc7">WidgetCurrentTool.transHighlightSwitch</a></div><div class="ttdeci">Transform transHighlightSwitch</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00042">WidgetCurrentTool.cs:42</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_aa116dbaf6eee1901a28a168d575be5ef"><div class="ttname"><a href="classWidgetCurrentTool.html#aa116dbaf6eee1901a28a168d575be5ef">WidgetCurrentTool.RebuildSlots</a></div><div class="ttdeci">void RebuildSlots()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00090">WidgetCurrentTool.cs:90</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_ad1c39b06027cc40c6893ee630f586b2b"><div class="ttname"><a href="classWidgetCurrentTool.html#ad1c39b06027cc40c6893ee630f586b2b">WidgetCurrentTool.placer</a></div><div class="ttdeci">UIPlaceHelper placer</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00038">WidgetCurrentTool.cs:38</a></div></div>
 <div class="ttc" id="aclassWidget_html_a115d938794f34d1eb29d44aae622c29b"><div class="ttname"><a href="classWidget.html#a115d938794f34d1eb29d44aae622c29b">Widget.ApplySkin</a></div><div class="ttdeci">virtual void ApplySkin()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00575">Widget.cs:575</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00189">_RefreshCurrentHotItem()</a>, <a class="el" href="Widget_8cs_source.html#l00575">Widget.ApplySkin()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00022">buttonHotItem</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00024">buttonSwitchPage</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00032">dirty</a>, <a class="el" href="Player_8cs_source.html#l01173">Player.flags</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00020">Instance</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00205">OnClickButtonHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00051">page</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00038">placer</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, <a class="el" href="UIPlaceHelper_8cs_source.html#l00013">UIPlaceHelper.Refresh()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00179">SwitchPage()</a>, <a class="el" href="Player_8cs_source.html#l00520">Player.Flags.toggleHotbarHighlightDisabled</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00042">transHighlightSwitch</a>.</p>
+<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00189">_RefreshCurrentHotItem()</a>, <a class="el" href="Widget_8cs_source.html#l00575">Widget.ApplySkin()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00022">buttonHotItem</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00024">buttonSwitchPage</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00032">dirty</a>, <a class="el" href="Player_8cs_source.html#l01173">Player.flags</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00020">Instance</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00226">OnClickButtonHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00051">page</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00038">placer</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, <a class="el" href="UIPlaceHelper_8cs_source.html#l00013">UIPlaceHelper.Refresh()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00179">SwitchPage()</a>, <a class="el" href="Player_8cs_source.html#l00520">Player.Flags.toggleHotbarHighlightDisabled</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00042">transHighlightSwitch</a>.</p>
 
 </div>
 </div>
@@ -783,23 +810,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00205">205</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
-<div class="line"><span class="lineno">  207</span>        SE.SelectHotitem();</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> != -1 &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">currentHotItem</a>.<a class="code hl_property" href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">Thing</a> == <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>)</div>
-<div class="line"><span class="lineno">  209</span>        {</div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(-1);</div>
-<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordtype">int</span> index = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a>;</div>
-<div class="line"><span class="lineno">  214</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> = -1;</div>
-<div class="line"><span class="lineno">  215</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(index);</div>
-<div class="line"><span class="lineno">  216</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00226">226</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>    {</div>
+<div class="line"><span class="lineno">  228</span>        SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> != -1 &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">currentHotItem</a>.<a class="code hl_property" href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">Thing</a> == <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>)</div>
+<div class="line"><span class="lineno">  230</span>        {</div>
+<div class="line"><span class="lineno">  231</span>            <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(-1);</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">int</span> index = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a>;</div>
+<div class="line"><span class="lineno">  235</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> = -1;</div>
+<div class="line"><span class="lineno">  236</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(index);</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
 <div class="ttc" id="aclassButtonGrid_html_a1e704bdf3a08c312e607ad3bc919534d"><div class="ttname"><a href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">ButtonGrid.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.cs:24</a></div></div>
-<div class="ttc" id="aclassHotItem_html_af7819bb69ba852812357b84aca4ed137"><div class="ttname"><a href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">HotItem.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="HotItem_8cs_source.html#l00038">HotItem.cs:38</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_afeb3c34baca1e9d28cd0ef6e3be6e3a2"><div class="ttname"><a href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">WidgetCurrentTool.selectedButton</a></div><div class="ttdeci">ButtonGrid selectedButton</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00062">WidgetCurrentTool.cs:62</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="Player_8cs_source.html#l01179">Player.currentHotItem</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00062">selectedButton</a>, and <a class="el" href="HotItem_8cs_source.html#l00038">HotItem.Thing</a>.</p>
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="Player_8cs_source.html#l01179">Player.currentHotItem</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00062">selectedButton</a>, and <a class="el" href="HotItem_8cs_source.html#l00038">HotItem.Thing</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>.</p>
 
@@ -831,24 +857,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#ad2732b674b864ef872b939069ac321bc">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00318">318</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  319</span>    {</div>
-<div class="line"><span class="lineno">  320</span>        <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classButtonHotItem.html">ButtonHotItem</a>&gt;();</div>
-<div class="line"><span class="lineno">  321</span>        <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;setting&quot;</span>);</div>
-<div class="line"><span class="lineno">  322</span>        <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu2 = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;style&quot;</span>);</div>
-<div class="line"><span class="lineno">  323</span>        uIContextMenu2.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;iconSize&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classWidgetCurrentTool.html#a37a8c945090b80225c8e0f7ab62886e0">extra</a>.<a class="code hl_variable" href="classWidgetCurrentTool_1_1Extra.html#a80b027cca02f5897ceea01cfd22de0ab">iconSize</a>, delegate(<span class="keywordtype">float</span> a)</div>
-<div class="line"><span class="lineno">  324</span>        {</div>
-<div class="line"><span class="lineno">  325</span>            extra.iconSize = (int)a;</div>
-<div class="line"><span class="lineno">  326</span>            <a class="code hl_function" href="classWidgetCurrentTool.html#aa116dbaf6eee1901a28a168d575be5ef">RebuildSlots</a>();</div>
-<div class="line"><span class="lineno">  327</span>        }, 0f, EMono.setting.ui.iconSizes.Count - 1, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  328</span>        <a class="code hl_function" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a>(uIContextMenu2);</div>
-<div class="line"><span class="lineno">  329</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showShortcut&quot;</span>, <a class="code hl_property" href="classWidgetCurrentTool.html#a37a8c945090b80225c8e0f7ab62886e0">extra</a>.<a class="code hl_variable" href="classWidgetCurrentTool_1_1Extra.html#afe1851a93f7c52d3017c92c7fd7d6abc">showShortcut</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  330</span>        {</div>
-<div class="line"><span class="lineno">  331</span>            extra.showShortcut = a;</div>
-<div class="line"><span class="lineno">  332</span>            <a class="code hl_function" href="classWidgetCurrentTool.html#aa116dbaf6eee1901a28a168d575be5ef">RebuildSlots</a>();</div>
-<div class="line"><span class="lineno">  333</span>        });</div>
-<div class="line"><span class="lineno">  334</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
-<div class="line"><span class="lineno">  335</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00339">339</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>    {</div>
+<div class="line"><span class="lineno">  341</span>        <a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.GetComponentOf&lt;<a class="code hl_class" href="classButtonHotItem.html">ButtonHotItem</a>&gt;();</div>
+<div class="line"><span class="lineno">  342</span>        <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;setting&quot;</span>);</div>
+<div class="line"><span class="lineno">  343</span>        <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a> uIContextMenu2 = m.<a class="code hl_function" href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">AddChild</a>(<span class="stringliteral">&quot;style&quot;</span>);</div>
+<div class="line"><span class="lineno">  344</span>        uIContextMenu2.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;iconSize&quot;</span>, (<span class="keywordtype">float</span> n) =&gt; n.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classWidgetCurrentTool.html#a37a8c945090b80225c8e0f7ab62886e0">extra</a>.<a class="code hl_variable" href="classWidgetCurrentTool_1_1Extra.html#a80b027cca02f5897ceea01cfd22de0ab">iconSize</a>, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  345</span>        {</div>
+<div class="line"><span class="lineno">  346</span>            extra.iconSize = (int)a;</div>
+<div class="line"><span class="lineno">  347</span>            <a class="code hl_function" href="classWidgetCurrentTool.html#aa116dbaf6eee1901a28a168d575be5ef">RebuildSlots</a>();</div>
+<div class="line"><span class="lineno">  348</span>        }, 0f, EMono.setting.ui.iconSizes.Count - 1, isInt: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  349</span>        <a class="code hl_function" href="classWidget.html#a1ad7837f095382884364ecba60c0a4cb">SetGridContextMenu</a>(uIContextMenu2);</div>
+<div class="line"><span class="lineno">  350</span>        uIContextMenu.AddToggle(<span class="stringliteral">&quot;showShortcut&quot;</span>, <a class="code hl_property" href="classWidgetCurrentTool.html#a37a8c945090b80225c8e0f7ab62886e0">extra</a>.<a class="code hl_variable" href="classWidgetCurrentTool_1_1Extra.html#afe1851a93f7c52d3017c92c7fd7d6abc">showShortcut</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  351</span>        {</div>
+<div class="line"><span class="lineno">  352</span>            extra.showShortcut = a;</div>
+<div class="line"><span class="lineno">  353</span>            <a class="code hl_function" href="classWidgetCurrentTool.html#aa116dbaf6eee1901a28a168d575be5ef">RebuildSlots</a>();</div>
+<div class="line"><span class="lineno">  354</span>        });</div>
+<div class="line"><span class="lineno">  355</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
+<div class="line"><span class="lineno">  356</span>    }</div>
 <div class="ttc" id="aclassButtonHotItem_html"><div class="ttname"><a href="classButtonHotItem.html">ButtonHotItem</a></div><div class="ttdef"><b>Definition:</b> <a href="ButtonHotItem_8cs_source.html#l00005">ButtonHotItem.cs:6</a></div></div>
 <div class="ttc" id="aclassUIContextMenu_html"><div class="ttname"><a href="classUIContextMenu.html">UIContextMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00008">UIContextMenu.cs:9</a></div></div>
 <div class="ttc" id="aclassUIContextMenu_html_a75c796a9dd17902e8a8f710e8c8760f6"><div class="ttname"><a href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">UIContextMenu.AddSlider</a></div><div class="ttdeci">UIContextMenuItem AddSlider(string text, Func&lt; float, string &gt; textFunc, float value, Action&lt; float &gt; action, float min=0f, float max=1f, bool isInt=false, bool hideOther=true, bool useInput=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.cs:329</a></div></div>
@@ -982,9 +1008,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidget_html_ad079af82fc1bf8225c36fc277e93c926"><div class="ttname"><a href="classWidget.html#ad079af82fc1bf8225c36fc277e93c926">Widget.ClampToScreen</a></div><div class="ttdeci">void ClampToScreen()</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00456">Widget.cs:456</a></div></div>
 <div class="ttc" id="astructUIList_1_1ButtonPair_html"><div class="ttname"><a href="structUIList_1_1ButtonPair.html">UIList.ButtonPair</a></div><div class="ttdef"><b>Definition:</b> <a href="UIList_8cs_source.html#l00214">UIList.cs:215</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIList_8cs_source.html#l00357">UIList.Add()</a>, <a class="el" href="UIList_8cs_source.html#l00276">UIList.buttons</a>, <a class="el" href="Widget_8cs_source.html#l00456">Widget.ClampToScreen()</a>, <a class="el" href="UIList_8cs_source.html#l00404">UIList.Clear()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00032">dirty</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00048">extra</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00036">grid</a>, <a class="el" href="SkinConfig_8cs_source.html#l00079">SkinConfig.gridColor</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00009">WidgetCurrentTool.Extra.iconSize</a>, <a class="el" href="GameSetting_8cs_source.html#l00029">GameSetting.UISetting.iconSizes</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00028">imageHighlight</a>, <a class="el" href="Card_8cs_source.html#l02007">Card.invX</a>, <a class="el" href="Card_8cs_source.html#l02019">Card.invY</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00030">list</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">maxSlots</a>, <a class="el" href="Card_8cs_source.html#l02203">Card.Name</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00051">page</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="UIList_8cs_source.html#l00796">UIList.Redraw()</a>, <a class="el" href="UIList_8cs_source.html#l00479">UIList.Refresh()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">RefreshHighlight()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00145">ButtonGrid.SetCardGrid()</a>, <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.setting</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00011">WidgetCurrentTool.Extra.showShortcut</a>, <a class="el" href="UIButton_8cs_source.html#l00106">UIButton.subText2</a>, <a class="el" href="Card_8cs_source.html#l00039">Card.things</a>, <a class="el" href="LayerInventory_8cs_source.html#l00135">LayerInventory.TryShowGuide()</a>, and <a class="el" href="GameSetting_8cs_source.html#l00354">GameSetting.ui</a>.</p>
+<p class="reference">References <a class="el" href="UIList_8cs_source.html#l00357">UIList.Add()</a>, <a class="el" href="UIList_8cs_source.html#l00276">UIList.buttons</a>, <a class="el" href="Widget_8cs_source.html#l00456">Widget.ClampToScreen()</a>, <a class="el" href="UIList_8cs_source.html#l00404">UIList.Clear()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00032">dirty</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00048">extra</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00036">grid</a>, <a class="el" href="SkinConfig_8cs_source.html#l00079">SkinConfig.gridColor</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00009">WidgetCurrentTool.Extra.iconSize</a>, <a class="el" href="GameSetting_8cs_source.html#l00029">GameSetting.UISetting.iconSizes</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00028">imageHighlight</a>, <a class="el" href="Card_8cs_source.html#l02007">Card.invX</a>, <a class="el" href="Card_8cs_source.html#l02019">Card.invY</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00030">list</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">maxSlots</a>, <a class="el" href="Card_8cs_source.html#l02203">Card.Name</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00051">page</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="UIList_8cs_source.html#l00796">UIList.Redraw()</a>, <a class="el" href="UIList_8cs_source.html#l00479">UIList.Refresh()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">RefreshHighlight()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00145">ButtonGrid.SetCardGrid()</a>, <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>, <a class="el" href="EMono_8cs_source.html#l00031">EMono.setting</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00011">WidgetCurrentTool.Extra.showShortcut</a>, <a class="el" href="UIButton_8cs_source.html#l00106">UIButton.subText2</a>, <a class="el" href="Card_8cs_source.html#l00039">Card.things</a>, <a class="el" href="LayerInventory_8cs_source.html#l00135">LayerInventory.TryShowGuide()</a>, and <a class="el" href="GameSetting_8cs_source.html#l00354">GameSetting.ui</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00318">OnSetContextMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00339">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -1048,23 +1074,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">294</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  295</span>    {</div>
-<div class="line"><span class="lineno">  296</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> != -1;</div>
-<div class="line"><span class="lineno">  297</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.SetActive(flag);</div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  299</span>        {</div>
-<div class="line"><span class="lineno">  300</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.transform.SetParent(<a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.transform, worldPositionStays: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  301</span>            imageHighlight.transform.position = <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.transform.position;</div>
-<div class="line"><span class="lineno">  302</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.Rect().sizeDelta = <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.Rect().sizeDelta;</div>
-<div class="line"><span class="lineno">  303</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.transform.SetAsFirstSibling();</div>
-<div class="line"><span class="lineno">  304</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.SetAlpha((<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">currentHotItem</a>.<a class="code hl_property" href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">Thing</a> == <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>) ? 1f : 0.35f);</div>
-<div class="line"><span class="lineno">  305</span>        }</div>
-<div class="line"><span class="lineno">  306</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">315</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  316</span>    {</div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> != -1;</div>
+<div class="line"><span class="lineno">  318</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.SetActive(flag);</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  320</span>        {</div>
+<div class="line"><span class="lineno">  321</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.transform.SetParent(<a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.transform, worldPositionStays: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  322</span>            imageHighlight.transform.position = <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.transform.position;</div>
+<div class="line"><span class="lineno">  323</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.Rect().sizeDelta = <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.Rect().sizeDelta;</div>
+<div class="line"><span class="lineno">  324</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.transform.SetAsFirstSibling();</div>
+<div class="line"><span class="lineno">  325</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3">imageHighlight</a>.SetAlpha((<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#ab5b3e5e408eccafc485520970da759f2">currentHotItem</a>.<a class="code hl_property" href="classHotItem.html#af7819bb69ba852812357b84aca4ed137">Thing</a> == <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>) ? 1f : 0.35f);</div>
+<div class="line"><span class="lineno">  326</span>        }</div>
+<div class="line"><span class="lineno">  327</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="Player_8cs_source.html#l01179">Player.currentHotItem</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00028">imageHighlight</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00062">selectedButton</a>, and <a class="el" href="HotItem_8cs_source.html#l00038">HotItem.Thing</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00189">_RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00189">_RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>.</p>
 
 </div>
 </div>
@@ -1091,12 +1117,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00245">245</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
-<div class="line"><span class="lineno">  247</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a>);</div>
-<div class="line"><span class="lineno">  248</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00266">266</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>    {</div>
+<div class="line"><span class="lineno">  268</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#a778e32ad7caa0de0851954a3ced5fae5">Select</a>(<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a>);</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>.</p>
+<p class="reference">References <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="InvOwnerHotbar_8cs_source.html#l00050">InvOwnerHotbar.OnProcess()</a>.</p>
 
@@ -1136,54 +1162,53 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">250</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  251</span>    {</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (index != -1 &amp;&amp; fromHotkey &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a380c3a9186905d017f89ddb965a720aa">game</a>.<a class="code hl_variable" href="classCoreConfig_1_1GameConfig.html#accfb0e21b95f30f1b2f5502ae4f904c1">useAbilityOnHotkey</a>)</div>
-<div class="line"><span class="lineno">  253</span>        {</div>
-<div class="line"><span class="lineno">  254</span>            <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid = <a class="code hl_variable" href="classWidgetCurrentTool.html#aed7194a86625a4583adbb486717edca5">list</a>.<a class="code hl_variable" href="classUIList.html#a17c2fb9c305c1f257b0c14fd654b70fe">buttons</a>[index].component as <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>;</div>
-<div class="line"><span class="lineno">  255</span>            <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a> traitAbility = ((buttonGrid.card != <span class="keyword">null</span>) ? (buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a>) : <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (traitAbility != <span class="keyword">null</span> &amp;&amp; traitAbility.<a class="code hl_function" href="classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a">CanUse</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>))</div>
-<div class="line"><span class="lineno">  257</span>            {</div>
-<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#aef422d32919a20de8a5fefe3b3a949c8">CanAcceptInput</a>() &amp;&amp; traitAbility.<a class="code hl_function" href="classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6">OnUse</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>))</div>
-<div class="line"><span class="lineno">  259</span>                {</div>
-<div class="line"><span class="lineno">  260</span>                    <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">EndTurn</a>();</div>
-<div class="line"><span class="lineno">  261</span>                }</div>
-<div class="line"><span class="lineno">  262</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">if</span> (fromHotkey)</div>
-<div class="line"><span class="lineno">  266</span>        {</div>
-<div class="line"><span class="lineno">  267</span>            SE.SelectHotitem();</div>
-<div class="line"><span class="lineno">  268</span>        }</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> == index &amp;&amp; <a class="code hl_variable" href="classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f">selectedPage</a> == <a class="code hl_property" href="classWidgetCurrentTool.html#a24b205db86aec45d764880686b1c81b0">page</a>)</div>
-<div class="line"><span class="lineno">  270</span>        {</div>
-<div class="line"><span class="lineno">  271</span>            index = -1;</div>
-<div class="line"><span class="lineno">  272</span>        }</div>
-<div class="line"><span class="lineno">  273</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> = index;</div>
-<div class="line"><span class="lineno">  274</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f">selectedPage</a> = <a class="code hl_property" href="classWidgetCurrentTool.html#a24b205db86aec45d764880686b1c81b0">page</a>;</div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> &gt;= <a class="code hl_variable" href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">maxSlots</a>)</div>
-<div class="line"><span class="lineno">  276</span>        {</div>
-<div class="line"><span class="lineno">  277</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> = -1;</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> == -1 || <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  280</span>        {</div>
-<div class="line"><span class="lineno">  281</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a49895c9f13fff46fc67c1ed4f59a9416">ResetCurrentHotItem</a>();</div>
-<div class="line"><span class="lineno">  282</span>        }</div>
-<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  284</span>        {</div>
-<div class="line"><span class="lineno">  285</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#afbe334fb5e8a370af1caffdf123e585e">SetCurrentHotItem</a>(<a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a267ca6ddf801c3a7f17dff185d3b14fc">GetHotItem</a>());</div>
-<div class="line"><span class="lineno">  286</span>        }</div>
-<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">IsActive</a>)</div>
-<div class="line"><span class="lineno">  288</span>        {</div>
-<div class="line"><span class="lineno">  289</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_function" href="classAM__Adv.html#aaabd441e4b69e20ef37afd0ca5d791b9">UpdatePlans</a>();</div>
-<div class="line"><span class="lineno">  290</span>        }</div>
-<div class="line"><span class="lineno">  291</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea">RefreshHighlight</a>();</div>
-<div class="line"><span class="lineno">  292</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">271</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>    {</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (index != -1 &amp;&amp; fromHotkey &amp;&amp; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#a380c3a9186905d017f89ddb965a720aa">game</a>.<a class="code hl_variable" href="classCoreConfig_1_1GameConfig.html#accfb0e21b95f30f1b2f5502ae4f904c1">useAbilityOnHotkey</a>)</div>
+<div class="line"><span class="lineno">  274</span>        {</div>
+<div class="line"><span class="lineno">  275</span>            <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a> buttonGrid = <a class="code hl_variable" href="classWidgetCurrentTool.html#aed7194a86625a4583adbb486717edca5">list</a>.<a class="code hl_variable" href="classUIList.html#a17c2fb9c305c1f257b0c14fd654b70fe">buttons</a>[index].component as <a class="code hl_class" href="classButtonGrid.html">ButtonGrid</a>;</div>
+<div class="line"><span class="lineno">  276</span>            <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a> traitAbility = ((buttonGrid.card != <span class="keyword">null</span>) ? (buttonGrid.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> as <a class="code hl_class" href="classTraitAbility.html">TraitAbility</a>) : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (traitAbility != <span class="keyword">null</span> &amp;&amp; traitAbility.<a class="code hl_function" href="classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a">CanUse</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>))</div>
+<div class="line"><span class="lineno">  278</span>            {</div>
+<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#aef422d32919a20de8a5fefe3b3a949c8">CanAcceptInput</a>() &amp;&amp; traitAbility.<a class="code hl_function" href="classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6">OnUse</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>))</div>
+<div class="line"><span class="lineno">  280</span>                {</div>
+<div class="line"><span class="lineno">  281</span>                    <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a70760993376895e3e79c170a3ac751e9">EndTurn</a>();</div>
+<div class="line"><span class="lineno">  282</span>                }</div>
+<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  284</span>            }</div>
+<div class="line"><span class="lineno">  285</span>        }</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">if</span> (fromHotkey)</div>
+<div class="line"><span class="lineno">  287</span>        {</div>
+<div class="line"><span class="lineno">  288</span>            SE.SelectHotitem();</div>
+<div class="line"><span class="lineno">  289</span>        }</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> == index &amp;&amp; <a class="code hl_variable" href="classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f">selectedPage</a> == <a class="code hl_property" href="classWidgetCurrentTool.html#a24b205db86aec45d764880686b1c81b0">page</a>)</div>
+<div class="line"><span class="lineno">  291</span>        {</div>
+<div class="line"><span class="lineno">  292</span>            index = -1;</div>
+<div class="line"><span class="lineno">  293</span>        }</div>
+<div class="line"><span class="lineno">  294</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> = index;</div>
+<div class="line"><span class="lineno">  295</span>        <a class="code hl_variable" href="classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f">selectedPage</a> = <a class="code hl_property" href="classWidgetCurrentTool.html#a24b205db86aec45d764880686b1c81b0">page</a>;</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> &gt;= <a class="code hl_variable" href="classWidgetCurrentTool.html#a021087935f186c105a8cc4e7e67bf7cf">maxSlots</a>)</div>
+<div class="line"><span class="lineno">  297</span>        {</div>
+<div class="line"><span class="lineno">  298</span>            <a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> = -1;</div>
+<div class="line"><span class="lineno">  299</span>        }</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f">selected</a> == -1 || <a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  301</span>        {</div>
+<div class="line"><span class="lineno">  302</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#a49895c9f13fff46fc67c1ed4f59a9416">ResetCurrentHotItem</a>();</div>
+<div class="line"><span class="lineno">  303</span>        }</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  305</span>        {</div>
+<div class="line"><span class="lineno">  306</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#afbe334fb5e8a370af1caffdf123e585e">SetCurrentHotItem</a>(<a class="code hl_property" href="classWidgetCurrentTool.html#afeb3c34baca1e9d28cd0ef6e3be6e3a2">selectedButton</a>.<a class="code hl_variable" href="classButtonGrid.html#a1e704bdf3a08c312e607ad3bc919534d">card</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a267ca6ddf801c3a7f17dff185d3b14fc">GetHotItem</a>());</div>
+<div class="line"><span class="lineno">  307</span>        }</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">IsActive</a>)</div>
+<div class="line"><span class="lineno">  309</span>        {</div>
+<div class="line"><span class="lineno">  310</span>            <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_function" href="classAM__Adv.html#aaabd441e4b69e20ef37afd0ca5d791b9">UpdatePlans</a>();</div>
+<div class="line"><span class="lineno">  311</span>        }</div>
+<div class="line"><span class="lineno">  312</span>        <a class="code hl_function" href="classWidgetCurrentTool.html#ad9d858d3c247a775dd993c21cdbe6fea">RefreshHighlight</a>();</div>
+<div class="line"><span class="lineno">  313</span>    }</div>
 <div class="ttc" id="aclassAM__Adv_html_aaabd441e4b69e20ef37afd0ca5d791b9"><div class="ttname"><a href="classAM__Adv.html#aaabd441e4b69e20ef37afd0ca5d791b9">AM_Adv.UpdatePlans</a></div><div class="ttdeci">void UpdatePlans()</div><div class="ttdef"><b>Definition:</b> <a href="AM__Adv_8cs_source.html#l00401">AM_Adv.cs:401</a></div></div>
 <div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00005">ActionMode.cs:6</a></div></div>
 <div class="ttc" id="aclassActionMode_html_aa93beefaa4b319252e06c7314fb7789f"><div class="ttname"><a href="classActionMode.html#aa93beefaa4b319252e06c7314fb7789f">ActionMode.IsActive</a></div><div class="ttdeci">bool IsActive</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00121">ActionMode.cs:121</a></div></div>
 <div class="ttc" id="aclassActionMode_html_af841b34c3b252c5ed036eb2adb505bc1"><div class="ttname"><a href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">ActionMode.Adv</a></div><div class="ttdeci">static AM_Adv Adv</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00015">ActionMode.cs:15</a></div></div>
-<div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00054">Card.cs:54</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1GameConfig_html_accfb0e21b95f30f1b2f5502ae4f904c1"><div class="ttname"><a href="classCoreConfig_1_1GameConfig.html#accfb0e21b95f30f1b2f5502ae4f904c1">CoreConfig.GameConfig.useAbilityOnHotkey</a></div><div class="ttdeci">bool useAbilityOnHotkey</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00136">CoreConfig.cs:136</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_a380c3a9186905d017f89ddb965a720aa"><div class="ttname"><a href="classCoreConfig.html#a380c3a9186905d017f89ddb965a720aa">CoreConfig.game</a></div><div class="ttdeci">new GameConfig game</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00629">CoreConfig.cs:629</a></div></div>
 <div class="ttc" id="aclassCore_html_af03219aa378fd94376bc0a5ca9204d0a"><div class="ttname"><a href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">Core.config</a></div><div class="ttdeci">CoreConfig config</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00070">Core.cs:70</a></div></div>
@@ -1198,9 +1223,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTrait_html_a267ca6ddf801c3a7f17dff185d3b14fc"><div class="ttname"><a href="classTrait.html#a267ca6ddf801c3a7f17dff185d3b14fc">Trait.GetHotItem</a></div><div class="ttdeci">virtual HotItem GetHotItem()</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01163">Trait.cs:1163</a></div></div>
 <div class="ttc" id="aclassWidgetCurrentTool_html_afdae735013d5afeb86735ddb1a27be0f"><div class="ttname"><a href="classWidgetCurrentTool.html#afdae735013d5afeb86735ddb1a27be0f">WidgetCurrentTool.selectedPage</a></div><div class="ttdeci">int selectedPage</div><div class="ttdef"><b>Definition:</b> <a href="WidgetCurrentTool_8cs_source.html#l00046">WidgetCurrentTool.cs:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00015">ActionMode.Adv</a>, <a class="el" href="UIList_8cs_source.html#l00276">UIList.buttons</a>, <a class="el" href="Player_8cs_source.html#l02568">Player.CanAcceptInput()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00014">TraitCatalyst.CanUse()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="Core_8cs_source.html#l00070">Core.config</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Player_8cs_source.html#l02188">Player.EndTurn()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00629">CoreConfig.game</a>, <a class="el" href="Trait_8cs_source.html#l01163">Trait.GetHotItem()</a>, <a class="el" href="ActionMode_8cs_source.html#l00121">ActionMode.IsActive</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00030">list</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">maxSlots</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00023">TraitCatalyst.OnUse()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00051">page</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">RefreshHighlight()</a>, <a class="el" href="Player_8cs_source.html#l02368">Player.ResetCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00062">selectedButton</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00046">selectedPage</a>, <a class="el" href="Player_8cs_source.html#l02375">Player.SetCurrentHotItem()</a>, <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>, <a class="el" href="AM__Adv_8cs_source.html#l00401">AM_Adv.UpdatePlans()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00136">CoreConfig.GameConfig.useAbilityOnHotkey</a>.</p>
+<p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00015">ActionMode.Adv</a>, <a class="el" href="UIList_8cs_source.html#l00276">UIList.buttons</a>, <a class="el" href="Player_8cs_source.html#l02568">Player.CanAcceptInput()</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00014">TraitCatalyst.CanUse()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="Core_8cs_source.html#l00070">Core.config</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Player_8cs_source.html#l02188">Player.EndTurn()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00629">CoreConfig.game</a>, <a class="el" href="Trait_8cs_source.html#l01163">Trait.GetHotItem()</a>, <a class="el" href="ActionMode_8cs_source.html#l00121">ActionMode.IsActive</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00030">list</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">maxSlots</a>, <a class="el" href="TraitCatalyst_8cs_source.html#l00023">TraitCatalyst.OnUse()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00051">page</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">RefreshHighlight()</a>, <a class="el" href="Player_8cs_source.html#l02368">Player.ResetCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">selected</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00062">selectedButton</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00046">selectedPage</a>, <a class="el" href="Player_8cs_source.html#l02375">Player.SetCurrentHotItem()</a>, <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>, <a class="el" href="AM__Adv_8cs_source.html#l00401">AM_Adv.UpdatePlans()</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00136">CoreConfig.GameConfig.useAbilityOnHotkey</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00470">AM_Adv._OnUpdateInput()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00218">ModSelected()</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00024">InvOwnerHotbar.OnClick()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00205">OnClickButtonHotItem()</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00035">InvOwnerHotbar.OnRightClick()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00245">Reselect()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00470">AM_Adv._OnUpdateInput()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00239">ModSelected()</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00024">InvOwnerHotbar.OnClick()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00226">OnClickButtonHotItem()</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00035">InvOwnerHotbar.OnRightClick()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00266">Reselect()</a>, and <a class="el" href="ActionMode_8cs_source.html#l00570">ActionMode.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1316,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00022">22</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00189">_RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00308">CanShowContextMenu()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, and <a class="el" href="Player_8cs_source.html#l02306">Player.RefreshCurrentHotItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00189">_RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00329">CanShowContextMenu()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, and <a class="el" href="Player_8cs_source.html#l02306">Player.RefreshCurrentHotItem()</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1414,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00028">28</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">RefreshHighlight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">RefreshHighlight()</a>.</p>
 
 </div>
 </div>
@@ -1449,7 +1474,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00030">30</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00470">AM_Adv._OnUpdateInput()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00161">CheckDirty()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00115">LayerAbility.SetDirty()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00470">AM_Adv._OnUpdateInput()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00161">CheckDirty()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00115">LayerAbility.SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1516,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00034">34</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00225">GetNextSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00235">GetPrevSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00246">GetNextSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00256">GetPrevSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1552,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00044">44</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00225">GetNextSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00235">GetPrevSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00205">OnClickButtonHotItem()</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00050">InvOwnerHotbar.OnProcess()</a>, <a class="el" href="Player_8cs_source.html#l02306">Player.RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">RefreshHighlight()</a>, <a class="el" href="Card_8cs_source.html#l03511">Card.RemoveThing()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00245">Reselect()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00246">GetNextSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00256">GetPrevSelectableIndex()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00226">OnClickButtonHotItem()</a>, <a class="el" href="InvOwnerHotbar_8cs_source.html#l00050">InvOwnerHotbar.OnProcess()</a>, <a class="el" href="Player_8cs_source.html#l02306">Player.RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">RefreshHighlight()</a>, <a class="el" href="Card_8cs_source.html#l03511">Card.RemoveThing()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00266">Reselect()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>.</p>
 
 </div>
 </div>
@@ -1545,7 +1570,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00046">46</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>.</p>
 
 </div>
 </div>
@@ -1614,7 +1639,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00048">48</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00318">OnSetContextMenu()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00339">OnSetContextMenu()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>.</p>
 
 </div>
 </div>
@@ -1651,7 +1676,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   60</span>    }</div>
 <div class="ttc" id="aclassPlayer_html_af0fef4de21c6e4c120999a4a59e7a1c2"><div class="ttname"><a href="classPlayer.html#af0fef4de21c6e4c120999a4a59e7a1c2">Player.hotbarPage</a></div><div class="ttdeci">int hotbarPage</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00999">Player.cs:999</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00179">SwitchPage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00069">OnActivate()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00090">RebuildSlots()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00179">SwitchPage()</a>.</p>
 
 </div>
 </div>
@@ -1677,7 +1702,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetCurrentTool_8cs_source.html#l00062">62</a> of file <a class="el" href="WidgetCurrentTool_8cs_source.html">WidgetCurrentTool.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00205">OnClickButtonHotItem()</a>, <a class="el" href="Player_8cs_source.html#l02306">Player.RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00294">RefreshHighlight()</a>, <a class="el" href="Card_8cs_source.html#l03511">Card.RemoveThing()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00250">Select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetCurrentTool_8cs_source.html#l00226">OnClickButtonHotItem()</a>, <a class="el" href="Player_8cs_source.html#l02306">Player.RefreshCurrentHotItem()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00315">RefreshHighlight()</a>, <a class="el" href="Card_8cs_source.html#l03511">Card.RemoveThing()</a>, and <a class="el" href="WidgetCurrentTool_8cs_source.html#l00271">Select()</a>.</p>
 
 </div>
 </div>

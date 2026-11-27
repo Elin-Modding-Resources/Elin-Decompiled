@@ -1708,6 +1708,7 @@ var annotated_dup =
     [ "TraitCooker", "classTraitCooker.html", "classTraitCooker" ],
     [ "TraitCookerMicrowave", "classTraitCookerMicrowave.html", "classTraitCookerMicrowave" ],
     [ "TraitCookingPot", "classTraitCookingPot.html", "classTraitCookingPot" ],
+    [ "TraitCookingStove", "classTraitCookingStove.html", "classTraitCookingStove" ],
     [ "TraitCoolerBox", "classTraitCoolerBox.html", "classTraitCoolerBox" ],
     [ "TraitCoreDefense", "classTraitCoreDefense.html", "classTraitCoreDefense" ],
     [ "TraitCoreUser", "classTraitCoreUser.html", null ],

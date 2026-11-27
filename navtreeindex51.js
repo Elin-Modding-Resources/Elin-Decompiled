@@ -1,5 +1,10 @@
 var NAVTREEINDEX51 =
 {
+"classCodexCreature.html#a9654bae57b5adc8d81055aebf817c48a":[1,0,310,2],
+"classCodexCreature.html#aa104f63d75aba89cabacbfa5d5296a2d":[1,0,310,1],
+"classCodexCreature.html#ac6b694c12306573a3537e09971e9e061":[1,0,310,11],
+"classCodexCreature.html#ace1c6e37028a9e373ece50bb2390248c":[1,0,310,4],
+"classCodexManager.html":[1,0,311],
 "classCodexManager.html#a090560d6cd3e55d4c3eeb6b446e0d059":[1,0,311,6],
 "classCodexManager.html#a47cf7e585dbf82fa2696c6302d91639a":[1,0,311,9],
 "classCodexManager.html#a4bf09472d891b02212fac9ffa739a0bd":[1,0,311,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX51 =
 "classConFear.html#a6e1a1e99fb7c622d7c314f33da528fcc":[1,0,348,4],
 "classConFear.html#aa2d1745c891c7df6ea751b96157307cd":[1,0,348,2],
 "classConFear.html#ada8a00942fd4cb0054a6891fce9f3305":[1,0,348,1],
-"classConFear.html#af25cbf9169e418b43aa0454bf362cce1":[1,0,348,3],
-"classConFractured.html":[1,0,352],
-"classConFractured.html#aedd2ae4e8f9e99ce7d4f1125cc3df38c":[1,0,352,0],
-"classConFreeze.html":[1,0,353],
-"classConFreeze.html#abdca2a6dcaea4b67ff81e06ec1548391":[1,0,353,1],
-"classConFreeze.html#af47c38b0cd70513a2360f9703cba800f":[1,0,353,0]
+"classConFear.html#af25cbf9169e418b43aa0454bf362cce1":[1,0,348,3]
 };

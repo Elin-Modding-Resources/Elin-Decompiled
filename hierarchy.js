@@ -1720,7 +1720,9 @@ var hierarchy =
               [ "TraitHearth", "classTraitHearth.html", null ],
               [ "TraitOven", "classTraitOven.html", [
                 [ "TraitBBQ", "classTraitBBQ.html", null ],
-                [ "TraitStove", "classTraitStove.html", null ]
+                [ "TraitStove", "classTraitStove.html", [
+                  [ "TraitCookingStove", "classTraitCookingStove.html", null ]
+                ] ]
               ] ]
             ] ],
             [ "TraitLoom", "classTraitLoom.html", [

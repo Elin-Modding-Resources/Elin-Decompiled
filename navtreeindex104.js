@@ -1,5 +1,10 @@
 var NAVTREEINDEX104 =
 {
+"classReligionManager.html#a966f03357803b04e5947b80ef23271e0":[1,0,1194,21],
+"classReligionManager.html#a9993ce637a7381bb9cebf4196602bff1":[1,0,1194,10],
+"classReligionManager.html#aa96dceff542c7c35156e31ad4d2e6e48":[1,0,1194,15],
+"classReligionManager.html#ab5a8f054052e21f5f4cb8045dba783e3":[1,0,1194,9],
+"classReligionManager.html#abb35a900a1414883f71e413b177176a4":[1,0,1194,14],
 "classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92":[1,0,1194,3],
 "classReligionMinor.html":[1,0,1195],
 "classReligionMinor.html#af3c264773bb108d66fcdf6f955e0e515":[1,0,1195,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX104 =
 "classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce":[1,0,1220,8],
 "classRenderRow.html#adddb275abf4b84cdecfd290be6489365":[1,0,1220,16],
 "classRenderRow.html#ade8721fbc115f980f2166568a247c03f":[1,0,1220,24],
-"classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4":[1,0,1220,4],
-"classRenderRow.html#ae568a46541cb140778697cfbf49429ef":[1,0,1220,17],
-"classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364":[1,0,1220,30],
-"classRenderRow.html#aea949f00c2d71b1a2065f925193da56d":[1,0,1220,27],
-"classRenderRow.html#aed3ac25d06114085ec605995cd3d9171":[1,0,1220,39],
-"classRenderRow.html#aed9f55425b781368edaf43d3316bf539":[1,0,1220,48]
+"classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4":[1,0,1220,4]
 };

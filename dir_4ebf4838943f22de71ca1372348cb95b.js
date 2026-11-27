@@ -1520,6 +1520,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitCooker.cs", "TraitCooker_8cs.html", "TraitCooker_8cs" ],
     [ "TraitCookerMicrowave.cs", "TraitCookerMicrowave_8cs.html", "TraitCookerMicrowave_8cs" ],
     [ "TraitCookingPot.cs", "TraitCookingPot_8cs.html", "TraitCookingPot_8cs" ],
+    [ "TraitCookingStove.cs", "TraitCookingStove_8cs.html", "TraitCookingStove_8cs" ],
     [ "TraitCoolerBox.cs", "TraitCoolerBox_8cs.html", "TraitCoolerBox_8cs" ],
     [ "TraitCoreDefense.cs", "TraitCoreDefense_8cs.html", "TraitCoreDefense_8cs" ],
     [ "TraitCoreUser.cs", "TraitCoreUser_8cs.html", "TraitCoreUser_8cs" ],

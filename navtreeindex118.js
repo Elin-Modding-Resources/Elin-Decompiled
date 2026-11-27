@@ -1,5 +1,10 @@
 var NAVTREEINDEX118 =
 {
+"classSpriteSheet.html":[1,0,1352],
+"classSpriteSheet.html#a05dff4385d92835230dd33b766dadadb":[1,0,1352,0],
+"classSpriteSheet.html#a2ef52952ee4895df41e8ea30797bf6c3":[1,0,1352,1],
+"classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02":[1,0,1352,2],
+"classSpriteSheet.html#a5d2ac436ef2dd78fdefca0873678febe":[1,0,1352,3],
 "classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016":[1,0,1352,4],
 "classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714":[1,0,1352,5],
 "classStanceFury.html":[1,0,1353],
@@ -244,10 +249,5 @@ var NAVTREEINDEX118 =
 "classTCExtra.html#af1c45adf4635f9c5029d6cc623144d0a":[1,0,1420,17],
 "classTCExtra.html#af7487b052252310d271231f2d1425eeb":[1,0,1420,6],
 "classTCExtra.html#afa897efdbfcd97301f4b311c8ccc8e87":[1,0,1420,24],
-"classTCExtra.html#afb2f6d4cffdc55958db829020ed9f346":[1,0,1420,4],
-"classTCExtraProgress.html":[1,0,1421],
-"classTCExtraProgress.html#a545cf4d793ee254ba5c850aa4ee0f2ee":[1,0,1421,8],
-"classTCExtraProgress.html#a603cb12c156196937d884c688d749ced":[1,0,1421,3],
-"classTCExtraProgress.html#a60c53ebac7c6fbc7bf01f03908a5e7bb":[1,0,1421,7],
-"classTCExtraProgress.html#a6ffa7596412cd4dbe0907057f6ad6b0a":[1,0,1421,9]
+"classTCExtra.html#afb2f6d4cffdc55958db829020ed9f346":[1,0,1420,4]
 };

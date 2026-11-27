@@ -1,5 +1,10 @@
 var NAVTREEINDEX73 =
 {
+"classGame_1_1Flags.html#a90f60fac3822f390145a2e6ce928bc34":[1,0,605,1,0],
+"classGame_1_1Flags.html#afe3d4bb97788959ae085aee06a452efd":[1,0,605,1,2],
+"classGauge.html":[1,0,621],
+"classGauge.html#a0606c9b9e89fdea29696e67a0f8666b7":[1,0,621,12],
+"classGauge.html#a0ea3c9a95dce4605412da266af9c6371":[1,0,621,9],
 "classGauge.html#a110cf1f7bed9cc59da2dabe51aec0323":[1,0,621,0],
 "classGauge.html#a141ddfea6150f21af106aaa3c41b3029":[1,0,621,3],
 "classGauge.html#a163ecdc667c5f09aa030072d9cef6397":[1,0,621,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX73 =
 "classGradientColor.html#a9cd439de322aae2cff92291d3f4e95f0":[1,0,655,11],
 "classGradientColor.html#a9d4de91ebc3f6bde97a66c6b5f0a6c0d":[1,0,655,15],
 "classGradientColor.html#ab79b86c28507431398dff10faa0b817a":[1,0,655,1],
-"classGradientColor.html#ab79b86c28507431398dff10faa0b817aa06ce2a25e5d12c166a36f654dbea6012":[1,0,655,1,0],
-"classGradientColor.html#ab79b86c28507431398dff10faa0b817aac1b5fa03ecdb95d4a45dd1c40b02527f":[1,0,655,1,1],
-"classGradientColor.html#abca4107c73318e3a29b433631446fddd":[1,0,655,2],
-"classGradientColor.html#abca4107c73318e3a29b433631446fddda219f5839fffc7673d62ad8728e714403":[1,0,655,2,1],
-"classGradientColor.html#abca4107c73318e3a29b433631446fddda509820290d57f333403f490dde7316f4":[1,0,655,2,0],
-"classGradientColor.html#abca4107c73318e3a29b433631446fdddae63eb7d53d38ac541a315c35e2c15ba5":[1,0,655,2,2]
+"classGradientColor.html#ab79b86c28507431398dff10faa0b817aa06ce2a25e5d12c166a36f654dbea6012":[1,0,655,1,0]
 };
